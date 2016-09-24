@@ -55,6 +55,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		Blizzard = 7,
 		Num = 8,
 		Undefined = 8,
+		ClearAurora = 8,
 	}
 
 	public enum ConditionLevel
@@ -143,6 +144,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		Burning,
 		BlownOut,
 		BurnedOut,
+		Extinguished,
 	}
 
 	public enum MissionObjectClass
@@ -152,6 +154,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		Player,
 		InteractiveNPC,
 		InteractiveObject,
+		Invalid,
 	}
 
 	public enum VoicePersona
@@ -179,6 +182,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		CabinFever,
 		IntestinalParasitesRisk,
 		IntestinalParasites,
+		SprainedWristMajor,
+		CabinFeverRisk,
 	}
 
 	public enum ExperienceModeType
@@ -191,6 +196,9 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		ChallengeHunted,
 		ChallengeWhiteout,
 		ChallengeNomad,
+		ChallengeHuntedPart2,
+		Interloper,
+		NUM_MODES,
 	}
 
 	public enum StatID
@@ -317,5 +325,14 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		Russian,
 	}
 
+	public enum FeatType
+	{
+		BookSmarts,
+		ColdFusion,
+		EfficientMachine,
+		FireMaster,
+		FreeRunner,
+		SnowWalker,
+	}
 
 }

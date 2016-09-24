@@ -41,7 +41,6 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 		{
 			try
 			{
-				throw new Exception();
 				byte[] inputBuffer = Convert.FromBase64String(toDecrypt);
 				return Encoding.UTF8.GetString(EncryptString.m_DecoderTransform.TransformFinalBlock(inputBuffer, 0, inputBuffer.Length));
 			}

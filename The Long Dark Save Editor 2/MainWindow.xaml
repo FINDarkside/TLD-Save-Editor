@@ -11,6 +11,7 @@
 		xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
 		xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="The Long Dark (v.349) Save Editor" Height="600" Width="900" Loaded="Window_Loaded">
+	
 	<Window.Resources>
 		<converters:PrefabNameConverter x:Key="PrefabNameConverter" />
 		<converters:DoubleToPercentageConverter x:Key="DoubleToPercentageConverter" />
@@ -308,6 +309,14 @@
 							<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
 								<Label VerticalAlignment="Center" Width="170">Rifle skillpoints</Label>
 								<TextBox Text="{Binding CurrentSave.Global.SkillsManager.RifleSkill.m_Points}"  Width="200"></TextBox>
+							</StackPanel>
+							<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+								<Label VerticalAlignment="Center" Width="170">Archery skillpoints</Label>
+								<TextBox Text="{Binding CurrentSave.Global.SkillsManager.ArcherySkill.m_Points}"  Width="200"></TextBox>
+							</StackPanel>
+							<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+								<Label VerticalAlignment="Center" Width="170">Clothing repairing skillpoints</Label>
+								<TextBox Text="{Binding CurrentSave.Global.SkillsManager.ClothingRepairSkill.m_Points}"  Width="200"></TextBox>
 							</StackPanel>
 						</StackPanel>
 					</StackPanel>

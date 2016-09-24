@@ -426,6 +426,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 	public class FoodItemSaveDataProxy
 	{
 		public float m_CaloriesRemainingProxy { get; set; }
+		public float m_CaloriesTotal { get; set; }
 		public bool m_Opened { get; set; }
 		public float m_HeatPercent { get; set; }
 		public float m_HoursPlayed { get; set; }
@@ -491,6 +492,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public float m_BurnTimeGametimeSeconds { get; set; }
 		public float m_ElapsedBurnGametimeSeconds { get; set; }
 		public bool m_Ignited { get; set; }
+		public bool m_IsFresh { get; set; }
 	}
 
 	public class SnareItemSaveDataProxy
@@ -738,6 +740,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public bool m_RiskActive { get; set; }
 		public float m_ElapsedHours { get; set; }
 		public float[] m_IndoorTimeTracked { get; set; }
+		public int m_HourLastFrame { get; set; }
 	}
 
 	public class IntestinalParasitesSaveDataProxy
@@ -880,6 +883,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 	public class MissionServicesManagerSaveProxy
 	{
 		public List<string> m_SerializedMissions { get; set; }
+		public List<string> m_SerializedConcurrentGraphs { get; set; }
 		public List<string> m_SerializedTimers { get; set; }
 		public List<string> m_MissionObjectFilterTags { get; set; }
 		public List<string> m_CustomManagedObjects { get; set; }
@@ -900,6 +904,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public string m_Skill_CookingSerialized { get; set; }
 		public string m_Skill_IceFishingSerialized { get; set; }
 		public string m_Skill_RifleSerialized { get; set; }
+		public string m_Skill_ArcherySerialized;
+		public string m_Skill_ClothingRepairSerialized;
 	}
 
 	public class SkillsManager
@@ -909,6 +915,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public Skill_CookingSaveData CookingSkill { get; set; }
 		public Skill_IceFishingSaveData IceFishingSkill { get; set; }
 		public Skill_RifleSaveData RifleSkill { get; set; }
+		public Skill_ArcherySaveData ArcherySkill { get; set; }
+		public Skill_ClothingRepairSaveData ClothingRepairSkill { get; set; }
 
 		public SkillsManager(string json)
 		{
@@ -921,6 +929,9 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			CookingSkill = Util.DeserializeObject<Skill_CookingSaveData>(proxy.m_Skill_CookingSerialized);
 			IceFishingSkill = Util.DeserializeObject<Skill_IceFishingSaveData>(proxy.m_Skill_IceFishingSerialized);
 			RifleSkill = Util.DeserializeObject<Skill_RifleSaveData>(proxy.m_Skill_RifleSerialized);
+			ArcherySkill = Util.DeserializeObject<Skill_ArcherySaveData>(proxy.m_Skill_ArcherySerialized);
+			ClothingRepairSkill = Util.DeserializeObject<Skill_ClothingRepairSaveData>(proxy.m_Skill_ClothingRepairSerialized);
+
 
 		}
 
@@ -933,6 +944,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			proxy.m_Skill_CookingSerialized = Util.SerializeObject(CookingSkill);
 			proxy.m_Skill_IceFishingSerialized = Util.SerializeObject(IceFishingSkill);
 			proxy.m_Skill_RifleSerialized = Util.SerializeObject(RifleSkill);
+			proxy.m_Skill_ArcherySerialized = Util.SerializeObject(ArcherySkill);
+			proxy.m_Skill_ClothingRepairSerialized = Util.SerializeObject(ClothingRepairSkill);
 
 			return Util.SerializeObject(proxy);
 		}
@@ -964,6 +977,21 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 	public class Skill_RifleSaveData
 	{
 		public int m_Points { get; set; }
+	}
+
+	public class Skill_ArcherySaveData
+	{
+		public int m_Points { get; set; }
+	}
+
+	public class Skill_ClothingRepairSaveData
+	{
+		public int m_Points { get; set; }
+	}
+
+	public class FeatEnabledTrackerSaveData
+	{
+		public List<FeatType> m_FeatsEnabledThisSandbox;
 	}
 
 }

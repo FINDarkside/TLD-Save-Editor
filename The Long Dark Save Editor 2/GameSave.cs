@@ -1,4 +1,5 @@
-﻿using System.IO;
+using System.Diagnostics;
+using System.IO;
 using The_Long_Dark_Save_Editor_2.Game_data;
 using The_Long_Dark_Save_Editor_2.Helpers;
 
@@ -17,6 +18,8 @@ namespace The_Long_Dark_Save_Editor_2
 			this.path = path;
 
 			var bootLocation = Path.Combine(path, "boot");
+			Debug.WriteLine(LoadFile(bootLocation));
+
 			Boot = Util.DeserializeObject<BootSaveGameFormat>(LoadFile(bootLocation));
 
 			var globalLocation = Path.Combine(path, "global");

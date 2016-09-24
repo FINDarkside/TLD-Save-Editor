@@ -26,6 +26,7 @@ namespace The_Long_Dark_Save_Editor_2
 	/// </summary>
 	public partial class MainWindow : Window, INotifyPropertyChanged
 	{
+
 		public static decimal Version { get { return 2.2m; } }
 
 		private GameSave currentSave;
@@ -289,6 +290,8 @@ namespace The_Long_Dark_Save_Editor_2
 			}
 			catch (Exception ex)
 			{
+				Debug.WriteLine("ASDASD");
+
 				ErrorDialog.Show("Failed to load save", ex != null ? (ex.Message + "\n" + ex.ToString()) : null);
 				tabPanel.IsEnabled = false;
 			}
