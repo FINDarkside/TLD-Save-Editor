@@ -60,12 +60,13 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			AddItemInfo("GEAR_DeerSkinBoots", "Deerskin Boots", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_DeerSkinPants", "Deerskin Pants", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_DownSkiJacket", "Down Ski Jacket", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+			AddItemInfo("GEAR_SkiJacket", "Ski Jacket", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_DownVest", "Down West", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_FleeceSweater", "Fleece Sweater", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_HeavyWoolSweater", "Heavy Wool Sweater", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_Jeans", "Jeans", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
-			AddItemInfo("GEAR_LongunderwearWool", "Long Wool Underwear", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
-			AddItemInfo("GEAR_LongUnderwear", "Cotton Long Underwear", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+			AddItemInfo("GEAR_LongUnderwearWool", "Wool Long Johns", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+			AddItemInfo("GEAR_LongUnderwear", "Thermal underwear", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_Mittens", "Mittens", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_QualityWinterCoat", "Marine's Pea Coat", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_RabbitSkinMittens", "Rabbitskin Mitts", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
@@ -76,7 +77,6 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			AddItemInfo("GEAR_WorkBoots", "Work Boots", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_BasicWoolScarf", "Basic Wool Scarf", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_InsulatedVest", "Insulated West", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
-			AddItemInfo("GEAR_WoolUnderWear", "Cotton Long Underwear", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_InsulatedBoots", "Insulated Boots", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_PremiumWinterCoat", "Premium Winter Coat", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 
@@ -210,8 +210,8 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			AddItemInfo("GEAR_ClimbersJournal", "Climbers Journal", ItemCategory.Collectible, @"{}");
 
 			AddItemInfo("GEAR_Shovel", "Shovel", ItemCategory.Hidden, @"{}");
-			AddItemInfo("GEAR_FireAxe", "Fire Axe", ItemCategory.Hidden, @"{}");
-			AddItemInfo("GEAR_BoltCutters", "Bolt Cutters", ItemCategory.Hidden, @"{}");
+			AddItemInfo("GEAR_Fireaxe", "Fire Axe", ItemCategory.Hidden, @"{}");
+			AddItemInfo("GEAR_Boltcutters", "Bolt Cutters", ItemCategory.Hidden, @"{}");
 			AddItemInfo("GEAR_CollectibleNoteCommonReward", "Collectible Note Common", ItemCategory.Hidden, @"{}");
 			AddItemInfo("GEAR_CollectibleNoteRareReward", "Collectible Note Common", ItemCategory.Hidden, @"{}");
 			AddItemInfo("GEAR_FlintAndSteel", "Flint and Steel", ItemCategory.Hidden, @"{}");
@@ -225,8 +225,20 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			AddItemInfo("GEAR_DamOfficeKey", "Dam Office Key", ItemCategory.Hidden, @"{}");
 			AddItemInfo("GEAR_HardCase", "Hard Case", ItemCategory.Hidden, @"{}");
 			AddItemInfo("GEAR_Morphine", "Morphine", ItemCategory.Hidden, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-
-
+			AddItemInfo("GEAR_AstridBackPack", "Astrid Backpack", ItemCategory.Hidden, @"{}");
+			AddItemInfo("GEAR_HikersBackPack", "Hiker's Backpack", ItemCategory.Hidden, @"{}");
+			AddItemInfo("GEAR_EmergencyKitNote", "Emergency Kit Note", ItemCategory.Hidden, @"{}");
+			AddItemInfo("GEAR_FarmerSalmanac", "Farmer Salmanac", ItemCategory.Hidden, @"{}");
+			AddItemInfo("GEAR_FirstAidManual", "First Aid Manual", ItemCategory.Hidden, @"{}");
+			AddItemInfo("GEAR_MountainTownFarmKey", "Mountain Town Farm Key", ItemCategory.Hidden, @"{}");
+			AddItemInfo("GEAR_MountainTownFarmNote", "Mountain Town Farm Note", ItemCategory.Hidden, @"{}");
+			AddItemInfo("GEAR_MountainTownLockBoxKey", "Mountain Town Lock Box Key", ItemCategory.Hidden, @"{}");
+			AddItemInfo("GEAR_MountainTownMap", "Mountain Town Map", ItemCategory.Hidden, @"{}");
+			AddItemInfo("GEAR_MountainTownStoreKey", "Mountain Town Store Key", ItemCategory.Hidden, @"{}");
+			AddItemInfo("GEAR_OverpassBrochure", "Overpass Brochure", ItemCategory.Hidden, @"{}");
+			AddItemInfo("GEAR_RicksJournal", "Rick's Journal", ItemCategory.Hidden, @"{}");
+			AddItemInfo("GEAR_UtilitiesBill", "Utilities Bill", ItemCategory.Hidden, @"{}");
+			AddItemInfo("GEAR_FishingLine", "Fishing Line", ItemCategory.Hidden, @"{}");
 
 
 		}

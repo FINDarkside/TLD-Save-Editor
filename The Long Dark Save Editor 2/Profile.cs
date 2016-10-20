@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using The_Long_Dark_Save_Editor_2.Game_data;
 using The_Long_Dark_Save_Editor_2.Helpers;
+using System.Diagnostics;
 
 namespace The_Long_Dark_Save_Editor_2
 {
@@ -12,7 +13,7 @@ namespace The_Long_Dark_Save_Editor_2
 
 		public List<string> RewiredKeyboardMap { get; set; }
 		public List<string> RewiredMouseMap { get; set; }
-		public List<object> SandboxRecords { get; set; } //SandboxRecord
+		public List<object> SandboxRecords { get; set; } // <SandboxRecord> Invalid json!
 		public List<UpSell> UpsellsViewed { get; set; }
 		public int Version { get; set; }
 		public bool ShowTimeOfDaySlider { get; set; }
@@ -79,6 +80,7 @@ namespace The_Long_Dark_Save_Editor_2
 
 			var bytes = File.ReadAllBytes(path);
 			var json = EncryptString.DecompressBytesToString(bytes);
+			Debug.WriteLine(json);
 			var proxy = Util.DeserializeObject<OptionsState>(json);
 			if (proxy == null)
 				return;

@@ -27,7 +27,7 @@ namespace The_Long_Dark_Save_Editor_2
 	public partial class MainWindow : Window, INotifyPropertyChanged
 	{
 
-		public static decimal Version { get { return 2.2m; } }
+		public static decimal Version { get { return 2.4m; } }
 
 		private GameSave currentSave;
 		public GameSave CurrentSave
@@ -99,6 +99,7 @@ namespace The_Long_Dark_Save_Editor_2
 
 			Guid localLowId = new Guid("A520A1A4-1780-4FF6-BD18-167343C5AF16");
 			string localLow = GetKnownFolderPath(localLowId) + "\\Hinterland\\TheLongDark\\";
+			// TODO fix
 			string local = localLow.Replace("LocalLow", "Local");
 
 			Regex reg = new Regex(".*save[0-9]+");
