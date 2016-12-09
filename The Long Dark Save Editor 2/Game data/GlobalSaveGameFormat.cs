@@ -67,7 +67,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public SceneTransitionData SceneTransistion { get; set; }
 		public HudManagerSaveDataProxy HudManager { get; set; }
 		public TimeOfDaySaveDataProxy TimeOfDay { get; set; }
-		public WindSaveDataProxy Wind { get; set; }
+		public WindSaveData Wind { get; set; }
 		public WeatherSaveDataProxy Weather { get; set; }
 		public WeatherTransitionSaveDataProxy WeatherTransistion { get; set; }
 		public ConditionSaveDataProxy Condition { get; set; }
@@ -126,7 +126,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			SceneTransistion = Util.DeserializeObject<SceneTransitionData>(proxy.m_GameManagerSerialized);
 			HudManager = Util.DeserializeObject<HudManagerSaveDataProxy>(proxy.m_HudManagerSerialized);
 			TimeOfDay = Util.DeserializeObject<TimeOfDaySaveDataProxy>(proxy.m_TimeOfDay_Serialized);
-			Wind = Util.DeserializeObject<WindSaveDataProxy>(proxy.m_Wind_Serialized);
+			Wind = new WindSaveData(proxy.m_Wind_Serialized);
 			Weather = Util.DeserializeObject<WeatherSaveDataProxy>(proxy.m_Weather_Serialized);
 			WeatherTransistion = Util.DeserializeObject<WeatherTransitionSaveDataProxy>(proxy.m_WeatherTransition_Serialized);
 			Condition = Util.DeserializeObject<ConditionSaveDataProxy>(proxy.m_Condition_Serialized);
@@ -187,7 +187,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			proxy.m_GameManagerSerialized = Util.SerializeObject(SceneTransistion);
 			proxy.m_HudManagerSerialized = Util.SerializeObject(HudManager);
 			proxy.m_TimeOfDay_Serialized = Util.SerializeObject(TimeOfDay);
-			proxy.m_Wind_Serialized = Util.SerializeObject(Wind);
+			proxy.m_Wind_Serialized = Wind.Serialize();
 			proxy.m_Weather_Serialized = Util.SerializeObject(Weather);
 			proxy.m_WeatherTransition_Serialized = Util.SerializeObject(WeatherTransistion);
 			proxy.m_Condition_Serialized = Util.SerializeObject(Condition);

@@ -27,9 +27,9 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			m_PhaseElapsedTODSecondsProxy = proxy.m_PhaseElapsedTODSecondsProxy;
 			m_PhaseDurationHoursProxy = proxy.m_PhaseDurationHoursProxy;
 			m_TransitionTimeTODSecondsProxy = proxy.m_TransitionTimeTODSecondsProxy;
-			m_ActiveSettings = JsonConvert.DeserializeObject<ActiveWindSettings>(proxy.m_ActiveSettingsSerialized);
-			m_SourceSettings = JsonConvert.DeserializeObject<ActiveWindSettings>(proxy.m_SourceSettingsSerialized);
-			m_TargetSettings = JsonConvert.DeserializeObject<ActiveWindSettings>(proxy.m_TargetSettingsSerialized);
+			m_ActiveSettings = Util.DeserializeObject<ActiveWindSettings>(proxy.m_ActiveSettingsSerialized);
+			m_SourceSettings = Util.DeserializeObject<ActiveWindSettings>(proxy.m_SourceSettingsSerialized);
+			m_TargetSettings = Util.DeserializeObject<ActiveWindSettings>(proxy.m_TargetSettingsSerialized);
 		}
 
 		public string Serialize()
@@ -45,7 +45,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			proxy.m_ActiveSettingsSerialized = Util.SerializeObject(m_ActiveSettings);
 			proxy.m_ActiveSettingsSerialized = Util.SerializeObject(m_ActiveSettings);
 			proxy.m_ActiveSettingsSerialized = Util.SerializeObject(m_ActiveSettings);
-			return Util.SerializeObject(this);
+			return Util.SerializeObject(proxy);
 		}
 	}
 }

@@ -30,28 +30,34 @@ namespace The_Long_Dark_Save_Editor_2
 		public static decimal Version { get { return 2.4m; } }
 
 		private GameSave currentSave;
-		public GameSave CurrentSave
-		{
-			get { return currentSave; }
-			set
-			{
-				SetPropertyField(ref currentSave, value);
-			}
-		}
+		public GameSave CurrentSave { get { return currentSave; } set { SetPropertyField(ref currentSave, value); } }
 
 		private Profile currentProfile;
 		public Profile CurrentProfile
 		{
 			get { return currentProfile; }
-			set
-			{
-				SetPropertyField(ref currentProfile, value);
+			set { SetPropertyField(ref currentProfile, value); }
+		}
+
+		private bool testBranch;
+		public bool TestBranch
+		{
+			get { return testBranch; }
+			set {
+				testBranch = value;
+				UpdateSaves();
+				Properties.Settings.Default.TestBranch = value;
 			}
 		}
 
 		public bool IsDebug { get; set; }
 
-		public ObservableCollection<EnumerationMember> Saves { get; set; }
+		private ObservableCollection<EnumerationMember> saves;
+		public ObservableCollection<EnumerationMember> Saves
+		{
+			get { return saves; }
+			set { SetPropertyField(ref saves, value); }
+		}
 
 
 
@@ -61,24 +67,9 @@ namespace The_Long_Dark_Save_Editor_2
 #if DEBUG
 			IsDebug = true;
 #endif
+			testBranch = Properties.Settings.Default.TestBranch;
 
 			InitializeComponent();
-			Saves = GetSaveFiles();
-			if (Saves.Count > 0)
-			{
-				var profile = Path.Combine(Directory.GetParent(Saves[0].Value.ToString()).FullName, "user001");
-				if (File.Exists(profile))
-				{
-					try
-					{
-						CurrentProfile = new Profile(profile);
-					}
-					catch (Exception ex)
-					{
-						WForms.MessageBox.Show(ex.Message + "\nFailed to load profile", "Failed to load profile", WForms.MessageBoxButtons.OK, WForms.MessageBoxIcon.Exclamation);
-					}
-				}
-			}
 			this.DataContext = this;
 
 			Title += " " + Version.ToString(CultureInfo.InvariantCulture.NumberFormat); ;
@@ -86,55 +77,36 @@ namespace The_Long_Dark_Save_Editor_2
 			JsonConvert.DefaultSettings = () => new JsonSerializerSettings
 			{
 				//MissingMemberHandling = Newtonsoft.Json.MissingMemberHandling.Error,
-				FloatFormatHandling = FloatFormatHandling.Symbol
+				FloatFormatHandling = FloatFormatHandling.Symbol,
 			};
 
-
-			//File.WriteAllBytes(@"C:\Users\Jesse\AppData\Local\Hinterland\TheLongDark\save001\global", EncryptString.CompressStringToBytes(save.Global.Serialize()));
-
+			UpdateSaves();
 		}
 
-		public ObservableCollection<EnumerationMember> GetSaveFiles()
+		private void UpdateSaves()
 		{
+			var path = Path.Combine(Util.GetLocalPath(), testBranch ? "HinterlandTest1" : "Hinterland", "TheLongDark");
+			Debug.WriteLine(path);
 
-			Guid localLowId = new Guid("A520A1A4-1780-4FF6-BD18-167343C5AF16");
-			string localLow = GetKnownFolderPath(localLowId) + "\\Hinterland\\TheLongDark\\";
-			// TODO fix
-			string local = localLow.Replace("LocalLow", "Local");
+			Saves = Util.GetSaveFiles(path);
+			if (Saves.Count == 0)
+				CurrentSave = null;
+			else
+				ccSaves.SelectedIndex = 0;
 
-			Regex reg = new Regex(".*save[0-9]+");
-			Regex reg2 = new Regex(".*chall[0-9]+");
-			var saves = new List<string>();
-			if (Directory.Exists(local))
-				saves.AddRange((from f in Directory.GetDirectories(local) where reg.IsMatch(f) || reg2.IsMatch(f) select f).ToList<string>());
-
-			var result = new ObservableCollection<EnumerationMember>();
-			foreach (string saveFolder in saves)
+			var profile = Path.Combine(path, "user001");
+			if (File.Exists(profile) && (CurrentProfile == null || !Equals(profile, CurrentProfile.path)))
 			{
-				if (Directory.GetFiles(saveFolder).Length == 0)
-					continue;
-				var member = new EnumerationMember();
-
 				try
 				{
-					var globalFile = Path.Combine(saveFolder, "global");
-					if (!File.Exists(globalFile))
-						continue;
-					var bytes = File.ReadAllBytes(globalFile);
-					var json = EncryptString.DecompressBytesToString(bytes);
-					var globalData = JsonConvert.DeserializeObject<GlobalSaveGameFormat>(json);
-					member.Description = globalData.m_UserDefinedSaveSlotName + " (" + Path.GetFileName(saveFolder) + ")";
+					CurrentProfile = new Profile(profile);
 				}
 				catch (Exception ex)
 				{
-					Debug.WriteLine(ex.ToString());
-					continue;
+					WForms.MessageBox.Show(ex.Message + "\nFailed to load profile", "Failed to load profile", WForms.MessageBoxButtons.OK, WForms.MessageBoxIcon.Exclamation);
 				}
-				member.Value = saveFolder;
-				result.Add(member);
 			}
 
-			return result;
 		}
 
 		public void CheckForUpdates()
@@ -189,8 +161,10 @@ namespace The_Long_Dark_Save_Editor_2
 
 			if (CurrentSave != null)
 				CurrentSave.Save();
+			Debug.WriteLine(CurrentProfile.Feats.BookSmarts.m_HoursResearch);
 			if (CurrentProfile != null)
 				CurrentProfile.Save();
+			Debug.WriteLine(CurrentProfile == null);
 		}
 
 		private void AddItemClicked(object sender, RoutedEventArgs e)
@@ -204,12 +178,6 @@ namespace The_Long_Dark_Save_Editor_2
 
 			var inventoryItem = Util.DeserializeObject<InventoryItem>(itemInfo.defaultSerialized);
 			inventoryItem.PrefabName = prefabName;
-
-			inventoryItem.Rotation = new float[4];
-			inventoryItem.Position = new float[3];
-			inventoryItem.BeenInPlayerInventory = true;
-			inventoryItem.NormalizedCondition = 1;
-			inventoryItem.WornOut = false;
 			inventoryItem.HoursPlayed = CurrentSave.Global.TimeOfDay.m_HoursPlayedNotPausedProxy;
 
 			CurrentSave.Global.Inventory.Items.Add(inventoryItem);
@@ -232,11 +200,6 @@ namespace The_Long_Dark_Save_Editor_2
 				cbItem.SelectedIndex = 0;
 		}
 
-		private void OpenClicked(object sender, RoutedEventArgs e)
-		{
-
-		}
-
 		private void Window_Loaded(object sender, RoutedEventArgs e)
 		{
 #if !DEBUG
@@ -257,6 +220,8 @@ namespace The_Long_Dark_Save_Editor_2
 			if (!Properties.Settings.Default.BugReportWarningShown)
 			{
 				System.Windows.MessageBox.Show("Do NOT report any in-game bugs to Hinterland if you have edited your save. Bugs might be caused by the save editor. Only report bugs if you are able to reproduce them in fresh unedited save.");
+				System.Windows.MessageBox.Show("If you don't have test branch version of the game, untick the toggle button at top right corner.");
+
 				Properties.Settings.Default.BugReportWarningShown = true;
 				Properties.Settings.Default.Save();
 			}
@@ -275,28 +240,29 @@ namespace The_Long_Dark_Save_Editor_2
 				if (item.TorchItem != null)
 					item.TorchItem.m_StateProxy = TorchState.Fresh;
 			}
-
 		}
 
 		private void CurrentSaveSelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 			if (ccSaves == null && ccSaves.SelectedValue == null)
 				return;
-			var path = ccSaves.SelectedValue.ToString();
-			try
-			{
-				var save = new GameSave();
-				save.LoadSave(path);
-				CurrentSave = save;
-			}
-			catch (Exception ex)
-			{
-				Debug.WriteLine("ASDASD");
 
-				ErrorDialog.Show("Failed to load save", ex != null ? (ex.Message + "\n" + ex.ToString()) : null);
-				tabPanel.IsEnabled = false;
+			if (ccSaves.SelectedValue != null)
+			{
+				var path = ccSaves.SelectedValue.ToString();
+				try
+				{
+					var save = new GameSave();
+					save.LoadSave(path);
+					CurrentSave = save;
+				}
+				catch (Exception ex)
+				{
+					ErrorDialog.Show("Failed to load save", ex != null ? (ex.Message + "\n" + ex.ToString()) : null);
+					tabPanel.IsEnabled = false;
+				}
+				tabPanel.IsEnabled = true;
 			}
-			tabPanel.IsEnabled = true;
 		}
 
 		private void PrintJsonClicked(object sender, RoutedEventArgs e)
@@ -304,29 +270,19 @@ namespace The_Long_Dark_Save_Editor_2
 			Debug.WriteLine(((InventoryItem)ItemList.SelectedValue).Serialize().m_SerializedGear);
 		}
 
-		string GetKnownFolderPath(Guid knownFolderId)
-		{
-			IntPtr pszPath = IntPtr.Zero;
-			try
-			{
-				int hr = SHGetKnownFolderPath(knownFolderId, 0, IntPtr.Zero, out pszPath);
-				if (hr >= 0)
-					return Marshal.PtrToStringAuto(pszPath);
-				throw Marshal.GetExceptionForHR(hr);
-			}
-			finally
-			{
-				if (pszPath != IntPtr.Zero)
-					Marshal.FreeCoTaskMem(pszPath);
-			}
-		}
-
-		[DllImport("shell32.dll")]
-		static extern int SHGetKnownFolderPath([MarshalAs(UnmanagedType.LPStruct)] Guid rfid, uint dwFlags, IntPtr hToken, out IntPtr pszPath);
-
 		private void RefreshClicked(object sender, RoutedEventArgs e)
 		{
 			CurrentSaveSelectionChanged(null, null);
+		}
+
+		private void Window_Closing(object sender, CancelEventArgs e)
+		{
+			Properties.Settings.Default.Save();
+		}
+
+		private void RemoveAllClicked(object sender, RoutedEventArgs e)
+		{
+			CurrentSave.Global.Inventory.Items.Clear();
 		}
 	}
 

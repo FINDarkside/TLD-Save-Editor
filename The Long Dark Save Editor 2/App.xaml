@@ -433,7 +433,7 @@
 														</DiscreteObjectKeyFrame>
 													</ObjectAnimationUsingKeyFrames.KeyFrames>
 												</ObjectAnimationUsingKeyFrames>
-												
+
 												<DoubleAnimation Storyboard.TargetName="SelectedBorder"
                                                          Storyboard.TargetProperty="Opacity"
                                                          To="0.8" Duration="0"/>

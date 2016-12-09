@@ -9,11 +9,11 @@ namespace The_Long_Dark_Save_Editor_2
 {
 	public class Profile
 	{
-		private string path;
+		public string path;
 
 		public List<string> RewiredKeyboardMap { get; set; }
 		public List<string> RewiredMouseMap { get; set; }
-		public List<object> SandboxRecords { get; set; } // <SandboxRecord> Invalid json!
+		public List<SandBoxRecord> SandboxRecords { get; set; } // <SandboxRecord> Invalid json!
 		public List<UpSell> UpsellsViewed { get; set; }
 		public int Version { get; set; }
 		public bool ShowTimeOfDaySlider { get; set; }
@@ -80,7 +80,67 @@ namespace The_Long_Dark_Save_Editor_2
 
 			var bytes = File.ReadAllBytes(path);
 			var json = EncryptString.DecompressBytesToString(bytes);
-			Debug.WriteLine(json);
+			//Debug.WriteLine(json);
+
+			int currentIndex = 0;
+
+			#region Fix m_StatsDictionary
+			// m_StatsDictionary is invalid json so we'll fix it
+			// There's multiple instances of m_StatsDictionary
+			// Ugly as f but works... for now
+			while (true)
+			{
+				int statsDictStartIndex = json.IndexOf("m_StatsDictionary", currentIndex);
+				if (statsDictStartIndex == -1)
+					break;
+				statsDictStartIndex = json.IndexOf('{', statsDictStartIndex);
+				currentIndex = statsDictStartIndex;
+
+				int statsDictEndIndex = json.IndexOf('}', statsDictStartIndex);
+
+				// Save files contain json that has been serialized multiple times and not all m_StatsDictionarys are on the same depth
+				var newStats = json.Substring(statsDictStartIndex, statsDictEndIndex - statsDictStartIndex);
+				if (newStats.Length <= 2)
+					continue;
+				int depth = 0;
+				int quoteIndex = newStats.IndexOf("\"");
+				for (int i = quoteIndex - 1; newStats[i] == '\\'; i--, depth++) { }
+				string escapes = new String('\\', depth);
+
+				//Debug.WriteLine(newStats);
+
+				for (var i = 0; i < newStats.Length; i++)
+				{
+					var c = newStats[i];
+
+					if ((c == '-' || char.IsDigit(c)))
+					{
+						if (newStats[i - 1] != '"' && newStats[i - 1] != '.')
+						{
+							newStats = newStats.Insert(i, escapes + "\"");
+							i += 2 + depth;
+
+							while (char.IsDigit(newStats[i]) || newStats[i] == '-') { i++; }
+							newStats = newStats.Insert(i, escapes + "\"");
+							i += 1 + depth;
+						}
+						else
+						{
+							while (char.IsDigit(newStats[i]) || newStats[i] == '.' || newStats[i] == 'E' || newStats[i] == '-') { i++; }
+						}
+
+					}
+				}
+
+				//Debug.WriteLine(newStats);
+
+				json = json.Substring(0, statsDictStartIndex) + newStats + json.Substring(statsDictEndIndex);
+			}
+
+			//Debug.WriteLine(json);
+
+			#endregion
+
 			var proxy = Util.DeserializeObject<OptionsState>(json);
 			if (proxy == null)
 				return;
@@ -209,7 +269,50 @@ namespace The_Long_Dark_Save_Editor_2
 			proxy.m_DoneBrightnessAdjustment = DoneBrightnessAdjustment;
 			proxy.m_UnlockedBadgesViewed = UnlockedBadgesViewed;
 			proxy.m_FeatsSerialized = Feats.Serialize();
-			File.WriteAllBytes(path, EncryptString.CompressStringToBytes(Util.SerializeObject(proxy)));
+
+			string json = Util.SerializeObject(proxy);
+
+			#region Break m_StatsDictionary
+
+			// And of course the game can't read that valid json so we have to fuck it up again
+
+			int currentIndex = 0;
+			while (true)
+			{
+				int statsDictStartIndex = json.IndexOf("m_StatsDictionary", currentIndex);
+				if (statsDictStartIndex == -1)
+					break;
+				statsDictStartIndex = json.IndexOf('{', statsDictStartIndex);
+				currentIndex = statsDictStartIndex;
+
+				int statsDictEndIndex = json.IndexOf('}', statsDictStartIndex);
+
+				var newStats = json.Substring(statsDictStartIndex, statsDictEndIndex - statsDictStartIndex);
+				if (newStats.Length <= 2)
+					continue;
+
+				int currentIndex2 = 0;
+				while (true)
+				{
+					int colonIndex = newStats.IndexOf(':', currentIndex2);
+					if (colonIndex == -1)
+						break;
+					currentIndex2 = colonIndex + 1;
+
+					int i = colonIndex;
+					while(newStats[i] != '{' && newStats[i] != ','){
+						if (newStats[i] == '\\' || newStats[i] == '\"')
+							newStats = newStats.Remove(i, 1);
+						i--;
+					}
+				}
+
+				json = json.Substring(0, statsDictStartIndex) + newStats + json.Substring(statsDictEndIndex);
+			}
+			
+			#endregion
+
+			File.WriteAllBytes(path, EncryptString.CompressStringToBytes(json));
 
 		}
 	}

@@ -176,6 +176,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
 		public ObservableCollection<InventoryItem> Items { get; set; }
 		public int[] QuickSelectInstanceIDs { get; set; }
+		public bool m_ForceOverrideWeight { get; set; }
+		public float m_OverridedWeight { get; set; }
 
 		public string json;
 
@@ -194,6 +196,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 				Items.Add(new InventoryItem(item));
 			}
 			QuickSelectInstanceIDs = proxy.m_QuickSelectInstanceIDs;
+			m_ForceOverrideWeight = proxy.m_ForceOverrideWeight;
+			m_OverridedWeight = proxy.m_OverridedWeight;
 		}
 
 		public string Serialize()
@@ -206,7 +210,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			{
 				proxy.m_SerializedItems.Add(item.Serialize());
 			}
-
+			proxy.m_ForceOverrideWeight = m_ForceOverrideWeight;
+			proxy.m_OverridedWeight = m_OverridedWeight;
 			return Util.SerializeObject(proxy);
 		}
 	}
@@ -215,6 +220,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 	{
 		public List<InventoryItemSaveData> m_SerializedItems { get; set; }
 		public int[] m_QuickSelectInstanceIDs { get; set; }
+		public bool m_ForceOverrideWeight { get; set; }
+		public float m_OverridedWeight { get; set; }
 	}
 
 	public class InventoryItemSaveData
@@ -274,7 +281,11 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
 		public InventoryItem()
 		{
-
+			Rotation = new float[4];
+			Position = new float[3];
+			BeenInPlayerInventory = true;
+			NormalizedCondition = 1;
+			WornOut = false;
 		}
 
 		public InventoryItem(InventoryItemSaveData data)
@@ -846,14 +857,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 	{
 		public float m_LifetimeMinutes { get; set; }
 		public string m_ChimneyGuid { get; set; }
-	}
-
-	public class StatContainer
-	{
-		public Dictionary<int, string> m_StatsDictionary { get; set; }
-		public int m_NumBurntHousesInCoastal { get; set; }
-		public bool m_HasDoneCoastalBurntHouseCheck { get; set; }
-		public bool m_HasDoneCorrectBurntHouseCheck { get; set; }
 	}
 
 	public class EmergencyStimParams

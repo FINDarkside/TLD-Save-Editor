@@ -17,11 +17,10 @@ namespace The_Long_Dark_Save_Editor_2.Converters
 
 			var cat = (ItemCategory)value;
 
-
 			var result = new List<EnumerationMember>();
 			foreach (KeyValuePair<string, ItemInfo> entry in ItemDictionary.itemInfo)
 			{
-				if (entry.Value.category == cat)
+				if (entry.Value.category == cat && !entry.Value.hide)
 				{
 					var member = new EnumerationMember() { Value = entry.Key, Description = entry.Value.inGameName };
 					result.Add(member);

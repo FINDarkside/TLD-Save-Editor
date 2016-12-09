@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using The_Long_Dark_Save_Editor_2.Helpers;
 
@@ -8,7 +9,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 	{
 		public List<string> m_RewiredKeyboardMap = new List<string>();
 		public List<string> m_RewiredMouseMap = new List<string>();
-		public List<Object> m_SandboxRecords; //SandboxRecord
+		public List<SandBoxRecord> m_SandboxRecords; //SandboxRecord
 		public List<UpSell> m_UpsellsViewed = new List<UpSell>();
 		public int m_Version;
 		public bool m_ShowTimeOfDaySlider;
@@ -112,12 +113,12 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 				return;
 
 
-			BookSmarts = Util.DeserializeObject<Feat_BookSmartsSaveData>(proxy.m_Feat_BookSmartsSerialized);
-			ColdFusion = Util.DeserializeObject<Feat_ColdFusionSaveData>(proxy.m_Feat_ColdFusionSerialized);
-			EfficientMachine = Util.DeserializeObject<Feat_EfficientMachineSaveData>(proxy.m_Feat_EfficientMachineSerialized);
-			FireMaster = Util.DeserializeObject<Feat_FireMasterSaveData>(proxy.m_Feat_FireMasterSerialized);
-			FreeRunner = Util.DeserializeObject<Feat_FreeRunnerSaveData>(proxy.m_Feat_FreeRunnerSerialized);
-			SnowWalker = Util.DeserializeObject<Feat_SnowWalkerSaveData>(proxy.m_Feat_SnowWalkerSerialized);
+			BookSmarts = Util.DeserializeObjectOrDefault<Feat_BookSmartsSaveData>(proxy.m_Feat_BookSmartsSerialized);
+			ColdFusion = Util.DeserializeObjectOrDefault<Feat_ColdFusionSaveData>(proxy.m_Feat_ColdFusionSerialized);
+			EfficientMachine = Util.DeserializeObjectOrDefault<Feat_EfficientMachineSaveData>(proxy.m_Feat_EfficientMachineSerialized);
+			FireMaster = Util.DeserializeObjectOrDefault<Feat_FireMasterSaveData>(proxy.m_Feat_FireMasterSerialized);
+			FreeRunner = Util.DeserializeObjectOrDefault<Feat_FreeRunnerSaveData>(proxy.m_Feat_FreeRunnerSerialized);
+			SnowWalker = Util.DeserializeObjectOrDefault<Feat_SnowWalkerSaveData>(proxy.m_Feat_SnowWalkerSerialized);
 		}
 
 		public string Serialize()
@@ -169,5 +170,28 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public float m_MetersAccumulator { get; set; }
 	}
 
+	public class SandBoxRecord
+	{
+		public string m_SandboxName { get; set; }
+		public float m_ElapsedHours { get; set; }
+		public DateTime m_EndDate { get; set; }
+		public GameRegion m_StartRegion { get; set; }
+		public string m_EndRegion { get; set; }
+		public ExperienceModeType m_ExperienceModeType { get; set; }
+		public VoicePersona m_VoicePersona { get; set; }
+		public string m_CauseOfDeathLocId { get; set; }
+		public string m_GeneralNotes { get; set; }
+		public List<LogDayInfo> m_LogDayInfoList { get; set; }
+		// Currently seems to always be empty
+		public List<object> m_CollectibleList { get; set; }
+		public StatContainer m_Stats { get; set; }
+	}
 
+	public class StatContainer
+	{
+		public Dictionary<int, string> m_StatsDictionary { get; set; }
+		public int m_NumBurntHousesInCoastal { get; set; }
+		public bool m_HasDoneCoastalBurntHouseCheck { get; set; }
+		public bool m_HasDoneCorrectBurntHouseCheck { get; set; }
+	}
 }

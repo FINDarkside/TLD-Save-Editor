@@ -72,6 +72,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\InjuriesToOpacityConverter.cs" />
     <Compile Include="ErrorDialog.xaml.cs">
       <DependentUpon>ErrorDialog.xaml</DependentUpon>
     </Compile>
@@ -93,6 +94,10 @@
     <Compile Include="Helpers\CommandHandler.cs" />
     <Compile Include="Helpers\EnumerationExtension.cs" />
     <Compile Include="Helpers\ItemDictionary.cs" />
+    <Compile Include="Helpers\StatsDictionarySerializer.cs" />
+    <Compile Include="Images\InjuriesBody.xaml.cs">
+      <DependentUpon>InjuriesBody.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Profile.cs" />
     <Compile Include="Helpers\Util.cs" />
     <Compile Include="SaveGameManager.cs" />
@@ -104,6 +109,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ErrorDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Images\InjuriesBody.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -149,6 +158,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\standing-human-body-silhouette.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
