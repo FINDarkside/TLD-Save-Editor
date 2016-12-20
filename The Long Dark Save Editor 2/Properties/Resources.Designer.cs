@@ -22,7 +22,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("The_Long_Dark_Save_Editor_2.Properties.Resources", typeof(Resources).Assembly);
@@ -51,12 +51,2649 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About.
+        /// </summary>
+        public static string About {
+            get {
+                return ResourceManager.GetString("About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add item.
+        /// </summary>
+        public static string AddItem {
+            get {
+                return ResourceManager.GetString("AddItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amount.
+        /// </summary>
+        public static string Amount {
+            get {
+                return ResourceManager.GetString("Amount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amount (liters).
+        /// </summary>
+        public static string AmountLiter {
+            get {
+                return ResourceManager.GetString("AmountLiter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Archery skillpoints.
+        /// </summary>
+        public static string ArcherySP {
+            get {
+                return ResourceManager.GetString("ArcherySP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Books.
+        /// </summary>
+        public static string Books {
+            get {
+                return ResourceManager.GetString("Books", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book smarts progress.
+        /// </summary>
+        public static string BookSmartProgress {
+            get {
+                return ResourceManager.GetString("BookSmartProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calories.
+        /// </summary>
+        public static string Calories {
+            get {
+                return ResourceManager.GetString("Calories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Carcass harvesting skillpoints.
+        /// </summary>
+        public static string CarcassHarvestingSP {
+            get {
+                return ResourceManager.GetString("CarcassHarvestingSP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clothing.
+        /// </summary>
+        public static string Clothing {
+            get {
+                return ResourceManager.GetString("Clothing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clothing repairing skillpoints.
+        /// </summary>
+        public static string ClothingRepairSP {
+            get {
+                return ResourceManager.GetString("ClothingRepairSP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cold fusion progress.
+        /// </summary>
+        public static string ColdFusionProgress {
+            get {
+                return ResourceManager.GetString("ColdFusionProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Collectible.
+        /// </summary>
+        public static string Collectible {
+            get {
+                return ResourceManager.GetString("Collectible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Condition.
+        /// </summary>
+        public static string Condition {
+            get {
+                return ResourceManager.GetString("Condition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cooking skillpoints.
+        /// </summary>
+        public static string CookingSP {
+            get {
+                return ResourceManager.GetString("CookingSP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current calories.
+        /// </summary>
+        public static string CurrentCalories {
+            get {
+                return ResourceManager.GetString("CurrentCalories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download.
+        /// </summary>
+        public static string Download {
+            get {
+                return ResourceManager.GetString("Download", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Efficient machine progress.
+        /// </summary>
+        public static string EfficientMachineProgress {
+            get {
+                return ResourceManager.GetString("EfficientMachineProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fatigue.
+        /// </summary>
+        public static string Fatigue {
+            get {
+                return ResourceManager.GetString("Fatigue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fire master progress.
+        /// </summary>
+        public static string FireMasterProgress {
+            get {
+                return ResourceManager.GetString("FireMasterProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fire starting skillpoints.
+        /// </summary>
+        public static string FireStartingSP {
+            get {
+                return ResourceManager.GetString("FireStartingSP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Aid.
+        /// </summary>
+        public static string FirstAid {
+            get {
+                return ResourceManager.GetString("FirstAid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Food.
+        /// </summary>
+        public static string Food {
+            get {
+                return ResourceManager.GetString("Food", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Free runner progress.
+        /// </summary>
+        public static string FreeRunnerProgress {
+            get {
+                return ResourceManager.GetString("FreeRunnerProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Freezing.
+        /// </summary>
+        public static string Freezing {
+            get {
+                return ResourceManager.GetString("Freezing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Accelerant.
+        /// </summary>
+        public static string GEAR_Accelerant {
+            get {
+                return ResourceManager.GetString("GEAR_Accelerant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Accelerant Kerosene.
+        /// </summary>
+        public static string GEAR_AccelerantKerosene {
+            get {
+                return ResourceManager.GetString("GEAR_AccelerantKerosene", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Accelerant Medium.
+        /// </summary>
+        public static string GEAR_AccelerantMedium {
+            get {
+                return ResourceManager.GetString("GEAR_AccelerantMedium", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Simple Arrow.
+        /// </summary>
+        public static string GEAR_Arrow {
+            get {
+                return ResourceManager.GetString("GEAR_Arrow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Arrowhead.
+        /// </summary>
+        public static string GEAR_ArrowHead {
+            get {
+                return ResourceManager.GetString("GEAR_ArrowHead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Arrow Shaft.
+        /// </summary>
+        public static string GEAR_ArrowShaft {
+            get {
+                return ResourceManager.GetString("GEAR_ArrowShaft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Astrid Backpack.
+        /// </summary>
+        public static string GEAR_AstridBackPack {
+            get {
+                return ResourceManager.GetString("GEAR_AstridBackPack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Balaclava.
+        /// </summary>
+        public static string GEAR_Balaclava {
+            get {
+                return ResourceManager.GetString("GEAR_Balaclava", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Baseball Cap.
+        /// </summary>
+        public static string GEAR_BaseBallCap {
+            get {
+                return ResourceManager.GetString("GEAR_BaseBallCap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Basic Boots.
+        /// </summary>
+        public static string GEAR_BasicBoots {
+            get {
+                return ResourceManager.GetString("GEAR_BasicBoots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Basic Gloves.
+        /// </summary>
+        public static string GEAR_BasicGloves {
+            get {
+                return ResourceManager.GetString("GEAR_BasicGloves", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shoes.
+        /// </summary>
+        public static string GEAR_BasicShoes {
+            get {
+                return ResourceManager.GetString("GEAR_BasicShoes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Basic Winter Coat.
+        /// </summary>
+        public static string GEAR_BasicWinterCoat {
+            get {
+                return ResourceManager.GetString("GEAR_BasicWinterCoat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Basic Wool Hat.
+        /// </summary>
+        public static string GEAR_BasicWoolHat {
+            get {
+                return ResourceManager.GetString("GEAR_BasicWoolHat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Basic Wool Scarf.
+        /// </summary>
+        public static string GEAR_BasicWoolScarf {
+            get {
+                return ResourceManager.GetString("GEAR_BasicWoolScarf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fresh Black Bear Hide.
+        /// </summary>
+        public static string GEAR_BearHide {
+            get {
+                return ResourceManager.GetString("GEAR_BearHide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cured Black Bear Hide.
+        /// </summary>
+        public static string GEAR_BearHideDried {
+            get {
+                return ResourceManager.GetString("GEAR_BearHideDried", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bear Skin Bedroll.
+        /// </summary>
+        public static string GEAR_BearSkinBedRoll {
+            get {
+                return ResourceManager.GetString("GEAR_BearSkinBedRoll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bearskin Coat.
+        /// </summary>
+        public static string GEAR_BearSkinCoat {
+            get {
+                return ResourceManager.GetString("GEAR_BearSkinCoat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bedroll.
+        /// </summary>
+        public static string GEAR_BedRoll {
+            get {
+                return ResourceManager.GetString("GEAR_BedRoll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Beef Jerky.
+        /// </summary>
+        public static string GEAR_BeefJerky {
+            get {
+                return ResourceManager.GetString("GEAR_BeefJerky", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Green Birch Sapling.
+        /// </summary>
+        public static string GEAR_BirchSapling {
+            get {
+                return ResourceManager.GetString("GEAR_BirchSapling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cured Birch Sapling.
+        /// </summary>
+        public static string GEAR_BirchSaplingDried {
+            get {
+                return ResourceManager.GetString("GEAR_BirchSaplingDried", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bloody Hammer.
+        /// </summary>
+        public static string GEAR_BloodyHammer {
+            get {
+                return ResourceManager.GetString("GEAR_BloodyHammer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bolt Cutters.
+        /// </summary>
+        public static string GEAR_Boltcutters {
+            get {
+                return ResourceManager.GetString("GEAR_Boltcutters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book.
+        /// </summary>
+        public static string GEAR_BookA {
+            get {
+                return ResourceManager.GetString("GEAR_BookA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book.
+        /// </summary>
+        public static string GEAR_BookB {
+            get {
+                return ResourceManager.GetString("GEAR_BookB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book.
+        /// </summary>
+        public static string GEAR_BookC {
+            get {
+                return ResourceManager.GetString("GEAR_BookC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field Dressing Your Kill, vol. 1.
+        /// </summary>
+        public static string GEAR_BookCarcassHarvesting {
+            get {
+                return ResourceManager.GetString("GEAR_BookCarcassHarvesting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wilderness Kitchen.
+        /// </summary>
+        public static string GEAR_BookCooking {
+            get {
+                return ResourceManager.GetString("GEAR_BookCooking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book.
+        /// </summary>
+        public static string GEAR_BookD {
+            get {
+                return ResourceManager.GetString("GEAR_BookD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book.
+        /// </summary>
+        public static string GEAR_BookE {
+            get {
+                return ResourceManager.GetString("GEAR_BookE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book.
+        /// </summary>
+        public static string GEAR_BookF {
+            get {
+                return ResourceManager.GetString("GEAR_BookF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Survive The Outdoors!.
+        /// </summary>
+        public static string GEAR_BookFireStarting {
+            get {
+                return ResourceManager.GetString("GEAR_BookFireStarting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Frozen Angler.
+        /// </summary>
+        public static string GEAR_BookIceFishing {
+            get {
+                return ResourceManager.GetString("GEAR_BookIceFishing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book.
+        /// </summary>
+        public static string GEAR_BookManual {
+            get {
+                return ResourceManager.GetString("GEAR_BookManual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book Open.
+        /// </summary>
+        public static string GEAR_BookOpen {
+            get {
+                return ResourceManager.GetString("GEAR_BookOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Frontier Shooting Guide.
+        /// </summary>
+        public static string GEAR_BookRifleFirearm {
+            get {
+                return ResourceManager.GetString("GEAR_BookRifleFirearm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Advanced Guns Guns Guns!.
+        /// </summary>
+        public static string GEAR_BookRifleFirearmAdvanced {
+            get {
+                return ResourceManager.GetString("GEAR_BookRifleFirearmAdvanced", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Antibiotics.
+        /// </summary>
+        public static string GEAR_BottleAntibiotics {
+            get {
+                return ResourceManager.GetString("GEAR_BottleAntibiotics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Antiseptic.
+        /// </summary>
+        public static string GEAR_BottleHydrogenPeroxide {
+            get {
+                return ResourceManager.GetString("GEAR_BottleHydrogenPeroxide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Painkillers.
+        /// </summary>
+        public static string GEAR_BottlePainKillers {
+            get {
+                return ResourceManager.GetString("GEAR_BottlePainKillers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Survival Bow.
+        /// </summary>
+        public static string GEAR_Bow {
+            get {
+                return ResourceManager.GetString("GEAR_Bow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bow String.
+        /// </summary>
+        public static string GEAR_BowString {
+            get {
+                return ResourceManager.GetString("GEAR_BowString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bow Wood.
+        /// </summary>
+        public static string GEAR_BowWood {
+            get {
+                return ResourceManager.GetString("GEAR_BowWood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Brand.
+        /// </summary>
+        public static string GEAR_Brand {
+            get {
+                return ResourceManager.GetString("GEAR_Brand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Candy Bar.
+        /// </summary>
+        public static string GEAR_CandyBar {
+            get {
+                return ResourceManager.GetString("GEAR_CandyBar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pork and Beans.
+        /// </summary>
+        public static string GEAR_CannedBeans {
+            get {
+                return ResourceManager.GetString("GEAR_CannedBeans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tin of Sardines.
+        /// </summary>
+        public static string GEAR_CannedSardines {
+            get {
+                return ResourceManager.GetString("GEAR_CannedSardines", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can Opener.
+        /// </summary>
+        public static string GEAR_CanOpener {
+            get {
+                return ResourceManager.GetString("GEAR_CanOpener", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Car Battery.
+        /// </summary>
+        public static string GEAR_CarBattery {
+            get {
+                return ResourceManager.GetString("GEAR_CarBattery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cargo Pants.
+        /// </summary>
+        public static string GEAR_CargoPants {
+            get {
+                return ResourceManager.GetString("GEAR_CargoPants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cat Tail Stalk.
+        /// </summary>
+        public static string GEAR_CattailStalk {
+            get {
+                return ResourceManager.GetString("GEAR_CattailStalk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cat Tail Head.
+        /// </summary>
+        public static string GEAR_CattailTinder {
+            get {
+                return ResourceManager.GetString("GEAR_CattailTinder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Church Hymn.
+        /// </summary>
+        public static string GEAR_ChurchHymn {
+            get {
+                return ResourceManager.GetString("GEAR_ChurchHymn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Church Note EP 1.
+        /// </summary>
+        public static string GEAR_ChurchNoteEp1 {
+            get {
+                return ResourceManager.GetString("GEAR_ChurchNoteEp1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Climbers Journal.
+        /// </summary>
+        public static string GEAR_ClimbersJournal {
+            get {
+                return ResourceManager.GetString("GEAR_ClimbersJournal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cloth.
+        /// </summary>
+        public static string GEAR_Cloth {
+            get {
+                return ResourceManager.GetString("GEAR_Cloth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Coal.
+        /// </summary>
+        public static string GEAR_Coal {
+            get {
+                return ResourceManager.GetString("GEAR_Coal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cup Of Coffee.
+        /// </summary>
+        public static string GEAR_CoffeeCup {
+            get {
+                return ResourceManager.GetString("GEAR_CoffeeCup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tin of Coffee.
+        /// </summary>
+        public static string GEAR_CoffeeTin {
+            get {
+                return ResourceManager.GetString("GEAR_CoffeeTin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Collectible Note Common.
+        /// </summary>
+        public static string GEAR_CollectibleNoteCommonReward {
+            get {
+                return ResourceManager.GetString("GEAR_CollectibleNoteCommonReward", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Collectible Note Common.
+        /// </summary>
+        public static string GEAR_CollectibleNoteRareReward {
+            get {
+                return ResourceManager.GetString("GEAR_CollectibleNoteRareReward", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Combat Boots.
+        /// </summary>
+        public static string GEAR_CombatBoots {
+            get {
+                return ResourceManager.GetString("GEAR_CombatBoots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Combat Pants.
+        /// </summary>
+        public static string GEAR_CombatPants {
+            get {
+                return ResourceManager.GetString("GEAR_CombatPants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Compression Bandage.
+        /// </summary>
+        public static string GEAR_CompressionBandage {
+            get {
+                return ResourceManager.GetString("GEAR_CompressionBandage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Condensed Milk.
+        /// </summary>
+        public static string GEAR_CondensedMilk {
+            get {
+                return ResourceManager.GetString("GEAR_CondensedMilk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lake Whitefish (Cooked).
+        /// </summary>
+        public static string GEAR_CookedLakeWhiteFish {
+            get {
+                return ResourceManager.GetString("GEAR_CookedLakeWhiteFish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bear Meat (Cooked).
+        /// </summary>
+        public static string GEAR_CookedMeatBear {
+            get {
+                return ResourceManager.GetString("GEAR_CookedMeatBear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Venison (Cooked).
+        /// </summary>
+        public static string GEAR_CookedMeatDeer {
+            get {
+                return ResourceManager.GetString("GEAR_CookedMeatDeer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rabbit (Cooked).
+        /// </summary>
+        public static string GEAR_CookedMeatRabbit {
+            get {
+                return ResourceManager.GetString("GEAR_CookedMeatRabbit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wolf Meat (Cooked).
+        /// </summary>
+        public static string GEAR_CookedMeatWolf {
+            get {
+                return ResourceManager.GetString("GEAR_CookedMeatWolf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rainbow Trout (Cooked).
+        /// </summary>
+        public static string GEAR_CookedRainbowTrout {
+            get {
+                return ResourceManager.GetString("GEAR_CookedRainbowTrout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Smallmouth Bass (Cooked).
+        /// </summary>
+        public static string GEAR_CookedSmallMouthBass {
+            get {
+                return ResourceManager.GetString("GEAR_CookedSmallMouthBass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hoodie.
+        /// </summary>
+        public static string GEAR_CottonHoodie {
+            get {
+                return ResourceManager.GetString("GEAR_CottonHoodie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cotton Scarf.
+        /// </summary>
+        public static string GEAR_CottonScarf {
+            get {
+                return ResourceManager.GetString("GEAR_CottonScarf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dress Shirt.
+        /// </summary>
+        public static string GEAR_CottonShirt {
+            get {
+                return ResourceManager.GetString("GEAR_CottonShirt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cotton Socks.
+        /// </summary>
+        public static string GEAR_CottonSocks {
+            get {
+                return ResourceManager.GetString("GEAR_CottonSocks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cowichan Sweater.
+        /// </summary>
+        public static string GEAR_CowichanSweater {
+            get {
+                return ResourceManager.GetString("GEAR_CowichanSweater", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Salty Crackers.
+        /// </summary>
+        public static string GEAR_Crackers {
+            get {
+                return ResourceManager.GetString("GEAR_Crackers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crow Feather.
+        /// </summary>
+        public static string GEAR_CrowFeather {
+            get {
+                return ResourceManager.GetString("GEAR_CrowFeather", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dam Code Note.
+        /// </summary>
+        public static string GEAR_DamCodeNote {
+            get {
+                return ResourceManager.GetString("GEAR_DamCodeNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dam Control Room Code Note.
+        /// </summary>
+        public static string GEAR_DamControlRoomCodeNote {
+            get {
+                return ResourceManager.GetString("GEAR_DamControlRoomCodeNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dam Office Key.
+        /// </summary>
+        public static string GEAR_DamOfficeKey {
+            get {
+                return ResourceManager.GetString("GEAR_DamOfficeKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deerskin Boots.
+        /// </summary>
+        public static string GEAR_DeerSkinBoots {
+            get {
+                return ResourceManager.GetString("GEAR_DeerSkinBoots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deerskin Pants.
+        /// </summary>
+        public static string GEAR_DeerSkinPants {
+            get {
+                return ResourceManager.GetString("GEAR_DeerSkinPants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dog Food.
+        /// </summary>
+        public static string GEAR_DogFood {
+            get {
+                return ResourceManager.GetString("GEAR_DogFood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Urban Parka.
+        /// </summary>
+        public static string GEAR_DownParka {
+            get {
+                return ResourceManager.GetString("GEAR_DownParka", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Down Ski Jacket.
+        /// </summary>
+        public static string GEAR_DownSkiJacket {
+            get {
+                return ResourceManager.GetString("GEAR_DownSkiJacket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Down West.
+        /// </summary>
+        public static string GEAR_DownVest {
+            get {
+                return ResourceManager.GetString("GEAR_DownVest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wool Ear Wrap.
+        /// </summary>
+        public static string GEAR_EarMuffs {
+            get {
+                return ResourceManager.GetString("GEAR_EarMuffs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Emergency Kit Note.
+        /// </summary>
+        public static string GEAR_EmergencyKitNote {
+            get {
+                return ResourceManager.GetString("GEAR_EmergencyKitNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Emergency Stim.
+        /// </summary>
+        public static string GEAR_EmergencyStim {
+            get {
+                return ResourceManager.GetString("GEAR_EmergencyStim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Energy Bar.
+        /// </summary>
+        public static string GEAR_EnergyBar {
+            get {
+                return ResourceManager.GetString("GEAR_EnergyBar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Farmer&apos;s Almanac.
+        /// </summary>
+        public static string GEAR_FarmersAlmanac {
+            get {
+                return ResourceManager.GetString("GEAR_FarmersAlmanac", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fire Axe.
+        /// </summary>
+        public static string GEAR_Fireaxe {
+            get {
+                return ResourceManager.GetString("GEAR_Fireaxe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Firelog.
+        /// </summary>
+        public static string GEAR_Firelog {
+            get {
+                return ResourceManager.GetString("GEAR_Firelog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Firestriker.
+        /// </summary>
+        public static string GEAR_Firestriker {
+            get {
+                return ResourceManager.GetString("GEAR_Firestriker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Aid Manual.
+        /// </summary>
+        public static string GEAR_FirstAidManual {
+            get {
+                return ResourceManager.GetString("GEAR_FirstAidManual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fisherman&apos;s Sweater.
+        /// </summary>
+        public static string GEAR_FisherManSweater {
+            get {
+                return ResourceManager.GetString("GEAR_FisherManSweater", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fishing Line.
+        /// </summary>
+        public static string GEAR_FishingLine {
+            get {
+                return ResourceManager.GetString("GEAR_FishingLine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flare.
+        /// </summary>
+        public static string GEAR_FlareA {
+            get {
+                return ResourceManager.GetString("GEAR_FlareA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flare Gun.
+        /// </summary>
+        public static string GEAR_Flaregun {
+            get {
+                return ResourceManager.GetString("GEAR_Flaregun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flare Gun Ammo.
+        /// </summary>
+        public static string GEAR_FlareGunAmmoSingle {
+            get {
+                return ResourceManager.GetString("GEAR_FlareGunAmmoSingle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fleece Mittens.
+        /// </summary>
+        public static string GEAR_FleeceMittens {
+            get {
+                return ResourceManager.GetString("GEAR_FleeceMittens", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fleece Sweater.
+        /// </summary>
+        public static string GEAR_FleeceSweater {
+            get {
+                return ResourceManager.GetString("GEAR_FleeceSweater", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flint and Steel.
+        /// </summary>
+        public static string GEAR_FlintAndSteel {
+            get {
+                return ResourceManager.GetString("GEAR_FlintAndSteel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gauntlets.
+        /// </summary>
+        public static string GEAR_Gauntlets {
+            get {
+                return ResourceManager.GetString("GEAR_Gauntlets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Granola Bar.
+        /// </summary>
+        public static string GEAR_GranolaBar {
+            get {
+                return ResourceManager.GetString("GEAR_GranolaBar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cup Of Herbal Tea.
+        /// </summary>
+        public static string GEAR_GreenTeaCup {
+            get {
+                return ResourceManager.GetString("GEAR_GreenTeaCup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Herbal Tea.
+        /// </summary>
+        public static string GEAR_GreenTeaPackage {
+            get {
+                return ResourceManager.GetString("GEAR_GreenTeaPackage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fresh Gut.
+        /// </summary>
+        public static string GEAR_Gut {
+            get {
+                return ResourceManager.GetString("GEAR_Gut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cured Gut.
+        /// </summary>
+        public static string GEAR_GutDried {
+            get {
+                return ResourceManager.GetString("GEAR_GutDried", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hacksaw.
+        /// </summary>
+        public static string GEAR_Hacksaw {
+            get {
+                return ResourceManager.GetString("GEAR_Hacksaw", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heavy Hammer.
+        /// </summary>
+        public static string GEAR_Hammer {
+            get {
+                return ResourceManager.GetString("GEAR_Hammer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hard Case.
+        /// </summary>
+        public static string GEAR_HardCase {
+            get {
+                return ResourceManager.GetString("GEAR_HardCase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fir Firewood.
+        /// </summary>
+        public static string GEAR_Hardwood {
+            get {
+                return ResourceManager.GetString("GEAR_Hardwood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hatchet.
+        /// </summary>
+        public static string GEAR_Hatchet {
+            get {
+                return ResourceManager.GetString("GEAR_Hatchet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Improvised Hatchet.
+        /// </summary>
+        public static string GEAR_HatchetImprovised {
+            get {
+                return ResourceManager.GetString("GEAR_HatchetImprovised", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bandage.
+        /// </summary>
+        public static string GEAR_HeavyBandage {
+            get {
+                return ResourceManager.GetString("GEAR_HeavyBandage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Old Fashioned Parka.
+        /// </summary>
+        public static string GEAR_HeavyParka {
+            get {
+                return ResourceManager.GetString("GEAR_HeavyParka", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heavy Wool Sweater.
+        /// </summary>
+        public static string GEAR_HeavyWoolSweater {
+            get {
+                return ResourceManager.GetString("GEAR_HeavyWoolSweater", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quality Tools.
+        /// </summary>
+        public static string GEAR_HighQualityTools {
+            get {
+                return ResourceManager.GetString("GEAR_HighQualityTools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hiker&apos;s Backpack.
+        /// </summary>
+        public static string GEAR_HikersBackPack {
+            get {
+                return ResourceManager.GetString("GEAR_HikersBackPack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hook.
+        /// </summary>
+        public static string GEAR_Hook {
+            get {
+                return ResourceManager.GetString("GEAR_Hook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fishing Tackle.
+        /// </summary>
+        public static string GEAR_HookAndLine {
+            get {
+                return ResourceManager.GetString("GEAR_HookAndLine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hunter Journal Page.
+        /// </summary>
+        public static string GEAR_HunterJournalPage {
+            get {
+                return ResourceManager.GetString("GEAR_HunterJournalPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insulated Boots.
+        /// </summary>
+        public static string GEAR_InsulatedBoots {
+            get {
+                return ResourceManager.GetString("GEAR_InsulatedBoots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Snow Pants.
+        /// </summary>
+        public static string GEAR_InsulatedPants {
+            get {
+                return ResourceManager.GetString("GEAR_InsulatedPants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insulated West.
+        /// </summary>
+        public static string GEAR_InsulatedVest {
+            get {
+                return ResourceManager.GetString("GEAR_InsulatedVest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jeans.
+        /// </summary>
+        public static string GEAR_Jeans {
+            get {
+                return ResourceManager.GetString("GEAR_Jeans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jerry Can.
+        /// </summary>
+        public static string GEAR_JerrycanRusty {
+            get {
+                return ResourceManager.GetString("GEAR_JerrycanRusty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Storm Lantern.
+        /// </summary>
+        public static string GEAR_KeroseneLampB {
+            get {
+                return ResourceManager.GetString("GEAR_KeroseneLampB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hunting Knife.
+        /// </summary>
+        public static string GEAR_Knife {
+            get {
+                return ResourceManager.GetString("GEAR_Knife", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Improvised Knife.
+        /// </summary>
+        public static string GEAR_KnifeImprovised {
+            get {
+                return ResourceManager.GetString("GEAR_KnifeImprovised", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Knife Scrap Metal.
+        /// </summary>
+        public static string GEAR_KnifeScrapMetal {
+            get {
+                return ResourceManager.GetString("GEAR_KnifeScrapMetal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Knife Scrap Metal Clean.
+        /// </summary>
+        public static string GEAR_KnifeScrapMetal_Clean {
+            get {
+                return ResourceManager.GetString("GEAR_KnifeScrapMetal_Clean", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lantern Fuel.
+        /// </summary>
+        public static string GEAR_LampFuel {
+            get {
+                return ResourceManager.GetString("GEAR_LampFuel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Leather.
+        /// </summary>
+        public static string GEAR_Leather {
+            get {
+                return ResourceManager.GetString("GEAR_Leather", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cured Leather.
+        /// </summary>
+        public static string GEAR_LeatherDried {
+            get {
+                return ResourceManager.GetString("GEAR_LeatherDried", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fresh Deer Hide.
+        /// </summary>
+        public static string GEAR_LeatherHide {
+            get {
+                return ResourceManager.GetString("GEAR_LeatherHide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cured Deer Hide.
+        /// </summary>
+        public static string GEAR_LeatherHideDried {
+            get {
+                return ResourceManager.GetString("GEAR_LeatherHideDried", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Leather Shoes.
+        /// </summary>
+        public static string GEAR_LeatherShoes {
+            get {
+                return ResourceManager.GetString("GEAR_LeatherShoes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fresh Leather.
+        /// </summary>
+        public static string GEAR_LeatherStrips {
+            get {
+                return ResourceManager.GetString("GEAR_LeatherStrips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Simple Parka.
+        /// </summary>
+        public static string GEAR_LightParka {
+            get {
+                return ResourceManager.GetString("GEAR_LightParka", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Line.
+        /// </summary>
+        public static string GEAR_Line {
+            get {
+                return ResourceManager.GetString("GEAR_Line", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thermal underwear.
+        /// </summary>
+        public static string GEAR_LongUnderwear {
+            get {
+                return ResourceManager.GetString("GEAR_LongUnderwear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wool Long Johns.
+        /// </summary>
+        public static string GEAR_LongUnderwearWool {
+            get {
+                return ResourceManager.GetString("GEAR_LongUnderwearWool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mackinaw Jacket.
+        /// </summary>
+        public static string GEAR_MackinawJacket {
+            get {
+                return ResourceManager.GetString("GEAR_MackinawJacket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Magnifying Lens.
+        /// </summary>
+        public static string GEAR_MagnifyingLens {
+            get {
+                return ResourceManager.GetString("GEAR_MagnifyingLens", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Green Maple Sapling.
+        /// </summary>
+        public static string GEAR_MapleSapling {
+            get {
+                return ResourceManager.GetString("GEAR_MapleSapling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cured Maple Sapling.
+        /// </summary>
+        public static string GEAR_MapleSaplingDried {
+            get {
+                return ResourceManager.GetString("GEAR_MapleSaplingDried", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Map Snippet Mt.
+        /// </summary>
+        public static string GEAR_MapSnippetMt {
+            get {
+                return ResourceManager.GetString("GEAR_MapSnippetMt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Map To Railyard.
+        /// </summary>
+        public static string GEAR_MapToRailyard {
+            get {
+                return ResourceManager.GetString("GEAR_MapToRailyard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Medical Supplies.
+        /// </summary>
+        public static string GEAR_Medical_Supplies {
+            get {
+                return ResourceManager.GetString("GEAR_Medical Supplies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Military Coat.
+        /// </summary>
+        public static string GEAR_MilitaryParka {
+            get {
+                return ResourceManager.GetString("GEAR_MilitaryParka", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mittens.
+        /// </summary>
+        public static string GEAR_Mittens {
+            get {
+                return ResourceManager.GetString("GEAR_Mittens", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Morphine.
+        /// </summary>
+        public static string GEAR_Morphine {
+            get {
+                return ResourceManager.GetString("GEAR_Morphine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mountain Town Farm Key.
+        /// </summary>
+        public static string GEAR_MountainTownFarmKey {
+            get {
+                return ResourceManager.GetString("GEAR_MountainTownFarmKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mountain Town Farm Note.
+        /// </summary>
+        public static string GEAR_MountainTownFarmNote {
+            get {
+                return ResourceManager.GetString("GEAR_MountainTownFarmNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mountain Town Lock Box Key.
+        /// </summary>
+        public static string GEAR_MountainTownLockBoxKey {
+            get {
+                return ResourceManager.GetString("GEAR_MountainTownLockBoxKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mountain Town Map.
+        /// </summary>
+        public static string GEAR_MountainTownMap {
+            get {
+                return ResourceManager.GetString("GEAR_MountainTownMap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mountain Town Store Key.
+        /// </summary>
+        public static string GEAR_MountainTownStoreKey {
+            get {
+                return ResourceManager.GetString("GEAR_MountainTownStoreKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Military-Grade MRE.
+        /// </summary>
+        public static string GEAR_MRE {
+            get {
+                return ResourceManager.GetString("GEAR_MRE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mukluks.
+        /// </summary>
+        public static string GEAR_MuklukBoots {
+            get {
+                return ResourceManager.GetString("GEAR_MuklukBoots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Newsprint.
+        /// </summary>
+        public static string GEAR_Newsprint {
+            get {
+                return ResourceManager.GetString("GEAR_Newsprint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Newsprint Roll.
+        /// </summary>
+        public static string GEAR_NewsprintRoll {
+            get {
+                return ResourceManager.GetString("GEAR_NewsprintRoll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Old Man&apos;s Beard.
+        /// </summary>
+        public static string GEAR_OldMansBeardDressing {
+            get {
+                return ResourceManager.GetString("GEAR_OldMansBeardDressing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Old Man&apos;s Beard Lichen.
+        /// </summary>
+        public static string GEAR_OldMansBeardHarvested {
+            get {
+                return ResourceManager.GetString("GEAR_OldMansBeardHarvested", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overpass Brochure.
+        /// </summary>
+        public static string GEAR_OverpassBrochure {
+            get {
+                return ResourceManager.GetString("GEAR_OverpassBrochure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cardboard Matches.
+        /// </summary>
+        public static string GEAR_PackMatches {
+            get {
+                return ResourceManager.GetString("GEAR_PackMatches", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paper Stack.
+        /// </summary>
+        public static string GEAR_PaperStack {
+            get {
+                return ResourceManager.GetString("GEAR_PaperStack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Peanut Butter.
+        /// </summary>
+        public static string GEAR_PeanutButter {
+            get {
+                return ResourceManager.GetString("GEAR_PeanutButter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pinnacle Peaches.
+        /// </summary>
+        public static string GEAR_PinnacleCanPeaches {
+            get {
+                return ResourceManager.GetString("GEAR_PinnacleCanPeaches", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plaid Shirt.
+        /// </summary>
+        public static string GEAR_PlaidShirt {
+            get {
+                return ResourceManager.GetString("GEAR_PlaidShirt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Premium Winter Coat.
+        /// </summary>
+        public static string GEAR_PremiumWinterCoat {
+            get {
+                return ResourceManager.GetString("GEAR_PremiumWinterCoat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prybar.
+        /// </summary>
+        public static string GEAR_Prybar {
+            get {
+                return ResourceManager.GetString("GEAR_Prybar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pumpkin Pie.
+        /// </summary>
+        public static string GEAR_PumpkinPie {
+            get {
+                return ResourceManager.GetString("GEAR_PumpkinPie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marine&apos;s Pea Coat.
+        /// </summary>
+        public static string GEAR_QualityWinterCoat {
+            get {
+                return ResourceManager.GetString("GEAR_QualityWinterCoat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fresh Rabbit Pelt.
+        /// </summary>
+        public static string GEAR_RabbitPelt {
+            get {
+                return ResourceManager.GetString("GEAR_RabbitPelt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cured Rabbit Pelt.
+        /// </summary>
+        public static string GEAR_RabbitPeltDried {
+            get {
+                return ResourceManager.GetString("GEAR_RabbitPeltDried", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rabbitskin Mitts.
+        /// </summary>
+        public static string GEAR_RabbitSkinMittens {
+            get {
+                return ResourceManager.GetString("GEAR_RabbitSkinMittens", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Coho Salmon (Raw).
+        /// </summary>
+        public static string GEAR_RawCohoSalmon {
+            get {
+                return ResourceManager.GetString("GEAR_RawCohoSalmon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lake Whitefish (Raw).
+        /// </summary>
+        public static string GEAR_RawLakeWhiteFish {
+            get {
+                return ResourceManager.GetString("GEAR_RawLakeWhiteFish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bear Meat (Raw).
+        /// </summary>
+        public static string GEAR_RawMeatBear {
+            get {
+                return ResourceManager.GetString("GEAR_RawMeatBear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Venison (Raw).
+        /// </summary>
+        public static string GEAR_RawMeatDeer {
+            get {
+                return ResourceManager.GetString("GEAR_RawMeatDeer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rabbit (Raw).
+        /// </summary>
+        public static string GEAR_RawMeatRabbit {
+            get {
+                return ResourceManager.GetString("GEAR_RawMeatRabbit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wolf Meat (Raw).
+        /// </summary>
+        public static string GEAR_RawMeatWolf {
+            get {
+                return ResourceManager.GetString("GEAR_RawMeatWolf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rainbow Trout (Raw).
+        /// </summary>
+        public static string GEAR_RawRainbowTrout {
+            get {
+                return ResourceManager.GetString("GEAR_RawRainbowTrout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Smallmouth Bass (Raw).
+        /// </summary>
+        public static string GEAR_RawSmallMouthBass {
+            get {
+                return ResourceManager.GetString("GEAR_RawSmallMouthBass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reclaimed Wood.
+        /// </summary>
+        public static string GEAR_ReclaimedWoodB {
+            get {
+                return ResourceManager.GetString("GEAR_ReclaimedWoodB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reishi Mushroom.
+        /// </summary>
+        public static string GEAR_ReishiMushroom {
+            get {
+                return ResourceManager.GetString("GEAR_ReishiMushroom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reishi Tea.
+        /// </summary>
+        public static string GEAR_ReishiTea {
+            get {
+                return ResourceManager.GetString("GEAR_ReishiTea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rick&apos;s Journal.
+        /// </summary>
+        public static string GEAR_RicksJournal {
+            get {
+                return ResourceManager.GetString("GEAR_RicksJournal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hunting Rifle.
+        /// </summary>
+        public static string GEAR_Rifle {
+            get {
+                return ResourceManager.GetString("GEAR_Rifle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rifle Ammunition.
+        /// </summary>
+        public static string GEAR_RifleAmmoBox {
+            get {
+                return ResourceManager.GetString("GEAR_RifleAmmoBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rifle Round.
+        /// </summary>
+        public static string GEAR_RifleAmmoSingle {
+            get {
+                return ResourceManager.GetString("GEAR_RifleAmmoSingle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rifle Blanks.
+        /// </summary>
+        public static string GEAR_RifleBlanks {
+            get {
+                return ResourceManager.GetString("GEAR_RifleBlanks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rifle Bullets.
+        /// </summary>
+        public static string GEAR_RifleBullets {
+            get {
+                return ResourceManager.GetString("GEAR_RifleBullets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rifle Cleaning Kit.
+        /// </summary>
+        public static string GEAR_RifleCleaningKit {
+            get {
+                return ResourceManager.GetString("GEAR_RifleCleaningKit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rope.
+        /// </summary>
+        public static string GEAR_Rope {
+            get {
+                return ResourceManager.GetString("GEAR_Rope", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rose Hip.
+        /// </summary>
+        public static string GEAR_RoseHip {
+            get {
+                return ResourceManager.GetString("GEAR_RoseHip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rose hip Tea.
+        /// </summary>
+        public static string GEAR_RoseHipTea {
+            get {
+                return ResourceManager.GetString("GEAR_RoseHipTea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scrap Metal.
+        /// </summary>
+        public static string GEAR_ScrapMetal {
+            get {
+                return ResourceManager.GetString("GEAR_ScrapMetal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sewing Kit.
+        /// </summary>
+        public static string GEAR_SewingKit {
+            get {
+                return ResourceManager.GetString("GEAR_SewingKit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whetstone.
+        /// </summary>
+        public static string GEAR_SharpeningStone {
+            get {
+                return ResourceManager.GetString("GEAR_SharpeningStone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shovel.
+        /// </summary>
+        public static string GEAR_Shovel {
+            get {
+                return ResourceManager.GetString("GEAR_Shovel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Simple Tools.
+        /// </summary>
+        public static string GEAR_SimpleTools {
+            get {
+                return ResourceManager.GetString("GEAR_SimpleTools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ski Boots.
+        /// </summary>
+        public static string GEAR_SkiBoots {
+            get {
+                return ResourceManager.GetString("GEAR_SkiBoots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ski Gloves.
+        /// </summary>
+        public static string GEAR_SkiGloves {
+            get {
+                return ResourceManager.GetString("GEAR_SkiGloves", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ski Jacket.
+        /// </summary>
+        public static string GEAR_SkiJacket {
+            get {
+                return ResourceManager.GetString("GEAR_SkiJacket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Snare.
+        /// </summary>
+        public static string GEAR_Snare {
+            get {
+                return ResourceManager.GetString("GEAR_Snare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Summit Soda.
+        /// </summary>
+        public static string GEAR_Soda {
+            get {
+                return ResourceManager.GetString("GEAR_Soda", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stacy&apos;s Grape Soda.
+        /// </summary>
+        public static string GEAR_SodaGrape {
+            get {
+                return ResourceManager.GetString("GEAR_SodaGrape", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Orange Soda.
+        /// </summary>
+        public static string GEAR_SodaOrange {
+            get {
+                return ResourceManager.GetString("GEAR_SodaOrange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cedar Firewood.
+        /// </summary>
+        public static string GEAR_Softwood {
+            get {
+                return ResourceManager.GetString("GEAR_Softwood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stick.
+        /// </summary>
+        public static string GEAR_Stick {
+            get {
+                return ResourceManager.GetString("GEAR_Stick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to T-Shirt.
+        /// </summary>
+        public static string GEAR_TeeShirt {
+            get {
+                return ResourceManager.GetString("GEAR_TeeShirt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tinder Plug.
+        /// </summary>
+        public static string GEAR_Tinder {
+            get {
+                return ResourceManager.GetString("GEAR_Tinder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tomato Soup.
+        /// </summary>
+        public static string GEAR_TomatoSoupCan {
+            get {
+                return ResourceManager.GetString("GEAR_TomatoSoupCan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Toque.
+        /// </summary>
+        public static string GEAR_Toque {
+            get {
+                return ResourceManager.GetString("GEAR_Toque", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Torch.
+        /// </summary>
+        public static string GEAR_Torch {
+            get {
+                return ResourceManager.GetString("GEAR_Torch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Utilities Bill.
+        /// </summary>
+        public static string GEAR_UtilitiesBill {
+            get {
+                return ResourceManager.GetString("GEAR_UtilitiesBill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Water Purification Tablets.
+        /// </summary>
+        public static string GEAR_WaterPurificationTablets {
+            get {
+                return ResourceManager.GetString("GEAR_WaterPurificationTablets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unsafe Water.
+        /// </summary>
+        public static string GEAR_WaterSupplyNotPotable {
+            get {
+                return ResourceManager.GetString("GEAR_WaterSupplyNotPotable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Potable Water.
+        /// </summary>
+        public static string GEAR_WaterSupplyPotable {
+            get {
+                return ResourceManager.GetString("GEAR_WaterSupplyPotable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Water Tower Note.
+        /// </summary>
+        public static string GEAR_WaterTowerNote {
+            get {
+                return ResourceManager.GetString("GEAR_WaterTowerNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fresh Wolf Pelt.
+        /// </summary>
+        public static string GEAR_WolfPelt {
+            get {
+                return ResourceManager.GetString("GEAR_WolfPelt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cured Wolf Pelt.
+        /// </summary>
+        public static string GEAR_WolfPeltDried {
+            get {
+                return ResourceManager.GetString("GEAR_WolfPeltDried", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wolfskin Coat.
+        /// </summary>
+        public static string GEAR_WolfSkinCape {
+            get {
+                return ResourceManager.GetString("GEAR_WolfSkinCape", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wood Matches.
+        /// </summary>
+        public static string GEAR_WoodMatches {
+            get {
+                return ResourceManager.GetString("GEAR_WoodMatches", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wool Shirt.
+        /// </summary>
+        public static string GEAR_WoolShirt {
+            get {
+                return ResourceManager.GetString("GEAR_WoolShirt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wool Socks.
+        /// </summary>
+        public static string GEAR_WoolSocks {
+            get {
+                return ResourceManager.GetString("GEAR_WoolSocks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thin Wool Sweater.
+        /// </summary>
+        public static string GEAR_WoolSweater {
+            get {
+                return ResourceManager.GetString("GEAR_WoolSweater", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Long Wool Scarf.
+        /// </summary>
+        public static string GEAR_WoolWrap {
+            get {
+                return ResourceManager.GetString("GEAR_WoolWrap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FleeceCowl.
+        /// </summary>
+        public static string GEAR_WoolWrapCap {
+            get {
+                return ResourceManager.GetString("GEAR_WoolWrapCap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Work Boots.
+        /// </summary>
+        public static string GEAR_WorkBoots {
+            get {
+                return ResourceManager.GetString("GEAR_WorkBoots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Work Gloves.
+        /// </summary>
+        public static string GEAR_WorkGloves {
+            get {
+                return ResourceManager.GetString("GEAR_WorkGloves", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Work Pants.
+        /// </summary>
+        public static string GEAR_WorkPants {
+            get {
+                return ResourceManager.GetString("GEAR_WorkPants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Health.
+        /// </summary>
+        public static string Health {
+            get {
+                return ResourceManager.GetString("Health", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hidden.
+        /// </summary>
+        public static string Hidden {
+            get {
+                return ResourceManager.GetString("Hidden", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ice fishing skillpoints.
+        /// </summary>
+        public static string IceFishingSP {
+            get {
+                return ResourceManager.GetString("IceFishingSP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Infinite carry.
+        /// </summary>
+        public static string InfiniteCarry {
+            get {
+                return ResourceManager.GetString("InfiniteCarry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Injuries.
+        /// </summary>
+        public static string Injuries {
+            get {
+                return ResourceManager.GetString("Injuries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inventory.
+        /// </summary>
+        public static string Inventory {
+            get {
+                return ResourceManager.GetString("Inventory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invulnerable.
+        /// </summary>
+        public static string Invulnerable {
+            get {
+                return ResourceManager.GetString("Invulnerable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Materials.
+        /// </summary>
+        public static string Materials {
+            get {
+                return ResourceManager.GetString("Materials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Never die.
+        /// </summary>
+        public static string NeverDie {
+            get {
+                return ResourceManager.GetString("NeverDie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Player.
+        /// </summary>
+        public static string Player {
+            get {
+                return ResourceManager.GetString("Player", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profile.
+        /// </summary>
+        public static string Profile {
+            get {
+                return ResourceManager.GetString("Profile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Progress.
+        /// </summary>
+        public static string Progress {
+            get {
+                return ResourceManager.GetString("Progress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refresh.
+        /// </summary>
+        public static string Refresh {
+            get {
+                return ResourceManager.GetString("Refresh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove.
+        /// </summary>
+        public static string Remove {
+            get {
+                return ResourceManager.GetString("Remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove all.
+        /// </summary>
+        public static string RemoveAll {
+            get {
+                return ResourceManager.GetString("RemoveAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repair all.
+        /// </summary>
+        public static string RepairAll {
+            get {
+                return ResourceManager.GetString("RepairAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rifle skillpoints.
+        /// </summary>
+        public static string RifleSP {
+            get {
+                return ResourceManager.GetString("RifleSP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rounds in clip.
+        /// </summary>
+        public static string RoundsInClip {
+            get {
+                return ResourceManager.GetString("RoundsInClip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skills.
+        /// </summary>
+        public static string Skills {
+            get {
+                return ResourceManager.GetString("Skills", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Snow walker progress.
+        /// </summary>
+        public static string SnowWalkerProgress {
+            get {
+                return ResourceManager.GetString("SnowWalkerProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Test branch.
+        /// </summary>
+        public static string TestBranch {
+            get {
+                return ResourceManager.GetString("TestBranch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thirst.
+        /// </summary>
+        public static string Thirst {
+            get {
+                return ResourceManager.GetString("Thirst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time spent evolving (hours).
+        /// </summary>
+        public static string TimeEvolving {
+            get {
+                return ResourceManager.GetString("TimeEvolving", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Long Dark (v.378T) Save Editor.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tools.
+        /// </summary>
+        public static string Tools {
+            get {
+                return ResourceManager.GetString("Tools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Traits.
+        /// </summary>
+        public static string Traits {
+            get {
+                return ResourceManager.GetString("Traits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown.
+        /// </summary>
+        public static string Unknown {
+            get {
+                return ResourceManager.GetString("Unknown", resourceCulture);
             }
         }
     }

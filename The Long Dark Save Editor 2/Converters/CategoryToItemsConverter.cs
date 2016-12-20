@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows.Data;
 using The_Long_Dark_Save_Editor_2.Game_data;
 using The_Long_Dark_Save_Editor_2.Helpers;
+using The_Long_Dark_Save_Editor_2.Properties;
 
 namespace The_Long_Dark_Save_Editor_2.Converters
 {
@@ -22,7 +23,7 @@ namespace The_Long_Dark_Save_Editor_2.Converters
 			{
 				if (entry.Value.category == cat && !entry.Value.hide)
 				{
-					var member = new EnumerationMember() { Value = entry.Key, Description = entry.Value.inGameName };
+					var member = new EnumerationMember() { Value = entry.Key, Description = (string)Resources.ResourceManager.GetObject(entry.Key)};//Description = entry.Value.inGameName };
 					result.Add(member);
 				}
 

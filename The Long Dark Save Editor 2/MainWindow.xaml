@@ -2,6 +2,7 @@
 		Name="TheWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:p="clr-namespace:The_Long_Dark_Save_Editor_2.Properties"
 		xmlns:converters="clr-namespace:The_Long_Dark_Save_Editor_2.Converters"
 		xmlns:gameData="clr-namespace:The_Long_Dark_Save_Editor_2.Game_data"
 		xmlns:helpers="clr-namespace:The_Long_Dark_Save_Editor_2.Helpers"
@@ -11,7 +12,7 @@
 		xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
 		xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
 		xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="The Long Dark (v.378T) Save Editor" Height="600" Width="900" 
+        Title="{x:Static p:Resources.Title}" Height="600" Width="900" 
 		Loaded="Window_Loaded" Closing="Window_Closing">
 
     <Window.Resources>
@@ -49,49 +50,49 @@
                 <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
                 <StackPanel Margin="10 10 0 0">
                     <StackPanel Orientation="Horizontal">
-                        <Label Width="130">Condition</Label>
-                        <Slider Name="healthSlider" TickFrequency="0.01" Orientation="Horizontal" Minimum="0" IsSnapToTickEnabled="True" 
+                        <Label Width="130" Content="{x:Static p:Resources.Condition}" />
+                            <Slider Name="healthSlider" TickFrequency="0.01" Orientation="Horizontal" Minimum="0" IsSnapToTickEnabled="True" 
 							Maximum="1" Width="200" Value="{Binding NormalizedCondition}" Margin="5 5" Foreground="#c52b1c">
                         </Slider>
                         <Label Content="{Binding ElementName=healthSlider, Path=Value, Converter = {StaticResource DoubleToPercentageConverter}}"></Label>
                     </StackPanel>
                     <StackPanel Visibility="{Binding StackableItem, Converter={StaticResource ObjectToVisibilityConverter}}" Orientation="Horizontal">
-                        <Label Width="130">Amount</Label>
+                        <Label Width="130" Content="{x:Static p:Resources.Amount}" />
                         <TextBox Width="200" Text="{Binding StackableItem.m_UnitsProxy}"></TextBox>
                     </StackPanel>
                     <StackPanel Visibility="{Binding FoodItem, Converter={StaticResource ObjectToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal">
-                            <Label Width="130">Calories</Label>
+                            <Label Width="130" Content="{x:Static p:Resources.Calories}" />
                             <TextBox Width="200" Text="{Binding FoodItem.m_CaloriesRemainingProxy}"></TextBox>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Visibility="{Binding LiquidItem, Converter={StaticResource ObjectToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal">
-                            <Label Width="130">Amount (liters)</Label>
+                            <Label Width="130" Content="{x:Static p:Resources.AmountLiter}" />
                             <TextBox Width="200" Text="{Binding LiquidItem.m_LiquidLitersProxy}"></TextBox>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Visibility="{Binding KeroseneLampItem, Converter={StaticResource ObjectToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal">
-                            <Label Width="130">Amount (liters)</Label>
+                            <Label Width="130" Content="{x:Static p:Resources.AmountLiter}" />
                             <TextBox Width="200" Text="{Binding KeroseneLampItem.m_CurrentFuelLitersProxy}"></TextBox>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Visibility="{Binding WeaponItem, Converter={StaticResource ObjectToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal">
-                            <Label Width="130">Rounds in clip</Label>
+                            <Label Width="130" Content="{x:Static p:Resources.RoundsInClip}" />
                             <TextBox Width="200" Text="{Binding WeaponItem.m_RoundsInClipProxy}"></TextBox>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Visibility="{Binding WaterSupply, Converter={StaticResource ObjectToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal">
-                            <Label Width="130">Amount (liters)</Label>
+                            <Label Width="130" Content="{x:Static p:Resources.AmountLiter}" />
                             <TextBox Width="200" Text="{Binding WaterSupply.m_VolumeProxy}"></TextBox>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Visibility="{Binding InProgressItem, Converter={StaticResource ObjectToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal">
-                            <Label Width="130">Progress</Label>
+                            <Label Width="130" Content="{x:Static p:Resources.Progress}" />
                             <Slider Name="progressSlider" TickFrequency="0.01" Orientation="Horizontal" Minimum="0" IsSnapToTickEnabled="True" 
 							Maximum="1" Width="200" Value="{Binding InProgressItem.m_PercentComplete}" Margin="5 5" Foreground="#c52b1c">
                             </Slider>
@@ -100,7 +101,7 @@
                     </StackPanel>
                     <StackPanel Visibility="{Binding EvolveItem, Converter={StaticResource ObjectToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal">
-                            <Label Width="130">Time spent evolving (hours)</Label>
+                            <Label Width="130" Content="{x:Static p:Resources.TimeEvolving}" />
                             <TextBox Width="200" Text="{Binding EvolveItem.m_TimeSpentEvolvingGameHours}"></TextBox>
                         </StackPanel>
                     </StackPanel>
@@ -148,8 +149,8 @@
                             <ColumnDefinition Width="10"/>
                             <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="1" Command="materialDesign:DialogHost.CloseDialogCommand" Style="{StaticResource MaterialDesignFlatButton}">Cancel</Button>
-                        <Button Grid.Column="3" Command="{Binding DownloadCommand}" Style="{StaticResource MaterialDesignFlatButton}">Download</Button>
+                        <Button Grid.Column="1" Command="materialDesign:DialogHost.CloseDialogCommand" Style="{StaticResource MaterialDesignFlatButton}" Content="{x:Static p:Resources.Cancel}" />
+                        <Button Grid.Column="3" Command="{Binding DownloadCommand}" Style="{StaticResource MaterialDesignFlatButton}" Content="{x:Static p:Resources.Download}"/> 
                     </Grid>
                 </Grid>
 
@@ -166,26 +167,26 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal" Height="40" Grid.Column="0" Background="White">
                     <ComboBox Margin="10 0 0 0" Name="ccSaves" ItemsSource="{Binding Saves}" DisplayMemberPath="Description" SelectedValuePath="Value" Width="160" SelectedIndex="0" SelectionChanged="CurrentSaveSelectionChanged"/>
-                    <Button Margin="10 0 0 0" Click="MenuItem_Click" Style="{StaticResource MaterialDesignFlatButton}">Save</Button>
-                    <Button Margin="10 0 0 0" Click="RefreshClicked" Style="{StaticResource MaterialDesignFlatButton}">Refresh</Button>
+                    <Button Margin="10 0 0 0" Click="MenuItem_Click" Style="{StaticResource MaterialDesignFlatButton}" Content="{x:Static p:Resources.Save}"/>
+                    <Button Margin="10 0 0 0" Click="RefreshClicked" Style="{StaticResource MaterialDesignFlatButton}" Content="{x:Static p:Resources.Refresh}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="0 0 20 0">
-                    <Label VerticalAlignment="Center">Test branch</Label>
+                    <Label VerticalAlignment="Center" Content="{x:Static p:Resources.TestBranch}"/>
                     <ToggleButton IsChecked="{Binding TestBranch}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
                 </StackPanel>
             </Grid>
             <Rectangle DockPanel.Dock="Top" Fill="#A6B8C3" Height="1" ></Rectangle>
             <dragablz:TabablzControl Name="tabPanel" FixedHeaderCount="4" DockPanel.Dock="Bottom" BorderBrush="Transparent">
-                <TabItem Header="Profile">
+                <TabItem Header="{x:Static p:Resources.Profile}">
                     <StackPanel>
                         <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
                         <StackPanel Margin="10 10">
 
-                            <Expander Header="Traits" IsExpanded="True">
+                            <Expander Header="{x:Static p:Resources.Traits}" IsExpanded="True">
                                 <StackPanel>
 
                                     <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                        <Label Width="160">Book smarts Progress</Label>
+                                        <Label Width="160" Content="{x:Static p:Resources.BookSmartProgress}"/>
                                         <Slider Name="bookSmartSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
 									Maximum="{StaticResource bookSmartRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.BookSmarts.m_HoursResearch}" Margin="5 5" Foreground="#c52b1c">
                                         </Slider>
@@ -195,7 +196,7 @@
                                     </StackPanel>
 
                                     <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                        <Label Width="160">Cold fusion progress</Label>
+                                        <Label Width="160" Content="{x:Static p:Resources.ColdFusionProgress}"/>
                                         <Slider Name="coldFusionSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
 									Maximum="{StaticResource coldFusionRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.ColdFusion.m_ElapsedDays}" Margin="5 5" Foreground="#c52b1c">
                                         </Slider>
@@ -205,7 +206,7 @@
                                     </StackPanel>
 
                                     <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                        <Label Width="160">Efficient machine progress</Label>
+                                        <Label Width="160" Content="{x:Static p:Resources.EfficientMachineProgress}"/>
                                         <Slider Name="efficientMachineSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
 									Maximum="{StaticResource efficientMachingeRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.EfficientMachine.m_ElapsedHours}" Margin="5 5" Foreground="#c52b1c">
                                         </Slider>
@@ -215,7 +216,7 @@
                                     </StackPanel>
 
                                     <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                        <Label Width="160">Fire master progress</Label>
+                                        <Label Width="160" Content="{x:Static p:Resources.FireMasterProgress}"/>
                                         <Slider Name="fireMasterSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
 									Maximum="{StaticResource fireMasterRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.FireMaster.m_NumFiresStarted}" Margin="5 5" Foreground="#c52b1c">
                                         </Slider>
@@ -225,7 +226,7 @@
                                     </StackPanel>
 
                                     <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                        <Label Width="160">Free runner progress</Label>
+                                        <Label Width="160" Content="{x:Static p:Resources.FreeRunnerProgress}"/>
                                         <Slider Name="freeRunnerSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
 									Maximum="{StaticResource freeRunnerRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.FreeRunner.m_ElapsedKilometers}" Margin="5 5" Foreground="#c52b1c">
                                         </Slider>
@@ -235,7 +236,7 @@
                                     </StackPanel>
 
                                     <StackPanel Orientation="Horizontal">
-                                        <Label Width="160">Snow walker progress</Label>
+                                        <Label Width="160" Content="{x:Static p:Resources.SnowWalkerProgress}"/>
                                         <Slider Name="snowWalkerSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
 									Maximum="{StaticResource snowWalkerRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.SnowWalker.m_ElapsedKilometers}" Margin="5 5" Foreground="#c52b1c">
                                         </Slider>
@@ -252,12 +253,12 @@
                     </StackPanel>
 
                 </TabItem>
-                <TabItem Header="Player">
+                <TabItem Header="{x:Static p:Resources.Player}">
                     <StackPanel>
                         <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
                         <StackPanel Margin="10 10">
                             <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                <Label Width="130">Health</Label>
+                                <Label Width="130" Content="{x:Static p:Resources.Health}"/>
                                 <Slider Name="healthSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
 										Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Condition.m_CurrentHPProxy}" Margin="5 5" Foreground="#c52b1c">
                                 </Slider>
@@ -265,16 +266,16 @@
 										ConverterParameter={StaticResource double100}}">
                                 </Label>
                             </StackPanel>
-                            <CheckBox IsChecked="{Binding CurrentSave.Global.Condition.m_NeverDieProxy}" Margin="0 0 0 5">Never die</CheckBox>
-                            <CheckBox IsChecked="{Binding CurrentSave.Global.Condition.m_Invulnerable}" Margin="0 0 0 5">Invulnerable</CheckBox>
-                            <CheckBox IsChecked="{Binding CurrentSave.Global.Inventory.m_ForceOverrideWeight}" Margin="0 0 0 5">Infinite carry</CheckBox>
+                            <CheckBox IsChecked="{Binding CurrentSave.Global.Condition.m_NeverDieProxy}" Margin="0 0 0 5" Content="{x:Static p:Resources.NeverDie}"/>
+                            <CheckBox IsChecked="{Binding CurrentSave.Global.Condition.m_Invulnerable}" Margin="0 0 0 5" Content="{x:Static p:Resources.Invulnerable}"/>
+                            <CheckBox IsChecked="{Binding CurrentSave.Global.Inventory.m_ForceOverrideWeight}" Margin="0 0 0 5" Content="{x:Static p:Resources.InfiniteCarry}"/>
 
                             <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                <Label VerticalAlignment="Center" Width="130">Current calories</Label>
+                                <Label VerticalAlignment="Center" Width="130" Content="{x:Static p:Resources.CurrentCalories}"/>
                                 <TextBox Text="{Binding CurrentSave.Global.Hunger.m_CurrentReserveCaloriesProxy}"  Width="200"></TextBox>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                <Label Width="130">Thirst</Label>
+                                <Label Width="130" Content="{x:Static p:Resources.Thirst}"/>
                                 <Slider Name="thirstSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
 										Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Thirst.m_CurrentThirstProxy}" Margin="5 5" Foreground="#c52b1c">
                                 </Slider>
@@ -283,7 +284,7 @@
                                 </Label>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                <Label Width="130">Fatigue</Label>
+                                <Label Width="130" Content="{x:Static p:Resources.Fatigue}"/>
                                 <Slider Name="fatigueSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
 										Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Fatigue.m_CurrentFatigueProxy}" Margin="5 5" Foreground="#c52b1c">
                                 </Slider>
@@ -292,7 +293,7 @@
                                 </Label>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                <Label Width="130">Freezing</Label>
+                                <Label Width="130" Content="{x:Static p:Resources.Freezing}"/>
                                 <Slider Name="freezingSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
 										Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Freezing.m_CurrentFreezingProxy}" Margin="5 5" Foreground="#c52b1c">
                                 </Slider>
@@ -303,42 +304,42 @@
                         </StackPanel>
                     </StackPanel>
                 </TabItem>
-                <TabItem Header="Skills">
+                <TabItem Header="{x:Static p:Resources.Skills}">
                     <StackPanel>
                         <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
                         <StackPanel Margin="10">
                             <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                <Label VerticalAlignment="Center" Width="170">Firestarting skillpoints</Label>
+                                <Label VerticalAlignment="Center" Width="170" Content="{x:Static p:Resources.FireStartingSP}" />
                                 <TextBox Text="{Binding CurrentSave.Global.SkillsManager.FireStartingSkill.m_Points}"  Width="200"></TextBox>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                <Label VerticalAlignment="Center" Width="170">Carcass harvesting skillpoints</Label>
+                                <Label VerticalAlignment="Center" Width="170" Content="{x:Static p:Resources.CarcassHarvestingSP}" />
                                 <TextBox Text="{Binding CurrentSave.Global.SkillsManager.CarcassHarvestingSkill.m_Points}"  Width="200"></TextBox>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                <Label VerticalAlignment="Center" Width="170">Cooking skillpoints</Label>
+                                <Label VerticalAlignment="Center" Width="170" Content="{x:Static p:Resources.CookingSP}" />
                                 <TextBox Text="{Binding CurrentSave.Global.SkillsManager.CookingSkill.m_Points}"  Width="200"></TextBox>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                <Label VerticalAlignment="Center" Width="170">Icefishing skillpoints</Label>
+                                <Label VerticalAlignment="Center" Width="170" Content="{x:Static p:Resources.IceFishingSP}" />
                                 <TextBox Text="{Binding CurrentSave.Global.SkillsManager.IceFishingSkill.m_Points}"  Width="200"></TextBox>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                <Label VerticalAlignment="Center" Width="170">Rifle skillpoints</Label>
+                                <Label VerticalAlignment="Center" Width="170" Content="{x:Static p:Resources.RifleSP}" />
                                 <TextBox Text="{Binding CurrentSave.Global.SkillsManager.RifleSkill.m_Points}"  Width="200"></TextBox>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                <Label VerticalAlignment="Center" Width="170">Archery skillpoints</Label>
+                                <Label VerticalAlignment="Center" Width="170" Content="{x:Static p:Resources.ArcherySP}" />
                                 <TextBox Text="{Binding CurrentSave.Global.SkillsManager.ArcherySkill.m_Points}"  Width="200"></TextBox>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                <Label VerticalAlignment="Center" Width="170">Clothing repairing skillpoints</Label>
+                                <Label VerticalAlignment="Center" Width="170" Content="{x:Static p:Resources.ClothingRepairSP}" />
                                 <TextBox Text="{Binding CurrentSave.Global.SkillsManager.ClothingRepairSkill.m_Points}"  Width="200"></TextBox>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
                 </TabItem>
-                <!-- <TabItem Header="Injuries" Visibility="Hidden">
+                <!-- <TabItem Header="{x:Static p:Resources.Injuries}" Visibility="Hidden">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto" />
@@ -369,7 +370,7 @@
                         </StackPanel>
                     </Grid>
                 </TabItem>-->
-                <TabItem Header="Inventory">
+                <TabItem Header="{x:Static p:Resources.Inventory}">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
@@ -382,9 +383,9 @@
 										DisplayMemberPath="Description" SelectedValuePath="Value" Width="120" SelectedIndex="0"/>
                                 <ComboBox Name="cbItem" ItemsSource="{Binding ElementName=cbItemCategory, Path=SelectedValue, Converter={StaticResource CategoryToItemsConverter}}" 
 									  Margin="10 0 5 0" DisplayMemberPath="Description" SelectedValuePath="Value" Width="160" SelectionChanged="cbItem_SelectionChanged" SelectedIndex="0"></ComboBox>
-                                <Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButton}" Click="AddItemClicked">Add item</Button>
-                                <Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButton}" Click="RepairAllClicked">Repair all</Button>
-                                <Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButton}" Click="RemoveAllClicked">Remove all</Button>
+                                <Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButton}" Click="AddItemClicked" Content="{x:Static p:Resources.AddItem}" />
+                                <Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButton}" Click="RepairAllClicked" Content="{x:Static p:Resources.RepairAll}" />
+                                <Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButton}" Click="RemoveAllClicked" Content="{x:Static p:Resources.RemoveAll}" />
                             </StackPanel>
                             <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
                         </StackPanel>
@@ -394,7 +395,6 @@
                                 <ColumnDefinition Width="1"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-
 
                             <ListBox Name="ItemList" Grid.Column="0" ItemsSource="{Binding Source={StaticResource InventoryItems}}">
                                 <ListBox.GroupStyle>
@@ -425,7 +425,7 @@
                         </Grid>
                     </Grid>
                 </TabItem>
-                <TabItem Header="About">
+                <TabItem Header="{x:Static p:Resources.About}">
                     <StackPanel>
                         <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
                         <StackPanel Margin="10 20" >

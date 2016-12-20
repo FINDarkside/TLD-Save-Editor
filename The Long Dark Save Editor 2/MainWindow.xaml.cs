@@ -63,7 +63,7 @@ namespace The_Long_Dark_Save_Editor_2
 
 		public MainWindow()
 		{
-
+			System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("ru-RU");
 #if DEBUG
 			IsDebug = true;
 #endif
