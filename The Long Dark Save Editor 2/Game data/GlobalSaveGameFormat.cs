@@ -29,6 +29,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public string m_PlayerSkillsSerialized { get; set; }
 		public string m_PlayerGameStatsSerialized { get; set; }
 		public string m_HypothermiaSerialized { get; set; }
+		public string m_FrostbiteSerialized { get; set; }
 		public string m_FoodPoisoningSerialized { get; set; }
 		public string m_DysenterySerialized { get; set; }
 		public string m_SprainedAnkleSerialized { get; set; }
@@ -83,9 +84,10 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public PlayerManagerSaveDataProxy PlayerManager { get; set; }
 		public PlayerClimbRopeProxy PlayerClimbRope { get; set; }
 		[System.Obsolete("Use SkillsManager")]
-		public PlayerSkillsSaveData PlayerSkills { get; set; } 
+		public PlayerSkillsSaveData PlayerSkills { get; set; }
 		public PlayerGameStatsProxy PlayerGameStats { get; set; }
 		public HypothermiaSaveDataProxy Hypothermia { get; set; }
+		public FrostBiteSaveDataProxy Frostbite { get; set; }
 		public FoodPoisoningSaveDataProxy FoodPoisoning { get; set; }
 		public DysenterySaveDataProxy Dysentery { get; set; }
 		public SprainedAnkleSaveDataProxy SprainedAnkle { get; set; }
@@ -101,7 +103,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public AchievementSaveData AchievementManager { get; set; }
 		public ExperienceModeManagerSaveDataProxy ExperienceModeManager { get; set; }
 		public string AuroraManager { get; set; }
-		public CacheManagerSaveData CacheManager { get; set; }
 		public PlayerMovementSaveDataProxy PlayerMovement { get; set; }
 		public string PlayerStruggle { get; set; }
 		public string UserDefinedSaveSlotName { get; set; }
@@ -144,6 +145,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			PlayerSkills = Util.DeserializeObject<PlayerSkillsSaveData>(proxy.m_PlayerSkillsSerialized);
 			PlayerGameStats = Util.DeserializeObject<PlayerGameStatsProxy>(proxy.m_PlayerGameStatsSerialized);
 			Hypothermia = Util.DeserializeObject<HypothermiaSaveDataProxy>(proxy.m_HypothermiaSerialized);
+			Frostbite = Util.DeserializeObject<FrostBiteSaveDataProxy>(proxy.m_FrostbiteSerialized);
 			FoodPoisoning = Util.DeserializeObject<FoodPoisoningSaveDataProxy>(proxy.m_FoodPoisoningSerialized);
 			Dysentery = Util.DeserializeObject<DysenterySaveDataProxy>(proxy.m_DysenterySerialized);
 			SprainedAnkle = Util.DeserializeObject<SprainedAnkleSaveDataProxy>(proxy.m_SprainedAnkleSerialized);
@@ -159,11 +161,10 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			AchievementManager = Util.DeserializeObject<AchievementSaveData>(proxy.m_AchievementManagerSerialized);
 			ExperienceModeManager = Util.DeserializeObject<ExperienceModeManagerSaveDataProxy>(proxy.m_ExperienceModeManagerSerialized);
 			AuroraManager = proxy.m_AuroraManagerSerialized;
-			CacheManager = Util.DeserializeObject<CacheManagerSaveData>(proxy.m_CacheManagerSerialized);
 			PlayerMovement = Util.DeserializeObject<PlayerMovementSaveDataProxy>(proxy.m_PlayerMovementSerialized);
 			PlayerStruggle = proxy.m_PlayerStruggleSerialized;
 			UserDefinedSaveSlotName = proxy.m_UserDefinedSaveSlotName;
-			
+
 			// Do not deserialize, invalid JSON (integers as keys)
 			PanelStats = proxy.m_PanelStatsSerialized;
 
@@ -205,6 +206,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			proxy.m_PlayerSkillsSerialized = Util.SerializeObject(PlayerSkills);
 			proxy.m_PlayerGameStatsSerialized = Util.SerializeObject(PlayerGameStats);
 			proxy.m_HypothermiaSerialized = Util.SerializeObject(Hypothermia);
+			proxy.m_FrostbiteSerialized = Util.SerializeObject(Frostbite);
 			proxy.m_FoodPoisoningSerialized = Util.SerializeObject(FoodPoisoning);
 			proxy.m_DysenterySerialized = Util.SerializeObject(Dysentery);
 			proxy.m_SprainedAnkleSerialized = Util.SerializeObject(SprainedAnkle);
@@ -220,7 +222,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			proxy.m_AchievementManagerSerialized = Util.SerializeObject(AchievementManager);
 			proxy.m_ExperienceModeManagerSerialized = Util.SerializeObject(ExperienceModeManager);
 			proxy.m_AuroraManagerSerialized = AuroraManager;
-			proxy.m_CacheManagerSerialized = Util.SerializeObject(CacheManager);
 			proxy.m_PlayerMovementSerialized = Util.SerializeObject(PlayerMovement);
 			proxy.m_PlayerStruggleSerialized = PlayerStruggle;
 			proxy.m_UserDefinedSaveSlotName = UserDefinedSaveSlotName;

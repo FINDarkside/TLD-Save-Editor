@@ -52,7 +52,6 @@ namespace The_Long_Dark_Save_Editor_2
 		public SubtitlesState SubtitlesState { get; set; }
 		public LanguageState LanguageState { get; set; }
 		public string Language { get; set; }
-		public ExperienceModeType ExperienceMode { get; set; }
 		public bool CoastalRegionLocked { get; set; }
 		public bool RuralRegionLocked { get; set; }
 		public bool WhalingStationRegionLocked { get; set; }
@@ -67,6 +66,7 @@ namespace The_Long_Dark_Save_Editor_2
 		public float BestTimeRescue { get; set; }
 		public float BestTimeWhiteout { get; set; }
 		public float BestTimeNomad { get; set; }
+		public float BestTimeHunted2 { get; set; }
 		public ExperienceModeType MostRecentSandboxMode { get; set; }
 		public ExperienceModeType MostRecentChallengeMode { get; set; }
 		public float Brightness { get; set; }
@@ -183,7 +183,6 @@ namespace The_Long_Dark_Save_Editor_2
 			SubtitlesState = proxy.m_SubtitlesState;
 			LanguageState = proxy.m_LanguageState;
 			Language = proxy.m_Language;
-			ExperienceMode = proxy.m_ExperienceMode;
 			CoastalRegionLocked = proxy.m_CoastalRegionLocked;
 			RuralRegionLocked = proxy.m_RuralRegionLocked;
 			WhalingStationRegionLocked = proxy.m_WhalingStationRegionLocked;
@@ -198,6 +197,7 @@ namespace The_Long_Dark_Save_Editor_2
 			BestTimeRescue = proxy.m_BestTimeRescue;
 			BestTimeWhiteout = proxy.m_BestTimeWhiteout;
 			BestTimeNomad = proxy.m_BestTimeNomad;
+			BestTimeHunted2 = proxy.m_BestTimeHunted2;
 			MostRecentSandboxMode = proxy.m_MostRecentSandboxMode;
 			MostRecentChallengeMode = proxy.m_MostRecentChallengeMode;
 			Brightness = proxy.m_Brightness;
@@ -248,7 +248,6 @@ namespace The_Long_Dark_Save_Editor_2
 			proxy.m_SubtitlesState = SubtitlesState;
 			proxy.m_LanguageState = LanguageState;
 			proxy.m_Language = Language;
-			proxy.m_ExperienceMode = ExperienceMode;
 			proxy.m_CoastalRegionLocked = CoastalRegionLocked;
 			proxy.m_RuralRegionLocked = RuralRegionLocked;
 			proxy.m_WhalingStationRegionLocked = WhalingStationRegionLocked;
@@ -263,6 +262,7 @@ namespace The_Long_Dark_Save_Editor_2
 			proxy.m_BestTimeRescue = BestTimeRescue;
 			proxy.m_BestTimeWhiteout = BestTimeWhiteout;
 			proxy.m_BestTimeNomad = BestTimeNomad;
+			proxy.m_BestTimeHunted2 = BestTimeHunted2;
 			proxy.m_MostRecentSandboxMode = MostRecentSandboxMode;
 			proxy.m_MostRecentChallengeMode = MostRecentChallengeMode;
 			proxy.m_Brightness = Brightness;

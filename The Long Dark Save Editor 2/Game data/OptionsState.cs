@@ -7,7 +7,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 {
 	public class OptionsState
 	{
-		public List<string> m_RewiredKeyboardMap = new List<string>();
+		public List<string> m_RewiredKeyboardMap;
 		public List<string> m_RewiredMouseMap = new List<string>();
 		public List<SandBoxRecord> m_SandboxRecords; //SandboxRecord
 		public List<UpSell> m_UpsellsViewed = new List<UpSell>();
@@ -48,7 +48,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public SubtitlesState m_SubtitlesState;
 		public LanguageState m_LanguageState;
 		public string m_Language;
-		public ExperienceModeType m_ExperienceMode;
 		public bool m_CoastalRegionLocked;
 		public bool m_RuralRegionLocked;
 		public bool m_WhalingStationRegionLocked;
@@ -63,6 +62,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public float m_BestTimeRescue;
 		public float m_BestTimeWhiteout;
 		public float m_BestTimeNomad;
+		public float m_BestTimeHunted2;
 		public ExperienceModeType m_MostRecentSandboxMode;
 		public ExperienceModeType m_MostRecentChallengeMode;
 		public float m_Brightness;
@@ -189,6 +189,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
 	public class StatContainer
 	{
+		public int[] m_CachedHashIds { get; set; }
 		public Dictionary<int, string> m_StatsDictionary { get; set; }
 		public int m_NumBurntHousesInCoastal { get; set; }
 		public bool m_HasDoneCoastalBurntHouseCheck { get; set; }

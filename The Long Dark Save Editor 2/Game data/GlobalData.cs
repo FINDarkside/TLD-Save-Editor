@@ -41,6 +41,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
 	public class WindSaveDataProxy
 	{
+		// Has Container class
 		public int m_Version { get; set; }
 		public WindDirection m_windDirectionProxy { get; set; }
 		public WindStrength m_windStrengthProxy { get; set; }
@@ -71,6 +72,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public WeatherStage m_WeatherStageProxy { get; set; }
 		public float m_UniStormElapsedHoursProxy { get; set; }
 		public float m_UniStormNextWeatherChangeElapsedHoursProxy { get; set; }
+		public bool m_UseMinAirTemperature { get; set; }
+		public int m_MinAirTemperature { get; set; }
 	}
 
 	public class WeatherTransitionSaveDataProxy
@@ -148,25 +151,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 	public class WillpowerSaveDataProxy
 	{
 		public float m_TimeRemainingSecondsProxy { get; set; }
-	}
-
-	public class CacheManagerSaveData
-	{
-		public List<CachePlanSaveData> m_SerializedItems { get; set; }
-	}
-
-	public class CachePlanSaveData
-	{
-		public string m_CacheLocatorGuid { get; set; }
-		public string m_LandmarkLocatorGuid { get; set; }
-		public string m_LandmarkName { get; set; }
-		public float[] m_CacheLocatorPos { get; set; }
-		public float[] m_LandmarkLocatorPos { get; set; }
-		public int m_RewardIndex { get; set; }
-		public string m_HostScene { get; set; }
-		public string m_Title { get; set; }
-		public string m_Description { get; set; }
-		public bool m_IsRare { get; set; }
 	}
 
 	#region Inventory
@@ -389,9 +373,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public event PropertyChangedEventHandler PropertyChanged;
 	}
 
-	//if (this.name == "GEAR_ReishiMushroom" || this.name == "GEAR_ReishiTea" || (this.name == "GEAR_RoseHip" || this.name == "GEAR_RoseHipTea"))
-	//this.m_HarvestedByPlayer = true;
-
 	public class GearItemSaveDataProxy
 	{
 		public float m_HoursPlayed { get; set; }
@@ -554,6 +535,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
 	public class PlayerManagerSaveDataProxy
 	{
+		public List<int> m_KnownCodes { get; set; }
 		public float[] m_SaveGamePosition { get; set; }
 		public float[] m_SaveGameRotation { get; set; }
 		public bool m_StartGearAppliedProxy { get; set; }
@@ -576,6 +558,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public bool m_PlayerInVehicle { get; set; }
 		public float[] m_PlayerInVehicleCameraPos { get; set; }
 		public bool m_PlayerInSnowShelter { get; set; }
+		public float m_PumpkinPieBuffHoursRemaining { get; set; }
+		public float m_PumpkinPieFreezingRateScale { get; set; }
 	}
 
 	public class PlayerClimbRopeProxy
@@ -615,8 +599,14 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public bool m_Active { get; set; }
 		public float m_ElapsedHours { get; set; }
 		public float m_ElapsedWarmTime { get; set; }
-		public float m_CommentTime { get; set; }
 		public string m_CauseLocID { get; set; }
+	}
+
+	public class FrostBiteSaveDataProxy
+	{
+		public int[] m_LocationsWithActiveFrostbite { get; set; }
+		public int[] m_LocationsWithFrostbiteRisk { get; set; }
+		public float[] m_LocationsCurrentFrostbiteDamage { get; set; }
 	}
 
 	public class FoodPoisoningSaveDataProxy
@@ -626,7 +616,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public float m_DurationHours { get; set; }
 		public bool m_AntibioticsTaken { get; set; }
 		public float m_ElapsedRest { get; set; }
-		public float m_CommentTime { get; set; }
 		public string m_CauseLocID { get; set; }
 	}
 
@@ -638,7 +627,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public bool m_AntibioticsTaken { get; set; }
 		public float m_ElapsedRest { get; set; }
 		public float m_CleanWaterConsumedLiters { get; set; }
-		public float m_CommentTime { get; set; }
 	}
 
 	public class SprainedAnkleSaveDataProxy
@@ -648,7 +636,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public float m_DurationHours { get; set; }
 		public bool m_PainKillersTaken { get; set; }
 		public float m_ElapsedRest { get; set; }
-		public float m_SecondsSinceSprain { get; set; }
 		public float m_SecondsSinceLastPainAudio { get; set; }
 		public float m_SecondsUntilNextPainAudio { get; set; }
 		public string[] m_CausesLocIDs { get; set; }
@@ -665,7 +652,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public float m_DurationHours { get; set; }
 		public bool m_PainKillersTaken { get; set; }
 		public float m_ElapsedRest { get; set; }
-		public float m_SecondsSinceSprain { get; set; }
 		public float m_SecondsSinceLastPainAudio { get; set; }
 		public float m_SecondsUntilNextPainAudio { get; set; }
 		public string[] m_CausesLocIDs { get; set; }
@@ -696,7 +682,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public float m_DurationHours { get; set; }
 		public bool m_PainKillersTaken { get; set; }
 		public bool m_BandageApplied { get; set; }
-		public float m_CommentTime { get; set; }
 	}
 
 	public class BloodLossSaveDataProxy
@@ -704,7 +689,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public bool m_Active { get; set; }
 		public float m_ElapsedHours { get; set; }
 		public float m_DurationHours { get; set; }
-		public float m_CommentTime { get; set; }
 		public string[] m_CausesLocIDs { get; set; }
 		public int[] m_Locations { get; set; }
 		public float[] m_ElapsedHoursList { get; set; }
@@ -718,7 +702,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public float m_DurationHours { get; set; }
 		public bool m_AntibioticsTaken { get; set; }
 		public float m_ElapsedRest { get; set; }
-		public float m_CommentTime { get; set; }
 		public string[] m_CausesLocIDs { get; set; }
 		public int[] m_Locations { get; set; }
 		public float[] m_ElapsedHoursList { get; set; }
@@ -734,7 +717,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public float m_DurationHours { get; set; }
 		public bool m_Bandaged { get; set; }
 		public bool m_AntisepticTaken { get; set; }
-		public float m_CommentTime { get; set; }
+		public float m_CommentTime;
 		public float m_CurrentInfectionChance { get; set; }
 		public string[] m_CausesLocIDs { get; set; }
 		public int[] m_Locations { get; set; }
@@ -752,6 +735,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public float m_ElapsedHours { get; set; }
 		public float[] m_IndoorTimeTracked { get; set; }
 		public int m_HourLastFrame { get; set; }
+		public bool m_DoneHalloweenEventFix { get; set; }
 	}
 
 	public class IntestinalParasitesSaveDataProxy
@@ -766,7 +750,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public bool m_HasTakenDoseToday { get; set; }
 		public int m_DayToAllowNextDose { get; set; }
 		public int m_NumPiecesEatenThisRiskCycle { get; set; }
-		public float m_CommentTime { get; set; }
 	}
 
 	#region Log
@@ -907,8 +890,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public string m_Skill_CookingSerialized { get; set; }
 		public string m_Skill_IceFishingSerialized { get; set; }
 		public string m_Skill_RifleSerialized { get; set; }
-		public string m_Skill_ArcherySerialized;
-		public string m_Skill_ClothingRepairSerialized;
+		public string m_Skill_ArcherySerialized { get; set; }
+		public string m_Skill_ClothingRepairSerialized { get; set; }
 	}
 
 	public class SkillsManager

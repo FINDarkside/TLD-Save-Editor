@@ -122,6 +122,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		Fresh,
 		Burning,
 		BurnedOut,
+		Wet
 	}
 
 	public enum BedRollState
@@ -145,6 +146,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		BlownOut,
 		BurnedOut,
 		Extinguished,
+		Wet
 	}
 
 	public enum MissionObjectClass
@@ -184,6 +186,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		IntestinalParasites,
 		SprainedWristMajor,
 		CabinFeverRisk,
+		FrostbiteRisk,
 	}
 
 	public enum ExperienceModeType
@@ -219,6 +222,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		HoursInCoastalHighway,
 		HoursInDesolationPoint,
 		HoursInCrashMountainRegion,
+		HoursInMarshRegion,
 		SuccessfulRepairs,
 		BowShot,
 		SuccessfulHits_Bow,
@@ -264,6 +268,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		DistanceTravelledOnRope,
 		CabinFever,
 		IntestinalParasites,
+		Frostbite,
 		NumStats,
 	}
 
@@ -281,6 +286,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		RuralRegion,
 		WhalingStationRegion,
 		CrashMountainRegion,
+		MarshRegion,
 		RandomRegion,
 		FutureRegion,
 	}
