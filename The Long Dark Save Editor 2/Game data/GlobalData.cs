@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -631,10 +632,15 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
 	public class SprainedAnkleSaveDataProxy
 	{
+		[Obsolete]
 		public bool m_Active { get; set; }
+		[Obsolete]
 		public float m_ElapsedHours { get; set; }
+		[Obsolete]
 		public float m_DurationHours { get; set; }
+		[Obsolete]
 		public bool m_PainKillersTaken { get; set; }
+		[Obsolete]
 		public float m_ElapsedRest { get; set; }
 		public float m_SecondsSinceLastPainAudio { get; set; }
 		public float m_SecondsUntilNextPainAudio { get; set; }

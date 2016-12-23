@@ -22,7 +22,8 @@
         <converters:FeatProgressPercentageConverter x:Key="FeatProgressPercentageConverter" />
         <converters:CategoryToItemsConverter x:Key="CategoryToItemsConverter" />
         <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
-
+        <converters:EnumDescriptionConverter x:Key="EnumDescriptionConverter" />
+		
         <System:Double x:Key="double100">100</System:Double>
 
         <System:Double x:Key="bookSmartRequirement">250</System:Double>
@@ -51,7 +52,7 @@
                 <StackPanel Margin="10 10 0 0">
                     <StackPanel Orientation="Horizontal">
                         <Label Width="130" Content="{x:Static p:Resources.Condition}" />
-                            <Slider Name="healthSlider" TickFrequency="0.01" Orientation="Horizontal" Minimum="0" IsSnapToTickEnabled="True" 
+                        <Slider Name="healthSlider" TickFrequency="0.01" Orientation="Horizontal" Minimum="0" IsSnapToTickEnabled="True" 
 							Maximum="1" Width="200" Value="{Binding NormalizedCondition}" Margin="5 5" Foreground="#c52b1c">
                         </Slider>
                         <Label Content="{Binding ElementName=healthSlider, Path=Value, Converter = {StaticResource DoubleToPercentageConverter}}"></Label>
@@ -150,7 +151,7 @@
                             <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
                         <Button Grid.Column="1" Command="materialDesign:DialogHost.CloseDialogCommand" Style="{StaticResource MaterialDesignFlatButton}" Content="{x:Static p:Resources.Cancel}" />
-                        <Button Grid.Column="3" Command="{Binding DownloadCommand}" Style="{StaticResource MaterialDesignFlatButton}" Content="{x:Static p:Resources.Download}"/> 
+                        <Button Grid.Column="3" Command="{Binding DownloadCommand}" Style="{StaticResource MaterialDesignFlatButton}" Content="{x:Static p:Resources.Download}"/>
                     </Grid>
                 </Grid>
 
@@ -339,7 +340,7 @@
                         </StackPanel>
                     </StackPanel>
                 </TabItem>
-                <!-- <TabItem Header="{x:Static p:Resources.Injuries}" Visibility="Hidden">
+                <TabItem Header="{x:Static p:Resources.Injuries}" Visibility="Hidden">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto" />
@@ -350,26 +351,30 @@
                             <images:InjuriesBody></images:InjuriesBody>
                             <StackPanel Margin="40 0 0 0" SnapsToDevicePixels="True">
                                 <Label FontSize="20" FontWeight="Heavy">AFFLICTIONS</Label>
-                                <Border BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}">
-                                    <StackPanel Orientation="Horizontal">
-                                        <StackPanel>
-                                            <Label FontSize="15" FontWeight="Normal" VerticalAlignment="Center">Sprained ankle</Label>
-                                        </StackPanel>
-                                        <Button Style="{StaticResource MaterialDesignFlatButton}">Cure</Button>
-                                    </StackPanel>
-                                </Border>
-                                <Border BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}">
-                                    <StackPanel Orientation="Horizontal">
-                                        <StackPanel>
-                                            <Label FontSize="15" FontWeight="Normal" VerticalAlignment="Center">Sprained ankle</Label>
-                                        </StackPanel>
-                                        <Button Style="{StaticResource MaterialDesignFlatButton}">Cure</Button>
-                                    </StackPanel>
-                                </Border>
+                                <ItemsControl ItemsSource="{Binding CurrentSave.Global.Afflictions.Negative}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel></StackPanel>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <StackPanel>
+                                                        <Label FontSize="15" FontWeight="Normal" VerticalAlignment="Center" Content="{Binding AfflictionType, Converter={StaticResource EnumDescriptionConverter}}"></Label>
+                                                    </StackPanel>
+                                                    <Button Style="{StaticResource MaterialDesignFlatButton}" Command="{Binding RemoveCommand}">Cure</Button>
+                                                </StackPanel>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+
+                                </ItemsControl>
                             </StackPanel>
                         </StackPanel>
                     </Grid>
-                </TabItem>-->
+                </TabItem>
                 <TabItem Header="{x:Static p:Resources.Inventory}">
                     <Grid>
                         <Grid.RowDefinitions>

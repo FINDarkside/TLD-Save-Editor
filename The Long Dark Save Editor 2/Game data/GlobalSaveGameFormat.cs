@@ -86,7 +86,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		[System.Obsolete("Use SkillsManager")]
 		public PlayerSkillsSaveData PlayerSkills { get; set; }
 		public PlayerGameStatsProxy PlayerGameStats { get; set; }
-		public HypothermiaSaveDataProxy Hypothermia { get; set; }
+		public Afflictions Afflictions { get; set; }
+		/*public HypothermiaSaveDataProxy Hypothermia { get; set; }
 		public FrostBiteSaveDataProxy Frostbite { get; set; }
 		public FoodPoisoningSaveDataProxy FoodPoisoning { get; set; }
 		public DysenterySaveDataProxy Dysentery { get; set; }
@@ -96,7 +97,10 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public BurnsSaveDataProxy Burns { get; set; }
 		public BloodLossSaveDataProxy BloodLoss { get; set; }
 		public InfectionSaveDataProxy Infection { get; set; }
+		public IntestinalParasitesSaveDataProxy IntestinalParasites { get; set; }
 		public InfectionRiskSaveDataProxy InfectionRisk { get; set; }
+		public CabinFeverSaveDataProxy CabinFever { get; set; }
+*/
 		public LogSaveDataProxy Log { get; set; }
 		public RestSaveDataProxy Rest { get; set; }
 		public FlyoverDataProxy FlyOver { get; set; }
@@ -110,8 +114,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public EmergencyStimParams EmergencyStim { get; set; }
 		public MusicEventSaveData MusicEventManager { get; set; }
 		public ChimneySaveList ChimneyData { get; set; }
-		public CabinFeverSaveDataProxy CabinFever { get; set; }
-		public IntestinalParasitesSaveDataProxy IntestinalParasites { get; set; }
 		public SnowfallManagerSaveDataProxy SnowPatchManager { get; set; }
 		public PlayerAnimationSaveData PlayerAnimation { get; set; }
 		public SkillsManager SkillsManager { get; set; }
@@ -144,7 +146,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			PlayerClimbRope = Util.DeserializeObject<PlayerClimbRopeProxy>(proxy.m_PlayerClimbRopeSerialized);
 			PlayerSkills = Util.DeserializeObject<PlayerSkillsSaveData>(proxy.m_PlayerSkillsSerialized);
 			PlayerGameStats = Util.DeserializeObject<PlayerGameStatsProxy>(proxy.m_PlayerGameStatsSerialized);
-			Hypothermia = Util.DeserializeObject<HypothermiaSaveDataProxy>(proxy.m_HypothermiaSerialized);
+			/*Hypothermia = Util.DeserializeObject<HypothermiaSaveDataProxy>(proxy.m_HypothermiaSerialized);
 			Frostbite = Util.DeserializeObject<FrostBiteSaveDataProxy>(proxy.m_FrostbiteSerialized);
 			FoodPoisoning = Util.DeserializeObject<FoodPoisoningSaveDataProxy>(proxy.m_FoodPoisoningSerialized);
 			Dysentery = Util.DeserializeObject<DysenterySaveDataProxy>(proxy.m_DysenterySerialized);
@@ -155,6 +157,9 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			BloodLoss = Util.DeserializeObject<BloodLossSaveDataProxy>(proxy.m_BloodLossSerialized);
 			Infection = Util.DeserializeObject<InfectionSaveDataProxy>(proxy.m_InfectionSerialized);
 			InfectionRisk = Util.DeserializeObject<InfectionRiskSaveDataProxy>(proxy.m_InfectionRiskSerialized);
+			IntestinalParasites = Util.DeserializeObject<IntestinalParasitesSaveDataProxy>(proxy.m_IntestinalParasitesSerialized);
+			CabinFever = Util.DeserializeObject<CabinFeverSaveDataProxy>(proxy.m_CabinFeverSerialized);*/
+			Afflictions = new Afflictions(proxy);
 			Log = Util.DeserializeObject<LogSaveDataProxy>(proxy.m_LogSerialized);
 			Rest = Util.DeserializeObject<RestSaveDataProxy>(proxy.m_RestSerialized);
 			FlyOver = Util.DeserializeObject<FlyoverDataProxy>(proxy.m_FlyOverSerialized);
@@ -171,8 +176,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			EmergencyStim = Util.DeserializeObject<EmergencyStimParams>(proxy.m_EmergencyStimSerialized);
 			MusicEventManager = Util.DeserializeObject<MusicEventSaveData>(proxy.m_MusicEventManagerSerialized);
 			ChimneyData = Util.DeserializeObject<ChimneySaveList>(proxy.m_ChimneyDataSerialized);
-			CabinFever = Util.DeserializeObject<CabinFeverSaveDataProxy>(proxy.m_CabinFeverSerialized);
-			IntestinalParasites = Util.DeserializeObject<IntestinalParasitesSaveDataProxy>(proxy.m_IntestinalParasitesSerialized);
 			SnowPatchManager = Util.DeserializeObject<SnowfallManagerSaveDataProxy>(proxy.m_SnowPatchManagerSerialized);
 			PlayerAnimation = Util.DeserializeObject<PlayerAnimationSaveData>(proxy.m_PlayerAnimationSerialized);
 			SkillsManager = new SkillsManager(proxy.m_SkillsManagerSerialized);
@@ -205,7 +208,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			proxy.m_PlayerClimbRopeSerialized = Util.SerializeObject(PlayerClimbRope);
 			proxy.m_PlayerSkillsSerialized = Util.SerializeObject(PlayerSkills);
 			proxy.m_PlayerGameStatsSerialized = Util.SerializeObject(PlayerGameStats);
-			proxy.m_HypothermiaSerialized = Util.SerializeObject(Hypothermia);
+			/*proxy.m_HypothermiaSerialized = Util.SerializeObject(Hypothermia);
 			proxy.m_FrostbiteSerialized = Util.SerializeObject(Frostbite);
 			proxy.m_FoodPoisoningSerialized = Util.SerializeObject(FoodPoisoning);
 			proxy.m_DysenterySerialized = Util.SerializeObject(Dysentery);
@@ -216,6 +219,9 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			proxy.m_BloodLossSerialized = Util.SerializeObject(BloodLoss);
 			proxy.m_InfectionSerialized = Util.SerializeObject(Infection);
 			proxy.m_InfectionRiskSerialized = Util.SerializeObject(InfectionRisk);
+			proxy.m_CabinFeverSerialized = Util.SerializeObject(CabinFever);
+			proxy.m_IntestinalParasitesSerialized = Util.SerializeObject(IntestinalParasites);*/
+			Afflictions.SerializeTo(proxy);
 			proxy.m_LogSerialized = Util.SerializeObject(Log);
 			proxy.m_RestSerialized = Util.SerializeObject(Rest);
 			proxy.m_FlyOverSerialized = Util.SerializeObject(FlyOver);
@@ -231,8 +237,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			proxy.m_EmergencyStimSerialized = Util.SerializeObject(EmergencyStim);
 			proxy.m_MusicEventManagerSerialized = Util.SerializeObject(MusicEventManager);
 			proxy.m_ChimneyDataSerialized = Util.SerializeObject(ChimneyData);
-			proxy.m_CabinFeverSerialized = Util.SerializeObject(CabinFever);
-			proxy.m_IntestinalParasitesSerialized = Util.SerializeObject(IntestinalParasites);
 			proxy.m_SnowPatchManagerSerialized = Util.SerializeObject(SnowPatchManager);
 			proxy.m_PlayerAnimationSerialized = Util.SerializeObject(PlayerAnimation);
 			proxy.m_SkillsManagerSerialized = SkillsManager.Serialize();

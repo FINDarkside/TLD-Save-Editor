@@ -34,18 +34,7 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-						<DrawingGroup x:Name="head" Transform="1,0,0,1,77.0547,-200">
-                            <DrawingGroup.Opacity>
-                                <MultiBinding Converter="{StaticResource injuriesToOpacityConverter}" ConverterParameter="{StaticResource HeadID}">
-                                    <Binding Path="CurrentSave.Global.BloodLoss.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.Infection.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedAnkle.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWrist.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.InfectionRisk.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.CabinFever.m_Active"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWristMajor.m_Locations"/>
-                                </MultiBinding>
-                            </DrawingGroup.Opacity>
+                        <DrawingGroup x:Name="head" Transform="1,0,0,1,77.0547,-200" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource HeadID}}">
                             <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
@@ -64,18 +53,7 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-						<DrawingGroup x:Name="right_hand" Transform="-1,0,0,1,59.944086,5.2017828">
-							<DrawingGroup.Opacity>
-								<MultiBinding Converter="{StaticResource injuriesToOpacityConverter}" ConverterParameter="{StaticResource RightHandID}">
-                                    <Binding Path="CurrentSave.Global.BloodLoss.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.Infection.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.Burns.m_Active"/>
-                                    <Binding Path="CurrentSave.Global.SprainedAnkle.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWrist.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.InfectionRisk.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWristMajor.m_Locations"/>
-								</MultiBinding>
-							</DrawingGroup.Opacity>
+                        <DrawingGroup x:Name="right_hand" Transform="-1,0,0,1,59.944086,5.2017828" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource RightHandID}}">
 							<DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
@@ -94,18 +72,8 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-						<DrawingGroup x:Name="left_hand" Transform="-1,0,0,1,216.68408,5.2017828">
-							<DrawingGroup.Opacity>
-								<MultiBinding Converter="{StaticResource injuriesToOpacityConverter}" ConverterParameter="{StaticResource LeftHandID}">
-                                    <Binding Path="CurrentSave.Global.BloodLoss.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.Infection.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedAnkle.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWrist.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.InfectionRisk.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWristMajor.m_Locations"/>
-								</MultiBinding>
-							</DrawingGroup.Opacity>
-							<DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
+                        <DrawingGroup x:Name="left_hand" Transform="-1,0,0,1,216.68408,5.2017828" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource LeftHandID}}">
+                            <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
 										<PathGeometry FillRule="Nonzero" Figures="M264.845,45.441C235.542,16.139 196.583,0 155.142,0 113.702,0 74.743,16.139 45.44,45.441 16.138,74.743 0,113.703 0,155.144 0,196.583 16.138,235.543 45.44,264.845 74.743,294.148 113.702,310.285 155.142,310.285 196.582,310.285 235.541,294.147 264.844,264.845 294.147,235.543 310.284,196.583 310.284,155.144 310.285,113.703 294.147,74.743 264.845,45.441z M132.172,49.336C134.571,46.853,137.809,45.463,141.291,45.463L169.331,45.463C172.813,45.463 176.051,46.866 178.445,49.351 180.84,51.836 182.088,55.155 181.959,58.635L177.325,163.53C177.062,170.632,171.065,176.463,163.957,176.463L146.33,176.463C139.218,176.463,133.231,170.624,132.985,163.518L128.64,58.594C128.519,55.114,129.773,51.821,132.172,49.336z M155.478,268.78C139.212,268.78 126.946,255.936 126.946,238.904 126.946,221.681 139.068,208.693 155.142,208.693 171.744,208.693 183.338,221.116 183.338,238.904 183.339,256.495 171.882,268.78 155.478,268.78z" />
@@ -123,18 +91,8 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-						<DrawingGroup x:Name="left_arm" Transform="-1,0,0,1,86.944086,-134.79822">
-							<DrawingGroup.Opacity>
-								<MultiBinding Converter="{StaticResource injuriesToOpacityConverter}" ConverterParameter="{StaticResource LeftArmID}">
-                                    <Binding Path="CurrentSave.Global.BloodLoss.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.Infection.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedAnkle.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWrist.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.InfectionRisk.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWristMajor.m_Locations"/>
-								</MultiBinding>
-							</DrawingGroup.Opacity>
-							<DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
+                        <DrawingGroup x:Name="left_arm" Transform="-1,0,0,1,86.944086,-134.79822" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource LeftArmID}}">
+                            <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
 										<PathGeometry FillRule="Nonzero" Figures="M264.845,45.441C235.542,16.139 196.583,0 155.142,0 113.702,0 74.743,16.139 45.44,45.441 16.138,74.743 0,113.703 0,155.144 0,196.583 16.138,235.543 45.44,264.845 74.743,294.148 113.702,310.285 155.142,310.285 196.582,310.285 235.541,294.147 264.844,264.845 294.147,235.543 310.284,196.583 310.284,155.144 310.285,113.703 294.147,74.743 264.845,45.441z M132.172,49.336C134.571,46.853,137.809,45.463,141.291,45.463L169.331,45.463C172.813,45.463 176.051,46.866 178.445,49.351 180.84,51.836 182.088,55.155 181.959,58.635L177.325,163.53C177.062,170.632,171.065,176.463,163.957,176.463L146.33,176.463C139.218,176.463,133.231,170.624,132.985,163.518L128.64,58.594C128.519,55.114,129.773,51.821,132.172,49.336z M155.478,268.78C139.212,268.78 126.946,255.936 126.946,238.904 126.946,221.681 139.068,208.693 155.142,208.693 171.744,208.693 183.338,221.116 183.338,238.904 183.339,256.495 171.882,268.78 155.478,268.78z" />
@@ -152,18 +110,8 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-						<DrawingGroup x:Name="right_arm" Transform="-1,0,0,1,189.68409,-134.79822">
-							<DrawingGroup.Opacity>
-								<MultiBinding Converter="{StaticResource injuriesToOpacityConverter}" ConverterParameter="{StaticResource RightArmID}">
-                                    <Binding Path="CurrentSave.Global.BloodLoss.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.Infection.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedAnkle.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWrist.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.InfectionRisk.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWristMajor.m_Locations"/>
-								</MultiBinding>
-							</DrawingGroup.Opacity>
-							<DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
+                        <DrawingGroup x:Name="right_arm" Transform="-1,0,0,1,189.68409,-134.79822" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource RightArmID}}">
+                            <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
 										<PathGeometry FillRule="Nonzero" Figures="M264.845,45.441C235.542,16.139 196.583,0 155.142,0 113.702,0 74.743,16.139 45.44,45.441 16.138,74.743 0,113.703 0,155.144 0,196.583 16.138,235.543 45.44,264.845 74.743,294.148 113.702,310.285 155.142,310.285 196.582,310.285 235.541,294.147 264.844,264.845 294.147,235.543 310.284,196.583 310.284,155.144 310.285,113.703 294.147,74.743 264.845,45.441z M132.172,49.336C134.571,46.853,137.809,45.463,141.291,45.463L169.331,45.463C172.813,45.463 176.051,46.866 178.445,49.351 180.84,51.836 182.088,55.155 181.959,58.635L177.325,163.53C177.062,170.632,171.065,176.463,163.957,176.463L146.33,176.463C139.218,176.463,133.231,170.624,132.985,163.518L128.64,58.594C128.519,55.114,129.773,51.821,132.172,49.336z M155.478,268.78C139.212,268.78 126.946,255.936 126.946,238.904 126.946,221.681 139.068,208.693 155.142,208.693 171.744,208.693 183.338,221.116 183.338,238.904 183.339,256.495 171.882,268.78 155.478,268.78z" />
@@ -181,18 +129,8 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-						<DrawingGroup x:Name="throat" Transform="1,0,0,1,77.0547,-161.3322">
-							<DrawingGroup.Opacity>
-								<MultiBinding Converter="{StaticResource injuriesToOpacityConverter}" ConverterParameter="{StaticResource ThroatID}">
-                                    <Binding Path="CurrentSave.Global.BloodLoss.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.Infection.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedAnkle.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWrist.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.InfectionRisk.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWristMajor.m_Locations"/>
-								</MultiBinding>
-							</DrawingGroup.Opacity>
-							<DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
+                        <DrawingGroup x:Name="throat" Transform="1,0,0,1,77.0547,-161.3322" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource ThroatID}}">
+                            <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
 										<PathGeometry FillRule="Nonzero" Figures="M264.845,45.441C235.542,16.139 196.583,0 155.142,0 113.702,0 74.743,16.139 45.44,45.441 16.138,74.743 0,113.703 0,155.144 0,196.583 16.138,235.543 45.44,264.845 74.743,294.148 113.702,310.285 155.142,310.285 196.582,310.285 235.541,294.147 264.844,264.845 294.147,235.543 310.284,196.583 310.284,155.144 310.285,113.703 294.147,74.743 264.845,45.441z M132.172,49.336C134.571,46.853,137.809,45.463,141.291,45.463L169.331,45.463C172.813,45.463 176.051,46.866 178.445,49.351 180.84,51.836 182.088,55.155 181.959,58.635L177.325,163.53C177.062,170.632,171.065,176.463,163.957,176.463L146.33,176.463C139.218,176.463,133.231,170.624,132.985,163.518L128.64,58.594C128.519,55.114,129.773,51.821,132.172,49.336z M155.478,268.78C139.212,268.78 126.946,255.936 126.946,238.904 126.946,221.681 139.068,208.693 155.142,208.693 171.744,208.693 183.338,221.116 183.338,238.904 183.339,256.495 171.882,268.78 155.478,268.78z" />
@@ -210,21 +148,8 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-						<DrawingGroup x:Name="chest" Transform="1,0,0,1,77.054495,-99.965434">
-							<DrawingGroup.Opacity>
-								<MultiBinding Converter="{StaticResource injuriesToOpacityConverter}" ConverterParameter="{StaticResource ChestID}">
-                                    <Binding Path="CurrentSave.Global.BloodLoss.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.Infection.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.FoodPoisoning.m_Active"/>
-                                    <Binding Path="CurrentSave.Global.SprainedAnkle.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWrist.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.InfectionRisk.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.Hypothermia.m_Active"/>
-                                    <Binding Path="CurrentSave.Global.Hypothermia.m_Active"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWristMajor.m_Locations"/>
-								</MultiBinding>
-							</DrawingGroup.Opacity>
-							<DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
+                        <DrawingGroup x:Name="chest" Transform="1,0,0,1,77.054495,-99.965434" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource ChestID}}">
+                            <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
 										<PathGeometry FillRule="Nonzero" Figures="M264.845,45.441C235.542,16.139 196.583,0 155.142,0 113.702,0 74.743,16.139 45.44,45.441 16.138,74.743 0,113.703 0,155.144 0,196.583 16.138,235.543 45.44,264.845 74.743,294.148 113.702,310.285 155.142,310.285 196.582,310.285 235.541,294.147 264.844,264.845 294.147,235.543 310.284,196.583 310.284,155.144 310.285,113.703 294.147,74.743 264.845,45.441z M132.172,49.336C134.571,46.853,137.809,45.463,141.291,45.463L169.331,45.463C172.813,45.463 176.051,46.866 178.445,49.351 180.84,51.836 182.088,55.155 181.959,58.635L177.325,163.53C177.062,170.632,171.065,176.463,163.957,176.463L146.33,176.463C139.218,176.463,133.231,170.624,132.985,163.518L128.64,58.594C128.519,55.114,129.773,51.821,132.172,49.336z M155.478,268.78C139.212,268.78 126.946,255.936 126.946,238.904 126.946,221.681 139.068,208.693 155.142,208.693 171.744,208.693 183.338,221.116 183.338,238.904 183.339,256.495 171.882,268.78 155.478,268.78z" />
@@ -242,21 +167,8 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-						<DrawingGroup x:Name="stomach" Transform="1,0,0,1,77.054495,-21.173535">
-							<DrawingGroup.Opacity>
-								<MultiBinding Converter="{StaticResource injuriesToOpacityConverter}" ConverterParameter="{StaticResource StomachID}">
-                                    <Binding Path="CurrentSave.Global.BloodLoss.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.Dysentery.m_Active"/>
-                                    <Binding Path="CurrentSave.Global.Infection.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedAnkle.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWrist.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.InfectionRisk.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.IntestinalParasites.m_HasParasites"/>
-                                    <Binding Path="CurrentSave.Global.IntestinalParasites.m_HasParasiteRisk"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWristMajor.m_Locations"/>
-								</MultiBinding>
-							</DrawingGroup.Opacity>
-							<DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
+                        <DrawingGroup x:Name="stomach" Transform="1,0,0,1,77.054495,-21.173535" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource StomachID}}">
+                            <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
 										<PathGeometry FillRule="Nonzero" Figures="M264.845,45.441C235.542,16.139 196.583,0 155.142,0 113.702,0 74.743,16.139 45.44,45.441 16.138,74.743 0,113.703 0,155.144 0,196.583 16.138,235.543 45.44,264.845 74.743,294.148 113.702,310.285 155.142,310.285 196.582,310.285 235.541,294.147 264.844,264.845 294.147,235.543 310.284,196.583 310.284,155.144 310.285,113.703 294.147,74.743 264.845,45.441z M132.172,49.336C134.571,46.853,137.809,45.463,141.291,45.463L169.331,45.463C172.813,45.463 176.051,46.866 178.445,49.351 180.84,51.836 182.088,55.155 181.959,58.635L177.325,163.53C177.062,170.632,171.065,176.463,163.957,176.463L146.33,176.463C139.218,176.463,133.231,170.624,132.985,163.518L128.64,58.594C128.519,55.114,129.773,51.821,132.172,49.336z M155.478,268.78C139.212,268.78 126.946,255.936 126.946,238.904 126.946,221.681 139.068,208.693 155.142,208.693 171.744,208.693 183.338,221.116 183.338,238.904 183.339,256.495 171.882,268.78 155.478,268.78z" />
@@ -274,18 +186,8 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-						<DrawingGroup x:Name="left_leg" Transform="1,0,0,1,49.684495,150.20178">
-							<DrawingGroup.Opacity>
-								<MultiBinding Converter="{StaticResource injuriesToOpacityConverter}" ConverterParameter="{StaticResource LeftLegID}">
-                                    <Binding Path="CurrentSave.Global.BloodLoss.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.Infection.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedAnkle.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWrist.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.InfectionRisk.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWristMajor.m_Locations"/>
-								</MultiBinding>
-							</DrawingGroup.Opacity>
-							<DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
+                        <DrawingGroup x:Name="left_leg" Transform="1,0,0,1,49.684495,150.20178" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource LeftLegID}}">
+                            <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
 										<PathGeometry FillRule="Nonzero" Figures="M264.845,45.441C235.542,16.139 196.583,0 155.142,0 113.702,0 74.743,16.139 45.44,45.441 16.138,74.743 0,113.703 0,155.144 0,196.583 16.138,235.543 45.44,264.845 74.743,294.148 113.702,310.285 155.142,310.285 196.582,310.285 235.541,294.147 264.844,264.845 294.147,235.543 310.284,196.583 310.284,155.144 310.285,113.703 294.147,74.743 264.845,45.441z M132.172,49.336C134.571,46.853,137.809,45.463,141.291,45.463L169.331,45.463C172.813,45.463 176.051,46.866 178.445,49.351 180.84,51.836 182.088,55.155 181.959,58.635L177.325,163.53C177.062,170.632,171.065,176.463,163.957,176.463L146.33,176.463C139.218,176.463,133.231,170.624,132.985,163.518L128.64,58.594C128.519,55.114,129.773,51.821,132.172,49.336z M155.478,268.78C139.212,268.78 126.946,255.936 126.946,238.904 126.946,221.681 139.068,208.693 155.142,208.693 171.744,208.693 183.338,221.116 183.338,238.904 183.339,256.495 171.882,268.78 155.478,268.78z" />
@@ -303,18 +205,8 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-						<DrawingGroup x:Name="right_leg" Transform="1,0,0,1,104.42449,150.20178">
-							<DrawingGroup.Opacity>
-								<MultiBinding Converter="{StaticResource injuriesToOpacityConverter}" ConverterParameter="{StaticResource RightLegID}">
-                                    <Binding Path="CurrentSave.Global.BloodLoss.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.Infection.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedAnkle.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWrist.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.InfectionRisk.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWristMajor.m_Locations"/>
-								</MultiBinding>
-							</DrawingGroup.Opacity>
-							<DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
+                        <DrawingGroup x:Name="right_leg" Transform="1,0,0,1,104.42449,150.20178" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource RightLegID}}">
+                            <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
 										<PathGeometry FillRule="Nonzero" Figures="M264.845,45.441C235.542,16.139 196.583,0 155.142,0 113.702,0 74.743,16.139 45.44,45.441 16.138,74.743 0,113.703 0,155.144 0,196.583 16.138,235.543 45.44,264.845 74.743,294.148 113.702,310.285 155.142,310.285 196.582,310.285 235.541,294.147 264.844,264.845 294.147,235.543 310.284,196.583 310.284,155.144 310.285,113.703 294.147,74.743 264.845,45.441z M132.172,49.336C134.571,46.853,137.809,45.463,141.291,45.463L169.331,45.463C172.813,45.463 176.051,46.866 178.445,49.351 180.84,51.836 182.088,55.155 181.959,58.635L177.325,163.53C177.062,170.632,171.065,176.463,163.957,176.463L146.33,176.463C139.218,176.463,133.231,170.624,132.985,163.518L128.64,58.594C128.519,55.114,129.773,51.821,132.172,49.336z M155.478,268.78C139.212,268.78 126.946,255.936 126.946,238.904 126.946,221.681 139.068,208.693 155.142,208.693 171.744,208.693 183.338,221.116 183.338,238.904 183.339,256.495 171.882,268.78 155.478,268.78z" />
@@ -332,17 +224,8 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-						<DrawingGroup x:Name="left_foot" Transform="1,0,0,1,56.684495,240.20178">
-							<DrawingGroup.Opacity>
-								<MultiBinding Converter="{StaticResource injuriesToOpacityConverter}" ConverterParameter="{StaticResource LeftFootID}">
-                                    <Binding Path="CurrentSave.Global.BloodLoss.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedAnkle.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWrist.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.InfectionRisk.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWristMajor.m_Locations"/>
-								</MultiBinding>
-							</DrawingGroup.Opacity>
-							<DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
+                        <DrawingGroup x:Name="left_foot" Transform="1,0,0,1,56.684495,240.20178" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource LeftFootID}}">
+                            <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
 										<PathGeometry FillRule="Nonzero" Figures="M264.845,45.441C235.542,16.139 196.583,0 155.142,0 113.702,0 74.743,16.139 45.44,45.441 16.138,74.743 0,113.703 0,155.144 0,196.583 16.138,235.543 45.44,264.845 74.743,294.148 113.702,310.285 155.142,310.285 196.582,310.285 235.541,294.147 264.844,264.845 294.147,235.543 310.284,196.583 310.284,155.144 310.285,113.703 294.147,74.743 264.845,45.441z M132.172,49.336C134.571,46.853,137.809,45.463,141.291,45.463L169.331,45.463C172.813,45.463 176.051,46.866 178.445,49.351 180.84,51.836 182.088,55.155 181.959,58.635L177.325,163.53C177.062,170.632,171.065,176.463,163.957,176.463L146.33,176.463C139.218,176.463,133.231,170.624,132.985,163.518L128.64,58.594C128.519,55.114,129.773,51.821,132.172,49.336z M155.478,268.78C139.212,268.78 126.946,255.936 126.946,238.904 126.946,221.681 139.068,208.693 155.142,208.693 171.744,208.693 183.338,221.116 183.338,238.904 183.339,256.495 171.882,268.78 155.478,268.78z" />
@@ -360,18 +243,8 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-						<DrawingGroup x:Name="right_foot" Transform="1,0,0,1,97.424495,240.20178">
-							<DrawingGroup.Opacity>
-								<MultiBinding Converter="{StaticResource injuriesToOpacityConverter}" ConverterParameter="{StaticResource RightFootID}">
-                                    <Binding Path="CurrentSave.Global.BloodLoss.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.Infection.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedAnkle.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWrist.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.InfectionRisk.m_Locations"/>
-                                    <Binding Path="CurrentSave.Global.SprainedWristMajor.m_Locations"/>
-								</MultiBinding>
-							</DrawingGroup.Opacity>
-							<DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
+                        <DrawingGroup x:Name="right_foot" Transform="1,0,0,1,97.424495,240.20178" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource RightFootID}}">
+                            <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
 										<PathGeometry FillRule="Nonzero" Figures="M264.845,45.441C235.542,16.139 196.583,0 155.142,0 113.702,0 74.743,16.139 45.44,45.441 16.138,74.743 0,113.703 0,155.144 0,196.583 16.138,235.543 45.44,264.845 74.743,294.148 113.702,310.285 155.142,310.285 196.582,310.285 235.541,294.147 264.844,264.845 294.147,235.543 310.284,196.583 310.284,155.144 310.285,113.703 294.147,74.743 264.845,45.441z M132.172,49.336C134.571,46.853,137.809,45.463,141.291,45.463L169.331,45.463C172.813,45.463 176.051,46.866 178.445,49.351 180.84,51.836 182.088,55.155 181.959,58.635L177.325,163.53C177.062,170.632,171.065,176.463,163.957,176.463L146.33,176.463C139.218,176.463,133.231,170.624,132.985,163.518L128.64,58.594C128.519,55.114,129.773,51.821,132.172,49.336z M155.478,268.78C139.212,268.78 126.946,255.936 126.946,238.904 126.946,221.681 139.068,208.693 155.142,208.693 171.744,208.693 183.338,221.116 183.338,238.904 183.339,256.495 171.882,268.78 155.478,268.78z" />

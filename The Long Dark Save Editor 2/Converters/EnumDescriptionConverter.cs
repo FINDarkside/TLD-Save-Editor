@@ -1,25 +1,22 @@
 ﻿using System;
-using System.Collections.ObjectModel;
 using System.Globalization;
-using System.Linq;
+using System.Windows;
 using System.Windows.Data;
-using The_Long_Dark_Save_Editor_2.Game_data;
+using The_Long_Dark_Save_Editor_2.Helpers;
 
 namespace The_Long_Dark_Save_Editor_2.Converters
 {
-	public class InjuriesToOpacityConverter : IValueConverter
+	public class EnumDescriptionConverter : IValueConverter
 	{
-
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
-			int param = (int)parameter;
-			var afflictions = (Collection<Affliction>)value;
-			return afflictions.Any(item => item.Location == param);
+			return EnumerationExtension.GetDescription(value);
 		}
 
 		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
 		{
 			throw new NotImplementedException();
 		}
+
 	}
 }

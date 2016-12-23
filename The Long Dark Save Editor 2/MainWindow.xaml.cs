@@ -26,7 +26,7 @@ namespace The_Long_Dark_Save_Editor_2
 	/// </summary>
 	public partial class MainWindow : Window, INotifyPropertyChanged
 	{
-
+		public static MainWindow Instance { get; set; }
 		public static decimal Version { get { return 2.4m; } }
 
 		private GameSave currentSave;
@@ -63,20 +63,20 @@ namespace The_Long_Dark_Save_Editor_2
 
 		public MainWindow()
 		{
-			System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("ru-RU");
 #if DEBUG
 			IsDebug = true;
 #endif
+			Instance = this;
 			testBranch = Properties.Settings.Default.TestBranch;
 
 			InitializeComponent();
 			this.DataContext = this;
-
+			
 			Title += " " + Version.ToString(CultureInfo.InvariantCulture.NumberFormat); ;
 
 			JsonConvert.DefaultSettings = () => new JsonSerializerSettings
 			{
-				//MissingMemberHandling = Newtonsoft.Json.MissingMemberHandling.Error,
+				MissingMemberHandling = MissingMemberHandling.Error,
 				FloatFormatHandling = FloatFormatHandling.Symbol,
 			};
 
