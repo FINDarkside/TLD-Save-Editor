@@ -226,7 +226,7 @@
     <value>Basic Boots</value>
   </data>
   <data name="GEAR_BasicGloves" xml:space="preserve">
-    <value>Basic Gloves</value>
+    <value>Driving Gloves</value>
   </data>
   <data name="GEAR_BasicShoes" xml:space="preserve">
     <value>Shoes</value>
@@ -873,7 +873,7 @@
   <data name="GEAR_MapToRailyard" xml:space="preserve">
     <value>Map To Railyard</value>
   </data>
-  <data name="GEAR_Medical Supplies" xml:space="preserve">
+  <data name="GEAR_MedicalSupplies" xml:space="preserve">
     <value>Medical Supplies</value>
   </data>
   <data name="GEAR_Morphine" xml:space="preserve">
@@ -985,7 +985,7 @@
     <value>Time spent evolving (hours)</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>The Long Dark (v.378T) Save Editor</value>
+    <value>The Long Dark (v.388) Save Editor</value>
   </data>
   <data name="Tools" xml:space="preserve">
     <value>Tools</value>
@@ -994,6 +994,102 @@
     <value>Traits</value>
   </data>
   <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="GEAR_ClimbingSocks" xml:space="preserve">
+    <value>Climbing Socks</value>
+  </data>
+  <data name="Afflictions" xml:space="preserve">
+    <value>Afflictions</value>
+  </data>
+  <data name="ActionCure" xml:space="preserve">
+    <value>Cure</value>
+  </data>
+  <data name="AfflictionType_BloodLoss" xml:space="preserve">
+    <value>Blood loss</value>
+  </data>
+  <data name="AfflictionType_Burns" xml:space="preserve">
+    <value>Burns</value>
+  </data>
+  <data name="AfflictionType_Dysentery" xml:space="preserve">
+    <value>Dysentery</value>
+  </data>
+  <data name="AfflictionType_Infection" xml:space="preserve">
+    <value>Infection</value>
+  </data>
+  <data name="AfflictionType_FoodPoisioning" xml:space="preserve">
+    <value>Food poisoning</value>
+  </data>
+  <data name="AfflictionType_SprainedAnkle" xml:space="preserve">
+    <value>Sprained ankle</value>
+  </data>
+  <data name="AfflictionType_InfectionRisk" xml:space="preserve">
+    <value>Infection risk</value>
+  </data>
+  <data name="AfflictionType_SprainedWrist" xml:space="preserve">
+    <value>Sprained wrist</value>
+  </data>
+  <data name="AfflictionType_Frostbite" xml:space="preserve">
+    <value>Frostbite</value>
+  </data>
+  <data name="AfflictionType_Hypothermia" xml:space="preserve">
+    <value>Hypothermia</value>
+  </data>
+  <data name="AfflictionType_ReducedFatigue" xml:space="preserve">
+    <value>Reduced fatigue</value>
+  </data>
+  <data name="AfflictionType_ImprovedRest" xml:space="preserve">
+    <value>Improved rest</value>
+  </data>
+  <data name="AfflictionType_WarmingUp" xml:space="preserve">
+    <value>Warming up</value>
+  </data>
+  <data name="AfflictionType_HypothermiaRisk" xml:space="preserve">
+    <value>Hypothermia risk</value>
+  </data>
+  <data name="AfflictionType_CabinFever" xml:space="preserve">
+    <value>Cabin fever</value>
+  </data>
+  <data name="AfflictionType_IntestinalParasitesRisk" xml:space="preserve">
+    <value>Intestinal parasites risk</value>
+  </data>
+  <data name="AfflictionType_IntestinalParasites" xml:space="preserve">
+    <value>Intestinal parasites</value>
+  </data>
+  <data name="AfflictionType_SprainedWristMajor" xml:space="preserve">
+    <value>Sprained wrist major</value>
+  </data>
+  <data name="AfflictionType_CabinFeverRisk" xml:space="preserve">
+    <value>Cabin fever risk</value>
+  </data>
+  <data name="AfflictionType_FrostbiteRisk" xml:space="preserve">
+    <value>Frostbite risk</value>
+  </data>
+  <data name="ItemCategory_FirstAid" xml:space="preserve">
+    <value>First Aid</value>
+  </data>
+  <data name="ItemCategory_Clothing" xml:space="preserve">
+    <value>Clothing</value>
+  </data>
+  <data name="ItemCategory_Food" xml:space="preserve">
+    <value>Food</value>
+  </data>
+  <data name="ItemCategory_Tools" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="ItemCategory_Materials" xml:space="preserve">
+    <value>Materials</value>
+  </data>
+  <data name="ItemCategory_Collectible" xml:space="preserve">
+    <value>Collectible</value>
+  </data>
+  <data name="ItemCategory_Books" xml:space="preserve">
+    <value>Books</value>
+  </data>
+  <data name="ItemCategory_Hidden" xml:space="preserve">
+    <value>Hidden</value>
+  </data>
+  <data name="ItemCategory_Unknown" xml:space="preserve">
     <value>Unknown</value>
   </data>
 </root>

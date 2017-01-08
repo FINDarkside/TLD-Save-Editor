@@ -73,9 +73,9 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public Afflictions(GlobalSaveGameFormat global)
 		{
 			Negative = new ObservableCollection<Affliction>();
-			negative.CollectionChanged += (object sender, NotifyCollectionChangedEventArgs e) => PropertyChanged(this, new PropertyChangedEventArgs("Negative"));
+			negative.CollectionChanged += (object sender, NotifyCollectionChangedEventArgs e) => { if (PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs("Negative")); };
 			Positive = new ObservableCollection<Affliction>();
-			positive.CollectionChanged += (object sender, NotifyCollectionChangedEventArgs e) => PropertyChanged(this, new PropertyChangedEventArgs("Positive"));
+			positive.CollectionChanged += (object sender, NotifyCollectionChangedEventArgs e) => { if (PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs("Positive")); };
 
 			var hypothermia = Util.DeserializeObject<HypothermiaSaveDataProxy>(global.m_HypothermiaSerialized);
 			if (hypothermia != null && hypothermia.m_Active)
@@ -210,6 +210,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			{
 				for (int i = 0; i < bloodLoss.m_DurationHoursList.Length; i++)
 				{
+					Debug.WriteLine("BloodLoss: " + bloodLoss.m_Locations[i]);
 					Negative.Add(new BloodLoss()
 					{
 						AfflictionType = AfflictionType.BloodLoss,

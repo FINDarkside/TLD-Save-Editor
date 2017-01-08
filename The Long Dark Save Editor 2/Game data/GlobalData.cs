@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using The_Long_Dark_Save_Editor_2.Helpers;
+using System.Linq;
 
 namespace The_Long_Dark_Save_Editor_2.Game_data
 {
@@ -190,6 +191,16 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			//return json;
 			var proxy = new InventorySaveDataProxy();
 			proxy.m_QuickSelectInstanceIDs = QuickSelectInstanceIDs;
+			if (!Items.Any(item => item.PrefabName.ToLower() == "gear_watersupplynotpotable"))
+			{
+				Items.Add(new InventoryItem() { WaterSupply = new WaterSupplySaveDataProxy(), PrefabName = "GEAR_WaterSupplyNotPotable" });
+			}
+			if (!Items.Any(item => item.PrefabName.ToLower() == "gear_watersupplypotable"))
+			{
+				Items.Add(new InventoryItem() { WaterSupply = new WaterSupplySaveDataProxy(), PrefabName = "GEAR_WaterSupplyPotable" });
+
+			}
+
 			proxy.m_SerializedItems = new List<InventoryItemSaveData>(Items.Count);
 			foreach (var item in Items)
 			{
@@ -271,6 +282,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			BeenInPlayerInventory = true;
 			NormalizedCondition = 1;
 			WornOut = false;
+			HoursPlayed = MainWindow.Instance.CurrentSave.Global.TimeOfDay.m_HoursPlayedNotPausedProxy;
 		}
 
 		public InventoryItem(InventoryItemSaveData data)

@@ -117,749 +117,743 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>About</value>
-  </data>
   <data name="AddItem" xml:space="preserve">
-    <value>Add item</value>
+    <value>Добавить предмет</value>
   </data>
   <data name="Amount" xml:space="preserve">
-    <value>Amount</value>
+    <value>Колличество</value>
   </data>
   <data name="AmountLiter" xml:space="preserve">
-    <value>Amount (liters)</value>
+    <value>Колличество (литры)</value>
   </data>
   <data name="ArcherySP" xml:space="preserve">
-    <value>Archery skillpoints</value>
+    <value>Стрельба из лука</value>
   </data>
   <data name="Books" xml:space="preserve">
-    <value>Books</value>
+    <value>Книги</value>
   </data>
   <data name="BookSmartProgress" xml:space="preserve">
-    <value>Book smarts progress</value>
+    <value>Начитанность</value>
   </data>
   <data name="Calories" xml:space="preserve">
-    <value>Calories</value>
+    <value>Калории</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Отменить</value>
   </data>
   <data name="CarcassHarvestingSP" xml:space="preserve">
-    <value>Carcass harvesting skillpoints</value>
+    <value>Заготовка туши</value>
   </data>
   <data name="Clothing" xml:space="preserve">
-    <value>Clothing</value>
+    <value>Одежда</value>
   </data>
   <data name="ClothingRepairSP" xml:space="preserve">
-    <value>Clothing repairing skillpoints</value>
+    <value>Ремонт одежды</value>
   </data>
   <data name="ColdFusionProgress" xml:space="preserve">
-    <value>Cold fusion progress</value>
+    <value>Закалка</value>
   </data>
   <data name="Collectible" xml:space="preserve">
-    <value>Collectible</value>
+    <value>Коллекция</value>
   </data>
   <data name="Condition" xml:space="preserve">
-    <value>Condition</value>
+    <value>Состояние</value>
   </data>
   <data name="CookingSP" xml:space="preserve">
-    <value>Cooking skillpoints</value>
+    <value>Приготовление</value>
   </data>
   <data name="CurrentCalories" xml:space="preserve">
-    <value>Current calories</value>
+    <value>Текущие калории</value>
   </data>
   <data name="Download" xml:space="preserve">
-    <value>Download</value>
+    <value>Скачать</value>
   </data>
   <data name="EfficientMachineProgress" xml:space="preserve">
-    <value>Efficient machine progress</value>
+    <value>Механика</value>
   </data>
   <data name="Fatigue" xml:space="preserve">
-    <value>Fatigue</value>
+    <value>Усталость</value>
   </data>
   <data name="FireMasterProgress" xml:space="preserve">
-    <value>Fire master progress</value>
+    <value>Розжиг.Общий прогресс</value>
   </data>
   <data name="FireStartingSP" xml:space="preserve">
-    <value>Fire starting skillpoints</value>
+    <value>Розжиг</value>
   </data>
   <data name="FirstAid" xml:space="preserve">
-    <value>First Aid</value>
+    <value>Первая помощь</value>
   </data>
   <data name="Food" xml:space="preserve">
-    <value>Food</value>
+    <value>Еда</value>
   </data>
   <data name="FreeRunnerProgress" xml:space="preserve">
-    <value>Free runner progress</value>
+    <value>Свободный бег</value>
   </data>
   <data name="Freezing" xml:space="preserve">
-    <value>Freezing</value>
+    <value>Замерзание</value>
   </data>
   <data name="GEAR_BottleAntibiotics" xml:space="preserve">
-    <value>Antibiotics</value>
-  </data>
-  <data name="GEAR_BottleHydrogenPeroxide" xml:space="preserve">
-    <value>Antiseptic</value>
+    <value>Антибиотики</value>
   </data>
   <data name="GEAR_BottlePainKillers" xml:space="preserve">
-    <value>Painkillers</value>
+    <value>Болеутоляющее средство</value>
   </data>
   <data name="GEAR_HeavyBandage" xml:space="preserve">
-    <value>Bandage</value>
+    <value>Повязка</value>
   </data>
   <data name="GEAR_OldMansBeardDressing" xml:space="preserve">
-    <value>Old Man's Beard</value>
+    <value>Старый висящий мох</value>
   </data>
   <data name="GEAR_WaterPurificationTablets" xml:space="preserve">
-    <value>Water Purification Tablets</value>
+    <value>Таблетки для очистки воды</value>
   </data>
   <data name="GEAR_EmergencyStim" xml:space="preserve">
-    <value>Emergency Stim</value>
+    <value>Шприц первой помощи</value>
   </data>
   <data name="GEAR_Balaclava" xml:space="preserve">
-    <value>Balaclava</value>
+    <value>Балаклава</value>
   </data>
   <data name="GEAR_BaseBallCap" xml:space="preserve">
-    <value>Baseball Cap</value>
+    <value>Бейсбольная кепка</value>
   </data>
   <data name="GEAR_BasicBoots" xml:space="preserve">
-    <value>Basic Boots</value>
+    <value>Кожаные сапоги</value>
   </data>
   <data name="GEAR_BasicGloves" xml:space="preserve">
-    <value>Basic Gloves</value>
+    <value>Лыжные перчатки</value>
   </data>
   <data name="GEAR_BasicShoes" xml:space="preserve">
-    <value>Shoes</value>
+    <value>Обувь</value>
   </data>
   <data name="GEAR_BasicWinterCoat" xml:space="preserve">
-    <value>Basic Winter Coat</value>
+    <value>Обычная зимняя куртка</value>
   </data>
   <data name="GEAR_BasicWoolHat" xml:space="preserve">
-    <value>Basic Wool Hat</value>
+    <value>Простая шерстяная шапка</value>
   </data>
   <data name="GEAR_BasicWoolScarf" xml:space="preserve">
-    <value>Basic Wool Scarf</value>
+    <value>Простой шерстяной шарф</value>
   </data>
   <data name="GEAR_BearSkinCoat" xml:space="preserve">
-    <value>Bearskin Coat</value>
+    <value>Медвежья шуба</value>
   </data>
   <data name="GEAR_CargoPants" xml:space="preserve">
-    <value>Cargo Pants</value>
+    <value>Штаны карго</value>
   </data>
   <data name="GEAR_CombatBoots" xml:space="preserve">
-    <value>Combat Boots</value>
+    <value>Берцы</value>
   </data>
   <data name="GEAR_CombatPants" xml:space="preserve">
-    <value>Combat Pants</value>
+    <value>Армейские штаны</value>
   </data>
   <data name="GEAR_CottonHoodie" xml:space="preserve">
-    <value>Hoodie</value>
+    <value>Худи</value>
   </data>
   <data name="GEAR_CottonScarf" xml:space="preserve">
-    <value>Cotton Scarf</value>
+    <value>Шарф из хлопка</value>
   </data>
   <data name="GEAR_CottonShirt" xml:space="preserve">
-    <value>Dress Shirt</value>
+    <value>Сорочка</value>
   </data>
   <data name="GEAR_CottonSocks" xml:space="preserve">
-    <value>Cotton Socks</value>
+    <value>Хлопчатобумажные носки</value>
   </data>
   <data name="GEAR_CowichanSweater" xml:space="preserve">
-    <value>Cowichan Sweater</value>
+    <value>Этнический свитер</value>
   </data>
   <data name="GEAR_DeerSkinBoots" xml:space="preserve">
-    <value>Deerskin Boots</value>
+    <value>Обувь из оленьей кожи</value>
   </data>
   <data name="GEAR_DeerSkinPants" xml:space="preserve">
-    <value>Deerskin Pants</value>
+    <value>Штаны из оленьей кожи</value>
   </data>
   <data name="GEAR_DownParka" xml:space="preserve">
-    <value>Urban Parka</value>
+    <value>Городская парка</value>
   </data>
   <data name="GEAR_DownSkiJacket" xml:space="preserve">
-    <value>Down Ski Jacket</value>
+    <value>Лыжная куртка</value>
   </data>
   <data name="GEAR_DownVest" xml:space="preserve">
-    <value>Down West</value>
+    <value>Жилет-пуховик</value>
   </data>
   <data name="GEAR_EarMuffs" xml:space="preserve">
-    <value>Wool Ear Wrap</value>
+    <value>Шерстяная повязка</value>
   </data>
   <data name="GEAR_FisherManSweater" xml:space="preserve">
-    <value>Fisherman's Sweater</value>
+    <value>Рыбацкий свитер</value>
   </data>
   <data name="GEAR_FleeceMittens" xml:space="preserve">
-    <value>Fleece Mittens</value>
+    <value>Флисовые варежки</value>
   </data>
   <data name="GEAR_FleeceSweater" xml:space="preserve">
-    <value>Fleece Sweater</value>
+    <value>Флисовый свитер</value>
   </data>
   <data name="GEAR_Gauntlets" xml:space="preserve">
-    <value>Gauntlets</value>
+    <value>Рабочие перчатки</value>
   </data>
   <data name="GEAR_HeavyParka" xml:space="preserve">
-    <value>Old Fashioned Parka</value>
+    <value>Старомодная парка</value>
   </data>
   <data name="GEAR_HeavyWoolSweater" xml:space="preserve">
-    <value>Heavy Wool Sweater</value>
+    <value>Толстый шерстяной свитер</value>
   </data>
   <data name="GEAR_InsulatedBoots" xml:space="preserve">
-    <value>Insulated Boots</value>
+    <value>Рабочие ботинки</value>
   </data>
   <data name="GEAR_InsulatedPants" xml:space="preserve">
-    <value>Snow Pants</value>
+    <value>Зимние штаны</value>
   </data>
   <data name="GEAR_InsulatedVest" xml:space="preserve">
-    <value>Insulated West</value>
+    <value>Водонепроницаемый жилет</value>
   </data>
   <data name="GEAR_Jeans" xml:space="preserve">
-    <value>Jeans</value>
+    <value>Джинсы</value>
   </data>
   <data name="GEAR_LeatherShoes" xml:space="preserve">
-    <value>Leather Shoes</value>
+    <value>Кожанные туфли</value>
   </data>
   <data name="GEAR_LightParka" xml:space="preserve">
-    <value>Simple Parka</value>
+    <value>Обычная парка</value>
   </data>
   <data name="GEAR_LongUnderwear" xml:space="preserve">
-    <value>Thermal underwear</value>
+    <value>Термобелье</value>
   </data>
   <data name="GEAR_LongUnderwearWool" xml:space="preserve">
-    <value>Wool Long Johns</value>
+    <value>Шерстяные кальсоны</value>
   </data>
   <data name="GEAR_MackinawJacket" xml:space="preserve">
-    <value>Mackinaw Jacket</value>
+    <value>Куртка дровосека</value>
   </data>
   <data name="GEAR_MilitaryParka" xml:space="preserve">
-    <value>Military Coat</value>
+    <value>Шинель</value>
   </data>
   <data name="GEAR_Mittens" xml:space="preserve">
-    <value>Mittens</value>
+    <value>Варежки</value>
   </data>
   <data name="GEAR_MuklukBoots" xml:space="preserve">
-    <value>Mukluks</value>
+    <value>Унты</value>
   </data>
   <data name="GEAR_PlaidShirt" xml:space="preserve">
-    <value>Plaid Shirt</value>
+    <value>Клетчатая рубашка</value>
   </data>
   <data name="GEAR_PremiumWinterCoat" xml:space="preserve">
-    <value>Premium Winter Coat</value>
+    <value>Дорогое зимнее пальто</value>
   </data>
   <data name="GEAR_QualityWinterCoat" xml:space="preserve">
-    <value>Marine's Pea Coat</value>
+    <value>Матросский бушлат</value>
   </data>
   <data name="GEAR_RabbitSkinMittens" xml:space="preserve">
-    <value>Rabbitskin Mitts</value>
+    <value>Варежки из меха кролика</value>
   </data>
   <data name="GEAR_SkiBoots" xml:space="preserve">
-    <value>Ski Boots</value>
+    <value>Лыжные ботинки</value>
   </data>
   <data name="GEAR_SkiGloves" xml:space="preserve">
-    <value>Ski Gloves</value>
+    <value>Лыжные перчатки</value>
   </data>
   <data name="GEAR_SkiJacket" xml:space="preserve">
-    <value>Ski Jacket</value>
+    <value>Лыжная куртка</value>
   </data>
   <data name="GEAR_TeeShirt" xml:space="preserve">
-    <value>T-Shirt</value>
+    <value>Футболка</value>
   </data>
   <data name="GEAR_Toque" xml:space="preserve">
-    <value>Toque</value>
+    <value>Шерстяная шапка</value>
   </data>
   <data name="GEAR_WolfSkinCape" xml:space="preserve">
-    <value>Wolfskin Coat</value>
+    <value>Волчья шуба</value>
   </data>
   <data name="GEAR_WoolShirt" xml:space="preserve">
-    <value>Wool Shirt</value>
+    <value>Шерстяная рубашка</value>
   </data>
   <data name="GEAR_WoolSocks" xml:space="preserve">
-    <value>Wool Socks</value>
+    <value>Шерстяные носки</value>
   </data>
   <data name="GEAR_WoolSweater" xml:space="preserve">
-    <value>Thin Wool Sweater</value>
+    <value>Тонкий шерстяной свитер</value>
   </data>
   <data name="GEAR_WoolWrap" xml:space="preserve">
-    <value>Long Wool Scarf</value>
+    <value>Длинный шерстяной шарф</value>
   </data>
   <data name="GEAR_WoolWrapCap" xml:space="preserve">
-    <value>FleeceCowl</value>
+    <value>Флисовый капюшон</value>
   </data>
   <data name="GEAR_WorkBoots" xml:space="preserve">
-    <value>Work Boots</value>
+    <value>Рабочие ботинки</value>
   </data>
   <data name="GEAR_WorkGloves" xml:space="preserve">
-    <value>Work Gloves</value>
+    <value>Рабочие перчатки</value>
   </data>
   <data name="GEAR_WorkPants" xml:space="preserve">
-    <value>Work Pants</value>
+    <value>Рабочие штаны</value>
   </data>
   <data name="GEAR_BeefJerky" xml:space="preserve">
-    <value>Beef Jerky</value>
+    <value>Вяленая говядина</value>
   </data>
   <data name="GEAR_CandyBar" xml:space="preserve">
-    <value>Candy Bar</value>
+    <value>Шоколадный батончик</value>
   </data>
   <data name="GEAR_CannedBeans" xml:space="preserve">
-    <value>Pork and Beans</value>
+    <value>Банка свинины с фасолью</value>
   </data>
   <data name="GEAR_CannedSardines" xml:space="preserve">
-    <value>Tin of Sardines</value>
+    <value>Банка сардин</value>
   </data>
   <data name="GEAR_CattailStalk" xml:space="preserve">
-    <value>Cat Tail Stalk</value>
+    <value>Стебель Тимофеевки луговой</value>
   </data>
   <data name="GEAR_CoffeeCup" xml:space="preserve">
-    <value>Cup Of Coffee</value>
+    <value>Чашка кофе</value>
   </data>
   <data name="GEAR_CoffeeTin" xml:space="preserve">
-    <value>Tin of Coffee</value>
+    <value>Банка кофе</value>
   </data>
   <data name="GEAR_CondensedMilk" xml:space="preserve">
-    <value>Condensed Milk</value>
+    <value>Банка сгущенки</value>
   </data>
   <data name="GEAR_CookedLakeWhiteFish" xml:space="preserve">
-    <value>Lake Whitefish (Cooked)</value>
+    <value>Сельдевидный сиг (Приготовленный)</value>
   </data>
   <data name="GEAR_CookedMeatBear" xml:space="preserve">
-    <value>Bear Meat (Cooked)</value>
+    <value>Медвежатина (Приготовленная)</value>
   </data>
   <data name="GEAR_CookedMeatDeer" xml:space="preserve">
-    <value>Venison (Cooked)</value>
+    <value>Оленина (Приготовленная)</value>
   </data>
   <data name="GEAR_CookedMeatRabbit" xml:space="preserve">
-    <value>Rabbit (Cooked)</value>
+    <value>Крольчатина (Приготовленная)</value>
   </data>
   <data name="GEAR_CookedMeatWolf" xml:space="preserve">
-    <value>Wolf Meat (Cooked)</value>
+    <value>Волчатина (Приготовленная)</value>
   </data>
   <data name="GEAR_CookedRainbowTrout" xml:space="preserve">
-    <value>Rainbow Trout (Cooked)</value>
+    <value>Радужная форель (Приготовленная)</value>
   </data>
   <data name="GEAR_CookedSmallMouthBass" xml:space="preserve">
-    <value>Smallmouth Bass (Cooked)</value>
+    <value>Малоротый окунь (Приготовленный)</value>
   </data>
   <data name="GEAR_Crackers" xml:space="preserve">
-    <value>Salty Crackers</value>
+    <value>Солёный крекер</value>
   </data>
   <data name="GEAR_DogFood" xml:space="preserve">
-    <value>Dog Food</value>
+    <value>Банка корма для собак</value>
   </data>
   <data name="GEAR_EnergyBar" xml:space="preserve">
-    <value>Energy Bar</value>
+    <value>Энергетический батончик</value>
   </data>
   <data name="GEAR_GranolaBar" xml:space="preserve">
-    <value>Granola Bar</value>
+    <value>Злаковый батончик</value>
   </data>
   <data name="GEAR_GreenTeaCup" xml:space="preserve">
-    <value>Cup Of Herbal Tea</value>
+    <value>Чашка травяного чая</value>
   </data>
   <data name="GEAR_GreenTeaPackage" xml:space="preserve">
-    <value>Herbal Tea</value>
+    <value>Травяной чай</value>
   </data>
   <data name="GEAR_MRE" xml:space="preserve">
-    <value>Military-Grade MRE</value>
+    <value>Армейский ИРП</value>
   </data>
   <data name="GEAR_PeanutButter" xml:space="preserve">
-    <value>Peanut Butter</value>
+    <value>Арахисовое масло</value>
   </data>
   <data name="GEAR_PinnacleCanPeaches" xml:space="preserve">
-    <value>Pinnacle Peaches</value>
+    <value>Банка персиков</value>
   </data>
   <data name="GEAR_RawCohoSalmon" xml:space="preserve">
-    <value>Coho Salmon (Raw)</value>
+    <value>Кижуч (Сырой)</value>
   </data>
   <data name="GEAR_RawLakeWhiteFish" xml:space="preserve">
-    <value>Lake Whitefish (Raw)</value>
+    <value>Сельдевидный сиг (Сырой)</value>
   </data>
   <data name="GEAR_RawMeatBear" xml:space="preserve">
-    <value>Bear Meat (Raw)</value>
+    <value>Медвежатина (Сырая)</value>
   </data>
   <data name="GEAR_RawMeatDeer" xml:space="preserve">
-    <value>Venison (Raw)</value>
+    <value>Оленина (Сырая)</value>
   </data>
   <data name="GEAR_RawMeatRabbit" xml:space="preserve">
-    <value>Rabbit (Raw)</value>
+    <value>Крольчатина (Сырая)</value>
   </data>
   <data name="GEAR_RawMeatWolf" xml:space="preserve">
-    <value>Wolf Meat (Raw)</value>
+    <value>Волчатина (Сырая)</value>
   </data>
   <data name="GEAR_RawRainbowTrout" xml:space="preserve">
-    <value>Rainbow Trout (Raw)</value>
+    <value>Радужная форель (Сырая)</value>
   </data>
   <data name="GEAR_RawSmallMouthBass" xml:space="preserve">
-    <value>Smallmouth Bass (Raw)</value>
+    <value>Малоротый окунь (Сырой)</value>
   </data>
   <data name="GEAR_ReishiTea" xml:space="preserve">
-    <value>Reishi Tea</value>
+    <value>Чай Рейши</value>
   </data>
   <data name="GEAR_RoseHipTea" xml:space="preserve">
-    <value>Rose hip Tea</value>
+    <value>Чай из шиповника</value>
   </data>
   <data name="GEAR_Soda" xml:space="preserve">
-    <value>Summit Soda</value>
+    <value>Газировка "Саммит"</value>
   </data>
   <data name="GEAR_SodaGrape" xml:space="preserve">
-    <value>Stacy's Grape Soda</value>
+    <value>Виноградный лимонад</value>
   </data>
   <data name="GEAR_SodaOrange" xml:space="preserve">
-    <value>Orange Soda</value>
+    <value>Апельсиновая содовая вода</value>
   </data>
   <data name="GEAR_TomatoSoupCan" xml:space="preserve">
-    <value>Tomato Soup</value>
+    <value>Томатный суп</value>
   </data>
   <data name="GEAR_WaterSupplyNotPotable" xml:space="preserve">
-    <value>Unsafe Water</value>
+    <value>Непитьевая вода</value>
   </data>
   <data name="GEAR_WaterSupplyPotable" xml:space="preserve">
-    <value>Potable Water</value>
+    <value>Питьевая вода</value>
   </data>
   <data name="GEAR_Accelerant" xml:space="preserve">
-    <value>Accelerant</value>
+    <value>Горючее</value>
   </data>
   <data name="GEAR_Arrow" xml:space="preserve">
-    <value>Simple Arrow</value>
+    <value>Простая стрела</value>
   </data>
   <data name="GEAR_ArrowShaft" xml:space="preserve">
-    <value>Arrow Shaft</value>
+    <value>Древко стрелы</value>
   </data>
   <data name="GEAR_BearSkinBedRoll" xml:space="preserve">
-    <value>Bear Skin Bedroll</value>
+    <value>Спальный мешок из медвежьей шкуры</value>
   </data>
   <data name="GEAR_BedRoll" xml:space="preserve">
-    <value>Bedroll</value>
+    <value>Спальный мешок</value>
   </data>
   <data name="GEAR_Bow" xml:space="preserve">
-    <value>Survival Bow</value>
+    <value>Лук для выживания</value>
   </data>
   <data name="GEAR_Brand" xml:space="preserve">
-    <value>Brand</value>
+    <value>Головешка</value>
   </data>
   <data name="GEAR_CanOpener" xml:space="preserve">
-    <value>Can Opener</value>
+    <value>Консервный нож</value>
   </data>
   <data name="GEAR_Firestriker" xml:space="preserve">
-    <value>Firestriker</value>
+    <value>Огниво</value>
   </data>
   <data name="GEAR_FlareA" xml:space="preserve">
-    <value>Flare</value>
+    <value>Факел</value>
   </data>
   <data name="GEAR_FlareGunAmmoSingle" xml:space="preserve">
-    <value>Flare Gun Ammo</value>
+    <value>Факельная ракета</value>
   </data>
   <data name="GEAR_Flaregun" xml:space="preserve">
-    <value>Flare Gun</value>
+    <value>Сигнальный пистолет</value>
   </data>
   <data name="GEAR_Hacksaw" xml:space="preserve">
-    <value>Hacksaw</value>
+    <value>Ножовка</value>
   </data>
   <data name="GEAR_Hammer" xml:space="preserve">
-    <value>Heavy Hammer</value>
+    <value>Тяжелый молот</value>
   </data>
   <data name="GEAR_Hatchet" xml:space="preserve">
-    <value>Hatchet</value>
+    <value>Топорик</value>
   </data>
   <data name="GEAR_HatchetImprovised" xml:space="preserve">
-    <value>Improvised Hatchet</value>
+    <value>Самодельный топор</value>
   </data>
   <data name="GEAR_HighQualityTools" xml:space="preserve">
-    <value>Quality Tools</value>
+    <value>Качественный инструмент</value>
   </data>
   <data name="GEAR_Hook" xml:space="preserve">
-    <value>Hook</value>
+    <value>Крючок</value>
   </data>
   <data name="GEAR_HookAndLine" xml:space="preserve">
-    <value>Fishing Tackle</value>
+    <value>Удочка</value>
   </data>
   <data name="GEAR_JerrycanRusty" xml:space="preserve">
-    <value>Jerry Can</value>
+    <value>Канистра с горючим</value>
   </data>
   <data name="GEAR_KeroseneLampB" xml:space="preserve">
-    <value>Storm Lantern</value>
+    <value>Аварийный фонарь</value>
   </data>
   <data name="GEAR_Knife" xml:space="preserve">
-    <value>Hunting Knife</value>
+    <value>Охотничий нож</value>
   </data>
   <data name="GEAR_KnifeImprovised" xml:space="preserve">
-    <value>Improvised Knife</value>
+    <value>Самодельный нож</value>
   </data>
   <data name="GEAR_LampFuel" xml:space="preserve">
-    <value>Lantern Fuel</value>
+    <value>Топливо для фонаря</value>
   </data>
   <data name="GEAR_Line" xml:space="preserve">
-    <value>Line</value>
+    <value>Леска</value>
   </data>
   <data name="GEAR_MagnifyingLens" xml:space="preserve">
-    <value>Magnifying Lens</value>
+    <value>Увеличительное стекло</value>
   </data>
   <data name="GEAR_NewsprintRoll" xml:space="preserve">
-    <value>Newsprint Roll</value>
+    <value>Газетный рулон</value>
   </data>
   <data name="GEAR_PackMatches" xml:space="preserve">
-    <value>Cardboard Matches</value>
+    <value>Картонные спички</value>
   </data>
   <data name="GEAR_Prybar" xml:space="preserve">
-    <value>Prybar</value>
+    <value>Гвоздодер</value>
   </data>
   <data name="GEAR_Rifle" xml:space="preserve">
-    <value>Hunting Rifle</value>
+    <value>Охотничье ружье</value>
   </data>
   <data name="GEAR_RifleAmmoBox" xml:space="preserve">
-    <value>Rifle Ammunition</value>
+    <value>Коробка патронов</value>
   </data>
   <data name="GEAR_RifleAmmoSingle" xml:space="preserve">
-    <value>Rifle Round</value>
+    <value>Патрон</value>
   </data>
   <data name="GEAR_RifleCleaningKit" xml:space="preserve">
-    <value>Rifle Cleaning Kit</value>
+    <value>Набор для чистки ружья</value>
   </data>
   <data name="GEAR_Rope" xml:space="preserve">
-    <value>Rope</value>
+    <value>Альпинистский трос</value>
   </data>
   <data name="GEAR_SewingKit" xml:space="preserve">
-    <value>Sewing Kit</value>
+    <value>Набор для шитья</value>
   </data>
   <data name="GEAR_SharpeningStone" xml:space="preserve">
-    <value>Whetstone</value>
+    <value>Точильный камень</value>
   </data>
   <data name="GEAR_SimpleTools" xml:space="preserve">
-    <value>Simple Tools</value>
+    <value>Простые инструменты</value>
   </data>
   <data name="GEAR_Snare" xml:space="preserve">
-    <value>Snare</value>
+    <value>Капкан</value>
   </data>
   <data name="GEAR_Torch" xml:space="preserve">
-    <value>Torch</value>
+    <value>Фонарь (Простой факел)</value>
   </data>
   <data name="GEAR_WoodMatches" xml:space="preserve">
-    <value>Wood Matches</value>
+    <value>Деревянные спички</value>
   </data>
   <data name="GEAR_ArrowHead" xml:space="preserve">
-    <value>Arrowhead</value>
+    <value>Наконечник стрелы</value>
   </data>
   <data name="GEAR_BearHide" xml:space="preserve">
-    <value>Fresh Black Bear Hide</value>
+    <value>Свежая шкура черного медведя</value>
   </data>
   <data name="GEAR_BearHideDried" xml:space="preserve">
-    <value>Cured Black Bear Hide</value>
+    <value>Высушенная шкура черного медведя</value>
   </data>
   <data name="GEAR_BirchSapling" xml:space="preserve">
-    <value>Green Birch Sapling</value>
+    <value>Зеленое березовое деревце</value>
   </data>
   <data name="GEAR_BirchSaplingDried" xml:space="preserve">
-    <value>Cured Birch Sapling</value>
+    <value>Сухая молодая береза</value>
   </data>
   <data name="GEAR_BookA" xml:space="preserve">
-    <value>Book</value>
+    <value>Книга</value>
   </data>
   <data name="GEAR_BookB" xml:space="preserve">
-    <value>Book</value>
+    <value>Книга</value>
   </data>
   <data name="GEAR_BookC" xml:space="preserve">
-    <value>Book</value>
+    <value>Книга</value>
   </data>
   <data name="GEAR_BookD" xml:space="preserve">
-    <value>Book</value>
+    <value>Книга</value>
   </data>
   <data name="GEAR_BookE" xml:space="preserve">
-    <value>Book</value>
+    <value>Книга</value>
   </data>
   <data name="GEAR_BookF" xml:space="preserve">
-    <value>Book</value>
+    <value>Книга</value>
   </data>
   <data name="GEAR_BookManual" xml:space="preserve">
-    <value>Book</value>
+    <value>Книга</value>
   </data>
   <data name="GEAR_CattailTinder" xml:space="preserve">
-    <value>Cat Tail Head</value>
+    <value>Сухой плод Тимофеевки луговой</value>
   </data>
   <data name="GEAR_Cloth" xml:space="preserve">
-    <value>Cloth</value>
+    <value>Одежда</value>
   </data>
   <data name="GEAR_Coal" xml:space="preserve">
-    <value>Coal</value>
+    <value>Уголь</value>
   </data>
   <data name="GEAR_CrowFeather" xml:space="preserve">
-    <value>Crow Feather</value>
+    <value>Перо ворона</value>
   </data>
   <data name="GEAR_Firelog" xml:space="preserve">
-    <value>Firelog</value>
+    <value>Полено</value>
   </data>
   <data name="GEAR_Gut" xml:space="preserve">
-    <value>Fresh Gut</value>
+    <value>Свежие кишки</value>
   </data>
   <data name="GEAR_GutDried" xml:space="preserve">
-    <value>Cured Gut</value>
+    <value>Высушенные кишки</value>
   </data>
   <data name="GEAR_Hardwood" xml:space="preserve">
-    <value>Fir Firewood</value>
+    <value>Еловые дрова</value>
   </data>
   <data name="GEAR_Leather" xml:space="preserve">
-    <value>Leather</value>
+    <value>Кожа</value>
   </data>
   <data name="GEAR_LeatherDried" xml:space="preserve">
-    <value>Cured Leather</value>
+    <value>Высушенная кожа</value>
   </data>
   <data name="GEAR_LeatherHide" xml:space="preserve">
-    <value>Fresh Deer Hide</value>
+    <value>Сырая оленья шкура</value>
   </data>
   <data name="GEAR_LeatherHideDried" xml:space="preserve">
-    <value>Cured Deer Hide</value>
+    <value>Высушенная оленья шкура</value>
   </data>
   <data name="GEAR_MapleSapling" xml:space="preserve">
-    <value>Green Maple Sapling</value>
+    <value>Зеленое кленовое деревце</value>
   </data>
   <data name="GEAR_MapleSaplingDried" xml:space="preserve">
-    <value>Cured Maple Sapling</value>
+    <value>Сухой молодой клен</value>
   </data>
   <data name="GEAR_Newsprint" xml:space="preserve">
-    <value>Newsprint</value>
+    <value>Газета</value>
   </data>
   <data name="GEAR_OldMansBeardHarvested" xml:space="preserve">
-    <value>Old Man's Beard Lichen</value>
+    <value>Старый висящий мох</value>
   </data>
   <data name="GEAR_RabbitPelt" xml:space="preserve">
-    <value>Fresh Rabbit Pelt</value>
+    <value>Свежая шкура кролика</value>
   </data>
   <data name="GEAR_RabbitPeltDried" xml:space="preserve">
-    <value>Cured Rabbit Pelt</value>
+    <value>Высушенная шкура кролика</value>
   </data>
   <data name="GEAR_ReclaimedWoodB" xml:space="preserve">
-    <value>Reclaimed Wood</value>
+    <value>Древесина</value>
   </data>
   <data name="GEAR_ReishiMushroom" xml:space="preserve">
-    <value>Reishi Mushroom</value>
+    <value>Гриб Рейши</value>
   </data>
   <data name="GEAR_RoseHip" xml:space="preserve">
-    <value>Rose Hip</value>
+    <value>Шиповник</value>
   </data>
   <data name="GEAR_ScrapMetal" xml:space="preserve">
-    <value>Scrap Metal</value>
+    <value>Металлолом</value>
   </data>
   <data name="GEAR_Softwood" xml:space="preserve">
-    <value>Cedar Firewood</value>
+    <value>Кедровые дрова</value>
   </data>
   <data name="GEAR_Stick" xml:space="preserve">
-    <value>Stick</value>
+    <value>Палка</value>
   </data>
   <data name="GEAR_Tinder" xml:space="preserve">
-    <value>Tinder Plug</value>
+    <value>Трут</value>
   </data>
   <data name="GEAR_WolfPelt" xml:space="preserve">
-    <value>Fresh Wolf Pelt</value>
+    <value>Свежая волчья шкураt</value>
   </data>
   <data name="GEAR_WolfPeltDried" xml:space="preserve">
-    <value>Cured Wolf Pelt</value>
+    <value>Высушенная волчья шкура</value>
   </data>
   <data name="GEAR_BookCarcassHarvesting" xml:space="preserve">
-    <value>Field Dressing Your Kill, vol. 1</value>
+    <value>Разделка туши в полевых условиях, том 1</value>
   </data>
   <data name="GEAR_BookCooking" xml:space="preserve">
-    <value>Wilderness Kitchen</value>
+    <value>Дикая кухня</value>
   </data>
   <data name="GEAR_BookFireStarting" xml:space="preserve">
-    <value>Survive The Outdoors!</value>
+    <value>Выживите на свежем воздухе!</value>
   </data>
   <data name="GEAR_BookIceFishing" xml:space="preserve">
-    <value>The Frozen Angler</value>
+    <value>Замёрзший рыболов</value>
   </data>
   <data name="GEAR_BookRifleFirearm" xml:space="preserve">
-    <value>Frontier Shooting Guide</value>
+    <value>Стрельба на фронтире</value>
   </data>
   <data name="GEAR_BookRifleFirearmAdvanced" xml:space="preserve">
-    <value>Advanced Guns Guns Guns!</value>
+    <value>Бах-бабах: продвинутое руководство</value>
   </data>
   <data name="GEAR_ClimbersJournal" xml:space="preserve">
-    <value>Climbers Journal</value>
+    <value>Страница журнала альпиниста</value>
   </data>
   <data name="GEAR_AccelerantKerosene" xml:space="preserve">
-    <value>Accelerant Kerosene</value>
+    <value>Топливо для фонаря</value>
   </data>
   <data name="GEAR_AccelerantMedium" xml:space="preserve">
-    <value>Accelerant Medium</value>
+    <value>Горючее</value>
   </data>
   <data name="GEAR_Boltcutters" xml:space="preserve">
-    <value>Bolt Cutters</value>
+    <value>Болторез</value>
   </data>
   <data name="GEAR_CarBattery" xml:space="preserve">
-    <value>Car Battery</value>
+    <value>Аккумулятор</value>
   </data>
   <data name="GEAR_CompressionBandage" xml:space="preserve">
-    <value>Compression Bandage</value>
+    <value>Шерстяная повязка</value>
   </data>
   <data name="GEAR_Fireaxe" xml:space="preserve">
-    <value>Fire Axe</value>
+    <value>Пожарный топор</value>
   </data>
   <data name="GEAR_FishingLine" xml:space="preserve">
-    <value>Fishing Line</value>
+    <value>Леска</value>
   </data>
   <data name="GEAR_FlintAndSteel" xml:space="preserve">
-    <value>Flint and Steel</value>
+    <value>Кремень и сталь</value>
   </data>
   <data name="GEAR_LeatherStrips" xml:space="preserve">
-    <value>Fresh Leather</value>
+    <value>Свежая кожа</value>
   </data>
   <data name="GEAR_PaperStack" xml:space="preserve">
-    <value>Paper Stack</value>
+    <value>Кипа бумаг</value>
   </data>
   <data name="GEAR_PumpkinPie" xml:space="preserve">
-    <value>Pumpkin Pie</value>
+    <value>Тыквенный пирог</value>
   </data>
   <data name="GEAR_Shovel" xml:space="preserve">
-    <value>Shovel</value>
+    <value>Лопата</value>
   </data>
   <data name="GEAR_BloodyHammer" xml:space="preserve">
-    <value>Bloody Hammer</value>
+    <value>Окровавленый молоток</value>
   </data>
   <data name="GEAR_AstridBackPack" xml:space="preserve">
-    <value>Astrid Backpack</value>
+    <value>Рюкзак Астрид</value>
   </data>
   <data name="GEAR_BookOpen" xml:space="preserve">
-    <value>Book Open</value>
+    <value>Открытая книга</value>
   </data>
   <data name="GEAR_BowString" xml:space="preserve">
-    <value>Bow String</value>
+    <value>Тетива</value>
   </data>
   <data name="GEAR_BowWood" xml:space="preserve">
     <value>Bow Wood</value>
   </data>
   <data name="GEAR_ChurchHymn" xml:space="preserve">
-    <value>Church Hymn</value>
+    <value>Церковный гимн</value>
   </data>
   <data name="GEAR_ChurchNoteEp1" xml:space="preserve">
-    <value>Church Note EP 1</value>
+    <value>Церковные записки, часть 1</value>
   </data>
   <data name="GEAR_CollectibleNoteCommonReward" xml:space="preserve">
-    <value>Collectible Note Common</value>
+    <value>Общие собранные записки</value>
   </data>
   <data name="GEAR_CollectibleNoteRareReward" xml:space="preserve">
-    <value>Collectible Note Common</value>
+    <value>Общие собранные записки</value>
   </data>
   <data name="GEAR_DamCodeNote" xml:space="preserve">
-    <value>Dam Code Note</value>
+    <value>Записка с кодом ГЭС</value>
   </data>
   <data name="GEAR_DamControlRoomCodeNote" xml:space="preserve">
-    <value>Dam Control Room Code Note</value>
+    <value>Записка с кодом от комнаты управления ГЭС</value>
   </data>
   <data name="GEAR_DamOfficeKey" xml:space="preserve">
-    <value>Dam Office Key</value>
+    <value>Ключ от офиса ГЭС</value>
   </data>
   <data name="GEAR_EmergencyKitNote" xml:space="preserve">
-    <value>Emergency Kit Note</value>
+    <value>Аптечка</value>
   </data>
   <data name="GEAR_FarmersAlmanac" xml:space="preserve">
-    <value>Farmer's Almanac</value>
+    <value>Альманах фермера</value>
   </data>
   <data name="GEAR_FirstAidManual" xml:space="preserve">
-    <value>First Aid Manual</value>
+    <value>Инструкция по первой помощи</value>
   </data>
   <data name="GEAR_HardCase" xml:space="preserve">
-    <value>Hard Case</value>
+    <value>Сложный случай</value>
   </data>
   <data name="GEAR_HikersBackPack" xml:space="preserve">
-    <value>Hiker's Backpack</value>
+    <value>Рюкзак для пешеходных туристов</value>
   </data>
   <data name="GEAR_HunterJournalPage" xml:space="preserve">
-    <value>Hunter Journal Page</value>
+    <value>Страница охотничьего журнала</value>
   </data>
   <data name="GEAR_KnifeScrapMetal" xml:space="preserve">
     <value>Knife Scrap Metal</value>
@@ -873,127 +867,229 @@
   <data name="GEAR_MapToRailyard" xml:space="preserve">
     <value>Map To Railyard</value>
   </data>
-  <data name="GEAR_Medical Supplies" xml:space="preserve">
-    <value>Medical Supplies</value>
+  <data name="GEAR_MedicalSupplies" xml:space="preserve">
+    <value>Медикаменты</value>
   </data>
   <data name="GEAR_Morphine" xml:space="preserve">
-    <value>Morphine</value>
+    <value>Морфий</value>
   </data>
   <data name="GEAR_MountainTownFarmKey" xml:space="preserve">
-    <value>Mountain Town Farm Key</value>
+    <value>Ключ от фермы Горного городка</value>
   </data>
   <data name="GEAR_MountainTownFarmNote" xml:space="preserve">
-    <value>Mountain Town Farm Note</value>
+    <value>Записка фермы Горного городка</value>
   </data>
   <data name="GEAR_MountainTownLockBoxKey" xml:space="preserve">
-    <value>Mountain Town Lock Box Key</value>
+    <value>Ключ от запертого ящика Горного городка</value>
   </data>
   <data name="GEAR_MountainTownMap" xml:space="preserve">
-    <value>Mountain Town Map</value>
+    <value>Карта Горного городка</value>
   </data>
   <data name="GEAR_MountainTownStoreKey" xml:space="preserve">
-    <value>Mountain Town Store Key</value>
+    <value>Ключ от склада Горного городка</value>
   </data>
   <data name="GEAR_OverpassBrochure" xml:space="preserve">
-    <value>Overpass Brochure</value>
+    <value>Брошура эстакады</value>
   </data>
   <data name="GEAR_RicksJournal" xml:space="preserve">
-    <value>Rick's Journal</value>
+    <value>Журнал Рика</value>
   </data>
   <data name="GEAR_RifleBlanks" xml:space="preserve">
-    <value>Rifle Blanks</value>
+    <value>Заготовка для ружья</value>
   </data>
   <data name="GEAR_RifleBullets" xml:space="preserve">
-    <value>Rifle Bullets</value>
+    <value>Пули для ружья</value>
   </data>
   <data name="GEAR_UtilitiesBill" xml:space="preserve">
-    <value>Utilities Bill</value>
+    <value>счет за коммунальные услуги</value>
   </data>
   <data name="GEAR_WaterTowerNote" xml:space="preserve">
-    <value>Water Tower Note</value>
+    <value>Записка Водонапорной башни</value>
   </data>
   <data name="Health" xml:space="preserve">
-    <value>Health</value>
+    <value>Здоровье</value>
   </data>
   <data name="Hidden" xml:space="preserve">
-    <value>Hidden</value>
+    <value>Спрятанное</value>
   </data>
   <data name="IceFishingSP" xml:space="preserve">
-    <value>Ice fishing skillpoints</value>
+    <value>Подледная рыбалка</value>
   </data>
   <data name="InfiniteCarry" xml:space="preserve">
-    <value>Infinite carry</value>
+    <value>Безграничная сила</value>
   </data>
   <data name="Injuries" xml:space="preserve">
-    <value>Injuries</value>
+    <value>Повреждение</value>
   </data>
   <data name="Inventory" xml:space="preserve">
-    <value>Inventory</value>
+    <value>Инвентарь</value>
   </data>
   <data name="Invulnerable" xml:space="preserve">
-    <value>Invulnerable</value>
+    <value>Неуязвимый</value>
   </data>
   <data name="Materials" xml:space="preserve">
-    <value>Materials</value>
+    <value>Материалы</value>
   </data>
   <data name="NeverDie" xml:space="preserve">
-    <value>Never die</value>
+    <value>Бессмертный</value>
   </data>
   <data name="Player" xml:space="preserve">
-    <value>Player</value>
+    <value>Игрок</value>
   </data>
   <data name="Profile" xml:space="preserve">
-    <value>Profile</value>
+    <value>Профиль</value>
   </data>
   <data name="Progress" xml:space="preserve">
-    <value>Progress</value>
+    <value>Прогресс</value>
   </data>
   <data name="Refresh" xml:space="preserve">
-    <value>Refresh</value>
+    <value>Обновить</value>
   </data>
   <data name="Remove" xml:space="preserve">
-    <value>Remove</value>
+    <value>Удалить</value>
   </data>
   <data name="RemoveAll" xml:space="preserve">
-    <value>Remove all</value>
+    <value>Удалить все</value>
   </data>
   <data name="RepairAll" xml:space="preserve">
-    <value>Repair all</value>
+    <value>Починить все</value>
   </data>
   <data name="RifleSP" xml:space="preserve">
-    <value>Rifle skillpoints</value>
+    <value>Винтовка</value>
   </data>
   <data name="RoundsInClip" xml:space="preserve">
-    <value>Rounds in clip</value>
+    <value>Патроны в обойме</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Save</value>
+    <value>Сохранить</value>
   </data>
   <data name="Skills" xml:space="preserve">
-    <value>Skills</value>
+    <value>Навыки</value>
   </data>
   <data name="SnowWalkerProgress" xml:space="preserve">
-    <value>Snow walker progress</value>
+    <value>Ходьба по снегу</value>
   </data>
   <data name="TestBranch" xml:space="preserve">
-    <value>Test branch</value>
+    <value>Сборка "Test branch"</value>
   </data>
   <data name="Thirst" xml:space="preserve">
-    <value>Thirst</value>
+    <value>Жажда</value>
   </data>
   <data name="TimeEvolving" xml:space="preserve">
-    <value>Time spent evolving (hours)</value>
+    <value>Затраченное время (часы)</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>The Long Dark (v.378T) Save Editor</value>
+    <value>The Long Dark (v.388) Редактор сохранений</value>
   </data>
   <data name="Tools" xml:space="preserve">
-    <value>Tools</value>
+    <value>Инструменты</value>
   </data>
   <data name="Traits" xml:space="preserve">
-    <value>Traits</value>
+    <value>Особенности</value>
   </data>
   <data name="Unknown" xml:space="preserve">
-    <value>Unknown</value>
+    <value>Неизвестное</value>
+  </data>
+  <data name="GEAR_ClimbingSocks" xml:space="preserve">
+    <value>Альпинистские носки</value>
+  </data>
+  <data name="Afflictions" xml:space="preserve">
+    <value>Состояния</value>
+  </data>
+  <data name="ActionCure" xml:space="preserve">
+    <value>Лечение</value>
+  </data>
+  <data name="AfflictionType_BloodLoss" xml:space="preserve">
+    <value>Кровотечение</value>
+  </data>
+  <data name="AfflictionType_Burns" xml:space="preserve">
+    <value>Ожоги</value>
+  </data>
+  <data name="AfflictionType_Dysentery" xml:space="preserve">
+    <value>Дизентерия</value>
+  </data>
+  <data name="AfflictionType_Infection" xml:space="preserve">
+    <value>Инфекция</value>
+  </data>
+  <data name="AfflictionType_FoodPoisioning" xml:space="preserve">
+    <value>Пищевое отравление</value>
+  </data>
+  <data name="AfflictionType_SprainedAnkle" xml:space="preserve">
+    <value>Вывих лодыжки</value>
+  </data>
+  <data name="AfflictionType_InfectionRisk" xml:space="preserve">
+    <value>Риск заражения</value>
+  </data>
+  <data name="AfflictionType_SprainedWrist" xml:space="preserve">
+    <value>Вывих кисти</value>
+  </data>
+  <data name="AfflictionType_Frostbite" xml:space="preserve">
+    <value>Обморожение</value>
+  </data>
+  <data name="AfflictionType_Hypothermia" xml:space="preserve">
+    <value>Переохлаждение</value>
+  </data>
+  <data name="AfflictionType_ReducedFatigue" xml:space="preserve">
+    <value>Усталость снизилась</value>
+  </data>
+  <data name="AfflictionType_ImprovedRest" xml:space="preserve">
+    <value>Более эффективный отдых</value>
+  </data>
+  <data name="AfflictionType_WarmingUp" xml:space="preserve">
+    <value>Согревание</value>
+  </data>
+  <data name="AfflictionType_HypothermiaRisk" xml:space="preserve">
+    <value>Риск переохлаждения</value>
+  </data>
+  <data name="AfflictionType_CabinFever" xml:space="preserve">
+    <value>Клаустрафобия</value>
+  </data>
+  <data name="AfflictionType_IntestinalParasitesRisk" xml:space="preserve">
+    <value>Риск кишечных паразитов</value>
+  </data>
+  <data name="AfflictionType_IntestinalParasites" xml:space="preserve">
+    <value>Кишечные паразиты</value>
+  </data>
+  <data name="AfflictionType_SprainedWristMajor" xml:space="preserve">
+    <value>Серьезное растяжение кисти</value>
+  </data>
+  <data name="AfflictionType_CabinFeverRisk" xml:space="preserve">
+    <value>Риск клаустрафобии</value>
+  </data>
+  <data name="AfflictionType_FrostbiteRisk" xml:space="preserve">
+    <value>Риск обморожения</value>
+  </data>
+  <data name="ItemCategory_Clothing" xml:space="preserve">
+    <value>Одежда</value>
+  </data>
+  <data name="ItemCategory_Food" xml:space="preserve">
+    <value>Еда</value>
+  </data>
+  <data name="ItemCategory_Tools" xml:space="preserve">
+    <value>Инструменты</value>
+  </data>
+  <data name="ItemCategory_Materials" xml:space="preserve">
+    <value>Материалы</value>
+  </data>
+  <data name="ItemCategory_Collectible" xml:space="preserve">
+    <value>Коллекция</value>
+  </data>
+  <data name="ItemCategory_Books" xml:space="preserve">
+    <value>Книги</value>
+  </data>
+  <data name="ItemCategory_Hidden" xml:space="preserve">
+    <value>Спрятанное</value>
+  </data>
+  <data name="ItemCategory_Unknown" xml:space="preserve">
+    <value>Неизвестное</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="GEAR_BottleHydrogenPeroxide" xml:space="preserve">
+    <value>Антисептик</value>
+  </data>
+  <data name="ItemCategory_FirstAid" xml:space="preserve">
+    <value>Первая помощь</value>
   </data>
 </root>

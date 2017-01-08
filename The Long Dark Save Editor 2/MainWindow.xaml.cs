@@ -9,8 +9,6 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using System.Text.RegularExpressions;
 using System.Windows;
 using WForms = System.Windows.Forms;
 using System.Windows.Controls;
@@ -27,7 +25,7 @@ namespace The_Long_Dark_Save_Editor_2
 	public partial class MainWindow : Window, INotifyPropertyChanged
 	{
 		public static MainWindow Instance { get; set; }
-		public static decimal Version { get { return 2.4m; } }
+		public static VersionData Version { get { return new VersionData() { version = "2.6" }; } }
 
 		private GameSave currentSave;
 		public GameSave CurrentSave { get { return currentSave; } set { SetPropertyField(ref currentSave, value); } }
@@ -43,7 +41,8 @@ namespace The_Long_Dark_Save_Editor_2
 		public bool TestBranch
 		{
 			get { return testBranch; }
-			set {
+			set
+			{
 				testBranch = value;
 				UpdateSaves();
 				Properties.Settings.Default.TestBranch = value;
@@ -65,22 +64,61 @@ namespace The_Long_Dark_Save_Editor_2
 		{
 #if DEBUG
 			IsDebug = true;
+
+			foreach (var e in Enum.GetValues(typeof(ItemCategory)))
+			{
+				Debug.WriteLine(e.ToString());
+
+			}
+			Debug.WriteLine(System.Threading.Thread.CurrentThread.CurrentUICulture);
+			System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru-RU");
+
+
 #endif
 			Instance = this;
 			testBranch = Properties.Settings.Default.TestBranch;
 
 			InitializeComponent();
 			this.DataContext = this;
-			
-			Title += " " + Version.ToString(CultureInfo.InvariantCulture.NumberFormat); ;
+
+			Title += " " + Version.ToString();
 
 			JsonConvert.DefaultSettings = () => new JsonSerializerSettings
 			{
-				MissingMemberHandling = MissingMemberHandling.Error,
+				//MissingMemberHandling = MissingMemberHandling.Error,
 				FloatFormatHandling = FloatFormatHandling.Symbol,
 			};
 
 			UpdateSaves();
+
+		}
+
+		private void Window_Loaded(object sender, RoutedEventArgs e)
+		{
+#if !DEBUG
+			if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
+			{
+				try
+				{
+					CheckForUpdates();
+				}
+				catch (Exception ex)
+				{
+					dialogHost.IsOpen = false;
+					ErrorDialog.Show("Failed to check for new versions", ex != null ? (ex.Message + "\n" + e.ToString()) : null);
+				}
+
+			}
+
+			if (!Properties.Settings.Default.BugReportWarningShown)
+			{
+				System.Windows.MessageBox.Show("Do NOT report any in-game bugs to Hinterland if you have edited your save. Bugs might be caused by the save editor. Only report bugs if you are able to reproduce them in fresh unedited save.");
+				//System.Windows.MessageBox.Show("If you don't have test branch version of the game, untick the toggle button at top right corner.");
+
+				Properties.Settings.Default.BugReportWarningShown = true;
+				Properties.Settings.Default.Save();
+			}
+#endif
 		}
 
 		private void UpdateSaves()
@@ -119,9 +157,9 @@ namespace The_Long_Dark_Save_Editor_2
 				{
 					string json = e.Result;
 					List<VersionData> versions = JsonConvert.DeserializeObject<List<VersionData>>(json);
-					if (versions[versions.Count - 1].version > Version)
+					if (versions[versions.Count - 1] > Version)
 					{
-						var newerVersions = versions.Where(version => version.version > Version).ToList();
+						var newerVersions = versions.Where(version => version > Version).ToList();
 						var viewModel = new NewVersionDialogViewModel() { Versions = newerVersions, Url = newerVersions[newerVersions.Count - 1].url };
 						dialogHost.DialogContent = viewModel;
 						dialogHost.IsOpen = true;
@@ -136,8 +174,6 @@ namespace The_Long_Dark_Save_Editor_2
 			});
 			webClient.DownloadStringTaskAsync("https://tld-save-editor-2.firebaseio.com/Changelog.json");
 
-			System.Uri uri = new System.Uri("http://www.moddb.com/mods/umod-tld/downloads/the-long-dark-save-editor1");
-			Debug.WriteLine(uri.Host);
 		}
 
 		protected void SetPropertyField<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
@@ -198,34 +234,6 @@ namespace The_Long_Dark_Save_Editor_2
 		{
 			if (cbItem.SelectedItem == null && cbItem.Items.Count > 0)
 				cbItem.SelectedIndex = 0;
-		}
-
-		private void Window_Loaded(object sender, RoutedEventArgs e)
-		{
-#if !DEBUG
-			if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
-			{
-				try
-				{
-					CheckForUpdates();
-				}
-				catch (Exception ex)
-				{
-					dialogHost.IsOpen = false;
-					ErrorDialog.Show("Failed to check for new versions", ex != null ? (ex.Message + "\n" + e.ToString()) : null);
-				}
-
-			}
-
-			if (!Properties.Settings.Default.BugReportWarningShown)
-			{
-				System.Windows.MessageBox.Show("Do NOT report any in-game bugs to Hinterland if you have edited your save. Bugs might be caused by the save editor. Only report bugs if you are able to reproduce them in fresh unedited save.");
-				System.Windows.MessageBox.Show("If you don't have test branch version of the game, untick the toggle button at top right corner.");
-
-				Properties.Settings.Default.BugReportWarningShown = true;
-				Properties.Settings.Default.Save();
-			}
-#endif
 		}
 
 		private void RepairAllClicked(object sender, RoutedEventArgs e)

@@ -28,21 +28,7 @@ namespace The_Long_Dark_Save_Editor_2
 
 		public void Save()
 		{
-
-			/*Debug.WriteLine(Global.SprainedAnkle.m_Active);
-			Debug.WriteLine(string.Join(", ", Global.SprainedAnkle.m_CausesLocIDs));
-			Debug.WriteLine(Global.SprainedAnkle.m_DurationHours);
-			Debug.WriteLine(string.Join(", ", Global.SprainedAnkle.m_DurationHoursList));
-			Debug.WriteLine(Global.SprainedAnkle.m_ElapsedHours);
-			Debug.WriteLine(string.Join(", ", Global.SprainedAnkle.m_ElapsedHoursList));
-			Debug.WriteLine(Global.SprainedAnkle.m_ElapsedRest);
-			Debug.WriteLine(string.Join(", ", Global.SprainedAnkle.m_ElapsedRestList));
-			Debug.WriteLine(string.Join(", ", Global.SprainedAnkle.m_Locations));
-			Debug.WriteLine(Global.SprainedAnkle.m_PainKillersTaken);
-			Debug.WriteLine(Global.SprainedAnkle.m_SecondsSinceLastPainAudio);
-			Debug.WriteLine(Global.SprainedAnkle.m_SecondsSinceSprain);
-			Debug.WriteLine(Global.SprainedAnkle.m_SecondsUntilNextPainAudio);*/
-
+			//Global.Afflictions.Negative.Add(new BloodLoss() { AfflictionType = AfflictionType.BloodLoss, CauseLocID = "asd", DurationHours = 10, Location = 2 });
 			var bootSerialized = Util.SerializeObject(Boot);
 			File.WriteAllBytes(Path.Combine(path, "boot"), EncryptString.CompressStringToBytes(bootSerialized));
 

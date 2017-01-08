@@ -50,14 +50,10 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 
 		public static string GetDescription(object enumValue)
 		{
-			var descriptionAttribute = enumValue.GetType()
-			  .GetField(enumValue.ToString())
-			  .GetCustomAttributes(typeof(DescriptionAttribute), false)
-			  .FirstOrDefault() as DescriptionAttribute;
-
-			return descriptionAttribute != null
-			  ? descriptionAttribute.Description
-			  : enumValue.ToString();
+			var key = enumValue.GetType().Name + "_" + enumValue;
+			string desc = Properties.Resources.ResourceManager.GetString(key) ??
+				Properties.Resources.ResourceManager.GetString(key, System.Globalization.CultureInfo.InvariantCulture) ?? enumValue.ToString();
+			return desc;
 		}
 
 

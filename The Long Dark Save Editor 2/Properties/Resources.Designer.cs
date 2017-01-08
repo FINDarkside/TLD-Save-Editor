@@ -70,11 +70,209 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cure.
+        /// </summary>
+        public static string ActionCure {
+            get {
+                return ResourceManager.GetString("ActionCure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add item.
         /// </summary>
         public static string AddItem {
             get {
                 return ResourceManager.GetString("AddItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Afflictions.
+        /// </summary>
+        public static string Afflictions {
+            get {
+                return ResourceManager.GetString("Afflictions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blood loss.
+        /// </summary>
+        public static string AfflictionType_BloodLoss {
+            get {
+                return ResourceManager.GetString("AfflictionType_BloodLoss", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Burns.
+        /// </summary>
+        public static string AfflictionType_Burns {
+            get {
+                return ResourceManager.GetString("AfflictionType_Burns", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cabin fever.
+        /// </summary>
+        public static string AfflictionType_CabinFever {
+            get {
+                return ResourceManager.GetString("AfflictionType_CabinFever", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cabin fever risk.
+        /// </summary>
+        public static string AfflictionType_CabinFeverRisk {
+            get {
+                return ResourceManager.GetString("AfflictionType_CabinFeverRisk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dysentery.
+        /// </summary>
+        public static string AfflictionType_Dysentery {
+            get {
+                return ResourceManager.GetString("AfflictionType_Dysentery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Food poisoning.
+        /// </summary>
+        public static string AfflictionType_FoodPoisioning {
+            get {
+                return ResourceManager.GetString("AfflictionType_FoodPoisioning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Frostbite.
+        /// </summary>
+        public static string AfflictionType_Frostbite {
+            get {
+                return ResourceManager.GetString("AfflictionType_Frostbite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Frostbite risk.
+        /// </summary>
+        public static string AfflictionType_FrostbiteRisk {
+            get {
+                return ResourceManager.GetString("AfflictionType_FrostbiteRisk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hypothermia.
+        /// </summary>
+        public static string AfflictionType_Hypothermia {
+            get {
+                return ResourceManager.GetString("AfflictionType_Hypothermia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hypothermia risk.
+        /// </summary>
+        public static string AfflictionType_HypothermiaRisk {
+            get {
+                return ResourceManager.GetString("AfflictionType_HypothermiaRisk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Improved rest.
+        /// </summary>
+        public static string AfflictionType_ImprovedRest {
+            get {
+                return ResourceManager.GetString("AfflictionType_ImprovedRest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Infection.
+        /// </summary>
+        public static string AfflictionType_Infection {
+            get {
+                return ResourceManager.GetString("AfflictionType_Infection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Infection risk.
+        /// </summary>
+        public static string AfflictionType_InfectionRisk {
+            get {
+                return ResourceManager.GetString("AfflictionType_InfectionRisk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Intestinal parasites.
+        /// </summary>
+        public static string AfflictionType_IntestinalParasites {
+            get {
+                return ResourceManager.GetString("AfflictionType_IntestinalParasites", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Intestinal parasites risk.
+        /// </summary>
+        public static string AfflictionType_IntestinalParasitesRisk {
+            get {
+                return ResourceManager.GetString("AfflictionType_IntestinalParasitesRisk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reduced fatigue.
+        /// </summary>
+        public static string AfflictionType_ReducedFatigue {
+            get {
+                return ResourceManager.GetString("AfflictionType_ReducedFatigue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sprained ankle.
+        /// </summary>
+        public static string AfflictionType_SprainedAnkle {
+            get {
+                return ResourceManager.GetString("AfflictionType_SprainedAnkle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sprained wrist.
+        /// </summary>
+        public static string AfflictionType_SprainedWrist {
+            get {
+                return ResourceManager.GetString("AfflictionType_SprainedWrist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sprained wrist major.
+        /// </summary>
+        public static string AfflictionType_SprainedWristMajor {
+            get {
+                return ResourceManager.GetString("AfflictionType_SprainedWristMajor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warming up.
+        /// </summary>
+        public static string AfflictionType_WarmingUp {
+            get {
+                return ResourceManager.GetString("AfflictionType_WarmingUp", resourceCulture);
             }
         }
         
@@ -385,7 +583,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Basic Gloves.
+        ///   Looks up a localized string similar to Driving Gloves.
         /// </summary>
         public static string GEAR_BasicGloves {
             get {
@@ -804,6 +1002,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_ClimbersJournal {
             get {
                 return ResourceManager.GetString("GEAR_ClimbersJournal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Climbing Socks.
+        /// </summary>
+        public static string GEAR_ClimbingSocks {
+            get {
+                return ResourceManager.GetString("GEAR_ClimbingSocks", resourceCulture);
             }
         }
         
@@ -1683,9 +1890,9 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Medical Supplies.
         /// </summary>
-        public static string GEAR_Medical_Supplies {
+        public static string GEAR_MedicalSupplies {
             get {
-                return ResourceManager.GetString("GEAR_Medical Supplies", resourceCulture);
+                return ResourceManager.GetString("GEAR_MedicalSupplies", resourceCulture);
             }
         }
         
@@ -2509,6 +2716,87 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Books.
+        /// </summary>
+        public static string ItemCategory_Books {
+            get {
+                return ResourceManager.GetString("ItemCategory_Books", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clothing.
+        /// </summary>
+        public static string ItemCategory_Clothing {
+            get {
+                return ResourceManager.GetString("ItemCategory_Clothing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Collectible.
+        /// </summary>
+        public static string ItemCategory_Collectible {
+            get {
+                return ResourceManager.GetString("ItemCategory_Collectible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Aid.
+        /// </summary>
+        public static string ItemCategory_FirstAid {
+            get {
+                return ResourceManager.GetString("ItemCategory_FirstAid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Food.
+        /// </summary>
+        public static string ItemCategory_Food {
+            get {
+                return ResourceManager.GetString("ItemCategory_Food", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hidden.
+        /// </summary>
+        public static string ItemCategory_Hidden {
+            get {
+                return ResourceManager.GetString("ItemCategory_Hidden", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Materials.
+        /// </summary>
+        public static string ItemCategory_Materials {
+            get {
+                return ResourceManager.GetString("ItemCategory_Materials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tools.
+        /// </summary>
+        public static string ItemCategory_Tools {
+            get {
+                return ResourceManager.GetString("ItemCategory_Tools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown.
+        /// </summary>
+        public static string ItemCategory_Unknown {
+            get {
+                return ResourceManager.GetString("ItemCategory_Unknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Materials.
         /// </summary>
         public static string Materials {
@@ -2662,7 +2950,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Long Dark (v.378T) Save Editor.
+        ///   Looks up a localized string similar to The Long Dark (v.388) Save Editor.
         /// </summary>
         public static string Title {
             get {

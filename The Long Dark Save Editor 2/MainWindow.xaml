@@ -39,14 +39,14 @@
                 <scm:SortDescription PropertyName="InGameName"/>
             </CollectionViewSource.SortDescriptions>
             <CollectionViewSource.GroupDescriptions>
-                <PropertyGroupDescription PropertyName="Category" />
+                <PropertyGroupDescription PropertyName="Category" Converter="{StaticResource EnumDescriptionConverter}" />
             </CollectionViewSource.GroupDescriptions>
         </CollectionViewSource>
 
         <DataTemplate DataType="{x:Type gameData:InventoryItem}">
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Button Style="{StaticResource MaterialDesignFlatButton}" Width="100" Click="DeleteItemClicked" HorizontalAlignment="Left">Remove</Button>
+                    <Button Style="{StaticResource MaterialDesignFlatButton}" Width="100" Click="DeleteItemClicked" HorizontalAlignment="Left" Content="{x:Static p:Resources.Remove}"></Button>
                 </StackPanel>
                 <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
                 <StackPanel Margin="10 10 0 0">
@@ -177,8 +177,8 @@
                 </StackPanel>
             </Grid>
             <Rectangle DockPanel.Dock="Top" Fill="#A6B8C3" Height="1" ></Rectangle>
-            <dragablz:TabablzControl Name="tabPanel" FixedHeaderCount="4" DockPanel.Dock="Bottom" BorderBrush="Transparent">
-                <TabItem Header="{x:Static p:Resources.Profile}">
+            <dragablz:TabablzControl Name="tabPanel" FixedHeaderCount="6" DockPanel.Dock="Bottom" BorderBrush="Transparent">
+                <TabItem Header="{x:Static p:Resources.Profile}" >
                     <StackPanel>
                         <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
                         <StackPanel Margin="10 10">
@@ -340,7 +340,7 @@
                         </StackPanel>
                     </StackPanel>
                 </TabItem>
-                <TabItem Header="{x:Static p:Resources.Injuries}" Visibility="Hidden">
+                <TabItem Header="{x:Static p:Resources.Injuries}">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto" />
@@ -350,7 +350,7 @@
                         <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="20">
                             <images:InjuriesBody></images:InjuriesBody>
                             <StackPanel Margin="40 0 0 0" SnapsToDevicePixels="True">
-                                <Label FontSize="20" FontWeight="Heavy">AFFLICTIONS</Label>
+                                <Label FontSize="20" FontWeight="Heavy" Content="{x:Static p:Resources.Afflictions}"></Label>
                                 <ItemsControl ItemsSource="{Binding CurrentSave.Global.Afflictions.Negative}">
                                     <ItemsControl.ItemsPanel>
                                         <ItemsPanelTemplate>
@@ -360,12 +360,16 @@
                                     <ItemsControl.ItemTemplate>
                                         <DataTemplate>
                                             <Border BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <StackPanel>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+														<ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="90" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <StackPanel Grid.Column="0">
                                                         <Label FontSize="15" FontWeight="Normal" VerticalAlignment="Center" Content="{Binding AfflictionType, Converter={StaticResource EnumDescriptionConverter}}"></Label>
                                                     </StackPanel>
-                                                    <Button Style="{StaticResource MaterialDesignFlatButton}" Command="{Binding RemoveCommand}">Cure</Button>
-                                                </StackPanel>
+                                                    <Button Grid.Column="1" Style="{StaticResource MaterialDesignFlatButton}" Command="{Binding RemoveCommand}" Content="{x:Static p:Resources.ActionCure}"></Button>
+                                                </Grid>
                                             </Border>
                                         </DataTemplate>
                                     </ItemsControl.ItemTemplate>
@@ -433,9 +437,12 @@
                 <TabItem Header="{x:Static p:Resources.About}">
                     <StackPanel>
                         <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
-                        <StackPanel Margin="10 20" >
+                        <StackPanel Margin="0 20" >
                             <TextBlock HorizontalAlignment="Center">Developed by FINDarkside</TextBlock>
                             <TextBlock HorizontalAlignment="Center">Contact: findarkside@gmail.com</TextBlock>
+                        </StackPanel>
+                        <StackPanel >
+                            <TextBlock HorizontalAlignment="Center">Russian translation by driver_13</TextBlock>
                         </StackPanel>
                     </StackPanel>
 

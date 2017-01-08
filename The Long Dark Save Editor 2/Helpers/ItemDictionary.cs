@@ -10,6 +10,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 		public ItemCategory category;
 		public string defaultSerialized;
 		public bool hide;
+		public bool preventDelete;
 	}
 
 
@@ -17,14 +18,16 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 	{
 		public static Dictionary<string, ItemInfo> itemInfo = new Dictionary<string, ItemInfo>();
 
-		private static void AddItemInfo(string itemID, ItemCategory category, string defaultSerialized, bool hide = false)
+		private static void AddItemInfo(string itemID, ItemCategory category, string defaultSerialized, bool hide = false, bool preventDelete = false)
 		{
-			itemInfo.Add(itemID, new ItemInfo { category = category, defaultSerialized = defaultSerialized, hide = hide });
+			itemInfo.Add(itemID, new ItemInfo { category = category, defaultSerialized = defaultSerialized, hide = hide , preventDelete = preventDelete});
 		}
 
 		public static string GetInGameName(string name)
 		{
-			return (string)Properties.Resources.ResourceManager.GetObject(name, System.Globalization.CultureInfo.CurrentUICulture) ?? name;
+			return Properties.Resources.ResourceManager.GetString(name, System.Globalization.CultureInfo.CurrentUICulture) ?? 
+				Properties.Resources.ResourceManager.GetString(name, System.Globalization.CultureInfo.InvariantCulture) ?? 
+				name;
 		}
 
 		public static ItemCategory GetCategory(string name)
@@ -103,6 +106,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			AddItemInfo("GEAR_WorkBoots", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_WorkGloves", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_WorkPants", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+			AddItemInfo("GEAR_ClimbingSocks", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 
 			AddItemInfo("GEAR_BeefJerky", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 350}}");
 			AddItemInfo("GEAR_CandyBar", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
@@ -142,8 +146,8 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			AddItemInfo("GEAR_SodaGrape", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 250}}");
 			AddItemInfo("GEAR_SodaOrange", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 250}}");
 			AddItemInfo("GEAR_TomatoSoupCan", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 300}, ""SmashableItem"": {}}");
-			AddItemInfo("GEAR_WaterSupplyNotPotable", ItemCategory.Food, @"{""WaterSupply"":{""m_VolumeProxy"": 1}}");
-			AddItemInfo("GEAR_WaterSupplyPotable", ItemCategory.Food, @"{""WaterSupply"":{""m_VolumeProxy"": 1}}");
+			AddItemInfo("GEAR_WaterSupplyNotPotable", ItemCategory.Food, @"{""WaterSupply"":{""m_VolumeProxy"": 1}}", true);
+			AddItemInfo("GEAR_WaterSupplyPotable", ItemCategory.Food, @"{""WaterSupply"":{""m_VolumeProxy"": 1}}", true);
 			//gear_bookmanual
 
 
