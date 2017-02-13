@@ -48,7 +48,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			AddItemInfo("GEAR_EmergencyStim", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 
 			AddItemInfo("GEAR_Balaclava", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
-			AddItemInfo("GEAR_BaseBallCap", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+			AddItemInfo("GEAR_BaseballCap", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_BasicBoots", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_BasicGloves", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_BasicShoes", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
@@ -70,7 +70,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			AddItemInfo("GEAR_DownSkiJacket", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_DownVest", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_EarMuffs", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
-			AddItemInfo("GEAR_FisherManSweater", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+			AddItemInfo("GEAR_FishermanSweater", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_FleeceMittens", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_FleeceSweater", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 			AddItemInfo("GEAR_Gauntlets", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
@@ -113,6 +113,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			AddItemInfo("GEAR_CannedBeans", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 600}, ""SmashableItem"": {}}");
 			AddItemInfo("GEAR_CannedSardines", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 300}, ""SmashableItem"": {}}");
 			AddItemInfo("GEAR_CattailStalk", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 150}, ""StackableItem"":{""m_UnitsProxy"": 1}}");
+			AddItemInfo("GEAR_CattailPlant", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 150}, ""StackableItem"":{""m_UnitsProxy"": 1}}", true);
 			AddItemInfo("GEAR_CoffeeCup", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 100}}");
 			AddItemInfo("GEAR_CoffeeTin", ItemCategory.Food, @"{""StackableItem"":{""m_UnitsProxy"": 6}}");
 			AddItemInfo("GEAR_CondensedMilk", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 750}}");
@@ -133,6 +134,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			AddItemInfo("GEAR_PeanutButter", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 900}}");
 			AddItemInfo("GEAR_PinnacleCanPeaches", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 450}, ""SmashableItem"": {}}");
 			AddItemInfo("GEAR_RawCohoSalmon", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
+			AddItemInfo("GEAR_CookedCohoSalmon", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
 			AddItemInfo("GEAR_RawLakeWhiteFish", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
 			AddItemInfo("GEAR_RawMeatBear", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
 			AddItemInfo("GEAR_RawMeatDeer", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
@@ -154,6 +156,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			AddItemInfo("GEAR_Accelerant", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 			AddItemInfo("GEAR_Arrow", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 			AddItemInfo("GEAR_ArrowShaft", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+			AddItemInfo("GEAR_BrokenArrow", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 			AddItemInfo("GEAR_BearSkinBedRoll", ItemCategory.Tools, @"{""Bed"": {}}");
 			AddItemInfo("GEAR_BedRoll", ItemCategory.Tools, @"{""Bed"": {}}");
 			AddItemInfo("GEAR_Bow", ItemCategory.Tools, @"{}");
@@ -162,7 +165,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			AddItemInfo("GEAR_Firestriker", ItemCategory.Tools, @"{}");
 			AddItemInfo("GEAR_FlareA", ItemCategory.Tools, @"{""FlareItem"": {}}");
 			AddItemInfo("GEAR_FlareGunAmmoSingle", ItemCategory.Tools, @"{}");
-			AddItemInfo("GEAR_Flaregun", ItemCategory.Tools, @"{}");
+			AddItemInfo("GEAR_FlareGun", ItemCategory.Tools, @"{}");
 			AddItemInfo("GEAR_Hacksaw", ItemCategory.Tools, @"{}");
 			AddItemInfo("GEAR_Hammer", ItemCategory.Tools, @"{}");
 			AddItemInfo("GEAR_Hatchet", ItemCategory.Tools, @"{}");
@@ -204,6 +207,13 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			AddItemInfo("GEAR_BookD", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}", true);
 			AddItemInfo("GEAR_BookE", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}", true);
 			AddItemInfo("GEAR_BookF", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}", true);
+			AddItemInfo("GEAR_BookG", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}", true);
+			AddItemInfo("GEAR_BookI", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}", true);
+			AddItemInfo("GEAR_BookH", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}", true);
+			AddItemInfo("GEAR_BookBopen", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}", true);
+			AddItemInfo("GEAR_BookHopen", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}", true);
+			AddItemInfo("GEAR_BookEopen", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}", true);
+
 			AddItemInfo("GEAR_BookManual", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}", true);
 			AddItemInfo("GEAR_CattailTinder", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 			AddItemInfo("GEAR_Cloth", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
@@ -230,6 +240,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			AddItemInfo("GEAR_Softwood", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 			AddItemInfo("GEAR_Stick", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 			AddItemInfo("GEAR_Tinder", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+			AddItemInfo("GEAR_BarkTinder", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 			AddItemInfo("GEAR_WolfPelt", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 			AddItemInfo("GEAR_WolfPeltDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 
@@ -246,10 +257,10 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 
 			AddItemInfo("GEAR_AccelerantKerosene", ItemCategory.Hidden, @"{""LiquidItem"": {""m_LiquidLitersProxy"": 1}}"); //Check!!
 			AddItemInfo("GEAR_AccelerantMedium", ItemCategory.Hidden, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-			AddItemInfo("GEAR_Boltcutters", ItemCategory.Hidden, @"{}");
+			AddItemInfo("GEAR_BoltCutters", ItemCategory.Hidden, @"{}");
 			AddItemInfo("GEAR_CarBattery", ItemCategory.Hidden, @"{}");
 			AddItemInfo("GEAR_CompressionBandage", ItemCategory.Hidden, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-			AddItemInfo("GEAR_Fireaxe", ItemCategory.Hidden, @"{}");
+			AddItemInfo("GEAR_FireAxe", ItemCategory.Hidden, @"{}");
 			AddItemInfo("GEAR_FishingLine", ItemCategory.Hidden, @"{}");
 			AddItemInfo("GEAR_FlintAndSteel", ItemCategory.Hidden, @"{}");
 			AddItemInfo("GEAR_LeatherStrips", ItemCategory.Hidden, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
@@ -260,7 +271,6 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			/*
 			AddItemInfo("GEAR_BloodyHammer", ItemCategory.Hidden, @"{}");
 			AddItemInfo("GEAR_AstridBackPack", ItemCategory.Hidden, @"{}");
-			AddItemInfo("GEAR_BookOpen", ItemCategory.Hidden, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 			AddItemInfo("GEAR_BowString", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 			AddItemInfo("GEAR_BowWood", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 			AddItemInfo("GEAR_ChurchHymn", ItemCategory.Hidden, @"{}");
