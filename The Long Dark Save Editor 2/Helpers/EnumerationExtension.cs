@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Linq;
 using System.Windows.Markup;
 
@@ -13,7 +12,6 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 		{
 			if (enumType == null)
 				throw new ArgumentNullException("enumType");
-
 			EnumType = enumType;
 		}
 
@@ -26,7 +24,6 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 					return;
 
 				var enumType = Nullable.GetUnderlyingType(value) ?? value;
-
 				if (enumType.IsEnum == false)
 					throw new ArgumentException("Type must be an Enum.");
 
@@ -47,15 +44,12 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			  }).ToArray();
 		}
 
-
 		public static string GetDescription(object enumValue)
 		{
 			var key = enumValue.GetType().Name + "_" + enumValue;
-			string desc = Properties.Resources.ResourceManager.GetString(key) ??
-				Properties.Resources.ResourceManager.GetString(key, System.Globalization.CultureInfo.InvariantCulture) ?? enumValue.ToString();
+			string desc = Properties.Resources.ResourceManager.GetString(key) ?? enumValue.ToString();
 			return desc;
 		}
-
 
 	}
 

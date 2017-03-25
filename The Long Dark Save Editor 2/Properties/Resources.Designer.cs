@@ -430,6 +430,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Experience mode.
+        /// </summary>
+        public static string ExperienceMode {
+            get {
+                return ResourceManager.GetString("ExperienceMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fatigue.
         /// </summary>
         public static string Fatigue {
@@ -502,7 +511,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Accelerant Kerosene.
+        ///   Looks up a localized string similar to Accelerant.
         /// </summary>
         public static string GEAR_AccelerantKerosene {
             get {
@@ -511,7 +520,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Accelerant Medium.
+        ///   Looks up a localized string similar to Accelerant.
         /// </summary>
         public static string GEAR_AccelerantMedium {
             get {
@@ -565,16 +574,25 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Baseball Cap.
+        ///   Looks up a localized string similar to Birch Bark.
         /// </summary>
-        public static string GEAR_BaseBallCap {
+        public static string GEAR_BarkTinder {
             get {
-                return ResourceManager.GetString("GEAR_BaseBallCap", resourceCulture);
+                return ResourceManager.GetString("GEAR_BarkTinder", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Basic Boots.
+        ///   Looks up a localized string similar to Baseball Cap.
+        /// </summary>
+        public static string GEAR_BaseballCap {
+            get {
+                return ResourceManager.GetString("GEAR_BaseballCap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trail Boots.
         /// </summary>
         public static string GEAR_BasicBoots {
             get {
@@ -592,7 +610,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Shoes.
+        ///   Looks up a localized string similar to Running Shoes.
         /// </summary>
         public static string GEAR_BasicShoes {
             get {
@@ -601,7 +619,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Basic Winter Coat.
+        ///   Looks up a localized string similar to Windbreaker.
         /// </summary>
         public static string GEAR_BasicWinterCoat {
             get {
@@ -610,7 +628,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Basic Wool Hat.
+        ///   Looks up a localized string similar to Cotton Toque.
         /// </summary>
         public static string GEAR_BasicWoolHat {
             get {
@@ -619,7 +637,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Basic Wool Scarf.
+        ///   Looks up a localized string similar to Wool Scarf.
         /// </summary>
         public static string GEAR_BasicWoolScarf {
             get {
@@ -711,9 +729,9 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Bolt Cutters.
         /// </summary>
-        public static string GEAR_Boltcutters {
+        public static string GEAR_BoltCutters {
             get {
-                return ResourceManager.GetString("GEAR_Boltcutters", resourceCulture);
+                return ResourceManager.GetString("GEAR_BoltCutters", resourceCulture);
             }
         }
         
@@ -738,6 +756,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Book.
         /// </summary>
+        public static string GEAR_BookBopen {
+            get {
+                return ResourceManager.GetString("GEAR_BookBopen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book.
+        /// </summary>
         public static string GEAR_BookC {
             get {
                 return ResourceManager.GetString("GEAR_BookC", resourceCulture);
@@ -745,7 +772,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Field Dressing Your Kill, vol. 1.
+        ///   Looks up a localized string similar to Field Dressing Your Kill, Vol. I.
         /// </summary>
         public static string GEAR_BookCarcassHarvesting {
             get {
@@ -783,6 +810,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Book.
         /// </summary>
+        public static string GEAR_BookEopen {
+            get {
+                return ResourceManager.GetString("GEAR_BookEopen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book.
+        /// </summary>
         public static string GEAR_BookF {
             get {
                 return ResourceManager.GetString("GEAR_BookF", resourceCulture);
@@ -790,11 +826,47 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Survive The Outdoors!.
+        ///   Looks up a localized string similar to Survive the Outdoors!.
         /// </summary>
         public static string GEAR_BookFireStarting {
             get {
                 return ResourceManager.GetString("GEAR_BookFireStarting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book.
+        /// </summary>
+        public static string GEAR_BookG {
+            get {
+                return ResourceManager.GetString("GEAR_BookG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book.
+        /// </summary>
+        public static string GEAR_BookH {
+            get {
+                return ResourceManager.GetString("GEAR_BookH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book.
+        /// </summary>
+        public static string GEAR_BookHopen {
+            get {
+                return ResourceManager.GetString("GEAR_BookHopen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book.
+        /// </summary>
+        public static string GEAR_BookI {
+            get {
+                return ResourceManager.GetString("GEAR_BookI", resourceCulture);
             }
         }
         
@@ -813,15 +885,6 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_BookManual {
             get {
                 return ResourceManager.GetString("GEAR_BookManual", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Book Open.
-        /// </summary>
-        public static string GEAR_BookOpen {
-            get {
-                return ResourceManager.GetString("GEAR_BookOpen", resourceCulture);
             }
         }
         
@@ -907,6 +970,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Broken Arrow.
+        /// </summary>
+        public static string GEAR_BrokenArrow {
+            get {
+                return ResourceManager.GetString("GEAR_BrokenArrow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Candy Bar.
         /// </summary>
         public static string GEAR_CandyBar {
@@ -961,6 +1033,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cat Tail Plant.
+        /// </summary>
+        public static string GEAR_CattailPlant {
+            get {
+                return ResourceManager.GetString("GEAR_CattailPlant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cat Tail Stalk.
         /// </summary>
         public static string GEAR_CattailStalk {
@@ -997,7 +1078,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Climbers Journal.
+        ///   Looks up a localized string similar to Climber&apos;s Journal Page.
         /// </summary>
         public static string GEAR_ClimbersJournal {
             get {
@@ -1033,7 +1114,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cup Of Coffee.
+        ///   Looks up a localized string similar to Cup of Coffee.
         /// </summary>
         public static string GEAR_CoffeeCup {
             get {
@@ -1101,6 +1182,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_CondensedMilk {
             get {
                 return ResourceManager.GetString("GEAR_CondensedMilk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Coho Salmon (Cooked).
+        /// </summary>
+        public static string GEAR_CookedCohoSalmon {
+            get {
+                return ResourceManager.GetString("GEAR_CookedCohoSalmon", resourceCulture);
             }
         }
         
@@ -1195,7 +1285,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cotton Socks.
+        ///   Looks up a localized string similar to Sports Socks.
         /// </summary>
         public static string GEAR_CottonSocks {
             get {
@@ -1294,7 +1384,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Down Ski Jacket.
+        ///   Looks up a localized string similar to Ski Jacket.
         /// </summary>
         public static string GEAR_DownSkiJacket {
             get {
@@ -1303,7 +1393,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Down West.
+        ///   Looks up a localized string similar to Down Vest.
         /// </summary>
         public static string GEAR_DownVest {
             get {
@@ -1359,9 +1449,9 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Fire Axe.
         /// </summary>
-        public static string GEAR_Fireaxe {
+        public static string GEAR_FireAxe {
             get {
-                return ResourceManager.GetString("GEAR_Fireaxe", resourceCulture);
+                return ResourceManager.GetString("GEAR_FireAxe", resourceCulture);
             }
         }
         
@@ -1395,14 +1485,14 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Fisherman&apos;s Sweater.
         /// </summary>
-        public static string GEAR_FisherManSweater {
+        public static string GEAR_FishermanSweater {
             get {
-                return ResourceManager.GetString("GEAR_FisherManSweater", resourceCulture);
+                return ResourceManager.GetString("GEAR_FishermanSweater", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fishing Line.
+        ///   Looks up a localized string similar to Line.
         /// </summary>
         public static string GEAR_FishingLine {
             get {
@@ -1420,16 +1510,16 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Flare Gun.
+        ///   Looks up a localized string similar to Distress Pistol.
         /// </summary>
-        public static string GEAR_Flaregun {
+        public static string GEAR_FlareGun {
             get {
-                return ResourceManager.GetString("GEAR_Flaregun", resourceCulture);
+                return ResourceManager.GetString("GEAR_FlareGun", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Flare Gun Ammo.
+        ///   Looks up a localized string similar to Flare Shell.
         /// </summary>
         public static string GEAR_FlareGunAmmoSingle {
             get {
@@ -1447,7 +1537,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fleece Sweater.
+        ///   Looks up a localized string similar to Sweatshirt.
         /// </summary>
         public static string GEAR_FleeceSweater {
             get {
@@ -1456,7 +1546,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Flint and Steel.
+        ///   Looks up a localized string similar to Flint &amp; Steel.
         /// </summary>
         public static string GEAR_FlintAndSteel {
             get {
@@ -1483,7 +1573,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cup Of Herbal Tea.
+        ///   Looks up a localized string similar to Cup of Herbal Tea.
         /// </summary>
         public static string GEAR_GreenTeaCup {
             get {
@@ -1591,7 +1681,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Heavy Wool Sweater.
+        ///   Looks up a localized string similar to Thick Wool Sweater.
         /// </summary>
         public static string GEAR_HeavyWoolSweater {
             get {
@@ -1663,7 +1753,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Insulated West.
+        ///   Looks up a localized string similar to Sport Vest.
         /// </summary>
         public static string GEAR_InsulatedVest {
             get {
@@ -1744,7 +1834,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Leather.
+        ///   Looks up a localized string similar to Fresh Leather.
         /// </summary>
         public static string GEAR_Leather {
             get {
@@ -1816,7 +1906,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Thermal underwear.
+        ///   Looks up a localized string similar to Thermal Underwear.
         /// </summary>
         public static string GEAR_LongUnderwear {
             get {
@@ -1825,7 +1915,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wool Long Johns.
+        ///   Looks up a localized string similar to Wool Longjohns.
         /// </summary>
         public static string GEAR_LongUnderwearWool {
             get {
@@ -1906,7 +1996,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mittens.
+        ///   Looks up a localized string similar to Wool Mittens.
         /// </summary>
         public static string GEAR_Mittens {
             get {
@@ -2005,7 +2095,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Old Man&apos;s Beard.
+        ///   Looks up a localized string similar to Old Man&apos;s Beard Wound Dressing.
         /// </summary>
         public static string GEAR_OldMansBeardDressing {
             get {
@@ -2041,7 +2131,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Paper Stack.
+        ///   Looks up a localized string similar to GAMEPLAY_PaperStack.
         /// </summary>
         public static string GEAR_PaperStack {
             get {
@@ -2077,7 +2167,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Premium Winter Coat.
+        ///   Looks up a localized string similar to Expedition Parka.
         /// </summary>
         public static string GEAR_PremiumWinterCoat {
             get {
@@ -2104,7 +2194,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Marine&apos;s Pea Coat.
+        ///   Looks up a localized string similar to Mariner&apos;s Pea Coat.
         /// </summary>
         public static string GEAR_QualityWinterCoat {
             get {
@@ -2158,7 +2248,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bear Meat (Raw).
+        ///   Looks up a localized string similar to Black Bear Meat.
         /// </summary>
         public static string GEAR_RawMeatBear {
             get {
@@ -2176,7 +2266,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rabbit (Raw).
+        ///   Looks up a localized string similar to Rabbit  (Raw).
         /// </summary>
         public static string GEAR_RawMeatRabbit {
             get {
@@ -2266,7 +2356,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rifle Round.
+        ///   Looks up a localized string similar to Rifle Cartridge.
         /// </summary>
         public static string GEAR_RifleAmmoSingle {
             get {
@@ -2302,7 +2392,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rope.
+        ///   Looks up a localized string similar to Mountaineering Rope.
         /// </summary>
         public static string GEAR_Rope {
             get {
@@ -2320,7 +2410,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rose hip Tea.
+        ///   Looks up a localized string similar to Rose Hip Tea.
         /// </summary>
         public static string GEAR_RoseHipTea {
             get {
@@ -2392,7 +2482,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ski Jacket.
+        ///   Looks up a localized string similar to Light Shell.
         /// </summary>
         public static string GEAR_SkiJacket {
             get {
@@ -2482,7 +2572,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Toque.
+        ///   Looks up a localized string similar to Wool Toque.
         /// </summary>
         public static string GEAR_Toque {
             get {
@@ -2509,6 +2599,24 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Water Bottle.
+        /// </summary>
+        public static string GEAR_Water1000ml {
+            get {
+                return ResourceManager.GetString("GEAR_Water1000ml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Water Bottle.
+        /// </summary>
+        public static string GEAR_Water500ml {
+            get {
+                return ResourceManager.GetString("GEAR_Water500ml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Water Purification Tablets.
         /// </summary>
         public static string GEAR_WaterPurificationTablets {
@@ -2518,7 +2626,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unsafe Water.
+        ///   Looks up a localized string similar to Water (Unsafe).
         /// </summary>
         public static string GEAR_WaterSupplyNotPotable {
             get {
@@ -2527,7 +2635,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Potable Water.
+        ///   Looks up a localized string similar to Water (Potable).
         /// </summary>
         public static string GEAR_WaterSupplyPotable {
             get {
@@ -2617,7 +2725,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to FleeceCowl.
+        ///   Looks up a localized string similar to Fleece Cowl.
         /// </summary>
         public static string GEAR_WoolWrapCap {
             get {

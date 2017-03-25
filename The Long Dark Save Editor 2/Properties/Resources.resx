@@ -1125,4 +1125,40 @@
   <data name="GEAR_Water1000ml" xml:space="preserve">
     <value>Water Bottle</value>
   </data>
+  <data name="ExperienceMode" xml:space="preserve">
+    <value>Experience mode</value>
+  </data>
+  <data name="ExperienceModeType_Pilgrim" xml:space="preserve">
+    <value>Pilgrim</value>
+  </data>
+  <data name="ExperienceModeType_Voyageur" xml:space="preserve">
+    <value>Voyageur</value>
+  </data>
+  <data name="ExperienceModeType_Stalker" xml:space="preserve">
+    <value>Stalker</value>
+  </data>
+  <data name="ExperienceModeType_Story" xml:space="preserve">
+    <value>Story</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeRescue" xml:space="preserve">
+    <value>Hopeless Rescue</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeHunted" xml:space="preserve">
+    <value>The Hunted</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeWhiteout" xml:space="preserve">
+    <value>Whiteout</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeNomad" xml:space="preserve">
+    <value>Nomad</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeHuntedPart2" xml:space="preserve">
+    <value>The Hunted, Part 2</value>
+  </data>
+  <data name="ExperienceModeType_Interloper" xml:space="preserve">
+    <value>Interloper</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
 </root>
