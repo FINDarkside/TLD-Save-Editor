@@ -179,86 +179,88 @@
             <Rectangle DockPanel.Dock="Top" Fill="#A6B8C3" Height="1" ></Rectangle>
             <dragablz:TabablzControl Name="tabPanel" FixedHeaderCount="6" DockPanel.Dock="Bottom" BorderBrush="Transparent">
                 <TabItem Header="{x:Static p:Resources.Profile}" >
-                    <StackPanel>
-                        <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
-                        <StackPanel Margin="10 10">
+					<StackPanel>
+						<Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
+						<StackPanel Margin="10 10">
+							<Expander Header="{x:Static p:Resources.Traits}" IsExpanded="True">
+								<StackPanel>
 
-                            <Expander Header="{x:Static p:Resources.Traits}" IsExpanded="True">
-                                <StackPanel>
-
-                                    <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                        <Label Width="160" Content="{x:Static p:Resources.BookSmartProgress}"/>
-                                        <Slider Name="bookSmartSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
+									<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+										<Label Width="160" Content="{x:Static p:Resources.BookSmartProgress}"/>
+										<Slider Name="bookSmartSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
 									Maximum="{StaticResource bookSmartRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.BookSmarts.m_HoursResearch}" Margin="5 5" Foreground="#c52b1c">
-                                        </Slider>
-                                        <Label Content="{Binding ElementName=bookSmartSlider, Path=Value, Converter={StaticResource FeatProgressPercentageConverter}, 
+										</Slider>
+										<Label Content="{Binding ElementName=bookSmartSlider, Path=Value, Converter={StaticResource FeatProgressPercentageConverter}, 
 										ConverterParameter={StaticResource bookSmartRequirement}}">
-                                        </Label>
-                                    </StackPanel>
+										</Label>
+									</StackPanel>
 
-                                    <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                        <Label Width="160" Content="{x:Static p:Resources.ColdFusionProgress}"/>
-                                        <Slider Name="coldFusionSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
+									<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+										<Label Width="160" Content="{x:Static p:Resources.ColdFusionProgress}"/>
+										<Slider Name="coldFusionSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
 									Maximum="{StaticResource coldFusionRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.ColdFusion.m_ElapsedDays}" Margin="5 5" Foreground="#c52b1c">
-                                        </Slider>
-                                        <Label Content="{Binding ElementName=coldFusionSlider, Path=Value, Converter={StaticResource FeatProgressPercentageConverter}, 
+										</Slider>
+										<Label Content="{Binding ElementName=coldFusionSlider, Path=Value, Converter={StaticResource FeatProgressPercentageConverter}, 
 										ConverterParameter={StaticResource coldFusionRequirement}}">
-                                        </Label>
-                                    </StackPanel>
+										</Label>
+									</StackPanel>
 
-                                    <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                        <Label Width="160" Content="{x:Static p:Resources.EfficientMachineProgress}"/>
-                                        <Slider Name="efficientMachineSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
+									<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+										<Label Width="160" Content="{x:Static p:Resources.EfficientMachineProgress}"/>
+										<Slider Name="efficientMachineSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
 									Maximum="{StaticResource efficientMachingeRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.EfficientMachine.m_ElapsedHours}" Margin="5 5" Foreground="#c52b1c">
-                                        </Slider>
-                                        <Label Content="{Binding ElementName=efficientMachineSlider, Path=Value, Converter={StaticResource FeatProgressPercentageConverter}, 
+										</Slider>
+										<Label Content="{Binding ElementName=efficientMachineSlider, Path=Value, Converter={StaticResource FeatProgressPercentageConverter}, 
 										ConverterParameter={StaticResource efficientMachingeRequirement}}">
-                                        </Label>
-                                    </StackPanel>
+										</Label>
+									</StackPanel>
 
-                                    <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                        <Label Width="160" Content="{x:Static p:Resources.FireMasterProgress}"/>
-                                        <Slider Name="fireMasterSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
+									<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+										<Label Width="160" Content="{x:Static p:Resources.FireMasterProgress}"/>
+										<Slider Name="fireMasterSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
 									Maximum="{StaticResource fireMasterRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.FireMaster.m_NumFiresStarted}" Margin="5 5" Foreground="#c52b1c">
-                                        </Slider>
-                                        <Label Content="{Binding ElementName=fireMasterSlider, Path=Value, Converter={StaticResource FeatProgressPercentageConverter}, 
+										</Slider>
+										<Label Content="{Binding ElementName=fireMasterSlider, Path=Value, Converter={StaticResource FeatProgressPercentageConverter}, 
 										ConverterParameter={StaticResource fireMasterRequirement}}">
-                                        </Label>
-                                    </StackPanel>
+										</Label>
+									</StackPanel>
 
-                                    <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-                                        <Label Width="160" Content="{x:Static p:Resources.FreeRunnerProgress}"/>
-                                        <Slider Name="freeRunnerSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
+									<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+										<Label Width="160" Content="{x:Static p:Resources.FreeRunnerProgress}"/>
+										<Slider Name="freeRunnerSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
 									Maximum="{StaticResource freeRunnerRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.FreeRunner.m_ElapsedKilometers}" Margin="5 5" Foreground="#c52b1c">
-                                        </Slider>
-                                        <Label Content="{Binding ElementName=freeRunnerSlider, Path=Value, Converter={StaticResource FeatProgressPercentageConverter}, 
+										</Slider>
+										<Label Content="{Binding ElementName=freeRunnerSlider, Path=Value, Converter={StaticResource FeatProgressPercentageConverter}, 
 										ConverterParameter={StaticResource freeRunnerRequirement}}">
-                                        </Label>
-                                    </StackPanel>
+										</Label>
+									</StackPanel>
 
-                                    <StackPanel Orientation="Horizontal">
-                                        <Label Width="160" Content="{x:Static p:Resources.SnowWalkerProgress}"/>
-                                        <Slider Name="snowWalkerSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
+									<StackPanel Orientation="Horizontal">
+										<Label Width="160" Content="{x:Static p:Resources.SnowWalkerProgress}"/>
+										<Slider Name="snowWalkerSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
 									Maximum="{StaticResource snowWalkerRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.SnowWalker.m_ElapsedKilometers}" Margin="5 5" Foreground="#c52b1c">
-                                        </Slider>
-                                        <Label Content="{Binding ElementName=snowWalkerSlider, Path=Value, Converter={StaticResource FeatProgressPercentageConverter}, 
+										</Slider>
+										<Label Content="{Binding ElementName=snowWalkerSlider, Path=Value, Converter={StaticResource FeatProgressPercentageConverter}, 
 										ConverterParameter={StaticResource snowWalkerRequirement}}">
-                                        </Label>
-                                    </StackPanel>
+										</Label>
+									</StackPanel>
 
-                                </StackPanel>
-                            </Expander>
-                        </StackPanel>
-
-
-                    </StackPanel>
-
-                </TabItem>
+								</StackPanel>
+							</Expander>
+						</StackPanel>
+					</StackPanel>
+				</TabItem>
                 <TabItem Header="{x:Static p:Resources.Player}">
                     <StackPanel>
                         <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
                         <StackPanel Margin="10 10">
-                            <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+							<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+								<Label Width="130" Content="{x:Static p:Resources.ExperienceMode}"/>
+								<ComboBox Margin="10 0 0 0" ItemsSource="{Binding Source={helpers:EnumerationExtension {x:Type gameData:ExperienceModeType}}}" 
+									DisplayMemberPath="Description" SelectedValue="{Binding CurrentSave.Global.ExperienceModeManager.m_CurrentModeType}"  
+									SelectedValuePath="Value"  Width="160" SelectedIndex="0"/>
+							</StackPanel>
+							<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                                 <Label Width="130" Content="{x:Static p:Resources.Health}"/>
                                 <Slider Name="healthSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
 										Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Condition.m_CurrentHPProxy}" Margin="5 5" Foreground="#c52b1c">

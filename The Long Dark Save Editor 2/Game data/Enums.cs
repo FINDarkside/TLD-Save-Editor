@@ -218,7 +218,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		ChallengeNomad,
 		ChallengeHuntedPart2,
 		Interloper,
-		NUM_MODES,
+		//NUM_MODES,
 	}
 
 	public enum StatID
