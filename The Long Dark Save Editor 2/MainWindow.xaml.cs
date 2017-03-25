@@ -52,13 +52,12 @@ namespace The_Long_Dark_Save_Editor_2
 		public bool IsDebug { get; set; }
 
 		private ObservableCollection<EnumerationMember> saves;
+
 		public ObservableCollection<EnumerationMember> Saves
 		{
 			get { return saves; }
 			set { SetPropertyField(ref saves, value); }
 		}
-
-
 
 		public MainWindow()
 		{
@@ -71,10 +70,11 @@ namespace The_Long_Dark_Save_Editor_2
 
 			}
 			Debug.WriteLine(System.Threading.Thread.CurrentThread.CurrentUICulture);
-			System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru-RU");
+			//System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru-RU");
 
 
 #endif
+
 			Instance = this;
 			testBranch = Properties.Settings.Default.TestBranch;
 
@@ -90,7 +90,6 @@ namespace The_Long_Dark_Save_Editor_2
 			};
 
 			UpdateSaves();
-
 		}
 
 		private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -191,16 +190,14 @@ namespace The_Long_Dark_Save_Editor_2
 
 		private void MenuItem_Click(object sender, RoutedEventArgs e)
 		{
-			var scope = FocusManager.GetFocusScope(tabPanel); // elem is the UIElement to unfocus
-			FocusManager.SetFocusedElement(scope, null); // remove logical focus
-			Keyboard.ClearFocus(); // remove keyboard focus
+			var scope = FocusManager.GetFocusScope(tabPanel);
+			FocusManager.SetFocusedElement(scope, null);
+			Keyboard.ClearFocus();
 
 			if (CurrentSave != null)
 				CurrentSave.Save();
-			Debug.WriteLine(CurrentProfile.Feats.BookSmarts.m_HoursResearch);
 			if (CurrentProfile != null)
 				CurrentProfile.Save();
-			Debug.WriteLine(CurrentProfile == null);
 		}
 
 		private void AddItemClicked(object sender, RoutedEventArgs e)

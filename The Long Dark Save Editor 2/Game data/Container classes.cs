@@ -514,9 +514,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		{
 			RemoveCommand = new CommandHandler(() =>
 			{
-				Debug.WriteLine(MainWindow.Instance.CurrentSave.Global.Afflictions.Negative.Count);
 				MainWindow.Instance.CurrentSave.Global.Afflictions.Negative.Remove(this);
-				Debug.WriteLine(MainWindow.Instance.CurrentSave.Global.Afflictions.Negative.Count);
 			});
 		}
 	}

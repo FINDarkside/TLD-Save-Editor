@@ -83,24 +83,9 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public MissionServicesManagerSaveProxy StoryManager { get; set; }
 		public PlayerManagerSaveDataProxy PlayerManager { get; set; }
 		public PlayerClimbRopeProxy PlayerClimbRope { get; set; }
-		[System.Obsolete("Use SkillsManager")]
 		public PlayerSkillsSaveData PlayerSkills { get; set; }
 		public PlayerGameStatsProxy PlayerGameStats { get; set; }
 		public Afflictions Afflictions { get; set; }
-		/*public HypothermiaSaveDataProxy Hypothermia { get; set; }
-		public FrostBiteSaveDataProxy Frostbite { get; set; }
-		public FoodPoisoningSaveDataProxy FoodPoisoning { get; set; }
-		public DysenterySaveDataProxy Dysentery { get; set; }
-		public SprainedAnkleSaveDataProxy SprainedAnkle { get; set; }
-		public SprainedWristSaveDataProxy SprainedWrist { get; set; }
-		public SprainedWristMajorSaveDataProxy SprainedWristMajor { get; set; }
-		public BurnsSaveDataProxy Burns { get; set; }
-		public BloodLossSaveDataProxy BloodLoss { get; set; }
-		public InfectionSaveDataProxy Infection { get; set; }
-		public IntestinalParasitesSaveDataProxy IntestinalParasites { get; set; }
-		public InfectionRiskSaveDataProxy InfectionRisk { get; set; }
-		public CabinFeverSaveDataProxy CabinFever { get; set; }
-*/
 		public LogSaveDataProxy Log { get; set; }
 		public RestSaveDataProxy Rest { get; set; }
 		public FlyoverDataProxy FlyOver { get; set; }
@@ -146,19 +131,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			PlayerClimbRope = Util.DeserializeObject<PlayerClimbRopeProxy>(proxy.m_PlayerClimbRopeSerialized);
 			PlayerSkills = Util.DeserializeObject<PlayerSkillsSaveData>(proxy.m_PlayerSkillsSerialized);
 			PlayerGameStats = Util.DeserializeObject<PlayerGameStatsProxy>(proxy.m_PlayerGameStatsSerialized);
-			/*Hypothermia = Util.DeserializeObject<HypothermiaSaveDataProxy>(proxy.m_HypothermiaSerialized);
-			Frostbite = Util.DeserializeObject<FrostBiteSaveDataProxy>(proxy.m_FrostbiteSerialized);
-			FoodPoisoning = Util.DeserializeObject<FoodPoisoningSaveDataProxy>(proxy.m_FoodPoisoningSerialized);
-			Dysentery = Util.DeserializeObject<DysenterySaveDataProxy>(proxy.m_DysenterySerialized);
-			SprainedAnkle = Util.DeserializeObject<SprainedAnkleSaveDataProxy>(proxy.m_SprainedAnkleSerialized);
-			SprainedWrist = Util.DeserializeObject<SprainedWristSaveDataProxy>(proxy.m_SprainedWristSerialized);
-			SprainedWristMajor = Util.DeserializeObject<SprainedWristMajorSaveDataProxy>(proxy.m_SprainedWristMajorSerialized);
-			Burns = Util.DeserializeObject<BurnsSaveDataProxy>(proxy.m_BurnsSerialized);
-			BloodLoss = Util.DeserializeObject<BloodLossSaveDataProxy>(proxy.m_BloodLossSerialized);
-			Infection = Util.DeserializeObject<InfectionSaveDataProxy>(proxy.m_InfectionSerialized);
-			InfectionRisk = Util.DeserializeObject<InfectionRiskSaveDataProxy>(proxy.m_InfectionRiskSerialized);
-			IntestinalParasites = Util.DeserializeObject<IntestinalParasitesSaveDataProxy>(proxy.m_IntestinalParasitesSerialized);
-			CabinFever = Util.DeserializeObject<CabinFeverSaveDataProxy>(proxy.m_CabinFeverSerialized);*/
 			Afflictions = new Afflictions(proxy);
 			Log = Util.DeserializeObject<LogSaveDataProxy>(proxy.m_LogSerialized);
 			Rest = Util.DeserializeObject<RestSaveDataProxy>(proxy.m_RestSerialized);
