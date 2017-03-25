@@ -1,6 +1,6 @@
 .vs
 /packages
-*.sln
 *.suo
+*.user
 The Long Dark Save Editor 2/bin/
 The Long Dark Save Editor 2/obj/
