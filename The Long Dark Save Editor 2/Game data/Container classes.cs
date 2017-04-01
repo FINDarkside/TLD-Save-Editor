@@ -210,7 +210,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			{
 				for (int i = 0; i < bloodLoss.m_DurationHoursList.Length; i++)
 				{
-					Debug.WriteLine("BloodLoss: " + bloodLoss.m_Locations[i]);
 					Negative.Add(new BloodLoss()
 					{
 						AfflictionType = AfflictionType.BloodLoss,
@@ -271,7 +270,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			}
 
 			var parasites = Util.DeserializeObject<IntestinalParasitesSaveDataProxy>(global.m_IntestinalParasitesSerialized);
-			Debug.WriteLine("parasites " + (parasites != null));
 			if (parasites != null && (parasites.m_HasParasites || parasites.m_HasParasiteRisk))
 			{
 				var affliction = parasites.m_HasParasites ? AfflictionType.IntestinalParasites : AfflictionType.IntestinalParasitesRisk;
@@ -439,7 +437,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 				}
 				proxy.m_InfectionSerialized = Util.SerializeObject(infectionProxy);
 			}
-			System.Diagnostics.Debug.WriteLine("i risk " + afflictions.ContainsKey(AfflictionType.Infection));
+
 			if (afflictions.ContainsKey(AfflictionType.InfectionRisk))
 			{
 				var infectionRisk = new InfectionRiskSaveDataProxy();
@@ -484,7 +482,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			{
 				proxy.m_IntestinalParasitesSerialized = ((AfflictionWithProxy)afflictions[AfflictionType.IntestinalParasitesRisk][0]).proxy;
 			}
-			Debug.WriteLine("parasites " + (proxy.m_IntestinalParasitesSerialized != null));
 
 			return proxy;
 		}
