@@ -12,7 +12,7 @@
 	<Color x:Key="Primary400">#42a5f5</Color>
 	<Color x:Key="Primary400Foreground">#DD000000</Color>
 	<Color x:Key="Primary500">#c52b1c</Color>
-    <Color x:Key="Primary500Foreground">#c52b1c</Color>
+	<Color x:Key="Primary500Foreground">#c52b1c</Color>
 	<Color x:Key="Primary600">#1e88e5</Color>
 	<Color x:Key="Primary600Foreground">#FFFFFFFF</Color>
 	<Color x:Key="Primary700">#1976d2</Color>

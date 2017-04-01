@@ -7,7 +7,6 @@ namespace The_Long_Dark_Save_Editor_2
 {
 	public class GameSave
 	{
-
 		public BootSaveGameFormat Boot { get; set; }
 		public GlobalSaveGameData Global { get; set; }
 
@@ -28,7 +27,6 @@ namespace The_Long_Dark_Save_Editor_2
 
 		public void Save()
 		{
-			//Global.Afflictions.Negative.Add(new BloodLoss() { AfflictionType = AfflictionType.BloodLoss, CauseLocID = "asd", DurationHours = 10, Location = 2 });
 			var bootSerialized = Util.SerializeObject(Boot);
 			File.WriteAllBytes(Path.Combine(path, "boot"), EncryptString.CompressStringToBytes(bootSerialized));
 

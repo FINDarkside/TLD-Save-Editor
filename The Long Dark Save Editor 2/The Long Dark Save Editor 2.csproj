@@ -113,7 +113,6 @@
     <Compile Include="Helpers\CommandHandler.cs" />
     <Compile Include="Helpers\EnumerationExtension.cs" />
     <Compile Include="Helpers\ItemDictionary.cs" />
-    <Compile Include="Helpers\StatsDictionarySerializer.cs" />
     <Compile Include="Images\InjuriesBody.xaml.cs">
       <DependentUpon>InjuriesBody.xaml</DependentUpon>
     </Compile>

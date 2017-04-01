@@ -80,7 +80,6 @@ namespace The_Long_Dark_Save_Editor_2
 
 			var bytes = File.ReadAllBytes(path);
 			var json = EncryptString.DecompressBytesToString(bytes);
-			//Debug.WriteLine(json);
 
 			int currentIndex = 0;
 
@@ -107,8 +106,6 @@ namespace The_Long_Dark_Save_Editor_2
 				for (int i = quoteIndex - 1; newStats[i] == '\\'; i--, depth++) { }
 				string escapes = new String('\\', depth);
 
-				//Debug.WriteLine(newStats);
-
 				for (var i = 0; i < newStats.Length; i++)
 				{
 					var c = newStats[i];
@@ -132,12 +129,8 @@ namespace The_Long_Dark_Save_Editor_2
 					}
 				}
 
-				//Debug.WriteLine(newStats);
-
 				json = json.Substring(0, statsDictStartIndex) + newStats + json.Substring(statsDictEndIndex);
 			}
-
-			//Debug.WriteLine(json);
 
 			#endregion
 
