@@ -25,9 +25,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 
 		public static string GetInGameName(string name)
 		{
-			return Properties.Resources.ResourceManager.GetString(name, System.Globalization.CultureInfo.CurrentUICulture) ?? 
-				Properties.Resources.ResourceManager.GetString(name, System.Globalization.CultureInfo.InvariantCulture) ?? 
-				name;
+			return Properties.Resources.ResourceManager.GetString(name, System.Globalization.CultureInfo.CurrentUICulture) ?? name;
 		}
 
 		public static ItemCategory GetCategory(string name)

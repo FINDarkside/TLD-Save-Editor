@@ -200,53 +200,6 @@ namespace The_Long_Dark_Save_Editor_2
 				CurrentProfile.Save();
 		}
 
-		private void AddItemClicked(object sender, RoutedEventArgs e)
-		{
-			var prefabName = (string)cbItem.SelectedValue;
-
-			if (prefabName == null)
-				return;
-
-			var itemInfo = ItemDictionary.itemInfo[prefabName];
-
-			var inventoryItem = Util.DeserializeObject<InventoryItem>(itemInfo.defaultSerialized);
-			inventoryItem.PrefabName = prefabName;
-			inventoryItem.HoursPlayed = CurrentSave.Global.TimeOfDay.m_HoursPlayedNotPausedProxy;
-
-			CurrentSave.Global.Inventory.Items.Add(inventoryItem);
-			ItemList.SelectedItem = inventoryItem;
-		}
-
-		private void DeleteItemClicked(object sender, RoutedEventArgs e)
-		{
-			var index = ItemList.SelectedIndex;
-			CurrentSave.Global.Inventory.Items.Remove((InventoryItem)ItemList.SelectedValue);
-			if (ItemList.Items.Count <= index)
-				ItemList.SelectedIndex = index - 1;
-			else
-				ItemList.SelectedIndex = index;
-		}
-
-		private void cbItem_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-		{
-			if (cbItem.SelectedItem == null && cbItem.Items.Count > 0)
-				cbItem.SelectedIndex = 0;
-		}
-
-		private void RepairAllClicked(object sender, RoutedEventArgs e)
-		{
-			foreach (var item in CurrentSave.Global.Inventory.Items)
-			{
-				item.NormalizedCondition = 1;
-				item.WornOut = false;
-
-				if (item.FlareItem != null)
-					item.FlareItem.m_StateProxy = FlareState.Fresh;
-				if (item.TorchItem != null)
-					item.TorchItem.m_StateProxy = TorchState.Fresh;
-			}
-		}
-
 		private void CurrentSaveSelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 			if (ccSaves == null && ccSaves.SelectedValue == null)
@@ -270,11 +223,6 @@ namespace The_Long_Dark_Save_Editor_2
 			}
 		}
 
-		private void PrintJsonClicked(object sender, RoutedEventArgs e)
-		{
-			Debug.WriteLine(((InventoryItem)ItemList.SelectedValue).Serialize().m_SerializedGear);
-		}
-
 		private void RefreshClicked(object sender, RoutedEventArgs e)
 		{
 			CurrentSaveSelectionChanged(null, null);
@@ -285,10 +233,6 @@ namespace The_Long_Dark_Save_Editor_2
 			Properties.Settings.Default.Save();
 		}
 
-		private void RemoveAllClicked(object sender, RoutedEventArgs e)
-		{
-			CurrentSave.Global.Inventory.Items.Clear();
-		}
 	}
 
 }
