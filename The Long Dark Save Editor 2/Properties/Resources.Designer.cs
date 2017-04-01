@@ -439,6 +439,96 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The Hunted.
+        /// </summary>
+        public static string ExperienceModeType_ChallengeHunted {
+            get {
+                return ResourceManager.GetString("ExperienceModeType_ChallengeHunted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Hunted, Part 2.
+        /// </summary>
+        public static string ExperienceModeType_ChallengeHuntedPart2 {
+            get {
+                return ResourceManager.GetString("ExperienceModeType_ChallengeHuntedPart2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nomad.
+        /// </summary>
+        public static string ExperienceModeType_ChallengeNomad {
+            get {
+                return ResourceManager.GetString("ExperienceModeType_ChallengeNomad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hopeless Rescue.
+        /// </summary>
+        public static string ExperienceModeType_ChallengeRescue {
+            get {
+                return ResourceManager.GetString("ExperienceModeType_ChallengeRescue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whiteout.
+        /// </summary>
+        public static string ExperienceModeType_ChallengeWhiteout {
+            get {
+                return ResourceManager.GetString("ExperienceModeType_ChallengeWhiteout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interloper.
+        /// </summary>
+        public static string ExperienceModeType_Interloper {
+            get {
+                return ResourceManager.GetString("ExperienceModeType_Interloper", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pilgrim.
+        /// </summary>
+        public static string ExperienceModeType_Pilgrim {
+            get {
+                return ResourceManager.GetString("ExperienceModeType_Pilgrim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stalker.
+        /// </summary>
+        public static string ExperienceModeType_Stalker {
+            get {
+                return ResourceManager.GetString("ExperienceModeType_Stalker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Story.
+        /// </summary>
+        public static string ExperienceModeType_Story {
+            get {
+                return ResourceManager.GetString("ExperienceModeType_Story", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voyageur.
+        /// </summary>
+        public static string ExperienceModeType_Voyageur {
+            get {
+                return ResourceManager.GetString("ExperienceModeType_Voyageur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fatigue.
         /// </summary>
         public static string Fatigue {
@@ -2928,6 +3018,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string Player {
             get {
                 return ResourceManager.GetString("Player", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Position.
+        /// </summary>
+        public static string Position {
+            get {
+                return ResourceManager.GetString("Position", resourceCulture);
             }
         }
         
