@@ -16,7 +16,7 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
 		public InventoryTab()
 		{
 			InitializeComponent();
-			mainWindow = (MainWindow)DataContext;
+			mainWindow = MainWindow.Instance;
 		}
 
 		private void AddItemClicked(object sender, RoutedEventArgs e)

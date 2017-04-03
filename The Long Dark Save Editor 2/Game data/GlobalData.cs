@@ -551,7 +551,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 	public class PlayerManagerSaveDataProxy
 	{
 		public List<int> m_KnownCodes { get; set; }
-		public float[] m_SaveGamePosition { get; set; }
+		public ObservableCollection<float> m_SaveGamePosition { get; set; }
 		public float[] m_SaveGameRotation { get; set; }
 		public bool m_StartGearAppliedProxy { get; set; }
 		public int m_ItemInHandsInstanceID { get; set; }

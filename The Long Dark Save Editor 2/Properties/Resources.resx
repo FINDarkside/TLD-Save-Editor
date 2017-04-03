@@ -1161,4 +1161,10 @@
   <data name="Position" xml:space="preserve">
     <value>Position</value>
   </data>
+  <data name="Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="OpenMapCommand" xml:space="preserve">
+    <value>Open map</value>
+  </data>
 </root>

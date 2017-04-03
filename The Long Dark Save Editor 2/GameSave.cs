@@ -9,6 +9,7 @@ namespace The_Long_Dark_Save_Editor_2
 	{
 		public BootSaveGameFormat Boot { get; set; }
 		public GlobalSaveGameData Global { get; set; }
+		public string OriginalRegion { get; set; }
 
 		private string path;
 
@@ -17,12 +18,16 @@ namespace The_Long_Dark_Save_Editor_2
 			this.path = path;
 
 			var bootLocation = Path.Combine(path, "boot");
-			Debug.WriteLine(LoadFile(bootLocation));
-
 			Boot = Util.DeserializeObject<BootSaveGameFormat>(LoadFile(bootLocation));
+			OriginalRegion = Boot.m_SceneName;
 
 			var globalLocation = Path.Combine(path, "global");
 			Global = new GlobalSaveGameData(LoadFile(globalLocation));
+			Global.PlayerManager.m_SaveGamePosition.CollectionChanged += (sender, e) => {
+				if(Global.PlayerManager.m_SaveGamePosition[1] != 10000000)
+					Global.PlayerManager.m_SaveGamePosition[1] = 10000000;
+			};
+
 		}
 
 		public void Save()

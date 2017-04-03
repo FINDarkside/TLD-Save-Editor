@@ -14,34 +14,51 @@
              d:DesignHeight="300" d:DesignWidth="500">
 	<UserControl.Resources>
 		<converters:PercentageConverter x:Key="PercentageConverter" />
+		<converters:AvailableRegionConverter x:Key="AvailableRegionConverter" />
+		<converters:RegionMapExistsConverter x:Key="RegionMapExistsConverter" />
 		<System:Double x:Key="double100">100</System:Double>
 	</UserControl.Resources>
-	
+
 	<StackPanel Margin="10 10">
 		<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
 			<Label Width="130" Content="{x:Static p:Resources.ExperienceMode}"/>
 			<ComboBox Margin="10 0 0 0" ItemsSource="{Binding Source={helpers:EnumerationExtension {x:Type gameData:ExperienceModeType}}}" 
-									DisplayMemberPath="Description" SelectedValue="{Binding CurrentSave.Global.ExperienceModeManager.m_CurrentModeType}"  
-									SelectedValuePath="Value"  Width="160" SelectedIndex="0"/>
+					  DisplayMemberPath="Description" SelectedValue="{Binding CurrentSave.Global.ExperienceModeManager.m_CurrentModeType}"  
+					  SelectedValuePath="Value"  Width="160" SelectedIndex="0"/>
+		</StackPanel>
+		<StackPanel Margin="0 0 0 10" Orientation="Horizontal">
+			<Label Width="130" Content="{x:Static p:Resources.Region}"/>
+			<ComboBox Name="cbCurrentRegion" Margin="10 0 0 0" DisplayMemberPath="Description" SelectedValuePath="Value"  Width="160"
+					  SelectedValue="{Binding CurrentSave.Boot.m_SceneName}" >
+				<ComboBox.ItemsSource>
+					<MultiBinding Converter="{StaticResource AvailableRegionConverter}">
+						<Binding  Source="{x:Static helpers:MapDictionary.MapNames}"/>
+						<Binding Path="CurrentSave.OriginalRegion" />
+					</MultiBinding>
+				</ComboBox.ItemsSource>
+			</ComboBox>
 		</StackPanel>
 		<StackPanel Margin="0 0 0 10">
 			<StackPanel Margin="0 0 0 0" Orientation="Horizontal">
 				<Label Width="100" Content="{x:Static p:Resources.Position}" HorizontalAlignment="Left"/>
 				<Label Width="40">X</Label>
-				<TextBox Width="150"></TextBox>
+				<TextBox Width="150" Text="{Binding CurrentSave.Global.PlayerManager.m_SaveGamePosition[0]}"/>
 			</StackPanel>
 			<StackPanel Orientation="Horizontal" Margin="100 5 0 0">
 				<Label Width="40">Y</Label>
-				<TextBox Width="150"></TextBox>
+				<TextBox Width="150" Text="{Binding CurrentSave.Global.PlayerManager.m_SaveGamePosition[2]}"/>
 			</StackPanel>
+			<Button Margin="140 10 0 0" Width="150" HorizontalAlignment="Left" Style="{StaticResource MaterialDesignRaisedButton}"
+					Content="{x:Static p:Resources.OpenMapCommand}" Foreground="White" Padding="0 0 0 4" Click="OpenMapWindow" 
+					IsEnabled="{Binding CurrentSave.Boot.m_SceneName, Converter={StaticResource RegionMapExistsConverter}}"/>
 		</StackPanel>
 		<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
 			<Label Width="130" Content="{x:Static p:Resources.Health}"/>
 			<Slider Name="healthSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
-										Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Condition.m_CurrentHPProxy}" Margin="5 5" Foreground="#c52b1c">
+					Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Condition.m_CurrentHPProxy}" Margin="5 5" Foreground="#c52b1c">
 			</Slider>
 			<Label Content="{Binding ElementName=healthSlider, Path=Value, Converter={StaticResource PercentageConverter}, 
-										ConverterParameter={StaticResource double100}}">
+				   ConverterParameter={StaticResource double100}}">
 			</Label>
 		</StackPanel>
 		<CheckBox IsChecked="{Binding CurrentSave.Global.Condition.m_NeverDieProxy}" Margin="0 0 0 5" Content="{x:Static p:Resources.NeverDie}"/>
@@ -58,25 +75,25 @@
 										Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Thirst.m_CurrentThirstProxy}" Margin="5 5" Foreground="#c52b1c">
 			</Slider>
 			<Label Content="{Binding ElementName=thirstSlider, Path=Value, Converter={StaticResource PercentageConverter}, 
-										ConverterParameter={StaticResource double100}}">
+				   ConverterParameter={StaticResource double100}}">
 			</Label>
 		</StackPanel>
 		<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
 			<Label Width="130" Content="{x:Static p:Resources.Fatigue}"/>
 			<Slider Name="fatigueSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
-										Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Fatigue.m_CurrentFatigueProxy}" Margin="5 5" Foreground="#c52b1c">
+					Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Fatigue.m_CurrentFatigueProxy}" Margin="5 5" Foreground="#c52b1c">
 			</Slider>
 			<Label Content="{Binding ElementName=fatigueSlider, Path=Value, Converter={StaticResource PercentageConverter}, 
-										ConverterParameter={StaticResource double100}}">
+				   ConverterParameter={StaticResource double100}}">
 			</Label>
 		</StackPanel>
 		<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
 			<Label Width="130" Content="{x:Static p:Resources.Freezing}"/>
 			<Slider Name="freezingSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
-										Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Freezing.m_CurrentFreezingProxy}" Margin="5 5" Foreground="#c52b1c">
+					Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Freezing.m_CurrentFreezingProxy}" Margin="5 5" Foreground="#c52b1c">
 			</Slider>
 			<Label Content="{Binding ElementName=freezingSlider, Path=Value, Converter={StaticResource PercentageConverter}, 
-										ConverterParameter={StaticResource double100}}">
+				   ConverterParameter={StaticResource double100}}">
 			</Label>
 		</StackPanel>
 	</StackPanel>

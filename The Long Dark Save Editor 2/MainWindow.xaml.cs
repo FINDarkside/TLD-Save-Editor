@@ -19,9 +19,7 @@ using The_Long_Dark_Save_Editor_2.ViewModels;
 
 namespace The_Long_Dark_Save_Editor_2
 {
-	/// <summary>
-	/// Interaction logic for MainWindow.xaml
-	/// </summary>
+
 	public partial class MainWindow : Window, INotifyPropertyChanged
 	{
 		public static MainWindow Instance { get; set; }
@@ -72,15 +70,12 @@ namespace The_Long_Dark_Save_Editor_2
 			Debug.WriteLine(System.Threading.Thread.CurrentThread.CurrentUICulture);
 			//System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru-RU");
 
-
 #endif
-
+			this.DataContext = this;
 			Instance = this;
 			testBranch = Properties.Settings.Default.TestBranch;
 
 			InitializeComponent();
-			this.DataContext = this;
-
 			Title += " " + Version.ToString();
 
 			JsonConvert.DefaultSettings = () => new JsonSerializerSettings
@@ -149,9 +144,8 @@ namespace The_Long_Dark_Save_Editor_2
 		public void CheckForUpdates()
 		{
 			WebClient webClient = new WebClient();
-			webClient.DownloadStringCompleted += (DownloadStringCompletedEventHandler)((sender, e) =>
+			webClient.DownloadStringCompleted += (sender, e) =>
 			{
-
 				try
 				{
 					string json = e.Result;
@@ -170,23 +164,10 @@ namespace The_Long_Dark_Save_Editor_2
 					ErrorDialog.Show("Failed to check for new versions", ex != null ? (ex.Message + "\n" + e.ToString()) : null);
 
 				}
-			});
+			};
 			webClient.DownloadStringTaskAsync("https://tld-save-editor-2.firebaseio.com/Changelog.json");
 
 		}
-
-		protected void SetPropertyField<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
-		{
-			if (!EqualityComparer<T>.Default.Equals(field, newValue))
-			{
-				field = newValue;
-				PropertyChangedEventHandler handler = PropertyChanged;
-				if (handler != null)
-					handler(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-
-		public event PropertyChangedEventHandler PropertyChanged;
 
 		private void MenuItem_Click(object sender, RoutedEventArgs e)
 		{
@@ -233,6 +214,18 @@ namespace The_Long_Dark_Save_Editor_2
 			Properties.Settings.Default.Save();
 		}
 
+		protected void SetPropertyField<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
+		{
+			if (!EqualityComparer<T>.Default.Equals(field, newValue))
+			{
+				field = newValue;
+				PropertyChangedEventHandler handler = PropertyChanged;
+				if (handler != null)
+					handler(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+
+		public event PropertyChangedEventHandler PropertyChanged;
 	}
 
 }
