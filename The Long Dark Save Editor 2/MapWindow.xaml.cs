@@ -14,6 +14,7 @@ namespace The_Long_Dark_Save_Editor_2
 	{
 		private double pixelsPerCoordinate;
 
+		private MapInfo mapInfo;
 		private GameSave gameSave;
 		private bool mouseDown;
 		private Point origo;
@@ -24,19 +25,31 @@ namespace The_Long_Dark_Save_Editor_2
 		public MapWindow(GameSave currentSave)
 		{
 			gameSave = currentSave;
+			mapInfo = MapDictionary.GetMapInfo(currentSave.Boot.m_SceneName);
 			InitializeComponent();
-			string region = currentSave.Boot.m_SceneName;
-			var mapInfo = MapDictionary.GetMapInfo(region);
+
 			pixelsPerCoordinate = mapInfo.pixelsPerCoordinate;
-			mapImage.Source = ((Image)Resources[region]).Source;
+			mapImage.Source = ((Image)Resources[currentSave.Boot.m_SceneName]).Source;
 			origo = mapInfo.origo;
 			mapImage.Height = mapInfo.height;
 			mapImage.Width = mapInfo.width;
 
 			playerPosition.X = currentSave.Global.PlayerManager.m_SaveGamePosition[0];
 			playerPosition.Y = currentSave.Global.PlayerManager.m_SaveGamePosition[2];
+		}
 
-			SetPosition(0, 0);
+		private void Window_Loaded(object sender, RoutedEventArgs e)
+		{
+			// Scale map to fit window
+			double wScale = canvas.ActualWidth / mapInfo.width;
+			double hScale = canvas.ActualHeight / mapInfo.height;
+			scale.ScaleX = Math.Min(wScale, hScale);
+			scale.ScaleY = Math.Min(wScale, hScale);
+
+			// Center map
+			var x = (canvas.ActualWidth  - mapInfo.width * scale.ScaleX) / 2;
+			var y = (canvas.ActualHeight - mapInfo.height * scale.ScaleY) / 2;
+			SetPosition(x, y);
 		}
 
 		private void canvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

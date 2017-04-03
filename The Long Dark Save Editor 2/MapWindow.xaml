@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:The_Long_Dark_Save_Editor_2"
         mc:Ignorable="d"
-        Title="MapWindow" Height="300" Width="300" WindowState="Maximized">
+        Title="MapWindow" Height="300" Width="300" WindowState="Maximized" Loaded="Window_Loaded">
 	<Window.Resources>
 		<Image x:Key="CoastalRegion" Source="Images/CoastalHighwaySF.png"></Image>
 		<Image x:Key="LakeRegion" Source="Images/MysteryLakeSF.png"></Image>
