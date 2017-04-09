@@ -1167,4 +1167,28 @@
   <data name="OpenMapCommand" xml:space="preserve">
     <value>Open map</value>
   </data>
+  <data name="CoastalRegion" xml:space="preserve">
+    <value>Coastal Highway</value>
+  </data>
+  <data name="LakeRegion" xml:space="preserve">
+    <value>Mystery Lake</value>
+  </data>
+  <data name="WhalingStationRegion" xml:space="preserve">
+    <value>Desolation Point</value>
+  </data>
+  <data name="RuralRegion" xml:space="preserve">
+    <value>Pleasant Valley</value>
+  </data>
+  <data name="CrashMountainRegion" xml:space="preserve">
+    <value>Timberwolf Mountain</value>
+  </data>
+  <data name="MarshRegion" xml:space="preserve">
+    <value>Forlorn Muskeg</value>
+  </data>
+  <data name="RavineTransitionZone" xml:space="preserve">
+    <value>Ravine</value>
+  </data>
+  <data name="HighwayTransitionZone" xml:space="preserve">
+    <value>Old Island Connector</value>
+  </data>
 </root>
