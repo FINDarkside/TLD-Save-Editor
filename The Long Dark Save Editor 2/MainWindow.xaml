@@ -14,6 +14,13 @@
 		xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
 		xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="{x:Static p:Resources.Title}" Height="600" Width="900" 
+		TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
 		Loaded="Window_Loaded" Closing="Window_Closing">
 
     <Window.Resources>
@@ -65,8 +72,8 @@
                             <ColumnDefinition Width="10"/>
                             <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="1" Command="materialDesign:DialogHost.CloseDialogCommand" Style="{StaticResource MaterialDesignFlatButton}" Content="{x:Static p:Resources.Cancel}" />
-                        <Button Grid.Column="3" Command="{Binding DownloadCommand}" Style="{StaticResource MaterialDesignFlatButton}" Content="{x:Static p:Resources.Download}"/>
+                        <Button Grid.Column="1" Command="materialDesign:DialogHost.CloseDialogCommand" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Content="{x:Static p:Resources.Cancel}" />
+						<Button Grid.Column="3" Command="{Binding DownloadCommand}" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Content="{x:Static p:Resources.Download}"/>
                     </Grid>
                 </Grid>
 
@@ -82,10 +89,10 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
-                <StackPanel Orientation="Horizontal" Height="40" Grid.Column="0" Background="White">
+                <StackPanel Orientation="Horizontal" Height="40" Grid.Column="0">
                     <ComboBox Margin="10 0 0 0" Name="ccSaves" ItemsSource="{Binding Saves}" DisplayMemberPath="Description" SelectedValuePath="Value" Width="160" SelectedIndex="0" SelectionChanged="CurrentSaveSelectionChanged"/>
-                    <Button Margin="10 0 0 0" Click="MenuItem_Click" Style="{StaticResource MaterialDesignFlatButton}" Content="{x:Static p:Resources.Save}"/>
-                    <Button Margin="10 0 0 0" Click="RefreshClicked" Style="{StaticResource MaterialDesignFlatButton}" Content="{x:Static p:Resources.Refresh}"/>
+					<Button Margin="10 0 0 0" Click="MenuItem_Click" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Content="{x:Static p:Resources.Save}" Height="40"/>
+					<Button Margin="10 0 0 0" Click="RefreshClicked" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Content="{x:Static p:Resources.Refresh}" Height="40"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="0 0 20 0">
                     <Label VerticalAlignment="Center" Content="{x:Static p:Resources.TestBranch}"/>
@@ -93,8 +100,8 @@
                 </StackPanel>
             </Grid>
             <Rectangle DockPanel.Dock="Top" Fill="#A6B8C3" Height="1" ></Rectangle>
-            <dragablz:TabablzControl Name="tabPanel" FixedHeaderCount="6" DockPanel.Dock="Bottom" BorderBrush="Transparent">
-                <TabItem Header="{x:Static p:Resources.Profile}" >
+            <dragablz:TabablzControl Name="tabPanel" FixedHeaderCount="6" DockPanel.Dock="Bottom">
+				<TabItem Header="{x:Static p:Resources.Profile}" >
 					<StackPanel>
 						<Rectangle Fill="#A6B8C3" Height="1" />
 						<tabs:ProfileTab />

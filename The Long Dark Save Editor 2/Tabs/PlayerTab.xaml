@@ -55,7 +55,7 @@
 		<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
 			<Label Width="130" Content="{x:Static p:Resources.Health}"/>
 			<Slider Name="healthSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
-					Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Condition.m_CurrentHPProxy}" Margin="5 5" Foreground="#c52b1c">
+					Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Condition.m_CurrentHPProxy}" Margin="5 5">
 			</Slider>
 			<Label Content="{Binding ElementName=healthSlider, Path=Value, Converter={StaticResource PercentageConverter}, 
 				   ConverterParameter={StaticResource double100}}">
@@ -72,7 +72,7 @@
 		<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
 			<Label Width="130" Content="{x:Static p:Resources.Thirst}"/>
 			<Slider Name="thirstSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
-										Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Thirst.m_CurrentThirstProxy}" Margin="5 5" Foreground="#c52b1c">
+										Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Thirst.m_CurrentThirstProxy}" Margin="5 5">
 			</Slider>
 			<Label Content="{Binding ElementName=thirstSlider, Path=Value, Converter={StaticResource PercentageConverter}, 
 				   ConverterParameter={StaticResource double100}}">
@@ -81,7 +81,7 @@
 		<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
 			<Label Width="130" Content="{x:Static p:Resources.Fatigue}"/>
 			<Slider Name="fatigueSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
-					Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Fatigue.m_CurrentFatigueProxy}" Margin="5 5" Foreground="#c52b1c">
+					Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Fatigue.m_CurrentFatigueProxy}" Margin="5 5">
 			</Slider>
 			<Label Content="{Binding ElementName=fatigueSlider, Path=Value, Converter={StaticResource PercentageConverter}, 
 				   ConverterParameter={StaticResource double100}}">
@@ -90,7 +90,7 @@
 		<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
 			<Label Width="130" Content="{x:Static p:Resources.Freezing}"/>
 			<Slider Name="freezingSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
-					Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Freezing.m_CurrentFreezingProxy}" Margin="5 5" Foreground="#c52b1c">
+					Maximum="100" Width="200" Value="{Binding CurrentSave.Global.Freezing.m_CurrentFreezingProxy}" Margin="5 5">
 			</Slider>
 			<Label Content="{Binding ElementName=freezingSlider, Path=Value, Converter={StaticResource PercentageConverter}, 
 				   ConverterParameter={StaticResource double100}}">

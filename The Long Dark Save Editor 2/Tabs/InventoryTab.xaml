@@ -36,14 +36,14 @@
 		<DataTemplate DataType="{x:Type gameData:InventoryItem}">
 			<StackPanel>
 				<StackPanel Orientation="Horizontal">
-					<Button Style="{StaticResource MaterialDesignFlatButton}" Width="100" Click="DeleteItemClicked" HorizontalAlignment="Left" Content="{x:Static p:Resources.Remove}"></Button>
+					<Button Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Width="100" Click="DeleteItemClicked" HorizontalAlignment="Left" Content="{x:Static p:Resources.Remove}"></Button>
 				</StackPanel>
 				<Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
 				<StackPanel Margin="10 10 0 0">
 					<StackPanel Orientation="Horizontal">
 						<Label Width="130" Content="{x:Static p:Resources.Condition}" />
 						<Slider Name="healthSlider" TickFrequency="0.01" Orientation="Horizontal" Minimum="0" IsSnapToTickEnabled="True" 
-							Maximum="1" Width="200" Value="{Binding NormalizedCondition}" Margin="5 5" Foreground="#c52b1c">
+							Maximum="1" Width="200" Value="{Binding NormalizedCondition}" Margin="5 5">
 						</Slider>
 						<Label Content="{Binding ElementName=healthSlider, Path=Value, Converter = {StaticResource DoubleToPercentageConverter}}"></Label>
 					</StackPanel>
@@ -85,7 +85,7 @@
 						<StackPanel Orientation="Horizontal">
 							<Label Width="130" Content="{x:Static p:Resources.Progress}" />
 							<Slider Name="progressSlider" TickFrequency="0.01" Orientation="Horizontal" Minimum="0" IsSnapToTickEnabled="True" 
-							Maximum="1" Width="200" Value="{Binding InProgressItem.m_PercentComplete}" Margin="5 5" Foreground="#c52b1c">
+							Maximum="1" Width="200" Value="{Binding InProgressItem.m_PercentComplete}" Margin="5 5">
 							</Slider>
 							<Label Content="{Binding ElementName=progressSlider, Path=Value, Converter = {StaticResource DoubleToPercentageConverter}}"></Label>
 						</StackPanel>
@@ -96,7 +96,7 @@
 							<TextBox Width="200" Text="{Binding EvolveItem.m_TimeSpentEvolvingGameHours}"></TextBox>
 						</StackPanel>
 					</StackPanel>
-					<Button Margin="0 10 0 0" Style="{StaticResource MaterialDesignFlatButton}" Click="PrintJsonClicked" Visibility="{Binding ElementName=TheWindow, Path=IsDebug, Converter={StaticResource BoolToVisibilityConverter}}">Print JSON</Button>
+					<Button Margin="0 10 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="PrintJsonClicked" Visibility="{Binding ElementName=TheWindow, Path=IsDebug, Converter={StaticResource BoolToVisibilityConverter}}">Print JSON</Button>
 				</StackPanel>
 			</StackPanel>
 		</DataTemplate>
@@ -108,14 +108,14 @@
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 		<StackPanel Grid.Row="0">
-			<StackPanel Orientation="Horizontal" Margin="5 5">
+			<StackPanel Orientation="Horizontal" Margin="5 0">
 				<ComboBox Name="cbItemCategory" ItemsSource="{Binding Source={helpers:EnumerationExtension {x:Type gameData:ItemCategory}}}" 
 										DisplayMemberPath="Description" SelectedValuePath="Value" Width="120" SelectedIndex="0"/>
 				<ComboBox Name="cbItem" ItemsSource="{Binding ElementName=cbItemCategory, Path=SelectedValue, Converter={StaticResource CategoryToItemsConverter}}" 
-									  Margin="10 0 5 0" DisplayMemberPath="Description" SelectedValuePath="Value" Width="160" SelectionChanged="cbItem_SelectionChanged" SelectedIndex="0"></ComboBox>
-				<Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButton}" Click="AddItemClicked" Content="{x:Static p:Resources.AddItem}" />
-				<Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButton}" Click="RepairAllClicked" Content="{x:Static p:Resources.RepairAll}" />
-				<Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButton}" Click="RemoveAllClicked" Content="{x:Static p:Resources.RemoveAll}" />
+									  Margin="10 0 5 0" DisplayMemberPath="Description" SelectedValuePath="Value" Width="160" SelectionChanged="cbItem_SelectionChanged" SelectedIndex="0" />
+					<Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="AddItemClicked" Content="{x:Static p:Resources.AddItem}" />
+				<Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="RepairAllClicked" Content="{x:Static p:Resources.RepairAll}" />
+				<Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="RemoveAllClicked" Content="{x:Static p:Resources.RemoveAll}" />
 			</StackPanel>
 			<Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
 		</StackPanel>
