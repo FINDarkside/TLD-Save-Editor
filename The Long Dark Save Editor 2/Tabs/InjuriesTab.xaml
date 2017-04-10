@@ -29,13 +29,13 @@
 						<Border BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}">
 							<Grid>
 								<Grid.ColumnDefinitions>
-									<ColumnDefinition Width="*" />
+									<ColumnDefinition Width="*" MinWidth="150" />
 									<ColumnDefinition Width="90" />
 								</Grid.ColumnDefinitions>
 								<StackPanel Grid.Column="0">
 									<Label FontSize="15" FontWeight="Normal" VerticalAlignment="Center" Content="{Binding AfflictionType, Converter={StaticResource EnumDescriptionConverter}}"></Label>
 								</StackPanel>
-								<Button Grid.Column="1" Style="{StaticResource MaterialDesignFlatButton}" Command="{Binding RemoveCommand}" Content="{x:Static p:Resources.ActionCure}"></Button>
+								<Button Grid.Column="1" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Command="{Binding RemoveCommand}" Content="{x:Static p:Resources.ActionCure}"></Button>
 							</Grid>
 						</Border>
 					</DataTemplate>
