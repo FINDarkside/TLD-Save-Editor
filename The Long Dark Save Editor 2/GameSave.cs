@@ -38,7 +38,7 @@ namespace The_Long_Dark_Save_Editor_2
             var pos = Global.PlayerManager.m_SaveGamePosition;
             if(OriginalRegion != Boot.m_SceneName || pos[0] != originalPosition[0] ||pos[1] != originalPosition[1] || pos[2] != originalPosition[2])
             {
-                pos[1] = 10000;
+                pos[1] = float.PositiveInfinity;
             }
 
 			var globalSerialized = Global.Serialize();
