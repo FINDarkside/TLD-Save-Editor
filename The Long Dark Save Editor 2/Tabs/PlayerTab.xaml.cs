@@ -20,7 +20,7 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
 					foreach (var item in cbCurrentRegion.Items)
 					{
 						var em = item as EnumerationMember;
-						if ((string)em.Value == MainWindow.Instance.CurrentSave.OriginalRegion)
+						if ((string)em.Value == MainWindow.Instance.CurrentSave?.OriginalRegion)
 						{
 							cbCurrentRegion.SelectedItem = item;
 							break;
@@ -29,9 +29,5 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
 				});
 		}
 
-		private void OpenMapWindow(object sender, System.Windows.RoutedEventArgs e)
-		{
-			new MapWindow(MainWindow.Instance.CurrentSave).Show();
-		}
 	}
 }

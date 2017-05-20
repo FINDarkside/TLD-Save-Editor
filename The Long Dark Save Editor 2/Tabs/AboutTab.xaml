@@ -8,9 +8,9 @@
              d:DesignHeight="300" d:DesignWidth="300">
 
 	<StackPanel Margin="0 20" >
-		<TextBlock HorizontalAlignment="Center">Developed by FINDarkside</TextBlock>
-		<TextBlock HorizontalAlignment="Center">Contact: findarkside@gmail.com</TextBlock>
-		<TextBlock HorizontalAlignment="Center" Margin="0 20 0 0">Russian translation by driver_13 and Boer17</TextBlock>
-		<TextBlock HorizontalAlignment="Center">Maps made by Whiteberry</TextBlock>
+		<Label HorizontalAlignment="Center">Developed by FINDarkside</Label>
+        <Label HorizontalAlignment="Center">Contact: findarkside@gmail.com</Label>
+        <Label HorizontalAlignment="Center" Margin="0 20 0 0">Russian translation by driver_13 and Boer17</Label>
+        <Label HorizontalAlignment="Center">Maps made by Whiteberry</Label>
 	</StackPanel>
 </UserControl>

@@ -100,7 +100,7 @@
                 </StackPanel>
             </Grid>
             <Rectangle DockPanel.Dock="Top" Fill="#A6B8C3" Height="1" ></Rectangle>
-            <dragablz:TabablzControl Name="tabPanel" FixedHeaderCount="6" DockPanel.Dock="Bottom">
+            <dragablz:TabablzControl Name="tabPanel"  DockPanel.Dock="Bottom" FixedHeaderCount="7">
 				<TabItem Header="{x:Static p:Resources.Profile}" >
 					<StackPanel>
 						<Rectangle Fill="#A6B8C3" Height="1" />
@@ -113,7 +113,13 @@
 						<tabs:PlayerTab />
                     </StackPanel>
                 </TabItem>
-                <TabItem Header="{x:Static p:Resources.Skills}">
+				<TabItem Header="{x:Static p:Resources.Map}">
+					<DockPanel>
+						<Rectangle Fill="#A6B8C3" Height="1" DockPanel.Dock="Top"></Rectangle>
+						<tabs:MapTab  DockPanel.Dock="Top"/>
+					</DockPanel>
+				</TabItem>
+				<TabItem Header="{x:Static p:Resources.Skills}">
                     <StackPanel>
                         <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
 						<tabs:SkillsTab />

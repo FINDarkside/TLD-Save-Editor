@@ -1191,4 +1191,7 @@
   <data name="HighwayTransitionZone" xml:space="preserve">
     <value>Old Island Connector</value>
   </data>
+  <data name="Map" xml:space="preserve">
+    <value>Map</value>
+  </data>
 </root>

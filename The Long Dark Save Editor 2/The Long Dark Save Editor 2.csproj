@@ -47,6 +47,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -123,9 +124,6 @@
     <Compile Include="Images\InjuriesBody.xaml.cs">
       <DependentUpon>InjuriesBody.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MapWindow.xaml.cs">
-      <DependentUpon>MapWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Profile.cs" />
     <Compile Include="Helpers\Util.cs" />
     <Compile Include="Properties\Resources.ru-RU.Designer.cs">
@@ -142,6 +140,9 @@
     </Compile>
     <Compile Include="Tabs\InventoryTab.xaml.cs">
       <DependentUpon>InventoryTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\MapTab.xaml.cs">
+      <DependentUpon>MapTab.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tabs\PlayerTab.xaml.cs">
       <DependentUpon>PlayerTab.xaml</DependentUpon>
@@ -183,10 +184,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MapWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Tabs\AboutTab.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -196,6 +193,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Tabs\InventoryTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tabs\MapTab.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -261,13 +262,15 @@
     <Resource Include="Images\CrumblingHighwaySF.png" />
     <Resource Include="Images\DesolationPointSF.png" />
     <Resource Include="Images\ForlomMuskeg.png" />
-    <Resource Include="Images\MysteryLakeSF.png" />
     <Resource Include="Images\PleasantValleySF.png" />
     <Resource Include="Images\RavineSF.png" />
     <Resource Include="Images\TimberwolfMountainSF.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\location-indicator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MysteryLakeSF.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
