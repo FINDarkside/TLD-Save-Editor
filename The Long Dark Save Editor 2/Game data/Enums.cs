@@ -3,360 +3,360 @@
 namespace The_Long_Dark_Save_Editor_2.Game_data
 {
 
-	// ----- My enums
+    // ----- My enums
 
-	public enum ItemCategory
-	{
-		[Description("First Aid")]
-		FirstAid,
-		Clothing,
-		Food,
-		Tools,
-		Materials,
-		Collectible,
-		Books,
-		Hidden,
-		Unknown
-	}
-
-
-	// -----
+    public enum ItemCategory
+    {
+        [Description("First Aid")]
+        FirstAid,
+        Clothing,
+        Food,
+        Tools,
+        Materials,
+        Collectible,
+        Books,
+        Hidden,
+        Unknown
+    }
 
 
-	public enum WindDirection
-	{
-		North,
-		South,
-		West,
-		East,
-		NorthWest,
-		NorthEast,
-		SouthWest,
-		SouthEast,
-	}
+    // -----
 
-	public enum WindStrength
-	{
-		Calm,
-		SlightlyWindy,
-		Windy,
-		VeryWindy,
-		Blizzard,
-	}
 
-	public enum WeatherStage
-	{
-		DenseFog = 0,
-		LightSnow = 1,
-		HeavySnow = 2,
-		PartlyCloudy = 3,
-		Clear = 4,
-		Cloudy = 5,
-		LightFog = 6,
-		Blizzard = 7,
-		Num = 8,
-		Undefined = 8,
-		ClearAurora = 8,
-	}
+    public enum WindDirection
+    {
+        North,
+        South,
+        West,
+        East,
+        NorthWest,
+        NorthEast,
+        SouthWest,
+        SouthEast,
+    }
 
-	public enum ConditionLevel
-	{
-		NoInjuries,
-		SlightlyInjured,
-		Injured,
-		VeryInjured,
-		NearDeath,
-	}
+    public enum WindStrength
+    {
+        Calm,
+        SlightlyWindy,
+        Windy,
+        VeryWindy,
+        Blizzard,
+    }
 
-	public enum EncumberLevel
-	{
-		None,
-		Low,
-		Medium,
-		High,
-	}
+    public enum WeatherStage
+    {
+        DenseFog = 0,
+        LightSnow = 1,
+        HeavySnow = 2,
+        PartlyCloudy = 3,
+        Clear = 4,
+        Cloudy = 5,
+        LightFog = 6,
+        Blizzard = 7,
+        ClearAurora = 8,
+        Num = 9,
+        Undefined = 9,
+    }
 
-	public enum HungerLevel
-	{
-		Full,
-		SlightlyHungry,
-		Hungry,
-		VeryHungry,
-		Starving,
-	}
+    public enum ConditionLevel
+    {
+        NoInjuries,
+        SlightlyInjured,
+        Injured,
+        VeryInjured,
+        NearDeath,
+    }
 
-	public enum ThirstLevel
-	{
-		Hydrated,
-		SlightlyThirsty,
-		Thirsty,
-		VeryThirsty,
-		Dehydrated,
-	}
+    public enum EncumberLevel
+    {
+        None,
+        Low,
+        Medium,
+        High,
+    }
 
-	public enum FatigueLevel
-	{
-		Rested,
-		SlightlyTired,
-		Tired,
-		VeryTired,
-		Exhausted,
-	}
+    public enum HungerLevel
+    {
+        Full,
+        SlightlyHungry,
+        Hungry,
+        VeryHungry,
+        Starving,
+    }
 
-	public enum FreezingLevel
-	{
-		Warm,
-		SlightlyCold,
-		Cold,
-		VeryCold,
-		Freezing,
-	}
+    public enum ThirstLevel
+    {
+        Hydrated,
+        SlightlyThirsty,
+        Thirsty,
+        VeryThirsty,
+        Dehydrated,
+    }
 
-	public enum LiquidQuality
-	{
-		Potable,
-		NonPotable,
-	}
+    public enum FatigueLevel
+    {
+        Rested,
+        SlightlyTired,
+        Tired,
+        VeryTired,
+        Exhausted,
+    }
 
-	public enum FlareState
-	{
-		Fresh,
-		Burning,
-		BurnedOut,
-		Wet
-	}
+    public enum FreezingLevel
+    {
+        Warm,
+        SlightlyCold,
+        Cold,
+        VeryCold,
+        Freezing,
+    }
 
-	public enum BedRollState
-	{
-		Rolled,
-		Placed,
-	}
+    public enum LiquidQuality
+    {
+        Potable,
+        NonPotable,
+    }
 
-	public enum SnareState
-	{
-		Default,
-		Set,
-		Broken,
-		WithRabbit,
-	}
+    public enum FlareState
+    {
+        Fresh,
+        Burning,
+        BurnedOut,
+        Wet
+    }
 
-	public enum TorchState
-	{
-		Fresh,
-		Burning,
-		BlownOut,
-		BurnedOut,
-		Extinguished,
-		Wet
-	}
+    public enum BedRollState
+    {
+        Rolled,
+        Placed,
+    }
 
-	public enum MissionObjectClass
-	{
-		General,
-		Trigger,
-		Player,
-		InteractiveNPC,
-		InteractiveObject,
-		Invalid,
-	}
+    public enum SnareState
+    {
+        Default,
+        Set,
+        Broken,
+        WithRabbit,
+    }
 
-	public enum VoicePersona
-	{
-		Male,
-		Female,
-	}
+    public enum TorchState
+    {
+        Fresh,
+        Burning,
+        BlownOut,
+        BurnedOut,
+        Extinguished,
+        Wet
+    }
 
-	public enum AfflictionType
-	{
-		[Description("Blood loss")]
-		BloodLoss,
-		Burns,
-		Dysentery,
-		Infection,
-		[Description("Food poisoning")]
-		FoodPoisioning,
-		[Description("Sprained ankle")]
-		SprainedAnkle,
-		[Description("Infection risk")]
-		InfectionRisk,
-		[Description("Sprained wrist")]
-		SprainedWrist,
-		[Description("Frostbite")]
-		Frostbite,
-		Hypothermia,
-		[Description("Reduced fatigue")]
-		ReducedFatigue,
-		[Description("Improved rest")]
-		ImprovedRest,
-		[Description("Warming up")]
-		WarmingUp,
-		[Description("Hypothermia risk")]
-		HypothermiaRisk,
-		[Description("Cabin fever")]
-		CabinFever,
-		[Description("Intestinal parasites risk")]
-		IntestinalParasitesRisk,
-		[Description("Intestinal parasites")]
-		IntestinalParasites,
-		[Description("Sprained wrist major")]
-		SprainedWristMajor,
-		[Description("Cabin fever risk")]
-		CabinFeverRisk,
-		[Description("Frostbite risk")]
-		FrostbiteRisk,
-	}
+    public enum MissionObjectClass
+    {
+        General,
+        Trigger,
+        Player,
+        InteractiveNPC,
+        InteractiveObject,
+        Invalid,
+    }
 
-	public enum ExperienceModeType
-	{
-		Pilgrim,
-		Voyageur,
-		Stalker,
-		Story,
-		ChallengeRescue,
-		ChallengeHunted,
-		ChallengeWhiteout,
-		ChallengeNomad,
-		ChallengeHuntedPart2,
-		Interloper,
-		//NUM_MODES,
-	}
+    public enum VoicePersona
+    {
+        Male,
+        Female,
+    }
 
-	public enum StatID
-	{
-		HoursSurvived,
-		LocationsExplored,
-		WorldExploredPercentage,
-		TotalCaloriesExpended,
-		AverageCaloriesPerDay,
-		DistanceTravelled,
-		HoursAwake,
-		HoursAsleep,
-		HoursIndoors,
-		HoursOutdoors,
-		TimeRestedOutdoors,
-		HoursInMysteryLake,
-		HoursInPleasantValley,
-		HoursInCoastalHighway,
-		HoursInDesolationPoint,
-		HoursInCrashMountainRegion,
-		HoursInMarshRegion,
-		SuccessfulRepairs,
-		BowShot,
-		SuccessfulHits_Bow,
-		RifleShot,
-		SuccessfulHits_Rifle,
-		DistressPistolShot,
-		SuccessfulHits_DistressPistol,
-		WolfCloseEncounters,
-		WolfStruggles,
-		WolfStrugglesWon,
-		WolvesKilled,
-		WolvesDistactedByDecoys,
-		BearEncountersSurvived,
-		BearsKilled,
-		StagsKilled,
-		RabbitsKilled,
-		RabbitsSnared,
-		MeatConsumed,
-		FishConsumed,
-		FishCaught,
-		MeatHarvested,
-		GutsHarvested,
-		HidesHarvested,
-		ItemsLooted,
-		ItemsCrafted,
-		ItemsBrokenDown,
-		PlantsHarvested,
-		CansOpened,
-		CanOpenersFound,
-		FiresStarted,
-		LongestBurningFire,
-		Sprains_Wrist,
-		Sprains_Ankle,
-		FoodPoisoning,
-		Dysentry,
-		Infection,
-		Hypothermia,
-		BloodLoss,
-		FallCount,
-		Blizzards,
-		NumRopeSlips,
-		NumRopeFalls,
-		DistanceTravelledOnRope,
-		CabinFever,
-		IntestinalParasites,
-		Frostbite,
-		NumStats,
-	}
+    public enum AfflictionType
+    {
+        [Description("Blood loss")]
+        BloodLoss,
+        Burns,
+        Dysentery,
+        Infection,
+        [Description("Food poisoning")]
+        FoodPoisioning,
+        [Description("Sprained ankle")]
+        SprainedAnkle,
+        [Description("Infection risk")]
+        InfectionRisk,
+        [Description("Sprained wrist")]
+        SprainedWrist,
+        [Description("Frostbite")]
+        Frostbite,
+        Hypothermia,
+        [Description("Reduced fatigue")]
+        ReducedFatigue,
+        [Description("Improved rest")]
+        ImprovedRest,
+        [Description("Warming up")]
+        WarmingUp,
+        [Description("Hypothermia risk")]
+        HypothermiaRisk,
+        [Description("Cabin fever")]
+        CabinFever,
+        [Description("Intestinal parasites risk")]
+        IntestinalParasitesRisk,
+        [Description("Intestinal parasites")]
+        IntestinalParasites,
+        [Description("Sprained wrist major")]
+        SprainedWristMajor,
+        [Description("Cabin fever risk")]
+        CabinFeverRisk,
+        [Description("Frostbite risk")]
+        FrostbiteRisk,
+    }
 
-	public enum CustomManagedObjectState
-	{
-		InitialActive = 1,
-		ManagedActive = 2,
-		InitialUnknown = 4,
-	}
+    public enum ExperienceModeType
+    {
+        Pilgrim,
+        Voyageur,
+        Stalker,
+        Story,
+        ChallengeRescue,
+        ChallengeHunted,
+        ChallengeWhiteout,
+        ChallengeNomad,
+        ChallengeHuntedPart2,
+        Interloper,
+        //NUM_MODES,
+    }
 
-	public enum GameRegion
-	{
-		LakeRegion,
-		CoastalRegion,
-		RuralRegion,
-		WhalingStationRegion,
-		CrashMountainRegion,
-		MarshRegion,
-		RandomRegion,
-		FutureRegion,
-	}
+    public enum StatID
+    {
+        HoursSurvived,
+        LocationsExplored,
+        WorldExploredPercentage,
+        TotalCaloriesExpended,
+        AverageCaloriesPerDay,
+        DistanceTravelled,
+        HoursAwake,
+        HoursAsleep,
+        HoursIndoors,
+        HoursOutdoors,
+        TimeRestedOutdoors,
+        HoursInMysteryLake,
+        HoursInPleasantValley,
+        HoursInCoastalHighway,
+        HoursInDesolationPoint,
+        HoursInCrashMountainRegion,
+        SuccessfulRepairs,
+        BowShot,
+        SuccessfulHits_Bow,
+        RifleShot,
+        SuccessfulHits_Rifle,
+        DistressPistolShot,
+        SuccessfulHits_DistressPistol,
+        WolfCloseEncounters,
+        WolfStruggles,
+        WolfStrugglesWon,
+        WolvesKilled,
+        WolvesDistactedByDecoys,
+        BearEncountersSurvived,
+        BearsKilled,
+        StagsKilled,
+        RabbitsKilled,
+        RabbitsSnared,
+        MeatConsumed,
+        FishConsumed,
+        FishCaught,
+        MeatHarvested,
+        GutsHarvested,
+        HidesHarvested,
+        ItemsLooted,
+        ItemsCrafted,
+        ItemsBrokenDown,
+        PlantsHarvested,
+        CansOpened,
+        CanOpenersFound,
+        FiresStarted,
+        LongestBurningFire,
+        Sprains_Wrist,
+        Sprains_Ankle,
+        FoodPoisoning,
+        Dysentry,
+        Infection,
+        Hypothermia,
+        BloodLoss,
+        FallCount,
+        Blizzards,
+        NumRopeSlips,
+        NumRopeFalls,
+        DistanceTravelledOnRope,
+        CabinFever,
+        IntestinalParasites,
+        Frostbite,
+        HoursInMarshRegion,
+        NumStats,
+    }
 
-	public enum UpSell
-	{
-		MainMenu_Challenges,
-		MainMenu_Logs,
-		MainMenu_Badges,
-	}
+    public enum CustomManagedObjectState
+    {
+        InitialActive = 1,
+        ManagedActive = 2,
+        InitialUnknown = 4,
+    }
 
-	public enum GraphicsMode
-	{
-		Fullscreen,
-		Window,
-	}
+    public enum GameRegion
+    {
+        LakeRegion,
+        CoastalRegion,
+        RuralRegion,
+        WhalingStationRegion,
+        CrashMountainRegion,
+        MarshRegion,
+        RandomRegion,
+        FutureRegion,
+    }
 
-	public enum MeasurementUnits
-	{
-		Metric,
-		Imperial,
-	}
+    public enum UpSell
+    {
+        MainMenu_Challenges,
+        MainMenu_Logs,
+        MainMenu_Badges,
+    }
 
-	public enum HudPref
-	{
-		DebugInfo,
-		Normal,
-		Disabled,
-	}
+    public enum GraphicsMode
+    {
+        Fullscreen,
+        Window,
+    }
 
-	public enum SubtitlesState
-	{
-		Off,
-		On,
-		ClosedCaptioning,
-	}
+    public enum MeasurementUnits
+    {
+        Metric,
+        Imperial,
+    }
 
-	public enum LanguageState
-	{
-		English,
-		German,
-		Russian,
-	}
+    public enum HudPref
+    {
+        DebugInfo,
+        Normal,
+        Disabled,
+    }
 
-	public enum FeatType
-	{
-		BookSmarts,
-		ColdFusion,
-		EfficientMachine,
-		FireMaster,
-		FreeRunner,
-		SnowWalker,
-	}
+    public enum SubtitlesState
+    {
+        Off,
+        On,
+        ClosedCaptioning,
+    }
+
+    public enum LanguageState
+    {
+        English,
+        German,
+        Russian,
+    }
+
+    public enum FeatType
+    {
+        BookSmarts,
+        ColdFusion,
+        EfficientMachine,
+        FireMaster,
+        FreeRunner,
+        SnowWalker,
+    }
 
     public enum ForcedMovement
     {
