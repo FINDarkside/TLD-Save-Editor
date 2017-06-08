@@ -1194,4 +1194,34 @@
   <data name="Map" xml:space="preserve">
     <value>Map</value>
   </data>
+  <data name="GEAR_WolfQuarter" xml:space="preserve">
+    <value>Wolf Quarter</value>
+  </data>
+  <data name="GEAR_WolfCarcass" xml:space="preserve">
+    <value>Wolf Carcass</value>
+  </data>
+  <data name="GEAR_BearQuarter" xml:space="preserve">
+    <value>Bear Quarter</value>
+  </data>
+  <data name="GEAR_StagQuarter" xml:space="preserve">
+    <value>Deer Quarter</value>
+  </data>
+  <data name="GEAR_RabbitCarcass" xml:space="preserve">
+    <value>Rabbit Carcass</value>
+  </data>
+  <data name="GEAR_Stone" xml:space="preserve">
+    <value>Stone</value>
+  </data>
+  <data name="GEAR_Charcoal" xml:space="preserve">
+    <value>Charcoal</value>
+  </data>
+  <data name="GEAR_BookFopen" xml:space="preserve">
+    <value>Book</value>
+  </data>
+  <data name="GEAR_LampFuelFull" xml:space="preserve">
+    <value>Lantern Fuel</value>
+  </data>
+  <data name="GEAR_Placeholder" xml:space="preserve">
+    <value>Rabbit Carcass</value>
+  </data>
 </root>

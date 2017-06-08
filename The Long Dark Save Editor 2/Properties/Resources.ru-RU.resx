@@ -1125,7 +1125,7 @@
   <data name="GEAR_Water1000ml" xml:space="preserve">
     <value>Бутылка воды</value>
   </data>
-    <data name="ExperienceMode" xml:space="preserve">
+  <data name="ExperienceMode" xml:space="preserve">
     <value>Experience mode</value>
   </data>
   <data name="ExperienceModeType_Pilgrim" xml:space="preserve">
@@ -1193,5 +1193,35 @@
   </data>
   <data name="Map" xml:space="preserve">
     <value>Map</value>
+  </data>
+  <data name="GEAR_WolfQuarter" xml:space="preserve">
+    <value>Четверть туши волка</value>
+  </data>
+  <data name="GEAR_WolfCarcass" xml:space="preserve">
+    <value>Остов волка</value>
+  </data>
+  <data name="GEAR_BearQuarter" xml:space="preserve">
+    <value>Четверть туши медведя</value>
+  </data>
+  <data name="GEAR_StagQuarter" xml:space="preserve">
+    <value>Четверть туши оленя</value>
+  </data>
+  <data name="GEAR_RabbitCarcass" xml:space="preserve">
+    <value>Туша кролика</value>
+  </data>
+  <data name="GEAR_Stone" xml:space="preserve">
+    <value>Камень</value>
+  </data>
+  <data name="GEAR_Charcoal" xml:space="preserve">
+    <value>Древесный уголь</value>
+  </data>
+  <data name="GEAR_BookFopen" xml:space="preserve">
+    <value>Книга</value>
+  </data>
+  <data name="GEAR_LampFuelFull" xml:space="preserve">
+    <value>Топливо для фонаря</value>
+  </data>
+  <data name="GEAR_Placeholder" xml:space="preserve">
+    <value>Туша кролика</value>
   </data>
 </root>

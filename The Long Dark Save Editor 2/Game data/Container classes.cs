@@ -249,7 +249,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 						AfflictionType = AfflictionType.InfectionRisk,
 						Location = infectionRisk.m_Locations[i],
 						AntisepticTaken = infectionRisk.m_AntisepticTakenList[i],
-						Bandaged = infectionRisk.m_BandagedList[i],
 						CauseLocID = infectionRisk.m_CausesLocIDs[i],
 						CurrentInfectionChance = infectionRisk.m_CurrentInfectionChanceList[i],
 						DurationHours = infectionRisk.m_DurationHoursList[i],
@@ -446,7 +445,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 				infectionRisk.m_DurationHoursList = new float[infectionRisks.Count];
 				infectionRisk.m_ElapsedHoursList = new float[infectionRisks.Count];
 				infectionRisk.m_Locations = new int[infectionRisks.Count];
-				infectionRisk.m_BandagedList = new bool[infectionRisks.Count];
 				infectionRisk.m_AntisepticTakenList = new bool[infectionRisks.Count];
 				infectionRisk.m_CurrentInfectionChanceList = new float[infectionRisks.Count];
 
@@ -457,7 +455,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 					infectionRisk.m_DurationHoursList[i] = infection.DurationHours;
 					infectionRisk.m_ElapsedHoursList[i] = infection.ElapsedHours;
 					infectionRisk.m_Locations[i] = infection.Location;
-					infectionRisk.m_BandagedList[i] = infection.Bandaged;
 					infectionRisk.m_AntisepticTakenList[i] = infection.AntisepticTaken;
 					infectionRisk.m_CurrentInfectionChanceList[i] = infection.CurrentInfectionChance;
 				}
@@ -584,7 +581,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public string CauseLocID { get; set; }
 		public float ElapsedHours { get; set; }
 		public float DurationHours { get; set; }
-		public bool Bandaged { get; set; }
 		public bool AntisepticTaken { get; set; }
 		public float CurrentInfectionChance { get; set; }
 	}

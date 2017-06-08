@@ -41,35 +41,35 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 		public static ObservableCollection<EnumerationMember> GetSaveFiles(string folder)
 		{
 
-			Regex reg = new Regex(".*save[0-9]+");
-			Regex reg2 = new Regex(".*chall[0-9]+");
+			Regex reg = new Regex("ep[0-9]+sandbox[0-9]+");
+			Regex reg2 = new Regex("ep[0-9]+challenge[0-9]+");
 			var saves = new List<string>();
 			if (Directory.Exists(folder))
-				saves.AddRange((from f in Directory.GetDirectories(folder) where reg.IsMatch(f) || reg2.IsMatch(f) select f).ToList<string>());
+				saves.AddRange((from f in Directory.GetFiles(folder) where reg.IsMatch(Path.GetFileName(f)) || reg2.IsMatch(Path.GetFileName(f)) select f).ToList<string>());
 
 			var result = new ObservableCollection<EnumerationMember>();
-			foreach (string saveFolder in saves)
+			foreach (string saveFile in saves)
 			{
-				if (Directory.GetFiles(saveFolder).Length == 0)
-					continue;
 				var member = new EnumerationMember();
 
 				try
 				{
-					var globalFile = Path.Combine(saveFolder, "global");
-					if (!File.Exists(globalFile))
-						continue;
-					var bytes = File.ReadAllBytes(globalFile);
+                    var data = EncryptString.DecompressBytesToString(File.ReadAllBytes(saveFile));
+                    var slotData = Util.DeserializeObject<SlotData>(data);
+                    if (!slotData.m_Dict.ContainsKey("global"))
+                        continue;
+
+                    var bytes = slotData.m_Dict["global"];
 					var json = EncryptString.DecompressBytesToString(bytes);
 					var globalData = JsonConvert.DeserializeObject<GlobalSaveGameFormat>(json);
-					member.Description = globalData.m_UserDefinedSaveSlotName + " (" + Path.GetFileName(saveFolder) + ")";
+					member.Description = slotData.m_DisplayName + " (" + Path.GetFileName(saveFile) + ")";
 				}
 				catch (Exception ex)
 				{
 					Debug.WriteLine(ex.ToString());
 					continue;
 				}
-				member.Value = saveFolder;
+				member.Value = saveFile;
 				result.Add(member);
 			}
 

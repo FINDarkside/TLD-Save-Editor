@@ -45,10 +45,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public string m_AchievementManagerSerialized { get; set; }
 		public string m_ExperienceModeManagerSerialized { get; set; }
 		public string m_AuroraManagerSerialized { get; set; }
-		public string m_CacheManagerSerialized { get; set; }
 		public string m_PlayerMovementSerialized { get; set; }
 		public string m_PlayerStruggleSerialized { get; set; }
-		public string m_UserDefinedSaveSlotName { get; set; }
 		public string m_PanelStatsSerialized { get; set; }
 		public string m_EmergencyStimSerialized { get; set; }
 		public string m_MusicEventManagerSerialized { get; set; }
@@ -60,7 +58,11 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public string m_SkillsManagerSerialized { get; set; }
 		public string m_LockCompanionsSerialized { get; set; }
 		public string m_FeatsEnabledSerialized { get; set; }
-	}
+        public string m_TrustManagerSerialized { get; set; }
+        public string m_MapDetailManagerSerialized { get; set; }
+        public string m_WorldMapDataSerialized { get; set; }
+        public string m_MapDataSerialized { get; set; }
+    }
 
 	public class GlobalSaveGameData
 	{
@@ -94,18 +96,20 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		public string AuroraManager { get; set; }
 		public PlayerMovementSaveDataProxy PlayerMovement { get; set; }
 		public string PlayerStruggle { get; set; }
-		public string UserDefinedSaveSlotName { get; set; }
 		public string PanelStats { get; set; } // StatContainer
 		public EmergencyStimParams EmergencyStim { get; set; }
 		public MusicEventSaveData MusicEventManager { get; set; }
-		public ChimneySaveList ChimneyData { get; set; }
 		public SnowfallManagerSaveDataProxy SnowPatchManager { get; set; }
 		public PlayerAnimationSaveData PlayerAnimation { get; set; }
 		public SkillsManager SkillsManager { get; set; }
 		public ObservableCollection<string> UnlockedCompanions { get; set; }
 		public FeatEnabledTrackerSaveData EnabledFeats { get; set; }
+        public TrustManagerSaveData TrustManager { get; set; }
+        public MapDetailSaveData MapDetailManager { get; set; }
+        public WorldMapSaveData WorldMapData { get; set; }
+        public MapSaveData MapData { get; set; }
 
-		public GlobalSaveGameData(string data)
+        public GlobalSaveGameData(string data)
 		{
 			System.Diagnostics.Debug.WriteLine(data);
 			var proxy = JsonConvert.DeserializeObject<GlobalSaveGameFormat>(data);
@@ -140,20 +144,21 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			AuroraManager = proxy.m_AuroraManagerSerialized;
 			PlayerMovement = Util.DeserializeObject<PlayerMovementSaveDataProxy>(proxy.m_PlayerMovementSerialized);
 			PlayerStruggle = proxy.m_PlayerStruggleSerialized;
-			UserDefinedSaveSlotName = proxy.m_UserDefinedSaveSlotName;
 
 			// Do not deserialize, invalid JSON (integers as keys)
 			PanelStats = proxy.m_PanelStatsSerialized;
 
 			EmergencyStim = Util.DeserializeObject<EmergencyStimParams>(proxy.m_EmergencyStimSerialized);
 			MusicEventManager = Util.DeserializeObject<MusicEventSaveData>(proxy.m_MusicEventManagerSerialized);
-			ChimneyData = Util.DeserializeObject<ChimneySaveList>(proxy.m_ChimneyDataSerialized);
 			SnowPatchManager = Util.DeserializeObject<SnowfallManagerSaveDataProxy>(proxy.m_SnowPatchManagerSerialized);
 			PlayerAnimation = Util.DeserializeObject<PlayerAnimationSaveData>(proxy.m_PlayerAnimationSerialized);
 			SkillsManager = new SkillsManager(proxy.m_SkillsManagerSerialized);
 			UnlockedCompanions = Util.DeserializeObject<ObservableCollection<string>>(proxy.m_LockCompanionsSerialized);
 			EnabledFeats = Util.DeserializeObject<FeatEnabledTrackerSaveData>(proxy.m_FeatsEnabledSerialized);
-
+            TrustManager = Util.DeserializeObject<TrustManagerSaveData>(proxy.m_TrustManagerSerialized);
+            MapDetailManager = Util.DeserializeObject<MapDetailSaveData>(proxy.m_MapDetailManagerSerialized);
+            WorldMapData = Util.DeserializeObject<WorldMapSaveData>(proxy.m_WorldMapDataSerialized);
+            MapData = Util.DeserializeObject<MapSaveData>(proxy.m_MapDataSerialized);
 		}
 
 		public string Serialize()
@@ -180,20 +185,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			proxy.m_PlayerClimbRopeSerialized = Util.SerializeObject(PlayerClimbRope);
 			proxy.m_PlayerSkillsSerialized = Util.SerializeObject(PlayerSkills);
 			proxy.m_PlayerGameStatsSerialized = Util.SerializeObject(PlayerGameStats);
-			/*proxy.m_HypothermiaSerialized = Util.SerializeObject(Hypothermia);
-			proxy.m_FrostbiteSerialized = Util.SerializeObject(Frostbite);
-			proxy.m_FoodPoisoningSerialized = Util.SerializeObject(FoodPoisoning);
-			proxy.m_DysenterySerialized = Util.SerializeObject(Dysentery);
-			proxy.m_SprainedAnkleSerialized = Util.SerializeObject(SprainedAnkle);
-			proxy.m_SprainedWristSerialized = Util.SerializeObject(SprainedWrist);
-			proxy.m_SprainedWristMajorSerialized = Util.SerializeObject(SprainedWristMajor);
-			proxy.m_BurnsSerialized = Util.SerializeObject(Burns);
-			proxy.m_BloodLossSerialized = Util.SerializeObject(BloodLoss);
-			proxy.m_InfectionSerialized = Util.SerializeObject(Infection);
-			proxy.m_InfectionRiskSerialized = Util.SerializeObject(InfectionRisk);
-			proxy.m_CabinFeverSerialized = Util.SerializeObject(CabinFever);
-			proxy.m_IntestinalParasitesSerialized = Util.SerializeObject(IntestinalParasites);*/
-			Afflictions.SerializeTo(proxy);
+            Afflictions.SerializeTo(proxy);
 			proxy.m_LogSerialized = Util.SerializeObject(Log);
 			proxy.m_RestSerialized = Util.SerializeObject(Rest);
 			proxy.m_FlyOverSerialized = Util.SerializeObject(FlyOver);
@@ -202,20 +194,22 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 			proxy.m_AuroraManagerSerialized = AuroraManager;
 			proxy.m_PlayerMovementSerialized = Util.SerializeObject(PlayerMovement);
 			proxy.m_PlayerStruggleSerialized = PlayerStruggle;
-			proxy.m_UserDefinedSaveSlotName = UserDefinedSaveSlotName;
 
 			proxy.m_PanelStatsSerialized = PanelStats;
 
 			proxy.m_EmergencyStimSerialized = Util.SerializeObject(EmergencyStim);
 			proxy.m_MusicEventManagerSerialized = Util.SerializeObject(MusicEventManager);
-			proxy.m_ChimneyDataSerialized = Util.SerializeObject(ChimneyData);
 			proxy.m_SnowPatchManagerSerialized = Util.SerializeObject(SnowPatchManager);
 			proxy.m_PlayerAnimationSerialized = Util.SerializeObject(PlayerAnimation);
 			proxy.m_SkillsManagerSerialized = SkillsManager.Serialize();
 			proxy.m_LockCompanionsSerialized = Util.SerializeObject(UnlockedCompanions);
 			proxy.m_FeatsEnabledSerialized = Util.SerializeObject(EnabledFeats);
+            proxy.m_TrustManagerSerialized = Util.SerializeObject(TrustManager);
+            proxy.m_MapDetailManagerSerialized = Util.SerializeObject(MapDetailManager);
+            proxy.m_WorldMapDataSerialized = Util.SerializeObject(WorldMapData);
+            proxy.m_MapDataSerialized = Util.SerializeObject(MapData);
 
-			return Util.SerializeObject(proxy);
+            return Util.SerializeObject(proxy);
 		}
 	}
 }

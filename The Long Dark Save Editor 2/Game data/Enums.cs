@@ -358,4 +358,13 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 		SnowWalker,
 	}
 
+    public enum ForcedMovement
+    {
+        None,
+        ForceCrouch,
+        ForceWalk,
+        ForceLimp,
+        ForceLimpSlow,
+    }
+
 }

@@ -23,7 +23,7 @@ namespace The_Long_Dark_Save_Editor_2
 	public partial class MainWindow : Window, INotifyPropertyChanged
 	{
 		public static MainWindow Instance { get; set; }
-		public static VersionData Version { get { return new VersionData() { version = "2.6" }; } }
+		public static VersionData Version { get { return new VersionData() { version = "2.7" }; } }
 
 		private GameSave currentSave;
 		public GameSave CurrentSave { get { return currentSave; } set { SetPropertyField(ref currentSave, value); } }
@@ -41,10 +41,10 @@ namespace The_Long_Dark_Save_Editor_2
 			get { return testBranch; }
 			set
 			{
-				testBranch = value;
 				UpdateSaves();
 				Properties.Settings.Default.TestBranch = value;
-			}
+                SetPropertyField(ref testBranch, value);
+            }
 		}
 
 		public bool IsDebug { get; set; }
@@ -61,21 +61,14 @@ namespace The_Long_Dark_Save_Editor_2
 		{
 #if DEBUG
 			IsDebug = true;
-
-			foreach (var e in Enum.GetValues(typeof(ItemCategory)))
-			{
-				Debug.WriteLine(e.ToString());
-
-			}
 			Debug.WriteLine(System.Threading.Thread.CurrentThread.CurrentUICulture);
 			//System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru-RU");
-
 #endif
 			this.DataContext = this;
 			Instance = this;
-			testBranch = Properties.Settings.Default.TestBranch;
-
 			InitializeComponent();
+
+			TestBranch = Properties.Settings.Default.TestBranch;
 			Title += " " + Version.ToString();
 
 			JsonConvert.DefaultSettings = () => new JsonSerializerSettings
@@ -83,12 +76,11 @@ namespace The_Long_Dark_Save_Editor_2
 				//MissingMemberHandling = MissingMemberHandling.Error,
 				FloatFormatHandling = FloatFormatHandling.Symbol,
 			};
-
-			UpdateSaves();
 		}
 
 		private void Window_Loaded(object sender, RoutedEventArgs e)
 		{
+			Debug.WriteLine("Window loaded");
 #if !DEBUG
 			if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
 			{
@@ -113,11 +105,12 @@ namespace The_Long_Dark_Save_Editor_2
 				Properties.Settings.Default.Save();
 			}
 #endif
+			UpdateSaves();
 		}
 
 		private void UpdateSaves()
 		{
-			var path = Path.Combine(Util.GetLocalPath(), testBranch ? "HinterlandTest1" : "Hinterland", "TheLongDark");
+			var path = Path.Combine(Util.GetLocalPath(), testBranch ? "HinterlandTest2" : "Hinterland", "TheLongDark");
 			Debug.WriteLine(path);
 
 			Saves = Util.GetSaveFiles(path);

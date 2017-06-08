@@ -148,10 +148,14 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			AddItemInfo("GEAR_TomatoSoupCan", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 300}, ""SmashableItem"": {}}");
 			AddItemInfo("GEAR_WaterSupplyNotPotable", ItemCategory.Food, @"{""WaterSupply"":{""m_VolumeProxy"": 1}}", true);
 			AddItemInfo("GEAR_WaterSupplyPotable", ItemCategory.Food, @"{""WaterSupply"":{""m_VolumeProxy"": 1}}", true);
-			//gear_bookmanual
+            AddItemInfo("GEAR_WolfQuarter", ItemCategory.Food, @"{m_WeightKG: 1, ""BodyHarvest"": {m_MeatAvailableKG: 1, m_Condition: 100}}");
+            AddItemInfo("GEAR_BearQuarter", ItemCategory.Food, @"{m_WeightKG: 1, ""BodyHarvest"": {m_MeatAvailableKG: 1, m_Condition: 100}}");
+            AddItemInfo("GEAR_StagQuarter", ItemCategory.Food, @"{m_WeightKG: 1, ""BodyHarvest"": {m_MeatAvailableKG: 1, m_Condition: 100}}");
+            AddItemInfo("GEAR_RabbitCarcass", ItemCategory.Food, @"{m_WeightKG: 1, ""BodyHarvest"": {m_MeatAvailableKG: 1, m_Condition: 100}}");
+            //gear_bookmanual
 
 
-			AddItemInfo("GEAR_Accelerant", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_Accelerant", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 			AddItemInfo("GEAR_Arrow", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 			AddItemInfo("GEAR_ArrowShaft", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 			AddItemInfo("GEAR_BrokenArrow", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
@@ -192,9 +196,10 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			AddItemInfo("GEAR_Snare", ItemCategory.Tools, @"{""SnareItem"": {}}");
 			AddItemInfo("GEAR_Torch", ItemCategory.Tools, @"{""TorchItem"": {}}");
 			AddItemInfo("GEAR_WoodMatches", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 10}, ""MatchesItem"": {}}");
+            AddItemInfo("GEAR_Charcoal", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_Stone", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 
-
-			AddItemInfo("GEAR_ArrowHead", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""InProgressItem"": {""m_PercentComplete"": 100}}");
+            AddItemInfo("GEAR_ArrowHead", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""InProgressItem"": {""m_PercentComplete"": 100}}");
 			AddItemInfo("GEAR_BearHide", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""EvolveItem"": {}}");
 			AddItemInfo("GEAR_BearHideDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 			AddItemInfo("GEAR_BirchSapling", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""EvolveItem"": {}}");
