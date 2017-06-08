@@ -772,6 +772,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bear Quarter.
+        /// </summary>
+        public static string GEAR_BearQuarter {
+            get {
+                return ResourceManager.GetString("GEAR_BearQuarter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bear Skin Bedroll.
         /// </summary>
         public static string GEAR_BearSkinBedRoll {
@@ -939,6 +948,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_BookFireStarting {
             get {
                 return ResourceManager.GetString("GEAR_BookFireStarting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book.
+        /// </summary>
+        public static string GEAR_BookFopen {
+            get {
+                return ResourceManager.GetString("GEAR_BookFopen", resourceCulture);
             }
         }
         
@@ -1164,6 +1182,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_CattailTinder {
             get {
                 return ResourceManager.GetString("GEAR_CattailTinder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Charcoal.
+        /// </summary>
+        public static string GEAR_Charcoal {
+            get {
+                return ResourceManager.GetString("GEAR_Charcoal", resourceCulture);
             }
         }
         
@@ -1942,6 +1969,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Lantern Fuel.
+        /// </summary>
+        public static string GEAR_LampFuelFull {
+            get {
+                return ResourceManager.GetString("GEAR_LampFuelFull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fresh Leather.
         /// </summary>
         public static string GEAR_Leather {
@@ -2266,6 +2302,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rabbit Carcass.
+        /// </summary>
+        public static string GEAR_Placeholder {
+            get {
+                return ResourceManager.GetString("GEAR_Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Plaid Shirt.
         /// </summary>
         public static string GEAR_PlaidShirt {
@@ -2307,6 +2352,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_QualityWinterCoat {
             get {
                 return ResourceManager.GetString("GEAR_QualityWinterCoat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rabbit Carcass.
+        /// </summary>
+        public static string GEAR_RabbitCarcass {
+            get {
+                return ResourceManager.GetString("GEAR_RabbitCarcass", resourceCulture);
             }
         }
         
@@ -2644,11 +2698,29 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Deer Quarter.
+        /// </summary>
+        public static string GEAR_StagQuarter {
+            get {
+                return ResourceManager.GetString("GEAR_StagQuarter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Stick.
         /// </summary>
         public static string GEAR_Stick {
             get {
                 return ResourceManager.GetString("GEAR_Stick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stone.
+        /// </summary>
+        public static string GEAR_Stone {
+            get {
+                return ResourceManager.GetString("GEAR_Stone", resourceCulture);
             }
         }
         
@@ -2761,6 +2833,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Wolf Carcass.
+        /// </summary>
+        public static string GEAR_WolfCarcass {
+            get {
+                return ResourceManager.GetString("GEAR_WolfCarcass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fresh Wolf Pelt.
         /// </summary>
         public static string GEAR_WolfPelt {
@@ -2775,6 +2856,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_WolfPeltDried {
             get {
                 return ResourceManager.GetString("GEAR_WolfPeltDried", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wolf Quarter.
+        /// </summary>
+        public static string GEAR_WolfQuarter {
+            get {
+                return ResourceManager.GetString("GEAR_WolfQuarter", resourceCulture);
             }
         }
         
@@ -2869,6 +2959,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Guts.
+        /// </summary>
+        public static string GutAmount {
+            get {
+                return ResourceManager.GetString("GutAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Health.
         /// </summary>
         public static string Health {
@@ -2883,6 +2982,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string Hidden {
             get {
                 return ResourceManager.GetString("Hidden", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hides.
+        /// </summary>
+        public static string HideAmount {
+            get {
+                return ResourceManager.GetString("HideAmount", resourceCulture);
             }
         }
         
@@ -3054,6 +3162,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string Materials {
             get {
                 return ResourceManager.GetString("Materials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Meat (kg).
+        /// </summary>
+        public static string MeatAmount {
+            get {
+                return ResourceManager.GetString("MeatAmount", resourceCulture);
             }
         }
         

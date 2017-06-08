@@ -1224,4 +1224,13 @@
   <data name="GEAR_Placeholder" xml:space="preserve">
     <value>Туша кролика</value>
   </data>
+  <data name="GutAmount" xml:space="preserve">
+    <value>Guts</value>
+  </data>
+  <data name="HideAmount" xml:space="preserve">
+    <value>Hides</value>
+  </data>
+  <data name="MeatAmount" xml:space="preserve">
+    <value>Meat (kg)</value>
+  </data>
 </root>

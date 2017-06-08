@@ -15,143 +15,157 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="500">
-	<UserControl.Resources>
-		<converters:PrefabNameConverter x:Key="PrefabNameConverter" />
-		<converters:DoubleToPercentageConverter x:Key="DoubleToPercentageConverter" />
-		<converters:ObjectToVisibilityConverter x:Key="ObjectToVisibilityConverter" />
-		<converters:CategoryToItemsConverter x:Key="CategoryToItemsConverter" />
-		<converters:EnumDescriptionConverter x:Key="EnumDescriptionConverter" />
-		<converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+    <UserControl.Resources>
+        <converters:PrefabNameConverter x:Key="PrefabNameConverter" />
+        <converters:DoubleToPercentageConverter x:Key="DoubleToPercentageConverter" />
+        <converters:ObjectToVisibilityConverter x:Key="ObjectToVisibilityConverter" />
+        <converters:CategoryToItemsConverter x:Key="CategoryToItemsConverter" />
+        <converters:EnumDescriptionConverter x:Key="EnumDescriptionConverter" />
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
 
-		<CollectionViewSource Source="{Binding CurrentSave.Global.Inventory.Items , UpdateSourceTrigger=PropertyChanged}" x:Key="InventoryItems">
-			<CollectionViewSource.SortDescriptions>
-				<scm:SortDescription PropertyName="Category" />
-				<scm:SortDescription PropertyName="InGameName"/>
-			</CollectionViewSource.SortDescriptions>
-			<CollectionViewSource.GroupDescriptions>
-				<PropertyGroupDescription PropertyName="Category" Converter="{StaticResource EnumDescriptionConverter}" />
-			</CollectionViewSource.GroupDescriptions>
-		</CollectionViewSource>
+        <CollectionViewSource Source="{Binding CurrentSave.Global.Inventory.Items , UpdateSourceTrigger=PropertyChanged}" x:Key="InventoryItems">
+            <CollectionViewSource.SortDescriptions>
+                <scm:SortDescription PropertyName="Category" />
+                <scm:SortDescription PropertyName="InGameName"/>
+            </CollectionViewSource.SortDescriptions>
+            <CollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription PropertyName="Category" Converter="{StaticResource EnumDescriptionConverter}" />
+            </CollectionViewSource.GroupDescriptions>
+        </CollectionViewSource>
 
-		<DataTemplate DataType="{x:Type gameData:InventoryItem}">
-			<StackPanel>
-				<StackPanel Orientation="Horizontal">
-					<Button Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Width="100" Click="DeleteItemClicked" HorizontalAlignment="Left" Content="{x:Static p:Resources.Remove}"></Button>
-				</StackPanel>
-				<Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
-				<StackPanel Margin="10 10 0 0">
-					<StackPanel Orientation="Horizontal">
-						<Label Width="130" Content="{x:Static p:Resources.Condition}" />
-						<Slider Name="healthSlider" TickFrequency="0.01" Orientation="Horizontal" Minimum="0" IsSnapToTickEnabled="True" 
+        <DataTemplate DataType="{x:Type gameData:InventoryItem}">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Width="100" Click="DeleteItemClicked" HorizontalAlignment="Left" Content="{x:Static p:Resources.Remove}"></Button>
+                </StackPanel>
+                <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
+                <StackPanel Margin="10 10 0 0">
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+                        <Label Width="130" Content="{x:Static p:Resources.Condition}" />
+                        <Slider Name="healthSlider" TickFrequency="0.01" Orientation="Horizontal" Minimum="0" IsSnapToTickEnabled="True" 
 							Maximum="1" Width="200" Value="{Binding NormalizedCondition}" Margin="5 5">
-						</Slider>
-						<Label Content="{Binding ElementName=healthSlider, Path=Value, Converter = {StaticResource DoubleToPercentageConverter}}"></Label>
-					</StackPanel>
-					<StackPanel Visibility="{Binding StackableItem, Converter={StaticResource ObjectToVisibilityConverter}}" Orientation="Horizontal">
-						<Label Width="130" Content="{x:Static p:Resources.Amount}" />
-						<TextBox Width="200" Text="{Binding StackableItem.m_UnitsProxy}"></TextBox>
-					</StackPanel>
-					<StackPanel Visibility="{Binding FoodItem, Converter={StaticResource ObjectToVisibilityConverter}}">
-						<StackPanel Orientation="Horizontal">
-							<Label Width="130" Content="{x:Static p:Resources.Calories}" />
-							<TextBox Width="200" Text="{Binding FoodItem.m_CaloriesRemainingProxy}"></TextBox>
-						</StackPanel>
-					</StackPanel>
-					<StackPanel Visibility="{Binding LiquidItem, Converter={StaticResource ObjectToVisibilityConverter}}">
-						<StackPanel Orientation="Horizontal">
-							<Label Width="130" Content="{x:Static p:Resources.AmountLiter}" />
-							<TextBox Width="200" Text="{Binding LiquidItem.m_LiquidLitersProxy}"></TextBox>
-						</StackPanel>
-					</StackPanel>
-					<StackPanel Visibility="{Binding KeroseneLampItem, Converter={StaticResource ObjectToVisibilityConverter}}">
-						<StackPanel Orientation="Horizontal">
-							<Label Width="130" Content="{x:Static p:Resources.AmountLiter}" />
-							<TextBox Width="200" Text="{Binding KeroseneLampItem.m_CurrentFuelLitersProxy}"></TextBox>
-						</StackPanel>
-					</StackPanel>
-					<StackPanel Visibility="{Binding WeaponItem, Converter={StaticResource ObjectToVisibilityConverter}}">
-						<StackPanel Orientation="Horizontal">
-							<Label Width="130" Content="{x:Static p:Resources.RoundsInClip}" />
-							<TextBox Width="200" Text="{Binding WeaponItem.m_RoundsInClipProxy}"></TextBox>
-						</StackPanel>
-					</StackPanel>
-					<StackPanel Visibility="{Binding WaterSupply, Converter={StaticResource ObjectToVisibilityConverter}}">
-						<StackPanel Orientation="Horizontal">
-							<Label Width="130" Content="{x:Static p:Resources.AmountLiter}" />
-							<TextBox Width="200" Text="{Binding WaterSupply.m_VolumeProxy}"></TextBox>
-						</StackPanel>
-					</StackPanel>
-					<StackPanel Visibility="{Binding InProgressItem, Converter={StaticResource ObjectToVisibilityConverter}}">
-						<StackPanel Orientation="Horizontal">
-							<Label Width="130" Content="{x:Static p:Resources.Progress}" />
-							<Slider Name="progressSlider" TickFrequency="0.01" Orientation="Horizontal" Minimum="0" IsSnapToTickEnabled="True" 
+                        </Slider>
+                        <Label Content="{Binding ElementName=healthSlider, Path=Value, Converter = {StaticResource DoubleToPercentageConverter}}"></Label>
+                    </StackPanel>
+                    <StackPanel Visibility="{Binding StackableItem, Converter={StaticResource ObjectToVisibilityConverter}}" Orientation="Horizontal" Margin="0 0 0 5">
+                        <Label Width="130" Content="{x:Static p:Resources.Amount}" />
+                        <TextBox Width="200" Text="{Binding StackableItem.m_UnitsProxy}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Visibility="{Binding FoodItem, Converter={StaticResource ObjectToVisibilityConverter}}">
+                        <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+                            <Label Width="130" Content="{x:Static p:Resources.Calories}" />
+                            <TextBox Width="200" Text="{Binding FoodItem.m_CaloriesRemainingProxy}"></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Visibility="{Binding LiquidItem, Converter={StaticResource ObjectToVisibilityConverter}}">
+                        <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+                            <Label Width="130" Content="{x:Static p:Resources.AmountLiter}" />
+                            <TextBox Width="200" Text="{Binding LiquidItem.m_LiquidLitersProxy}"></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Visibility="{Binding KeroseneLampItem, Converter={StaticResource ObjectToVisibilityConverter}}">
+                        <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+                            <Label Width="130" Content="{x:Static p:Resources.AmountLiter}" />
+                            <TextBox Width="200" Text="{Binding KeroseneLampItem.m_CurrentFuelLitersProxy}"></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Visibility="{Binding WeaponItem, Converter={StaticResource ObjectToVisibilityConverter}}">
+                        <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+                            <Label Width="130" Content="{x:Static p:Resources.RoundsInClip}" />
+                            <TextBox Width="200" Text="{Binding WeaponItem.m_RoundsInClipProxy}"></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Visibility="{Binding WaterSupply, Converter={StaticResource ObjectToVisibilityConverter}}">
+                        <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+                            <Label Width="130" Content="{x:Static p:Resources.AmountLiter}" />
+                            <TextBox Width="200" Text="{Binding WaterSupply.m_VolumeProxy}"></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Visibility="{Binding InProgressItem, Converter={StaticResource ObjectToVisibilityConverter}}">
+                        <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+                            <Label Width="130" Content="{x:Static p:Resources.Progress}" />
+                            <Slider Name="progressSlider" TickFrequency="0.01" Orientation="Horizontal" Minimum="0" IsSnapToTickEnabled="True" 
 							Maximum="1" Width="200" Value="{Binding InProgressItem.m_PercentComplete}" Margin="5 5">
-							</Slider>
-							<Label Content="{Binding ElementName=progressSlider, Path=Value, Converter = {StaticResource DoubleToPercentageConverter}}"></Label>
-						</StackPanel>
-					</StackPanel>
-					<StackPanel Visibility="{Binding EvolveItem, Converter={StaticResource ObjectToVisibilityConverter}}">
-						<StackPanel Orientation="Horizontal">
-							<Label Width="130" Content="{x:Static p:Resources.TimeEvolving}" />
-							<TextBox Width="200" Text="{Binding EvolveItem.m_TimeSpentEvolvingGameHours}"></TextBox>
-						</StackPanel>
-					</StackPanel>
-					<Button Margin="0 10 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="PrintJsonClicked" Visibility="{Binding ElementName=TheWindow, Path=IsDebug, Converter={StaticResource BoolToVisibilityConverter}}">Print JSON</Button>
-				</StackPanel>
-			</StackPanel>
-		</DataTemplate>
-	</UserControl.Resources>
+                            </Slider>
+                            <Label Content="{Binding ElementName=progressSlider, Path=Value, Converter = {StaticResource DoubleToPercentageConverter}}"></Label>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Visibility="{Binding EvolveItem, Converter={StaticResource ObjectToVisibilityConverter}}">
+                        <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+                            <Label Width="130" Content="{x:Static p:Resources.TimeEvolving}" />
+                            <TextBox Width="200" Text="{Binding EvolveItem.m_TimeSpentEvolvingGameHours}"></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Visibility="{Binding BodyHarvest, Converter={StaticResource ObjectToVisibilityConverter}}">
+                        <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+                            <Label Width="130" Content="{x:Static p:Resources.MeatAmount}" />
+                            <TextBox Width="200" Text="{Binding BodyHarvest.m_MeatAvailableKG}"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+                            <Label Width="130" Content="{x:Static p:Resources.HideAmount}" />
+                            <TextBox Width="200" Text="{Binding BodyHarvest.m_HideAvailableUnits}"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+                            <Label Width="130" Content="{x:Static p:Resources.GutAmount}" />
+                            <TextBox Width="200" Text="{Binding BodyHarvest.m_GutAvailableUnits}"></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <Button Margin="0 10 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="PrintJsonClicked" Visibility="{Binding ElementName=TheWindow, Path=IsDebug, Converter={StaticResource BoolToVisibilityConverter}}">Print JSON</Button>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
 
-	<Grid>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="*"/>
-		</Grid.RowDefinitions>
-		<StackPanel Grid.Row="0">
-			<StackPanel Orientation="Horizontal" Margin="5 0">
-				<ComboBox Name="cbItemCategory" ItemsSource="{Binding Source={helpers:EnumerationExtension {x:Type gameData:ItemCategory}}}" 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <StackPanel Orientation="Horizontal" Margin="5 0">
+                <ComboBox Name="cbItemCategory" ItemsSource="{Binding Source={helpers:EnumerationExtension {x:Type gameData:ItemCategory}}}" 
 										DisplayMemberPath="Description" SelectedValuePath="Value" Width="120" SelectedIndex="0"/>
-				<ComboBox Name="cbItem" ItemsSource="{Binding ElementName=cbItemCategory, Path=SelectedValue, Converter={StaticResource CategoryToItemsConverter}}" 
+                <ComboBox Name="cbItem" ItemsSource="{Binding ElementName=cbItemCategory, Path=SelectedValue, Converter={StaticResource CategoryToItemsConverter}}" 
 									  Margin="10 0 5 0" DisplayMemberPath="Description" SelectedValuePath="Value" Width="160" SelectionChanged="cbItem_SelectionChanged" SelectedIndex="0" />
-					<Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="AddItemClicked" Content="{x:Static p:Resources.AddItem}" />
-				<Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="RepairAllClicked" Content="{x:Static p:Resources.RepairAll}" />
-				<Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="RemoveAllClicked" Content="{x:Static p:Resources.RemoveAll}" />
-			</StackPanel>
-			<Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
-		</StackPanel>
-		<Grid Grid.Row="1">
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition MaxWidth="250"/>
-				<ColumnDefinition Width="1"/>
-				<ColumnDefinition Width="*"/>
-			</Grid.ColumnDefinitions>
+                <Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="AddItemClicked" Content="{x:Static p:Resources.AddItem}" />
+                <Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="RepairAllClicked" Content="{x:Static p:Resources.RepairAll}" />
+                <Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="RemoveAllClicked" Content="{x:Static p:Resources.RemoveAll}" />
+            </StackPanel>
+            <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MaxWidth="250"/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-			<ListBox Name="ItemList" Grid.Column="0" ItemsSource="{Binding Source={StaticResource InventoryItems}}">
-				<ListBox.GroupStyle>
-					<GroupStyle>
-						<GroupStyle.ContainerStyle>
-							<Style TargetType="{x:Type GroupItem}">
-								<Setter Property="Template">
-									<Setter.Value>
-										<ControlTemplate>
-											<Expander Header="{Binding Name}" IsExpanded="True" FontSize="16">
-												<ItemsPresenter />
-											</Expander>
-										</ControlTemplate>
-									</Setter.Value>
-								</Setter>
-							</Style>
-						</GroupStyle.ContainerStyle>
-					</GroupStyle>
-				</ListBox.GroupStyle>
-				<ListBox.ItemTemplate>
-					<DataTemplate>
-						<TextBlock FontSize="12" Text="{Binding InGameName}" />
-					</DataTemplate>
-				</ListBox.ItemTemplate>
-			</ListBox>
-			<Rectangle Fill="#A6B8C3" Grid.Column="1"></Rectangle>
-			<ContentControl Name="ccItem" Grid.Column="2" Content="{Binding ElementName=ItemList, Path=SelectedValue}" />
-		</Grid>
-	</Grid>
+            <ListBox Name="ItemList" Grid.Column="0" ItemsSource="{Binding Source={StaticResource InventoryItems}}">
+                <ListBox.GroupStyle>
+                    <GroupStyle>
+                        <GroupStyle.ContainerStyle>
+                            <Style TargetType="{x:Type GroupItem}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate>
+                                            <Expander Header="{Binding Name}" IsExpanded="True" FontSize="16">
+                                                <ItemsPresenter />
+                                            </Expander>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </GroupStyle.ContainerStyle>
+                    </GroupStyle>
+                </ListBox.GroupStyle>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock FontSize="12" Text="{Binding InGameName}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Rectangle Fill="#A6B8C3" Grid.Column="1"></Rectangle>
+            <ContentControl Name="ccItem" Grid.Column="2" Content="{Binding ElementName=ItemList, Path=SelectedValue}" />
+        </Grid>
+    </Grid>
 </UserControl>

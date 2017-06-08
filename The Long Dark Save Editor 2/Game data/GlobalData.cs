@@ -565,41 +565,41 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     public class MissionObjectIdentifierSaveProxy
     {
-        public string m_Id;
-        public MissionObjectClass m_ObjectClass;
-        public string m_ActivityTags;
-        public bool m_DestroyAfterMission;
+        public string m_Id { get; set; }
+        public MissionObjectClass m_ObjectClass { get; set; }
+        public string m_ActivityTags { get; set; }
+        public bool m_DestroyAfterMission { get; set; }
     }
 
     public class ResearchItemSaveData
     {
-        public float m_ElapsedHours;
+        public float m_ElapsedHours { get; set; }
     }
 
     public class OwnershipOverrideSaveData
     {
-        public string m_TrustId;
+        public string m_TrustId { get; set; }
     }
 
     public class BodyHarvestSaveDataProxy
     {
-        public float m_MeatAvailableKG;
-        public int m_HideAvailableUnits;
-        public int m_GutAvailableUnits;
-        public bool m_Frozen;
-        public bool m_Ravaged;
-        public float m_Condition;
-        public bool m_RolledSpawnChance;
-        public bool m_AllowDecay;
-        public float m_HoursPlayed;
-        public float m_PercentFrozen;
-        public float m_HoursRemainingOnCloseFire;
-        public float m_DecimationKGPerHour;
-        public float m_DecimationHoursRemaining;
-        public float m_QuarterDurationMinutes;
-        public bool m_HasHarvested;
-        public float m_LastHarvestTimeHours;
-        public float m_QuarterBagWasteMultiplier;
+        public float m_MeatAvailableKG { get; set; }
+        public int m_HideAvailableUnits { get; set; }
+        public int m_GutAvailableUnits { get; set; }
+        public bool m_Frozen { get; set; }
+        public bool m_Ravaged { get; set; }
+        public float m_Condition { get; set; }
+        public bool m_RolledSpawnChance { get; set; }
+        public bool m_AllowDecay { get; set; }
+        public float m_HoursPlayed { get; set; }
+        public float m_PercentFrozen { get; set; }
+        public float m_HoursRemainingOnCloseFire { get; set; }
+        public float m_DecimationKGPerHour { get; set; }
+        public float m_DecimationHoursRemaining { get; set; }
+        public float m_QuarterDurationMinutes { get; set; }
+        public bool m_HasHarvested { get; set; }
+        public float m_LastHarvestTimeHours { get; set; }
+        public float m_QuarterBagWasteMultiplier { get; set; }
     }
 
     #endregion

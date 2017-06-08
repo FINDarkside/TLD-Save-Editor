@@ -11,31 +11,31 @@
              d:DesignHeight="300" d:DesignWidth="500">
 	<StackPanel Margin="10">
 		<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-			<Label VerticalAlignment="Center" Width="170" Content="{x:Static p:Resources.FireStartingSP}" />
+            <Label VerticalAlignment="Center" Width="190" Content="{x:Static p:Resources.FireStartingSP}" />
 			<TextBox Text="{Binding CurrentSave.Global.SkillsManager.FireStartingSkill.m_Points}"  Width="200"></TextBox>
 		</StackPanel>
 		<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-			<Label VerticalAlignment="Center" Width="170" Content="{x:Static p:Resources.CarcassHarvestingSP}" />
+			<Label VerticalAlignment="Center" Width="190" Content="{x:Static p:Resources.CarcassHarvestingSP}" />
 			<TextBox Text="{Binding CurrentSave.Global.SkillsManager.CarcassHarvestingSkill.m_Points}"  Width="200"></TextBox>
 		</StackPanel>
 		<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-			<Label VerticalAlignment="Center" Width="170" Content="{x:Static p:Resources.CookingSP}" />
+            <Label VerticalAlignment="Center" Width="190" Content="{x:Static p:Resources.CookingSP}" />
 			<TextBox Text="{Binding CurrentSave.Global.SkillsManager.CookingSkill.m_Points}"  Width="200"></TextBox>
 		</StackPanel>
 		<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-			<Label VerticalAlignment="Center" Width="170" Content="{x:Static p:Resources.IceFishingSP}" />
+            <Label VerticalAlignment="Center" Width="190" Content="{x:Static p:Resources.IceFishingSP}" />
 			<TextBox Text="{Binding CurrentSave.Global.SkillsManager.IceFishingSkill.m_Points}"  Width="200"></TextBox>
 		</StackPanel>
 		<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-			<Label VerticalAlignment="Center" Width="170" Content="{x:Static p:Resources.RifleSP}" />
+            <Label VerticalAlignment="Center" Width="190" Content="{x:Static p:Resources.RifleSP}" />
 			<TextBox Text="{Binding CurrentSave.Global.SkillsManager.RifleSkill.m_Points}"  Width="200"></TextBox>
 		</StackPanel>
 		<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-			<Label VerticalAlignment="Center" Width="170" Content="{x:Static p:Resources.ArcherySP}" />
+            <Label VerticalAlignment="Center" Width="190" Content="{x:Static p:Resources.ArcherySP}" />
 			<TextBox Text="{Binding CurrentSave.Global.SkillsManager.ArcherySkill.m_Points}"  Width="200"></TextBox>
 		</StackPanel>
 		<StackPanel Orientation="Horizontal" Margin="0 0 0 5">
-			<Label VerticalAlignment="Center" Width="170" Content="{x:Static p:Resources.ClothingRepairSP}" />
+            <Label VerticalAlignment="Center" Width="190" Content="{x:Static p:Resources.ClothingRepairSP}" />
 			<TextBox Text="{Binding CurrentSave.Global.SkillsManager.ClothingRepairSkill.m_Points}"  Width="200"></TextBox>
 		</StackPanel>
 	</StackPanel>
