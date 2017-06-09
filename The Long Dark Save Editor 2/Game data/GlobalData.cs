@@ -305,7 +305,12 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             WornOut = false;
             HoursPlayed = MainWindow.Instance.CurrentSave.Global.TimeOfDay.m_HoursPlayedNotPausedProxy;
             // Don't really know what this is, but can't be 0 or items placed on ground reset rotation when right clicking them
-            InstanceIDProxy = 9999999;
+            var r = new Random();
+            var id = r.Next();
+            while(MainWindow.Instance.CurrentSave.Global.Inventory.Items.Any(item => item.InstanceIDProxy == id)){
+                id = r.Next();
+            }
+            InstanceIDProxy = id;
         }
 
         public InventoryItem(InventoryItemSaveData data)

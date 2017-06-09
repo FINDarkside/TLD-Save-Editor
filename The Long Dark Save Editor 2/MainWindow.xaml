@@ -90,13 +90,19 @@
                     <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal" Height="40" Grid.Column="0">
-                    <ComboBox Margin="10 0 0 0" Name="ccSaves" ItemsSource="{Binding Saves}" DisplayMemberPath="Description" SelectedValuePath="Value" Width="160" SelectedIndex="0" SelectionChanged="CurrentSaveSelectionChanged"/>
-					<Button Margin="10 0 0 0" Click="MenuItem_Click" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Content="{x:Static p:Resources.Save}" Height="40"/>
-					<Button Margin="10 0 0 0" Click="RefreshClicked" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Content="{x:Static p:Resources.Refresh}" Height="40"/>
+                    <ComboBox Margin="10 0 0 0" Name="ccSaves" ItemsSource="{Binding Saves}" DisplayMemberPath="Description" SelectedValuePath="Value" Width="220" SelectedIndex="0" SelectionChanged="CurrentSaveSelectionChanged"/>
+                    <Button Margin="10 0 0 0" Click="MenuItem_Click" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Content="{x:Static p:Resources.Save}" Height="40"/>
+                    <Button Margin="10 0 0 0" Click="RefreshClicked" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Content="{x:Static p:Resources.Refresh}" Height="40"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="0 0 20 0">
-                    <Label VerticalAlignment="Center" Content="{x:Static p:Resources.TestBranch}"/>
-                    <ToggleButton IsChecked="{Binding TestBranch, Mode=TwoWay}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
+                    <Button Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Foreground="#7289DA" Click="JoinDiscordClicked" Height="40">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Discord" />
+                            <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">Discord group</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Label Margin="10 0 0 0" VerticalAlignment="Center" Content="{x:Static p:Resources.TestBranch}"/>
+                    <ToggleButton Margin="5 0 0 0" IsChecked="{Binding TestBranch, Mode=TwoWay}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
                 </StackPanel>
             </Grid>
             <Rectangle DockPanel.Dock="Top" Fill="#A6B8C3" Height="1" ></Rectangle>
