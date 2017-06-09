@@ -64,7 +64,8 @@ namespace The_Long_Dark_Save_Editor_2
 			Debug.WriteLine(System.Threading.Thread.CurrentThread.CurrentUICulture);
 			//System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru-RU");
 #endif
-			this.DataContext = this;
+
+            this.DataContext = this;
 			Instance = this;
 			InitializeComponent();
 

@@ -374,7 +374,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             proxy.m_BeenInspectedProxy = BeenInspected;
             proxy.m_ItemLootedProxy = ItemLooted;
             proxy.m_RolledSpawnChanceProxy = RolledSpawnChance;
-            proxy.m_WornOut = WornOut;
+            proxy.m_WornOut = NormalizedCondition <= 0;
             proxy.m_StackableItemSerialized = Util.SerializeObject(StackableItem);
             proxy.m_FoodItemSerialized = Util.SerializeObject(FoodItem);
             proxy.m_LiquidItemSerialized = Util.SerializeObject(LiquidItem);
