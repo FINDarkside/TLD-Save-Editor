@@ -463,12 +463,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
 			if (afflictions.ContainsKey(AfflictionType.CabinFever))
 			{
-				proxy.m_CabinFeverSerialized = ((AfflictionWithProxy)afflictions[AfflictionType.Burns][0]).proxy;
-			}
-
-			if (afflictions.ContainsKey(AfflictionType.CabinFever))
-			{
-				proxy.m_CabinFeverSerialized = ((AfflictionWithProxy)afflictions[AfflictionType.Burns][0]).proxy;
+				proxy.m_CabinFeverSerialized = ((AfflictionWithProxy)afflictions[AfflictionType.CabinFever][0]).proxy;
 			}
 
 			if (afflictions.ContainsKey(AfflictionType.IntestinalParasites))
