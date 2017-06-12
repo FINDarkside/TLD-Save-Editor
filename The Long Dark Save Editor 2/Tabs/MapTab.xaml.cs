@@ -42,7 +42,7 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
                     saveGamePosition.CollectionChanged += (sender2, e2) =>
                     {
 
-                        if ((e2.NewStartingIndex == 0 && saveGamePosition[0] != (float)playerPosition.X) || (e2.NewStartingIndex == 2 && saveGamePosition[2] != (float)playerPosition.X))
+                        if ((e2.NewStartingIndex == 0 && saveGamePosition[0] != (float)playerPosition.X) || (e2.NewStartingIndex == 2 && saveGamePosition[2] != (float)playerPosition.Y))
                         {
                             playerPosition.X = saveGamePosition[0];
                             playerPosition.Y = saveGamePosition[2];
