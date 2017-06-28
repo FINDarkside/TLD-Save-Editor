@@ -41,9 +41,9 @@ namespace The_Long_Dark_Save_Editor_2
 			get { return testBranch; }
 			set
 			{
-				UpdateSaves();
 				Properties.Settings.Default.TestBranch = value;
                 SetPropertyField(ref testBranch, value);
+                UpdateSaves();
             }
 		}
 
