@@ -21,7 +21,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 			{ "CoastalRegion",new MapInfo {origo = new Point(1441, 1426), width = 2687, height = 2065, pixelsPerCoordinate = 0.98541666666f} },
 			{ "LakeRegion", new MapInfo {origo = new Point(260, 2006), width = 2125, height = 2291, pixelsPerCoordinate = 0.98476190476f} },
 			{ "WhalingStationRegion", new MapInfo {origo = new Point(94.5, 2018.3), width = 1434, height = 1477, pixelsPerCoordinate = 0.98583333333f} },
-			{ "RuralRegion", new MapInfo {origo = new Point(-117, 2238.5), width = 2000, height = 2245, pixelsPerCoordinate = 0.68233333333f} },
+			{ "RuralRegion", new MapInfo {origo = new Point(-58, 2209), width = 2000, height = 2245, pixelsPerCoordinate = 0.68233333333f} },
 			{ "CrashMountainRegion", new MapInfo {origo = new Point(62.5, 2006), width = 2124, height = 2349, pixelsPerCoordinate = 0.98476190476f} },
 			{ "MarshRegion", new MapInfo {origo = new Point(260, 2006), width = 2125, height = 2291, pixelsPerCoordinate = 0.98476190476f} },
 			{ "RavineTransitionZone", new MapInfo {origo = new Point(1275.5, 543.5), width = 1538, height = 958, pixelsPerCoordinate = 0.98538461538f} },
