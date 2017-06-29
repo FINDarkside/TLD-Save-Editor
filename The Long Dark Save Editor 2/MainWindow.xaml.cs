@@ -129,7 +129,7 @@ namespace The_Long_Dark_Save_Editor_2
 				}
 				catch (Exception ex)
 				{
-					WForms.MessageBox.Show(ex.Message + "\nFailed to load profile", "Failed to load profile", WForms.MessageBoxButtons.OK, WForms.MessageBoxIcon.Exclamation);
+					WForms.MessageBox.Show(ex.Message + "\nFailed to load profile\n" + ex.ToString(), "Failed to load profile", WForms.MessageBoxButtons.OK, WForms.MessageBoxIcon.Exclamation);
 				}
 			}
 
