@@ -40,6 +40,8 @@ namespace The_Long_Dark_Save_Editor_2
             {
                 pos[1] = 9999999;
             }
+            Global.SceneTransistion.m_SceneSaveFilenameCurrent = Boot.m_SceneName;
+            Global.SceneTransistion.m_SceneSaveFilenameNextLoad = Boot.m_SceneName;
 
             var globalSerialized = Global.Serialize();
             SlotData.m_Dict["global"] = EncryptString.CompressStringToBytes(globalSerialized);
