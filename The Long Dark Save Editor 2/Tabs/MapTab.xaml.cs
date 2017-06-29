@@ -71,6 +71,7 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
             if (region == null)
             {
                 mapImage.Source = null;
+                mapInfo = null;
                 player.Visibility = Visibility.Hidden;
                 canvasLabel.Text = "";
                 canvasLabel.Visibility = Visibility.Visible;
@@ -78,8 +79,8 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
             }
             if (!MapDictionary.MapExists(region))
             {
-                Debug.WriteLine("Map does not exist");
                 mapImage.Source = null;
+                mapInfo = null;
                 player.Visibility = Visibility.Hidden;
                 canvasLabel.Text = "No map found for current region";
                 canvasLabel.Visibility = Visibility.Visible;
@@ -104,6 +105,8 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
 
         private void canvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            if (mapInfo == null) return;
+
             mouseDown = true;
             clickPosition = e.GetPosition(canvas);
             lastMousePosition = clickPosition;
@@ -111,6 +114,8 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
 
         private void canvas_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
+            if (mapInfo == null) return;
+
             mouseDown = false;
             canvas.ReleaseMouseCapture();
             if (e.GetPosition(canvas) == clickPosition)
@@ -128,6 +133,8 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
 
         private void canvas_MouseMove(object sender, MouseEventArgs e)
         {
+            if (mapInfo == null) return;
+
             if (mouseDown)
             {
                 canvas.CaptureMouse();
@@ -142,6 +149,8 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
 
         private void canvas_MouseWheel(object sender, System.Windows.Input.MouseWheelEventArgs e)
         {
+            if (mapInfo == null) return;
+
             double zoom = e.Delta > 0 ? .1 * scale.ScaleX : -.1 * scale.ScaleX;
 
             var centerX = (-Canvas.GetLeft(mapImage) + canvas.ActualWidth / 2) / scale.ScaleX;
