@@ -9,33 +9,33 @@ using The_Long_Dark_Save_Editor_2.Properties;
 
 namespace The_Long_Dark_Save_Editor_2.Converters
 {
-	class CategoryToItemsConverter : IValueConverter
-	{
-		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-		{
-			if (value == null || value.GetType() != typeof(ItemCategory))
-				return null;
+    class CategoryToItemsConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value == null || value.GetType() != typeof(ItemCategory))
+                return null;
 
-			var cat = (ItemCategory)value;
+            var cat = (ItemCategory)value;
 
-			var result = new List<EnumerationMember>();
-			foreach (KeyValuePair<string, ItemInfo> entry in ItemDictionary.itemInfo)
-			{
-				if (entry.Value.category == cat && !entry.Value.hide)
-				{
-					var member = new EnumerationMember() { Value = entry.Key, Description = (string)Resources.ResourceManager.GetObject(entry.Key)};//Description = entry.Value.inGameName };
-					result.Add(member);
-				}
+            var result = new List<EnumerationMember>();
+            foreach (KeyValuePair<string, ItemInfo> entry in ItemDictionary.itemInfo)
+            {
+                if (entry.Value.category == cat && !entry.Value.hide)
+                {
+                    var member = new EnumerationMember() { Value = entry.Key, Description = (string)Resources.ResourceManager.GetObject(entry.Key) };//Description = entry.Value.inGameName };
+                    result.Add(member);
+                }
 
-			}
-			result = result.OrderBy(item => item.Description).ToList();
-			return result;
-		}
+            }
+            result = result.OrderBy(item => item.Description).ToList();
+            return result;
+        }
 
-		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-		{
-			throw new NotImplementedException();
-		}
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
 
-	}
+    }
 }

@@ -99,9 +99,9 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
             scale.ScaleX = Math.Max(Math.Min(wScale, hScale), 0.5);
             scale.ScaleY = Math.Max(Math.Min(wScale, hScale), 0.5);
 
-			SetPosition(0, 0);
+            SetPosition(0, 0);
 
-		}
+        }
 
         private void canvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {

@@ -5,21 +5,21 @@ using The_Long_Dark_Save_Editor_2.Helpers;
 
 namespace The_Long_Dark_Save_Editor_2.Converters
 {
-	class PrefabNameConverter : IValueConverter
-	{
-		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-		{
-			var gearName = value as string;
-			if (gearName == null)
-				return "";
+    class PrefabNameConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var gearName = value as string;
+            if (gearName == null)
+                return "";
 
-			return ItemDictionary.GetInGameName(gearName);
-		}
+            return ItemDictionary.GetInGameName(gearName);
+        }
 
-		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-		{
-			throw new NotImplementedException();
-		}
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
 
-	}
+    }
 }

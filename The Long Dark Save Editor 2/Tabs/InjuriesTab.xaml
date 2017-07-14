@@ -1,47 +1,47 @@
 ﻿<UserControl x:Class="The_Long_Dark_Save_Editor_2.Tabs.InjuriesTab"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-			 xmlns:p="clr-namespace:The_Long_Dark_Save_Editor_2.Properties"
-			 xmlns:converters="clr-namespace:The_Long_Dark_Save_Editor_2.Converters"
-			 xmlns:images="clr-namespace:The_Long_Dark_Save_Editor_2.Images"
-			 xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
-			 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:p="clr-namespace:The_Long_Dark_Save_Editor_2.Properties"
+             xmlns:converters="clr-namespace:The_Long_Dark_Save_Editor_2.Converters"
+             xmlns:images="clr-namespace:The_Long_Dark_Save_Editor_2.Images"
+             xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-	<UserControl.Resources>
-		<converters:EnumDescriptionConverter x:Key="EnumDescriptionConverter" />
-	</UserControl.Resources>
-	
-	<StackPanel Grid.Row="1" Orientation="Horizontal" Margin="20">
-		<images:InjuriesBody></images:InjuriesBody>
-		<StackPanel Margin="40 0 0 0" SnapsToDevicePixels="True">
-			<Label FontSize="20" FontWeight="Heavy" Content="{x:Static p:Resources.Afflictions}"></Label>
-			<ItemsControl ItemsSource="{Binding CurrentSave.Global.Afflictions.Negative}">
-				<ItemsControl.ItemsPanel>
-					<ItemsPanelTemplate>
-						<StackPanel></StackPanel>
-					</ItemsPanelTemplate>
-				</ItemsControl.ItemsPanel>
-				<ItemsControl.ItemTemplate>
-					<DataTemplate>
-						<Border BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}">
-							<Grid>
-								<Grid.ColumnDefinitions>
-									<ColumnDefinition Width="*" MinWidth="150" />
-									<ColumnDefinition Width="90" />
-								</Grid.ColumnDefinitions>
-								<StackPanel Grid.Column="0">
-									<Label FontSize="15" FontWeight="Normal" VerticalAlignment="Center" Content="{Binding AfflictionType, Converter={StaticResource EnumDescriptionConverter}}"></Label>
-								</StackPanel>
-								<Button Grid.Column="1" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Command="{Binding RemoveCommand}" Content="{x:Static p:Resources.ActionCure}"></Button>
-							</Grid>
-						</Border>
-					</DataTemplate>
-				</ItemsControl.ItemTemplate>
+    <UserControl.Resources>
+        <converters:EnumDescriptionConverter x:Key="EnumDescriptionConverter" />
+    </UserControl.Resources>
 
-			</ItemsControl>
-		</StackPanel>
-	</StackPanel>
+    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="20">
+        <images:InjuriesBody></images:InjuriesBody>
+        <StackPanel Margin="40 0 0 0" SnapsToDevicePixels="True">
+            <Label FontSize="20" FontWeight="Heavy" Content="{x:Static p:Resources.Afflictions}"></Label>
+            <ItemsControl ItemsSource="{Binding CurrentSave.Global.Afflictions.Negative}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel></StackPanel>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" MinWidth="150" />
+                                    <ColumnDefinition Width="90" />
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <Label FontSize="15" FontWeight="Normal" VerticalAlignment="Center" Content="{Binding AfflictionType, Converter={StaticResource EnumDescriptionConverter}}"></Label>
+                                </StackPanel>
+                                <Button Grid.Column="1" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Command="{Binding RemoveCommand}" Content="{x:Static p:Resources.ActionCure}"></Button>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+
+            </ItemsControl>
+        </StackPanel>
+    </StackPanel>
 </UserControl>

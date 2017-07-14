@@ -1,17 +1,17 @@
 ﻿<UserControl x:Class="The_Long_Dark_Save_Editor_2.Tabs.InventoryTab"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-			 xmlns:p="clr-namespace:The_Long_Dark_Save_Editor_2.Properties"
-			 xmlns:converters="clr-namespace:The_Long_Dark_Save_Editor_2.Converters"
-			 xmlns:gameData="clr-namespace:The_Long_Dark_Save_Editor_2.Game_data"
-			 xmlns:helpers="clr-namespace:The_Long_Dark_Save_Editor_2.Helpers"
-			 xmlns:images="clr-namespace:The_Long_Dark_Save_Editor_2.Images"
-			 xmlns:viewModels="clr-namespace:The_Long_Dark_Save_Editor_2.ViewModels"
-			 xmlns:System="clr-namespace:System;assembly=mscorlib"
-			 xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
-			 xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
-			 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:p="clr-namespace:The_Long_Dark_Save_Editor_2.Properties"
+             xmlns:converters="clr-namespace:The_Long_Dark_Save_Editor_2.Converters"
+             xmlns:gameData="clr-namespace:The_Long_Dark_Save_Editor_2.Game_data"
+             xmlns:helpers="clr-namespace:The_Long_Dark_Save_Editor_2.Helpers"
+             xmlns:images="clr-namespace:The_Long_Dark_Save_Editor_2.Images"
+             xmlns:viewModels="clr-namespace:The_Long_Dark_Save_Editor_2.ViewModels"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="500">
@@ -43,7 +43,7 @@
                     <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                         <Label Width="130" Content="{x:Static p:Resources.Condition}" />
                         <Slider Name="healthSlider" TickFrequency="0.01" Orientation="Horizontal" Minimum="0" IsSnapToTickEnabled="True" 
-							Maximum="1" Width="200" Value="{Binding NormalizedCondition}" Margin="5 5">
+                            Maximum="1" Width="200" Value="{Binding NormalizedCondition}" Margin="5 5">
                         </Slider>
                         <Label Content="{Binding ElementName=healthSlider, Path=Value, Converter = {StaticResource DoubleToPercentageConverter}}"></Label>
                     </StackPanel>
@@ -85,7 +85,7 @@
                         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                             <Label Width="130" Content="{x:Static p:Resources.Progress}" />
                             <Slider Name="progressSlider" TickFrequency="0.01" Orientation="Horizontal" Minimum="0" IsSnapToTickEnabled="True" 
-							Maximum="1" Width="200" Value="{Binding InProgressItem.m_PercentComplete}" Margin="5 5">
+                            Maximum="1" Width="200" Value="{Binding InProgressItem.m_PercentComplete}" Margin="5 5">
                             </Slider>
                             <Label Content="{Binding ElementName=progressSlider, Path=Value, Converter = {StaticResource DoubleToPercentageConverter}}"></Label>
                         </StackPanel>
@@ -124,9 +124,9 @@
         <StackPanel Grid.Row="0">
             <StackPanel Orientation="Horizontal" Margin="5 0">
                 <ComboBox Name="cbItemCategory" ItemsSource="{Binding Source={helpers:EnumerationExtension {x:Type gameData:ItemCategory}}}" 
-										DisplayMemberPath="Description" SelectedValuePath="Value" Width="120" SelectedIndex="0"/>
+                                        DisplayMemberPath="Description" SelectedValuePath="Value" Width="120" SelectedIndex="0"/>
                 <ComboBox Name="cbItem" ItemsSource="{Binding ElementName=cbItemCategory, Path=SelectedValue, Converter={StaticResource CategoryToItemsConverter}}" 
-									  Margin="10 0 5 0" DisplayMemberPath="Description" SelectedValuePath="Value" Width="160" SelectionChanged="cbItem_SelectionChanged" SelectedIndex="0" />
+                                      Margin="10 0 5 0" DisplayMemberPath="Description" SelectedValuePath="Value" Width="160" SelectionChanged="cbItem_SelectionChanged" SelectedIndex="0" />
                 <Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="AddItemClicked" Content="{x:Static p:Resources.AddItem}" />
                 <Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="RepairAllClicked" Content="{x:Static p:Resources.RepairAll}" />
                 <Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="RemoveAllClicked" Content="{x:Static p:Resources.RemoveAll}" />

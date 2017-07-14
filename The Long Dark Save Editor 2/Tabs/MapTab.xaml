@@ -17,15 +17,15 @@
     </UserControl.Resources>
     <Grid>
         <Canvas Name="canvas" MouseWheel="canvas_MouseWheel" Background="White" ClipToBounds="True" MouseMove="canvas_MouseMove"  
-			MouseLeftButtonUp="canvas_MouseLeftButtonUp" MouseLeftButtonDown="canvas_MouseLeftButtonDown">
+            MouseLeftButtonUp="canvas_MouseLeftButtonUp" MouseLeftButtonDown="canvas_MouseLeftButtonDown">
             <Image Name="mapImage" Source="..\Images/CoastalHighwaySF.png" Canvas.Top="0" Canvas.Left="0" 
-			   Height="2065" Width="2687" Stretch="Fill">
+               Height="2065" Width="2687" Stretch="Fill">
                 <Image.RenderTransform >
                     <ScaleTransform x:Name="scale" ScaleX="1" ScaleY="1" />
                 </Image.RenderTransform>
             </Image>
             <Image Name="player" Source="../Images/location-indicator.png" Canvas.Top="20" Canvas.Left="20" 
-			   Height="32" Width="32" Stretch="Fill">
+               Height="32" Width="32" Stretch="Fill">
                 <Image.RenderTransform >
                     <TranslateTransform X="-16" Y="-32" />
                 </Image.RenderTransform>

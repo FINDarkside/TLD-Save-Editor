@@ -307,7 +307,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             // Don't really know what this is, but can't be 0 or items placed on ground reset rotation when right clicking them
             var r = new Random();
             var id = r.Next();
-            while(MainWindow.Instance.CurrentSave.Global.Inventory.Items.Any(item => item.InstanceIDProxy == id)){
+            while (MainWindow.Instance.CurrentSave.Global.Inventory.Items.Any(item => item.InstanceIDProxy == id))
+            {
                 id = r.Next();
             }
             InstanceIDProxy = id;
