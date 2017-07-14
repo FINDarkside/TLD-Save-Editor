@@ -1,7 +1,7 @@
 ﻿<Window x:Class="The_Long_Dark_Save_Editor_2.MainWindow"
 		Name="TheWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:p="clr-namespace:The_Long_Dark_Save_Editor_2.Properties"
 		xmlns:converters="clr-namespace:The_Long_Dark_Save_Editor_2.Converters"
 		xmlns:gameData="clr-namespace:The_Long_Dark_Save_Editor_2.Game_data"
@@ -13,34 +13,34 @@
 		xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
 		xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
 		xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="{x:Static p:Resources.Title}" Height="600" Width="900" 
+		Title="{x:Static p:Resources.Title}" Height="600" Width="900" 
 		TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        TextElement.FontWeight="Regular"
-        TextElement.FontSize="13"
-        TextOptions.TextFormattingMode="Ideal" 
-        TextOptions.TextRenderingMode="Auto"        
-        Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}"
+		TextElement.FontWeight="Regular"
+		TextElement.FontSize="13"
+		TextOptions.TextFormattingMode="Ideal" 
+		TextOptions.TextRenderingMode="Auto"		
+		Background="{DynamicResource MaterialDesignPaper}"
+		FontFamily="{DynamicResource MaterialDesignFont}"
 		Loaded="Window_Loaded" Closing="Window_Closing">
 
     <Window.Resources>
-		<converters:PercentageConverter x:Key="FeatProgressPercentageConverter" />
+        <converters:PercentageConverter x:Key="FeatProgressPercentageConverter" />
         <converters:PrefabNameConverter x:Key="PrefabNameConverter" />
         <converters:DoubleToPercentageConverter x:Key="DoubleToPercentageConverter" />
-		<converters:ObjectToVisibilityConverter x:Key="ObjectToVisibilityConverter" />
-		<converters:CategoryToItemsConverter x:Key="CategoryToItemsConverter" />
+        <converters:ObjectToVisibilityConverter x:Key="ObjectToVisibilityConverter" />
+        <converters:CategoryToItemsConverter x:Key="CategoryToItemsConverter" />
         <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
         <converters:EnumDescriptionConverter x:Key="EnumDescriptionConverter" />
 
-		<System:Double x:Key="double100">100</System:Double>
-	</Window.Resources>
+        <System:Double x:Key="double100">100</System:Double>
+    </Window.Resources>
     <materialDesign:DialogHost Name="dialogHost">
         <materialDesign:DialogHost.Resources>
             <DataTemplate DataType="{x:Type viewModels:BusyDialogViewModel}">
                 <StackPanel Margin="10">
                     <TextBlock Margin="10" HorizontalAlignment="Center" Text="{Binding Text, Mode=OneWay}"></TextBlock>
                     <ProgressBar Style="{StaticResource MaterialDesignCircularProgressBar}"
-                     Value="0" IsIndeterminate="True" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="30" Height="30" Margin="10"/>
+					 Value="0" IsIndeterminate="True" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="30" Height="30" Margin="10"/>
                 </StackPanel>
             </DataTemplate>
             <DataTemplate DataType="{x:Type viewModels:NewVersionDialogViewModel}">
@@ -73,7 +73,7 @@
                             <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
                         <Button Grid.Column="1" Command="materialDesign:DialogHost.CloseDialogCommand" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Content="{x:Static p:Resources.Cancel}" />
-						<Button Grid.Column="3" Command="{Binding DownloadCommand}" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Content="{x:Static p:Resources.Download}"/>
+                        <Button Grid.Column="3" Command="{Binding DownloadCommand}" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Content="{x:Static p:Resources.Download}"/>
                     </Grid>
                 </Grid>
 
@@ -82,7 +82,7 @@
         <materialDesign:DialogHost.DialogContent>
             <TextBlock>Test</TextBlock>
         </materialDesign:DialogHost.DialogContent>
-		
+
         <DockPanel>
             <Grid DockPanel.Dock="Top">
                 <Grid.ColumnDefinitions>
@@ -107,48 +107,48 @@
             </Grid>
             <Rectangle DockPanel.Dock="Top" Fill="#A6B8C3" Height="1" ></Rectangle>
             <dragablz:TabablzControl Name="tabPanel"  DockPanel.Dock="Bottom" FixedHeaderCount="7">
-				<TabItem Header="{x:Static p:Resources.Profile}" >
-					<StackPanel>
-						<Rectangle Fill="#A6B8C3" Height="1" />
-						<tabs:ProfileTab />
-					</StackPanel>
-				</TabItem>
+                <TabItem Header="{x:Static p:Resources.Profile}" >
+                    <StackPanel>
+                        <Rectangle Fill="#A6B8C3" Height="1" />
+                        <tabs:ProfileTab />
+                    </StackPanel>
+                </TabItem>
                 <TabItem Header="{x:Static p:Resources.Player}">
                     <StackPanel>
                         <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
-						<tabs:PlayerTab />
+                        <tabs:PlayerTab />
                     </StackPanel>
                 </TabItem>
-				<TabItem Header="{x:Static p:Resources.Map}">
-					<DockPanel>
-						<Rectangle Fill="#A6B8C3" Height="1" DockPanel.Dock="Top"></Rectangle>
-						<tabs:MapTab  DockPanel.Dock="Top"/>
-					</DockPanel>
-				</TabItem>
-				<TabItem Header="{x:Static p:Resources.Skills}">
+                <TabItem Header="{x:Static p:Resources.Map}">
+                    <DockPanel>
+                        <Rectangle Fill="#A6B8C3" Height="1" DockPanel.Dock="Top"></Rectangle>
+                        <tabs:MapTab  DockPanel.Dock="Top"/>
+                    </DockPanel>
+                </TabItem>
+                <TabItem Header="{x:Static p:Resources.Skills}">
                     <StackPanel>
                         <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
-						<tabs:SkillsTab />
-					</StackPanel>
+                        <tabs:SkillsTab />
+                    </StackPanel>
                 </TabItem>
                 <TabItem Header="{x:Static p:Resources.Injuries}">
-					<DockPanel>
-						<Rectangle Grid.Row="0" Fill="#A6B8C3" Height="1" DockPanel.Dock="Top"></Rectangle>
-						<tabs:InjuriesTab Grid.Row="1"/>
-					</DockPanel>
+                    <DockPanel>
+                        <Rectangle Grid.Row="0" Fill="#A6B8C3" Height="1" DockPanel.Dock="Top"></Rectangle>
+                        <tabs:InjuriesTab Grid.Row="1"/>
+                    </DockPanel>
                 </TabItem>
                 <TabItem Header="{x:Static p:Resources.Inventory}">
-					<DockPanel>
-						<Rectangle Fill="#A6B8C3" Height="1" DockPanel.Dock="Top"></Rectangle>
-						<tabs:InventoryTab />
-					</DockPanel>
+                    <DockPanel>
+                        <Rectangle Fill="#A6B8C3" Height="1" DockPanel.Dock="Top"></Rectangle>
+                        <tabs:InventoryTab />
+                    </DockPanel>
                 </TabItem>
                 <TabItem Header="{x:Static p:Resources.About}">
-					<StackPanel>
-						<Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
-						<tabs:AboutTab />
-					</StackPanel>
-				</TabItem>
+                    <StackPanel>
+                        <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
+                        <tabs:AboutTab />
+                    </StackPanel>
+                </TabItem>
             </dragablz:TabablzControl>
         </DockPanel>
     </materialDesign:DialogHost>
