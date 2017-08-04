@@ -205,6 +205,17 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
                 });
             }
 
+            var burnsElectric = Util.DeserializeObject<BurnsElectricSaveDataProxy>(global.m_BurnsElectricSerialized);
+            if (burnsElectric != null && burnsElectric.m_Active)
+            {
+                Negative.Add(new AfflictionWithProxy()
+                {
+                    AfflictionType = AfflictionType.BurnsElectric,
+                    Location = 5,
+                    proxy = global.m_BurnsElectricSerialized
+                });
+            }
+
             var bloodLoss = Util.DeserializeObject<BloodLossSaveDataProxy>(global.m_BloodLossSerialized);
             if (bloodLoss != null)
             {
@@ -391,6 +402,11 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             if (afflictions.ContainsKey(AfflictionType.Burns))
             {
                 proxy.m_BurnsSerialized = ((AfflictionWithProxy)afflictions[AfflictionType.Burns][0]).proxy;
+            }
+
+            if (afflictions.ContainsKey(AfflictionType.BurnsElectric))
+            {
+                proxy.m_BurnsSerialized = ((AfflictionWithProxy)afflictions[AfflictionType.BurnsElectric][0]).proxy;
             }
 
             if (afflictions.ContainsKey(AfflictionType.BloodLoss))

@@ -204,6 +204,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         CabinFeverRisk,
         [Description("Frostbite risk")]
         FrostbiteRisk,
+        BurnsElectric // TODO Add affliction
     }
 
     public enum ExperienceModeType
@@ -306,6 +307,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         MarshRegion,
         RandomRegion,
         FutureRegion,
+        MountainTownRegion,
+        TracksRegion
     }
 
     public enum UpSell
@@ -365,6 +368,22 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         ForceWalk,
         ForceLimp,
         ForceLimpSlow,
+    }
+
+    public enum KnowledgeCateogry
+    {
+        Unknown,
+        People,
+        Places,
+        Things,
+        Actions,
+    }
+
+    public enum MissionObjectiveCountType
+    {
+        NoUnits,
+        Weight,
+        Volume,
     }
 
 }

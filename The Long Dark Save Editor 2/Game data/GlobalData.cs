@@ -162,6 +162,18 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_TimeRemainingSecondsProxy { get; set; }
     }
 
+    public class KnowledgeManagerSaveData
+    {
+        public string m_TrustDictSerialized { get; set; }
+        public string m_KnowledgeDictSerialized { get; set; }
+        public string m_NameRefDictSerialized { get; set; }
+    }
+
+    public class CollectionManagerSaveData
+    {
+        public string m_UnlockedCairnsDictSerialized { get; set; }
+    }
+
     #region Inventory
 
     public class Inventory
@@ -174,12 +186,10 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool ConsumedRosehipTea { get; set; }
         public bool ConsumedReishiTea { get; set; }
         public bool ConsumedOldMansBeardDressing { get; set; }
-
-        public string json;
+        public bool SuppressScentIndicator { get; set; }
 
         public Inventory(string json)
         {
-            this.json = json;
 
             if (json == null)
                 return;
@@ -197,11 +207,11 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             ConsumedRosehipTea = proxy.m_ConsumedRosehipTea;
             ConsumedReishiTea = proxy.m_ConsumedReishiTea;
             ConsumedOldMansBeardDressing = proxy.m_ConsumedOldMansBeardDressing;
+            SuppressScentIndicator = proxy.m_SuppressScentIndicator;
         }
 
         public string Serialize()
         {
-            //return json;
             var proxy = new InventorySaveDataProxy();
             proxy.m_QuickSelectInstanceIDs = QuickSelectInstanceIDs;
             if (!Items.Any(item => item.PrefabName.ToLower() == "gear_watersupplynotpotable"))
@@ -224,6 +234,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             proxy.m_ConsumedRosehipTea = ConsumedRosehipTea;
             proxy.m_ConsumedReishiTea = ConsumedReishiTea;
             proxy.m_ConsumedOldMansBeardDressing = ConsumedOldMansBeardDressing;
+            proxy.m_SuppressScentIndicator = SuppressScentIndicator;
             return Util.SerializeObject(proxy);
         }
     }
@@ -237,6 +248,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_ConsumedRosehipTea { get; set; }
         public bool m_ConsumedReishiTea { get; set; }
         public bool m_ConsumedOldMansBeardDressing { get; set; }
+        public bool m_SuppressScentIndicator { get; set; }
     }
 
     public class InventoryItemSaveData
@@ -269,12 +281,14 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool BeenInContainer { get; set; }
         public bool BeenInspected { get; set; }
         public bool ItemLooted { get; set; }
+        public bool HasBeenOwnedByPlayer { get; set; }
         public bool RolledSpawnChance { get; set; }
         public bool WornOut { get; set; }
         public StackableItemSaveDataProxy StackableItem { get; set; }
         public FoodItemSaveDataProxy FoodItem { get; set; }
         public LiquidItemSaveDataProxy LiquidItem { get; set; }
         public FlareItemSaveDataProxy FlareItem { get; set; }
+        public FlashlightItem FlashlightItem { get; set; }
         public KeroseneLampItemSaveDataProxy KeroseneLampItem { get; set; }
         public ClothingItemSaveDataProxy ClothingItem { get; set; }
         public GunItemSaveDataProxy WeaponItem { get; set; }
@@ -295,6 +309,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public int SatchelIndex { get; set; }
         public string OwnershipOverride { get; set; }
         public BodyHarvestSaveDataProxy BodyHarvest { get; set; }
+        public bool LockedInContainer { get; set; }
 
         public InventoryItem()
         {
@@ -332,12 +347,14 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             BeenInContainer = proxy.m_BeenInContainerProxy;
             BeenInspected = proxy.m_BeenInspectedProxy;
             ItemLooted = proxy.m_ItemLootedProxy;
+            HasBeenOwnedByPlayer = proxy.m_HasBeenOwnedByPlayer;
             RolledSpawnChance = proxy.m_RolledSpawnChanceProxy;
             WornOut = proxy.m_WornOut;
             StackableItem = Util.DeserializeObject<StackableItemSaveDataProxy>(proxy.m_StackableItemSerialized);
             FoodItem = Util.DeserializeObject<FoodItemSaveDataProxy>(proxy.m_FoodItemSerialized);
             LiquidItem = Util.DeserializeObject<LiquidItemSaveDataProxy>(proxy.m_LiquidItemSerialized);
             FlareItem = Util.DeserializeObject<FlareItemSaveDataProxy>(proxy.m_FlareItemSerialized);
+            FlashlightItem = Util.DeserializeObject<FlashlightItemSaveDataProxy>(proxy.m_FlashlightItemSerialized);
             KeroseneLampItem = Util.DeserializeObject<KeroseneLampItemSaveDataProxy>(proxy.m_KeroseneLampItemSerialized);
             ClothingItem = Util.DeserializeObject<ClothingItemSaveDataProxy>(proxy.m_ClothingItemSerialized);
             WeaponItem = Util.DeserializeObject<GunItemSaveDataProxy>(proxy.m_WeaponItemSerialized);
@@ -359,6 +376,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             SatchelIndex = proxy.m_SatchelIndex;
             OwnershipOverride = proxy.m_OwnershipOverrideSerialized;
             BodyHarvest = Util.DeserializeObject<BodyHarvestSaveDataProxy>(proxy.m_BodyHarvestSerialized);
+            LockedInContainer = proxy.m_LockedInContainer;
         }
 
         public InventoryItemSaveData Serialize()
@@ -374,12 +392,14 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             proxy.m_BeenInContainerProxy = BeenInContainer;
             proxy.m_BeenInspectedProxy = BeenInspected;
             proxy.m_ItemLootedProxy = ItemLooted;
+            proxy.m_HasBeenOwnedByPlayer = HasBeenOwnedByPlayer;
             proxy.m_RolledSpawnChanceProxy = RolledSpawnChance;
             proxy.m_WornOut = NormalizedCondition <= 0;
             proxy.m_StackableItemSerialized = Util.SerializeObject(StackableItem);
             proxy.m_FoodItemSerialized = Util.SerializeObject(FoodItem);
             proxy.m_LiquidItemSerialized = Util.SerializeObject(LiquidItem);
             proxy.m_FlareItemSerialized = Util.SerializeObject(FlareItem);
+            proxy.m_FlashlightItemSerialized = Util.SerializeObject(FlashlightItem);
             proxy.m_KeroseneLampItemSerialized = Util.SerializeObject(KeroseneLampItem);
             proxy.m_ClothingItemSerialized = Util.SerializeObject(ClothingItem);
             proxy.m_WeaponItemSerialized = Util.SerializeObject(WeaponItem);
@@ -401,6 +421,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             proxy.m_SatchelIndex = SatchelIndex;
             proxy.m_OwnershipOverrideSerialized = OwnershipOverride;
             proxy.m_BodyHarvestSerialized = Util.SerializeObject(BodyHarvest);
+            proxy.m_LockedInContainer = LockedInContainer;
 
             var proxy2 = new InventoryItemSaveData();
             proxy2.m_PrefabName = PrefabName;
@@ -435,12 +456,14 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_BeenInContainerProxy { get; set; }
         public bool m_BeenInspectedProxy { get; set; }
         public bool m_ItemLootedProxy { get; set; }
+        public bool m_HasBeenOwnedByPlayer { get; set; }
         public bool m_RolledSpawnChanceProxy { get; set; }
         public bool m_WornOut { get; set; }
         public string m_StackableItemSerialized { get; set; }
         public string m_FoodItemSerialized { get; set; }
         public string m_LiquidItemSerialized { get; set; }
         public string m_FlareItemSerialized { get; set; }
+        public string m_FlashlightItemSerialized { get; set; }// new
         public string m_KeroseneLampItemSerialized { get; set; }
         public string m_ClothingItemSerialized { get; set; }
         public string m_WeaponItemSerialized { get; set; }
@@ -462,6 +485,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public int m_SatchelIndex { get; set; }
         public string m_OwnershipOverrideSerialized { get; set; }
         public string m_BodyHarvestSerialized { get; set; }
+        public bool m_LockedInContainer { get; set; }
     }
 
     public class StackableItemSaveDataProxy
@@ -492,6 +516,13 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_HoursPlayed { get; set; }
         public FlareState m_StateProxy { get; set; }
         public float m_ElapsedBurnMinutesProxy { get; set; }
+    }
+
+    public class FlashlightItemSaveDataProxy
+    {
+        public bool m_IsOn { get; set; }
+        public bool m_IsHigh { get; set; }
+        public float m_CurrentBatteryCharge { get; set; }
     }
 
     public class KeroseneLampItemSaveDataProxy
@@ -606,6 +637,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_HasHarvested { get; set; }
         public float m_LastHarvestTimeHours { get; set; }
         public float m_QuarterBagWasteMultiplier { get; set; }
+        public string m_MissionIdSerialized { get; set; }
     }
 
     #endregion
@@ -773,6 +805,17 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_SecondsUntilNextBurnReminder { get; set; }
     }
 
+    public class BurnsElectricSaveDataProxy
+    {
+        public bool m_Active { get; set; }
+        public float m_ElapsedHours { get; set; }
+        public float m_DurationHours { get; set; }
+        public bool m_PainKillersTaken { get; set; }
+        public bool m_BandageApplied { get; set; }
+        public int m_NumBurnRemindersPlayed { get; set; }
+        public float m_SecondsUntilNextBurnReminder { get; set; }
+    }
+
     public class BloodLossSaveDataProxy
     {
         public bool m_Active { get; set; }
@@ -813,6 +856,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float[] m_DurationHoursList { get; set; }
         public bool[] m_AntisepticTakenList { get; set; }
         public float[] m_CurrentInfectionChanceList { get; set; }
+        public int[] m_ConstantAfflictionIndices { get; set; }
     }
 
     public class CabinFeverSaveDataProxy
@@ -869,6 +913,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     {
         public int m_LastDisplayedDayNumberOnAwake { get; set; }
         public int[] m_LastTwentyFourHoursOfSleep { get; set; }
+        public bool m_PassTimeIsLocked { get; set; }
     }
 
     public class FlyoverDataProxy
@@ -897,6 +942,19 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public int m_NumReishiPlantsHarvested { get; set; }
         public int m_NumOldMansPlantsHarvested { get; set; }
         public int m_NumCatTailPlantsHarvested { get; set; }
+        public int m_NumDaysCalorieStoreAboveZero { get; set; }
+        public int m_NumCarcassHarvestingBooksRead { get; set; }
+        public int m_NumCookingBooksRead { get; set; }
+        public int m_NumFireStartingBooksRead { get; set; }
+        public int m_NumIceFishingBooksRead { get; set; }
+        public int m_NumRifleFirearmAdvancedBooksRead { get; set; }
+        public int m_NumRifleFirearmBooksRead { get; set; }
+        public int m_NumImprovisedKnivesCrafted { get; set; }
+        public int m_NumImprovisedHatchetsCrafted { get; set; }
+        public int m_LongestBurningCampFire { get; set; }
+        public bool m_FoundAllCachesEpisodeOne { get; set; }
+        public bool m_FoundAllCachesEpisodeTwo { get; set; }
+        public Dictionary<string, bool> m_MappedRegions { get; set; }
     }
 
     public class ExperienceModeManagerSaveDataProxy
@@ -960,12 +1018,16 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     public class PlayerAnimationSaveData
     {
         public bool m_EnableFirstPersonHands { get; set; }
+        public string m_HandMeshState { get; set; }
     }
 
     public class TrustManagerSaveData
     {
         public Dictionary<string, int> m_TrustDictionary { get; set; }
+        public Dictionary<string, int> m_StrikesDictionary { get; set; }
+        public Dictionary<string, float> m_StrikeTimersDictionary { get; set; }
         public Dictionary<string, string> m_NeedTrackersSerialized { get; set; }
+        public Dictionary<string, string> m_UnlockableTrackersSerialized { get; set; }
         public Dictionary<string, float> m_TrustDecayDictionary { get; set; }
         public Dictionary<string, float> m_GracePeriodTimersDictionary { get; set; }
         public Dictionary<string, float> m_GracePeriodValuesDictionary { get; set; }

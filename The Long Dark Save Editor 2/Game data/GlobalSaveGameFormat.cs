@@ -36,6 +36,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_SprainedWristSerialized { get; set; }
         public string m_SprainedWristMajorSerialized { get; set; }
         public string m_BurnsSerialized { get; set; }
+        public string m_BurnsElectricSerialized { get; set; }
         public string m_BloodLossSerialized { get; set; }
         public string m_InfectionSerialized { get; set; }
         public string m_InfectionRiskSerialized { get; set; }
@@ -62,6 +63,12 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_MapDetailManagerSerialized { get; set; }
         public string m_WorldMapDataSerialized { get; set; }
         public string m_MapDataSerialized { get; set; }
+        public string m_BearHuntSerialized { get; set; }
+        public string m_KnowledgeManagerSerialized { get; set; }
+        public string m_UnlockedBlueprintsSerialized { get; set; }
+        public string m_CollectionManagerSerialized { get; set; }
+        public string m_StoryMissionDataSerialized { get; set; }
+        public bool m_CurrentEpisodeComplete { get; set; }
     }
 
     public class GlobalSaveGameData
@@ -108,6 +115,12 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public MapDetailSaveData MapDetailManager { get; set; }
         public WorldMapSaveData WorldMapData { get; set; }
         public MapSaveData MapData { get; set; }
+        public BearHuntSaveData BearHunt { get; set; }
+        public KnowledgeManagerSaveData KnowledgeManager { get; set; }
+        public List<string> UnlockedBlueprints { get; set; }
+        public string CollectionManagerSerialized { get; set; }
+        public string StoryMissionDataSerialized { get; set; }
+        public bool CurrentEpisodeCompleted { get; set; }
 
         public GlobalSaveGameData(string data)
         {
@@ -159,6 +172,12 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             MapDetailManager = Util.DeserializeObject<MapDetailSaveData>(proxy.m_MapDetailManagerSerialized);
             WorldMapData = Util.DeserializeObject<WorldMapSaveData>(proxy.m_WorldMapDataSerialized);
             MapData = Util.DeserializeObject<MapSaveData>(proxy.m_MapDataSerialized);
+            BearHunt = Util.DeserializeObject<BearHuntSaveData>(proxy.m_BearHuntSerialized);
+            KnowledgeManager = Util.DeserializeObject<KnowledgeManagerSaveData>(proxy.m_KnowledgeManagerSerialized);
+            UnlockedBlueprints = Util.DeserializeObject<List<string>>(proxy.m_UnlockedBlueprintsSerialized);
+            CollectionManagerSerialized = proxy.m_CollectionManagerSerialized;
+            StoryMissionDataSerialized = proxy.m_StoryMissionDataSerialized;
+            CurrentEpisodeCompleted = proxy.m_CurrentEpisodeComplete;
         }
 
         public string Serialize()
@@ -208,6 +227,12 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             proxy.m_MapDetailManagerSerialized = Util.SerializeObject(MapDetailManager);
             proxy.m_WorldMapDataSerialized = Util.SerializeObject(WorldMapData);
             proxy.m_MapDataSerialized = Util.SerializeObject(MapData);
+            proxy.m_BearHuntSerialized = Util.SerializeObject(BearHunt);
+            proxy.m_KnowledgeManagerSerialized = Util.SerializeObject(KnowledgeManager);
+            proxy.m_UnlockedBlueprintsSerialized = Util.SerializeObject(UnlockedBlueprints);
+            proxy.m_CollectionManagerSerialized = CollectionManagerSerialized;
+            proxy.m_StoryMissionDataSerialized = StoryMissionDataSerialized;
+            proxy.m_CurrentEpisodeComplete = CurrentEpisodeCompleted;
 
             return Util.SerializeObject(proxy);
         }
