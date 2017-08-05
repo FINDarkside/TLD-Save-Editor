@@ -829,7 +829,7 @@
     <value>Fresh Leather</value>
   </data>
   <data name="GEAR_PaperStack" xml:space="preserve">
-    <value>GAMEPLAY_PaperStack</value>
+    <value>Stack of Papers</value>
   </data>
   <data name="GEAR_PumpkinPie" xml:space="preserve">
     <value>Pumpkin Pie</value>
@@ -852,7 +852,7 @@
   <data name="GEAR_ChurchHymn" xml:space="preserve">
     <value>Church Hymn</value>
   </data>
-  <data name="GEAR_ChurchNoteEp1" xml:space="preserve">
+  <data name="GEAR_ChurchNoteEP1" xml:space="preserve">
     <value>Church Note EP 1</value>
   </data>
   <data name="GEAR_CollectibleNoteCommonReward" xml:space="preserve">
@@ -880,7 +880,7 @@
     <value>First Aid Manual</value>
   </data>
   <data name="GEAR_HardCase" xml:space="preserve">
-    <value>Hard Case</value>
+    <value>Astrid's Hardcase</value>
   </data>
   <data name="GEAR_HikersBackPack" xml:space="preserve">
     <value>Hiker's Backpack</value>
@@ -889,7 +889,7 @@
     <value>Hunter Journal Page</value>
   </data>
   <data name="GEAR_KnifeScrapMetal" xml:space="preserve">
-    <value>Knife Scrap Metal</value>
+    <value>Scrap Metal Shard</value>
   </data>
   <data name="GEAR_KnifeScrapMetal_Clean" xml:space="preserve">
     <value>Knife Scrap Metal Clean</value>
@@ -901,13 +901,13 @@
     <value>Map To Railyard</value>
   </data>
   <data name="GEAR_MedicalSupplies" xml:space="preserve">
-    <value>Medical Supplies</value>
+    <value>Carter Hydro Medical Supplies</value>
   </data>
   <data name="GEAR_Morphine" xml:space="preserve">
     <value>Morphine</value>
   </data>
   <data name="GEAR_MountainTownFarmKey" xml:space="preserve">
-    <value>Mountain Town Farm Key</value>
+    <value>Paradise Meadows Farm Key</value>
   </data>
   <data name="GEAR_MountainTownFarmNote" xml:space="preserve">
     <value>Mountain Town Farm Note</value>
@@ -1012,7 +1012,7 @@
     <value>Time spent evolving (hours)</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>The Long Dark (v.423) Save Editor</value>
+    <value>The Long Dark (v. 1.03) Save Editor</value>
   </data>
   <data name="Tools" xml:space="preserve">
     <value>Tools</value>
@@ -1232,5 +1232,146 @@
   </data>
   <data name="MeatAmount" xml:space="preserve">
     <value>Meat (kg)</value>
+  </data>
+  <data name="GEAR_Flashlight" xml:space="preserve">
+    <value>Flashlight</value>
+  </data>
+  <data name="GEAR_ForestTalkerThankyou" xml:space="preserve">
+    <value>Forest Talker Note</value>
+  </data>
+  <data name="GEAR_ForestTalkerThankyou2" xml:space="preserve">
+    <value>Forest Talker Note</value>
+  </data>
+  <data name="GEAR_HC_EP1_ML_AlansCave_Dir" xml:space="preserve">
+    <value>Crumpled Note</value>
+  </data>
+  <data name="GEAR_RifleHuntingLodge" xml:space="preserve">
+    <value>Hunting Rifle</value>
+  </data>
+  <data name="GEAR_MiltonDepositBoxKey2" xml:space="preserve">
+    <value>Bank Deposit Box Key (#13)</value>
+  </data>
+  <data name="GEAR_JeremiahKnife" xml:space="preserve">
+    <value>Jeremiah's Knife</value>
+  </data>
+  <data name="GEAR_FixedRifle" xml:space="preserve">
+    <value>Jeremiah's Repaired Rifle</value>
+  </data>
+  <data name="GEAR_ForgeBlueprints" xml:space="preserve">
+    <value>Forge Blueprints</value>
+  </data>
+  <data name="GEAR_MiltonDepositBoxKey3" xml:space="preserve">
+    <value>Bank Deposit Box Key (#20)</value>
+  </data>
+  <data name="GEAR_HC_EP1_RW_HunterLodge_Dir" xml:space="preserve">
+    <value>Handwritten Note</value>
+  </data>
+  <data name="GEAR_HC_EP1_FM_TreeRoots_Dir" xml:space="preserve">
+    <value>Charcoal Note</value>
+  </data>
+  <data name="GEAR_CacheNote_ChurchMarshDir" xml:space="preserve">
+    <value>Milton Hidden Cache Note</value>
+  </data>
+  <data name="GEAR_HC_EP1_ML_TracksEnt_Dir" xml:space="preserve">
+    <value>Illegible Note</value>
+  </data>
+  <data name="GEAR_JeremiahsCoat" xml:space="preserve">
+    <value>Jeremiah's Bearskin Coat</value>
+  </data>
+  <data name="GEAR_BankVaultCode" xml:space="preserve">
+    <value>Bank Vault Code</value>
+  </data>
+  <data name="GEAR_LakeTrailerKey1" xml:space="preserve">
+    <value>Logging Camp Trailer Key</value>
+  </data>
+  <data name="GEAR_HC_EP1_RW_RavineEnd_Dir" xml:space="preserve">
+    <value>Blood Soaked Note</value>
+  </data>
+  <data name="GEAR_ForestTalkerFlyer" xml:space="preserve">
+    <value>Forest Talker Flyer</value>
+  </data>
+  <data name="GEAR_HankJournal2" xml:space="preserve">
+    <value>Hank's Journal - Part Two</value>
+  </data>
+  <data name="GEAR_FarmerDepositBoxKey" xml:space="preserve">
+    <value>Bank Deposit Box Key (#15)</value>
+  </data>
+  <data name="GEAR_BrokenRifle" xml:space="preserve">
+    <value>Jeremiah's Broken Rifle</value>
+  </data>
+  <data name="GEAR_MiltonDepositBoxKey1" xml:space="preserve">
+    <value>Bank Deposit Box Key (#7)</value>
+  </data>
+  <data name="GEAR_BankManagerHouseKey" xml:space="preserve">
+    <value>Bank Manager's House Key</value>
+  </data>
+  <data name="GEAR_ForestTalkerHiddenItem" xml:space="preserve">
+    <value>Forest Talker Documents</value>
+  </data>
+  <data name="GEAR_GreyMotherPearls" xml:space="preserve">
+    <value>Grey Mother's Pearls</value>
+  </data>
+  <data name="GEAR_HC_EP1_ML_ClearCut_Dir" xml:space="preserve">
+    <value>Simple Note</value>
+  </data>
+  <data name="GEAR_ForestTalkerMap" xml:space="preserve">
+    <value>Forest Talker Map Note</value>
+  </data>
+  <data name="GEAR_CaveCacheNote" xml:space="preserve">
+    <value>Cave Hidden Cache Note</value>
+  </data>
+  <data name="GEAR_TrailerSupplies" xml:space="preserve">
+    <value>Forest Talker Supplies</value>
+  </data>
+  <data name="GEAR_OldLadyStolenItem" xml:space="preserve">
+    <value>Grey Mother's Safety Deposit Box</value>
+  </data>
+  <data name="GEAR_LetterBundle" xml:space="preserve">
+    <value>Jeremiah's Letters</value>
+  </data>
+  <data name="GEAR_GreyMotherTrunkKey" xml:space="preserve">
+    <value>Lily's Trunk Key</value>
+  </data>
+  <data name="GEAR_HankNeiceLetter" xml:space="preserve">
+    <value>Letter for Hank's Neice</value>
+  </data>
+  <data name="GEAR_WillShirt" xml:space="preserve">
+    <value>Will's Shirt</value>
+  </data>
+  <data name="GEAR_WillParka" xml:space="preserve">
+    <value>Will's Coat</value>
+  </data>
+  <data name="GEAR_WillSweater" xml:space="preserve">
+    <value>Will's Sweater</value>
+  </data>
+  <data name="GEAR_WillBoots" xml:space="preserve">
+    <value>Will's Boots</value>
+  </data>
+  <data name="GEAR_WillToque" xml:space="preserve">
+    <value>Will's Hat</value>
+  </data>
+  <data name="GEAR_WillPants" xml:space="preserve">
+    <value>Will's Pants</value>
+  </data>
+  <data name="GEAR_GreyMotherBoots" xml:space="preserve">
+    <value>Mountaineering Boots</value>
+  </data>
+  <data name="GEAR_BearEar" xml:space="preserve">
+    <value>The Old Bear's Ear</value>
+  </data>
+  <data name="GEAR_ReishiPrepared" xml:space="preserve">
+    <value>Prepared Reishi Mushrooms</value>
+  </data>
+  <data name="GEAR_RosehipsPrepared" xml:space="preserve">
+    <value>Prepared Rosehips</value>
+  </data>
+  <data name="GEAR_HankHatchCode" xml:space="preserve">
+    <value>Hank's Prepper Cache Code</value>
+  </data>
+  <data name="GEAR_BookArchery" xml:space="preserve">
+    <value>Stay On Target</value>
+  </data>
+  <data name="GEAR_BookMending" xml:space="preserve">
+    <value>A Sewing Primer</value>
   </data>
 </root>
