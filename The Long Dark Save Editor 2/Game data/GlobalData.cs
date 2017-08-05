@@ -288,7 +288,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public FoodItemSaveDataProxy FoodItem { get; set; }
         public LiquidItemSaveDataProxy LiquidItem { get; set; }
         public FlareItemSaveDataProxy FlareItem { get; set; }
-        public FlashlightItem FlashlightItem { get; set; }
+        public FlashlightItemSaveDataProxy FlashlightItem { get; set; }
         public KeroseneLampItemSaveDataProxy KeroseneLampItem { get; set; }
         public ClothingItemSaveDataProxy ClothingItem { get; set; }
         public GunItemSaveDataProxy WeaponItem { get; set; }
@@ -1145,7 +1145,50 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     public class FeatEnabledTrackerSaveData
     {
-        public List<FeatType> m_FeatsEnabledThisSandbox;
+        public List<FeatType> m_FeatsEnabledThisSandbox { get; set; }
+    }
+
+    public class BearHuntSaveData
+    {
+        public bool m_Active { get; set; }
+        public bool m_Completed { get; set; }
+        public bool m_ActivateCachesOnDeserialze { get; set; }
+    }
+
+    public class StoryMissionSaveData
+    {
+        public List<StoryMissionInfo> m_MissionInfo { get; set; }
+        public List<StoryMissionObjective> m_ObjectiveInfo { get; set; }
+    }
+
+    public class StoryMissionInfo
+    {
+        public string missionID { get; set; }
+        public string nameLocID { get; set; }
+        public string descriptionLocID { get; set; }
+        public string textureName { get; set; }
+        public bool isActive { get; set; }
+        public bool completedSuccessfully { get; set; }
+        public string timerID { get; set; }
+        public bool isSideMission { get; set; }
+        public string m_NPC_ID { get; set; }
+        public float m_TrustDecayGracePeriodHours { get; set; }
+        public string chapterLocID { get; set; }
+    }
+
+    public class StoryMissionObjective
+    {
+        public string objectiveID { get; set; }
+        public string descriptionLocID { get; set; }
+        public bool completed { get; set; }
+        public string timerID { get; set; }
+        public string countCurrentBBName { get; set; }
+        public string countRequiredBBName { get; set; }
+        public MissionObjectiveCountType countType { get; set; }
+        public bool isChildObjective { get; set; }
+        public List<string> childObjectiveIDList { get; set; }
+        public string missionID { get; set; }
+        public bool invisibleInJournal { get; set; }
     }
 
     public class BoxCollider
