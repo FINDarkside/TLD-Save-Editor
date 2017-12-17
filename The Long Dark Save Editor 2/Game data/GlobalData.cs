@@ -28,6 +28,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_SceneSaveFilenameCurrent { get; set; }
         public string m_SceneSaveFilenameNextLoad { get; set; }
         public string m_SceneLocationLocIDToShow { get; set; }
+        public int m_GameRandomSeed { get; set; }
     }
 
     public class HudManagerSaveDataProxy
@@ -502,7 +503,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_HoursPlayed { get; set; }
         public bool m_HarvestedByPlayer { get; set; }
         public int m_NumTimesHeatedUp { get; set; }
-        public bool m_Packaged; // TODO check what this is
+        public bool m_Packaged;
     }
 
     public class LiquidItemSaveDataProxy
@@ -613,11 +614,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_ElapsedHours { get; set; }
     }
 
-    public class OwnershipOverrideSaveData
-    {
-        public string m_TrustId { get; set; }
-    }
-
     public class BodyHarvestSaveDataProxy
     {
         public float m_MeatAvailableKG { get; set; }
@@ -638,6 +634,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_LastHarvestTimeHours { get; set; }
         public float m_QuarterBagWasteMultiplier { get; set; }
         public string m_MissionIdSerialized { get; set; }
+        public string m_BearHuntAiSerialized { get; set; }
     }
 
     #endregion
@@ -670,7 +667,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_PlayerInSnowShelter { get; set; }
         public float m_PumpkinPieBuffHoursRemaining { get; set; }
         public float m_PumpkinPieFreezingRateScale { get; set; }
-        public BoxCollider m_CampfiresRequiredWithinVolume;
+        public SerializableBounds m_CampfiresRequiredWithinVolume;
     }
 
     public class PlayerClimbRopeProxy
@@ -827,6 +824,16 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float[] m_DurationHoursList { get; set; }
     }
 
+    public class BrokenRibSaveDataProxy
+    {
+        public string[] m_CausesLocIDs { get; set; }
+        public int[] m_Locations { get; set; }
+        public int[] m_PainKillersTaken { get; set; }
+        public int[] m_BandagesApplied { get; set; }
+        public float[] m_ElapsedRestList { get; set; }
+        public float[] m_NumHoursRestForCureList { get; set; }
+    }
+
     public class InfectionSaveDataProxy
     {
         public bool m_Active { get; set; }
@@ -947,6 +954,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public int m_NumCookingBooksRead { get; set; }
         public int m_NumFireStartingBooksRead { get; set; }
         public int m_NumIceFishingBooksRead { get; set; }
+        public int m_NumMendingBooksRead { get; set; }
         public int m_NumRifleFirearmAdvancedBooksRead { get; set; }
         public int m_NumRifleFirearmBooksRead { get; set; }
         public int m_NumImprovisedKnivesCrafted { get; set; }
@@ -960,6 +968,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     public class ExperienceModeManagerSaveDataProxy
     {
         public ExperienceModeType m_CurrentModeType { get; set; }
+        public string m_CustomModeString { get; set; }
     }
 
     public class PlayerMovementSaveDataProxy
@@ -1013,12 +1022,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public List<CustomManagedObjectState> m_CustomManagedObjectStates { get; set; }
         public string m_SerializedGlobalBlackboard;
         public string m_VisibleMissionTimer { get; set; }
-    }
-
-    public class PlayerAnimationSaveData
-    {
-        public bool m_EnableFirstPersonHands { get; set; }
-        public string m_HandMeshState { get; set; }
     }
 
     public class TrustManagerSaveData
@@ -1191,10 +1194,45 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool invisibleInJournal { get; set; }
     }
 
+    public class SandboxRecord
+    {
+        public string m_SandboxName { get; set; }
+        public float m_ElapsedHours { get; set; }
+        public DateTime m_EndDate { get; set; }
+        public GameRegion m_StartRegion { get; set; }
+        public string m_EndRegion { get; set; }
+        public ExperienceModeType m_ExperienceModeType { get; set; }
+        public VoicePersona m_VoicePersona { get; set; }
+        public string m_CauseOfDeathLocId { get; set; }
+        public string m_GeneralNotes { get; set; }
+        public List<LogDayInfo> m_LogDayInfoList { get; set; }
+        public List<string> m_CollectibleNotesList { get; set; }
+        public List<CairnInfo> m_CollectibleCairnInfoList { get; set; }
+        public StatContainer m_Stats { get; set; }
+    }
+
+    public class CairnInfo
+    {
+        public string m_BackerLookupNum { get; set; }
+        public int m_JournalEntryNumber { get; set; }
+    }
+
+    public class SerializedParams
+    {
+        public bool m_EnableFirstPersonHands;
+        public string m_HandMeshState;
+    }
+
     public class BoxCollider
     {
         public float[] center { get; set; }
         public float[] size { get; set; }
         public float[] extents { get; set; }
+    }
+
+    public class SerializableBounds
+    {
+        public Vector3 m_Center { get; set; }
+        public Vector3 m_Size { get; set; }
     }
 }

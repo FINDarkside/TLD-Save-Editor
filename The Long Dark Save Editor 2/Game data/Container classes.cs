@@ -291,6 +291,23 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
                 });
             }
 
+            var brokenRibs = Util.DeserializeObject<BrokenRibSaveDataProxy>(global.m_BrokenRibSerialized);
+            if (brokenRibs != null)
+            {
+                for (int i = 0; i < brokenRibs.m_Locations.Length; i++)
+                {
+                    Negative.Add(new BrokenRib()
+                    {
+                        AfflictionType = AfflictionType.BrokenRib,
+                        Location = brokenRibs.m_Locations[i],
+                        BandagesApplied = brokenRibs.m_BandagesApplied[i],
+                        ElapsedRest = brokenRibs.m_ElapsedRestList[i],
+                        NumHoursRestForCure = brokenRibs.m_NumHoursRestForCureList[i],
+                        PainKillersTaken = brokenRibs.m_PainKillersTaken[i],
+                    });
+                }
+            }
+
         }
 
         public GlobalSaveGameFormat SerializeTo(GlobalSaveGameFormat proxy)
@@ -477,6 +494,30 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
                 proxy.m_InfectionRiskSerialized = Util.SerializeObject(infectionRisk);
             }
 
+            if (afflictions.ContainsKey(AfflictionType.BrokenRib))
+            {
+                var brokenRibProxy = new BrokenRibSaveDataProxy();
+                var brokenRibs = afflictions[AfflictionType.BrokenRib];
+                brokenRibProxy.m_BandagesApplied = new int[brokenRibs.Count];
+                brokenRibProxy.m_CausesLocIDs = new string[brokenRibs.Count];
+                brokenRibProxy.m_ElapsedRestList = new float[brokenRibs.Count];
+                brokenRibProxy.m_Locations = new int[brokenRibs.Count];
+                brokenRibProxy.m_NumHoursRestForCureList = new float[brokenRibs.Count];
+                brokenRibProxy.m_PainKillersTaken = new int[brokenRibs.Count];
+
+                for (int i = 0; i < brokenRibs.Count; i++)
+                {
+                    var brokenRib = (BrokenRib)brokenRibs[i];
+                    brokenRibProxy.m_BandagesApplied[i] = brokenRib.BandagesApplied;
+                    brokenRibProxy.m_CausesLocIDs[i] = brokenRib.CauseLocID;
+                    brokenRibProxy.m_ElapsedRestList[i] = brokenRib.ElapsedRest;
+                    brokenRibProxy.m_Locations[i] = brokenRib.Location;
+                    brokenRibProxy.m_NumHoursRestForCureList[i] = brokenRib.NumHoursRestForCure;
+                    brokenRibProxy.m_PainKillersTaken[i] = brokenRib.PainKillersTaken;
+                }
+                proxy.m_BrokenRibSerialized = Util.SerializeObject(brokenRibProxy);
+            }
+
             if (afflictions.ContainsKey(AfflictionType.CabinFever))
             {
                 proxy.m_CabinFeverSerialized = ((AfflictionWithProxy)afflictions[AfflictionType.CabinFever][0]).proxy;
@@ -594,6 +635,15 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float DurationHours { get; set; }
         public bool AntisepticTaken { get; set; }
         public float CurrentInfectionChance { get; set; }
+    }
+
+    public class BrokenRib : Affliction
+    {
+        public string CauseLocID { get; set; }
+        public int PainKillersTaken { get; set; }
+        public int BandagesApplied { get; set; }
+        public float ElapsedRest { get; set; }
+        public float NumHoursRestForCure { get; set; }
     }
     #endregion
 }

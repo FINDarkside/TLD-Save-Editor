@@ -7,134 +7,145 @@
 			 xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
 			 xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
              StartupUri="MainWindow.xaml">
-	<Application.Resources>
-		<ResourceDictionary>
-			<ResourceDictionary.MergedDictionaries>
-				<ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
-				<ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
-				<ResourceDictionary Source="Colors/HinterlandPrimary.xaml" />
-				<ResourceDictionary Source="Colors/HinterlandAccent.xaml" />
+    <Application.Resources>
+        <ResourceDictionary>
 
-				<!-- Dragablz -->
-				<ResourceDictionary>
-					<SolidColorBrush x:Key="PrimaryHueLightBrush" Color="{StaticResource Primary100}"/>
-					<SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="{StaticResource Primary100Foreground}"/>
-					<SolidColorBrush x:Key="PrimaryHueMidBrush" Color="{StaticResource Primary500}"/>
-					<SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="{StaticResource Primary500Foreground}"/>
-					<SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="{StaticResource Primary700}"/>
-					<SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="{StaticResource Primary700Foreground}"/>
-					<SolidColorBrush x:Key="MaterialDesignPaper" Color="White" />
-					<SolidColorBrush x:Key="MaterialDesignBody" Color="#303030" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="Colors/HinterlandPrimary.xaml" />
+                <ResourceDictionary Source="Colors/HinterlandAccent.xaml" />
 
-					<SolidColorBrush x:Key="SecondaryAccentBrush" Color="{StaticResource Accent200}"/>
-					<SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="{StaticResource Accent200Foreground}"/>
-				</ResourceDictionary>
+                <!-- Dragablz -->
+                <ResourceDictionary>
+                    <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="{StaticResource Primary100}"/>
+                    <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="{StaticResource Primary100Foreground}"/>
+                    <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="{StaticResource Primary500}"/>
+                    <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="{StaticResource Primary500Foreground}"/>
+                    <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="{StaticResource Primary700}"/>
+                    <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="{StaticResource Primary700Foreground}"/>
+                    <SolidColorBrush x:Key="MaterialDesignPaper" Color="White" />
+                    <SolidColorBrush x:Key="MaterialDesignBody" Color="#303030" />
 
-				<ResourceDictionary Source="pack://application:,,,/Dragablz;component/Themes/materialdesign.xaml"/>
+                    <SolidColorBrush x:Key="SecondaryAccentBrush" Color="{StaticResource Accent200}"/>
+                    <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="{StaticResource Accent200Foreground}"/>
+                </ResourceDictionary>
 
-			</ResourceDictionary.MergedDictionaries>
-			<Style TargetType="{x:Type dragablz:TabablzControl}" BasedOn="{StaticResource MaterialDesignTabablzControlStyle}" />
+                <ResourceDictionary Source="pack://application:,,,/Dragablz;component/Themes/materialdesign.xaml"/>
 
-			<Style x:Key="CMaterialDesignDragableTabItemStyle"  TargetType="{x:Type dragablz:DragablzItem}" BasedOn="{StaticResource MaterialDesignDragableTabItemStyle}">
-				<Setter Property="FocusVisualStyle" Value="{StaticResource MaterialDesignFocusVisual}"/>
-				<Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidBrush}"/>
-				<Setter Property="dragablzThemes:MaterialDesignAssist.IndicatorBrush" Value="{StaticResource PrimaryHueMidBrush}" />
-				<Setter Property="Template">
-					<Setter.Value>
-						<ControlTemplate TargetType="{x:Type dragablz:DragablzItem}">
-							<Grid x:Name="templateRoot" SnapsToDevicePixels="true">
-								<Grid.RowDefinitions>
-									<RowDefinition Height="*" />
-									<RowDefinition Height="Auto" />
-								</Grid.RowDefinitions>
-								<Border BorderBrush="{TemplateBinding BorderBrush}" 
+            </ResourceDictionary.MergedDictionaries>
+            
+            <Style TargetType="{x:Type dragablz:TabablzControl}" BasedOn="{StaticResource MaterialDesignTabablzControlStyle}" />
+
+            <Style TargetType="FrameworkElement" x:Key="HideIfNotCustomDifficulty">
+                <Setter Property="Visibility" Value="Collapsed"/>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding CurrentSave.Global.ExperienceModeManager.m_CurrentModeType}" Value="Custom">
+                        <Setter Property="Visibility" Value="Visible"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="CMaterialDesignDragableTabItemStyle"  TargetType="{x:Type dragablz:DragablzItem}" BasedOn="{StaticResource MaterialDesignDragableTabItemStyle}">
+                <Setter Property="FocusVisualStyle" Value="{StaticResource MaterialDesignFocusVisual}"/>
+                <Setter Property="Foreground" Value="{DynamicResource PrimaryHueMidBrush}"/>
+                <Setter Property="dragablzThemes:MaterialDesignAssist.IndicatorBrush" Value="{StaticResource PrimaryHueMidBrush}" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type dragablz:DragablzItem}">
+                            <Grid x:Name="templateRoot" SnapsToDevicePixels="true">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Border BorderBrush="{TemplateBinding BorderBrush}" 
                                 Background="{TemplateBinding Background}"                                          
                                 Margin="0 0 0 0">
-									<!--<dragablzThemes:Ripple HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch">-->
-									<Grid>
-										<Grid.ColumnDefinitions>
-											<ColumnDefinition Width="*" />
-											<ColumnDefinition Width="Auto" />
-										</Grid.ColumnDefinitions>
-										<ContentPresenter Content="{TemplateBinding ContentControl.Content}" ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}" HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+                                    <!--<dragablzThemes:Ripple HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch">-->
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <ContentPresenter Content="{TemplateBinding ContentControl.Content}" ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}" HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
                                                       x:Name="contentPresenter"                                                                                            
                                                       Margin="{TemplateBinding Control.Padding}"
                                                       Opacity=".87"/>
-										<Thumb Grid.Column="0" HorizontalAlignment="Stretch" VerticalContentAlignment="Stretch" 
+                                        <Thumb Grid.Column="0" HorizontalAlignment="Stretch" VerticalContentAlignment="Stretch" 
                                            x:Name="PART_Thumb"
                                            Style="{StaticResource MaterialDesignInvisibleThumbStyle}" />
-										<Button Grid.Column="1"
+                                        <Button Grid.Column="1"
                                             Style="{StaticResource MaterialDesignCloseItemCommandButtonStyle}"                                            
                                             Command="{x:Static dragablz:TabablzControl.CloseItemCommand}"
                                             CommandParameter="{Binding RelativeSource={RelativeSource TemplatedParent}}">
-											<Button.Visibility>
-												<MultiBinding Converter="{StaticResource ShowDefaultCloseButtonConverter}">
-													<Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type dragablz:TabablzControl}}" Path="ShowDefaultCloseButton" />
-													<Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type dragablz:TabablzControl}}" Path="FixedHeaderCount" />
-													<Binding RelativeSource="{RelativeSource TemplatedParent}" Path="LogicalIndex" />
-												</MultiBinding>
-											</Button.Visibility>
-										</Button>
-									</Grid>
-									<!--</dragablzThemes:Ripple>-->
-								</Border>
-								<Border x:Name="SelectionHighlightBorder" Background="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(dragablzThemes:MaterialDesignAssist.IndicatorBrush)}" Height="2"
+                                            <Button.Visibility>
+                                                <MultiBinding Converter="{StaticResource ShowDefaultCloseButtonConverter}">
+                                                    <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type dragablz:TabablzControl}}" Path="ShowDefaultCloseButton" />
+                                                    <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type dragablz:TabablzControl}}" Path="FixedHeaderCount" />
+                                                    <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="LogicalIndex" />
+                                                </MultiBinding>
+                                            </Button.Visibility>
+                                        </Button>
+                                    </Grid>
+                                    <!--</dragablzThemes:Ripple>-->
+                                </Border>
+                                <Border x:Name="SelectionHighlightBorder" Background="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(dragablzThemes:MaterialDesignAssist.IndicatorBrush)}" Height="2"
                                 Grid.Row="1"
                                 Visibility="Hidden"/>
-							</Grid>
-							<ControlTemplate.Triggers>
-								<Trigger Property="dragablz:TabablzControl.IsWrappingTabItem" Value="True">
-									<Setter TargetName="contentPresenter" Property="Content" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.Header}" />
-								</Trigger>
-								<Trigger Property="IsSelected" Value="True">
-									<Setter TargetName="contentPresenter" Property="Opacity" Value="1"/>
-									<Setter Property="Background" Value="{StaticResource PrimaryHueMidBrush}" />
-									<Setter Property="Foreground" Value="White" />
-									<Setter TargetName="SelectionHighlightBorder" Property="Visibility" Value="Visible" />
-								</Trigger>
-							</ControlTemplate.Triggers>
-						</ControlTemplate>
-					</Setter.Value>
-				</Setter>
-			</Style>
-			
-			<!--#region Disable Dragablz tab ripple, shadow and change colors -->
-			<Style x:Key="MaterialDesignTabablzControlStyle" TargetType="{x:Type dragablz:TabablzControl}" BasedOn="{StaticResource MaterialDesignTabablzControlStyle}">
-				<Setter Property="BorderBrush" Value="White" />
-				<Setter Property="ItemContainerStyle" Value="{StaticResource CMaterialDesignDragableTabItemStyle}" />
-				<Setter Property="Template">
-					<Setter.Value>
-						<ControlTemplate TargetType="{x:Type dragablz:TabablzControl}">
-							<Grid x:Name="templateRoot" ClipToBounds="true" SnapsToDevicePixels="true" KeyboardNavigation.TabNavigation="Local">
-								<Grid.RowDefinitions>
-									<RowDefinition x:Name="RowDefinition0" Height="Auto"/>
-									<RowDefinition x:Name="RowDefinition1" Height="*"/>
-								</Grid.RowDefinitions>
-								<Border x:Name="contentPanel" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.Column="0" KeyboardNavigation.DirectionalNavigation="Contained" Grid.Row="1" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local"
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="dragablz:TabablzControl.IsWrappingTabItem" Value="True">
+                                    <Setter TargetName="contentPresenter" Property="Content" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.Header}" />
+                                </Trigger>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter TargetName="contentPresenter" Property="Opacity" Value="1"/>
+                                    <Setter Property="Background" Value="{StaticResource PrimaryHueMidBrush}" />
+                                    <Setter Property="Foreground" Value="White" />
+                                    <Setter TargetName="SelectionHighlightBorder" Property="Visibility" Value="Visible" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!--#region Disable Dragablz tab ripple, shadow and change colors -->
+            <Style x:Key="MaterialDesignTabablzControlStyle" TargetType="{x:Type dragablz:TabablzControl}" BasedOn="{StaticResource MaterialDesignTabablzControlStyle}">
+                <Setter Property="BorderBrush" Value="White" />
+                <Setter Property="ItemContainerStyle" Value="{StaticResource CMaterialDesignDragableTabItemStyle}" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type dragablz:TabablzControl}">
+                            <Grid x:Name="templateRoot" ClipToBounds="true" SnapsToDevicePixels="true" KeyboardNavigation.TabNavigation="Local">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition x:Name="RowDefinition0" Height="Auto"/>
+                                    <RowDefinition x:Name="RowDefinition1" Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Border x:Name="contentPanel" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.Column="0" KeyboardNavigation.DirectionalNavigation="Contained" Grid.Row="1" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local"
                                 Margin="0 -1 0 0">
-									<Grid x:Name="PART_ItemsHolder" />
-								</Border>
-								<Grid Grid.Column="0" Grid.Row="0" x:Name="HeaderContainerGrid">
-									<Grid.Resources>
-										<Style TargetType="{x:Type Button}" BasedOn="{StaticResource StandardEmbeddedButtonStyle}"></Style>
-									</Grid.Resources>
-									<Grid.ColumnDefinitions>
-										<ColumnDefinition Width="Auto" />
-										<ColumnDefinition Width="Auto" />
-										<ColumnDefinition Width="Auto" />
-										<ColumnDefinition Width="*" />
-									</Grid.ColumnDefinitions>
-									<!--<Border Background="{TemplateBinding BorderBrush}" Grid.ColumnSpan="4">
+                                    <Grid x:Name="PART_ItemsHolder" />
+                                </Border>
+                                <Grid Grid.Column="0" Grid.Row="0" x:Name="HeaderContainerGrid">
+                                    <Grid.Resources>
+                                        <Style TargetType="{x:Type Button}" BasedOn="{StaticResource StandardEmbeddedButtonStyle}"></Style>
+                                    </Grid.Resources>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <!--<Border Background="{TemplateBinding BorderBrush}" Grid.ColumnSpan="4">
 										<Border.Effect>
 											<DropShadowEffect BlurRadius="5" ShadowDepth="3" Direction="270" Opacity="1" />
 										</Border.Effect>
 									</Border>-->
-									<ContentControl Grid.Column="0" x:Name="PrefixContentControl" 
+                                    <ContentControl Grid.Column="0" x:Name="PrefixContentControl" 
                                             Content="{TemplateBinding HeaderPrefixContent}"
                                             ContentStringFormat="{TemplateBinding HeaderPrefixContentStringFormat}"
                                             ContentTemplate="{TemplateBinding HeaderPrefixContentStringFormat}"
                                             ContentTemplateSelector="{TemplateBinding HeaderPrefixContentTemplateSelector}"/>
-									<dragablz:DragablzItemsControl x:Name="PART_HeaderItemsControl"                                                         
+                                    <dragablz:DragablzItemsControl x:Name="PART_HeaderItemsControl"                                                         
                                                            Grid.Column="1"
                                                            FixedItemCount="{TemplateBinding FixedHeaderCount}"
                                                            ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Items}"                                                                                                            
@@ -143,107 +154,107 @@
                                                            KeyboardNavigation.TabIndex="1" Panel.ZIndex="1"
                                                            ItemTemplate="{TemplateBinding HeaderItemTemplate}"
                                                            Style="{StaticResource TabablzDragablzItemsControlStyle}">
-										<dragablz:DragablzItemsControl.MaxWidth>
-											<MultiBinding>
-												<MultiBinding.Converter>
-													<dragablz:TabablzHeaderSizeConverter Orientation="Horizontal"/>
-												</MultiBinding.Converter>
-												<Binding RelativeSource="{RelativeSource TemplatedParent}" Path="ActualWidth" />
-												<Binding RelativeSource="{RelativeSource Self}" Path="ItemsPresenterWidth" />
-												<Binding ElementName="PrefixContentControl" Path="ActualWidth" />
-												<Binding ElementName="DefaultAddButton" Path="DesiredSize.Width" />
-												<Binding ElementName="SuffixContentControl" Path="DesiredSize.Width" />
-											</MultiBinding>
-										</dragablz:DragablzItemsControl.MaxWidth>
-									</dragablz:DragablzItemsControl>
-									<Button Style="{StaticResource MaterialDesignAddItemCommandButtonStyle}"
+                                        <dragablz:DragablzItemsControl.MaxWidth>
+                                            <MultiBinding>
+                                                <MultiBinding.Converter>
+                                                    <dragablz:TabablzHeaderSizeConverter Orientation="Horizontal"/>
+                                                </MultiBinding.Converter>
+                                                <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="ActualWidth" />
+                                                <Binding RelativeSource="{RelativeSource Self}" Path="ItemsPresenterWidth" />
+                                                <Binding ElementName="PrefixContentControl" Path="ActualWidth" />
+                                                <Binding ElementName="DefaultAddButton" Path="DesiredSize.Width" />
+                                                <Binding ElementName="SuffixContentControl" Path="DesiredSize.Width" />
+                                            </MultiBinding>
+                                        </dragablz:DragablzItemsControl.MaxWidth>
+                                    </dragablz:DragablzItemsControl>
+                                    <Button Style="{StaticResource MaterialDesignAddItemCommandButtonStyle}"
                                     x:Name="DefaultAddButton"
                                     Grid.Column="2"
                                     Command="{x:Static dragablz:TabablzControl.AddItemCommand}"
                                     Visibility="{TemplateBinding ShowDefaultAddButton, Converter={StaticResource BooleanToVisibilityConverter}}"
                                     />
-									<ContentControl Grid.Column="3" x:Name="SuffixContentControl" 
+                                    <ContentControl Grid.Column="3" x:Name="SuffixContentControl" 
                                             Content="{TemplateBinding HeaderSuffixContent}"
                                             ContentStringFormat="{TemplateBinding HeaderSuffixContentStringFormat}"
                                             ContentTemplate="{TemplateBinding HeaderSuffixContentStringFormat}"
                                             ContentTemplateSelector="{TemplateBinding HeaderSuffixContentTemplateSelector}"
                                             HorizontalAlignment="Stretch"
                                             />
-								</Grid>
-							</Grid>
-							<ControlTemplate.Triggers>
-								<Trigger Property="TabStripPlacement" Value="Bottom">
-									<Setter Property="Grid.Row" TargetName="PART_HeaderItemsControl" Value="1"/>
-									<Setter Property="Grid.Row" TargetName="contentPanel" Value="0"/>
-									<Setter Property="Height" TargetName="RowDefinition0" Value="*"/>
-									<Setter Property="Height" TargetName="RowDefinition1" Value="Auto"/>
-								</Trigger>
-								<Trigger Property="IsEnabled" Value="false">
-									<Setter Property="TextElement.Foreground" TargetName="templateRoot" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
-								</Trigger>
-								<Trigger Property="IsDraggingWindow" Value="True">
-									<Setter TargetName="DefaultAddButton" Property="Visibility" Value="Hidden" />
-								</Trigger>
-							</ControlTemplate.Triggers>
-						</ControlTemplate>
-					</Setter.Value>
-				</Setter>
-			</Style>
-			<!--#endregion-->
-			
-			<!--#region ListBox disable ripple and mouseover animation & change colors-->
-			<Style TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource MaterialDesignListBoxItem}">
-				<Setter Property="Template">
-					<Setter.Value>
-						<ControlTemplate TargetType="{x:Type ListBoxItem}">
-							<Border Background="{TemplateBinding Background}"
+                                </Grid>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="TabStripPlacement" Value="Bottom">
+                                    <Setter Property="Grid.Row" TargetName="PART_HeaderItemsControl" Value="1"/>
+                                    <Setter Property="Grid.Row" TargetName="contentPanel" Value="0"/>
+                                    <Setter Property="Height" TargetName="RowDefinition0" Value="*"/>
+                                    <Setter Property="Height" TargetName="RowDefinition1" Value="Auto"/>
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter Property="TextElement.Foreground" TargetName="templateRoot" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                                </Trigger>
+                                <Trigger Property="IsDraggingWindow" Value="True">
+                                    <Setter TargetName="DefaultAddButton" Property="Visibility" Value="Hidden" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <!--#endregion-->
+
+            <!--#region ListBox disable ripple and mouseover animation & change colors-->
+            <Style TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource MaterialDesignListBoxItem}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                            <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             Margin="{TemplateBinding Margin}"
                             ClipToBounds="{TemplateBinding ClipToBounds}">
-								<VisualStateManager.VisualStateGroups>
-									<VisualStateGroup Name="CommonStates">
-										<VisualState Name="Normal"/>
-										<VisualState Name="MouseOver">
-											<Storyboard>
-												<DoubleAnimation Storyboard.TargetName="MouseOverBorder" Storyboard.TargetProperty="Opacity"
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup Name="CommonStates">
+                                        <VisualState Name="Normal"/>
+                                        <VisualState Name="MouseOver">
+                                            <Storyboard>
+                                                <DoubleAnimation Storyboard.TargetName="MouseOverBorder" Storyboard.TargetProperty="Opacity"
                                                              To="0.1" Duration="0"/>
-											</Storyboard>
-										</VisualState>
-										<VisualState Name="Disabled"/>
-									</VisualStateGroup>
-									<VisualStateGroup Name="SelectionStates">
-										<VisualState Name="Selected">
-											<Storyboard>
-												<DoubleAnimation Storyboard.TargetName="SelectedBorder"
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState Name="Disabled"/>
+                                    </VisualStateGroup>
+                                    <VisualStateGroup Name="SelectionStates">
+                                        <VisualState Name="Selected">
+                                            <Storyboard>
+                                                <DoubleAnimation Storyboard.TargetName="SelectedBorder"
                                                          Storyboard.TargetProperty="Opacity"
                                                          To="1" Duration="0"/>
-											</Storyboard>
-										</VisualState>
-										<VisualState Name="Unselected"/>
-										<VisualState Name="SelectedUnfocused">
-											<Storyboard>
-												<DoubleAnimation Storyboard.TargetName="SelectedBorder"
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState Name="Unselected"/>
+                                        <VisualState Name="SelectedUnfocused">
+                                            <Storyboard>
+                                                <DoubleAnimation Storyboard.TargetName="SelectedBorder"
                                                          Storyboard.TargetProperty="Opacity"
                                                          To="0.8" Duration="0"/>
-											</Storyboard>
-										</VisualState>
-									</VisualStateGroup>
-								</VisualStateManager.VisualStateGroups>
-								<Grid>
-									<Border x:Name="MouseOverBorder"
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <Grid>
+                                    <Border x:Name="MouseOverBorder"
                                     Opacity="0"
                                     Background="{TemplateBinding Foreground, Converter={StaticResource BrushRoundConverter}}"/>
 
-									<Border x:Name="SelectedBorder"
+                                    <Border x:Name="SelectedBorder"
                                     Opacity="0"
                                     Background="{StaticResource PrimaryHueMidBrush}"
                                     RenderTransformOrigin="0.5,0.5">
-										<Border.RenderTransform>
-											<ScaleTransform ScaleX="1"/>
-										</Border.RenderTransform>
-									</Border>
-									<wpf:Ripple Feedback="{StaticResource PrimaryHueMidBrush}"
+                                        <Border.RenderTransform>
+                                            <ScaleTransform ScaleX="1"/>
+                                        </Border.RenderTransform>
+                                    </Border>
+                                    <wpf:Ripple Feedback="{StaticResource PrimaryHueMidBrush}"
                                         Focusable="False"
                                         Content="{TemplateBinding Content}"
                                         ContentTemplate="{TemplateBinding ContentTemplate}"
@@ -252,90 +263,90 @@
                                         HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" 
                                         VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
                                         Padding="{TemplateBinding Padding}"/>
-								</Grid>
-							</Border>
-							<ControlTemplate.Triggers>
-								<Trigger Property="IsSelected" Value="True">
-									<Setter Property="Foreground" Value="White" />
-								</Trigger>
-								<Trigger Property="IsEnabled" Value="False">
-									<Setter Property="Opacity" Value=".56" />
-								</Trigger>
-							</ControlTemplate.Triggers>
-						</ControlTemplate>
-					</Setter.Value>
-				</Setter>
-			</Style>
-			<!--#endregion-->
-			
-			<!--#region ComboBox disable mouseover animation-->
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Foreground" Value="White" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter Property="Opacity" Value=".56" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <!--#endregion-->
 
-			<ControlTemplate x:Key="CMaterialDesignComboBoxItemTemplate" TargetType="{x:Type ComboBoxItem}">
-				<Grid x:Name="GridWrapper">
-					<VisualStateManager.VisualStateGroups>
-						<VisualStateGroup Name="CommonStates">
-							<VisualStateGroup.Transitions>
-								<VisualTransition GeneratedDuration="0:0:0.3" To="Normal">
-									<VisualTransition.GeneratedEasingFunction>
-										<CircleEase EasingMode="EaseOut" />
-									</VisualTransition.GeneratedEasingFunction>
-								</VisualTransition>
-							</VisualStateGroup.Transitions>
-							<VisualState Name="Normal" />
-							<VisualState Name="MouseOver">
-								<Storyboard>
-									<DoubleAnimation Duration="0"
+            <!--#region ComboBox disable mouseover animation-->
+
+            <ControlTemplate x:Key="CMaterialDesignComboBoxItemTemplate" TargetType="{x:Type ComboBoxItem}">
+                <Grid x:Name="GridWrapper">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup Name="CommonStates">
+                            <VisualStateGroup.Transitions>
+                                <VisualTransition GeneratedDuration="0:0:0.3" To="Normal">
+                                    <VisualTransition.GeneratedEasingFunction>
+                                        <CircleEase EasingMode="EaseOut" />
+                                    </VisualTransition.GeneratedEasingFunction>
+                                </VisualTransition>
+                            </VisualStateGroup.Transitions>
+                            <VisualState Name="Normal" />
+                            <VisualState Name="MouseOver">
+                                <Storyboard>
+                                    <DoubleAnimation Duration="0"
                                              Storyboard.TargetName="MouseOverBorder"
                                              Storyboard.TargetProperty="Opacity"
                                              To="0.1" />
-								</Storyboard>
-							</VisualState>
-						</VisualStateGroup>
-						<VisualStateGroup Name="SelectionStates">
-							<VisualStateGroup.Transitions>
-								<VisualTransition GeneratedDuration="0:0:0.3" />
-							</VisualStateGroup.Transitions>
-							<VisualState Name="Selected">
-								<Storyboard>
-									<DoubleAnimation Duration="0"
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup Name="SelectionStates">
+                            <VisualStateGroup.Transitions>
+                                <VisualTransition GeneratedDuration="0:0:0.3" />
+                            </VisualStateGroup.Transitions>
+                            <VisualState Name="Selected">
+                                <Storyboard>
+                                    <DoubleAnimation Duration="0"
                                              Storyboard.TargetName="SelectedBorder"
                                              Storyboard.TargetProperty="Opacity"
                                              To="0.18" />
-								</Storyboard>
-							</VisualState>
-							<VisualState Name="Unselected" />
-						</VisualStateGroup>
-						<VisualStateGroup Name="FocusStates">
-							<VisualState Name="Focused">
-								<Storyboard>
-									<DoubleAnimation Duration="0"
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState Name="Unselected" />
+                        </VisualStateGroup>
+                        <VisualStateGroup Name="FocusStates">
+                            <VisualState Name="Focused">
+                                <Storyboard>
+                                    <DoubleAnimation Duration="0"
                                              Storyboard.TargetName="MouseOverBorder"
                                              Storyboard.TargetProperty="Opacity"
                                              To="0.1" />
-								</Storyboard>
-							</VisualState>
-							<VisualState Name="Unfocused" />
-						</VisualStateGroup>
-					</VisualStateManager.VisualStateGroups>
-					<Border x:Name="BackBorder"
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState Name="Unfocused" />
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    <Border x:Name="BackBorder"
                     Background="{TemplateBinding Background}"
                     BorderBrush="{TemplateBinding BorderBrush}"
                     BorderThickness="{TemplateBinding BorderThickness}"
                     SnapsToDevicePixels="true" />
 
-					<Border x:Name="MouseOverBorder"
+                    <Border x:Name="MouseOverBorder"
                     Background="{TemplateBinding Foreground,
                                                  Converter={StaticResource BrushRoundConverter}}"
                     BorderBrush="{TemplateBinding BorderBrush}"
                     BorderThickness="{TemplateBinding BorderThickness}"
                     Opacity="0"
                     SnapsToDevicePixels="true" />
-					<Border x:Name="SelectedBorder"
+                    <Border x:Name="SelectedBorder"
                     Background="{TemplateBinding Foreground,
                                                  Converter={StaticResource BrushRoundConverter}}"
                     Opacity="0"
                     RenderTransformOrigin="0.5,0.5" />
-					<wpf:Ripple HorizontalAlignment="Stretch"
+                    <wpf:Ripple HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch"
                         HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                         VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -347,71 +358,71 @@
                         Focusable="False"
                         Padding="{TemplateBinding Padding}"
                         SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-				</Grid>
-				<ControlTemplate.Triggers>
-					<Trigger Property="IsEnabled" Value="False">
-						<Setter TargetName="GridWrapper" Property="Opacity" Value="0.56" />
-					</Trigger>
-					<MultiTrigger>
-						<MultiTrigger.Conditions>
-							<Condition Property="Tag" Value="1.0" />
-							<Condition Property="IsSelected" Value="True" />
-						</MultiTrigger.Conditions>
-						<Setter Property="Height" Value="0"/>
-					</MultiTrigger>
-				</ControlTemplate.Triggers>
-			</ControlTemplate>
+                </Grid>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsEnabled" Value="False">
+                        <Setter TargetName="GridWrapper" Property="Opacity" Value="0.56" />
+                    </Trigger>
+                    <MultiTrigger>
+                        <MultiTrigger.Conditions>
+                            <Condition Property="Tag" Value="1.0" />
+                            <Condition Property="IsSelected" Value="True" />
+                        </MultiTrigger.Conditions>
+                        <Setter Property="Height" Value="0"/>
+                    </MultiTrigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
 
-			<Style x:Key="CMaterialDesignComboBoxItemSelectedCollapsedStyle" TargetType="{x:Type ComboBoxItem}">
-				<Setter Property="SnapsToDevicePixels" Value="True" />
-				<Setter Property="Padding" Value="16 8" />
-				<Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
-				<Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
-				<Setter Property="Background" Value="Transparent" />
-				<Setter Property="BorderBrush" Value="Transparent" />
-				<Setter Property="BorderThickness" Value="0" />
-				<Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
-				<Setter Property="Template" Value="{StaticResource CMaterialDesignComboBoxItemTemplate}" />
-				<Setter Property="Tag" Value="1.0" />
-			</Style>
+            <Style x:Key="CMaterialDesignComboBoxItemSelectedCollapsedStyle" TargetType="{x:Type ComboBoxItem}">
+                <Setter Property="SnapsToDevicePixels" Value="True" />
+                <Setter Property="Padding" Value="16 8" />
+                <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+                <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="BorderBrush" Value="Transparent" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
+                <Setter Property="Template" Value="{StaticResource CMaterialDesignComboBoxItemTemplate}" />
+                <Setter Property="Tag" Value="1.0" />
+            </Style>
 
-			<Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource MaterialDesignComboBox}">
-				<Setter Property="ItemContainerStyle" Value="{StaticResource CMaterialDesignComboBoxItemSelectedCollapsedStyle}" />
-			</Style>
-			<!--#endregion-->
-			
-			<!-- Disable flat button corner rounding-->
-			<Style x:Key="MaterialDesignFlatButtonNoRounding" TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFlatButton}">
-				<Setter Property="Template">
-					<Setter.Value>
-						<ControlTemplate TargetType="{x:Type Button}">
-							<Grid>
-								<Border Background="{TemplateBinding Background}" x:Name="border" CornerRadius="0">
-									<wpf:Ripple Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Focusable="False"    
+            <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource MaterialDesignComboBox}">
+                <Setter Property="ItemContainerStyle" Value="{StaticResource CMaterialDesignComboBoxItemSelectedCollapsedStyle}" />
+            </Style>
+            <!--#endregion-->
+
+            <!-- Disable flat button corner rounding-->
+            <Style x:Key="MaterialDesignFlatButtonNoRounding" TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignFlatButton}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid>
+                                <Border Background="{TemplateBinding Background}" x:Name="border" CornerRadius="0">
+                                    <wpf:Ripple Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Focusable="False"    
                                         HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" 
                                         VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
                                         Padding="{TemplateBinding Padding}" 
                                         SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-								</Border>
-							</Grid>
-							<ControlTemplate.Triggers>
-								<Trigger Property="IsDefaulted" Value="true">
-									<!--Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/-->
-								</Trigger>
-								<Trigger Property="IsMouseOver" Value="true">
-									<Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource MaterialDesignFlatButtonClick}" />
-									<Setter Property="Background" TargetName="border" Value="{DynamicResource MaterialDesignFlatButtonClick}" />
-								</Trigger>
-								<Trigger Property="IsEnabled" Value="false">
-									<Setter Property="Opacity" Value="0.23"/>
-								</Trigger>
-							</ControlTemplate.Triggers>
-						</ControlTemplate>
-					</Setter.Value>
-				</Setter>
-			</Style>
+                                </Border>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsDefaulted" Value="true">
+                                    <!--Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/-->
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource MaterialDesignFlatButtonClick}" />
+                                    <Setter Property="Background" TargetName="border" Value="{DynamicResource MaterialDesignFlatButtonClick}" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter Property="Opacity" Value="0.23"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
 
 
-		</ResourceDictionary>
-	</Application.Resources>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

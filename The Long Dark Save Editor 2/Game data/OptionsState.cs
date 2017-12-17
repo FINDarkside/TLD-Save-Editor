@@ -5,11 +5,11 @@ using The_Long_Dark_Save_Editor_2.Helpers;
 
 namespace The_Long_Dark_Save_Editor_2.Game_data
 {
-    public class OptionsState
+    public class ProfileState
     {
-        public List<string> m_RewiredKeyboardMap;
+        public List<string> m_RewiredKeyboardMap = new List<string>();
         public List<string> m_RewiredMouseMap = new List<string>();
-        public List<SandBoxRecord> m_SandboxRecords; //SandboxRecord
+        public List<SandboxRecord> m_SandboxRecords = new List<SandboxRecord>();
         public List<UpSell> m_UpsellsViewed = new List<UpSell>();
         public int m_Version;
         public bool m_ShowTimeOfDaySlider;
@@ -20,12 +20,14 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_VoiceVolume;
         public int m_QualityLevel;
         public GraphicsMode m_GraphicsMode;
+        public int m_DisplayNumber;
         public Resolution m_Resolution;
         public bool m_SSAOEnabled;
         public MeasurementUnits m_Units;
         public HudPref m_HudPref;
         public bool m_InvertY;
         public bool m_InvertX;
+        public bool m_LockMouseToScreen;
         public bool m_EnableGamepad;
         [Obsolete("Use m_MouseSensitivityPercentage instead")]
         public float[] m_MouseSensitivity;
@@ -39,10 +41,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_ConsoleUnlocked;
         public float m_FieldOfView;
         public int m_NumGamesPlayed;
-        public bool m_ToggleRun;
         public VoicePersona m_VoicePersona;
         public GameRegion m_StartRegion;
-        public bool m_TwelveHourClock;
         public Dictionary<string, string> m_KeyBindings;
         public bool m_VsyncEnabled;
         public SubtitlesState m_SubtitlesState;
@@ -56,8 +56,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_HasSeenIntroVideo;
         public bool m_NoResumeSave;
         public string m_AllTimeStats;
-        public bool m_HasDoneWorldExploreCheck;
-        public bool m_HasDoneWorldExploreCheckXbox;
         public float m_BestTimeHunted;
         public float m_BestTimeRescue;
         public float m_BestTimeWhiteout;
@@ -65,11 +63,17 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_BestTimeHunted2;
         public ExperienceModeType m_MostRecentSandboxMode;
         public ExperienceModeType m_MostRecentChallengeMode;
+        public ExperienceModeType m_MostRecentEpisodeMode;
         public float m_Brightness;
         public bool m_DoneBrightnessAdjustment;
         public List<string> m_UnlockedBadgesViewed;
+        public HashSet<string> m_CinematicsViewed;
         public string m_FeatsSerialized;
-
+        public string m_EpisodeManagerSerialized;
+        public string m_QualityLevelSettingsSerialized;
+        public bool m_DisableClickHold;
+        public int m_AutosaveMinutes;
+        public string m_NewGameCustomModeString;
         [Serializable]
         public class MaineMenuViewedState
         {

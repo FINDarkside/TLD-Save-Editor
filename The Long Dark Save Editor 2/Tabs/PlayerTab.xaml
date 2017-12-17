@@ -18,13 +18,17 @@
         <converters:RegionMapExistsConverter x:Key="RegionMapExistsConverter" />
         <System:Double x:Key="double100">100</System:Double>
     </UserControl.Resources>
-
+    
     <StackPanel Margin="10 10">
         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
             <Label Width="130" Content="{x:Static p:Resources.ExperienceMode}"/>
             <ComboBox Margin="10 0 0 0" ItemsSource="{Binding Source={helpers:EnumerationExtension {x:Type gameData:ExperienceModeType}}}" 
                       DisplayMemberPath="Description" SelectedValue="{Binding CurrentSave.Global.ExperienceModeManager.m_CurrentModeType}"  
                       SelectedValuePath="Value"  Width="160" SelectedIndex="0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0 0 0 5" Style="{StaticResource HideIfNotCustomDifficulty}">
+            <Label Width="130" Content="Custom mode"/>
+            <TextBox Width="250" Text="{Binding CurrentSave.Global.ExperienceModeManager.m_CustomModeString}"/>
         </StackPanel>
         <StackPanel Margin="0 0 0 10" Orientation="Horizontal">
             <Label Width="130" Content="{x:Static p:Resources.Region}"/>
@@ -42,11 +46,11 @@
             <StackPanel Margin="0 0 0 0" Orientation="Horizontal">
                 <Label Width="100" Content="{x:Static p:Resources.Position}" HorizontalAlignment="Left"/>
                 <Label Width="40">X</Label>
-                <TextBox Width="150" Text="{Binding CurrentSave.Global.PlayerManager.m_SaveGamePosition[0]}"/>
+                <TextBox Width="250" Text="{Binding CurrentSave.Global.PlayerManager.m_SaveGamePosition[0]}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="100 5 0 0">
                 <Label Width="40">Y</Label>
-                <TextBox Width="150" Text="{Binding CurrentSave.Global.PlayerManager.m_SaveGamePosition[2]}"/>
+                <TextBox Width="250" Text="{Binding CurrentSave.Global.PlayerManager.m_SaveGamePosition[2]}"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
@@ -64,7 +68,7 @@
 
         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
             <Label VerticalAlignment="Center" Width="130" Content="{x:Static p:Resources.CurrentCalories}"/>
-            <TextBox Text="{Binding CurrentSave.Global.Hunger.m_CurrentReserveCaloriesProxy}"  Width="150"></TextBox>
+            <TextBox Text="{Binding CurrentSave.Global.Hunger.m_CurrentReserveCaloriesProxy}"  Width="250"></TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
             <Label Width="130" Content="{x:Static p:Resources.Thirst}"/>

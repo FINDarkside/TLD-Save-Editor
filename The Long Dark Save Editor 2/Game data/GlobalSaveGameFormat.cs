@@ -38,6 +38,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_BurnsSerialized { get; set; }
         public string m_BurnsElectricSerialized { get; set; }
         public string m_BloodLossSerialized { get; set; }
+        public string m_BrokenRibSerialized { get; set; }
         public string m_InfectionSerialized { get; set; }
         public string m_InfectionRiskSerialized { get; set; }
         public string m_LogSerialized { get; set; }
@@ -107,7 +108,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public EmergencyStimParams EmergencyStim { get; set; }
         public MusicEventSaveData MusicEventManager { get; set; }
         public SnowfallManagerSaveDataProxy SnowPatchManager { get; set; }
-        public PlayerAnimationSaveData PlayerAnimation { get; set; }
+        public SerializedParams PlayerAnimation { get; set; }
         public SkillsManager SkillsManager { get; set; }
         public ObservableCollection<string> UnlockedCompanions { get; set; }
         public FeatEnabledTrackerSaveData EnabledFeats { get; set; }
@@ -164,7 +165,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             EmergencyStim = Util.DeserializeObject<EmergencyStimParams>(proxy.m_EmergencyStimSerialized);
             MusicEventManager = Util.DeserializeObject<MusicEventSaveData>(proxy.m_MusicEventManagerSerialized);
             SnowPatchManager = Util.DeserializeObject<SnowfallManagerSaveDataProxy>(proxy.m_SnowPatchManagerSerialized);
-            PlayerAnimation = Util.DeserializeObject<PlayerAnimationSaveData>(proxy.m_PlayerAnimationSerialized);
+            PlayerAnimation = Util.DeserializeObject<SerializedParams>(proxy.m_PlayerAnimationSerialized);
             SkillsManager = new SkillsManager(proxy.m_SkillsManagerSerialized);
             UnlockedCompanions = Util.DeserializeObject<ObservableCollection<string>>(proxy.m_LockCompanionsSerialized);
             EnabledFeats = Util.DeserializeObject<FeatEnabledTrackerSaveData>(proxy.m_FeatsEnabledSerialized);

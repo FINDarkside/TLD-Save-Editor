@@ -204,7 +204,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         CabinFeverRisk,
         [Description("Frostbite risk")]
         FrostbiteRisk,
-        BurnsElectric // TODO Add affliction
+        BurnsElectric,
+        BrokenRib
     }
 
     public enum ExperienceModeType
@@ -219,7 +220,10 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         ChallengeNomad,
         ChallengeHuntedPart2,
         Interloper,
-        //NUM_MODES,
+        Custom,
+        StoryFresh,
+        StoryHardened,
+        NUM_MODES,
     }
 
     public enum StatID
@@ -287,6 +291,12 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         IntestinalParasites,
         Frostbite,
         HoursInMarshRegion,
+        HoursInTracksRegion,
+        BrokenRib,
+        EpisodeProgress,
+        HoursInMountainTownRegion,
+        MooseEncountersSurvived,
+        MooseKilled,
         NumStats,
     }
 
@@ -301,14 +311,14 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     {
         LakeRegion,
         CoastalRegion,
-        RuralRegion,
         WhalingStationRegion,
+        RuralRegion,
         CrashMountainRegion,
         MarshRegion,
         RandomRegion,
         FutureRegion,
         MountainTownRegion,
-        TracksRegion
+        TracksRegion,
     }
 
     public enum UpSell
