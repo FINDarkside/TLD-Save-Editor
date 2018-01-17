@@ -1374,4 +1374,16 @@
   <data name="GEAR_BookMending" xml:space="preserve">
     <value>A Sewing Primer</value>
   </data>
+  <data name="GEAR_MooseHideDried" xml:space="preserve">
+    <value>Cured Moose Hide</value>
+  </data>
+  <data name="GEAR_MooseHideBag" xml:space="preserve">
+    <value>Moose-Hide Satchel</value>
+  </data>
+  <data name="GEAR_MooseHideCloak" xml:space="preserve">
+    <value>Moose-Hide Cloak</value>
+  </data>
+  <data name="GEAR_MooseHide" xml:space="preserve">
+    <value>Fresh Moose Hide</value>
+  </data>
 </root>

@@ -19,7 +19,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -2469,6 +2469,42 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_Mittens {
             get {
                 return ResourceManager.GetString("GEAR_Mittens", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fresh Moose Hide.
+        /// </summary>
+        public static string GEAR_MooseHide {
+            get {
+                return ResourceManager.GetString("GEAR_MooseHide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moose-Hide Satchel.
+        /// </summary>
+        public static string GEAR_MooseHideBag {
+            get {
+                return ResourceManager.GetString("GEAR_MooseHideBag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moose-Hide Cloak.
+        /// </summary>
+        public static string GEAR_MooseHideCloak {
+            get {
+                return ResourceManager.GetString("GEAR_MooseHideCloak", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cured Moose Hide.
+        /// </summary>
+        public static string GEAR_MooseHideDried {
+            get {
+                return ResourceManager.GetString("GEAR_MooseHideDried", resourceCulture);
             }
         }
         

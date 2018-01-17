@@ -1374,4 +1374,16 @@
   <data name="GEAR_BookMending" xml:space="preserve">
     <value>Шитье для начинающих</value>
   </data>
+  <data name="GEAR_MooseHideDried" xml:space="preserve">
+    <value>Высушенная лосиная шкура</value>
+  </data>
+  <data name="GEAR_MooseHideBag" xml:space="preserve">
+    <value>Сумка из лосиной шкуры</value>
+  </data>
+  <data name="GEAR_MooseHideCloak" xml:space="preserve">
+    <value>Плащ из лосиной шкуры</value>
+  </data>
+  <data name="GEAR_MooseHide" xml:space="preserve">
+    <value>Fresh Moose Hide</value>
+  </data>
 </root>

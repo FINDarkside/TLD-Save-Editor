@@ -117,6 +117,9 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_WillToque", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
             AddItemInfo("GEAR_WillPants", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
             AddItemInfo("GEAR_GreyMotherBoots", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+            AddItemInfo("GEAR_MooseHideCloak", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+            AddItemInfo("GEAR_MooseHideBag", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+
 
             // Food
             AddItemInfo("GEAR_BeefJerky", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 350}}");
@@ -266,7 +269,8 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_WolfPelt", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_WolfPeltDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_PaperStack", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-
+            AddItemInfo("GEAR_MooseHideDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_MooseHide", ItemCategory.Materials, @"{""EvolveItem"": {}}");
 
             // Books
             AddItemInfo("GEAR_BookCarcassHarvesting", ItemCategory.Books, @"{""ResearchItem"": {}}");
