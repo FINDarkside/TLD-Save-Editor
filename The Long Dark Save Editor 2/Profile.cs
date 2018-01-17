@@ -11,7 +11,7 @@ namespace The_Long_Dark_Save_Editor_2
     {
         public string path;
 
-        public ProfileState proxy { get; set; }
+        public ProfileState Proxy { get; set; }
         public string FeatsSerialized { get; set; }
 
         public FeatsManager Feats { get; set; }
@@ -76,19 +76,18 @@ namespace The_Long_Dark_Save_Editor_2
 
             #endregion
 
-            var proxy = Util.DeserializeObject<ProfileState>(json);
-            if (proxy == null)
+            Proxy = Util.DeserializeObject<ProfileState>(json);
+            if (Proxy == null)
                 return;
 
-            Feats = new FeatsManager(proxy.m_FeatsSerialized);
+            Feats = new FeatsManager(Proxy.m_FeatsSerialized);
         }
 
         public void Save()
         {
-            var proxy = new ProfileState();
-            proxy.m_FeatsSerialized = Feats.Serialize();
+            Proxy.m_FeatsSerialized = Feats.Serialize();
 
-            string json = Util.SerializeObject(proxy);
+            string json = Util.SerializeObject(Proxy);
 
             #region Break m_StatsDictionary
 
