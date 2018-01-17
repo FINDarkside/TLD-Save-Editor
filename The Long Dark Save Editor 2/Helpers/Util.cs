@@ -41,7 +41,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
         public static ObservableCollection<EnumerationMember> GetSaveFiles(string folder)
         {
 
-            Regex reg = new Regex("ep[0-9]+(sandbox|challenge|story)[0-9]+");
+            Regex reg = new Regex("(ep[0-9])?(sandbox|challenge|story)[0-9]+");
             var saves = new List<string>();
             if (Directory.Exists(folder))
                 saves.AddRange((from f in Directory.GetFiles(folder) where reg.IsMatch(Path.GetFileName(f)) select f).ToList<string>());
