@@ -42,6 +42,7 @@ namespace The_Long_Dark_Save_Editor_2
             }
             Global.SceneTransistion.m_SceneSaveFilenameCurrent = Boot.m_SceneName;
             Global.SceneTransistion.m_SceneSaveFilenameNextLoad = Boot.m_SceneName;
+            Global.PlayerManager.m_CheatsUsed = true;
 
             var globalSerialized = Global.Serialize();
             SlotData.m_Dict["global"] = EncryptString.CompressStringToBytes(globalSerialized);
