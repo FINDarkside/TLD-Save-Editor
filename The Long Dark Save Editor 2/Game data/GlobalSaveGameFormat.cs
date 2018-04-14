@@ -61,7 +61,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_LockCompanionsSerialized { get; set; }
         public string m_FeatsEnabledSerialized { get; set; }
         public string m_TrustManagerSerialized { get; set; }
-        public string m_MapDetailManagerSerialized { get; set; }
         public string m_WorldMapDataSerialized { get; set; }
         public string m_MapDataSerialized { get; set; }
         public string m_BearHuntSerialized { get; set; }
@@ -170,7 +169,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             UnlockedCompanions = Util.DeserializeObject<ObservableCollection<string>>(proxy.m_LockCompanionsSerialized);
             EnabledFeats = Util.DeserializeObject<FeatEnabledTrackerSaveData>(proxy.m_FeatsEnabledSerialized);
             TrustManager = Util.DeserializeObject<TrustManagerSaveData>(proxy.m_TrustManagerSerialized);
-            MapDetailManager = Util.DeserializeObject<MapDetailSaveData>(proxy.m_MapDetailManagerSerialized);
             WorldMapData = Util.DeserializeObject<WorldMapSaveData>(proxy.m_WorldMapDataSerialized);
             MapData = Util.DeserializeObject<MapSaveData>(proxy.m_MapDataSerialized);
             BearHunt = Util.DeserializeObject<BearHuntSaveData>(proxy.m_BearHuntSerialized);
@@ -225,7 +223,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             proxy.m_LockCompanionsSerialized = Util.SerializeObject(UnlockedCompanions);
             proxy.m_FeatsEnabledSerialized = Util.SerializeObject(EnabledFeats);
             proxy.m_TrustManagerSerialized = Util.SerializeObject(TrustManager);
-            proxy.m_MapDetailManagerSerialized = Util.SerializeObject(MapDetailManager);
             proxy.m_WorldMapDataSerialized = Util.SerializeObject(WorldMapData);
             proxy.m_MapDataSerialized = Util.SerializeObject(MapData);
             proxy.m_BearHuntSerialized = Util.SerializeObject(BearHunt);

@@ -19,6 +19,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_GameId { get; set; }
         public string m_Episode { get; set; }
         public Dictionary<string, byte[]> m_Dict { get; set; }
+        public bool m_IsPS4Compliant { get; set; }
     }
 
     public class SceneTransitionData
@@ -33,6 +34,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_SceneSaveFilenameNextLoad { get; set; }
         public string m_SceneLocationLocIDToShow { get; set; }
         public int m_GameRandomSeed { get; set; }
+        public string m_Location { get; set; }
     }
 
     public class HudManagerSaveDataProxy
@@ -172,6 +174,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_TrustDictSerialized { get; set; }
         public string m_KnowledgeDictSerialized { get; set; }
         public string m_NameRefDictSerialized { get; set; }
+        public bool m_SnowSheltersUnlockedInStory { get; set; }
     }
 
     public class CollectionManagerSaveData
@@ -507,7 +510,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_HoursPlayed { get; set; }
         public bool m_HarvestedByPlayer { get; set; }
         public int m_NumTimesHeatedUp { get; set; }
-        public bool m_Packaged;
+        public bool m_Packaged { get; set; }
     }
 
     public class LiquidItemSaveDataProxy
@@ -1210,6 +1213,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_CauseOfDeathLocId { get; set; }
         public string m_GeneralNotes { get; set; }
         public List<LogDayInfo> m_LogDayInfoList { get; set; }
+        //public List<LogListItem> m_CollectibleList { get; set; } // TDODO Check serialization data inside LogListItem
         public List<string> m_CollectibleNotesList { get; set; }
         public List<CairnInfo> m_CollectibleCairnInfoList { get; set; }
         public StatContainer m_Stats { get; set; }
