@@ -3823,7 +3823,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Long Dark (v1.21) Save Editor.
+        ///   Looks up a localized string similar to The Long Dark (v1.29) Save Editor.
         /// </summary>
         public static string Title {
             get {
