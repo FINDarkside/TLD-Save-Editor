@@ -674,7 +674,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_PlayerInSnowShelter { get; set; }
         public float m_PumpkinPieBuffHoursRemaining { get; set; }
         public float m_PumpkinPieFreezingRateScale { get; set; }
-        public SerializableBounds m_CampfiresRequiredWithinVolume;
+        public SerializableBounds m_LimitCampfiresToBounds { get; set; }
     }
 
     public class PlayerClimbRopeProxy
