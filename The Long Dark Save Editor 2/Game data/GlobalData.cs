@@ -1240,7 +1240,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     public class SerializableBounds
     {
-        public Vector3 m_Center { get; set; }
-        public Vector3 m_Size { get; set; }
+        public float[] m_Center { get; set; }
+        public float[] m_Size { get; set; }
     }
 }
