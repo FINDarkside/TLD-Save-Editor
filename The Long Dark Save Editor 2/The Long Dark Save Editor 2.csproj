@@ -114,7 +114,6 @@
     <Compile Include="Game data\Enums.cs" />
     <Compile Include="Game data\GlobalData.cs" />
     <Compile Include="Game data\GlobalSaveGameFormat.cs" />
-    <Compile Include="Game data\Misc.cs" />
     <Compile Include="Game data\OptionsState.cs" />
     <Compile Include="GameSave.cs" />
     <Compile Include="Helpers\CommandHandler.cs" />
