@@ -15,9 +15,9 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_BaseName { get; set; }
         public string m_DisplayName { get; set; }
         public DateTime m_Timestamp { get; set; }
-        public string m_GameMode { get; set; }
-        public string m_GameId { get; set; }
-        public string m_Episode { get; set; }
+        public SaveSlotType m_GameMode { get; set; }
+        public uint m_GameId { get; set; }
+        public Episode m_Episode { get; set; }
         public Dictionary<string, byte[]> m_Dict { get; set; }
         public bool m_IsPS4Compliant { get; set; }
     }
@@ -180,6 +180,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     public class CollectionManagerSaveData
     {
         public string m_UnlockedCairnsDictSerialized { get; set; }
+        public string m_UnlockedAuroraSetSerialized { get; set; }
     }
 
     #region Inventory
@@ -318,6 +319,10 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string OwnershipOverride { get; set; }
         public BodyHarvestSaveDataProxy BodyHarvest { get; set; }
         public bool LockedInContainer { get; set; }
+        public int GearItemSaveVersion { get; set; }
+        public CookingPotItemSaveDataProxy CookingPot { get; set; }
+        public string PlacePointGuid { get; set; }
+        public string PlacePointName { get; set; }
 
         public InventoryItem()
         {
@@ -385,6 +390,10 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             OwnershipOverride = proxy.m_OwnershipOverrideSerialized;
             BodyHarvest = Util.DeserializeObject<BodyHarvestSaveDataProxy>(proxy.m_BodyHarvestSerialized);
             LockedInContainer = proxy.m_LockedInContainer;
+            GearItemSaveVersion = proxy.m_GearItemSaveVersion;
+            CookingPot = Util.DeserializeObject<CookingPotItemSaveDataProxy>(proxy.m_CookingPotItemSerialized);
+            PlacePointGuid = proxy.m_PlacePointGuidSerialized;
+            PlacePointName = proxy.m_PlacePointNameSerialized;
         }
 
         public InventoryItemSaveData Serialize()
@@ -430,6 +439,11 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             proxy.m_OwnershipOverrideSerialized = OwnershipOverride;
             proxy.m_BodyHarvestSerialized = Util.SerializeObject(BodyHarvest);
             proxy.m_LockedInContainer = LockedInContainer;
+            proxy.m_GearItemSaveVersion = GearItemSaveVersion;
+            proxy.m_CookingPotItemSerialized = Util.SerializeObject(CookingPot);
+            proxy.m_PlacePointGuidSerialized = PlacePointGuid;
+            proxy.m_PlacePointNameSerialized = PlacePointName;
+
 
             var proxy2 = new InventoryItemSaveData();
             proxy2.m_PrefabName = PrefabName;
@@ -494,6 +508,10 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_OwnershipOverrideSerialized { get; set; }
         public string m_BodyHarvestSerialized { get; set; }
         public bool m_LockedInContainer { get; set; }
+        public int m_GearItemSaveVersion { get; set; }
+        public string m_CookingPotItemSerialized { get; set; }
+        public string m_PlacePointGuidSerialized { get; set; }
+        public string m_PlacePointNameSerialized { get; set; }
     }
 
     public class StackableItemSaveDataProxy
@@ -642,6 +660,19 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_QuarterBagWasteMultiplier { get; set; }
         public string m_MissionIdSerialized { get; set; }
         public string m_BearHuntAiSerialized { get; set; }
+    }
+
+    public class CookingPotItemSaveDataProxy
+    {
+        public string m_FireBeingUsedGUID { get; set; }
+        public string m_GearItemBeingCookedGUID { get; set; }
+        public float m_CookingElapsedHours { get; set; }
+        public float m_GracePeriodElapsedHours { get; set; }
+        public float m_FireBurningTimeTODHours { get; set; }
+        public float m_HoursPlayedWhenSerialized { get; set; }
+        public float m_LitersSnowBeingMelted { get; set; }
+        public float m_LitersWaterBeingBoiled { get; set; }
+        public bool m_CanOnlyWarmUpFood { get; set; }
     }
 
     #endregion
@@ -957,6 +988,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public int m_NumOldMansPlantsHarvested { get; set; }
         public int m_NumCatTailPlantsHarvested { get; set; }
         public int m_NumDaysCalorieStoreAboveZero { get; set; }
+        public int m_NumArcheryBooksRead { get; set; }
         public int m_NumCarcassHarvestingBooksRead { get; set; }
         public int m_NumCookingBooksRead { get; set; }
         public int m_NumFireStartingBooksRead { get; set; }
@@ -1127,7 +1159,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_NumHoursToConvertToSkillPoints { get; set; }
     }
 
-
     public class Skill_CookingSaveData
     {
         public int m_Points { get; set; }
@@ -1213,10 +1244,17 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_CauseOfDeathLocId { get; set; }
         public string m_GeneralNotes { get; set; }
         public List<LogDayInfo> m_LogDayInfoList { get; set; }
-        //public List<LogListItem> m_CollectibleList { get; set; } // TDODO Check serialization data inside LogListItem
+        // TODO: check if dynamic works correctly
+        public List<dynamic> m_CollectibleList { get; set; }
         public List<string> m_CollectibleNotesList { get; set; }
         public List<CairnInfo> m_CollectibleCairnInfoList { get; set; }
+        public List<AuroraScreenInfo> m_CollectibleAuroraScreenInfoList;
         public StatContainer m_Stats { get; set; }
+    }
+
+    public class AuroraScreenInfo
+    {
+        public string m_PrefabName { get; set; }
     }
 
     public class CairnInfo
@@ -1243,4 +1281,5 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float[] m_Center { get; set; }
         public float[] m_Size { get; set; }
     }
+
 }

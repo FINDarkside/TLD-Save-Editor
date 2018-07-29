@@ -181,7 +181,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         InfectionRisk,
         [Description("Sprained wrist")]
         SprainedWrist,
-        [Description("Frostbite")]
         Frostbite,
         Hypothermia,
         [Description("Reduced fatigue")]
@@ -297,6 +296,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         HoursInMountainTownRegion,
         MooseEncountersSurvived,
         MooseKilled,
+        HoursInRiverValleyRegion,
         NumStats,
     }
 
@@ -319,6 +319,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         FutureRegion,
         MountainTownRegion,
         TracksRegion,
+        // TODO Add to regions!
+        RiverValleyRegion,
     }
 
     public enum UpSell
@@ -395,5 +397,25 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         Weight,
         Volume,
     }
+
+    public enum SaveSlotType
+    {
+        UNKNOWN,
+        CHALLENGE,
+        CHECKPOINT,
+        SANDBOX,
+        STORY,
+        AUTOSAVE,
+    }
+
+    public enum Episode
+    {
+        One,
+        Two,
+        Three,
+        Four,
+        Five,
+    }
+
 
 }

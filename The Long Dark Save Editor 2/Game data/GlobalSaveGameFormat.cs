@@ -67,6 +67,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_KnowledgeManagerSerialized { get; set; }
         public string m_UnlockedBlueprintsSerialized { get; set; }
         public string m_CollectionManagerSerialized { get; set; }
+        public string m_AuroraScreenManagerSerialized { get; set; }
         public string m_StoryMissionDataSerialized { get; set; }
         public bool m_CurrentEpisodeComplete { get; set; }
     }
@@ -119,6 +120,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public KnowledgeManagerSaveData KnowledgeManager { get; set; }
         public List<string> UnlockedBlueprints { get; set; }
         public string CollectionManagerSerialized { get; set; }
+        public string AuroraScreenManager { get; set; }
         public string StoryMissionDataSerialized { get; set; }
         public bool CurrentEpisodeCompleted { get; set; }
 
@@ -175,6 +177,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             KnowledgeManager = Util.DeserializeObject<KnowledgeManagerSaveData>(proxy.m_KnowledgeManagerSerialized);
             UnlockedBlueprints = Util.DeserializeObject<List<string>>(proxy.m_UnlockedBlueprintsSerialized);
             CollectionManagerSerialized = proxy.m_CollectionManagerSerialized;
+            AuroraScreenManager = proxy.m_AuroraScreenManagerSerialized;
             StoryMissionDataSerialized = proxy.m_StoryMissionDataSerialized;
             CurrentEpisodeCompleted = proxy.m_CurrentEpisodeComplete;
         }
@@ -229,6 +232,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             proxy.m_KnowledgeManagerSerialized = Util.SerializeObject(KnowledgeManager);
             proxy.m_UnlockedBlueprintsSerialized = Util.SerializeObject(UnlockedBlueprints);
             proxy.m_CollectionManagerSerialized = CollectionManagerSerialized;
+            proxy.m_AuroraScreenManagerSerialized = AuroraScreenManager;
             proxy.m_StoryMissionDataSerialized = StoryMissionDataSerialized;
             proxy.m_CurrentEpisodeComplete = CurrentEpisodeCompleted;
 
