@@ -7,78 +7,82 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 {
     public class ProfileState
     {
-        public List<string> m_RewiredKeyboardMap = new List<string>();
-        public List<string> m_RewiredMouseMap = new List<string>();
-        public List<SandboxRecord> m_SandboxRecords = new List<SandboxRecord>();
-        public List<UpSell> m_UpsellsViewed = new List<UpSell>();
-        public int m_Version;
-        public bool m_ShowTimeOfDaySlider;
-        public bool m_ShowFrametime;
-        public float m_MasterVolume;
-        public float m_SoundVolume;
-        public float m_MusicVolume;
-        public float m_VoiceVolume;
-        public int m_QualityLevel;
-        public GraphicsMode m_GraphicsMode;
-        public int m_DisplayNumber;
-        public Resolution m_Resolution;
-        public bool m_SSAOEnabled;
-        public MeasurementUnits m_Units;
-        public HudPref m_HudPref;
-        public bool m_InvertY;
-        public bool m_InvertX;
-        public bool m_LockMouseToScreen;
-        public bool m_EnableGamepad;
+        public List<string> m_RewiredKeyboardMap { get; set; }
+        public List<string> m_RewiredMouseMap { get; set; }
+        public List<SandboxRecord> m_SandboxRecords { get; set; }
+        public List<UpSell> m_UpsellsViewed { get; set; }
+        public int m_Version { get; set; }
+        public bool m_ShowTimeOfDaySlider { get; set; }
+        public bool m_ShowFrametime { get; set; }
+        public float m_MasterVolume { get; set; }
+        public float m_SoundVolume { get; set; }
+        public float m_MusicVolume { get; set; }
+        public float m_VoiceVolume { get; set; }
+        public int m_QualityLevel { get; set; }
+        public GraphicsMode m_GraphicsMode { get; set; }
+        public int m_DisplayNumber { get; set; }
+        public Resolution m_Resolution { get; set; }
+        public bool m_SSAOEnabled { get; set; }
+        public MeasurementUnits m_Units { get; set; }
+        public HudPref m_HudPref { get; set; }
+        public bool m_InvertY { get; set; }
+        public bool m_InvertX { get; set; }
+        public bool m_LockMouseToScreen { get; set; }
+        public bool m_EnableGamepad { get; set; }
         [Obsolete("Use m_MouseSensitivityPercentage instead")]
-        public float[] m_MouseSensitivity;
+        public float[] m_MouseSensitivity { get; set; }
         [Obsolete("Use m_ZoomSensitivityPercentage instead")]
-        public float[] m_ZoomSensitivity;
+        public float[] m_ZoomSensitivity { get; set; }
         [Obsolete("Use m_GamepadCameraSensitivityPercentage instead")]
-        public float[] m_AnalogSticksSensitivity;
-        public float m_MouseSensitivityPercentage;
-        public float m_ZoomSensitivityPercentage;
-        public float m_GamepadCameraSensitivityPercentage;
-        public bool m_ConsoleUnlocked;
-        public float m_FieldOfView;
-        public int m_NumGamesPlayed;
-        public VoicePersona m_VoicePersona;
-        public GameRegion m_StartRegion;
-        public Dictionary<string, string> m_KeyBindings;
-        public bool m_VsyncEnabled;
-        public SubtitlesState m_SubtitlesState;
-        public LanguageState m_LanguageState;
-        public string m_Language;
-        public bool m_CoastalRegionLocked;
-        public bool m_RuralRegionLocked;
-        public bool m_WhalingStationRegionLocked;
-        public bool m_CrashMountainRegionLocked;
-        public bool m_FrameDumperUnlocked;
-        public bool m_HasSeenIntroVideo;
-        public bool m_NoResumeSave;
-        public string m_AllTimeStats;
-        public float m_BestTimeHunted;
-        public float m_BestTimeRescue;
-        public float m_BestTimeWhiteout;
-        public float m_BestTimeNomad;
-        public float m_BestTimeHunted2;
-        public ExperienceModeType m_MostRecentSandboxMode;
-        public ExperienceModeType m_MostRecentChallengeMode;
-        public ExperienceModeType m_MostRecentEpisodeMode;
-        public float m_Brightness;
-        public bool m_DoneBrightnessAdjustment;
-        public List<string> m_UnlockedBadgesViewed;
-        public HashSet<string> m_CinematicsViewed;
-        public string m_FeatsSerialized;
-        public string m_EpisodeManagerSerialized;
-        public string m_QualityLevelSettingsSerialized;
-        public bool m_DisableClickHold;
-        public int m_AutosaveMinutes;
-        public string m_NewGameCustomModeString;
+        public float[] m_AnalogSticksSensitivity { get; set; }
+        public float m_MouseSensitivityPercentage { get; set; }
+        public float m_ZoomSensitivityPercentage { get; set; }
+        public float m_GamepadCameraSensitivityPercentage { get; set; }
+        public bool m_ConsoleUnlocked { get; set; }
+        public float m_FieldOfView { get; set; }
+        public int m_NumGamesPlayed { get; set; }
+        public VoicePersona m_VoicePersona { get; set; }
+        public GameRegion m_StartRegion { get; set; }
+        public Dictionary<string, string> m_KeyBindings { get; set; }
+        public bool m_VsyncEnabled { get; set; }
+        public SubtitlesState m_SubtitlesState { get; set; }
+        public LanguageState m_LanguageState { get; set; }
+        public string m_Language { get; set; }
+        public bool m_CoastalRegionLocked { get; set; }
+        public bool m_RuralRegionLocked { get; set; }
+        public bool m_WhalingStationRegionLocked { get; set; }
+        public bool m_CrashMountainRegionLocked { get; set; }
+        public bool m_FrameDumperUnlocked { get; set; }
+        public bool m_HasSeenIntroVideo { get; set; }
+        public bool m_NoResumeSave { get; set; }
+        public string m_AllTimeStats { get; set; }
+        public float m_BestTimeHunted { get; set; }
+        public float m_BestTimeRescue { get; set; }
+        public float m_BestTimeWhiteout { get; set; }
+        public float m_BestTimeNomad { get; set; }
+        public float m_BestTimeHunted2 { get; set; }
+        public ExperienceModeType m_MostRecentSandboxMode { get; set; }
+        public ExperienceModeType m_MostRecentChallengeMode { get; set; }
+        public ExperienceModeType m_MostRecentEpisodeMode { get; set; }
+        public float m_Brightness { get; set; }
+        public bool m_DoneBrightnessAdjustment { get; set; }
+        public List<string> m_UnlockedBadgesViewed { get; set; }
+        public HashSet<string> m_CinematicsViewed { get; set; }
+        public string m_FeatsSerialized { get; set; }
+        public string m_EpisodeManagerSerialized { get; set; }
+        public string m_QualityLevelSettingsSerialized { get; set; }
+        public bool m_DisableClickHold { get; set; }
+        public int m_AutosaveMinutes { get; set; }
+        public string m_NewGameCustomModeString { get; set; }
+        public bool m_FoundAllCachesEpisodeOne { get; set; }
+        public bool m_FoundAllCachesEpisodeTwo { get; set; }
+        public List<Achievement> m_UnlockedAchievements { get; set; }
+        public bool m_ReduceCameraMotion { get; set; }
         [Serializable]
         public class MaineMenuViewedState
         {
-            public bool m_ChallengesMenuViewed;
-            public bool m_LogsMenuViewed;
+            public bool m_ChallengesMenuViewed { get; set; }
+            public bool m_LogsMenuViewed { get; set; }
         }
     }
 
@@ -189,6 +193,10 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         // Currently seems to always be empty
         public List<object> m_CollectibleList { get; set; }
         public StatContainer m_Stats { get; set; }
+        public List<string> m_CollectibleNotesList { get; set; }
+        public List<CairnInfo> m_CollectibleCairnInfoList { get; set; }
+        public List<AuroraScreenInfo> m_CollectibleAuroraScreenInfoList { get; set; }
+
     }
 
     public class StatContainer
