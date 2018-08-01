@@ -319,7 +319,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         FutureRegion,
         MountainTownRegion,
         TracksRegion,
-        // TODO Add to regions!
         RiverValleyRegion,
     }
 

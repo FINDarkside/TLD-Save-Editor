@@ -1363,7 +1363,7 @@
     <value>Prepared Reishi Mushrooms</value>
   </data>
   <data name="GEAR_RosehipsPrepared" xml:space="preserve">
-    <value>Prepared Rosehips</value>
+    <value>Prepared Rose hips</value>
   </data>
   <data name="GEAR_HankHatchCode" xml:space="preserve">
     <value>Hank's Prepper Cache Code</value>
@@ -1385,5 +1385,11 @@
   </data>
   <data name="GEAR_MooseHide" xml:space="preserve">
     <value>Fresh Moose Hide</value>
+  </data>
+  <data name="GEAR_CookingPot" xml:space="preserve">
+    <value>Cooking Pot</value>
+  </data>
+  <data name="GEAR_RecycledCan" xml:space="preserve">
+    <value>Recycled Can</value>
   </data>
 </root>

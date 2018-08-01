@@ -1465,6 +1465,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cooking Pot.
+        /// </summary>
+        public static string GEAR_CookingPot {
+            get {
+                return ResourceManager.GetString("GEAR_CookingPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hoodie.
         /// </summary>
         public static string GEAR_CottonHoodie {
@@ -2842,6 +2851,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Recycled Can.
+        /// </summary>
+        public static string GEAR_RecycledCan {
+            get {
+                return ResourceManager.GetString("GEAR_RecycledCan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reishi Mushroom.
         /// </summary>
         public static string GEAR_ReishiMushroom {
@@ -2959,7 +2977,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Prepared Rosehips.
+        ///   Looks up a localized string similar to Prepared Rose hips.
         /// </summary>
         public static string GEAR_RosehipsPrepared {
             get {

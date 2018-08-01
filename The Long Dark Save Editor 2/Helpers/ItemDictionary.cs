@@ -213,13 +213,15 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_WoodMatches", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 10}, ""MatchesItem"": {}}");
             AddItemInfo("GEAR_Charcoal", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_Stone", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-
             AddItemInfo("GEAR_Flashlight", ItemCategory.Tools, @"{""FlashlightItem"": {""m_CurrentBatteryCharge"": 100}}");
             AddItemInfo("GEAR_KnifeScrapMetal", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_JeremiahKnife", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_RifleHuntingLodge", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_BoltCutters", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_FireAxe", ItemCategory.Tools, @"{}");
+            AddItemInfo("GEAR_CookingPot", ItemCategory.Tools, @"{""CookingPot"": {}}");
+            AddItemInfo("GEAR_RecycledCan", ItemCategory.Tools, @"{""CookingPot"": {""m_CanOnlyWarmUpFood"": true}}");
+
 
             // Materials
             AddItemInfo("GEAR_ArrowHead", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""InProgressItem"": {""m_PercentComplete"": 100}}");
