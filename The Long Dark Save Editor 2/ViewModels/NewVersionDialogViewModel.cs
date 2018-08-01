@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialDesignThemes.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows.Input;
@@ -68,6 +69,7 @@ namespace The_Long_Dark_Save_Editor_2.ViewModels
                     if (string.Equals(uri.Host, "www.moddb.com", StringComparison.OrdinalIgnoreCase))
                     {
                         Process.Start(Url);
+                        DialogHost.CloseDialogCommand.Execute(null, null);
                     }
                 }
                 catch (Exception ex)

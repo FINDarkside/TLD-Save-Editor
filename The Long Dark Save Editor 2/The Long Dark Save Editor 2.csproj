@@ -155,6 +155,7 @@
     <Compile Include="ViewModels\BusyDialogViewModel.cs" />
     <Compile Include="ViewModels\ErrorDialogViewModel.cs" />
     <Compile Include="ViewModels\NewVersionDialogViewModel.cs" />
+    <Compile Include="ViewModels\SaveFileUpdatedViewModel.cs" />
     <Page Include="Colors\HinterlandAccent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

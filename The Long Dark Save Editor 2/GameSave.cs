@@ -1,3 +1,4 @@
+using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
@@ -8,13 +9,14 @@ namespace The_Long_Dark_Save_Editor_2
 {
     public class GameSave
     {
+        public long LastSaved { get; set; }
         public BootSaveGameFormat Boot { get; set; }
         public GlobalSaveGameData Global { get; set; }
         public SlotData SlotData { get; set; }
         public string OriginalRegion { get; set; }
         private float[] originalPosition;
 
-        private string path;
+        public string path;
 
         public void LoadSave(string path)
         {
@@ -31,6 +33,7 @@ namespace The_Long_Dark_Save_Editor_2
 
         public void Save()
         {
+            LastSaved = DateTime.Now.Ticks;
             var bootSerialized = Util.SerializeObject(Boot);
             SlotData.m_Dict["boot"] = EncryptString.CompressStringToBytes(bootSerialized);
 

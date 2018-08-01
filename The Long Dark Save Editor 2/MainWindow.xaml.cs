@@ -16,6 +16,7 @@ using System.Windows.Input;
 using The_Long_Dark_Save_Editor_2.Game_data;
 using The_Long_Dark_Save_Editor_2.Helpers;
 using The_Long_Dark_Save_Editor_2.ViewModels;
+using MaterialDesignThemes.Wpf;
 
 namespace The_Long_Dark_Save_Editor_2
 {
@@ -57,6 +58,9 @@ namespace The_Long_Dark_Save_Editor_2
             set { SetPropertyField(ref saves, value); }
         }
 
+        private FileSystemWatcher fileSystemWatcher;
+        private bool currentSaveChanged = false;
+
         public MainWindow()
         {
 #if DEBUG
@@ -64,6 +68,10 @@ namespace The_Long_Dark_Save_Editor_2
             Debug.WriteLine(System.Threading.Thread.CurrentThread.CurrentUICulture);
             //System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru-RU");
 #endif
+
+            fileSystemWatcher = new FileSystemWatcher();
+            fileSystemWatcher.NotifyFilter = NotifyFilters.LastWrite;
+            fileSystemWatcher.Changed += new FileSystemEventHandler(SaveFileChanged);
 
             this.DataContext = this;
             Instance = this;
@@ -83,36 +91,67 @@ namespace The_Long_Dark_Save_Editor_2
         {
             Debug.WriteLine("Window loaded");
 #if !DEBUG
-			if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
-			{
-				try
-				{
-					CheckForUpdates();
-				}
-				catch (Exception ex)
-				{
-					dialogHost.IsOpen = false;
-					ErrorDialog.Show("Failed to check for new versions", ex != null ? (ex.Message + "\n" + e.ToString()) : null);
-				}
+            if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
+            {
+                try
+                {
+                    CheckForUpdates();
+                }
+                catch (Exception ex)
+                {
+                    dialogHost.IsOpen = false;
+                    ErrorDialog.Show("Failed to check for new versions", ex != null ? (ex.Message + "\n" + e.ToString()) : null);
+                }
 
-			}
+            }
 
-			if (!Properties.Settings.Default.BugReportWarningShown)
-			{
-				System.Windows.MessageBox.Show("Do NOT report any in-game bugs to Hinterland if you have edited your save. Bugs might be caused by the save editor. Only report bugs if you are able to reproduce them in fresh unedited save.");
-				//System.Windows.MessageBox.Show("If you don't have test branch version of the game, untick the toggle button at top right corner.");
+            if (!Properties.Settings.Default.BugReportWarningShown)
+            {
+                System.Windows.MessageBox.Show("DO NOT report any in-game bugs to Hinterland if you have edited your save. Bugs might be caused by the save editor. Only report bugs if you are able to reproduce them in fresh unedited save.");
+                //System.Windows.MessageBox.Show("If you don't have test branch version of the game, untick the toggle button at top right corner.");
 
-				Properties.Settings.Default.BugReportWarningShown = true;
-				Properties.Settings.Default.Save();
-			}
+                Properties.Settings.Default.BugReportWarningShown = true;
+                Properties.Settings.Default.Save();
+            }
 #endif
             UpdateSaves();
+        }
+
+        private void SaveFileChanged(object source, FileSystemEventArgs e)
+        {
+            Debug.WriteLine(e.FullPath);
+            if (e.FullPath == null || CurrentSave == null)
+                return;
+            if (Path.Equals(e.FullPath, CurrentSave.path))
+            {
+                // 3 seconds
+                if (DateTime.Now.Ticks - CurrentSave.LastSaved > 30000000)
+                {
+                    Debug.WriteLine("SAVE UPDATED");
+                    Dispatcher.BeginInvoke((Action)(() =>
+                    {
+                        if (this.IsActive)
+                        {
+                            dialogHost.DialogContent = new SaveFileUpdatedViewModel();
+                            dialogHost.IsOpen = true;
+                            this.currentSaveChanged = false;
+                        }
+                        else
+                        {
+                            this.currentSaveChanged = true;
+                        }
+                    }));
+                }
+            }
         }
 
         private void UpdateSaves()
         {
             var path = Path.Combine(Util.GetLocalPath(), testBranch ? "HinterlandTest2" : "Hinterland", "TheLongDark");
             Debug.WriteLine(path);
+
+            fileSystemWatcher.Path = path;
+            fileSystemWatcher.EnableRaisingEvents = true;
 
             Saves = Util.GetSaveFiles(path);
             if (Saves.Count == 0)
@@ -175,7 +214,7 @@ namespace The_Long_Dark_Save_Editor_2
                 CurrentProfile.Save();
         }
 
-        private void CurrentSaveSelectionChanged(object sender, SelectionChangedEventArgs e)
+        public void CurrentSaveSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (ccSaves == null && ccSaves.SelectedValue == null)
                 return;
@@ -225,6 +264,16 @@ namespace The_Long_Dark_Save_Editor_2
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+        private void TheWindow_Activated(object sender, EventArgs e)
+        {
+            if (this.currentSaveChanged)
+            {
+                dialogHost.DialogContent = new SaveFileUpdatedViewModel();
+                dialogHost.IsOpen = true;
+                this.currentSaveChanged = false;
+            }
+        }
     }
 
 }

@@ -21,7 +21,7 @@
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Loaded="Window_Loaded" Closing="Window_Closing">
+        Loaded="Window_Loaded" Closing="Window_Closing" Activated="TheWindow_Activated">
 
     <Window.Resources>
         <converters:PercentageConverter x:Key="FeatProgressPercentageConverter" />
@@ -34,7 +34,7 @@
 
         <System:Double x:Key="double100">100</System:Double>
     </Window.Resources>
-    <materialDesign:DialogHost Name="dialogHost">
+    <materialDesign:DialogHost Name="dialogHost" >
         <materialDesign:DialogHost.Resources>
             <DataTemplate DataType="{x:Type viewModels:BusyDialogViewModel}">
                 <StackPanel Margin="10">
@@ -77,6 +77,25 @@
                     </Grid>
                 </Grid>
 
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModels:SaveFileUpdatedViewModel}">
+                <Grid Margin="10" MinWidth="300" MinHeight="150">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0">
+                         <TextBlock Grid.Row="0" Margin="0 0 0 10" FontWeight="Bold">Currently open save has been modified</TextBlock>
+                        <TextBlock Grid.Row="0" Margin="0 0 0 10">If you don't refresh, you potentially lose any chnges made in-game</TextBlock>
+                         <TextBlock Grid.Row="0" Margin="0 0 0 10">If you refresh, you'll lose any changes made in the editor without saving</TextBlock>
+                    </StackPanel>
+                    <StackPanel FlowDirection="RightToLeft" Orientation="Horizontal" Grid.Row="2">
+                        <Button DockPanel.Dock="Right" Command="{Binding RefreshCommand}" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Content="{x:Static p:Resources.Refresh}" Width="150"/>
+                        <Button DockPanel.Dock="Right" Command="materialDesign:DialogHost.CloseDialogCommand" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Content="{x:Static p:Resources.Cancel}" Width="150"/>
+                    </StackPanel>
+                </Grid>
             </DataTemplate>
         </materialDesign:DialogHost.Resources>
         <materialDesign:DialogHost.DialogContent>
