@@ -44,7 +44,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_HeavyBandage", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_OldMansBeardDressing", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_WaterPurificationTablets", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-            AddItemInfo("GEAR_EmergencyStim", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_EmergencyStim", ItemCategory.FirstAid, @"{}");
             AddItemInfo("GEAR_ReishiPrepared", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_RosehipsPrepared", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 
