@@ -85,6 +85,8 @@ namespace The_Long_Dark_Save_Editor_2
                 //MissingMemberHandling = MissingMemberHandling.Error,
                 FloatFormatHandling = FloatFormatHandling.Symbol,
             };
+
+            Util.GetUWPSaveFiles();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -154,11 +156,18 @@ namespace The_Long_Dark_Save_Editor_2
             fileSystemWatcher.EnableRaisingEvents = true;
 
             Saves = Util.GetSaveFiles(path);
+            var uwpSaves = Util.GetUWPSaveFiles();
+            foreach (EnumerationMember f in uwpSaves)
+            {
+                Saves.Add(f);
+            }
+
             if (Saves.Count == 0)
                 CurrentSave = null;
             else
                 ccSaves.SelectedIndex = 0;
 
+            // TODO: Change profile based on the selected save? Currently will be Steam version profile if exists, otherwise UWP profile
             var profile = Path.Combine(path, "user001");
             if (File.Exists(profile) && (CurrentProfile == null || !Equals(profile, CurrentProfile.path)))
             {
@@ -169,6 +178,24 @@ namespace The_Long_Dark_Save_Editor_2
                 catch (Exception ex)
                 {
                     WForms.MessageBox.Show(ex.Message + "\nFailed to load profile\n" + ex.ToString(), "Failed to load profile", WForms.MessageBoxButtons.OK, WForms.MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+                var uwpPath = Util.GetUWPPath();
+                var files = Directory.GetFiles(uwpPath).Select(f => new FileInfo(f)).ToArray();
+                Array.Sort(files, (x, y) => y.LastWriteTime.CompareTo(x.LastWriteTime));
+
+                foreach (FileInfo file in files)
+                {
+                    try
+                    {
+                        CurrentProfile = new Profile(file.FullName);
+                        break;
+                    }
+                    catch (Exception ex)
+                    {
+                    }
                 }
             }
 

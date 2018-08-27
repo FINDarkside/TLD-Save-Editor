@@ -49,30 +49,80 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             var result = new ObservableCollection<EnumerationMember>();
             foreach (string saveFile in saves)
             {
-                var member = new EnumerationMember();
-
                 try
                 {
-                    var data = EncryptString.DecompressBytesToString(File.ReadAllBytes(saveFile));
-                    var slotData = Util.DeserializeObject<SlotData>(data);
-                    if (!slotData.m_Dict.ContainsKey("global"))
-                        continue;
-
-                    var bytes = slotData.m_Dict["global"];
-                    var json = EncryptString.DecompressBytesToString(bytes);
-                    var globalData = JsonConvert.DeserializeObject<GlobalSaveGameFormat>(json);
-                    member.Description = slotData.m_DisplayName + " (" + Path.GetFileName(saveFile) + ")";
+                    var member = CreateSaveEnumerationMember(saveFile, Path.GetFileName(saveFile));
+                    result.Add(member);
                 }
                 catch (Exception ex)
                 {
                     Debug.WriteLine(ex.ToString());
                     continue;
                 }
-                member.Value = saveFile;
-                result.Add(member);
             }
 
             return result;
+        }
+
+        public static ObservableCollection<EnumerationMember> GetUWPSaveFiles()
+        {
+            // Ugly code, maybe fix
+            var result = new ObservableCollection<EnumerationMember>();
+            var saveFolder = GetUWPPath();
+
+            foreach (string file in Directory.GetFiles(saveFolder))
+            {
+                try
+                {
+                    var member = CreateSaveEnumerationMember(file, "UWP");
+                    result.Add(member);
+                }
+                catch (Exception ex)
+                {
+                    continue;
+                }
+            }
+
+            return result;
+        }
+        
+
+        private static EnumerationMember CreateSaveEnumerationMember(string file, string name)
+        {
+            var member = new EnumerationMember();
+            member.Value = file;
+
+            var data = EncryptString.DecompressBytesToString(File.ReadAllBytes(file));
+            var slotData = Util.DeserializeObject<SlotData>(data);
+
+            var bytes = slotData.m_Dict["global"];
+            var json = EncryptString.DecompressBytesToString(bytes);
+            var globalData = JsonConvert.DeserializeObject<GlobalSaveGameFormat>(json);
+            member.Description = slotData.m_DisplayName + " (" + name + ")";
+
+            return member;
+        }
+
+        public static string GetUWPPath()
+        {
+            var packages = Path.Combine(GetLocalPath(), "packages");
+            if (!Directory.Exists(packages))
+                return null;
+
+            string hinterlandFolder = Directory.EnumerateDirectories(packages).First(
+                dir => Path.GetFileName(dir).StartsWith("27620HinterlandStudio.")
+            );
+
+            hinterlandFolder = Path.Combine(hinterlandFolder, "SystemAppData", "wgs");
+            if (!Directory.Exists(hinterlandFolder))
+                return null;
+
+            string saveFolder = Directory.GetDirectories(Directory.GetDirectories(hinterlandFolder)[0])[0];
+            if (!Directory.Exists(saveFolder))
+                return null;
+
+            return saveFolder;
+
         }
 
         public static string GetLocalPath()
