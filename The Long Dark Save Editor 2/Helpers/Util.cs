@@ -74,6 +74,8 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 
             foreach (string file in Directory.GetFiles(saveFolder))
             {
+                if (Path.GetFileName(file).StartsWith("container"))
+                    continue;
                 try
                 {
                     var member = CreateSaveEnumerationMember(file, "UWP");
