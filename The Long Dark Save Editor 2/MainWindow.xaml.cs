@@ -58,7 +58,9 @@ namespace The_Long_Dark_Save_Editor_2
             set { SetPropertyField(ref saves, value); }
         }
 
-        private FileSystemWatcher fileSystemWatcher;
+        private FileSystemWatcher appDataFileWatcher;
+        private FileSystemWatcher uwpFileWatcher;
+
         private bool currentSaveChanged = false;
 
         public MainWindow()
@@ -69,9 +71,13 @@ namespace The_Long_Dark_Save_Editor_2
             //System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru-RU");
 #endif
 
-            fileSystemWatcher = new FileSystemWatcher();
-            fileSystemWatcher.NotifyFilter = NotifyFilters.LastWrite;
-            fileSystemWatcher.Changed += new FileSystemEventHandler(SaveFileChanged);
+            appDataFileWatcher = new FileSystemWatcher();
+            appDataFileWatcher.NotifyFilter = NotifyFilters.LastWrite;
+            appDataFileWatcher.Changed += new FileSystemEventHandler(SaveFileChanged);
+
+            uwpFileWatcher = new FileSystemWatcher();
+            uwpFileWatcher.NotifyFilter = NotifyFilters.LastWrite;
+            uwpFileWatcher.Changed += new FileSystemEventHandler(SaveFileChanged);
 
             this.DataContext = this;
             Instance = this;
@@ -152,11 +158,19 @@ namespace The_Long_Dark_Save_Editor_2
             var path = Path.Combine(Util.GetLocalPath(), testBranch ? "HinterlandTest2" : "Hinterland", "TheLongDark");
             Debug.WriteLine(path);
 
-            fileSystemWatcher.Path = path;
-            fileSystemWatcher.EnableRaisingEvents = true;
+            if (Directory.Exists(path))
+            {
+                appDataFileWatcher.Path = path;
+                appDataFileWatcher.EnableRaisingEvents = true;
+            }
 
             Saves = Util.GetSaveFiles(path);
             var uwpSaves = Util.GetUWPSaveFiles();
+            if (uwpSaves.Count > 0)
+            {
+                uwpFileWatcher.Path = Path.GetDirectoryName((string)uwpSaves[0].Value);
+                uwpFileWatcher.EnableRaisingEvents = true;
+            }
             foreach (EnumerationMember f in uwpSaves)
             {
                 Saves.Add(f);
