@@ -169,32 +169,43 @@ namespace The_Long_Dark_Save_Editor_2
 
             // TODO: Change profile based on the selected save? Currently will be Steam version profile if exists, otherwise UWP profile
             var profile = Path.Combine(path, "user001");
-            if (File.Exists(profile) && (CurrentProfile == null || !Equals(profile, CurrentProfile.path)))
+            if (File.Exists(profile))
             {
-                try
+                if (CurrentProfile == null || !Equals(profile, CurrentProfile.path))
                 {
-                    CurrentProfile = new Profile(profile);
-                }
-                catch (Exception ex)
-                {
-                    WForms.MessageBox.Show(ex.Message + "\nFailed to load profile\n" + ex.ToString(), "Failed to load profile", WForms.MessageBoxButtons.OK, WForms.MessageBoxIcon.Exclamation);
+                    try
+                    {
+                        CurrentProfile = new Profile(profile);
+                    }
+                    catch (Exception ex)
+                    {
+                        WForms.MessageBox.Show(ex.Message + "\nFailed to load profile\n" + ex.ToString(), "Failed to load profile", WForms.MessageBoxButtons.OK, WForms.MessageBoxIcon.Exclamation);
+                    }
                 }
             }
             else
             {
                 var uwpPath = Util.GetUWPPath();
-                var files = Directory.GetFiles(uwpPath).Select(f => new FileInfo(f)).ToArray();
-                Array.Sort(files, (x, y) => y.LastWriteTime.CompareTo(x.LastWriteTime));
-
-                foreach (FileInfo file in files)
+                if (uwpPath != null)
                 {
-                    try
+                    var files = Directory.GetFiles(uwpPath).Select(f => new FileInfo(f)).Where(f => !f.Name.StartsWith("container")).ToArray();
+                    Array.Sort(files, (x, y) => y.LastWriteTime.CompareTo(x.LastWriteTime));
+
+                    foreach (FileInfo file in files)
                     {
-                        CurrentProfile = new Profile(file.FullName);
-                        break;
-                    }
-                    catch (Exception ex)
-                    {
+                        if (CurrentProfile != null && file.FullName == CurrentProfile.path)
+                            break;
+                        try
+                        {
+                            CurrentProfile = new Profile(file.FullName);
+                            Debug.WriteLine(file.FullName + " VALID --------------------");
+
+                            break;
+                        }
+                        catch (Exception ex)
+                        {
+                            Debug.WriteLine(file.FullName + " invalid");
+                        }
                     }
                 }
             }

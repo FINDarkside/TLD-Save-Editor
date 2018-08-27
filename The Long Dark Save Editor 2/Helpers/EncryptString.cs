@@ -14,14 +14,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 
         public static string DecompressBytesToString(byte[] toDecrypt)
         {
-            try
-            {
-                return Encoding.UTF8.GetString(CLZF.Decompress(toDecrypt));
-            }
-            catch
-            {
-                return string.Empty;
-            }
+            return Encoding.UTF8.GetString(CLZF.Decompress(toDecrypt));
         }
     }
 }

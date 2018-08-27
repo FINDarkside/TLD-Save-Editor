@@ -69,6 +69,8 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             // Ugly code, maybe fix
             var result = new ObservableCollection<EnumerationMember>();
             var saveFolder = GetUWPPath();
+            if (saveFolder == null)
+                return result;
 
             foreach (string file in Directory.GetFiles(saveFolder))
             {
@@ -85,7 +87,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 
             return result;
         }
-        
+
 
         private static EnumerationMember CreateSaveEnumerationMember(string file, string name)
         {
@@ -105,24 +107,24 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 
         public static string GetUWPPath()
         {
-            var packages = Path.Combine(GetLocalPath(), "packages");
-            if (!Directory.Exists(packages))
+            try
+            {
+                var packages = Path.Combine(GetLocalPath(), "packages");
+                string hinterlandFolder = Directory.EnumerateDirectories(packages).First(
+                    dir => Path.GetFileName(dir).StartsWith("27620HinterlandStudio.")
+                );
+                hinterlandFolder = Path.Combine(hinterlandFolder, "SystemAppData", "wgs");
+                string saveFolder = Directory.GetDirectories(Directory.GetDirectories(hinterlandFolder)[0])[0];
+                if (!Directory.Exists(saveFolder))
+                    return null;
+
+                return saveFolder;
+
+            }
+            catch (Exception)
+            {
                 return null;
-
-            string hinterlandFolder = Directory.EnumerateDirectories(packages).First(
-                dir => Path.GetFileName(dir).StartsWith("27620HinterlandStudio.")
-            );
-
-            hinterlandFolder = Path.Combine(hinterlandFolder, "SystemAppData", "wgs");
-            if (!Directory.Exists(hinterlandFolder))
-                return null;
-
-            string saveFolder = Directory.GetDirectories(Directory.GetDirectories(hinterlandFolder)[0])[0];
-            if (!Directory.Exists(saveFolder))
-                return null;
-
-            return saveFolder;
-
+            }
         }
 
         public static string GetLocalPath()
