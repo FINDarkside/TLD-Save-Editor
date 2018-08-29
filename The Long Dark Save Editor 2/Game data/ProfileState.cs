@@ -78,12 +78,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_FoundAllCachesEpisodeTwo { get; set; }
         public List<Achievement> m_UnlockedAchievements { get; set; }
         public bool m_ReduceCameraMotion { get; set; }
-        [Serializable]
-        public class MaineMenuViewedState
-        {
-            public bool m_ChallengesMenuViewed { get; set; }
-            public bool m_LogsMenuViewed { get; set; }
-        }
+        public HashSet<string> m_ViewedNotifications { get; set; }
     }
 
     public class Resolution
