@@ -92,7 +92,6 @@ namespace The_Long_Dark_Save_Editor_2
                 FloatFormatHandling = FloatFormatHandling.Symbol,
             };
 
-            Util.GetUWPSaveFiles();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
