@@ -103,6 +103,7 @@ namespace The_Long_Dark_Save_Editor_2
                 try
                 {
                     CheckForUpdates();
+                    LogOpen();
                 }
                 catch (Exception ex)
                 {
@@ -250,7 +251,12 @@ namespace The_Long_Dark_Save_Editor_2
                 }
             };
             webClient.DownloadStringTaskAsync("https://tld-save-editor-2.firebaseio.com/Changelog.json");
+        }
 
+        public void LogOpen()
+        {
+            WebClient webClient = new WebClient();
+            webClient.DownloadStringTaskAsync("https://us-central1-tld-save-editor-2.cloudfunctions.net/editorOpened?version=" + Version);
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
