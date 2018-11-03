@@ -165,7 +165,7 @@ namespace The_Long_Dark_Save_Editor_2
             }
 
             Saves = Util.GetSaveFiles(path);
-            var uwpSaves = Util.GetUWPSaveFiles();
+            /*var uwpSaves = Util.GetUWPSaveFiles();
             if (uwpSaves.Count > 0)
             {
                 uwpFileWatcher.Path = Path.GetDirectoryName((string)uwpSaves[0].Value);
@@ -174,7 +174,7 @@ namespace The_Long_Dark_Save_Editor_2
             foreach (EnumerationMember f in uwpSaves)
             {
                 Saves.Add(f);
-            }
+            }*/
 
             if (Saves.Count == 0)
                 CurrentSave = null;
