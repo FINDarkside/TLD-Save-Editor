@@ -24,6 +24,7 @@
         <System:Double x:Key="fireMasterRequirement">1000</System:Double>
         <System:Double x:Key="freeRunnerRequirement">50</System:Double>
         <System:Double x:Key="snowWalkerRequirement">1000</System:Double>
+        <converters:FourDoNBadgeCompletedConverter x:Key="FourDoNBadgeCompletedConverter" />
     </UserControl.Resources>
 
     <StackPanel Margin="10 10">
@@ -88,8 +89,10 @@
                            ConverterParameter={StaticResource snowWalkerRequirement}}">
                     </Label>
                 </StackPanel>
-
             </StackPanel>
         </Expander>
+
+        <CheckBox IsChecked="{Binding CurrentProfile.Proxy.m_DaysCompleted4DON, Converter={StaticResource FourDoNBadgeCompletedConverter}}" 
+                  Margin="0 5 0 5" Content="4 days of night badges unlocked"/>
     </StackPanel>
 </UserControl>
