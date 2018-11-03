@@ -168,6 +168,9 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_BearQuarter", ItemCategory.Food, @"{m_WeightKG: 1, ""BodyHarvest"": {m_MeatAvailableKG: 1, m_Condition: 100}}");
             AddItemInfo("GEAR_StagQuarter", ItemCategory.Food, @"{m_WeightKG: 1, ""BodyHarvest"": {m_MeatAvailableKG: 1, m_Condition: 100}}");
             AddItemInfo("GEAR_RabbitCarcass", ItemCategory.Food, @"{m_WeightKG: 1, ""BodyHarvest"": {m_MeatAvailableKG: 1, m_Condition: 100}}");
+            AddItemInfo("GEAR_MooseQuarter", ItemCategory.Food, @"{m_WeightKG: 1, ""BodyHarvest"": {m_MeatAvailableKG: 1, m_Condition: 100}}");
+            AddItemInfo("GEAR_RawMeatMoose", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
+            AddItemInfo("GEAR_CookedMeatMoose", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
 
             // Tools
             AddItemInfo("GEAR_Accelerant", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");

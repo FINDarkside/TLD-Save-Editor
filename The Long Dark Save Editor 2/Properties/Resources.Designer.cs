@@ -1429,6 +1429,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Moose Meat (Cooked).
+        /// </summary>
+        public static string GEAR_CookedMeatMoose {
+            get {
+                return ResourceManager.GetString("GEAR_CookedMeatMoose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rabbit (Cooked).
         /// </summary>
         public static string GEAR_CookedMeatRabbit {
@@ -2518,6 +2527,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Moose Quarter.
+        /// </summary>
+        public static string GEAR_MooseQuarter {
+            get {
+                return ResourceManager.GetString("GEAR_MooseQuarter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Morphine.
         /// </summary>
         public static string GEAR_Morphine {
@@ -2802,6 +2820,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_RawMeatDeer {
             get {
                 return ResourceManager.GetString("GEAR_RawMeatDeer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moose meat.
+        /// </summary>
+        public static string GEAR_RawMeatMoose {
+            get {
+                return ResourceManager.GetString("GEAR_RawMeatMoose", resourceCulture);
             }
         }
         
