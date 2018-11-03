@@ -3652,6 +3652,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mountain Town.
+        /// </summary>
+        public static string MountainTownRegion {
+            get {
+                return ResourceManager.GetString("MountainTownRegion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Never die.
         /// </summary>
         public static string NeverDie {
@@ -3769,6 +3778,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hushed River Valley.
+        /// </summary>
+        public static string RiverValleyRegion {
+            get {
+                return ResourceManager.GetString("RiverValleyRegion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rounds in clip.
         /// </summary>
         public static string RoundsInClip {
@@ -3855,6 +3873,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string Tools {
             get {
                 return ResourceManager.GetString("Tools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Broken Railroad.
+        /// </summary>
+        public static string TracksRegion {
+            get {
+                return ResourceManager.GetString("TracksRegion", resourceCulture);
             }
         }
         

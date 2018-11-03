@@ -18,7 +18,7 @@
         <Label HorizontalAlignment="Center" Margin="0 20 0 0">Developed by FINDarkside</Label>
         <Label HorizontalAlignment="Center">Contact: findarkside@gmail.com</Label>
         <Label HorizontalAlignment="Center" Margin="0 20 0 0">Russian translation by driver_13 and Boer17</Label>
-        <Label HorizontalAlignment="Center">Maps made by Whiteberry</Label>
+        <Label HorizontalAlignment="Center">Maps made by Whiteberry and Stray Wolf</Label>
         <Label HorizontalAlignment="Center" Margin="0 20 0 0">Other contributors:</Label>
         <Label HorizontalAlignment="Center">nbernier</Label>
     </StackPanel>

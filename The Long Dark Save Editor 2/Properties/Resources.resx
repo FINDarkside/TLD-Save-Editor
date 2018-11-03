@@ -1392,4 +1392,13 @@
   <data name="GEAR_RecycledCan" xml:space="preserve">
     <value>Recycled Can</value>
   </data>
+  <data name="MountainTownRegion" xml:space="preserve">
+    <value>Mountain Town</value>
+  </data>
+  <data name="TracksRegion" xml:space="preserve">
+    <value>Broken Railroad</value>
+  </data>
+  <data name="RiverValleyRegion" xml:space="preserve">
+    <value>Hushed River Valley</value>
+  </data>
 </root>

@@ -14,6 +14,10 @@
         <Image x:Key="MarshRegion" Source="../Images/ForlomMuskeg.png"></Image>
         <Image x:Key="RavineTransitionZone" Source="../Images/RavineSF.png"></Image>
         <Image x:Key="HighwayTransitionZone" Source="../Images/CrumblingHighwaySF.png"></Image>
+        <Image x:Key="MountainTownRegion" Source="../Images/MountainTownSF.png"></Image>
+        <Image x:Key="TracksRegion" Source="../Images/BrokenRailroadSF.png"></Image>
+        <Image x:Key="RiverValleyRegion" Source="../Images/HushedRiverValleySF.png"></Image>
+
     </UserControl.Resources>
     <Grid>
         <Canvas Name="canvas" MouseWheel="canvas_MouseWheel" Background="White" ClipToBounds="True" MouseMove="canvas_MouseMove"  

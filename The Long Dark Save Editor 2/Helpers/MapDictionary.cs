@@ -25,7 +25,10 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             { "CrashMountainRegion", new MapInfo {origo = new Point(62.5, 2006), width = 2124, height = 2349, pixelsPerCoordinate = 0.98476190476f} },
             { "MarshRegion", new MapInfo {origo = new Point(260, 2006), width = 2125, height = 2291, pixelsPerCoordinate = 0.98476190476f} },
             { "RavineTransitionZone", new MapInfo {origo = new Point(1275.5, 543.5), width = 1538, height = 958, pixelsPerCoordinate = 0.98538461538f} },
-            { "HighwayTransitionZone", new MapInfo {origo = new Point(88, 905.2), width = 1182, height = 787, pixelsPerCoordinate = 0.986f} }
+            { "HighwayTransitionZone", new MapInfo {origo = new Point(88, 905.2), width = 1182, height = 787, pixelsPerCoordinate = 0.986f} },
+            { "TracksRegion", new MapInfo {origo = new Point(308, 1746), width = 1763, height = 2007, pixelsPerCoordinate = 0.9385f} },
+            { "RiverValleyRegion", new MapInfo {origo = new Point(99.18, 1832), width = 1968, height = 2092, pixelsPerCoordinate = 0.9385f} },
+            { "MountainTownRegion", new MapInfo {origo = new Point(38.15, 2380), width = 2156, height = 2606, pixelsPerCoordinate = 0.9385f} },
         };
 
         public static List<string> MapNames
