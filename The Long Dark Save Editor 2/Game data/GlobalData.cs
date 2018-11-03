@@ -53,6 +53,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public int m_DayLastNightStingerAudioPlayed { get; set; }
         public int m_DayLastDawnVoiceOverPlayed { get; set; }
         public int m_DayLastNightVoiceOverPlayed { get; set; }
+        public int m_4DONCurrentDay { get; set; }
     }
 
     public class WindSaveDataProxy
