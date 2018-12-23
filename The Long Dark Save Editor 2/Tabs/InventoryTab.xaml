@@ -126,7 +126,7 @@
                 <ComboBox Name="cbItemCategory" ItemsSource="{Binding Source={helpers:EnumerationExtension {x:Type gameData:ItemCategory}}}" 
                                         DisplayMemberPath="Description" SelectedValuePath="Value" Width="120" SelectedIndex="0"/>
                 <ComboBox Name="cbItem" ItemsSource="{Binding ElementName=cbItemCategory, Path=SelectedValue, Converter={StaticResource CategoryToItemsConverter}}" 
-                                      Margin="10 0 5 0" DisplayMemberPath="Description" SelectedValuePath="Value" Width="160" SelectionChanged="cbItem_SelectionChanged" SelectedIndex="0" />
+                          Margin="10 0 5 0" DisplayMemberPath="Description" SelectedValuePath="Value" Width="160" SelectionChanged="cbItem_SelectionChanged" SelectedIndex="0" IsEditable="True"/>
                 <Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="AddItemClicked" Content="{x:Static p:Resources.AddItem}" />
                 <Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="RepairAllClicked" Content="{x:Static p:Resources.RepairAll}" />
                 <Button Margin="10 0 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="RemoveAllClicked" Content="{x:Static p:Resources.RemoveAll}" />
