@@ -29,6 +29,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_PlayerSkillsSerialized { get; set; }
         public string m_PlayerGameStatsSerialized { get; set; }
         public string m_HypothermiaSerialized { get; set; }
+        public string m_WellFedSerialized { get; set; }
         public string m_FrostbiteSerialized { get; set; }
         public string m_FoodPoisoningSerialized { get; set; }
         public string m_DysenterySerialized { get; set; }
@@ -64,6 +65,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_WorldMapDataSerialized { get; set; }
         public string m_MapDataSerialized { get; set; }
         public string m_BearHuntSerialized { get; set; }
+        public string m_BearHuntReduxSerialized { get; set; }
         public string m_KnowledgeManagerSerialized { get; set; }
         public string m_UnlockedBlueprintsSerialized { get; set; }
         public string m_CollectionManagerSerialized { get; set; }

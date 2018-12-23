@@ -203,8 +203,12 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         CabinFeverRisk,
         [Description("Frostbite risk")]
         FrostbiteRisk,
+        [Description("Electric burn")]
         BurnsElectric,
-        BrokenRib
+        [Description("Broken rib")]
+        BrokenRib,
+        [Description("Well fed")]
+        WellFed
     }
 
     public enum ExperienceModeType
@@ -223,6 +227,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         StoryFresh,
         StoryHardened,
         FourDaysOfNight,
+        ChallengeArchivist,
         NUM_MODES,
     }
 
@@ -461,5 +466,25 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         ChallengeMastery = 46,
     }
 
+    public enum DamageSide
+    {
+        DamageSideNone = -1,
+        DamageSideLeft = 0,
+        DamageSideRight = 1,
+    }
+
+    public enum HudSize
+    {
+        Small,
+        Regular,
+        Large,
+    }
+
+    public enum HudType
+    {
+        Off,
+        Contextual,
+        AlwaysOn,
+    }
 
 }

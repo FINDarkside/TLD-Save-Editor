@@ -308,6 +308,16 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
                 }
             }
 
+            var wellFed = Util.DeserializeObject<WellFedSaveDataProxy>(global.m_WellFedSerialized);
+            if (wellFed.m_Active)
+            {
+                Positive.Add(new AfflictionWithProxy()
+                {
+                    AfflictionType = AfflictionType.WellFed,
+                    Location = 6,
+                    proxy = global.m_WellFedSerialized,
+                });
+            }
         }
 
         public GlobalSaveGameFormat SerializeTo(GlobalSaveGameFormat proxy)
@@ -530,6 +540,10 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             else if (afflictions.ContainsKey(AfflictionType.IntestinalParasitesRisk))
             {
                 proxy.m_IntestinalParasitesSerialized = ((AfflictionWithProxy)afflictions[AfflictionType.IntestinalParasitesRisk][0]).proxy;
+            }
+            else if (afflictions.ContainsKey(AfflictionType.WellFed))
+            {
+                proxy.m_WellFedSerialized = ((AfflictionWithProxy)afflictions[AfflictionType.WellFed][0]).proxy;
             }
 
             return proxy;

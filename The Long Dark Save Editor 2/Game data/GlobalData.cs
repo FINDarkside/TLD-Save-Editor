@@ -54,6 +54,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public int m_DayLastDawnVoiceOverPlayed { get; set; }
         public int m_DayLastNightVoiceOverPlayed { get; set; }
         public int m_4DONCurrentDay { get; set; }
+        public bool m_LockedTOD { get; set; }
     }
 
     public class WindSaveDataProxy
@@ -118,8 +119,11 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_NumSecondsSinceLastVoiceOver { get; set; }
         public bool m_NeverDieProxy { get; set; }
         public bool m_Invulnerable { get; set; }
+        public bool m_HideDamageEvents { get; set; }
+        public bool m_FoceUncrouched { get; set; }
         public bool m_CanPlayNearDeathMusic { get; set; }
         public ConditionLevel m_ConditionLevelForPreviousVoiceOver { get; set; }
+        public bool m_SuppressVoiceOver { get; set; }
     }
 
     public class EncumberSaveDataProxy
@@ -138,6 +142,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_FatiguePenalty { get; set; }
         public HungerLevel m_HungerLevelForPreviousVoiceOver { get; set; }
         public float m_CaloriesEatenToday { get; set; }
+        public bool m_SuppressVoiceOver { get; set; }
     }
 
     public class ThirstSaveDataProxy
@@ -146,6 +151,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_NumSecondsSinceLastVoiceOver { get; set; }
         public bool m_DehydratedInLog { get; set; }
         public ThirstLevel m_ThirstLevelForPreviousVoiceOver { get; set; }
+        public bool m_SuppressVoiceOver { get; set; }
     }
 
     public class FatigueSaveDataProxy
@@ -154,6 +160,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_NumSecondsSinceLastVoiceOver { get; set; }
         public bool m_ExhaustedInLog { get; set; }
         public FatigueLevel m_FatigueLevelForPreviousVoiceOver { get; set; }
+        public bool m_SuppressVoiceOver { get; set; }
     }
 
     public class FreezingSaveDataProxy
@@ -163,6 +170,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_FreezingInLog { get; set; }
         public FreezingLevel m_FreezingLevelForPreviousVoiceOver { get; set; }
         public float m_TemperatureBonusFromRunning { get; set; }
+        public bool m_SuppressVoiceOver { get; set; }
     }
 
     public class WillpowerSaveDataProxy
@@ -191,8 +199,9 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
         public ObservableCollection<InventoryItem> Items { get; set; }
         public int[] QuickSelectInstanceIDs { get; set; }
-        public bool m_ForceOverrideWeight { get; set; }
-        public float m_OverridedWeight { get; set; }
+        public bool ForceOverrideWeight { get; set; }
+        public float OverridedWeight { get; set; }
+        public bool ConsumedCoffee { get; set; }
         public bool ConsumedRosehipTea { get; set; }
         public bool ConsumedReishiTea { get; set; }
         public bool ConsumedOldMansBeardDressing { get; set; }
@@ -212,8 +221,9 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
                 Items.Add(new InventoryItem(item));
             }
             QuickSelectInstanceIDs = proxy.m_QuickSelectInstanceIDs;
-            m_ForceOverrideWeight = proxy.m_ForceOverrideWeight;
-            m_OverridedWeight = proxy.m_OverridedWeight;
+            ForceOverrideWeight = proxy.m_ForceOverrideWeight;
+            OverridedWeight = proxy.m_OverridedWeight;
+            ConsumedCoffee = proxy.m_ConsumedCoffee;
             ConsumedRosehipTea = proxy.m_ConsumedRosehipTea;
             ConsumedReishiTea = proxy.m_ConsumedReishiTea;
             ConsumedOldMansBeardDressing = proxy.m_ConsumedOldMansBeardDressing;
@@ -239,8 +249,9 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             {
                 proxy.m_SerializedItems.Add(item.Serialize());
             }
-            proxy.m_ForceOverrideWeight = m_ForceOverrideWeight;
-            proxy.m_OverridedWeight = m_OverridedWeight;
+            proxy.m_ForceOverrideWeight = ForceOverrideWeight;
+            proxy.m_OverridedWeight = OverridedWeight;
+            proxy.m_ConsumedCoffee = ConsumedCoffee;
             proxy.m_ConsumedRosehipTea = ConsumedRosehipTea;
             proxy.m_ConsumedReishiTea = ConsumedReishiTea;
             proxy.m_ConsumedOldMansBeardDressing = ConsumedOldMansBeardDressing;
@@ -255,6 +266,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public int[] m_QuickSelectInstanceIDs { get; set; }
         public bool m_ForceOverrideWeight { get; set; }
         public float m_OverridedWeight { get; set; }
+        public bool m_ConsumedCoffee { get; set; }
         public bool m_ConsumedRosehipTea { get; set; }
         public bool m_ConsumedReishiTea { get; set; }
         public bool m_ConsumedOldMansBeardDressing { get; set; }
@@ -661,6 +673,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_QuarterBagWasteMultiplier { get; set; }
         public string m_MissionIdSerialized { get; set; }
         public string m_BearHuntAiSerialized { get; set; }
+        public string m_BearHuntAiReduxSerialized { get; set; }
+        public DamageSide m_DamageSide { get; set; }
     }
 
     public class CookingPotItemSaveDataProxy
@@ -707,6 +721,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_PumpkinPieBuffHoursRemaining { get; set; }
         public float m_PumpkinPieFreezingRateScale { get; set; }
         public SerializableBounds m_LimitCampfiresToBounds { get; set; }
+        public bool m_StatusBarsLocked { get; set; }
     }
 
     public class PlayerClimbRopeProxy
@@ -814,6 +829,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float[] m_ElapsedHoursList { get; set; }
         public float[] m_DurationHoursList { get; set; }
         public float[] m_ElapsedRestList { get; set; }
+        public bool m_IsNoSprainWristForced { get; set; }
     }
 
     public class SprainedWristMajorSaveDataProxy
@@ -839,6 +855,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_BandageApplied { get; set; }
         public int m_NumBurnRemindersPlayed { get; set; }
         public float m_SecondsUntilNextBurnReminder { get; set; }
+        public string m_CauseLocID;
     }
 
     public class BurnsElectricSaveDataProxy
@@ -1216,6 +1233,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_NPC_ID { get; set; }
         public float m_TrustDecayGracePeriodHours { get; set; }
         public string chapterLocID { get; set; }
+        public bool showWhenCompleted { get; set; }
     }
 
     public class StoryMissionObjective
@@ -1231,6 +1249,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public List<string> childObjectiveIDList { get; set; }
         public string missionID { get; set; }
         public bool invisibleInJournal { get; set; }
+        public bool showWhenCompleted { get; set; }
     }
 
     public class SandboxRecord
@@ -1266,8 +1285,14 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     public class SerializedParams
     {
-        public bool m_EnableFirstPersonHands;
-        public string m_HandMeshState;
+        public bool m_EnableFirstPersonHands { get; set; }
+        public string m_HandMeshState { get; set; }
+    }
+
+    public class WellFedSaveDataProxy
+    {
+        public bool m_Active { get; set; }
+        public float m_ElapsedHoursNotStarving { get; set; }
     }
 
     public class BoxCollider

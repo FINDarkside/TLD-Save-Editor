@@ -26,6 +26,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_SSAOEnabled { get; set; }
         public MeasurementUnits m_Units { get; set; }
         public HudPref m_HudPref { get; set; }
+        public HudSize m_HudSize { get; set; }
+        public HudType m_HudType { get; set; }
         public bool m_InvertY { get; set; }
         public bool m_InvertX { get; set; }
         public bool m_LockMouseToScreen { get; set; }
@@ -62,6 +64,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_BestTimeWhiteout { get; set; }
         public float m_BestTimeNomad { get; set; }
         public float m_BestTimeHunted2 { get; set; }
+        public float m_BestTimeArchivist { get; set; }
         public ExperienceModeType m_MostRecentSandboxMode { get; set; }
         public ExperienceModeType m_MostRecentChallengeMode { get; set; }
         public ExperienceModeType m_MostRecentEpisodeMode { get; set; }
@@ -79,6 +82,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_FoundAllCachesEpisodeTwo { get; set; }
         public List<Achievement> m_UnlockedAchievements { get; set; }
         public bool m_ReduceCameraMotion { get; set; }
+        public bool m_LargeSubtitles { get; set; }
         public HashSet<string> m_ViewedNotifications { get; set; }
     }
 
