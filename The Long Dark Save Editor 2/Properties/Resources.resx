@@ -865,7 +865,7 @@
     <value>Dam Code Note</value>
   </data>
   <data name="GEAR_DamControlRoomCodeNote" xml:space="preserve">
-    <value>Dam Control Room Code Note</value>
+    <value>Dam Control Room Code</value>
   </data>
   <data name="GEAR_DamOfficeKey" xml:space="preserve">
     <value>Dam Office Key</value>
@@ -1336,22 +1336,22 @@
     <value>Letter for Hank's Neice</value>
   </data>
   <data name="GEAR_WillShirt" xml:space="preserve">
-    <value>Will's Shirt</value>
+    <value>Mackenzie's Shirt</value>
   </data>
   <data name="GEAR_WillParka" xml:space="preserve">
-    <value>Will's Coat</value>
+    <value>Mackenzie's Parka</value>
   </data>
   <data name="GEAR_WillSweater" xml:space="preserve">
-    <value>Will's Sweater</value>
+    <value>Mackenzie's Sweater</value>
   </data>
   <data name="GEAR_WillBoots" xml:space="preserve">
-    <value>Will's Boots</value>
+    <value>Mackenzie's Boots</value>
   </data>
   <data name="GEAR_WillToque" xml:space="preserve">
-    <value>Will's Hat</value>
+    <value>Mackenzie's Toque</value>
   </data>
   <data name="GEAR_WillPants" xml:space="preserve">
-    <value>Will's Pants</value>
+    <value>Mackenzie's Pants</value>
   </data>
   <data name="GEAR_GreyMotherBoots" xml:space="preserve">
     <value>Mountaineering Boots</value>
@@ -1405,9 +1405,123 @@
     <value>Moose Quarter</value>
   </data>
   <data name="GEAR_RawMeatMoose" xml:space="preserve">
-    <value>Moose meat</value>
+    <value>Moose Meat</value>
   </data>
   <data name="GEAR_CookedMeatMoose" xml:space="preserve">
     <value>Moose Meat (Cooked)</value>
+  </data>
+  <data name="GEAR_BackerNote1C" xml:space="preserve">
+    <value>A Note Left Behind</value>
+  </data>
+  <data name="GEAR_SurvivalSchoolFishing" xml:space="preserve">
+    <value>The Frozen Angler</value>
+  </data>
+  <data name="GEAR_KnowledgeCarterDam" xml:space="preserve">
+    <value>Carter Hydro Dam</value>
+  </data>
+  <data name="GEAR_TransponderParts" xml:space="preserve">
+    <value>Transponder Parts</value>
+  </data>
+  <data name="GEAR_FoodSupplies_hangar" xml:space="preserve">
+    <value>Emergency Food</value>
+  </data>
+  <data name="GEAR_KnowledgeCollapse1" xml:space="preserve">
+    <value>History of The Collapse, Part One</value>
+  </data>
+  <data name="GEAR_SurvivalSchoolWolfHunt" xml:space="preserve">
+    <value>Advanced Guns Guns Guns!</value>
+  </data>
+  <data name="GEAR_RabbitskinHat" xml:space="preserve">
+    <value>Rabbitskin Hat</value>
+  </data>
+  <data name="GEAR_LakeIncidentNote" xml:space="preserve">
+    <value>Crumpled Note</value>
+  </data>
+  <data name="GEAR_SpearHead" xml:space="preserve">
+    <value>Spear Head</value>
+  </data>
+  <data name="GEAR_BearSpearBroken" xml:space="preserve">
+    <value>Broken Bear Spear</value>
+  </data>
+  <data name="GEAR_RadioParts" xml:space="preserve">
+    <value>Radio Parts</value>
+  </data>
+  <data name="GEAR_SurvivalSchoolPlants" xml:space="preserve">
+    <value>Medicinal Plants of Great Bear</value>
+  </data>
+  <data name="GEAR_BearSpearStory" xml:space="preserve">
+    <value>Bear Spear</value>
+  </data>
+  <data name="GEAR_AuroraHatchCode" xml:space="preserve">
+    <value>Aurora Hatch Door Entry Code</value>
+  </data>
+  <data name="GEAR_LongUnderwearStart" xml:space="preserve">
+    <value>Thermal Underwear (Start)</value>
+  </data>
+  <data name="GEAR_SurvivalSchoolDeerHunt" xml:space="preserve">
+    <value>Frontier Shooting Guide</value>
+  </data>
+  <data name="GEAR_WillBootsStart" xml:space="preserve">
+    <value>Mackenzie's Boots (Start)</value>
+  </data>
+  <data name="GEAR_CottonSocksStart" xml:space="preserve">
+    <value>Sports Socks (Start)</value>
+  </data>
+  <data name="GEAR_HardCase_hangar" xml:space="preserve">
+    <value>Astrid's Hardcase</value>
+  </data>
+  <data name="GEAR_GMExtraSuppliesNote" xml:space="preserve">
+    <value>Winter Forecast</value>
+  </data>
+  <data name="GEAR_MedicalSupplies_hangar" xml:space="preserve">
+    <value>First Aid Kit</value>
+  </data>
+  <data name="GEAR_KnowledgeMilton" xml:space="preserve">
+    <value>Town of Milton</value>
+  </data>
+  <data name="GEAR_WillParka_Tossed" xml:space="preserve">
+    <value>Mackenzie's Parka</value>
+  </data>
+  <data name="GEAR_MiltonGardenCache" xml:space="preserve">
+    <value>Medicine in my backyard</value>
+  </data>
+  <data name="GEAR_AstridBackPack_hangar" xml:space="preserve">
+    <value>Astrid's Backpack</value>
+  </data>
+  <data name="GEAR_DamFenceKey" xml:space="preserve">
+    <value>Carter Hydro Staging Area Gate Key</value>
+  </data>
+  <data name="GEAR_KnowledgeMysteryLake" xml:space="preserve">
+    <value>Mystery Lake &amp; Area</value>
+  </data>
+  <data name="GEAR_BearSpear" xml:space="preserve">
+    <value>Bear Spear</value>
+  </data>
+  <data name="GEAR_WillSweaterStart" xml:space="preserve">
+    <value>Mackenzie's Sweater (Start)</value>
+  </data>
+  <data name="GEAR_KnowledgeCollapse3" xml:space="preserve">
+    <value>History of The Collapse, Part Three</value>
+  </data>
+  <data name="GEAR_SurvivalSchoolClothing" xml:space="preserve">
+    <value>A Sewing Primer</value>
+  </data>
+  <data name="GEAR_WillPantsStart" xml:space="preserve">
+    <value>Mackenzie's Pants (Start)</value>
+  </data>
+  <data name="GEAR_KnowledgeCollapse4" xml:space="preserve">
+    <value>History of the Collapse, Part Four</value>
+  </data>
+  <data name="GEAR_SurvivalSchoolRabbits" xml:space="preserve">
+    <value>Field Dressing Your Kill, Vol. I</value>
+  </data>
+  <data name="GEAR_WillShirtStart" xml:space="preserve">
+    <value>Mackenzie's Shirt (Start)</value>
+  </data>
+  <data name="GEAR_KnowledgeCollapse2" xml:space="preserve">
+    <value>History of The Collapse, Part Two</value>
+  </data>
+  <data name="GEAR_FlareGunCase_hangar" xml:space="preserve">
+    <value>Distress Pistol Kit</value>
   </data>
 </root>

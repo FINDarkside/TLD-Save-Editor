@@ -859,7 +859,7 @@
     <value>Записка с кодом ГЭС</value>
   </data>
   <data name="GEAR_DamControlRoomCodeNote" xml:space="preserve">
-    <value>Записка с кодом от комнаты управления ГЭС</value>
+    <value>Код от зала управления дамбой</value>
   </data>
   <data name="GEAR_DamOfficeKey" xml:space="preserve">
     <value>Ключ от офиса ГЭС</value>
@@ -1336,22 +1336,22 @@
     <value>Письмо для племянницы Хэнка</value>
   </data>
   <data name="GEAR_WillShirt" xml:space="preserve">
-    <value>Майка Уилла</value>
+    <value>Рубашка Маккензи</value>
   </data>
   <data name="GEAR_WillParka" xml:space="preserve">
-    <value>Куртка Уилла</value>
+    <value>Парка Маккензи</value>
   </data>
   <data name="GEAR_WillSweater" xml:space="preserve">
-    <value>Свитер Уилла</value>
+    <value>Свитер Маккензи</value>
   </data>
   <data name="GEAR_WillBoots" xml:space="preserve">
-    <value>Сапоги Уилла</value>
+    <value>Ботинки Маккензи</value>
   </data>
   <data name="GEAR_WillToque" xml:space="preserve">
-    <value>Шапка Уилла</value>
+    <value>Шапка Маккензи</value>
   </data>
   <data name="GEAR_WillPants" xml:space="preserve">
-    <value>Штаны Уилла</value>
+    <value>Штаны Маккензи</value>
   </data>
   <data name="GEAR_GreyMotherBoots" xml:space="preserve">
     <value>Альпинистские ботинки</value>
@@ -1384,12 +1384,135 @@
     <value>Плащ из лосиной шкуры</value>
   </data>
   <data name="GEAR_MooseHide" xml:space="preserve">
-    <value>Fresh Moose Hide</value>
+    <value>Свежая лосиная шкура</value>
   </data>
   <data name="GEAR_CookingPot" xml:space="preserve">
     <value>Котелок</value>
   </data>
   <data name="GEAR_RecycledCan" xml:space="preserve">
     <value>Пустая банка</value>
+  </data>
+  <data name="GEAR_BackerNote1C" xml:space="preserve">
+    <value>Оставленная записка</value>
+  </data>
+  <data name="GEAR_SurvivalSchoolFishing" xml:space="preserve">
+    <value>Замерзший рыболов</value>
+  </data>
+  <data name="GEAR_KnowledgeCarterDam" xml:space="preserve">
+    <value>ГЭС «Картер»</value>
+  </data>
+  <data name="GEAR_TransponderParts" xml:space="preserve">
+    <value>Детали передатчика</value>
+  </data>
+  <data name="GEAR_FoodSupplies_hangar" xml:space="preserve">
+    <value>Сухпаек</value>
+  </data>
+  <data name="GEAR_KnowledgeCollapse1" xml:space="preserve">
+    <value>История Разрухи. Часть 1</value>
+  </data>
+  <data name="GEAR_SurvivalSchoolWolfHunt" xml:space="preserve">
+    <value>Бах-бабах: продвинутое руководство</value>
+  </data>
+  <data name="GEAR_RabbitskinHat" xml:space="preserve">
+    <value>Шапка из кроличьего меха</value>
+  </data>
+  <data name="GEAR_LakeIncidentNote" xml:space="preserve">
+    <value>Смятая записка</value>
+  </data>
+  <data name="GEAR_SpearHead" xml:space="preserve">
+    <value>Острие копья</value>
+  </data>
+  <data name="GEAR_BearSpearBroken" xml:space="preserve">
+    <value>Сломанное копье для охоты на медведя</value>
+  </data>
+  <data name="GEAR_RadioParts" xml:space="preserve">
+    <value>Детали радиопередатчиков</value>
+  </data>
+  <data name="GEAR_SurvivalSchoolPlants" xml:space="preserve">
+    <value>Целебные растения Дикого Медведя</value>
+  </data>
+  <data name="GEAR_BearSpearStory" xml:space="preserve">
+    <value>Копье для охоты на медведя</value>
+  </data>
+  <data name="GEAR_AuroraHatchCode" xml:space="preserve">
+    <value>Код от двери светочувствительного бункера</value>
+  </data>
+  <data name="GEAR_LongUnderwearStart" xml:space="preserve">
+    <value>Термобелье</value>
+  </data>
+  <data name="GEAR_SurvivalSchoolDeerHunt" xml:space="preserve">
+    <value>Стрельба на фронтире</value>
+  </data>
+  <data name="GEAR_WillBootsStart" xml:space="preserve">
+    <value>Ботинки Маккензи</value>
+  </data>
+  <data name="GEAR_CottonSocksStart" xml:space="preserve">
+    <value>Спортивные носки</value>
+  </data>
+  <data name="GEAR_CookedMeatMoose" xml:space="preserve">
+    <value>Мясо лося (приготовленное)</value>
+  </data>
+  <data name="GEAR_HardCase_hangar" xml:space="preserve">
+    <value>Футляр Астрид</value>
+  </data>
+  <data name="GEAR_GMExtraSuppliesNote" xml:space="preserve">
+    <value>Прогноз на зиму</value>
+  </data>
+  <data name="GEAR_RawMeatMoose" xml:space="preserve">
+    <value>Мясо лося</value>
+  </data>
+  <data name="GEAR_MedicalSupplies_hangar" xml:space="preserve">
+    <value>Аптечка</value>
+  </data>
+  <data name="GEAR_KnowledgeMilton" xml:space="preserve">
+    <value>Город Милтон</value>
+  </data>
+  <data name="GEAR_WillParka_Tossed" xml:space="preserve">
+    <value>Парка Маккензи</value>
+  </data>
+  <data name="GEAR_MiltonGardenCache" xml:space="preserve">
+    <value>Медикаменты у меня во дворе</value>
+  </data>
+  <data name="GEAR_AstridBackPack_hangar" xml:space="preserve">
+    <value>Рюкзак Астрид</value>
+  </data>
+  <data name="GEAR_DamFenceKey" xml:space="preserve">
+    <value>Ключ от ворот к месту временного размещения оборудования ГЭС «Картер»</value>
+  </data>
+  <data name="GEAR_KnowledgeMysteryLake" xml:space="preserve">
+    <value>МЕСТО: Загадочное озеро и окрестности</value>
+  </data>
+  <data name="GEAR_MooseQuarter" xml:space="preserve">
+    <value>Четверть туши лося</value>
+  </data>
+  <data name="GEAR_BearSpear" xml:space="preserve">
+    <value>Копье для охоты на медведя</value>
+  </data>
+  <data name="GEAR_WillSweaterStart" xml:space="preserve">
+    <value>Свитер Маккензи</value>
+  </data>
+  <data name="GEAR_KnowledgeCollapse3" xml:space="preserve">
+    <value> История Разрухи, часть 3</value>
+  </data>
+  <data name="GEAR_SurvivalSchoolClothing" xml:space="preserve">
+    <value>Шитье для начинающих</value>
+  </data>
+  <data name="GEAR_WillPantsStart" xml:space="preserve">
+    <value>Штаны Маккензи</value>
+  </data>
+  <data name="GEAR_KnowledgeCollapse4" xml:space="preserve">
+    <value>История Разрухи, часть 4</value>
+  </data>
+  <data name="GEAR_SurvivalSchoolRabbits" xml:space="preserve">
+    <value>Разделка туши в полевых условиях, том 1</value>
+  </data>
+  <data name="GEAR_WillShirtStart" xml:space="preserve">
+    <value>Рубашка Маккензи</value>
+  </data>
+  <data name="GEAR_KnowledgeCollapse2" xml:space="preserve">
+    <value>История Разрухи, часть 2</value>
+  </data>
+  <data name="GEAR_FlareGunCase_hangar" xml:space="preserve">
+    <value>Сигнальный пистолет</value>
   </data>
 </root>

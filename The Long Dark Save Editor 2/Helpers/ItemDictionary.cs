@@ -48,7 +48,6 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_ReishiPrepared", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_RosehipsPrepared", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
 
-
             // Clothing
             AddItemInfo("GEAR_Balaclava", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
             AddItemInfo("GEAR_BaseballCap", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
@@ -119,7 +118,13 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_GreyMotherBoots", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
             AddItemInfo("GEAR_MooseHideCloak", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
             AddItemInfo("GEAR_MooseHideBag", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
-
+            AddItemInfo("GEAR_WillSweaterStart", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+            AddItemInfo("GEAR_WillShirtStart", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+            AddItemInfo("GEAR_WillBootsStart", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+            AddItemInfo("GEAR_WillPantsStart", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+            AddItemInfo("GEAR_RabbitskinHat", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+            AddItemInfo("GEAR_CottonSocksStart", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+            AddItemInfo("GEAR_LongUnderwearStart", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 
             // Food
             AddItemInfo("GEAR_BeefJerky", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 350}}");
@@ -224,7 +229,13 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_FireAxe", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_CookingPot", ItemCategory.Tools, @"{""CookingPot"": {}}");
             AddItemInfo("GEAR_RecycledCan", ItemCategory.Tools, @"{""CookingPot"": {""m_CanOnlyWarmUpFood"": true}}");
-
+            AddItemInfo("GEAR_SpearHead", ItemCategory.Tools, @"{}");
+            AddItemInfo("GEAR_MedicalSupplies_hangar", ItemCategory.Tools, @"{}");
+            AddItemInfo("GEAR_FoodSupplies_hangar", ItemCategory.Tools, @"{}");
+            AddItemInfo("GEAR_FlareGunCase_hangar", ItemCategory.Tools, @"{}");
+            AddItemInfo("GEAR_AstridBackPack_hangar", ItemCategory.Tools, @"{}");
+            AddItemInfo("GEAR_HardCase_hangar", ItemCategory.Tools, @"{}");
+            AddItemInfo("GEAR_BearSpearStory", ItemCategory.Tools, @"{}", true);
 
             // Materials
             AddItemInfo("GEAR_ArrowHead", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""InProgressItem"": {""m_PercentComplete"": 100}}");
@@ -328,6 +339,20 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_WaterTowerNote", ItemCategory.Collectible, @"{}");
             AddItemInfo("GEAR_FixedRifle", ItemCategory.Collectible, @"{}");
             AddItemInfo("GEAR_BankVaultCode", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_BackerNote1C", ItemCategory.Collectible, @"{}", true);
+            AddItemInfo("GEAR_DamFenceKey", ItemCategory.Collectible, @"{}", true);
+            AddItemInfo("GEAR_AuroraHatchCode", ItemCategory.Collectible, @"{}", true);
+            AddItemInfo("GEAR_KnowledgeCarterDam", ItemCategory.Collectible, @"{}", true);
+            AddItemInfo("GEAR_KnowledgeCollapse1", ItemCategory.Collectible, @"{}", true);
+            AddItemInfo("GEAR_KnowledgeCollapse2", ItemCategory.Collectible, @"{}", true);
+            AddItemInfo("GEAR_KnowledgeCollapse3", ItemCategory.Collectible, @"{}", true);
+            AddItemInfo("GEAR_KnowledgeCollapse4", ItemCategory.Collectible, @"{}", true);
+            AddItemInfo("GEAR_MiltonGardenCache", ItemCategory.Collectible, @"{}", true);
+            AddItemInfo("GEAR_KnowledgeMysteryLake", ItemCategory.Collectible, @"{}", true);
+            AddItemInfo("GEAR_KnowledgeMilton", ItemCategory.Collectible, @"{}", true);
+            AddItemInfo("GEAR_GMExtraSuppliesNote", ItemCategory.Collectible, @"{}", true);
+            AddItemInfo("GEAR_RadioParts", ItemCategory.Collectible, @"{}", true);
+            AddItemInfo("GEAR_TransponderParts", ItemCategory.Collectible, @"{}", true);
 
             // Hidden
             AddItemInfo("GEAR_AccelerantKerosene", ItemCategory.Hidden, @"{""LiquidItem"": {""m_LiquidLitersProxy"": 1}}"); //Check!!
