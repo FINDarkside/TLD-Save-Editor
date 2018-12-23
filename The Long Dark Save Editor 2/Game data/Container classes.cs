@@ -309,7 +309,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             }
 
             var wellFed = Util.DeserializeObject<WellFedSaveDataProxy>(global.m_WellFedSerialized);
-            if (wellFed.m_Active)
+            if (brokenRibs != null && wellFed.m_Active)
             {
                 Positive.Add(new AfflictionWithProxy()
                 {
