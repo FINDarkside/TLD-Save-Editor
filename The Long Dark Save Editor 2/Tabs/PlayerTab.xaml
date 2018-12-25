@@ -64,7 +64,7 @@
         </StackPanel>
         <CheckBox IsChecked="{Binding CurrentSave.Global.Condition.m_NeverDieProxy}" Margin="0 0 0 5" Content="{x:Static p:Resources.NeverDie}"/>
         <CheckBox IsChecked="{Binding CurrentSave.Global.Condition.m_Invulnerable}" Margin="0 0 0 5" Content="{x:Static p:Resources.Invulnerable}"/>
-        <CheckBox IsChecked="{Binding CurrentSave.Global.Inventory.m_ForceOverrideWeight}" Margin="0 0 0 5" Content="{x:Static p:Resources.InfiniteCarry}"/>
+        <CheckBox IsChecked="{Binding CurrentSave.Global.Inventory.ForceOverrideWeight}" Margin="0 0 0 5" Content="{x:Static p:Resources.InfiniteCarry}"/>
 
         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
             <Label VerticalAlignment="Center" Width="130" Content="{x:Static p:Resources.CurrentCalories}"/>
