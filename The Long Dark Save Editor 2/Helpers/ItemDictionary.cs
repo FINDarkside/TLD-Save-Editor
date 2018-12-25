@@ -235,6 +235,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_FlareGunCase_hangar", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_AstridBackPack_hangar", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_HardCase_hangar", ItemCategory.Tools, @"{}");
+            AddItemInfo("GEAR_BearSpear", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_BearSpearStory", ItemCategory.Tools, @"{}", true);
 
             // Materials
