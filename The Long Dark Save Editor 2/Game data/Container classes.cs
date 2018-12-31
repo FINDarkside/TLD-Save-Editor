@@ -323,7 +323,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public GlobalSaveGameFormat SerializeTo(GlobalSaveGameFormat proxy)
         {
             var afflictions = new Dictionary<AfflictionType, List<Affliction>>();
-            foreach (var affliction in Negative)
+            foreach (var affliction in Negative.Concat(Positive))
             {
                 if (!afflictions.ContainsKey(affliction.AfflictionType))
                     afflictions.Add(affliction.AfflictionType, new List<Affliction>());
