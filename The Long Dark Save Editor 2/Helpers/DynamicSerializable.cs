@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -17,10 +18,10 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 
         public DynamicSerializable(string json, string path = "")
         {
-            Obj = Parse(JObject.Parse(json), typeof(T));
+            Obj = Parse(JObject.Parse(json), typeof(T), typeof(T).ToString());
         }
 
-        private dynamic Parse(JToken token, Type t, string path = "root")
+        private dynamic Parse(JToken token, Type t, string path, bool deserialize = false)
         {
             if (token.Type == JTokenType.Object)
             {
@@ -40,7 +41,10 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             }
             else if (token.Type == JTokenType.String)
             {
-                return token.ToObject<string>();
+                string s = token.ToObject<string>();
+                if (!deserialize)
+                    return s;
+                return Parse(JToken.Parse(s), t, path);
             }else if(token.Type == JTokenType.Null)
             {
                 return null;
@@ -63,14 +67,14 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                 {
                     var prop = props[child.Key];
                     var childType = prop.PropertyType;
-                    var childVal = Parse(child.Value, childType, path + "." + child.Key);
+                    var childVal = Parse(child.Value, childType, path + "." + child.Key, prop.GetCustomAttribute<DeserializeAttribute>() != null);
                     prop.SetValue(result, childVal);
                 }
                 else if (fields.ContainsKey(child.Key))
                 {
                     var field = fields[child.Key];
                     var childType = field.FieldType;
-                    var childVal = Parse(child.Value, childType, path + "." + child.Key);
+                    var childVal = Parse(child.Value, childType, path + "." + child.Key, field.GetCustomAttribute<DeserializeAttribute>() != null);
                     field.SetValue(result, childVal);
                 }
                 else
