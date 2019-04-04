@@ -102,6 +102,7 @@
     <Compile Include="ErrorDialog.xaml.cs">
       <DependentUpon>ErrorDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\DynamicSerializable.cs" />
     <Compile Include="Helpers\BindableBase.cs" />
     <Compile Include="Helpers\CLZF.cs" />
     <Compile Include="Converters\CategoryToItemsConverter.cs" />
