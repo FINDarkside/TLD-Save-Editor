@@ -123,6 +123,7 @@
     <Compile Include="Helpers\EnumerationExtension.cs" />
     <Compile Include="Helpers\ItemDictionary.cs" />
     <Compile Include="Helpers\MapDictionary.cs" />
+    <Compile Include="Helpers\ReflectionUtil.cs" />
     <Compile Include="Images\InjuriesBody.xaml.cs">
       <DependentUpon>InjuriesBody.xaml</DependentUpon>
     </Compile>

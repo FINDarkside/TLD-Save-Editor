@@ -162,13 +162,16 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 
         private object ParseArray(JArray obj, Type t)
         {
-            Array result = Array.CreateInstance(t, obj.Count);
+            Type elemType = t.GetElementType();
+            if (!t.IsArray)
+                elemType = t.GetGenericArguments().Single();
+            Array result = Array.CreateInstance(elemType, obj.Count);
             int i = 0;
             foreach (var child in obj)
             {
-                result.SetValue(Parse(child, t.GetElementType()), i++);
+                result.SetValue(Parse(child, elemType), i++);
             }
-            return result;
+            return ReflectionUtil.ConvertArray(result, t);
         }
 
         private string MemberToName(MemberInfo m)
