@@ -82,7 +82,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                 }
             }
 
-            if (attr != null && attr.Json)
+            if (attr != null && result != null && attr.Json)
                 return JsonConvert.SerializeObject(result);
             return result;
         }
