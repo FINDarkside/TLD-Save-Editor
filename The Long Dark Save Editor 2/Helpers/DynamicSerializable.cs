@@ -70,7 +70,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             else
             {
                 Type t = o.GetType();
-                if (IsBoxed(o) || o is string)
+                if (ReflectionUtil.IsBoxed(o) || o is string)
                 {
                     result = o;
                 }
@@ -208,14 +208,6 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             if (attr != null)
                 return attr.From;
             return m.Name;
-        }
-
-        public static bool IsBoxed<T>(T value)
-        {
-            return
-                (typeof(T).IsInterface || typeof(T) == typeof(object)) &&
-                value != null &&
-                value.GetType().IsValueType;
         }
 
     }
