@@ -45,7 +45,8 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                 if (!deserialize)
                     return s;
                 return Parse(JToken.Parse(s), t, path);
-            }else if(token.Type == JTokenType.Null)
+            }
+            else if (token.Type == JTokenType.Null)
             {
                 return null;
             }
@@ -58,21 +59,23 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
         private object ParseObject(JObject obj, Type t, string path)
         {
             var result = Activator.CreateInstance(t);
-            Dictionary<string, PropertyInfo> props = t.GetProperties().ToDictionary(p => p.Name);
-            Dictionary<string, FieldInfo> fields = t.GetFields().ToDictionary(p => p.Name);
+            Dictionary<string, PropertyInfo> props = t.GetProperties().ToDictionary(p => MemberToName(p));
+            Dictionary<string, FieldInfo> fields = t.GetFields().ToDictionary(p => MemberToName(p));
 
             foreach (var child in obj)
             {
                 if (props.ContainsKey(child.Key))
                 {
                     var prop = props[child.Key];
+                    var attr = prop.GetCustomAttribute<DeserializeAttribute>();
                     var childType = prop.PropertyType;
-                    var childVal = Parse(child.Value, childType, path + "." + child.Key, prop.GetCustomAttribute<DeserializeAttribute>() != null);
+                    var childVal = Parse(child.Value, childType, path + "." + child.Key, attr != null && attr.Json);
                     prop.SetValue(result, childVal);
                 }
                 else if (fields.ContainsKey(child.Key))
                 {
                     var field = fields[child.Key];
+                    var attr = field.GetCustomAttribute<DeserializeAttribute>();
                     var childType = field.FieldType;
                     var childVal = Parse(child.Value, childType, path + "." + child.Key, field.GetCustomAttribute<DeserializeAttribute>() != null);
                     field.SetValue(result, childVal);
@@ -96,5 +99,12 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             return result;
         }
 
+        private string MemberToName(MemberInfo m)
+        {
+            var attr = m.GetCustomAttribute<DeserializeAttribute>();
+            if (attr != null)
+                return attr.From;
+            return m.Name;
+        }
     }
 }
