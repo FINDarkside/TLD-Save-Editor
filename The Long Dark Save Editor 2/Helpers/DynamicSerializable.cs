@@ -13,27 +13,23 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
     public class DynamicSerializable<T> where T : new()
     {
 
-        private Dictionary<string, JToken> extraFields = new Dictionary<string, JToken>();
+        private Dictionary<object, JToken> extraFields = new Dictionary<object, JToken>();
         public T Obj { get; private set; }
 
-        public DynamicSerializable(string json, string path = "")
+        public DynamicSerializable(string json)
         {
-            Obj = Parse(JObject.Parse(json), typeof(T), typeof(T).ToString());
+            Obj = Parse(JObject.Parse(json), typeof(T));
         }
 
-        private dynamic Parse(JToken token, Type t, string path, bool deserialize = false)
+        private dynamic Parse(JToken token, Type t, bool deserialize = false)
         {
             if (token.Type == JTokenType.Object)
             {
-                if (!t.IsSubclassOf(typeof(object)))
-                    throw new Exception(path + " is not an object");
-                return ParseObject((JObject)token, t, path);
+                return ParseObject((JObject)token, t);
             }
             else if (token.Type == JTokenType.Array)
             {
-                if (!t.IsArray)
-                    throw new Exception(path + " is not an array");
-                return ParseArray((JArray)token, t, path);
+                return ParseArray((JArray)token, t);
             }
             else if (token.Type == JTokenType.Boolean || token.Type == JTokenType.Float || token.Type == JTokenType.Integer)
             {
@@ -44,7 +40,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                 string s = token.ToObject<string>();
                 if (!deserialize)
                     return s;
-                return Parse(JToken.Parse(s), t, path);
+                return Parse(JToken.Parse(s), t);
             }
             else if (token.Type == JTokenType.Null)
             {
@@ -56,7 +52,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             }
         }
 
-        private object ParseObject(JObject obj, Type t, string path)
+        private object ParseObject(JObject obj, Type t)
         {
             var result = Activator.CreateInstance(t);
             Dictionary<string, PropertyInfo> props = t.GetProperties().ToDictionary(p => MemberToName(p));
@@ -69,7 +65,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                     var prop = props[child.Key];
                     var attr = prop.GetCustomAttribute<DeserializeAttribute>();
                     var childType = prop.PropertyType;
-                    var childVal = Parse(child.Value, childType, path + "." + child.Key, attr != null && attr.Json);
+                    var childVal = Parse(child.Value, childType, attr != null && attr.Json);
                     prop.SetValue(result, childVal);
                 }
                 else if (fields.ContainsKey(child.Key))
@@ -77,24 +73,24 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                     var field = fields[child.Key];
                     var attr = field.GetCustomAttribute<DeserializeAttribute>();
                     var childType = field.FieldType;
-                    var childVal = Parse(child.Value, childType, path + "." + child.Key, field.GetCustomAttribute<DeserializeAttribute>() != null);
+                    var childVal = Parse(child.Value, childType, field.GetCustomAttribute<DeserializeAttribute>() != null);
                     field.SetValue(result, childVal);
                 }
                 else
                 {
-                    extraFields.Add(path + "." + child.Key, child.Value);
+                    extraFields.Add(result, child.Value);
                 }
             }
             return result;
         }
 
-        private object ParseArray(JArray obj, Type t, string path)
+        private object ParseArray(JArray obj, Type t)
         {
             Array result = Array.CreateInstance(t, obj.Count);
             int i = 0;
             foreach (var child in obj)
             {
-                result.SetValue(Parse(child, t.GetElementType(), path + ".[]"), i++);
+                result.SetValue(Parse(child, t.GetElementType()), i++);
             }
             return result;
         }
