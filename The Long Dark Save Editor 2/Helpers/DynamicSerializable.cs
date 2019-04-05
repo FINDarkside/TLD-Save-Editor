@@ -27,6 +27,8 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
         {
             if (token.Type == JTokenType.Object)
             {
+                if (typeof(IDictionary).IsAssignableFrom(t))
+                    return ParseDictionary((JObject)token, t);
                 return ParseObject((JObject)token, t);
             }
             else if (token.Type == JTokenType.Array)
@@ -71,6 +73,10 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                 if (IsBoxed(o) || o is string)
                 {
                     result = o;
+                }
+                else if (o is IDictionary)
+                {
+                    result = ReconstructDictionary((IDictionary)o);
                 }
                 else if (o is ICollection)
                 {
@@ -126,6 +132,16 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             return result;
         }
 
+        public IDictionary ReconstructDictionary(IDictionary dict)
+        {
+            var res = new Dictionary<object, object>();
+            foreach (var key in dict.Keys)
+            {
+                res.Add(Reconstruct(key), Reconstruct(dict[key]));
+            }
+            return res;
+        }
+
         private object ParseObject(JObject obj, Type t)
         {
             var result = Activator.CreateInstance(t);
@@ -172,6 +188,18 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                 result.SetValue(Parse(child, elemType), i++);
             }
             return ReflectionUtil.ConvertArray(result, t);
+        }
+
+        private object ParseDictionary(JObject obj, Type t)
+        {
+            var dict = (IDictionary)Activator.CreateInstance(t);
+            var keyType = t.GetGenericArguments()[0];
+            var valType = t.GetGenericArguments()[1];
+            foreach (var child in obj)
+            {
+                dict.Add(Parse(child.Key, keyType), Parse(child.Value, valType));
+            }
+            return dict;
         }
 
         private string MemberToName(MemberInfo m)
