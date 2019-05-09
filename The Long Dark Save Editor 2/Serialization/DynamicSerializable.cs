@@ -65,6 +65,66 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             }
         }
 
+        private object ParseObject(JObject obj, Type t)
+        {
+            var result = Activator.CreateInstance(t);
+            Dictionary<string, PropertyInfo> props = t.GetProperties().ToDictionary(p => MemberToName(p));
+            Dictionary<string, FieldInfo> fields = t.GetFields().ToDictionary(p => MemberToName(p));
+
+            foreach (var child in obj)
+            {
+                if (props.ContainsKey(child.Key))
+                {
+                    var prop = props[child.Key];
+                    var attr = prop.GetCustomAttribute<DeserializeAttribute>();
+                    var childType = prop.PropertyType;
+                    var childVal = Parse(child.Value, childType, attr);
+                    prop.SetValue(result, childVal);
+                }
+                else if (fields.ContainsKey(child.Key))
+                {
+                    var field = fields[child.Key];
+                    var attr = field.GetCustomAttribute<DeserializeAttribute>();
+                    var childType = field.FieldType;
+                    var childVal = Parse(child.Value, childType, attr);
+                    field.SetValue(result, childVal);
+                }
+                else
+                {
+                    if (!extraFields.ContainsKey(result))
+                        extraFields.Add(result, new List<KeyValuePair<string, JToken>>());
+                    extraFields[result].Add(child);
+                }
+            }
+            return result;
+        }
+
+        private object ParseArray(JArray obj, Type t, bool deserializeItems)
+        {
+            Type elemType = t.GetElementType();
+            if (!t.IsArray)
+                elemType = t.GetGenericArguments().Single();
+            Array result = Array.CreateInstance(elemType, obj.Count);
+            int i = 0;
+            foreach (var child in obj)
+            {
+                result.SetValue(Parse(child, elemType, new DeserializeAttribute(null, deserializeItems)), i++);
+            }
+            return ReflectionUtil.ConvertArray(result, t);
+        }
+
+        private object ParseDictionary(JObject obj, Type t, bool deserializeItems)
+        {
+            var dict = (IDictionary)Activator.CreateInstance(t);
+            var keyType = t.GetGenericArguments()[0];
+            var valType = t.GetGenericArguments()[1];
+            foreach (var child in obj)
+            {
+                dict.Add(Parse(child.Key, keyType), Parse(child.Value, valType, new DeserializeAttribute(null, deserializeItems)));
+            }
+            return dict;
+        }
+
         public string Serialize()
         {
             var res = ReconstructObject(Obj);
@@ -153,66 +213,6 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                 res.Add(Reconstruct(key), Reconstruct(dict[key], new DeserializeAttribute(null, serializeItems)));
             }
             return res;
-        }
-
-        private object ParseObject(JObject obj, Type t)
-        {
-            var result = Activator.CreateInstance(t);
-            Dictionary<string, PropertyInfo> props = t.GetProperties().ToDictionary(p => MemberToName(p));
-            Dictionary<string, FieldInfo> fields = t.GetFields().ToDictionary(p => MemberToName(p));
-
-            foreach (var child in obj)
-            {
-                if (props.ContainsKey(child.Key))
-                {
-                    var prop = props[child.Key];
-                    var attr = prop.GetCustomAttribute<DeserializeAttribute>();
-                    var childType = prop.PropertyType;
-                    var childVal = Parse(child.Value, childType, attr);
-                    prop.SetValue(result, childVal);
-                }
-                else if (fields.ContainsKey(child.Key))
-                {
-                    var field = fields[child.Key];
-                    var attr = field.GetCustomAttribute<DeserializeAttribute>();
-                    var childType = field.FieldType;
-                    var childVal = Parse(child.Value, childType, attr);
-                    field.SetValue(result, childVal);
-                }
-                else
-                {
-                    if (!extraFields.ContainsKey(result))
-                        extraFields.Add(result, new List<KeyValuePair<string, JToken>>());
-                    extraFields[result].Add(child);
-                }
-            }
-            return result;
-        }
-
-        private object ParseArray(JArray obj, Type t, bool deserializeItems)
-        {
-            Type elemType = t.GetElementType();
-            if (!t.IsArray)
-                elemType = t.GetGenericArguments().Single();
-            Array result = Array.CreateInstance(elemType, obj.Count);
-            int i = 0;
-            foreach (var child in obj)
-            {
-                result.SetValue(Parse(child, elemType, new DeserializeAttribute(null, deserializeItems)), i++);
-            }
-            return ReflectionUtil.ConvertArray(result, t);
-        }
-
-        private object ParseDictionary(JObject obj, Type t, bool deserializeItems)
-        {
-            var dict = (IDictionary)Activator.CreateInstance(t);
-            var keyType = t.GetGenericArguments()[0];
-            var valType = t.GetGenericArguments()[1];
-            foreach (var child in obj)
-            {
-                dict.Add(Parse(child.Key, keyType), Parse(child.Value, valType, new DeserializeAttribute(null, deserializeItems)));
-            }
-            return dict;
         }
 
         private string MemberToName(MemberInfo m)
