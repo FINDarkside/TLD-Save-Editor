@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,15 +24,18 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                     list.Add(item);
                 }
                 return list;
-            }else if((typeof(ISet<>)).IsAssignableFrom(t)){
-                var set = (ISet<object>)Activator.CreateInstance(t);
-                foreach(var item in arr)
+            }
+            else if (t.IsGenericType && typeof(HashSet<>).IsAssignableFrom(t.GetGenericTypeDefinition()))
+            {
+                var set = Activator.CreateInstance(t);
+                MethodInfo method = set.GetType().GetMethod("Add", new Type[] { t.GetGenericArguments()[0] });
+                foreach (var item in arr)
                 {
-                    set.Add(item);
+                    method.Invoke(set, new object[] { item });
                 }
                 return set;
             }
-            throw new Exception("Unsupported collection type "  + t);
+            throw new Exception("Unsupported collection type " + t);
         }
 
         public static bool IsBoxed<T>(T value)
