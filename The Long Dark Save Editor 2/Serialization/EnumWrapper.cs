@@ -15,26 +15,31 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 
         public EnumWrapper(string s)
         {
-            CurrentValue = s;
+            Value = s;
         }
 
-        private string currentValue;
-        public string CurrentValue
+        private string _value;
+        public string Value
         {
-            get { return currentValue; }
+            get { return _value; }
             set
             {
                 if (!EnumValues<T>.values.Contains(value))
                 {
                     EnumValues<T>.values.Add(value);
                 }
-                SetProperty(ref currentValue, value);
+                SetProperty(ref _value, value);
             }
+        }
+
+        public void SetValue(T val)
+        {
+            Value = val.ToString();
         }
 
         public override string ToString()
         {
-            return currentValue;
+            return _value;
         }
 
         public List<string> GetValues()

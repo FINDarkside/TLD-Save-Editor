@@ -196,7 +196,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     public class InventorySaveDataProxy
     {
-        [Deserialize("m_SerializedGear")]
+        [Deserialize("m_SerializedItems", false, true)]
         public List<InventoryItemSaveData> Items { get; set; }
         public int[] m_QuickSelectInstanceIDs { get; set; }
         public bool m_ForceOverrideWeight { get; set; }
@@ -210,20 +210,19 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     public class InventoryItemSaveData
     {
-        public string m_PrefabName;
+        public string m_PrefabName { get; set; }
         [Deserialize("m_SerializedGear", true)]
         public GearItemSaveDataProxy Gear;
+
+        [JsonIgnore]
+        public ItemCategory Category { get { return ItemDictionary.GetCategory(m_PrefabName); } }
+        [JsonIgnore]
+        public string InGameName { get { return ItemDictionary.GetInGameName(m_PrefabName); } }
     }
 
 
     public class GearItemSaveDataProxy : BindableBase
     {
-        [JsonIgnore]
-        public string PrefabName { get; set; }
-        [JsonIgnore]
-        public ItemCategory Category { get { return ItemDictionary.GetCategory(PrefabName); } }
-        [JsonIgnore]
-        public string InGameName { get { return ItemDictionary.GetInGameName(PrefabName); } }
         [JsonIgnore]
         public float NormalizedCondition
         {
@@ -289,28 +288,29 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_IsInSatchel { get; set; }
         public int m_SatchelIndex { get; set; }
         public string m_OwnershipOverrideSerialized { get; set; }
-        public string m_BodyHarvestSerialized { get; set; }
+        [Deserialize("m_BodyHarvestSerialized", true)]
+        public BodyHarvestSaveDataProxy BodyHarvest { get; set; }
         public bool m_LockedInContainer { get; set; }
         public int m_GearItemSaveVersion { get; set; }
         public string m_CookingPotItemSerialized { get; set; }
         public string m_PlacePointGuidSerialized { get; set; }
         public string m_PlacePointNameSerialized { get; set; }
 
-        public GearItemSaveDataProxy()
+        public static GearItemSaveDataProxy Create()
         {
-            m_Rotation = new float[4];
-            m_Position = new float[3];
-            m_BeenInPlayerInventoryProxy = true;
-            NormalizedCondition = 1;
-            m_WornOut = false;
-            m_HoursPlayed = MainWindow.Instance.CurrentSave.Global.TimeOfDay.m_HoursPlayedNotPausedProxy;
+            var item = new GearItemSaveDataProxy();
+            item.m_Rotation = new float[4];
+            item.m_Position = new float[3];
+            item.m_BeenInPlayerInventoryProxy = true;
+            item.NormalizedCondition = 1;
+            item.m_WornOut = false;
+            item.m_HoursPlayed = MainWindow.Instance.CurrentSave.Global.TimeOfDay.m_HoursPlayedNotPausedProxy;
             var r = new Random();
             var id = r.Next();
-            while (MainWindow.Instance.CurrentSave.Global.Inventory.Items.Any(item => item.Gear.m_InstanceIDProxy == id))
-            {
+            while (MainWindow.Instance.CurrentSave.Global.Inventory.Items.Any(i => i.Gear.m_InstanceIDProxy == id))
                 id = r.Next();
-            }
-            m_InstanceIDProxy = id;
+            item.m_InstanceIDProxy = id;
+            return item;
         }
     }
 
