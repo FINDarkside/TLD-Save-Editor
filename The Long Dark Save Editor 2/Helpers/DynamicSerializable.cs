@@ -23,17 +23,20 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             Obj = Parse(JObject.Parse(json), typeof(T));
         }
 
-        private dynamic Parse(JToken token, Type t, bool deserialize = false)
+        private dynamic Parse(JToken token, Type t, DeserializeAttribute attr = null)
         {
+            bool deserialize = attr?.Json ?? false;
+            bool deserializeItems = attr?.Json ?? false;
+
             if (token.Type == JTokenType.Object)
             {
                 if (typeof(IDictionary).IsAssignableFrom(t))
-                    return ParseDictionary((JObject)token, t);
+                    return ParseDictionary((JObject)token, t, deserializeItems);
                 return ParseObject((JObject)token, t);
             }
             else if (token.Type == JTokenType.Array)
             {
-                return ParseArray((JArray)token, t);
+                return ParseArray((JArray)token, t, deserializeItems);
             }
             else if (token.Type == JTokenType.Boolean || token.Type == JTokenType.Float || token.Type == JTokenType.Integer)
             {
@@ -82,11 +85,11 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                 }
                 else if (o is IDictionary)
                 {
-                    result = ReconstructDictionary((IDictionary)o);
+                    result = ReconstructDictionary((IDictionary)o, attr?.JsonItems ?? false);
                 }
                 else if (o is ICollection)
                 {
-                    result = ReconstructCollection((ICollection)o);
+                    result = ReconstructCollection((ICollection)o, attr?.JsonItems ?? false);
                 }
                 else if (o.GetType().IsGenericType && o.GetType().GetGenericTypeDefinition() == typeof(EnumWrapper<>))
                 {
@@ -132,22 +135,22 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             return res;
         }
 
-        public List<object> ReconstructCollection(ICollection col)
+        public List<object> ReconstructCollection(ICollection col, bool serializeItems)
         {
             List<object> result = new List<object>();
             foreach (var item in col)
             {
-                result.Add(Reconstruct(item));
+                result.Add(Reconstruct(item, new DeserializeAttribute(null, serializeItems));
             }
             return result;
         }
 
-        public IDictionary ReconstructDictionary(IDictionary dict)
+        public IDictionary ReconstructDictionary(IDictionary dict, bool serializeItems)
         {
             var res = new Dictionary<object, object>();
             foreach (var key in dict.Keys)
             {
-                res.Add(Reconstruct(key), Reconstruct(dict[key]));
+                res.Add(Reconstruct(key), Reconstruct(dict[key], new DeserializeAttribute(null, serializeItems)));
             }
             return res;
         }
@@ -165,7 +168,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                     var prop = props[child.Key];
                     var attr = prop.GetCustomAttribute<DeserializeAttribute>();
                     var childType = prop.PropertyType;
-                    var childVal = Parse(child.Value, childType, attr != null && attr.Json);
+                    var childVal = Parse(child.Value, childType, attr);
                     prop.SetValue(result, childVal);
                 }
                 else if (fields.ContainsKey(child.Key))
@@ -173,7 +176,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                     var field = fields[child.Key];
                     var attr = field.GetCustomAttribute<DeserializeAttribute>();
                     var childType = field.FieldType;
-                    var childVal = Parse(child.Value, childType, field.GetCustomAttribute<DeserializeAttribute>() != null);
+                    var childVal = Parse(child.Value, childType, attr);
                     field.SetValue(result, childVal);
                 }
                 else
@@ -186,7 +189,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             return result;
         }
 
-        private object ParseArray(JArray obj, Type t)
+        private object ParseArray(JArray obj, Type t, bool deserializeItems)
         {
             Type elemType = t.GetElementType();
             if (!t.IsArray)
@@ -195,19 +198,19 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             int i = 0;
             foreach (var child in obj)
             {
-                result.SetValue(Parse(child, elemType), i++);
+                result.SetValue(Parse(child, elemType, new DeserializeAttribute(null, deserializeItems)), i++);
             }
             return ReflectionUtil.ConvertArray(result, t);
         }
 
-        private object ParseDictionary(JObject obj, Type t)
+        private object ParseDictionary(JObject obj, Type t, bool deserializeItems)
         {
             var dict = (IDictionary)Activator.CreateInstance(t);
             var keyType = t.GetGenericArguments()[0];
             var valType = t.GetGenericArguments()[1];
             foreach (var child in obj)
             {
-                dict.Add(Parse(child.Key, keyType), Parse(child.Value, valType));
+                dict.Add(Parse(child.Key, keyType), Parse(child.Value, valType, new DeserializeAttribute(null, deserializeItems)));
             }
             return dict;
         }
