@@ -42,6 +42,12 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             else if (token.Type == JTokenType.String)
             {
                 string s = token.ToObject<string>();
+                if (t.IsGenericType && t.GetGenericTypeDefinition() == typeof(EnumWrapper<>))
+                {
+                    var wrapperType = typeof(EnumWrapper<>);
+                    var genericType = wrapperType.MakeGenericType(t.GetGenericArguments()[0]);
+                    return Activator.CreateInstance(genericType, s);
+                }
                 if (!deserialize)
                     return s;
                 return Parse(JToken.Parse(s), t);
@@ -81,6 +87,10 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                 else if (o is ICollection)
                 {
                     result = ReconstructCollection((ICollection)o);
+                }
+                else if (o.GetType().IsGenericType && o.GetType().GetGenericTypeDefinition() == typeof(EnumWrapper<>))
+                {
+                    return o.ToString();
                 }
                 else
                 {
