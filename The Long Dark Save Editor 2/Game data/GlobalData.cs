@@ -197,7 +197,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     public class InventorySaveDataProxy
     {
         [Deserialize("m_SerializedItems", false, true)]
-        public List<InventoryItemSaveData> Items { get; set; }
+        public ObservableCollection<InventoryItemSaveData> Items { get; set; }
         public int[] m_QuickSelectInstanceIDs { get; set; }
         public bool m_ForceOverrideWeight { get; set; }
         public float m_OverridedWeight { get; set; }
