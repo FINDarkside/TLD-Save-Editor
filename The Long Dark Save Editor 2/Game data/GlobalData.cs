@@ -212,7 +212,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     {
         public string m_PrefabName { get; set; }
         [Deserialize("m_SerializedGear", true)]
-        public GearItemSaveDataProxy Gear;
+        public GearItemSaveDataProxy Gear { get; set; }
 
         [JsonIgnore]
         public ItemCategory Category { get { return ItemDictionary.GetCategory(m_PrefabName); } }
