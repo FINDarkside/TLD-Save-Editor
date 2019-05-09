@@ -103,8 +103,8 @@
     <Compile Include="ErrorDialog.xaml.cs">
       <DependentUpon>ErrorDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\DeserializeAttribute.cs" />
-    <Compile Include="Helpers\DynamicSerializable.cs" />
+    <Compile Include="Serialization\DeserializeAttribute.cs" />
+    <Compile Include="Serialization\DynamicSerializable.cs" />
     <Compile Include="Helpers\BindableBase.cs" />
     <Compile Include="Helpers\CLZF.cs" />
     <Compile Include="Converters\CategoryToItemsConverter.cs" />
@@ -125,7 +125,7 @@
     <Compile Include="Helpers\EnumWrapper.cs" />
     <Compile Include="Helpers\ItemDictionary.cs" />
     <Compile Include="Helpers\MapDictionary.cs" />
-    <Compile Include="Helpers\ReflectionUtil.cs" />
+    <Compile Include="Serialization\ReflectionUtil.cs" />
     <Compile Include="Images\InjuriesBody.xaml.cs">
       <DependentUpon>InjuriesBody.xaml</DependentUpon>
     </Compile>

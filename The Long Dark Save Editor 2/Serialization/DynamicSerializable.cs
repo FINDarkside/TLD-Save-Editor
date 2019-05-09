@@ -200,7 +200,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             List<object> result = new List<object>();
             foreach (var item in col)
             {
-                result.Add(Reconstruct(item, new DeserializeAttribute(null, serializeItems));
+                result.Add(Reconstruct(item, new DeserializeAttribute(null, serializeItems)));
             }
             return result;
         }
