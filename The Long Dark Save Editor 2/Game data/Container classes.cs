@@ -12,55 +12,6 @@ using The_Long_Dark_Save_Editor_2.Helpers.Helpers;
 
 namespace The_Long_Dark_Save_Editor_2.Game_data
 {
-
-    #region Wind
-    public class WindSaveData
-    {
-        public int m_Version { get; set; }
-        public WindDirection m_windDirectionProxy { get; set; }
-        public WindStrength m_windStrengthProxy { get; set; }
-        public float m_windMPHProxy { get; set; }
-        public bool m_FirstPhaseSetProxy { get; set; }
-        public float m_PhaseElapsedTODSecondsProxy { get; set; }
-        public float m_PhaseDurationHoursProxy { get; set; }
-        public float m_TransitionTimeTODSecondsProxy { get; set; }
-        public ActiveWindSettings m_ActiveSettings { get; set; }
-        public ActiveWindSettings m_SourceSettings { get; set; }
-        public ActiveWindSettings m_TargetSettings { get; set; }
-
-        public WindSaveData(string data)
-        {
-            var proxy = JsonConvert.DeserializeObject<WindSaveDataProxy>(data);
-            m_Version = proxy.m_Version;
-            m_windDirectionProxy = proxy.m_windDirectionProxy;
-            m_windMPHProxy = proxy.m_windMPHProxy;
-            m_FirstPhaseSetProxy = proxy.m_FirstPhaseSetProxy;
-            m_PhaseElapsedTODSecondsProxy = proxy.m_PhaseElapsedTODSecondsProxy;
-            m_PhaseDurationHoursProxy = proxy.m_PhaseDurationHoursProxy;
-            m_TransitionTimeTODSecondsProxy = proxy.m_TransitionTimeTODSecondsProxy;
-            m_ActiveSettings = Util.DeserializeObject<ActiveWindSettings>(proxy.m_ActiveSettingsSerialized);
-            m_SourceSettings = Util.DeserializeObject<ActiveWindSettings>(proxy.m_SourceSettingsSerialized);
-            m_TargetSettings = Util.DeserializeObject<ActiveWindSettings>(proxy.m_TargetSettingsSerialized);
-        }
-
-        public string Serialize()
-        {
-            var proxy = new WindSaveDataProxy();
-            proxy.m_Version = m_Version;
-            proxy.m_windDirectionProxy = m_windDirectionProxy;
-            proxy.m_windMPHProxy = m_windMPHProxy;
-            proxy.m_FirstPhaseSetProxy = m_FirstPhaseSetProxy;
-            proxy.m_PhaseElapsedTODSecondsProxy = m_PhaseElapsedTODSecondsProxy;
-            proxy.m_PhaseDurationHoursProxy = m_PhaseDurationHoursProxy;
-            proxy.m_TransitionTimeTODSecondsProxy = m_TransitionTimeTODSecondsProxy;
-            proxy.m_ActiveSettingsSerialized = Util.SerializeObject(m_ActiveSettings);
-            proxy.m_ActiveSettingsSerialized = Util.SerializeObject(m_ActiveSettings);
-            proxy.m_ActiveSettingsSerialized = Util.SerializeObject(m_ActiveSettings);
-            return Util.SerializeObject(proxy);
-        }
-    }
-    #endregion
-
     #region Injuries
 
     public class Afflictions : INotifyPropertyChanged
@@ -72,7 +23,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
         public Afflictions(GlobalSaveGameFormat global)
         {
-            Negative = new ObservableCollection<Affliction>();
+            /*Negative = new ObservableCollection<Affliction>();
             negative.CollectionChanged += (object sender, NotifyCollectionChangedEventArgs e) => { if (PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs("Negative")); };
             Positive = new ObservableCollection<Affliction>();
             positive.CollectionChanged += (object sender, NotifyCollectionChangedEventArgs e) => { if (PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs("Positive")); };
@@ -317,12 +268,12 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
                     Location = 6,
                     proxy = global.m_WellFedSerialized,
                 });
-            }
+            }*/
         }
 
         public GlobalSaveGameFormat SerializeTo(GlobalSaveGameFormat proxy)
         {
-            var afflictions = new Dictionary<AfflictionType, List<Affliction>>();
+            /*var afflictions = new Dictionary<AfflictionType, List<Affliction>>();
             foreach (var affliction in Negative.Concat(Positive))
             {
                 if (!afflictions.ContainsKey(affliction.AfflictionType))
@@ -546,7 +497,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
                 proxy.m_WellFedSerialized = ((AfflictionWithProxy)afflictions[AfflictionType.WellFed][0]).proxy;
             }
 
-            return proxy;
+            return proxy;*/
+            return null;
         }
 
         protected void SetPropertyField<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
@@ -574,7 +526,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         {
             RemoveCommand = new CommandHandler(() =>
             {
-                MainWindow.Instance.CurrentSave.Global.Afflictions.Negative.Remove(this);
+                //MainWindow.Instance.CurrentSave.Global.Afflictions.Negative.Remove(this);
             });
         }
     }

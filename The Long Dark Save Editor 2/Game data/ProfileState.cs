@@ -20,14 +20,14 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_MusicVolume { get; set; }
         public float m_VoiceVolume { get; set; }
         public int m_QualityLevel { get; set; }
-        public GraphicsMode m_GraphicsMode { get; set; }
+        public EnumWrapper<GraphicsMode> m_GraphicsMode { get; set; }
         public int m_DisplayNumber { get; set; }
         public Resolution m_Resolution { get; set; }
         public bool m_SSAOEnabled { get; set; }
-        public MeasurementUnits m_Units { get; set; }
-        public HudPref m_HudPref { get; set; }
-        public HudSize m_HudSize { get; set; }
-        public HudType m_HudType { get; set; }
+        public EnumWrapper<MeasurementUnits> m_Units { get; set; }
+        public EnumWrapper<HudPref> m_HudPref { get; set; }
+        public EnumWrapper<HudSize> m_HudSize { get; set; }
+        public EnumWrapper<HudType> m_HudType { get; set; }
         public bool m_InvertY { get; set; }
         public bool m_InvertX { get; set; }
         public bool m_LockMouseToScreen { get; set; }
@@ -44,12 +44,12 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_ConsoleUnlocked { get; set; }
         public float m_FieldOfView { get; set; }
         public int m_NumGamesPlayed { get; set; }
-        public VoicePersona m_VoicePersona { get; set; }
-        public GameRegion m_StartRegion { get; set; }
+        public EnumWrapper<VoicePersona> m_VoicePersona { get; set; }
+        public EnumWrapper<GameRegion> m_StartRegion { get; set; }
         public Dictionary<string, string> m_KeyBindings { get; set; }
         public bool m_VsyncEnabled { get; set; }
-        public SubtitlesState m_SubtitlesState { get; set; }
-        public LanguageState m_LanguageState { get; set; }
+        public EnumWrapper<SubtitlesState> m_SubtitlesState { get; set; }
+        public EnumWrapper<LanguageState> m_LanguageState { get; set; }
         public string m_Language { get; set; }
         public bool m_CoastalRegionLocked { get; set; }
         public bool m_RuralRegionLocked { get; set; }
@@ -65,9 +65,9 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_BestTimeNomad { get; set; }
         public float m_BestTimeHunted2 { get; set; }
         public float m_BestTimeArchivist { get; set; }
-        public ExperienceModeType m_MostRecentSandboxMode { get; set; }
-        public ExperienceModeType m_MostRecentChallengeMode { get; set; }
-        public ExperienceModeType m_MostRecentEpisodeMode { get; set; }
+        public EnumWrapper<ExperienceModeType> m_MostRecentSandboxMode { get; set; }
+        public EnumWrapper<ExperienceModeType> m_MostRecentChallengeMode { get; set; }
+        public EnumWrapper<ExperienceModeType> m_MostRecentEpisodeMode { get; set; }
         public float m_Brightness { get; set; }
         public bool m_DoneBrightnessAdjustment { get; set; }
         public List<string> m_UnlockedBadgesViewed { get; set; }
@@ -80,7 +80,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_NewGameCustomModeString { get; set; }
         public bool m_FoundAllCachesEpisodeOne { get; set; }
         public bool m_FoundAllCachesEpisodeTwo { get; set; }
-        public List<Achievement> m_UnlockedAchievements { get; set; }
+        public List<EnumWrapper<Achievement>> m_UnlockedAchievements { get; set; }
         public bool m_ReduceCameraMotion { get; set; }
         public bool m_LargeSubtitles { get; set; }
         public HashSet<string> m_ViewedNotifications { get; set; }
@@ -95,53 +95,18 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     public class FeatsManagerSaveData
     {
-        public string m_Feat_BookSmartsSerialized { get; set; }
-        public string m_Feat_ColdFusionSerialized { get; set; }
-        public string m_Feat_EfficientMachineSerialized { get; set; }
-        public string m_Feat_FireMasterSerialized { get; set; }
-        public string m_Feat_FreeRunnerSerialized { get; set; }
-        public string m_Feat_SnowWalkerSerialized { get; set; }
-    }
-
-    public class FeatsManager
-    {
-
+        [Deserialize("m_Feat_BookSmartsSerialized", true)]
         public Feat_BookSmartsSaveData BookSmarts { get; set; }
+        [Deserialize("m_Feat_ColdFusionSerialized", true)]
         public Feat_ColdFusionSaveData ColdFusion { get; set; }
+        [Deserialize("m_Feat_EfficientMachineSerialized", true)]
         public Feat_EfficientMachineSaveData EfficientMachine { get; set; }
+        [Deserialize("m_Feat_FireMasterSerialized", true)]
         public Feat_FireMasterSaveData FireMaster { get; set; }
+        [Deserialize("m_Feat_FreeRunnerSerialized", true)]
         public Feat_FreeRunnerSaveData FreeRunner { get; set; }
+        [Deserialize("m_Feat_SnowWalkerSerialized", true)]
         public Feat_SnowWalkerSaveData SnowWalker { get; set; }
-
-
-        public FeatsManager(string json)
-        {
-            var proxy = Util.DeserializeObject<FeatsManagerSaveData>(json);
-            if (proxy == null)
-                return;
-
-
-            BookSmarts = Util.DeserializeObjectOrDefault<Feat_BookSmartsSaveData>(proxy.m_Feat_BookSmartsSerialized);
-            ColdFusion = Util.DeserializeObjectOrDefault<Feat_ColdFusionSaveData>(proxy.m_Feat_ColdFusionSerialized);
-            EfficientMachine = Util.DeserializeObjectOrDefault<Feat_EfficientMachineSaveData>(proxy.m_Feat_EfficientMachineSerialized);
-            FireMaster = Util.DeserializeObjectOrDefault<Feat_FireMasterSaveData>(proxy.m_Feat_FireMasterSerialized);
-            FreeRunner = Util.DeserializeObjectOrDefault<Feat_FreeRunnerSaveData>(proxy.m_Feat_FreeRunnerSerialized);
-            SnowWalker = Util.DeserializeObjectOrDefault<Feat_SnowWalkerSaveData>(proxy.m_Feat_SnowWalkerSerialized);
-        }
-
-        public string Serialize()
-        {
-            var proxy = new FeatsManagerSaveData();
-
-            proxy.m_Feat_BookSmartsSerialized = Util.SerializeObject(BookSmarts);
-            proxy.m_Feat_ColdFusionSerialized = Util.SerializeObject(ColdFusion);
-            proxy.m_Feat_EfficientMachineSerialized = Util.SerializeObject(EfficientMachine);
-            proxy.m_Feat_FireMasterSerialized = Util.SerializeObject(FireMaster);
-            proxy.m_Feat_FreeRunnerSerialized = Util.SerializeObject(FreeRunner);
-            proxy.m_Feat_SnowWalkerSerialized = Util.SerializeObject(SnowWalker);
-
-            return Util.SerializeObject(proxy);
-        }
     }
 
     public class Feat_BookSmartsSaveData
@@ -176,27 +141,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     {
         public float m_ElapsedKilometers { get; set; }
         public float m_MetersAccumulator { get; set; }
-    }
-
-    public class SandBoxRecord
-    {
-        public string m_SandboxName { get; set; }
-        public float m_ElapsedHours { get; set; }
-        public DateTime m_EndDate { get; set; }
-        public GameRegion m_StartRegion { get; set; }
-        public string m_EndRegion { get; set; }
-        public ExperienceModeType m_ExperienceModeType { get; set; }
-        public VoicePersona m_VoicePersona { get; set; }
-        public string m_CauseOfDeathLocId { get; set; }
-        public string m_GeneralNotes { get; set; }
-        public List<LogDayInfo> m_LogDayInfoList { get; set; }
-        // Currently seems to always be empty
-        public List<object> m_CollectibleList { get; set; }
-        public StatContainer m_Stats { get; set; }
-        public List<string> m_CollectibleNotesList { get; set; }
-        public List<CairnInfo> m_CollectibleCairnInfoList { get; set; }
-        public List<AuroraScreenInfo> m_CollectibleAuroraScreenInfoList { get; set; }
-
     }
 
     public class StatContainer

@@ -96,12 +96,9 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             var member = new EnumerationMember();
             member.Value = file;
 
-            var data = EncryptString.DecompressBytesToString(File.ReadAllBytes(file));
-            var slotData = Util.DeserializeObject<SlotData>(data);
+            var slotJson = EncryptString.DecompressBytes(File.ReadAllBytes(file));
+            var slotData = new DynamicSerializable<SlotData>(slotJson).Obj;
 
-            var bytes = slotData.m_Dict["global"];
-            var json = EncryptString.DecompressBytesToString(bytes);
-            var globalData = JsonConvert.DeserializeObject<GlobalSaveGameFormat>(json);
             member.Description = slotData.m_DisplayName + " (" + name + ")";
 
             return member;

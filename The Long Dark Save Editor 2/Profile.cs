@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using The_Long_Dark_Save_Editor_2.Game_data;
 using The_Long_Dark_Save_Editor_2.Helpers;
-using System.Diagnostics;
 
 namespace The_Long_Dark_Save_Editor_2
 {
@@ -11,21 +9,19 @@ namespace The_Long_Dark_Save_Editor_2
     {
         public string path;
 
-        public ProfileState Proxy { get; set; }
-        public string FeatsSerialized { get; set; }
-
-        public FeatsManager Feats { get; set; }
+        private DynamicSerializable<ProfileState> dynamicState;
+        public ProfileState State { get { return dynamicState.Obj; } }
 
         public Profile(string path)
         {
             this.path = path;
 
-            var bytes = File.ReadAllBytes(path);
-            var json = EncryptString.DecompressBytesToString(bytes);
+            var json = EncryptString.DecompressBytes(File.ReadAllBytes(path));
 
-            int currentIndex = 0;
+            dynamicState = new DynamicSerializable<ProfileState>(json);
 
             #region Fix m_StatsDictionary
+            int currentIndex = 0;
             // m_StatsDictionary is invalid json so we'll fix it
             // There's multiple instances of m_StatsDictionary
             // Ugly as f but works... for now
@@ -75,19 +71,11 @@ namespace The_Long_Dark_Save_Editor_2
             }
 
             #endregion
-
-            Proxy = Util.DeserializeObject<ProfileState>(json);
-            if (Proxy == null)
-                return;
-
-            Feats = new FeatsManager(Proxy.m_FeatsSerialized);
         }
 
         public void Save()
         {
-            Proxy.m_FeatsSerialized = Feats.Serialize();
-
-            string json = Util.SerializeObject(Proxy);
+            string json = dynamicState.Serialize();
 
             #region Break m_StatsDictionary
 
@@ -130,8 +118,7 @@ namespace The_Long_Dark_Save_Editor_2
 
             #endregion
 
-            File.WriteAllBytes(path, EncryptString.CompressStringToBytes(json));
-
+            File.WriteAllBytes(path, EncryptString.CompressToBytes(json));
         }
     }
 }

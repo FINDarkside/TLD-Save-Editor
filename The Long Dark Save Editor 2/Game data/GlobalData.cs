@@ -15,9 +15,9 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_BaseName { get; set; }
         public string m_DisplayName { get; set; }
         public DateTime m_Timestamp { get; set; }
-        public SaveSlotType m_GameMode { get; set; }
+        public EnumWrapper<SaveSlotType> m_GameMode { get; set; }
         public uint m_GameId { get; set; }
-        public Episode m_Episode { get; set; }
+        public EnumWrapper<Episode> m_Episode { get; set; }
         public Dictionary<string, byte[]> m_Dict { get; set; }
         public bool m_IsPS4Compliant { get; set; }
     }
@@ -61,8 +61,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     {
         // Has Container class
         public int m_Version { get; set; }
-        public WindDirection m_windDirectionProxy { get; set; }
-        public WindStrength m_windStrengthProxy { get; set; }
+        public EnumWrapper<WindDirection> m_windDirectionProxy { get; set; }
+        public EnumWrapper<WindStrength> m_windStrengthProxy { get; set; }
         public float m_windMPHProxy { get; set; }
         public bool m_FirstPhaseSetProxy { get; set; }
         public float m_PhaseElapsedTODSecondsProxy { get; set; }
@@ -87,7 +87,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_PrevBodyTempProxy { get; set; }
         public float m_TempHighProxy { get; set; }
         public float m_TempLowProxy { get; set; }
-        public WeatherStage m_WeatherStageProxy { get; set; }
+        public EnumWrapper<WeatherStage> m_WeatherStageProxy { get; set; }
         public float m_UniStormElapsedHoursProxy { get; set; }
         public float m_UniStormNextWeatherChangeElapsedHoursProxy { get; set; }
         public bool m_UseMinAirTemperature { get; set; }
@@ -97,7 +97,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     public class WeatherTransitionSaveDataProxy
     {
         public bool m_UseUnmanagedWeatherStage;
-        public WeatherStage m_UnmanagedWeatherStage;
+        public EnumWrapper<WeatherStage> m_UnmanagedWeatherStage;
         public string m_CurrentWeatherSetName { get; set; }
         public float m_CurrentWeatherSetProgressFrac { get; set; }
         public string m_CurrentWeatherSetSerialized { get; set; }
@@ -122,7 +122,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_HideDamageEvents { get; set; }
         public bool m_FoceUncrouched { get; set; }
         public bool m_CanPlayNearDeathMusic { get; set; }
-        public ConditionLevel m_ConditionLevelForPreviousVoiceOver { get; set; }
+        public EnumWrapper<ConditionLevel> m_ConditionLevelForPreviousVoiceOver { get; set; }
         public bool m_SuppressVoiceOver { get; set; }
     }
 
@@ -130,7 +130,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     {
         public bool m_EncumberedInLog { get; set; }
         public float m_NumSecondsSinceLastVoiceOver { get; set; }
-        public EncumberLevel m_EcumberLevelForPreviousVoiceOver { get; set; }
+        public EnumWrapper<EncumberLevel> m_EcumberLevelForPreviousVoiceOver { get; set; }
     }
 
     public class HungerSaveDataProxy
@@ -140,7 +140,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_StarvingInLog { get; set; }
         public float m_NumHoursStarving { get; set; }
         public float m_FatiguePenalty { get; set; }
-        public HungerLevel m_HungerLevelForPreviousVoiceOver { get; set; }
+        public EnumWrapper<HungerLevel> m_HungerLevelForPreviousVoiceOver { get; set; }
         public float m_CaloriesEatenToday { get; set; }
         public bool m_SuppressVoiceOver { get; set; }
     }
@@ -150,7 +150,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_CurrentThirstProxy { get; set; }
         public float m_NumSecondsSinceLastVoiceOver { get; set; }
         public bool m_DehydratedInLog { get; set; }
-        public ThirstLevel m_ThirstLevelForPreviousVoiceOver { get; set; }
+        public EnumWrapper<ThirstLevel> m_ThirstLevelForPreviousVoiceOver { get; set; }
         public bool m_SuppressVoiceOver { get; set; }
     }
 
@@ -159,7 +159,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_CurrentFatigueProxy { get; set; }
         public float m_NumSecondsSinceLastVoiceOver { get; set; }
         public bool m_ExhaustedInLog { get; set; }
-        public FatigueLevel m_FatigueLevelForPreviousVoiceOver { get; set; }
+        public EnumWrapper<FatigueLevel> m_FatigueLevelForPreviousVoiceOver { get; set; }
         public bool m_SuppressVoiceOver { get; set; }
     }
 
@@ -168,7 +168,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_CurrentFreezingProxy { get; set; }
         public float m_NumSecondsSinceLastVoiceOver { get; set; }
         public bool m_FreezingInLog { get; set; }
-        public FreezingLevel m_FreezingLevelForPreviousVoiceOver { get; set; }
+        public EnumWrapper<FreezingLevel> m_FreezingLevelForPreviousVoiceOver { get; set; }
         public float m_TemperatureBonusFromRunning { get; set; }
         public bool m_SuppressVoiceOver { get; set; }
     }
@@ -194,75 +194,10 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     #region Inventory
 
-    public class Inventory
-    {
-
-        public ObservableCollection<InventoryItem> Items { get; set; }
-        public int[] QuickSelectInstanceIDs { get; set; }
-        public bool ForceOverrideWeight { get; set; }
-        public float OverridedWeight { get; set; }
-        public bool ConsumedCoffee { get; set; }
-        public bool ConsumedRosehipTea { get; set; }
-        public bool ConsumedReishiTea { get; set; }
-        public bool ConsumedOldMansBeardDressing { get; set; }
-        public bool SuppressScentIndicator { get; set; }
-
-        public Inventory(string json)
-        {
-
-            if (json == null)
-                return;
-
-            var proxy = JsonConvert.DeserializeObject<InventorySaveDataProxy>(json);
-
-            Items = new ObservableCollection<InventoryItem>();
-            foreach (var item in proxy.m_SerializedItems)
-            {
-                Items.Add(new InventoryItem(item));
-            }
-            QuickSelectInstanceIDs = proxy.m_QuickSelectInstanceIDs;
-            ForceOverrideWeight = proxy.m_ForceOverrideWeight;
-            OverridedWeight = proxy.m_OverridedWeight;
-            ConsumedCoffee = proxy.m_ConsumedCoffee;
-            ConsumedRosehipTea = proxy.m_ConsumedRosehipTea;
-            ConsumedReishiTea = proxy.m_ConsumedReishiTea;
-            ConsumedOldMansBeardDressing = proxy.m_ConsumedOldMansBeardDressing;
-            SuppressScentIndicator = proxy.m_SuppressScentIndicator;
-        }
-
-        public string Serialize()
-        {
-            var proxy = new InventorySaveDataProxy();
-            proxy.m_QuickSelectInstanceIDs = QuickSelectInstanceIDs;
-            if (!Items.Any(item => item.PrefabName.ToLower() == "gear_watersupplynotpotable"))
-            {
-                Items.Add(new InventoryItem() { WaterSupply = new WaterSupplySaveDataProxy(), PrefabName = "GEAR_WaterSupplyNotPotable" });
-            }
-            if (!Items.Any(item => item.PrefabName.ToLower() == "gear_watersupplypotable"))
-            {
-                Items.Add(new InventoryItem() { WaterSupply = new WaterSupplySaveDataProxy(), PrefabName = "GEAR_WaterSupplyPotable" });
-
-            }
-
-            proxy.m_SerializedItems = new List<InventoryItemSaveData>(Items.Count);
-            foreach (var item in Items)
-            {
-                proxy.m_SerializedItems.Add(item.Serialize());
-            }
-            proxy.m_ForceOverrideWeight = ForceOverrideWeight;
-            proxy.m_OverridedWeight = OverridedWeight;
-            proxy.m_ConsumedCoffee = ConsumedCoffee;
-            proxy.m_ConsumedRosehipTea = ConsumedRosehipTea;
-            proxy.m_ConsumedReishiTea = ConsumedReishiTea;
-            proxy.m_ConsumedOldMansBeardDressing = ConsumedOldMansBeardDressing;
-            proxy.m_SuppressScentIndicator = SuppressScentIndicator;
-            return Util.SerializeObject(proxy);
-        }
-    }
-
     public class InventorySaveDataProxy
     {
-        public List<InventoryItemSaveData> m_SerializedItems { get; set; }
+        [Deserialize("m_SerializedGear")]
+        public List<InventoryItemSaveData> Items { get; set; }
         public int[] m_QuickSelectInstanceIDs { get; set; }
         public bool m_ForceOverrideWeight { get; set; }
         public float m_OverridedWeight { get; set; }
@@ -276,217 +211,35 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     public class InventoryItemSaveData
     {
         public string m_PrefabName;
-        public string m_SerializedGear;
+        [Deserialize("m_SerializedGear", true)]
+        public GearItemSaveDataProxy Gear;
     }
 
-    public class InventoryItem : INotifyPropertyChanged
-    {
-        public string PrefabName { get; set; }
-        public ItemCategory Category { get { return ItemDictionary.GetCategory(PrefabName); } }
-        public string InGameName { get { return ItemDictionary.GetInGameName(PrefabName); } }
 
-        public float HoursPlayed { get; set; }
-        public float[] Position { get; set; }
-        public float[] Rotation { get; set; }
-        public int InstanceIDProxy { get; set; }
-        public float CurrentHPProxy { get; set; }
-        private float normalizedCondition;
+    public class GearItemSaveDataProxy : BindableBase
+    {
+        [JsonIgnore]
+        public string PrefabName { get; set; }
+        [JsonIgnore]
+        public ItemCategory Category { get { return ItemDictionary.GetCategory(PrefabName); } }
+        [JsonIgnore]
+        public string InGameName { get { return ItemDictionary.GetInGameName(PrefabName); } }
+        [JsonIgnore]
         public float NormalizedCondition
         {
-            get { return normalizedCondition; }
+            get { return m_NormalizedCondition; }
             set
             {
-                SetPropertyField(ref normalizedCondition, value);
-            }
-        }
-        public bool BeenInPlayerInventory { get; set; }
-        public bool BeenInContainer { get; set; }
-        public bool BeenInspected { get; set; }
-        public bool ItemLooted { get; set; }
-        public bool HasBeenOwnedByPlayer { get; set; }
-        public bool RolledSpawnChance { get; set; }
-        public bool WornOut { get; set; }
-        public StackableItemSaveDataProxy StackableItem { get; set; }
-        public FoodItemSaveDataProxy FoodItem { get; set; }
-        public LiquidItemSaveDataProxy LiquidItem { get; set; }
-        public FlareItemSaveDataProxy FlareItem { get; set; }
-        public FlashlightItemSaveDataProxy FlashlightItem { get; set; }
-        public KeroseneLampItemSaveDataProxy KeroseneLampItem { get; set; }
-        public ClothingItemSaveDataProxy ClothingItem { get; set; }
-        public GunItemSaveDataProxy WeaponItem { get; set; }
-        public WaterSupplySaveDataProxy WaterSupply { get; set; }
-        public BedSaveDataProxy Bed { get; set; }
-        public SmashableItemSaveDataProxy SmashableItem { get; set; }
-        public MatchesItemSaveDataProxy MatchesItem { get; set; }
-        public SnareItemSaveDataProxy SnareItem { get; set; }
-        public InProgressCraftItemSaveDataProxy InProgressItem { get; set; }
-        public TorchItemSaveDataProxy TorchItem { get; set; }
-        public EvolveItemSaveData EvolveItem { get; set; }
-        public ResearchItemSaveData ResearchItem;
-        public string ObjectGuid { get; set; }
-        public string MissionObject { get; set; }
-        public float WeightKG { get; set; }
-        public bool HarvestedByPlayer { get; set; }
-        public bool IsInSatchel { get; set; }
-        public int SatchelIndex { get; set; }
-        public string OwnershipOverride { get; set; }
-        public BodyHarvestSaveDataProxy BodyHarvest { get; set; }
-        public bool LockedInContainer { get; set; }
-        public int GearItemSaveVersion { get; set; }
-        public CookingPotItemSaveDataProxy CookingPot { get; set; }
-        public string PlacePointGuid { get; set; }
-        public string PlacePointName { get; set; }
-
-        public InventoryItem()
-        {
-            Rotation = new float[4];
-            Position = new float[3];
-            BeenInPlayerInventory = true;
-            NormalizedCondition = 1;
-            WornOut = false;
-            HoursPlayed = MainWindow.Instance.CurrentSave.Global.TimeOfDay.m_HoursPlayedNotPausedProxy;
-            // Don't really know what this is, but can't be 0 or items placed on ground reset rotation when right clicking them
-            var r = new Random();
-            var id = r.Next();
-            while (MainWindow.Instance.CurrentSave.Global.Inventory.Items.Any(item => item.InstanceIDProxy == id))
-            {
-                id = r.Next();
-            }
-            InstanceIDProxy = id;
-        }
-
-        public InventoryItem(InventoryItemSaveData data)
-        {
-            PrefabName = data.m_PrefabName;
-
-            if (data.m_SerializedGear == null)
-                return;
-
-            var proxy = JsonConvert.DeserializeObject<GearItemSaveDataProxy>(data.m_SerializedGear);
-            HoursPlayed = proxy.m_HoursPlayed;
-            Position = proxy.m_Position;
-            Rotation = proxy.m_Rotation;
-            InstanceIDProxy = proxy.m_InstanceIDProxy;
-            CurrentHPProxy = proxy.m_CurrentHPProxy;
-            NormalizedCondition = proxy.m_NormalizedCondition;
-            BeenInPlayerInventory = proxy.m_BeenInPlayerInventoryProxy;
-            BeenInContainer = proxy.m_BeenInContainerProxy;
-            BeenInspected = proxy.m_BeenInspectedProxy;
-            ItemLooted = proxy.m_ItemLootedProxy;
-            HasBeenOwnedByPlayer = proxy.m_HasBeenOwnedByPlayer;
-            RolledSpawnChance = proxy.m_RolledSpawnChanceProxy;
-            WornOut = proxy.m_WornOut;
-            StackableItem = Util.DeserializeObject<StackableItemSaveDataProxy>(proxy.m_StackableItemSerialized);
-            FoodItem = Util.DeserializeObject<FoodItemSaveDataProxy>(proxy.m_FoodItemSerialized);
-            LiquidItem = Util.DeserializeObject<LiquidItemSaveDataProxy>(proxy.m_LiquidItemSerialized);
-            FlareItem = Util.DeserializeObject<FlareItemSaveDataProxy>(proxy.m_FlareItemSerialized);
-            FlashlightItem = Util.DeserializeObject<FlashlightItemSaveDataProxy>(proxy.m_FlashlightItemSerialized);
-            KeroseneLampItem = Util.DeserializeObject<KeroseneLampItemSaveDataProxy>(proxy.m_KeroseneLampItemSerialized);
-            ClothingItem = Util.DeserializeObject<ClothingItemSaveDataProxy>(proxy.m_ClothingItemSerialized);
-            WeaponItem = Util.DeserializeObject<GunItemSaveDataProxy>(proxy.m_WeaponItemSerialized);
-            WaterSupply = Util.DeserializeObject<WaterSupplySaveDataProxy>(proxy.m_WaterSupplySerialized);
-            Bed = Util.DeserializeObject<BedSaveDataProxy>(proxy.m_BedSerialized);
-            SmashableItem = Util.DeserializeObject<SmashableItemSaveDataProxy>(proxy.m_SmashableItemSerialized);
-            MatchesItem = Util.DeserializeObject<MatchesItemSaveDataProxy>(proxy.m_MatchesItemSerialized);
-            SnareItem = Util.DeserializeObject<SnareItemSaveDataProxy>(proxy.m_SnareItemSerialized);
-            InProgressItem = Util.DeserializeObject<InProgressCraftItemSaveDataProxy>(proxy.m_InProgressItemSerialized);
-            TorchItem = Util.DeserializeObject<TorchItemSaveDataProxy>(proxy.m_TorchItemSerialized);
-            //CollectibleNote = Util.DeserializeObject<CollectibleNoteItemProxy>(proxy.m_CollectibleNoteSerialized);
-            EvolveItem = Util.DeserializeObject<EvolveItemSaveData>(proxy.m_EvolveItemSerialized);
-            ResearchItem = Util.DeserializeObject<ResearchItemSaveData>(proxy.m_ResearchItemSerialized);
-            ObjectGuid = proxy.m_ObjectGuidSerialized;
-            MissionObject = proxy.m_MissionObjectSerialized;
-            WeightKG = proxy.m_WeightKG;
-            HarvestedByPlayer = proxy.m_HarvestedByPlayer;
-            IsInSatchel = proxy.m_IsInSatchel;
-            SatchelIndex = proxy.m_SatchelIndex;
-            OwnershipOverride = proxy.m_OwnershipOverrideSerialized;
-            BodyHarvest = Util.DeserializeObject<BodyHarvestSaveDataProxy>(proxy.m_BodyHarvestSerialized);
-            LockedInContainer = proxy.m_LockedInContainer;
-            GearItemSaveVersion = proxy.m_GearItemSaveVersion;
-            CookingPot = Util.DeserializeObject<CookingPotItemSaveDataProxy>(proxy.m_CookingPotItemSerialized);
-            PlacePointGuid = proxy.m_PlacePointGuidSerialized;
-            PlacePointName = proxy.m_PlacePointNameSerialized;
-        }
-
-        public InventoryItemSaveData Serialize()
-        {
-            var proxy = new GearItemSaveDataProxy();
-            proxy.m_HoursPlayed = HoursPlayed;
-            proxy.m_Position = Position;
-            proxy.m_Rotation = Rotation;
-            proxy.m_InstanceIDProxy = InstanceIDProxy;
-            proxy.m_CurrentHPProxy = CurrentHPProxy;
-            proxy.m_NormalizedCondition = NormalizedCondition;
-            proxy.m_BeenInPlayerInventoryProxy = BeenInPlayerInventory;
-            proxy.m_BeenInContainerProxy = BeenInContainer;
-            proxy.m_BeenInspectedProxy = BeenInspected;
-            proxy.m_ItemLootedProxy = ItemLooted;
-            proxy.m_HasBeenOwnedByPlayer = HasBeenOwnedByPlayer;
-            proxy.m_RolledSpawnChanceProxy = RolledSpawnChance;
-            proxy.m_WornOut = NormalizedCondition <= 0;
-            proxy.m_StackableItemSerialized = Util.SerializeObject(StackableItem);
-            proxy.m_FoodItemSerialized = Util.SerializeObject(FoodItem);
-            proxy.m_LiquidItemSerialized = Util.SerializeObject(LiquidItem);
-            proxy.m_FlareItemSerialized = Util.SerializeObject(FlareItem);
-            proxy.m_FlashlightItemSerialized = Util.SerializeObject(FlashlightItem);
-            proxy.m_KeroseneLampItemSerialized = Util.SerializeObject(KeroseneLampItem);
-            proxy.m_ClothingItemSerialized = Util.SerializeObject(ClothingItem);
-            proxy.m_WeaponItemSerialized = Util.SerializeObject(WeaponItem);
-            proxy.m_WaterSupplySerialized = Util.SerializeObject(WaterSupply);
-            proxy.m_BedSerialized = Util.SerializeObject(Bed);
-            proxy.m_SmashableItemSerialized = Util.SerializeObject(SmashableItem);
-            proxy.m_MatchesItemSerialized = Util.SerializeObject(MatchesItem);
-            proxy.m_SnareItemSerialized = Util.SerializeObject(SnareItem);
-            proxy.m_InProgressItemSerialized = Util.SerializeObject(InProgressItem);
-            proxy.m_TorchItemSerialized = Util.SerializeObject(TorchItem);
-            //proxy.m_CollectibleNoteSerialized = Util.SerializeObject(CollectibleNote);
-            proxy.m_EvolveItemSerialized = Util.SerializeObject(EvolveItem);
-            proxy.m_ResearchItemSerialized = Util.SerializeObject(ResearchItem);
-            proxy.m_ObjectGuidSerialized = ObjectGuid;
-            proxy.m_MissionObjectSerialized = MissionObject;
-            proxy.m_WeightKG = WeightKG;
-            proxy.m_HarvestedByPlayer = HarvestedByPlayer;
-            proxy.m_IsInSatchel = IsInSatchel;
-            proxy.m_SatchelIndex = SatchelIndex;
-            proxy.m_OwnershipOverrideSerialized = OwnershipOverride;
-            proxy.m_BodyHarvestSerialized = Util.SerializeObject(BodyHarvest);
-            proxy.m_LockedInContainer = LockedInContainer;
-            proxy.m_GearItemSaveVersion = GearItemSaveVersion;
-            proxy.m_CookingPotItemSerialized = Util.SerializeObject(CookingPot);
-            proxy.m_PlacePointGuidSerialized = PlacePointGuid;
-            proxy.m_PlacePointNameSerialized = PlacePointName;
-
-
-            var proxy2 = new InventoryItemSaveData();
-            proxy2.m_PrefabName = PrefabName;
-            proxy2.m_SerializedGear = Util.SerializeObject(proxy);
-
-            return proxy2;
-        }
-
-        protected void SetPropertyField<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
-        {
-            if (!EqualityComparer<T>.Default.Equals(field, newValue))
-            {
-                field = newValue;
-                PropertyChangedEventHandler handler = PropertyChanged;
-                if (handler != null)
-                    handler(this, new PropertyChangedEventArgs(propertyName));
+                SetProperty(ref m_NormalizedCondition, value);
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-    }
-
-    public class GearItemSaveDataProxy
-    {
         public float m_HoursPlayed { get; set; }
         public float[] m_Position { get; set; }
         public float[] m_Rotation { get; set; }
         public int m_InstanceIDProxy { get; set; }
         public float m_CurrentHPProxy { get; set; }
-        public float m_NormalizedCondition { get; set; }
+        private float m_NormalizedCondition;
         public bool m_BeenInPlayerInventoryProxy { get; set; }
         public bool m_BeenInContainerProxy { get; set; }
         public bool m_BeenInspectedProxy { get; set; }
@@ -494,26 +247,43 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_HasBeenOwnedByPlayer { get; set; }
         public bool m_RolledSpawnChanceProxy { get; set; }
         public bool m_WornOut { get; set; }
-        public string m_StackableItemSerialized { get; set; }
-        public string m_FoodItemSerialized { get; set; }
-        public string m_LiquidItemSerialized { get; set; }
-        public string m_FlareItemSerialized { get; set; }
-        public string m_FlashlightItemSerialized { get; set; }// new
-        public string m_KeroseneLampItemSerialized { get; set; }
-        public string m_ClothingItemSerialized { get; set; }
-        public string m_WeaponItemSerialized { get; set; }
-        public string m_WaterSupplySerialized { get; set; }
-        public string m_BedSerialized { get; set; }
-        public string m_SmashableItemSerialized { get; set; }
-        public string m_MatchesItemSerialized { get; set; }
-        public string m_SnareItemSerialized { get; set; }
-        public string m_InProgressItemSerialized { get; set; }
-        public string m_TorchItemSerialized { get; set; }
+        [Deserialize("m_StackableItemSerialized", true)]
+        public StackableItemSaveDataProxy StackableItem { get; set; }
+        [Deserialize("m_FoodItemSerialized", true)]
+        public FoodItemSaveDataProxy FoodItem { get; set; }
+        [Deserialize("m_LiquidItemSerialized", true)]
+        public LiquidItemSaveDataProxy LiquidItem { get; set; }
+        [Deserialize("m_FlareItemSerialized", true)]
+        public FlareItemSaveDataProxy FlareItem { get; set; }
+        [Deserialize("m_FlashlightItemSerialized", true)]
+        public FlashlightItemSaveDataProxy FlashLightItem { get; set; }
+        [Deserialize("m_KeroseneLampItemSerialized", true)]
+        public KeroseneLampItemSaveDataProxy KeroseneLampItem { get; set; }
+        [Deserialize("m_ClothingItemSerialized", true)]
+        public ClothingItemSaveDataProxy ClothingItem { get; set; }
+        [Deserialize("m_WeaponItemSerialized", true)]
+        public GunItemSaveDataProxy WeaponItem { get; set; }
+        [Deserialize("m_WaterSupplySerialized", true)]
+        public WaterSupplySaveDataProxy WaterSupply { get; set; }
+        [Deserialize("m_BedSerialized", true)]
+        public BedSaveDataProxy Bed { get; set; }
+        [Deserialize("m_SmashableItemSerialized", true)]
+        public SmashableItemSaveDataProxy SmashableItem { get; set; }
+        [Deserialize("m_MatchesItemSerialized", true)]
+        public MatchesItemSaveDataProxy MatchesItem { get; set; }
+        [Deserialize("m_SnareItemSerialized", true)]
+        public SnareItemSaveDataProxy SnareItem { get; set; }
+        [Deserialize("m_InProgressItemSerialized", true)]
+        public InProgressCraftItemSaveDataProxy InProgressItem { get; set; }
+        [Deserialize("m_TorchItemSerialized", true)]
+        public TorchItemSaveDataProxy TorchItem { get; set; }
         public string m_CollectibleNoteSerialized { get; set; }
-        public string m_EvolveItemSerialized { get; set; }
+        [Deserialize("m_EvolveItemSerialized", true)]
+        public EvolveItemSaveData EvolveItem { get; set; }
         public string m_ObjectGuidSerialized { get; set; }
         public string m_MissionObjectSerialized { get; set; }
-        public string m_ResearchItemSerialized { get; set; }
+        [Deserialize("m_ResearchItemSerialized", true)]
+        public ResearchItemSaveData ResearchItem { get; set; }
         public float m_WeightKG { get; set; }
         public bool m_HarvestedByPlayer { get; set; }
         public bool m_IsInSatchel { get; set; }
@@ -525,6 +295,23 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_CookingPotItemSerialized { get; set; }
         public string m_PlacePointGuidSerialized { get; set; }
         public string m_PlacePointNameSerialized { get; set; }
+
+        public GearItemSaveDataProxy()
+        {
+            m_Rotation = new float[4];
+            m_Position = new float[3];
+            m_BeenInPlayerInventoryProxy = true;
+            NormalizedCondition = 1;
+            m_WornOut = false;
+            m_HoursPlayed = MainWindow.Instance.CurrentSave.Global.TimeOfDay.m_HoursPlayedNotPausedProxy;
+            var r = new Random();
+            var id = r.Next();
+            while (MainWindow.Instance.CurrentSave.Global.Inventory.Items.Any(item => item.Gear.m_InstanceIDProxy == id))
+            {
+                id = r.Next();
+            }
+            m_InstanceIDProxy = id;
+        }
     }
 
     public class StackableItemSaveDataProxy
@@ -547,13 +334,13 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     public class LiquidItemSaveDataProxy
     {
         public float m_LiquidLitersProxy { get; set; }
-        public LiquidQuality m_LiquidQuality { get; set; }
+        public EnumWrapper<LiquidQuality> m_LiquidQuality { get; set; }
     }
 
     public class FlareItemSaveDataProxy
     {
         public float m_HoursPlayed { get; set; }
-        public FlareState m_StateProxy { get; set; }
+        public EnumWrapper<FlareState> m_StateProxy { get; set; }
         public float m_ElapsedBurnMinutesProxy { get; set; }
     }
 
@@ -596,7 +383,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     public class BedSaveDataProxy
     {
-        public BedRollState m_BedRollState { get; set; }
+        public EnumWrapper<BedRollState> m_BedRollState { get; set; }
     }
 
     public class SmashableItemSaveDataProxy
@@ -616,7 +403,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     {
         public float m_HoursPlayed { get; set; }
         public float m_HoursAtLastRoll { get; set; }
-        public SnareState m_State { get; set; }
+        public EnumWrapper<SnareState> m_State { get; set; }
     }
 
     public class InProgressCraftItemSaveDataProxy
@@ -628,7 +415,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     public class TorchItemSaveDataProxy
     {
         public float m_HoursPlayed { get; set; }
-        public TorchState m_StateProxy { get; set; }
+        public EnumWrapper<TorchState> m_StateProxy { get; set; }
         public float m_ElapsedBurnMinutesProxy { get; set; }
     }
 
@@ -642,7 +429,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     public class MissionObjectIdentifierSaveProxy
     {
         public string m_Id { get; set; }
-        public MissionObjectClass m_ObjectClass { get; set; }
+        public EnumWrapper<MissionObjectClass> m_ObjectClass { get; set; }
         public string m_ActivityTags { get; set; }
         public bool m_DestroyAfterMission { get; set; }
     }
@@ -674,7 +461,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_MissionIdSerialized { get; set; }
         public string m_BearHuntAiSerialized { get; set; }
         public string m_BearHuntAiReduxSerialized { get; set; }
-        public DamageSide m_DamageSide { get; set; }
+        public EnumWrapper<DamageSide> m_DamageSide { get; set; }
     }
 
     public class CookingPotItemSaveDataProxy
@@ -704,7 +491,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_Ghost { get; set; }
         public bool m_God { get; set; }
         public bool m_CheatsUsed { get; set; }
-        public VoicePersona m_VoicePersona { get; set; }
+        public EnumWrapper<VoicePersona> m_VoicePersona { get; set; }
         public float m_CaloriesHarvestedToday { get; set; }
         public float m_FreezingRateScale { get; set; }
         public float m_FatigueRateScale { get; set; }
@@ -964,7 +751,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public int m_ConditionLow { get; set; }
         public int m_ConditionHigh { get; set; }
         public int m_CaloriesBurned { get; set; }
-        public List<AfflictionType> m_Afflictions { get; set; }
+        public List<EnumWrapper<AfflictionType>> m_Afflictions { get; set; }
         public List<string> m_LocationLocIDs { get; set; }
         public List<string> m_RegionLocIDs { get; set; }
         public List<string> m_RegionSceneNames { get; set; }
@@ -1024,14 +811,14 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     public class ExperienceModeManagerSaveDataProxy
     {
-        public ExperienceModeType m_CurrentModeType { get; set; }
+        public EnumWrapper<ExperienceModeType> m_CurrentModeType { get; set; }
         public string m_CustomModeString { get; set; }
     }
 
     public class PlayerMovementSaveDataProxy
     {
         public float m_SprintStamina { get; set; }
-        public ForcedMovement m_ForcedMovement { get; set; }
+        public EnumWrapper<ForcedMovement> m_ForcedMovement { get; set; }
         public bool m_ForceNoSprain { get; set; }
         public bool m_IsCrouching { get; set; }
     }
@@ -1076,7 +863,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public List<string> m_SerializedTimers { get; set; }
         public List<string> m_MissionObjectFilterTags { get; set; }
         public List<string> m_CustomManagedObjects { get; set; }
-        public List<CustomManagedObjectState> m_CustomManagedObjectStates { get; set; }
+        public List<EnumWrapper<CustomManagedObjectState>> m_CustomManagedObjectStates { get; set; }
         public string m_SerializedGlobalBlackboard;
         public string m_VisibleMissionTimer { get; set; }
     }
@@ -1113,57 +900,20 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     public class SkillsManagerSaveData
     {
-        public string m_Skill_FirestartingSerialized { get; set; }
-        public string m_Skill_CarcassHarvestingSerialized { get; set; }
-        public string m_Skill_CookingSerialized { get; set; }
-        public string m_Skill_IceFishingSerialized { get; set; }
-        public string m_Skill_RifleSerialized { get; set; }
-        public string m_Skill_ArcherySerialized { get; set; }
-        public string m_Skill_ClothingRepairSerialized { get; set; }
-    }
-
-    public class SkillsManager
-    {
-        public Skill_FirestartingSaveData FireStartingSkill { get; set; }
-        public Skill_CarcassHarvestingSaveData CarcassHarvestingSkill { get; set; }
-        public Skill_CookingSaveData CookingSkill { get; set; }
-        public Skill_IceFishingSaveData IceFishingSkill { get; set; }
-        public Skill_RifleSaveData RifleSkill { get; set; }
-        public Skill_ArcherySaveData ArcherySkill { get; set; }
-        public Skill_ClothingRepairSaveData ClothingRepairSkill { get; set; }
-
-        public SkillsManager(string json)
-        {
-            var proxy = Util.DeserializeObject<SkillsManagerSaveData>(json);
-            if (proxy == null)
-                return;
-
-            FireStartingSkill = Util.DeserializeObject<Skill_FirestartingSaveData>(proxy.m_Skill_FirestartingSerialized);
-            CarcassHarvestingSkill = Util.DeserializeObject<Skill_CarcassHarvestingSaveData>(proxy.m_Skill_CarcassHarvestingSerialized);
-            CookingSkill = Util.DeserializeObject<Skill_CookingSaveData>(proxy.m_Skill_CookingSerialized);
-            IceFishingSkill = Util.DeserializeObject<Skill_IceFishingSaveData>(proxy.m_Skill_IceFishingSerialized);
-            RifleSkill = Util.DeserializeObject<Skill_RifleSaveData>(proxy.m_Skill_RifleSerialized);
-            ArcherySkill = Util.DeserializeObject<Skill_ArcherySaveData>(proxy.m_Skill_ArcherySerialized);
-            ClothingRepairSkill = Util.DeserializeObject<Skill_ClothingRepairSaveData>(proxy.m_Skill_ClothingRepairSerialized);
-
-
-        }
-
-        public string Serialize()
-        {
-            var proxy = new SkillsManagerSaveData();
-
-            proxy.m_Skill_FirestartingSerialized = Util.SerializeObject(FireStartingSkill);
-            proxy.m_Skill_CarcassHarvestingSerialized = Util.SerializeObject(CarcassHarvestingSkill);
-            proxy.m_Skill_CookingSerialized = Util.SerializeObject(CookingSkill);
-            proxy.m_Skill_IceFishingSerialized = Util.SerializeObject(IceFishingSkill);
-            proxy.m_Skill_RifleSerialized = Util.SerializeObject(RifleSkill);
-            proxy.m_Skill_ArcherySerialized = Util.SerializeObject(ArcherySkill);
-            proxy.m_Skill_ClothingRepairSerialized = Util.SerializeObject(ClothingRepairSkill);
-
-            return Util.SerializeObject(proxy);
-        }
-
+        [Deserialize("m_Skill_FirestartingSerialized", true)]
+        public Skill_FirestartingSaveData Firestarting { get; set; }
+        [Deserialize("m_Skill_CarcassHarvestingSerialized", true)]
+        public Skill_CarcassHarvestingSaveData CarcassHarvesting { get; set; }
+        [Deserialize("m_Skill_CookingSerialized", true)]
+        public Skill_CookingSaveData Cooking { get; set; }
+        [Deserialize("m_Skill_IceFishingSerialized", true)]
+        public Skill_IceFishingSaveData IceFishing { get; set; }
+        [Deserialize("m_Skill_RifleSerialized", true)]
+        public Skill_RifleSaveData Rifle { get; set; }
+        [Deserialize("m_Skill_ArcherySerialized", true)]
+        public Skill_ArcherySaveData Archery { get; set; }
+        [Deserialize("m_Skill_ClothingRepairSerialized", true)]
+        public ClothingItemSaveDataProxy ClothingRepair { get; set; }
     }
 
     public class Skill_FirestartingSaveData
@@ -1204,52 +954,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     public class FeatEnabledTrackerSaveData
     {
-        public List<FeatType> m_FeatsEnabledThisSandbox { get; set; }
-    }
-
-    public class BearHuntSaveData
-    {
-        public bool m_Active { get; set; }
-        public bool m_Completed { get; set; }
-        public bool m_ActivateCachesOnDeserialze { get; set; }
-    }
-
-    public class StoryMissionSaveData
-    {
-        public List<StoryMissionInfo> m_MissionInfo { get; set; }
-        public List<StoryMissionObjective> m_ObjectiveInfo { get; set; }
-    }
-
-    public class StoryMissionInfo
-    {
-        public string missionID { get; set; }
-        public string nameLocID { get; set; }
-        public string descriptionLocID { get; set; }
-        public string textureName { get; set; }
-        public bool isActive { get; set; }
-        public bool completedSuccessfully { get; set; }
-        public string timerID { get; set; }
-        public bool isSideMission { get; set; }
-        public string m_NPC_ID { get; set; }
-        public float m_TrustDecayGracePeriodHours { get; set; }
-        public string chapterLocID { get; set; }
-        public bool showWhenCompleted { get; set; }
-    }
-
-    public class StoryMissionObjective
-    {
-        public string objectiveID { get; set; }
-        public string descriptionLocID { get; set; }
-        public bool completed { get; set; }
-        public string timerID { get; set; }
-        public string countCurrentBBName { get; set; }
-        public string countRequiredBBName { get; set; }
-        public MissionObjectiveCountType countType { get; set; }
-        public bool isChildObjective { get; set; }
-        public List<string> childObjectiveIDList { get; set; }
-        public string missionID { get; set; }
-        public bool invisibleInJournal { get; set; }
-        public bool showWhenCompleted { get; set; }
+        public List<EnumWrapper<FeatType>> m_FeatsEnabledThisSandbox { get; set; }
     }
 
     public class SandboxRecord
@@ -1257,10 +962,10 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_SandboxName { get; set; }
         public float m_ElapsedHours { get; set; }
         public DateTime m_EndDate { get; set; }
-        public GameRegion m_StartRegion { get; set; }
+        public EnumWrapper<GameRegion> m_StartRegion { get; set; }
         public string m_EndRegion { get; set; }
-        public ExperienceModeType m_ExperienceModeType { get; set; }
-        public VoicePersona m_VoicePersona { get; set; }
+        public EnumWrapper<ExperienceModeType> m_ExperienceModeType { get; set; }
+        public EnumWrapper<VoicePersona> m_VoicePersona { get; set; }
         public string m_CauseOfDeathLocId { get; set; }
         public string m_GeneralNotes { get; set; }
         public List<LogDayInfo> m_LogDayInfoList { get; set; }
