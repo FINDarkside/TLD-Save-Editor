@@ -50,6 +50,9 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                     var wrapperType = typeof(EnumWrapper<>);
                     var genericType = wrapperType.MakeGenericType(t.GetGenericArguments()[0]);
                     return Activator.CreateInstance(genericType, s);
+                }else if(t == typeof(DateTime))
+                {
+                    return DateTime.Parse(s);
                 }
                 if (!deserialize)
                     return s;
@@ -58,10 +61,13 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             else if (token.Type == JTokenType.Null)
             {
                 return null;
+            }else if(token.Type == JTokenType.Date)
+            {
+                return token.Value<DateTime>();
             }
             else
             {
-                throw new Exception("Invalid token type " + t);
+                throw new Exception("Invalid token type " + token.Type);
             }
         }
 
