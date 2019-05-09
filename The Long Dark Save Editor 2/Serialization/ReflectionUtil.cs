@@ -23,8 +23,15 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                     list.Add(item);
                 }
                 return list;
+            }else if((typeof(ISet<>)).IsAssignableFrom(t)){
+                var set = (ISet<object>)Activator.CreateInstance(t);
+                foreach(var item in arr)
+                {
+                    set.Add(item);
+                }
+                return set;
             }
-            throw new Exception();
+            throw new Exception("Unsupported collection type "  + t);
         }
 
         public static bool IsBoxed<T>(T value)
