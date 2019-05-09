@@ -26,7 +26,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
         private dynamic Parse(JToken token, Type t, DeserializeAttribute attr = null)
         {
             bool deserialize = attr?.Json ?? false;
-            bool deserializeItems = attr?.Json ?? false;
+            bool deserializeItems = attr?.JsonItems ?? false;
 
             if (token.Type == JTokenType.Object)
             {
