@@ -6,41 +6,41 @@ using System.Runtime.CompilerServices;
 
 namespace The_Long_Dark_Save_Editor_2.Helpers
 {
-    public class EnumWrapper<T> : INotifyPropertyChanged where T : Enum
+    public class EnumWrapper<T> : BindableBase where T : Enum
     {
-        static class EnumValues<T> where T : Enum
+        static class EnumValues<T2> where T2 : Enum
         {
-            public static List<string> values = Enum.GetNames(typeof(T)).ToList();
+            public static List<string> values = Enum.GetNames(typeof(T2)).ToList();
+        }
+
+        public EnumWrapper(string s)
+        {
+            CurrentValue = s;
         }
 
         private string currentValue;
         public string CurrentValue
         {
-            get { return CurrentValue; }
+            get { return currentValue; }
             set
             {
-                if (!EnumValues<T>.values.Contains(value)){
+                if (!EnumValues<T>.values.Contains(value))
+                {
                     EnumValues<T>.values.Add(value);
                 }
-                SetPropertyField(ref currentValue, value);
+                SetProperty(ref currentValue, value);
             }
+        }
+
+        public override string ToString()
+        {
+            return currentValue;
         }
 
         public List<string> GetValues()
         {
             return EnumValues<T>.values;
         }
-
-        protected void SetPropertyField<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
-        {
-            if (!EqualityComparer<T>.Default.Equals(field, newValue))
-            {
-                field = newValue;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
 
     }
 }
