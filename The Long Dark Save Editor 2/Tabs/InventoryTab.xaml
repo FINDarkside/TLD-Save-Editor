@@ -33,7 +33,7 @@
             </CollectionViewSource.GroupDescriptions>
         </CollectionViewSource>
 
-        <DataTemplate DataType="{x:Type gameData:InventoryItem}">
+        <DataTemplate DataType="{x:Type gameData:InventoryItemSaveData}">
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Button Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Width="100" Click="DeleteItemClicked" HorizontalAlignment="Left" Content="{x:Static p:Resources.Remove}"></Button>
@@ -43,74 +43,78 @@
                     <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                         <Label Width="130" Content="{x:Static p:Resources.Condition}" />
                         <Slider Name="healthSlider" TickFrequency="0.01" Orientation="Horizontal" Minimum="0" IsSnapToTickEnabled="True" 
-                            Maximum="1" Width="200" Value="{Binding NormalizedCondition}" Margin="5 5">
+                            Maximum="1" Width="200" Value="{Binding Gear.NormalizedCondition}" Margin="5 5">
                         </Slider>
                         <Label Content="{Binding ElementName=healthSlider, Path=Value, Converter = {StaticResource DoubleToPercentageConverter}}"></Label>
                     </StackPanel>
-                    <StackPanel Visibility="{Binding StackableItem, Converter={StaticResource ObjectToVisibilityConverter}}" Orientation="Horizontal" Margin="0 0 0 5">
+                    <StackPanel Visibility="{Binding Gear.StackableItem, Converter={StaticResource ObjectToVisibilityConverter}}" Orientation="Horizontal" Margin="0 0 0 5">
                         <Label Width="130" Content="{x:Static p:Resources.Amount}" />
-                        <TextBox Width="200" Text="{Binding StackableItem.m_UnitsProxy}"></TextBox>
+                        <TextBox Width="200" Text="{Binding Gear.StackableItem.m_UnitsProxy}"></TextBox>
                     </StackPanel>
-                    <StackPanel Visibility="{Binding FoodItem, Converter={StaticResource ObjectToVisibilityConverter}}">
+                    <StackPanel Visibility="{Binding Gear.FoodItem, Converter={StaticResource ObjectToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                             <Label Width="130" Content="{x:Static p:Resources.Calories}" />
-                            <TextBox Width="200" Text="{Binding FoodItem.m_CaloriesRemainingProxy}"></TextBox>
+                            <TextBox Width="200" Text="{Binding Gear.FoodItem.m_CaloriesRemainingProxy}"></TextBox>
                         </StackPanel>
                     </StackPanel>
-                    <StackPanel Visibility="{Binding LiquidItem, Converter={StaticResource ObjectToVisibilityConverter}}">
+                    <StackPanel Visibility="{Binding Gear.LiquidItem, Converter={StaticResource ObjectToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                             <Label Width="130" Content="{x:Static p:Resources.AmountLiter}" />
-                            <TextBox Width="200" Text="{Binding LiquidItem.m_LiquidLitersProxy}"></TextBox>
+                            <TextBox Width="200" Text="{Binding Gear.LiquidItem.m_LiquidLitersProxy}"></TextBox>
                         </StackPanel>
                     </StackPanel>
-                    <StackPanel Visibility="{Binding KeroseneLampItem, Converter={StaticResource ObjectToVisibilityConverter}}">
+                    <StackPanel Visibility="{Binding Gear.KeroseneLampItem, Converter={StaticResource ObjectToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                             <Label Width="130" Content="{x:Static p:Resources.AmountLiter}" />
-                            <TextBox Width="200" Text="{Binding KeroseneLampItem.m_CurrentFuelLitersProxy}"></TextBox>
+                            <TextBox Width="200" Text="{Binding Gear.KeroseneLampItem.m_CurrentFuelLitersProxy}"></TextBox>
                         </StackPanel>
                     </StackPanel>
-                    <StackPanel Visibility="{Binding WeaponItem, Converter={StaticResource ObjectToVisibilityConverter}}">
+                    <StackPanel Visibility="{Binding Gear.WeaponItem, Converter={StaticResource ObjectToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                             <Label Width="130" Content="{x:Static p:Resources.RoundsInClip}" />
-                            <TextBox Width="200" Text="{Binding WeaponItem.m_RoundsInClipProxy}"></TextBox>
+                            <TextBox Width="200" Text="{Binding Gear.WeaponItem.m_RoundsInClipProxy}"></TextBox>
                         </StackPanel>
                     </StackPanel>
-                    <StackPanel Visibility="{Binding WaterSupply, Converter={StaticResource ObjectToVisibilityConverter}}">
+                    <StackPanel Visibility="{Binding Gear.WaterSupply, Converter={StaticResource ObjectToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                             <Label Width="130" Content="{x:Static p:Resources.AmountLiter}" />
-                            <TextBox Width="200" Text="{Binding WaterSupply.m_VolumeProxy}"></TextBox>
+                            <TextBox Width="200" Text="{Binding Gear.WaterSupply.m_VolumeProxy}"></TextBox>
                         </StackPanel>
                     </StackPanel>
-                    <StackPanel Visibility="{Binding InProgressItem, Converter={StaticResource ObjectToVisibilityConverter}}">
+                    <StackPanel Visibility="{Binding Gear.InProgressItem, Converter={StaticResource ObjectToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                             <Label Width="130" Content="{x:Static p:Resources.Progress}" />
                             <Slider Name="progressSlider" TickFrequency="0.01" Orientation="Horizontal" Minimum="0" IsSnapToTickEnabled="True" 
-                            Maximum="1" Width="200" Value="{Binding InProgressItem.m_PercentComplete}" Margin="5 5">
+                            Maximum="1" Width="200" Value="{Binding Gear.InProgressItem.m_PercentComplete}" Margin="5 5">
                             </Slider>
                             <Label Content="{Binding ElementName=progressSlider, Path=Value, Converter = {StaticResource DoubleToPercentageConverter}}"></Label>
                         </StackPanel>
                     </StackPanel>
-                    <StackPanel Visibility="{Binding EvolveItem, Converter={StaticResource ObjectToVisibilityConverter}}">
+                    <StackPanel Visibility="{Binding Gear.EvolveItem, Converter={StaticResource ObjectToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                             <Label Width="130" Content="{x:Static p:Resources.TimeEvolving}" />
-                            <TextBox Width="200" Text="{Binding EvolveItem.m_TimeSpentEvolvingGameHours}"></TextBox>
+                            <TextBox Width="200" Text="{Binding Gear.EvolveItem.m_TimeSpentEvolvingGameHours}"></TextBox>
                         </StackPanel>
                     </StackPanel>
-                    <StackPanel Visibility="{Binding BodyHarvest, Converter={StaticResource ObjectToVisibilityConverter}}">
+                    <StackPanel Visibility="{Binding Gear.BodyHarvest, Converter={StaticResource ObjectToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                             <Label Width="130" Content="{x:Static p:Resources.MeatAmount}" />
-                            <TextBox Width="200" Text="{Binding BodyHarvest.m_MeatAvailableKG}"></TextBox>
+                            <TextBox Width="200" Text="{Binding Gear.BodyHarvest.m_MeatAvailableKG}"></TextBox>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                             <Label Width="130" Content="{x:Static p:Resources.HideAmount}" />
-                            <TextBox Width="200" Text="{Binding BodyHarvest.m_HideAvailableUnits}"></TextBox>
+                            <TextBox Width="200" Text="{Binding Gear.BodyHarvest.m_HideAvailableUnits}"></TextBox>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                             <Label Width="130" Content="{x:Static p:Resources.GutAmount}" />
-                            <TextBox Width="200" Text="{Binding BodyHarvest.m_GutAvailableUnits}"></TextBox>
+                            <TextBox Width="200" Text="{Binding Gear.BodyHarvest.m_GutAvailableUnits}"></TextBox>
                         </StackPanel>
                     </StackPanel>
-                    <Button Margin="0 10 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="PrintJsonClicked" Visibility="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=IsDebug, Converter={StaticResource BoolToVisibilityConverter}}">Print JSON</Button>
+                    <Button Margin="0 10 0 0" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Click="PrintJsonClicked"
+                            Visibility="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}},
+                                Path=IsDebug, Converter={StaticResource BoolToVisibilityConverter}}">
+                        Print JSON
+                    </Button>
                 </StackPanel>
             </StackPanel>
         </DataTemplate>

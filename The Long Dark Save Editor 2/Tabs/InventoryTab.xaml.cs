@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Newtonsoft.Json;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using The_Long_Dark_Save_Editor_2.Game_data;
@@ -17,6 +18,7 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
         {
             InitializeComponent();
             mainWindow = MainWindow.Instance;
+
         }
 
         private void AddItemClicked(object sender, RoutedEventArgs e)
@@ -28,19 +30,20 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
 
             var itemInfo = ItemDictionary.itemInfo[prefabName];
 
-            var inventoryItem = Util.DeserializeObject<InventoryItem>(itemInfo.defaultSerialized);
-            inventoryItem.PrefabName = prefabName;
-
-            inventoryItem.HoursPlayed = mainWindow.CurrentSave.Global.TimeOfDay.m_HoursPlayedNotPausedProxy;
-
-            mainWindow.CurrentSave.Global.Inventory.Items.Add(inventoryItem);
-            ItemList.SelectedItem = inventoryItem;
+            var item = new InventoryItemSaveData();
+            var gear = GearItemSaveDataProxy.Create();
+            JsonConvert.PopulateObject(itemInfo.defaultSerialized, gear);
+            item.m_PrefabName = prefabName;
+            item.Gear = gear;
+            gear.m_HoursPlayed = mainWindow.CurrentSave.Global.TimeOfDay.m_HoursPlayedNotPausedProxy;
+            mainWindow.CurrentSave.Global.Inventory.Items.Add(item);
+            ItemList.SelectedItem = item;
         }
 
         private void DeleteItemClicked(object sender, RoutedEventArgs e)
         {
             var index = ItemList.SelectedIndex;
-            mainWindow.CurrentSave.Global.Inventory.Items.Remove((InventoryItem)ItemList.SelectedValue);
+            mainWindow.CurrentSave.Global.Inventory.Items.Remove((InventoryItemSaveData)ItemList.SelectedValue);
             if (ItemList.Items.Count <= index)
                 ItemList.SelectedIndex = index - 1;
             else
@@ -56,13 +59,14 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
         {
             foreach (var item in mainWindow.CurrentSave.Global.Inventory.Items)
             {
-                item.NormalizedCondition = 1;
-                item.WornOut = false;
+                var gear = item.Gear;
+                gear.NormalizedCondition = 1;
+                gear.m_WornOut = false;
 
-                if (item.FlareItem != null)
-                    item.FlareItem.m_StateProxy = FlareState.Fresh;
-                if (item.TorchItem != null)
-                    item.TorchItem.m_StateProxy = TorchState.Fresh;
+                if (gear.FlareItem != null)
+                    gear.FlareItem.m_StateProxy.SetValue(FlareState.Fresh);
+                if (gear.TorchItem != null)
+                    gear.TorchItem.m_StateProxy.SetValue(TorchState.Fresh);
             }
         }
 
@@ -74,7 +78,7 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
 
         private void PrintJsonClicked(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine(((InventoryItem)ItemList.SelectedValue).Serialize().m_SerializedGear);
+            // TODO!!
         }
     }
 }
