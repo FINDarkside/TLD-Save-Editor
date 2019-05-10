@@ -43,7 +43,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             return _value;
         }
 
-        public List<string> GetValues()
+        public ObservableCollection<string> GetValues()
         {
             return EnumValues<T>.values;
         }
