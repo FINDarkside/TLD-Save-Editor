@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -10,7 +11,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
     {
         static class EnumValues<T2> where T2 : Enum
         {
-            public static List<string> values = Enum.GetNames(typeof(T2)).ToList();
+            public static ObservableCollection<string> values = new ObservableCollection<string>(Enum.GetNames(typeof(T2)));
         }
 
         public EnumWrapper(string s)
