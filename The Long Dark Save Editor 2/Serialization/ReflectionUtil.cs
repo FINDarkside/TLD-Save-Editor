@@ -45,5 +45,13 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                 value != null &&
                 value.GetType().IsValueType;
         }
+
+        public static bool ImplementsGenericInterface(Type t, Type t2)
+        {
+            return t.GetInterfaces().Any(i =>
+               i.IsGenericType &&
+               i.GetGenericTypeDefinition() == t2);
+        }
+
     }
 }

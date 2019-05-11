@@ -47,10 +47,9 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                 string s = token.ToObject<string>();
                 if (t.IsGenericType && t.GetGenericTypeDefinition() == typeof(EnumWrapper<>))
                 {
-                    var wrapperType = typeof(EnumWrapper<>);
-                    var genericType = wrapperType.MakeGenericType(t.GetGenericArguments()[0]);
-                    return Activator.CreateInstance(genericType, s);
-                }else if(t == typeof(DateTime))
+                    return Activator.CreateInstance(t, s);
+                }
+                else if (t == typeof(DateTime))
                 {
                     return DateTime.Parse(s);
                 }
@@ -61,7 +60,8 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             else if (token.Type == JTokenType.Null)
             {
                 return null;
-            }else if(token.Type == JTokenType.Date)
+            }
+            else if (token.Type == JTokenType.Date)
             {
                 return token.Value<DateTime>();
             }
@@ -157,9 +157,9 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                 {
                     result = ReconstructDictionary((IDictionary)o, attr?.JsonItems ?? false);
                 }
-                else if (o is ICollection)
+                else if (o is ICollection || ReflectionUtil.ImplementsGenericInterface(o.GetType(), typeof(ICollection<>)))
                 {
-                    result = ReconstructCollection((ICollection)o, attr?.JsonItems ?? false);
+                    result = ReconstructCollection(o, attr?.JsonItems ?? false);
                 }
                 else if (o.GetType().IsGenericType && o.GetType().GetGenericTypeDefinition() == typeof(EnumWrapper<>))
                 {
@@ -207,7 +207,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             return res;
         }
 
-        public List<object> ReconstructCollection(ICollection col, bool serializeItems)
+        public List<object> ReconstructCollection(dynamic col, bool serializeItems)
         {
             List<object> result = new List<object>();
             foreach (var item in col)
