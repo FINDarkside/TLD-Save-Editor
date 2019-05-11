@@ -544,7 +544,7 @@
     <value>Rifle Cartridge</value>
   </data>
   <data name="GEAR_RifleCleaningKit" xml:space="preserve">
-    <value>Rifle Cleaning Kit</value>
+    <value>Firearm Cleaning Kit</value>
   </data>
   <data name="GEAR_Rope" xml:space="preserve">
     <value>Mountaineering Rope</value>
@@ -1093,7 +1093,7 @@
     <value>Lily's Trunk Key</value>
   </data>
   <data name="GEAR_HankNeiceLetter" xml:space="preserve">
-    <value>Letter for Hank's Neice</value>
+    <value>Letter for Hank's Niece</value>
   </data>
   <data name="GEAR_WillShirt" xml:space="preserve">
     <value>Mackenzie's Shirt</value>

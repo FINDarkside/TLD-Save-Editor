@@ -538,7 +538,7 @@
     <value>Ружейный патрон</value>
   </data>
   <data name="GEAR_RifleCleaningKit" xml:space="preserve">
-    <value>Набор для чистки ружья</value>
+    <value>Набор для чистки огнестрельного оружия</value>
   </data>
   <data name="GEAR_Rope" xml:space="preserve">
     <value>Альпинистский трос</value>
