@@ -117,84 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="AddItem" xml:space="preserve">
-    <value>Add item</value>
-  </data>
-  <data name="Amount" xml:space="preserve">
-    <value>Amount</value>
-  </data>
-  <data name="AmountLiter" xml:space="preserve">
-    <value>Amount (liters)</value>
-  </data>
-  <data name="ArcherySP" xml:space="preserve">
-    <value>Archery skillpoints</value>
-  </data>
-  <data name="Books" xml:space="preserve">
-    <value>Books</value>
-  </data>
-  <data name="BookSmartProgress" xml:space="preserve">
-    <value>Book smarts progress</value>
-  </data>
-  <data name="Calories" xml:space="preserve">
-    <value>Calories</value>
-  </data>
-  <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="CarcassHarvestingSP" xml:space="preserve">
-    <value>Carcass harvesting skillpoints</value>
-  </data>
-  <data name="Clothing" xml:space="preserve">
-    <value>Clothing</value>
-  </data>
-  <data name="ClothingRepairSP" xml:space="preserve">
-    <value>Clothing repairing skillpoints</value>
-  </data>
-  <data name="ColdFusionProgress" xml:space="preserve">
-    <value>Cold fusion progress</value>
-  </data>
-  <data name="Collectible" xml:space="preserve">
-    <value>Collectible</value>
-  </data>
-  <data name="Condition" xml:space="preserve">
-    <value>Condition</value>
-  </data>
-  <data name="CookingSP" xml:space="preserve">
-    <value>Cooking skillpoints</value>
-  </data>
-  <data name="CurrentCalories" xml:space="preserve">
-    <value>Current calories</value>
-  </data>
-  <data name="Download" xml:space="preserve">
-    <value>Download</value>
-  </data>
-  <data name="EfficientMachineProgress" xml:space="preserve">
-    <value>Efficient machine progress</value>
-  </data>
-  <data name="Fatigue" xml:space="preserve">
-    <value>Fatigue</value>
-  </data>
-  <data name="FireMasterProgress" xml:space="preserve">
-    <value>Fire master progress</value>
-  </data>
-  <data name="FireStartingSP" xml:space="preserve">
-    <value>Fire starting skillpoints</value>
-  </data>
-  <data name="FirstAid" xml:space="preserve">
-    <value>First Aid</value>
-  </data>
-  <data name="Food" xml:space="preserve">
-    <value>Food</value>
-  </data>
-  <data name="FreeRunnerProgress" xml:space="preserve">
-    <value>Free runner progress</value>
-  </data>
-  <data name="Freezing" xml:space="preserve">
-    <value>Freezing</value>
-  </data>
   <data name="GEAR_BottleAntibiotics" xml:space="preserve">
     <value>Antibiotics</value>
   </data>
@@ -939,185 +861,8 @@
   <data name="GEAR_WaterTowerNote" xml:space="preserve">
     <value>Water Tower Note</value>
   </data>
-  <data name="Health" xml:space="preserve">
-    <value>Health</value>
-  </data>
-  <data name="Hidden" xml:space="preserve">
-    <value>Hidden</value>
-  </data>
-  <data name="IceFishingSP" xml:space="preserve">
-    <value>Ice fishing skillpoints</value>
-  </data>
-  <data name="InfiniteCarry" xml:space="preserve">
-    <value>Infinite carry</value>
-  </data>
-  <data name="Injuries" xml:space="preserve">
-    <value>Injuries</value>
-  </data>
-  <data name="Inventory" xml:space="preserve">
-    <value>Inventory</value>
-  </data>
-  <data name="Invulnerable" xml:space="preserve">
-    <value>Invulnerable</value>
-  </data>
-  <data name="Materials" xml:space="preserve">
-    <value>Materials</value>
-  </data>
-  <data name="NeverDie" xml:space="preserve">
-    <value>Never die</value>
-  </data>
-  <data name="Player" xml:space="preserve">
-    <value>Player</value>
-  </data>
-  <data name="Profile" xml:space="preserve">
-    <value>Profile</value>
-  </data>
-  <data name="Progress" xml:space="preserve">
-    <value>Progress</value>
-  </data>
-  <data name="Refresh" xml:space="preserve">
-    <value>Refresh</value>
-  </data>
-  <data name="Remove" xml:space="preserve">
-    <value>Remove</value>
-  </data>
-  <data name="RemoveAll" xml:space="preserve">
-    <value>Remove all</value>
-  </data>
-  <data name="RepairAll" xml:space="preserve">
-    <value>Repair all</value>
-  </data>
-  <data name="RifleSP" xml:space="preserve">
-    <value>Rifle skillpoints</value>
-  </data>
-  <data name="RoundsInClip" xml:space="preserve">
-    <value>Rounds in clip</value>
-  </data>
-  <data name="Save" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="Skills" xml:space="preserve">
-    <value>Skills</value>
-  </data>
-  <data name="SnowWalkerProgress" xml:space="preserve">
-    <value>Snow walker progress</value>
-  </data>
-  <data name="TestBranch" xml:space="preserve">
-    <value>Test branch</value>
-  </data>
-  <data name="Thirst" xml:space="preserve">
-    <value>Thirst</value>
-  </data>
-  <data name="TimeEvolving" xml:space="preserve">
-    <value>Time spent evolving (hours)</value>
-  </data>
-  <data name="Title" xml:space="preserve">
-    <value>The Long Dark (v1.44) Save Editor</value>
-  </data>
-  <data name="Tools" xml:space="preserve">
-    <value>Tools</value>
-  </data>
-  <data name="Traits" xml:space="preserve">
-    <value>Traits</value>
-  </data>
-  <data name="Unknown" xml:space="preserve">
-    <value>Unknown</value>
-  </data>
   <data name="GEAR_ClimbingSocks" xml:space="preserve">
     <value>Climbing Socks</value>
-  </data>
-  <data name="Afflictions" xml:space="preserve">
-    <value>Afflictions</value>
-  </data>
-  <data name="ActionCure" xml:space="preserve">
-    <value>Cure</value>
-  </data>
-  <data name="AfflictionType_BloodLoss" xml:space="preserve">
-    <value>Blood loss</value>
-  </data>
-  <data name="AfflictionType_Burns" xml:space="preserve">
-    <value>Burns</value>
-  </data>
-  <data name="AfflictionType_Dysentery" xml:space="preserve">
-    <value>Dysentery</value>
-  </data>
-  <data name="AfflictionType_Infection" xml:space="preserve">
-    <value>Infection</value>
-  </data>
-  <data name="AfflictionType_FoodPoisioning" xml:space="preserve">
-    <value>Food poisoning</value>
-  </data>
-  <data name="AfflictionType_SprainedAnkle" xml:space="preserve">
-    <value>Sprained ankle</value>
-  </data>
-  <data name="AfflictionType_InfectionRisk" xml:space="preserve">
-    <value>Infection risk</value>
-  </data>
-  <data name="AfflictionType_SprainedWrist" xml:space="preserve">
-    <value>Sprained wrist</value>
-  </data>
-  <data name="AfflictionType_Frostbite" xml:space="preserve">
-    <value>Frostbite</value>
-  </data>
-  <data name="AfflictionType_Hypothermia" xml:space="preserve">
-    <value>Hypothermia</value>
-  </data>
-  <data name="AfflictionType_ReducedFatigue" xml:space="preserve">
-    <value>Reduced fatigue</value>
-  </data>
-  <data name="AfflictionType_ImprovedRest" xml:space="preserve">
-    <value>Improved rest</value>
-  </data>
-  <data name="AfflictionType_WarmingUp" xml:space="preserve">
-    <value>Warming up</value>
-  </data>
-  <data name="AfflictionType_HypothermiaRisk" xml:space="preserve">
-    <value>Hypothermia risk</value>
-  </data>
-  <data name="AfflictionType_CabinFever" xml:space="preserve">
-    <value>Cabin fever</value>
-  </data>
-  <data name="AfflictionType_IntestinalParasitesRisk" xml:space="preserve">
-    <value>Intestinal parasites risk</value>
-  </data>
-  <data name="AfflictionType_IntestinalParasites" xml:space="preserve">
-    <value>Intestinal parasites</value>
-  </data>
-  <data name="AfflictionType_SprainedWristMajor" xml:space="preserve">
-    <value>Sprained wrist major</value>
-  </data>
-  <data name="AfflictionType_CabinFeverRisk" xml:space="preserve">
-    <value>Cabin fever risk</value>
-  </data>
-  <data name="AfflictionType_FrostbiteRisk" xml:space="preserve">
-    <value>Frostbite risk</value>
-  </data>
-  <data name="ItemCategory_FirstAid" xml:space="preserve">
-    <value>First Aid</value>
-  </data>
-  <data name="ItemCategory_Clothing" xml:space="preserve">
-    <value>Clothing</value>
-  </data>
-  <data name="ItemCategory_Food" xml:space="preserve">
-    <value>Food</value>
-  </data>
-  <data name="ItemCategory_Tools" xml:space="preserve">
-    <value>Tools</value>
-  </data>
-  <data name="ItemCategory_Materials" xml:space="preserve">
-    <value>Materials</value>
-  </data>
-  <data name="ItemCategory_Collectible" xml:space="preserve">
-    <value>Collectible</value>
-  </data>
-  <data name="ItemCategory_Books" xml:space="preserve">
-    <value>Books</value>
-  </data>
-  <data name="ItemCategory_Hidden" xml:space="preserve">
-    <value>Hidden</value>
-  </data>
-  <data name="ItemCategory_Unknown" xml:space="preserve">
-    <value>Unknown</value>
   </data>
   <data name="GEAR_Water500ml" xml:space="preserve">
     <value>Water Bottle</value>
@@ -1125,113 +870,128 @@
   <data name="GEAR_Water1000ml" xml:space="preserve">
     <value>Water Bottle</value>
   </data>
-  <data name="ExperienceMode" xml:space="preserve">
-    <value>Experience mode</value>
+  <data name="GEAR_MooseQuarter" xml:space="preserve">
+    <value>Moose Quarter</value>
   </data>
-  <data name="ExperienceModeType_Pilgrim" xml:space="preserve">
-    <value>Pilgrim</value>
+  <data name="GEAR_RawMeatMoose" xml:space="preserve">
+    <value>Moose Meat</value>
   </data>
-  <data name="ExperienceModeType_Voyageur" xml:space="preserve">
-    <value>Voyageur</value>
+  <data name="GEAR_CookedMeatMoose" xml:space="preserve">
+    <value>Moose Meat (Cooked)</value>
   </data>
-  <data name="ExperienceModeType_Stalker" xml:space="preserve">
-    <value>Stalker</value>
+  <data name="GEAR_BackerNote1C" xml:space="preserve">
+    <value>A Note Left Behind</value>
   </data>
-  <data name="ExperienceModeType_Story" xml:space="preserve">
-    <value>Story</value>
+  <data name="GEAR_SurvivalSchoolFishing" xml:space="preserve">
+    <value>The Frozen Angler</value>
   </data>
-  <data name="ExperienceModeType_ChallengeRescue" xml:space="preserve">
-    <value>Hopeless Rescue</value>
+  <data name="GEAR_KnowledgeCarterDam" xml:space="preserve">
+    <value>Carter Hydro Dam</value>
   </data>
-  <data name="ExperienceModeType_ChallengeHunted" xml:space="preserve">
-    <value>The Hunted</value>
+  <data name="GEAR_TransponderParts" xml:space="preserve">
+    <value>Transponder Parts</value>
   </data>
-  <data name="ExperienceModeType_ChallengeWhiteout" xml:space="preserve">
-    <value>Whiteout</value>
+  <data name="GEAR_FoodSupplies_hangar" xml:space="preserve">
+    <value>Emergency Food</value>
   </data>
-  <data name="ExperienceModeType_ChallengeNomad" xml:space="preserve">
-    <value>Nomad</value>
+  <data name="GEAR_KnowledgeCollapse1" xml:space="preserve">
+    <value>History of The Collapse, Part One</value>
   </data>
-  <data name="ExperienceModeType_ChallengeHuntedPart2" xml:space="preserve">
-    <value>The Hunted, Part 2</value>
+  <data name="GEAR_SurvivalSchoolWolfHunt" xml:space="preserve">
+    <value>Advanced Guns Guns Guns!</value>
   </data>
-  <data name="ExperienceModeType_Interloper" xml:space="preserve">
-    <value>Interloper</value>
+  <data name="GEAR_RabbitskinHat" xml:space="preserve">
+    <value>Rabbitskin Hat</value>
   </data>
-  <data name="Position" xml:space="preserve">
-    <value>Position</value>
+  <data name="GEAR_LakeIncidentNote" xml:space="preserve">
+    <value>Crumpled Note</value>
   </data>
-  <data name="Region" xml:space="preserve">
-    <value>Region</value>
+  <data name="GEAR_SpearHead" xml:space="preserve">
+    <value>Spear Head</value>
   </data>
-  <data name="OpenMapCommand" xml:space="preserve">
-    <value>Open map</value>
+  <data name="GEAR_BearSpearBroken" xml:space="preserve">
+    <value>Broken Bear Spear</value>
   </data>
-  <data name="CoastalRegion" xml:space="preserve">
-    <value>Coastal Highway</value>
+  <data name="GEAR_RadioParts" xml:space="preserve">
+    <value>Radio Parts</value>
   </data>
-  <data name="LakeRegion" xml:space="preserve">
-    <value>Mystery Lake</value>
+  <data name="GEAR_SurvivalSchoolPlants" xml:space="preserve">
+    <value>Medicinal Plants of Great Bear</value>
   </data>
-  <data name="WhalingStationRegion" xml:space="preserve">
-    <value>Desolation Point</value>
+  <data name="GEAR_BearSpearStory" xml:space="preserve">
+    <value>Bear Spear</value>
   </data>
-  <data name="RuralRegion" xml:space="preserve">
-    <value>Pleasant Valley</value>
+  <data name="GEAR_AuroraHatchCode" xml:space="preserve">
+    <value>Aurora Hatch Door Entry Code</value>
   </data>
-  <data name="CrashMountainRegion" xml:space="preserve">
-    <value>Timberwolf Mountain</value>
+  <data name="GEAR_LongUnderwearStart" xml:space="preserve">
+    <value>Thermal Underwear (Start)</value>
   </data>
-  <data name="MarshRegion" xml:space="preserve">
-    <value>Forlorn Muskeg</value>
+  <data name="GEAR_SurvivalSchoolDeerHunt" xml:space="preserve">
+    <value>Frontier Shooting Guide</value>
   </data>
-  <data name="RavineTransitionZone" xml:space="preserve">
-    <value>Ravine</value>
+  <data name="GEAR_WillBootsStart" xml:space="preserve">
+    <value>Mackenzie's Boots (Start)</value>
   </data>
-  <data name="HighwayTransitionZone" xml:space="preserve">
-    <value>Crumbling Highway</value>
+  <data name="GEAR_CottonSocksStart" xml:space="preserve">
+    <value>Sports Socks (Start)</value>
   </data>
-  <data name="Map" xml:space="preserve">
-    <value>Map</value>
+  <data name="GEAR_HardCase_hangar" xml:space="preserve">
+    <value>Astrid's Hardcase</value>
   </data>
-  <data name="GEAR_WolfQuarter" xml:space="preserve">
-    <value>Wolf Quarter</value>
+  <data name="GEAR_GMExtraSuppliesNote" xml:space="preserve">
+    <value>Winter Forecast</value>
   </data>
-  <data name="GEAR_WolfCarcass" xml:space="preserve">
-    <value>Wolf Carcass</value>
+  <data name="GEAR_MedicalSupplies_hangar" xml:space="preserve">
+    <value>First Aid Kit</value>
   </data>
-  <data name="GEAR_BearQuarter" xml:space="preserve">
-    <value>Bear Quarter</value>
+  <data name="GEAR_KnowledgeMilton" xml:space="preserve">
+    <value>Town of Milton</value>
   </data>
-  <data name="GEAR_StagQuarter" xml:space="preserve">
-    <value>Deer Quarter</value>
+  <data name="GEAR_WillParka_Tossed" xml:space="preserve">
+    <value>Mackenzie's Parka</value>
   </data>
-  <data name="GEAR_RabbitCarcass" xml:space="preserve">
-    <value>Rabbit Carcass</value>
+  <data name="GEAR_MiltonGardenCache" xml:space="preserve">
+    <value>Medicine in my backyard</value>
   </data>
-  <data name="GEAR_Stone" xml:space="preserve">
-    <value>Stone</value>
+  <data name="GEAR_AstridBackPack_hangar" xml:space="preserve">
+    <value>Astrid's Backpack</value>
   </data>
-  <data name="GEAR_Charcoal" xml:space="preserve">
-    <value>Charcoal</value>
+  <data name="GEAR_DamFenceKey" xml:space="preserve">
+    <value>Carter Hydro Staging Area Gate Key</value>
   </data>
-  <data name="GEAR_BookFopen" xml:space="preserve">
-    <value>Book</value>
+  <data name="GEAR_KnowledgeMysteryLake" xml:space="preserve">
+    <value>Mystery Lake &amp; Area</value>
   </data>
-  <data name="GEAR_LampFuelFull" xml:space="preserve">
-    <value>Lantern Fuel</value>
+  <data name="GEAR_BearSpear" xml:space="preserve">
+    <value>Bear Spear</value>
   </data>
-  <data name="GEAR_Placeholder" xml:space="preserve">
-    <value>Rabbit Carcass</value>
+  <data name="GEAR_WillSweaterStart" xml:space="preserve">
+    <value>Mackenzie's Sweater (Start)</value>
   </data>
-  <data name="GutAmount" xml:space="preserve">
-    <value>Guts</value>
+  <data name="GEAR_KnowledgeCollapse3" xml:space="preserve">
+    <value>History of The Collapse, Part Three</value>
   </data>
-  <data name="HideAmount" xml:space="preserve">
-    <value>Hides</value>
+  <data name="GEAR_SurvivalSchoolClothing" xml:space="preserve">
+    <value>A Sewing Primer</value>
   </data>
-  <data name="MeatAmount" xml:space="preserve">
-    <value>Meat (kg)</value>
+  <data name="GEAR_WillPantsStart" xml:space="preserve">
+    <value>Mackenzie's Pants (Start)</value>
+  </data>
+  <data name="GEAR_KnowledgeCollapse4" xml:space="preserve">
+    <value>History of the Collapse, Part Four</value>
+  </data>
+  <data name="GEAR_SurvivalSchoolRabbits" xml:space="preserve">
+    <value>Field Dressing Your Kill, Vol. I</value>
+  </data>
+  <data name="GEAR_WillShirtStart" xml:space="preserve">
+    <value>Mackenzie's Shirt (Start)</value>
+  </data>
+  <data name="GEAR_KnowledgeCollapse2" xml:space="preserve">
+    <value>History of The Collapse, Part Two</value>
+  </data>
+  <data name="GEAR_FlareGunCase_hangar" xml:space="preserve">
+    <value>Distress Pistol Kit</value>
   </data>
   <data name="GEAR_Flashlight" xml:space="preserve">
     <value>Flashlight</value>
@@ -1392,6 +1152,369 @@
   <data name="GEAR_RecycledCan" xml:space="preserve">
     <value>Recycled Can</value>
   </data>
+  <data name="GEAR_WolfQuarter" xml:space="preserve">
+    <value>Wolf Quarter</value>
+  </data>
+  <data name="GEAR_WolfCarcass" xml:space="preserve">
+    <value>Wolf Carcass</value>
+  </data>
+  <data name="GEAR_BearQuarter" xml:space="preserve">
+    <value>Bear Quarter</value>
+  </data>
+  <data name="GEAR_StagQuarter" xml:space="preserve">
+    <value>Deer Quarter</value>
+  </data>
+  <data name="GEAR_RabbitCarcass" xml:space="preserve">
+    <value>Rabbit Carcass</value>
+  </data>
+  <data name="GEAR_Stone" xml:space="preserve">
+    <value>Stone</value>
+  </data>
+  <data name="GEAR_Charcoal" xml:space="preserve">
+    <value>Charcoal</value>
+  </data>
+  <data name="GEAR_BookFopen" xml:space="preserve">
+    <value>Book</value>
+  </data>
+  <data name="GEAR_LampFuelFull" xml:space="preserve">
+    <value>Lantern Fuel</value>
+  </data>
+  <data name="GEAR_Placeholder" xml:space="preserve">
+    <value>Rabbit Carcass</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AddItem" xml:space="preserve">
+    <value>Add item</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="AmountLiter" xml:space="preserve">
+    <value>Amount (liters)</value>
+  </data>
+  <data name="ArcherySP" xml:space="preserve">
+    <value>Archery skillpoints</value>
+  </data>
+  <data name="Books" xml:space="preserve">
+    <value>Books</value>
+  </data>
+  <data name="BookSmartProgress" xml:space="preserve">
+    <value>Book smarts progress</value>
+  </data>
+  <data name="Calories" xml:space="preserve">
+    <value>Calories</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CarcassHarvestingSP" xml:space="preserve">
+    <value>Carcass harvesting skillpoints</value>
+  </data>
+  <data name="Clothing" xml:space="preserve">
+    <value>Clothing</value>
+  </data>
+  <data name="ClothingRepairSP" xml:space="preserve">
+    <value>Clothing repairing skillpoints</value>
+  </data>
+  <data name="ColdFusionProgress" xml:space="preserve">
+    <value>Cold fusion progress</value>
+  </data>
+  <data name="Collectible" xml:space="preserve">
+    <value>Collectible</value>
+  </data>
+  <data name="Condition" xml:space="preserve">
+    <value>Condition</value>
+  </data>
+  <data name="CookingSP" xml:space="preserve">
+    <value>Cooking skillpoints</value>
+  </data>
+  <data name="CurrentCalories" xml:space="preserve">
+    <value>Current calories</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="EfficientMachineProgress" xml:space="preserve">
+    <value>Efficient machine progress</value>
+  </data>
+  <data name="Fatigue" xml:space="preserve">
+    <value>Fatigue</value>
+  </data>
+  <data name="FireMasterProgress" xml:space="preserve">
+    <value>Fire master progress</value>
+  </data>
+  <data name="FireStartingSP" xml:space="preserve">
+    <value>Fire starting skillpoints</value>
+  </data>
+  <data name="FirstAid" xml:space="preserve">
+    <value>First Aid</value>
+  </data>
+  <data name="Food" xml:space="preserve">
+    <value>Food</value>
+  </data>
+  <data name="FreeRunnerProgress" xml:space="preserve">
+    <value>Free runner progress</value>
+  </data>
+  <data name="Freezing" xml:space="preserve">
+    <value>Freezing</value>
+  </data>
+  <data name="Health" xml:space="preserve">
+    <value>Health</value>
+  </data>
+  <data name="Hidden" xml:space="preserve">
+    <value>Hidden</value>
+  </data>
+  <data name="IceFishingSP" xml:space="preserve">
+    <value>Ice fishing skillpoints</value>
+  </data>
+  <data name="InfiniteCarry" xml:space="preserve">
+    <value>Infinite carry</value>
+  </data>
+  <data name="Injuries" xml:space="preserve">
+    <value>Injuries</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Inventory</value>
+  </data>
+  <data name="Invulnerable" xml:space="preserve">
+    <value>Invulnerable</value>
+  </data>
+  <data name="Materials" xml:space="preserve">
+    <value>Materials</value>
+  </data>
+  <data name="NeverDie" xml:space="preserve">
+    <value>Never die</value>
+  </data>
+  <data name="Player" xml:space="preserve">
+    <value>Player</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="RemoveAll" xml:space="preserve">
+    <value>Remove all</value>
+  </data>
+  <data name="RepairAll" xml:space="preserve">
+    <value>Repair all</value>
+  </data>
+  <data name="RifleSP" xml:space="preserve">
+    <value>Rifle skillpoints</value>
+  </data>
+  <data name="RoundsInClip" xml:space="preserve">
+    <value>Rounds in clip</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Skills" xml:space="preserve">
+    <value>Skills</value>
+  </data>
+  <data name="SnowWalkerProgress" xml:space="preserve">
+    <value>Snow walker progress</value>
+  </data>
+  <data name="TestBranch" xml:space="preserve">
+    <value>Test branch</value>
+  </data>
+  <data name="Thirst" xml:space="preserve">
+    <value>Thirst</value>
+  </data>
+  <data name="TimeEvolving" xml:space="preserve">
+    <value>Time spent evolving (hours)</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>The Long Dark (v1.44) Save Editor</value>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="Traits" xml:space="preserve">
+    <value>Traits</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="Afflictions" xml:space="preserve">
+    <value>Afflictions</value>
+  </data>
+  <data name="ActionCure" xml:space="preserve">
+    <value>Cure</value>
+  </data>
+  <data name="AfflictionType_BloodLoss" xml:space="preserve">
+    <value>Blood loss</value>
+  </data>
+  <data name="AfflictionType_Burns" xml:space="preserve">
+    <value>Burns</value>
+  </data>
+  <data name="AfflictionType_Dysentery" xml:space="preserve">
+    <value>Dysentery</value>
+  </data>
+  <data name="AfflictionType_Infection" xml:space="preserve">
+    <value>Infection</value>
+  </data>
+  <data name="AfflictionType_FoodPoisioning" xml:space="preserve">
+    <value>Food poisoning</value>
+  </data>
+  <data name="AfflictionType_SprainedAnkle" xml:space="preserve">
+    <value>Sprained ankle</value>
+  </data>
+  <data name="AfflictionType_InfectionRisk" xml:space="preserve">
+    <value>Infection risk</value>
+  </data>
+  <data name="AfflictionType_SprainedWrist" xml:space="preserve">
+    <value>Sprained wrist</value>
+  </data>
+  <data name="AfflictionType_Frostbite" xml:space="preserve">
+    <value>Frostbite</value>
+  </data>
+  <data name="AfflictionType_Hypothermia" xml:space="preserve">
+    <value>Hypothermia</value>
+  </data>
+  <data name="AfflictionType_ReducedFatigue" xml:space="preserve">
+    <value>Reduced fatigue</value>
+  </data>
+  <data name="AfflictionType_ImprovedRest" xml:space="preserve">
+    <value>Improved rest</value>
+  </data>
+  <data name="AfflictionType_WarmingUp" xml:space="preserve">
+    <value>Warming up</value>
+  </data>
+  <data name="AfflictionType_HypothermiaRisk" xml:space="preserve">
+    <value>Hypothermia risk</value>
+  </data>
+  <data name="AfflictionType_CabinFever" xml:space="preserve">
+    <value>Cabin fever</value>
+  </data>
+  <data name="AfflictionType_IntestinalParasitesRisk" xml:space="preserve">
+    <value>Intestinal parasites risk</value>
+  </data>
+  <data name="AfflictionType_IntestinalParasites" xml:space="preserve">
+    <value>Intestinal parasites</value>
+  </data>
+  <data name="AfflictionType_SprainedWristMajor" xml:space="preserve">
+    <value>Sprained wrist major</value>
+  </data>
+  <data name="AfflictionType_CabinFeverRisk" xml:space="preserve">
+    <value>Cabin fever risk</value>
+  </data>
+  <data name="AfflictionType_FrostbiteRisk" xml:space="preserve">
+    <value>Frostbite risk</value>
+  </data>
+  <data name="ItemCategory_FirstAid" xml:space="preserve">
+    <value>First Aid</value>
+  </data>
+  <data name="ItemCategory_Clothing" xml:space="preserve">
+    <value>Clothing</value>
+  </data>
+  <data name="ItemCategory_Food" xml:space="preserve">
+    <value>Food</value>
+  </data>
+  <data name="ItemCategory_Tools" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="ItemCategory_Materials" xml:space="preserve">
+    <value>Materials</value>
+  </data>
+  <data name="ItemCategory_Collectible" xml:space="preserve">
+    <value>Collectible</value>
+  </data>
+  <data name="ItemCategory_Books" xml:space="preserve">
+    <value>Books</value>
+  </data>
+  <data name="ItemCategory_Hidden" xml:space="preserve">
+    <value>Hidden</value>
+  </data>
+  <data name="ItemCategory_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="ExperienceMode" xml:space="preserve">
+    <value>Experience mode</value>
+  </data>
+  <data name="ExperienceModeType_Pilgrim" xml:space="preserve">
+    <value>Pilgrim</value>
+  </data>
+  <data name="ExperienceModeType_Voyageur" xml:space="preserve">
+    <value>Voyageur</value>
+  </data>
+  <data name="ExperienceModeType_Stalker" xml:space="preserve">
+    <value>Stalker</value>
+  </data>
+  <data name="ExperienceModeType_Story" xml:space="preserve">
+    <value>Story</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeRescue" xml:space="preserve">
+    <value>Hopeless Rescue</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeHunted" xml:space="preserve">
+    <value>The Hunted</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeWhiteout" xml:space="preserve">
+    <value>Whiteout</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeNomad" xml:space="preserve">
+    <value>Nomad</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeHuntedPart2" xml:space="preserve">
+    <value>The Hunted, Part 2</value>
+  </data>
+  <data name="ExperienceModeType_Interloper" xml:space="preserve">
+    <value>Interloper</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="OpenMapCommand" xml:space="preserve">
+    <value>Open map</value>
+  </data>
+  <data name="CoastalRegion" xml:space="preserve">
+    <value>Coastal Highway</value>
+  </data>
+  <data name="LakeRegion" xml:space="preserve">
+    <value>Mystery Lake</value>
+  </data>
+  <data name="WhalingStationRegion" xml:space="preserve">
+    <value>Desolation Point</value>
+  </data>
+  <data name="RuralRegion" xml:space="preserve">
+    <value>Pleasant Valley</value>
+  </data>
+  <data name="CrashMountainRegion" xml:space="preserve">
+    <value>Timberwolf Mountain</value>
+  </data>
+  <data name="MarshRegion" xml:space="preserve">
+    <value>Forlorn Muskeg</value>
+  </data>
+  <data name="RavineTransitionZone" xml:space="preserve">
+    <value>Ravine</value>
+  </data>
+  <data name="HighwayTransitionZone" xml:space="preserve">
+    <value>Crumbling Highway</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="GutAmount" xml:space="preserve">
+    <value>Guts</value>
+  </data>
+  <data name="HideAmount" xml:space="preserve">
+    <value>Hides</value>
+  </data>
+  <data name="MeatAmount" xml:space="preserve">
+    <value>Meat (kg)</value>
+  </data>
   <data name="MountainTownRegion" xml:space="preserve">
     <value>Mountain Town</value>
   </data>
@@ -1400,128 +1523,5 @@
   </data>
   <data name="RiverValleyRegion" xml:space="preserve">
     <value>Hushed River Valley</value>
-  </data>
-  <data name="GEAR_MooseQuarter" xml:space="preserve">
-    <value>Moose Quarter</value>
-  </data>
-  <data name="GEAR_RawMeatMoose" xml:space="preserve">
-    <value>Moose Meat</value>
-  </data>
-  <data name="GEAR_CookedMeatMoose" xml:space="preserve">
-    <value>Moose Meat (Cooked)</value>
-  </data>
-  <data name="GEAR_BackerNote1C" xml:space="preserve">
-    <value>A Note Left Behind</value>
-  </data>
-  <data name="GEAR_SurvivalSchoolFishing" xml:space="preserve">
-    <value>The Frozen Angler</value>
-  </data>
-  <data name="GEAR_KnowledgeCarterDam" xml:space="preserve">
-    <value>Carter Hydro Dam</value>
-  </data>
-  <data name="GEAR_TransponderParts" xml:space="preserve">
-    <value>Transponder Parts</value>
-  </data>
-  <data name="GEAR_FoodSupplies_hangar" xml:space="preserve">
-    <value>Emergency Food</value>
-  </data>
-  <data name="GEAR_KnowledgeCollapse1" xml:space="preserve">
-    <value>History of The Collapse, Part One</value>
-  </data>
-  <data name="GEAR_SurvivalSchoolWolfHunt" xml:space="preserve">
-    <value>Advanced Guns Guns Guns!</value>
-  </data>
-  <data name="GEAR_RabbitskinHat" xml:space="preserve">
-    <value>Rabbitskin Hat</value>
-  </data>
-  <data name="GEAR_LakeIncidentNote" xml:space="preserve">
-    <value>Crumpled Note</value>
-  </data>
-  <data name="GEAR_SpearHead" xml:space="preserve">
-    <value>Spear Head</value>
-  </data>
-  <data name="GEAR_BearSpearBroken" xml:space="preserve">
-    <value>Broken Bear Spear</value>
-  </data>
-  <data name="GEAR_RadioParts" xml:space="preserve">
-    <value>Radio Parts</value>
-  </data>
-  <data name="GEAR_SurvivalSchoolPlants" xml:space="preserve">
-    <value>Medicinal Plants of Great Bear</value>
-  </data>
-  <data name="GEAR_BearSpearStory" xml:space="preserve">
-    <value>Bear Spear</value>
-  </data>
-  <data name="GEAR_AuroraHatchCode" xml:space="preserve">
-    <value>Aurora Hatch Door Entry Code</value>
-  </data>
-  <data name="GEAR_LongUnderwearStart" xml:space="preserve">
-    <value>Thermal Underwear (Start)</value>
-  </data>
-  <data name="GEAR_SurvivalSchoolDeerHunt" xml:space="preserve">
-    <value>Frontier Shooting Guide</value>
-  </data>
-  <data name="GEAR_WillBootsStart" xml:space="preserve">
-    <value>Mackenzie's Boots (Start)</value>
-  </data>
-  <data name="GEAR_CottonSocksStart" xml:space="preserve">
-    <value>Sports Socks (Start)</value>
-  </data>
-  <data name="GEAR_HardCase_hangar" xml:space="preserve">
-    <value>Astrid's Hardcase</value>
-  </data>
-  <data name="GEAR_GMExtraSuppliesNote" xml:space="preserve">
-    <value>Winter Forecast</value>
-  </data>
-  <data name="GEAR_MedicalSupplies_hangar" xml:space="preserve">
-    <value>First Aid Kit</value>
-  </data>
-  <data name="GEAR_KnowledgeMilton" xml:space="preserve">
-    <value>Town of Milton</value>
-  </data>
-  <data name="GEAR_WillParka_Tossed" xml:space="preserve">
-    <value>Mackenzie's Parka</value>
-  </data>
-  <data name="GEAR_MiltonGardenCache" xml:space="preserve">
-    <value>Medicine in my backyard</value>
-  </data>
-  <data name="GEAR_AstridBackPack_hangar" xml:space="preserve">
-    <value>Astrid's Backpack</value>
-  </data>
-  <data name="GEAR_DamFenceKey" xml:space="preserve">
-    <value>Carter Hydro Staging Area Gate Key</value>
-  </data>
-  <data name="GEAR_KnowledgeMysteryLake" xml:space="preserve">
-    <value>Mystery Lake &amp; Area</value>
-  </data>
-  <data name="GEAR_BearSpear" xml:space="preserve">
-    <value>Bear Spear</value>
-  </data>
-  <data name="GEAR_WillSweaterStart" xml:space="preserve">
-    <value>Mackenzie's Sweater (Start)</value>
-  </data>
-  <data name="GEAR_KnowledgeCollapse3" xml:space="preserve">
-    <value>History of The Collapse, Part Three</value>
-  </data>
-  <data name="GEAR_SurvivalSchoolClothing" xml:space="preserve">
-    <value>A Sewing Primer</value>
-  </data>
-  <data name="GEAR_WillPantsStart" xml:space="preserve">
-    <value>Mackenzie's Pants (Start)</value>
-  </data>
-  <data name="GEAR_KnowledgeCollapse4" xml:space="preserve">
-    <value>History of the Collapse, Part Four</value>
-  </data>
-  <data name="GEAR_SurvivalSchoolRabbits" xml:space="preserve">
-    <value>Field Dressing Your Kill, Vol. I</value>
-  </data>
-  <data name="GEAR_WillShirtStart" xml:space="preserve">
-    <value>Mackenzie's Shirt (Start)</value>
-  </data>
-  <data name="GEAR_KnowledgeCollapse2" xml:space="preserve">
-    <value>History of The Collapse, Part Two</value>
-  </data>
-  <data name="GEAR_FlareGunCase_hangar" xml:space="preserve">
-    <value>Distress Pistol Kit</value>
   </data>
 </root>
