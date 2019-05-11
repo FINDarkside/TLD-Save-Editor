@@ -72,7 +72,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_DoneBrightnessAdjustment { get; set; }
         public List<string> m_UnlockedBadgesViewed { get; set; }
         public HashSet<string> m_CinematicsViewed { get; set; }
-        public string m_FeatsSerialized { get; set; }
+        [Deserialize("m_FeatsSerialized", true)]
+        public FeatsManagerSaveData Feats { get; set; }
         public string m_EpisodeManagerSerialized { get; set; }
         public string m_QualityLevelSettingsSerialized { get; set; }
         public bool m_DisableClickHold { get; set; }
