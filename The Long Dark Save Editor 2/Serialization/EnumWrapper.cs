@@ -7,7 +7,13 @@ using System.Runtime.CompilerServices;
 
 namespace The_Long_Dark_Save_Editor_2.Helpers
 {
-    public class EnumWrapper<T> : BindableBase where T : Enum
+    public abstract class EnumWrapper : BindableBase
+    {
+        public abstract string Value { get; set; }
+        public abstract ObservableCollection<string> Values { get; }
+    }
+
+    public class EnumWrapper<T> : EnumWrapper where T : Enum
     {
         static class EnumValues<T2> where T2 : Enum
         {
@@ -20,7 +26,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
         }
 
         private string _value;
-        public string Value
+        public override string Value
         {
             get { return _value; }
             set
@@ -33,6 +39,14 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             }
         }
 
+        public override ObservableCollection<string> Values
+        {
+            get
+            {
+                return EnumValues<T>.values;
+            }
+        }
+
         public void SetValue(T val)
         {
             Value = val.ToString();
@@ -41,11 +55,6 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
         public override string ToString()
         {
             return _value;
-        }
-
-        public ObservableCollection<string> GetValues()
-        {
-            return EnumValues<T>.values;
         }
 
     }
