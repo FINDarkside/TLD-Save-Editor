@@ -118,82 +118,82 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>About</value>
+    <value>O programie</value>
   </data>
   <data name="AddItem" xml:space="preserve">
-    <value>Add item</value>
+    <value>Dodaj przedmiot</value>
   </data>
   <data name="Amount" xml:space="preserve">
-    <value>Amount</value>
+    <value>Ilość</value>
   </data>
   <data name="AmountLiter" xml:space="preserve">
-    <value>Amount (liters)</value>
+    <value>Ilość (litry)</value>
   </data>
   <data name="ArcherySP" xml:space="preserve">
-    <value>Archery skillpoints</value>
+    <value>Umiejętności Łucznicze</value>
   </data>
   <data name="Books" xml:space="preserve">
-    <value>Books</value>
+    <value>Książki</value>
   </data>
   <data name="BookSmartProgress" xml:space="preserve">
-    <value>Book smarts progress</value>
+    <value>Postęp Mola Książkowego</value>
   </data>
   <data name="Calories" xml:space="preserve">
-    <value>Calories</value>
+    <value>Kalorie</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Anuluj</value>
   </data>
   <data name="CarcassHarvestingSP" xml:space="preserve">
-    <value>Carcass harvesting skillpoints</value>
+    <value>Umiejętność Oprawiania zwierzyny</value>
   </data>
   <data name="Clothing" xml:space="preserve">
-    <value>Clothing</value>
+    <value>Ubrania</value>
   </data>
   <data name="ClothingRepairSP" xml:space="preserve">
-    <value>Clothing repairing skillpoints</value>
+    <value>Umiejętność Naprawiania Ubrań</value>
   </data>
   <data name="ColdFusionProgress" xml:space="preserve">
-    <value>Cold fusion progress</value>
+    <value>Postęp Zimnej Fuzji</value>
   </data>
   <data name="Collectible" xml:space="preserve">
-    <value>Collectible</value>
+    <value>Znajdźki</value>
   </data>
   <data name="Condition" xml:space="preserve">
-    <value>Condition</value>
+    <value>Kondycja</value>
   </data>
   <data name="CookingSP" xml:space="preserve">
-    <value>Cooking skillpoints</value>
+    <value>Umiejętność Gotowania</value>
   </data>
   <data name="CurrentCalories" xml:space="preserve">
-    <value>Current calories</value>
+    <value>Aktualne Kalorie</value>
   </data>
   <data name="Download" xml:space="preserve">
-    <value>Download</value>
+    <value>Pobierz</value>
   </data>
   <data name="EfficientMachineProgress" xml:space="preserve">
-    <value>Efficient machine progress</value>
+    <value>Postęp Wydajnej Maszyny</value>
   </data>
   <data name="Fatigue" xml:space="preserve">
-    <value>Fatigue</value>
+    <value>Zmęczenie</value>
   </data>
   <data name="FireMasterProgress" xml:space="preserve">
-    <value>Fire master progress</value>
+    <value>Postęp Mistrza Ognia</value>
   </data>
   <data name="FireStartingSP" xml:space="preserve">
-    <value>Fire starting skillpoints</value>
+    <value>Umiejętność Rozpalania Ognia</value>
   </data>
   <data name="FirstAid" xml:space="preserve">
-    <value>First Aid</value>
+    <value>Pierwsza Pomoc</value>
   </data>
   <data name="Food" xml:space="preserve">
-    <value>Food</value>
+    <value>Jedzenie</value>
   </data>
   <data name="FreeRunnerProgress" xml:space="preserve">
-    <value>Free runner progress</value>
+    <value>Postęp Biegacza</value>
   </data>
   <data name="Freezing" xml:space="preserve">
-    <value>Freezing</value>
+    <value>Zamarzanie</value>
   </data>
   <data name="GEAR_BottleAntibiotics" xml:space="preserve">
     <value>Antibiotics</value>
@@ -940,97 +940,97 @@
     <value>Water Tower Note</value>
   </data>
   <data name="Health" xml:space="preserve">
-    <value>Health</value>
+    <value>Zdrowie</value>
   </data>
   <data name="Hidden" xml:space="preserve">
-    <value>Hidden</value>
+    <value>Ukryte</value>
   </data>
   <data name="IceFishingSP" xml:space="preserve">
-    <value>Ice fishing skillpoints</value>
+    <value>Umiejętność Łowienia</value>
   </data>
   <data name="InfiniteCarry" xml:space="preserve">
-    <value>Infinite carry</value>
+    <value>Nielimitowany Udźwig</value>
   </data>
   <data name="Injuries" xml:space="preserve">
-    <value>Injuries</value>
+    <value>Obrażenia</value>
   </data>
   <data name="Inventory" xml:space="preserve">
-    <value>Inventory</value>
+    <value>Ekwipunek</value>
   </data>
   <data name="Invulnerable" xml:space="preserve">
-    <value>Invulnerable</value>
+    <value>Nieśmiertelność</value>
   </data>
   <data name="Materials" xml:space="preserve">
-    <value>Materials</value>
+    <value>Materiały</value>
   </data>
   <data name="NeverDie" xml:space="preserve">
-    <value>Never die</value>
+    <value>NeverDie</value>
   </data>
   <data name="Player" xml:space="preserve">
-    <value>Player</value>
+    <value>Gracz</value>
   </data>
   <data name="Profile" xml:space="preserve">
-    <value>Profile</value>
+    <value>Profil</value>
   </data>
   <data name="Progress" xml:space="preserve">
-    <value>Progress</value>
+    <value>Postęp</value>
   </data>
   <data name="Refresh" xml:space="preserve">
-    <value>Refresh</value>
+    <value>Odśwież</value>
   </data>
   <data name="Remove" xml:space="preserve">
-    <value>Remove</value>
+    <value>Usuń</value>
   </data>
   <data name="RemoveAll" xml:space="preserve">
-    <value>Remove all</value>
+    <value>Usuń wszystko</value>
   </data>
   <data name="RepairAll" xml:space="preserve">
-    <value>Repair all</value>
+    <value>Napraw wszystko</value>
   </data>
   <data name="RifleSP" xml:space="preserve">
-    <value>Rifle skillpoints</value>
+    <value>Umiejętność obsługi karabinu</value>
   </data>
   <data name="RoundsInClip" xml:space="preserve">
-    <value>Rounds in clip</value>
+    <value>Kule w magazynku</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Save</value>
+    <value>Zapisz</value>
   </data>
   <data name="Skills" xml:space="preserve">
-    <value>Skills</value>
+    <value>Umiejętności</value>
   </data>
   <data name="SnowWalkerProgress" xml:space="preserve">
-    <value>Snow walker progress</value>
+    <value>Postęp Człowieka Śniegu</value>
   </data>
   <data name="TestBranch" xml:space="preserve">
-    <value>Test branch</value>
+    <value>Wersje Testowe</value>
   </data>
   <data name="Thirst" xml:space="preserve">
-    <value>Thirst</value>
+    <value>Pragnienie</value>
   </data>
   <data name="TimeEvolving" xml:space="preserve">
-    <value>Time spent evolving (hours)</value>
+    <value>Czas spędzony na ewolucji (godziny)</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>The Long Dark (v1.44) Save Editor</value>
+    <value>Edytor Zapisów Gry The Long Dark (v1.44)</value>
   </data>
   <data name="Tools" xml:space="preserve">
-    <value>Tools</value>
+    <value>Narzędzia</value>
   </data>
   <data name="Traits" xml:space="preserve">
-    <value>Traits</value>
+    <value>Cechy</value>
   </data>
   <data name="Unknown" xml:space="preserve">
-    <value>Unknown</value>
+    <value>Nieznane</value>
   </data>
   <data name="GEAR_ClimbingSocks" xml:space="preserve">
     <value>Climbing Socks</value>
   </data>
   <data name="Afflictions" xml:space="preserve">
-    <value>Afflictions</value>
+    <value>Ryzyka</value>
   </data>
   <data name="ActionCure" xml:space="preserve">
-    <value>Cure</value>
+    <value>Wylecz</value>
   </data>
   <data name="AfflictionType_BloodLoss" xml:space="preserve">
     <value>Blood loss</value>
@@ -1159,13 +1159,13 @@
     <value>Interloper</value>
   </data>
   <data name="Position" xml:space="preserve">
-    <value>Position</value>
+    <value>Pozycja</value>
   </data>
   <data name="Region" xml:space="preserve">
     <value>Region</value>
   </data>
   <data name="OpenMapCommand" xml:space="preserve">
-    <value>Open map</value>
+    <value>Otwórz Mapę</value>
   </data>
   <data name="CoastalRegion" xml:space="preserve">
     <value>Coastal Highway</value>
@@ -1192,7 +1192,7 @@
     <value>Crumbling Highway</value>
   </data>
   <data name="Map" xml:space="preserve">
-    <value>Map</value>
+    <value>Mapa</value>
   </data>
   <data name="GEAR_WolfQuarter" xml:space="preserve">
     <value>Wolf Quarter</value>
@@ -1225,13 +1225,13 @@
     <value>Rabbit Carcass</value>
   </data>
   <data name="GutAmount" xml:space="preserve">
-    <value>Guts</value>
+    <value>Flaki</value>
   </data>
   <data name="HideAmount" xml:space="preserve">
-    <value>Hides</value>
+    <value>Skóry</value>
   </data>
   <data name="MeatAmount" xml:space="preserve">
-    <value>Meat (kg)</value>
+    <value>Mięso (kg)</value>
   </data>
   <data name="GEAR_Flashlight" xml:space="preserve">
     <value>Flashlight</value>
