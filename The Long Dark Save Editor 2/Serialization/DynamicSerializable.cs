@@ -74,8 +74,12 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
         private object ParseObject(JObject obj, Type t)
         {
             var result = Activator.CreateInstance(t);
-            Dictionary<string, PropertyInfo> props = t.GetProperties().ToDictionary(p => MemberToName(p));
-            Dictionary<string, FieldInfo> fields = t.GetFields().ToDictionary(p => MemberToName(p));
+            var props = t.GetProperties(BindingFlags.Instance | BindingFlags.Public)
+                 .Where(p => p.GetCustomAttribute<JsonIgnoreAttribute>() == null)
+                .ToDictionary(p => MemberToName(p));
+            var fields = t.GetFields(BindingFlags.Instance | BindingFlags.Public)
+                 .Where(f => f.GetCustomAttribute<JsonIgnoreAttribute>() == null)
+                .ToDictionary(p => MemberToName(p));
 
             foreach (var child in obj)
             {
@@ -176,8 +180,10 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
         {
             var res = new Dictionary<string, dynamic>();
             var t = o.GetType();
-            PropertyInfo[] props = t.GetProperties().Where(p => p.GetCustomAttribute<NonSerializedAttribute>() == null).ToArray();
-            FieldInfo[] fields = t.GetFields().Where(p => p.GetCustomAttribute<NonSerializedAttribute>() == null).ToArray();
+            var props = t.GetProperties(BindingFlags.Instance | BindingFlags.Public)
+                .Where(p => p.GetCustomAttribute<JsonIgnoreAttribute>() == null).ToArray();
+            var fields = t.GetFields(BindingFlags.Instance | BindingFlags.Public)
+                .Where(p => p.GetCustomAttribute<JsonIgnoreAttribute>() == null).ToArray();
 
             foreach (var prop in props)
             {
