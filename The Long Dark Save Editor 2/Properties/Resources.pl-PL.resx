@@ -136,10 +136,10 @@
     <value>Tabletki do oczyszczania wody</value>
   </data>
   <data name="GEAR_EmergencyStim" xml:space="preserve">
-    <value>Emergency Stim</value>
+    <value>Wstrzykiwacz</value>
   </data>
   <data name="GEAR_Balaclava" xml:space="preserve">
-    <value>Balaclava</value>
+    <value>Kominiarka</value>
   </data>
   <data name="GEAR_BaseballCap" xml:space="preserve">
     <value>Czapka z daszkiem</value>
@@ -169,10 +169,10 @@
     <value>Bojówki</value>
   </data>
   <data name="GEAR_CombatBoots" xml:space="preserve">
-    <value>Combat Boots</value>
+    <value>Buty Wojskowe</value>
   </data>
   <data name="GEAR_CombatPants" xml:space="preserve">
-    <value>Combat Pants</value>
+    <value>Spodnie Wojskowe</value>
   </data>
   <data name="GEAR_CottonHoodie" xml:space="preserve">
     <value>Bluza z kapturem</value>
@@ -196,7 +196,7 @@
     <value>Spodnie ze skóry jelenia</value>
   </data>
   <data name="GEAR_DownParka" xml:space="preserve">
-    <value>Urban Parka</value>
+    <value>Kurtka Miejska</value>
   </data>
   <data name="GEAR_DownSkiJacket" xml:space="preserve">
     <value>Kurtka narciarska</value>
@@ -205,10 +205,10 @@
     <value>Kamizelka puchowa</value>
   </data>
   <data name="GEAR_EarMuffs" xml:space="preserve">
-    <value>Wool Ear Wrap</value>
+    <value>Opaska na uszy</value>
   </data>
   <data name="GEAR_FishermanSweater" xml:space="preserve">
-    <value>Fisherman's Sweater</value>
+    <value>Sweter Rybaka</value>
   </data>
   <data name="GEAR_FleeceMittens" xml:space="preserve">
     <value>Rękawice z polaru</value>
@@ -217,19 +217,19 @@
     <value>Bluza sportowa</value>
   </data>
   <data name="GEAR_Gauntlets" xml:space="preserve">
-    <value>Gauntlets</value>
+    <value>Rękawice Ochronne</value>
   </data>
   <data name="GEAR_HeavyParka" xml:space="preserve">
-    <value>Old Fashioned Parka</value>
+    <value>Staromodna Kurtka</value>
   </data>
   <data name="GEAR_HeavyWoolSweater" xml:space="preserve">
-    <value>Thick Wool Sweater</value>
+    <value>Gruby wełniany sweter</value>
   </data>
   <data name="GEAR_InsulatedBoots" xml:space="preserve">
-    <value>Insulated Boots</value>
+    <value>Ocieplane Buty</value>
   </data>
   <data name="GEAR_InsulatedPants" xml:space="preserve">
-    <value>Snow Pants</value>
+    <value>Spodnie Śniegowe</value>
   </data>
   <data name="GEAR_InsulatedVest" xml:space="preserve">
     <value>Kamizelka sportowa</value>
@@ -247,37 +247,37 @@
     <value>Bielizna termoaktywna</value>
   </data>
   <data name="GEAR_LongUnderwearWool" xml:space="preserve">
-    <value>Wool Longjohns</value>
+    <value>Wełniane Kalesony</value>
   </data>
   <data name="GEAR_MackinawJacket" xml:space="preserve">
-    <value>Mackinaw Jacket</value>
+    <value>Kraciasta Kurtka</value>
   </data>
   <data name="GEAR_MilitaryParka" xml:space="preserve">
-    <value>Military Coat</value>
+    <value>Kurtka Wojskowa</value>
   </data>
   <data name="GEAR_Mittens" xml:space="preserve">
     <value>Wełniane rękawice</value>
   </data>
   <data name="GEAR_MuklukBoots" xml:space="preserve">
-    <value>Mukluks</value>
+    <value>Buty Eskimosowe</value>
   </data>
   <data name="GEAR_PlaidShirt" xml:space="preserve">
     <value>Koszula w kratę</value>
   </data>
   <data name="GEAR_PremiumWinterCoat" xml:space="preserve">
-    <value>Expedition Parka</value>
+    <value>Kurtka Podróżnika</value>
   </data>
   <data name="GEAR_QualityWinterCoat" xml:space="preserve">
-    <value>Mariner's Pea Coat</value>
+    <value>Kurtka Marynarska</value>
   </data>
   <data name="GEAR_RabbitSkinMittens" xml:space="preserve">
     <value>Rękawice ze skóry królika</value>
   </data>
   <data name="GEAR_SkiBoots" xml:space="preserve">
-    <value>Ski Boots</value>
+    <value>Buty narciarskie</value>
   </data>
   <data name="GEAR_SkiGloves" xml:space="preserve">
-    <value>Ski Gloves</value>
+    <value>Rękawice Narciarskie</value>
   </data>
   <data name="GEAR_SkiJacket" xml:space="preserve">
     <value>Lekka kurtka</value>
@@ -292,7 +292,7 @@
     <value>Palto ze skóry wilka</value>
   </data>
   <data name="GEAR_WoolShirt" xml:space="preserve">
-    <value>Wool Shirt</value>
+    <value>Wełniana Koszula</value>
   </data>
   <data name="GEAR_WoolSocks" xml:space="preserve">
     <value>Wełniane skarpety</value>
@@ -301,7 +301,7 @@
     <value>Wełniany sweter</value>
   </data>
   <data name="GEAR_WoolWrap" xml:space="preserve">
-    <value>Long Wool Scarf</value>
+    <value>Wełniany Szalik</value>
   </data>
   <data name="GEAR_WoolWrapCap" xml:space="preserve">
     <value>Kaptur z polaru</value>
@@ -313,7 +313,7 @@
     <value>Rękawice robocze</value>
   </data>
   <data name="GEAR_WorkPants" xml:space="preserve">
-    <value>Work Pants</value>
+    <value>Spodnie Robocze</value>
   </data>
   <data name="GEAR_BeefJerky" xml:space="preserve">
     <value>Suszone mięso</value>
@@ -328,22 +328,22 @@
     <value>Sardynki w puszce</value>
   </data>
   <data name="GEAR_CattailStalk" xml:space="preserve">
-    <value>Cat Tail Stalk</value>
+    <value>Łodyga Pałki</value>
   </data>
   <data name="GEAR_CattailPlant" xml:space="preserve">
-    <value>Cat Tail Plant</value>
+    <value>Pałka</value>
   </data>
   <data name="GEAR_CoffeeCup" xml:space="preserve">
     <value>Kubek kawy</value>
   </data>
   <data name="GEAR_CoffeeTin" xml:space="preserve">
-    <value>Tin of Coffee</value>
+    <value>Puszka Kawy</value>
   </data>
   <data name="GEAR_CondensedMilk" xml:space="preserve">
-    <value>Condensed Milk</value>
+    <value>Mleko Skondensowane</value>
   </data>
   <data name="GEAR_CookedLakeWhiteFish" xml:space="preserve">
-    <value>Lake Whitefish (Cooked)</value>
+    <value>Sieja Kanadyjska (gotowana)</value>
   </data>
   <data name="GEAR_CookedMeatBear" xml:space="preserve">
     <value>Mięso niedźwiedzia (gotowane)</value>
@@ -358,10 +358,10 @@
     <value>Mięso wilka (gotowane)</value>
   </data>
   <data name="GEAR_CookedRainbowTrout" xml:space="preserve">
-    <value>Rainbow Trout (Cooked)</value>
+    <value>Pstrąg Tęczowy (gotowany)</value>
   </data>
   <data name="GEAR_CookedSmallMouthBass" xml:space="preserve">
-    <value>Smallmouth Bass (Cooked)</value>
+    <value>Bass Małogębowy (gotowany)</value>
   </data>
   <data name="GEAR_Crackers" xml:space="preserve">
     <value>Krakersy</value>
@@ -376,31 +376,31 @@
     <value>Batonik zbożowy</value>
   </data>
   <data name="GEAR_GreenTeaCup" xml:space="preserve">
-    <value>Cup of Herbal Tea</value>
+    <value>Kubek Herbaty Ziołowej</value>
   </data>
   <data name="GEAR_GreenTeaPackage" xml:space="preserve">
-    <value>Herbal Tea</value>
+    <value>Herbata Ziołowa</value>
   </data>
   <data name="GEAR_MRE" xml:space="preserve">
     <value>Racje wojskowe</value>
   </data>
   <data name="GEAR_PeanutButter" xml:space="preserve">
-    <value>Peanut Butter</value>
+    <value>Masło Orzechowe</value>
   </data>
   <data name="GEAR_PinnacleCanPeaches" xml:space="preserve">
     <value>Brzoskwinie w puszce</value>
   </data>
   <data name="GEAR_RawCohoSalmon" xml:space="preserve">
-    <value>Coho Salmon (Raw)</value>
+    <value>Kiżucz (surowy)</value>
   </data>
   <data name="GEAR_CookedCohoSalmon" xml:space="preserve">
-    <value>Coho Salmon (Cooked)</value>
+    <value>Kiżusz (gotowany)</value>
   </data>
   <data name="GEAR_BarkTinder" xml:space="preserve">
     <value>Kora brzozy</value>
   </data>
   <data name="GEAR_RawLakeWhiteFish" xml:space="preserve">
-    <value>Lake Whitefish (Raw)</value>
+    <value>Sieja Kanadyjska (surowa)</value>
   </data>
   <data name="GEAR_RawMeatBear" xml:space="preserve">
     <value>Mięso niedźwiedzia czarnego</value>
@@ -415,10 +415,10 @@
     <value>Mięso wilka (surowe)</value>
   </data>
   <data name="GEAR_RawRainbowTrout" xml:space="preserve">
-    <value>Rainbow Trout (Raw)</value>
+    <value>Pstrąg Tęczowy (surowy)</value>
   </data>
   <data name="GEAR_RawSmallMouthBass" xml:space="preserve">
-    <value>Smallmouth Bass (Raw)</value>
+    <value>Bass Małogębowy (surowy)</value>
   </data>
   <data name="GEAR_ReishiTea" xml:space="preserve">
     <value>Herbata z grzyba reishi</value>
@@ -436,7 +436,7 @@
     <value>Napój o smaku pomarańczowym</value>
   </data>
   <data name="GEAR_TomatoSoupCan" xml:space="preserve">
-    <value>Tomato Soup</value>
+    <value>Zupa Pomidorowa</value>
   </data>
   <data name="GEAR_WaterSupplyNotPotable" xml:space="preserve">
     <value>Woda (nieuzdatniona)</value>
@@ -472,7 +472,7 @@
     <value>Otwieracz do puszek</value>
   </data>
   <data name="GEAR_Firestriker" xml:space="preserve">
-    <value>Firestriker</value>
+    <value>Podpalacz</value>
   </data>
   <data name="GEAR_FlareA" xml:space="preserve">
     <value>Flara</value>
@@ -484,7 +484,7 @@
     <value>Pistolet sygnałowy</value>
   </data>
   <data name="GEAR_Hacksaw" xml:space="preserve">
-    <value>Hacksaw</value>
+    <value>Piła do metalu</value>
   </data>
   <data name="GEAR_Hammer" xml:space="preserve">
     <value>Młot</value>
@@ -505,10 +505,10 @@
     <value>Przybory wędkarskie</value>
   </data>
   <data name="GEAR_JerrycanRusty" xml:space="preserve">
-    <value>Jerry Can</value>
+    <value>Kanister</value>
   </data>
   <data name="GEAR_KeroseneLampB" xml:space="preserve">
-    <value>Storm Lantern</value>
+    <value>Lampa naftowa</value>
   </data>
   <data name="GEAR_Knife" xml:space="preserve">
     <value>Nóż myśliwski</value>
@@ -517,13 +517,13 @@
     <value>Improwizowany nóż</value>
   </data>
   <data name="GEAR_LampFuel" xml:space="preserve">
-    <value>Lantern Fuel</value>
+    <value>Paliwo do lampy</value>
   </data>
   <data name="GEAR_Line" xml:space="preserve">
     <value>Żyłka</value>
   </data>
   <data name="GEAR_MagnifyingLens" xml:space="preserve">
-    <value>Magnifying Lens</value>
+    <value>Lupa</value>
   </data>
   <data name="GEAR_NewsprintRoll" xml:space="preserve">
     <value>Rolka papieru gazetowego</value>
@@ -577,64 +577,64 @@
     <value>Wysuszona skóra z niedźwiedzia czarnego</value>
   </data>
   <data name="GEAR_BirchSapling" xml:space="preserve">
-    <value>Green Birch Sapling</value>
+    <value>Świerzo ścięta gałąź brzozy</value>
   </data>
   <data name="GEAR_BirchSaplingDried" xml:space="preserve">
     <value>Wysuszona gałąź brzozy</value>
   </data>
   <data name="GEAR_BookA" xml:space="preserve">
-    <value>Book</value>
+    <value>Książka</value>
   </data>
   <data name="GEAR_BookB" xml:space="preserve">
-    <value>Book</value>
+    <value>Książka</value>
   </data>
   <data name="GEAR_BookC" xml:space="preserve">
-    <value>Book</value>
+    <value>Książka</value>
   </data>
   <data name="GEAR_BookD" xml:space="preserve">
-    <value>Book</value>
+    <value>Książka</value>
   </data>
   <data name="GEAR_BookE" xml:space="preserve">
-    <value>Book</value>
+    <value>Książka</value>
   </data>
   <data name="GEAR_BookF" xml:space="preserve">
-    <value>Book</value>
+    <value>Książka</value>
   </data>
   <data name="GEAR_BookG" xml:space="preserve">
-    <value>Book</value>
+    <value>Książka</value>
   </data>
   <data name="GEAR_BookH" xml:space="preserve">
-    <value>Book</value>
+    <value>Książka</value>
   </data>
   <data name="GEAR_BookI" xml:space="preserve">
-    <value>Book</value>
+    <value>Książka</value>
   </data>
   <data name="GEAR_BookBopen" xml:space="preserve">
-    <value>Book</value>
+    <value>Książka</value>
   </data>
   <data name="GEAR_BookHopen" xml:space="preserve">
-    <value>Book</value>
+    <value>Książka</value>
   </data>
   <data name="GEAR_BookEopen" xml:space="preserve">
-    <value>Book</value>
+    <value>Książka</value>
   </data>
   <data name="GEAR_BookManual" xml:space="preserve">
-    <value>Book</value>
+    <value>Książka</value>
   </data>
   <data name="GEAR_CattailTinder" xml:space="preserve">
-    <value>Cat Tail Head</value>
+    <value>Kolba Pałki</value>
   </data>
   <data name="GEAR_Cloth" xml:space="preserve">
     <value>Tkanina</value>
   </data>
   <data name="GEAR_Coal" xml:space="preserve">
-    <value>Coal</value>
+    <value>Węgiel</value>
   </data>
   <data name="GEAR_CrowFeather" xml:space="preserve">
     <value>Pióro kruka</value>
   </data>
   <data name="GEAR_Firelog" xml:space="preserve">
-    <value>Firelog</value>
+    <value>Brykiet</value>
   </data>
   <data name="GEAR_Gut" xml:space="preserve">
     <value>Świeże jelito</value>
@@ -646,7 +646,7 @@
     <value>Drewno jodły</value>
   </data>
   <data name="GEAR_Leather" xml:space="preserve">
-    <value>Fresh Leather</value>
+    <value>Świeża skóra</value>
   </data>
   <data name="GEAR_LeatherDried" xml:space="preserve">
     <value>Suszona skóra</value>
@@ -658,7 +658,7 @@
     <value>Suszona skóra z jelenia</value>
   </data>
   <data name="GEAR_MapleSapling" xml:space="preserve">
-    <value>Green Maple Sapling</value>
+    <value>Świeżo ścięta gałąż klonu</value>
   </data>
   <data name="GEAR_MapleSaplingDried" xml:space="preserve">
     <value>Wysuszona gałąź klonu</value>
@@ -703,22 +703,22 @@
     <value>Suszona skóra z wilka</value>
   </data>
   <data name="GEAR_BookCarcassHarvesting" xml:space="preserve">
-    <value>Field Dressing Your Kill, Vol. I</value>
+    <value>Oprawianie Zwierzyny, Tom I</value>
   </data>
   <data name="GEAR_BookCooking" xml:space="preserve">
-    <value>Wilderness Kitchen</value>
+    <value>Gotowanie na Łonie Natury</value>
   </data>
   <data name="GEAR_BookFireStarting" xml:space="preserve">
-    <value>Survive the Outdoors!</value>
+    <value>Przetrwaj w Dziczy!</value>
   </data>
   <data name="GEAR_BookIceFishing" xml:space="preserve">
-    <value>The Frozen Angler</value>
+    <value>Wędkowanie na Lodzie</value>
   </data>
   <data name="GEAR_BookRifleFirearm" xml:space="preserve">
-    <value>Frontier Shooting Guide</value>
+    <value>Strzelectwo dla osadników</value>
   </data>
   <data name="GEAR_BookRifleFirearmAdvanced" xml:space="preserve">
-    <value>Advanced Guns Guns Guns!</value>
+    <value>Broń palna dla zaawansowanych!</value>
   </data>
   <data name="GEAR_ClimbersJournal" xml:space="preserve">
     <value>Climber's Journal Page</value>
@@ -727,43 +727,43 @@
     <value>Katalizator</value>
   </data>
   <data name="GEAR_AccelerantMedium" xml:space="preserve">
-    <value>Accelerant</value>
+    <value>Katalizator</value>
   </data>
   <data name="GEAR_BoltCutters" xml:space="preserve">
-    <value>Bolt Cutters</value>
+    <value>Nożyce do drutu</value>
   </data>
   <data name="GEAR_CarBattery" xml:space="preserve">
-    <value>Car Battery</value>
+    <value>Bateria Samochodowa</value>
   </data>
   <data name="GEAR_CompressionBandage" xml:space="preserve">
-    <value>Compression Bandage</value>
+    <value>Opaska Uciskowa</value>
   </data>
   <data name="GEAR_FireAxe" xml:space="preserve">
-    <value>Fire Axe</value>
+    <value>Topór Strażacki</value>
   </data>
   <data name="GEAR_FishingLine" xml:space="preserve">
-    <value>Line</value>
+    <value>Żyłka</value>
   </data>
   <data name="GEAR_FlintAndSteel" xml:space="preserve">
-    <value>Flint &amp; Steel</value>
+    <value>Krzesiwo</value>
   </data>
   <data name="GEAR_LeatherStrips" xml:space="preserve">
-    <value>Fresh Leather</value>
+    <value>Świeża skóra</value>
   </data>
   <data name="GEAR_PaperStack" xml:space="preserve">
     <value>Stos papierów</value>
   </data>
   <data name="GEAR_PumpkinPie" xml:space="preserve">
-    <value>Pumpkin Pie</value>
+    <value>Ciasto dyniowe</value>
   </data>
   <data name="GEAR_Shovel" xml:space="preserve">
-    <value>Shovel</value>
+    <value>Łopata</value>
   </data>
   <data name="GEAR_BloodyHammer" xml:space="preserve">
-    <value>Bloody Hammer</value>
+    <value>Krwawy młot</value>
   </data>
   <data name="GEAR_AstridBackPack" xml:space="preserve">
-    <value>Astrid Backpack</value>
+    <value>Plecak Astrid</value>
   </data>
   <data name="GEAR_BowString" xml:space="preserve">
     <value>Bow String</value>
@@ -772,10 +772,10 @@
     <value>Bow Wood</value>
   </data>
   <data name="GEAR_ChurchHymn" xml:space="preserve">
-    <value>Church Hymn</value>
+    <value>Hymn Kościelny</value>
   </data>
   <data name="GEAR_ChurchNoteEP1" xml:space="preserve">
-    <value>Church Note EP 1</value>
+    <value>Notatka Kościelna EP1</value>
   </data>
   <data name="GEAR_CollectibleNoteCommonReward" xml:space="preserve">
     <value>Collectible Note Common</value>
@@ -784,31 +784,31 @@
     <value>Collectible Note Common</value>
   </data>
   <data name="GEAR_DamCodeNote" xml:space="preserve">
-    <value>Dam Code Note</value>
+    <value>Kod do Tamy</value>
   </data>
   <data name="GEAR_DamControlRoomCodeNote" xml:space="preserve">
     <value>Kod do sterowni zapory</value>
   </data>
   <data name="GEAR_DamOfficeKey" xml:space="preserve">
-    <value>Dam Office Key</value>
+    <value>Klucz do biura</value>
   </data>
   <data name="GEAR_EmergencyKitNote" xml:space="preserve">
-    <value>Emergency Kit Note</value>
+    <value>Notatka do zestawu bezpieczeństwa</value>
   </data>
   <data name="GEAR_FarmersAlmanac" xml:space="preserve">
-    <value>Farmer's Almanac</value>
+    <value>Almanach Farmera</value>
   </data>
   <data name="GEAR_FirstAidManual" xml:space="preserve">
-    <value>First Aid Manual</value>
+    <value>Poradnik Pierwszej Pomocy</value>
   </data>
   <data name="GEAR_HardCase" xml:space="preserve">
     <value>Kasetka Astrid</value>
   </data>
   <data name="GEAR_HikersBackPack" xml:space="preserve">
-    <value>Hiker's Backpack</value>
+    <value>Plecak Podróżnika</value>
   </data>
   <data name="GEAR_HunterJournalPage" xml:space="preserve">
-    <value>Hunter Journal Page</value>
+    <value>Strona z dziennika łowcy</value>
   </data>
   <data name="GEAR_KnifeScrapMetal" xml:space="preserve">
     <value>Metalowy odłamek</value>
@@ -853,7 +853,7 @@
     <value>Rifle Blanks</value>
   </data>
   <data name="GEAR_RifleBullets" xml:space="preserve">
-    <value>Rifle Bullets</value>
+    <value>Kule do karabinu</value>
   </data>
   <data name="GEAR_UtilitiesBill" xml:space="preserve">
     <value>Utilities Bill</value>
@@ -871,16 +871,16 @@
     <value>Butelka wody</value>
   </data>
   <data name="GEAR_MooseQuarter" xml:space="preserve">
-    <value>Moose Quarter</value>
+    <value>Kawałek łosia</value>
   </data>
   <data name="GEAR_RawMeatMoose" xml:space="preserve">
-    <value>Moose Meat</value>
+    <value>Mięso łosia</value>
   </data>
   <data name="GEAR_CookedMeatMoose" xml:space="preserve">
-    <value>Moose Meat (Cooked)</value>
+    <value>Mięso łosia (gotowane)</value>
   </data>
   <data name="GEAR_BackerNote1C" xml:space="preserve">
-    <value>A Note Left Behind</value>
+    <value>Pozostawiona Notatka</value>
   </data>
   <data name="GEAR_SurvivalSchoolFishing" xml:space="preserve">
     <value>Wędkowanie na lodzie</value>
@@ -1006,7 +1006,7 @@
     <value>Zmięta kartka</value>
   </data>
   <data name="GEAR_RifleHuntingLodge" xml:space="preserve">
-    <value>Hunting Rifle</value>
+    <value>Karabin myśliwski</value>
   </data>
   <data name="GEAR_MiltonDepositBoxKey2" xml:space="preserve">
     <value>Klucz do sejfu bankowego nr 13</value>
@@ -1015,7 +1015,7 @@
     <value>Nóż Jeremiaha</value>
   </data>
   <data name="GEAR_FixedRifle" xml:space="preserve">
-    <value>Jeremiah's Repaired Rifle</value>
+    <value>Naprawiony karabin myśliwski Jeremiaha</value>
   </data>
   <data name="GEAR_ForgeBlueprints" xml:space="preserve">
     <value>Projekty hutnicze</value>
@@ -1036,7 +1036,7 @@
     <value>Nieczytelna wiadomość</value>
   </data>
   <data name="GEAR_JeremiahsCoat" xml:space="preserve">
-    <value>Jeremiah's Bearskin Coat</value>
+    <value>Kurka z niedźwiedzia Jeremiaha</value>
   </data>
   <data name="GEAR_BankVaultCode" xml:space="preserve">
     <value>Kod do skarbca bankowego</value>
@@ -1048,7 +1048,7 @@
     <value>Wiadomość umazana krwią</value>
   </data>
   <data name="GEAR_ForestTalkerFlyer" xml:space="preserve">
-    <value>Forest Talker Flyer</value>
+    <value>Ulotka Leśnych Głosów</value>
   </data>
   <data name="GEAR_HankJournal2" xml:space="preserve">
     <value>Dziennik Hanka – część druga</value>
@@ -1057,7 +1057,7 @@
     <value>Klucz do sejfu bankowego nr 15</value>
   </data>
   <data name="GEAR_BrokenRifle" xml:space="preserve">
-    <value>Jeremiah's Broken Rifle</value>
+    <value>Uszkodzony karabin myśliwski Jeremiaha</value>
   </data>
   <data name="GEAR_MiltonDepositBoxKey1" xml:space="preserve">
     <value>Klucz do sejfu bankowego nr 7</value>
@@ -1114,10 +1114,10 @@
     <value>Spodnie Mackenziego</value>
   </data>
   <data name="GEAR_GreyMotherBoots" xml:space="preserve">
-    <value>Mountaineering Boots</value>
+    <value>Buty Górskie</value>
   </data>
   <data name="GEAR_BearEar" xml:space="preserve">
-    <value>The Old Bear's Ear</value>
+    <value>Ucho starego niedźwiedzia</value>
   </data>
   <data name="GEAR_ReishiPrepared" xml:space="preserve">
     <value>Przygotowane grzyby reishi</value>
@@ -1129,10 +1129,10 @@
     <value>Kod do skrytki Hanka</value>
   </data>
   <data name="GEAR_BookArchery" xml:space="preserve">
-    <value>Stay On Target</value>
+    <value>Oko na celu</value>
   </data>
   <data name="GEAR_BookMending" xml:space="preserve">
-    <value>A Sewing Primer</value>
+    <value>Jak spod igły</value>
   </data>
   <data name="GEAR_MooseHideDried" xml:space="preserve">
     <value>Suszona skóra z łosia</value>
@@ -1144,7 +1144,7 @@
     <value>Płaszcz ze skóry łosia</value>
   </data>
   <data name="GEAR_MooseHide" xml:space="preserve">
-    <value>Fresh Moose Hide</value>
+    <value>Świeża skóra z łosia</value>
   </data>
   <data name="GEAR_CookingPot" xml:space="preserve">
     <value>Garnek</value>
@@ -1174,10 +1174,10 @@
     <value>Węgiel drzewny</value>
   </data>
   <data name="GEAR_BookFopen" xml:space="preserve">
-    <value>Book</value>
+    <value>Książka</value>
   </data>
   <data name="GEAR_LampFuelFull" xml:space="preserve">
-    <value>Lantern Fuel</value>
+    <value>Paliwo do latarni</value>
   </data>
   <data name="GEAR_Placeholder" xml:space="preserve">
     <value>Tusza królika</value>
@@ -1351,124 +1351,124 @@
     <value>Wylecz</value>
   </data>
   <data name="AfflictionType_BloodLoss" xml:space="preserve">
-    <value>Blood loss</value>
+    <value>Krwawienie</value>
   </data>
   <data name="AfflictionType_Burns" xml:space="preserve">
-    <value>Burns</value>
+    <value>Oparzenia</value>
   </data>
   <data name="AfflictionType_Dysentery" xml:space="preserve">
-    <value>Dysentery</value>
+    <value>Dyzenteria</value>
   </data>
   <data name="AfflictionType_Infection" xml:space="preserve">
-    <value>Infection</value>
+    <value>Infekcja</value>
   </data>
   <data name="AfflictionType_FoodPoisioning" xml:space="preserve">
-    <value>Food poisoning</value>
+    <value>Zatrucie pokarmowe</value>
   </data>
   <data name="AfflictionType_SprainedAnkle" xml:space="preserve">
-    <value>Sprained ankle</value>
+    <value>Skręcona kostka</value>
   </data>
   <data name="AfflictionType_InfectionRisk" xml:space="preserve">
-    <value>Infection risk</value>
+    <value>Ryzyko infekcji</value>
   </data>
   <data name="AfflictionType_SprainedWrist" xml:space="preserve">
-    <value>Sprained wrist</value>
+    <value>Skręcony nadgarstek</value>
   </data>
   <data name="AfflictionType_Frostbite" xml:space="preserve">
-    <value>Frostbite</value>
+    <value>Odmrożenie</value>
   </data>
   <data name="AfflictionType_Hypothermia" xml:space="preserve">
-    <value>Hypothermia</value>
+    <value>Hipotermia</value>
   </data>
   <data name="AfflictionType_ReducedFatigue" xml:space="preserve">
-    <value>Reduced fatigue</value>
+    <value>Obniżone zmęczenie</value>
   </data>
   <data name="AfflictionType_ImprovedRest" xml:space="preserve">
-    <value>Improved rest</value>
+    <value>Poprawiony odpoczynek</value>
   </data>
   <data name="AfflictionType_WarmingUp" xml:space="preserve">
-    <value>Warming up</value>
+    <value>Ogrzewanie</value>
   </data>
   <data name="AfflictionType_HypothermiaRisk" xml:space="preserve">
-    <value>Hypothermia risk</value>
+    <value>Ryzyko hipotermii</value>
   </data>
   <data name="AfflictionType_CabinFever" xml:space="preserve">
-    <value>Cabin fever</value>
+    <value>Klaustrofobia</value>
   </data>
   <data name="AfflictionType_IntestinalParasitesRisk" xml:space="preserve">
-    <value>Intestinal parasites risk</value>
+    <value>Ryzyko pasożytów jelitowych</value>
   </data>
   <data name="AfflictionType_IntestinalParasites" xml:space="preserve">
-    <value>Intestinal parasites</value>
+    <value>Pasożyty jelitowe</value>
   </data>
   <data name="AfflictionType_SprainedWristMajor" xml:space="preserve">
     <value>Sprained wrist major</value>
   </data>
   <data name="AfflictionType_CabinFeverRisk" xml:space="preserve">
-    <value>Cabin fever risk</value>
+    <value>Ryzyko klaustrofobii</value>
   </data>
   <data name="AfflictionType_FrostbiteRisk" xml:space="preserve">
-    <value>Frostbite risk</value>
+    <value>Ryzyko odmrożenia</value>
   </data>
   <data name="ItemCategory_FirstAid" xml:space="preserve">
-    <value>First Aid</value>
+    <value>Pierwsza pomoc</value>
   </data>
   <data name="ItemCategory_Clothing" xml:space="preserve">
-    <value>Clothing</value>
+    <value>Ubrania</value>
   </data>
   <data name="ItemCategory_Food" xml:space="preserve">
-    <value>Food</value>
+    <value>Jedzenie</value>
   </data>
   <data name="ItemCategory_Tools" xml:space="preserve">
-    <value>Tools</value>
+    <value>Narzędzia</value>
   </data>
   <data name="ItemCategory_Materials" xml:space="preserve">
-    <value>Materials</value>
+    <value>Materiały</value>
   </data>
   <data name="ItemCategory_Collectible" xml:space="preserve">
-    <value>Collectible</value>
+    <value>Znajdźki</value>
   </data>
   <data name="ItemCategory_Books" xml:space="preserve">
-    <value>Books</value>
+    <value>Książki</value>
   </data>
   <data name="ItemCategory_Hidden" xml:space="preserve">
-    <value>Hidden</value>
+    <value>Ukryte</value>
   </data>
   <data name="ItemCategory_Unknown" xml:space="preserve">
-    <value>Unknown</value>
+    <value>Nieznane</value>
   </data>
   <data name="ExperienceMode" xml:space="preserve">
-    <value>Experience mode</value>
+    <value>Tryb doświadczenia</value>
   </data>
   <data name="ExperienceModeType_Pilgrim" xml:space="preserve">
-    <value>Pilgrim</value>
+    <value>Pielgrzym</value>
   </data>
   <data name="ExperienceModeType_Voyageur" xml:space="preserve">
-    <value>Voyageur</value>
+    <value>Traper</value>
   </data>
   <data name="ExperienceModeType_Stalker" xml:space="preserve">
-    <value>Stalker</value>
+    <value>Prześladowca</value>
   </data>
   <data name="ExperienceModeType_Story" xml:space="preserve">
-    <value>Story</value>
+    <value>Historia</value>
   </data>
   <data name="ExperienceModeType_ChallengeRescue" xml:space="preserve">
-    <value>Hopeless Rescue</value>
+    <value>Beznadziejny ratunek</value>
   </data>
   <data name="ExperienceModeType_ChallengeHunted" xml:space="preserve">
-    <value>The Hunted</value>
+    <value>Polowanie, Część Pierwsza</value>
   </data>
   <data name="ExperienceModeType_ChallengeWhiteout" xml:space="preserve">
-    <value>Whiteout</value>
+    <value>Śnieżyca</value>
   </data>
   <data name="ExperienceModeType_ChallengeNomad" xml:space="preserve">
     <value>Nomad</value>
   </data>
   <data name="ExperienceModeType_ChallengeHuntedPart2" xml:space="preserve">
-    <value>The Hunted, Part 2</value>
+    <value>Polowanie, Część Druga</value>
   </data>
   <data name="ExperienceModeType_Interloper" xml:space="preserve">
-    <value>Interloper</value>
+    <value>Intruz</value>
   </data>
   <data name="Position" xml:space="preserve">
     <value>Pozycja</value>
@@ -1480,34 +1480,34 @@
     <value>Otwórz Mapę</value>
   </data>
   <data name="CoastalRegion" xml:space="preserve">
-    <value>Coastal Highway</value>
+    <value>Przybrzeżna Autostrada</value>
   </data>
   <data name="LakeRegion" xml:space="preserve">
-    <value>Mystery Lake</value>
+    <value>Jezioro Tajemnic</value>
   </data>
   <data name="WhalingStationRegion" xml:space="preserve">
-    <value>Desolation Point</value>
+    <value>Pustkowie</value>
   </data>
   <data name="RuralRegion" xml:space="preserve">
-    <value>Pleasant Valley</value>
+    <value>Wesoła Dolina</value>
   </data>
   <data name="CrashMountainRegion" xml:space="preserve">
-    <value>Timberwolf Mountain</value>
+    <value>Wilcza Góra</value>
   </data>
   <data name="MarshRegion" xml:space="preserve">
-    <value>Forlorn Muskeg</value>
+    <value>Opuszczone Torowisko</value>
   </data>
   <data name="RavineTransitionZone" xml:space="preserve">
-    <value>Ravine</value>
+    <value>Dolina</value>
   </data>
   <data name="HighwayTransitionZone" xml:space="preserve">
-    <value>Crumbling Highway</value>
+    <value>Stara autostrada na wyspę</value>
   </data>
   <data name="Map" xml:space="preserve">
     <value>Mapa</value>
   </data>
   <data name="GutAmount" xml:space="preserve">
-    <value>Flaki</value>
+    <value>Jelita</value>
   </data>
   <data name="HideAmount" xml:space="preserve">
     <value>Skóry</value>
@@ -1516,12 +1516,12 @@
     <value>Mięso (kg)</value>
   </data>
   <data name="MountainTownRegion" xml:space="preserve">
-    <value>Mountain Town</value>
+    <value>Górskie Miasto</value>
   </data>
   <data name="TracksRegion" xml:space="preserve">
-    <value>Broken Railroad</value>
+    <value>Zniszczone tory kolejowe</value>
   </data>
   <data name="RiverValleyRegion" xml:space="preserve">
-    <value>Hushed River Valley</value>
+    <value>Dolina spokojnej rzeki</value>
   </data>
 </root>
