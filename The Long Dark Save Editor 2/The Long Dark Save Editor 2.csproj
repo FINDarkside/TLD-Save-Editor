@@ -94,6 +94,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\EnumWrapperConverter.cs" />
     <Compile Include="Converters\FourDoNBadgeCompletedConverter.cs" />
     <Compile Include="Converters\AvailableRegionConverter.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
