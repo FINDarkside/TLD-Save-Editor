@@ -35,7 +35,7 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
                         UpdateMap();
                         return;
                     }
-                    region = MainWindow.Instance.CurrentSave.Boot.m_SceneName;
+                    region = MainWindow.Instance.CurrentSave.Boot.m_SceneName.Value;
                     playerPosition = new Point(MainWindow.Instance.CurrentSave.Global.PlayerManager.m_SaveGamePosition[0], MainWindow.Instance.CurrentSave.Global.PlayerManager.m_SaveGamePosition[2]);
                     UpdateMap();
                     var saveGamePosition = MainWindow.Instance.CurrentSave.Global.PlayerManager.m_SaveGamePosition;
@@ -49,12 +49,11 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
                             UpdatePlayerPosition();
                         }
                     };
-                    MainWindow.Instance.CurrentSave.Boot.PropertyChanged += (sender2, e2) =>
+                    MainWindow.Instance.CurrentSave.Boot.m_SceneName.PropertyChanged += (sender2, e2) =>
                     {
-                        Debug.WriteLine("New region: " + region);
-                        if (e2.PropertyName == nameof(MainWindow.Instance.CurrentSave.Boot.m_SceneName))
+                        if (e2.PropertyName == "Value")
                         {
-                            region = MainWindow.Instance.CurrentSave.Boot.m_SceneName;
+                            region = MainWindow.Instance.CurrentSave.Boot.m_SceneName.Value;
                             Debug.WriteLine("New region: " + region);
                             UpdateMap();
                         }

@@ -19,6 +19,20 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         Unknown
     }
 
+    public enum RegionsWithMap
+    {
+        CoastalRegion,
+        LakeRegion,
+        WhalingStationRegion,
+        RuralRegion,
+        CrashMountainRegion,
+        MarshRegion,
+        RavineTransitionZone,
+        HighwayTransitionZone,
+        TracksRegion,
+        RiverValleyRegion,
+        MountainTownRegion
+    }
 
     // -----
 

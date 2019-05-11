@@ -32,7 +32,7 @@ namespace The_Long_Dark_Save_Editor_2
 
             var bootJson = EncryptString.DecompressBytes(SlotData.m_Dict["boot"]);
             dynamicBoot = new DynamicSerializable<BootSaveGameFormat>(bootJson);
-            OriginalRegion = Boot.m_SceneName;
+            OriginalRegion = Boot.m_SceneName.Value;
 
             var globalJson = EncryptString.DecompressBytes(SlotData.m_Dict["global"]);
             dynamicGlobal = new DynamicSerializable<GlobalSaveGameFormat>(globalJson);
@@ -49,12 +49,12 @@ namespace The_Long_Dark_Save_Editor_2
 
             // If position is changed, set z coordinate to float.infinity to avoid going under terrain
             var pos = Global.PlayerManager.m_SaveGamePosition;
-            if (OriginalRegion != Boot.m_SceneName || pos[0] != originalPosition[0] || pos[1] != originalPosition[1] || pos[2] != originalPosition[2])
+            if (OriginalRegion != Boot.m_SceneName.Value || pos[0] != originalPosition[0] || pos[1] != originalPosition[1] || pos[2] != originalPosition[2])
             {
                 pos[1] = 9999999;
             }
-            Global.SceneTransition.m_SceneSaveFilenameCurrent = Boot.m_SceneName;
-            Global.SceneTransition.m_SceneSaveFilenameNextLoad = Boot.m_SceneName;
+            Global.SceneTransition.m_SceneSaveFilenameCurrent = Boot.m_SceneName.Value;
+            Global.SceneTransition.m_SceneSaveFilenameNextLoad = Boot.m_SceneName.Value;
             Global.PlayerManager.m_CheatsUsed = true;
 
             var globalSerialized = dynamicGlobal.Serialize();

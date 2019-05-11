@@ -3,17 +3,9 @@ using The_Long_Dark_Save_Editor_2.Helpers;
 
 namespace The_Long_Dark_Save_Editor_2.Game_data
 {
-    public class BootSaveGameFormat : BindableBase
+    public class BootSaveGameFormat
     {
-        private string _sceneName;
-        public string m_SceneName
-        {
-            get { return _sceneName; }
-            set
-            {
-                SetProperty(ref _sceneName, value);
-            }
-        }
+        public EnumWrapper<RegionsWithMap> m_SceneName { get; set; }
         public int m_Version { get; set; }
     }
 }
