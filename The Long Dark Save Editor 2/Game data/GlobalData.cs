@@ -223,6 +223,12 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     public class GearItemSaveDataProxy : BindableBase
     {
+        public float m_HoursPlayed { get; set; }
+        public float[] m_Position { get; set; }
+        public float[] m_Rotation { get; set; }
+        public int m_InstanceIDProxy { get; set; }
+        public float m_CurrentHPProxy { get; set; }
+        public float m_NormalizedCondition;
         [JsonIgnore]
         public float NormalizedCondition
         {
@@ -232,13 +238,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
                 SetProperty(ref m_NormalizedCondition, value);
             }
         }
-
-        public float m_HoursPlayed { get; set; }
-        public float[] m_Position { get; set; }
-        public float[] m_Rotation { get; set; }
-        public int m_InstanceIDProxy { get; set; }
-        public float m_CurrentHPProxy { get; set; }
-        private float m_NormalizedCondition;
         public bool m_BeenInPlayerInventoryProxy { get; set; }
         public bool m_BeenInContainerProxy { get; set; }
         public bool m_BeenInspectedProxy { get; set; }
