@@ -10,7 +10,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public List<string> m_RewiredKeyboardMap { get; set; }
         public List<string> m_RewiredMouseMap { get; set; }
         public List<SandboxRecord> m_SandboxRecords { get; set; }
-        public List<UpSell> m_UpsellsViewed { get; set; }
+        public List<EnumWrapper<UpSell>> m_UpsellsViewed { get; set; }
         public List<bool> m_DaysCompleted4DON { get; set; }
         public int m_Version { get; set; }
         public bool m_ShowTimeOfDaySlider { get; set; }
