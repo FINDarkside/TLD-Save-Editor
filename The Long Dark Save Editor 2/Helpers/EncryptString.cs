@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 
 namespace The_Long_Dark_Save_Editor_2.Helpers
 {
