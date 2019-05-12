@@ -869,7 +869,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         [Deserialize("m_Skill_ArcherySerialized", true)]
         public Skill_ArcherySaveData Archery { get; set; }
         [Deserialize("m_Skill_ClothingRepairSerialized", true)]
-        public ClothingItemSaveDataProxy ClothingRepair { get; set; }
+        public Skill_ClothingRepairSaveData ClothingRepair { get; set; }
     }
 
     public class Skill_FirestartingSaveData
