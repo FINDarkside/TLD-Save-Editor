@@ -96,7 +96,7 @@ namespace The_Long_Dark_Save_Editor_2.Converters
                     throw new Exception("Unknown affliction type " + value.GetType().Name);
                 }
             }
-            throw new NotImplementedException();
+            return afflictions;
         }
 
         private void ConvertHypothermia(HypothermiaSaveDataProxy proxy, ObservableCollection<Affliction> negative)
