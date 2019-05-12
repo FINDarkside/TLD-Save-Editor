@@ -16,7 +16,7 @@ namespace The_Long_Dark_Save_Editor_2
         {
             this.path = path;
 
-            var json = EncryptString.DecompressBytes(File.ReadAllBytes(path));
+            var json = EncryptString.Decompress(File.ReadAllBytes(path));
 
             dynamicState = new DynamicSerializable<ProfileState>(json);
 
@@ -118,7 +118,7 @@ namespace The_Long_Dark_Save_Editor_2
 
             #endregion
 
-            File.WriteAllBytes(path, EncryptString.CompressToBytes(json));
+            File.WriteAllBytes(path, EncryptString.Compress(json));
         }
     }
 }

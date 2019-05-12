@@ -65,6 +65,12 @@ namespace The_Long_Dark_Save_Editor_2
 
         public MainWindow()
         {
+            JsonConvert.DefaultSettings = () => new JsonSerializerSettings
+            {
+                //MissingMemberHandling = MissingMemberHandling.Error,
+                FloatFormatHandling = FloatFormatHandling.Symbol,
+            };
+
 #if DEBUG
             IsDebug = true;
             Debug.WriteLine(System.Threading.Thread.CurrentThread.CurrentUICulture);
@@ -86,12 +92,6 @@ namespace The_Long_Dark_Save_Editor_2
             TestBranch = Properties.Settings.Default.TestBranch;
             Title += " " + Version.ToString();
 
-            JsonConvert.DefaultSettings = () => new JsonSerializerSettings
-            {
-                //MissingMemberHandling = MissingMemberHandling.Error,
-                FloatFormatHandling = FloatFormatHandling.Symbol,
-            };
-
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -110,7 +110,6 @@ namespace The_Long_Dark_Save_Editor_2
                     dialogHost.IsOpen = false;
                     ErrorDialog.Show("Failed to check for new versions", ex != null ? (ex.Message + "\n" + e.ToString()) : null);
                 }
-
             }
 
             if (!Properties.Settings.Default.BugReportWarningShown)

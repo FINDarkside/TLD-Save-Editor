@@ -29,14 +29,14 @@ namespace The_Long_Dark_Save_Editor_2
         public void LoadSave(string path)
         {
             this.path = path;
-            string slotJson = EncryptString.DecompressBytes(File.ReadAllBytes(path));
+            string slotJson = EncryptString.Decompress(File.ReadAllBytes(path));
             dynamicSlotData = new DynamicSerializable<SlotData>(slotJson);
 
-            var bootJson = EncryptString.DecompressBytes(SlotData.m_Dict["boot"]);
+            var bootJson = EncryptString.Decompress(SlotData.m_Dict["boot"]);
             dynamicBoot = new DynamicSerializable<BootSaveGameFormat>(bootJson);
             OriginalRegion = Boot.m_SceneName.Value;
 
-            var globalJson = EncryptString.DecompressBytes(SlotData.m_Dict["global"]);
+            var globalJson = EncryptString.Decompress(SlotData.m_Dict["global"]);
             dynamicGlobal = new DynamicSerializable<GlobalSaveGameFormat>(globalJson);
 
             Afflictions = new AfflictionsContainer(Global);
@@ -49,7 +49,7 @@ namespace The_Long_Dark_Save_Editor_2
         {
             LastSaved = DateTime.Now.Ticks;
             var bootSerialized = dynamicBoot.Serialize();
-            SlotData.m_Dict["boot"] = EncryptString.CompressToBytes(bootSerialized);
+            SlotData.m_Dict["boot"] = EncryptString.Compress(bootSerialized);
 
             // If position is changed, set z coordinate to float.infinity to avoid going under terrain
             var pos = Global.PlayerManager.m_SaveGamePosition;
@@ -63,10 +63,10 @@ namespace The_Long_Dark_Save_Editor_2
             Afflictions.SerializeTo(Global);
 
             var globalSerialized = dynamicGlobal.Serialize();
-            SlotData.m_Dict["global"] = EncryptString.CompressToBytes(globalSerialized);
+            SlotData.m_Dict["global"] = EncryptString.Compress(globalSerialized);
 
             var slotDataSerialized = dynamicSlotData.Serialize();
-            File.WriteAllBytes(path, EncryptString.CompressToBytes(slotDataSerialized));
+            File.WriteAllBytes(path, EncryptString.Compress(slotDataSerialized));
         }
     }
 }
