@@ -554,11 +554,11 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_CauseLocID { get; set; }
     }
 
-    public class FrostBiteSaveDataProxy
+    public class FrostbiteSaveDataProxy
     {
-        public int[] m_LocationsWithActiveFrostbite { get; set; }
-        public int[] m_LocationsWithFrostbiteRisk { get; set; }
-        public float[] m_LocationsCurrentFrostbiteDamage { get; set; }
+        public List<int> m_LocationsWithActiveFrostbite { get; set; }
+        public List<int> m_LocationsWithFrostbiteRisk { get; set; }
+        public List<float> m_LocationsCurrentFrostbiteDamage { get; set; }
     }
 
     public class FoodPoisoningSaveDataProxy
@@ -583,54 +583,23 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     public class SprainedAnkleSaveDataProxy
     {
-        [Obsolete]
-        public bool m_Active { get; set; }
-        [Obsolete]
-        public float m_ElapsedHours { get; set; }
-        [Obsolete]
-        public float m_DurationHours { get; set; }
-        [Obsolete]
-        public bool m_PainKillersTaken { get; set; }
-        [Obsolete]
-        public float m_ElapsedRest { get; set; }
         public float m_SecondsSinceLastPainAudio { get; set; }
         public float m_SecondsUntilNextPainAudio { get; set; }
-        public string[] m_CausesLocIDs { get; set; }
-        public int[] m_Locations { get; set; }
-        public float[] m_ElapsedHoursList { get; set; }
-        public float[] m_DurationHoursList { get; set; }
-        public float[] m_ElapsedRestList { get; set; }
+        public List<string> m_CausesLocIDs { get; set; }
+        public List<int> m_Locations { get; set; }
+        public List<float> m_ElapsedHoursList { get; set; }
+        public List<float> m_DurationHoursList { get; set; }
+        public List<float> m_ElapsedRestList { get; set; }
     }
 
     public class SprainedWristSaveDataProxy
     {
-        public bool m_Active { get; set; }
-        public float m_ElapsedHours { get; set; }
-        public float m_DurationHours { get; set; }
-        public bool m_PainKillersTaken { get; set; }
-        public float m_ElapsedRest { get; set; }
-        public float m_SecondsSinceLastPainAudio { get; set; }
-        public float m_SecondsUntilNextPainAudio { get; set; }
-        public string[] m_CausesLocIDs { get; set; }
-        public int[] m_Locations { get; set; }
-        public float[] m_ElapsedHoursList { get; set; }
-        public float[] m_DurationHoursList { get; set; }
-        public float[] m_ElapsedRestList { get; set; }
+        public List<string> m_CausesLocIDs { get; set; }
+        public List<int> m_Locations { get; set; }
+        public List<float> m_ElapsedHoursList { get; set; }
+        public List<float> m_DurationHoursList { get; set; }
+        public List<float> m_ElapsedRestList { get; set; }
         public bool m_IsNoSprainWristForced { get; set; }
-    }
-
-    public class SprainedWristMajorSaveDataProxy
-    {
-        public bool m_Active { get; set; }
-        public float m_ElapsedHours { get; set; }
-        public float m_DurationHours { get; set; }
-        public bool m_PainKillersTaken { get; set; }
-        public float m_ElapsedRest { get; set; }
-        public float m_SecondsSinceLastPainAudio { get; set; }
-        public float m_SecondsUntilNextPainAudio { get; set; }
-        public string[] m_CausesLocIDs { get; set; }
-        public int[] m_Locations { get; set; }
-        public float[] m_ElapsedRestList { get; set; }
     }
 
     public class BurnsSaveDataProxy
@@ -658,55 +627,42 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     public class BloodLossSaveDataProxy
     {
-        public bool m_Active { get; set; }
-        public float m_ElapsedHours { get; set; }
-        public float m_DurationHours { get; set; }
-        public string[] m_CausesLocIDs { get; set; }
-        public int[] m_Locations { get; set; }
-        public float[] m_ElapsedHoursList { get; set; }
-        public float[] m_DurationHoursList { get; set; }
+        public List<string> m_CausesLocIDs { get; set; }
+        public List<int> m_Locations { get; set; }
+        public List<float> m_ElapsedHoursList { get; set; }
+        public List<float> m_DurationHoursList { get; set; }
     }
 
     public class BrokenRibSaveDataProxy
     {
-        public string[] m_CausesLocIDs { get; set; }
-        public int[] m_Locations { get; set; }
-        public int[] m_PainKillersTaken { get; set; }
-        public int[] m_BandagesApplied { get; set; }
-        public float[] m_ElapsedRestList { get; set; }
-        public float[] m_NumHoursRestForCureList { get; set; }
+        public List<string> m_CausesLocIDs { get; set; }
+        public List<int> m_Locations { get; set; }
+        public List<int> m_PainKillersTaken { get; set; }
+        public List<int> m_BandagesApplied { get; set; }
+        public List<float> m_ElapsedRestList { get; set; }
+        public List<float> m_NumHoursRestForCureList { get; set; }
     }
 
     public class InfectionSaveDataProxy
     {
-        public bool m_Active { get; set; }
-        public float m_ElapsedHours { get; set; }
-        public float m_DurationHours { get; set; }
-        public bool m_AntibioticsTaken { get; set; }
-        public float m_ElapsedRest { get; set; }
-        public string[] m_CausesLocIDs { get; set; }
-        public int[] m_Locations { get; set; }
-        public float[] m_ElapsedHoursList { get; set; }
-        public float[] m_DurationHoursList { get; set; }
-        public bool[] m_AntibioticsTakenList { get; set; }
-        public float[] m_ElapsedRestList { get; set; }
+        public List<string> m_CausesLocIDs { get; set; }
+        public List<int> m_Locations { get; set; }
+        public List<float> m_ElapsedHoursList { get; set; }
+        public List<float> m_DurationHoursList { get; set; }
+        public List<bool> m_AntibioticsTakenList { get; set; }
+        public List<float> m_ElapsedRestList { get; set; }
     }
 
     public class InfectionRiskSaveDataProxy
     {
-        public bool m_Active { get; set; }
-        public float m_ElapsedHours { get; set; }
-        public float m_DurationHours { get; set; }
-        public bool m_AntisepticTaken { get; set; }
         public float m_CommentTime;
-        public float m_CurrentInfectionChance { get; set; }
-        public string[] m_CausesLocIDs { get; set; }
-        public int[] m_Locations { get; set; }
-        public float[] m_ElapsedHoursList { get; set; }
-        public float[] m_DurationHoursList { get; set; }
-        public bool[] m_AntisepticTakenList { get; set; }
-        public float[] m_CurrentInfectionChanceList { get; set; }
-        public int[] m_ConstantAfflictionIndices { get; set; }
+        public List<string> m_CausesLocIDs { get; set; }
+        public List<int> m_Locations { get; set; }
+        public List<float> m_ElapsedHoursList { get; set; }
+        public List<float> m_DurationHoursList { get; set; }
+        public List<bool> m_AntisepticTakenList { get; set; }
+        public List<float> m_CurrentInfectionChanceList { get; set; }
+        public List<int> m_ConstantAfflictionIndices { get; set; }
     }
 
     public class CabinFeverSaveDataProxy
@@ -714,9 +670,9 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_Active { get; set; }
         public bool m_RiskActive { get; set; }
         public float m_ElapsedHours { get; set; }
-        public float[] m_IndoorTimeTracked { get; set; }
+        public List<float> m_IndoorTimeTracked { get; set; }
         public int m_HourLastFrame { get; set; }
-        public bool m_DoneHalloweenEventFix { get; set; }
+        public bool m_DoneHalloweenEventFix { get; set; } = true;
     }
 
     public class IntestinalParasitesSaveDataProxy

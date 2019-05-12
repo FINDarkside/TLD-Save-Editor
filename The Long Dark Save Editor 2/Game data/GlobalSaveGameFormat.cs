@@ -52,7 +52,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         [Deserialize("m_WellFedSerialized", true)]
         public WellFedSaveDataProxy WellFed { get; set; }
         [Deserialize("m_FrostbiteSerialized", true)]
-        public FrostBiteSaveDataProxy FrostBite { get; set; }
+        public FrostbiteSaveDataProxy FrostBite { get; set; }
         [Deserialize("m_FoodPoisoningSerialized", true)]
         public FoodPoisoningSaveDataProxy FoodPoisoning { get; set; }
         [Deserialize("m_DysenterySerialized", true)]
@@ -61,8 +61,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public SprainedAnkleSaveDataProxy SprainedAnkle { get; set; }
         [Deserialize("m_SprainedWristSerialized", true)]
         public SprainedWristSaveDataProxy SprainedWrist { get; set; }
-        [Deserialize("m_SprainedWristMajorSerialized", true)]
-        public SprainedWristMajorSaveDataProxy SprainedWristMajor { get; set; }
         [Deserialize("m_BurnsSerialized", true)]
         public BurnsSaveDataProxy Burns { get; set; }
         [Deserialize("m_BurnsElectricSerialized", true)]
