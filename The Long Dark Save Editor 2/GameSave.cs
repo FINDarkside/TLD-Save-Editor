@@ -54,9 +54,8 @@ namespace The_Long_Dark_Save_Editor_2
             // If position is changed, set z coordinate to float.infinity to avoid going under terrain
             var pos = Global.PlayerManager.m_SaveGamePosition;
             if (OriginalRegion != Boot.m_SceneName.Value || pos[0] != originalPosition[0] || pos[1] != originalPosition[1] || pos[2] != originalPosition[2])
-            {
                 pos[1] = 9999999;
-            }
+
             Global.SceneTransition.m_SceneSaveFilenameCurrent = Boot.m_SceneName.Value;
             Global.SceneTransition.m_SceneSaveFilenameNextLoad = Boot.m_SceneName.Value;
             Global.PlayerManager.m_CheatsUsed = true;
@@ -65,6 +64,7 @@ namespace The_Long_Dark_Save_Editor_2
             var globalSerialized = dynamicGlobal.Serialize();
             SlotData.m_Dict["global"] = EncryptString.Compress(globalSerialized);
 
+            SlotData.m_Timestamp = DateTime.Now;
             var slotDataSerialized = dynamicSlotData.Serialize();
             File.WriteAllBytes(path, EncryptString.Compress(slotDataSerialized));
         }
