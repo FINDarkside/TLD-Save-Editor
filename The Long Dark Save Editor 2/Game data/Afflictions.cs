@@ -1,44 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
 using The_Long_Dark_Save_Editor_2.Helpers.Helpers;
 
 namespace The_Long_Dark_Save_Editor_2.Game_data
 {
-
-    public class Afflictions
-    {
-        private ObservableCollection<Affliction> negative;
-        public ObservableCollection<Affliction> Negative { get { return negative; } set { SetPropertyField(ref negative, value); } }
-        private ObservableCollection<Affliction> positive;
-        public ObservableCollection<Affliction> Positive { get { return positive; } set { SetPropertyField(ref positive, value); } }
-        public Dictionary<Type, object> proxies = new Dictionary<Type, object>();
-
-        public Afflictions()
-        {
-            // TODO: Why?
-            Negative = new ObservableCollection<Affliction>();
-            negative.CollectionChanged += (object sender, NotifyCollectionChangedEventArgs e) => { if (PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs("Negative")); };
-            Positive = new ObservableCollection<Affliction>();
-            positive.CollectionChanged += (object sender, NotifyCollectionChangedEventArgs e) => { if (PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs("Positive")); };
-
-        }
-
-        protected void SetPropertyField<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
-        {
-            if (!EqualityComparer<T>.Default.Equals(field, newValue))
-            {
-                field = newValue;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-    }
 
     public class Affliction
     {

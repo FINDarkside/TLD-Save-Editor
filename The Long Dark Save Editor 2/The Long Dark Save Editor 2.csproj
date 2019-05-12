@@ -94,7 +94,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Converters\AfflictionsConverter.cs" />
     <Compile Include="Converters\EnumWrapperConverter.cs" />
     <Compile Include="Converters\FourDoNBadgeCompletedConverter.cs" />
     <Compile Include="Converters\AvailableRegionConverter.cs" />
@@ -105,6 +104,7 @@
     <Compile Include="ErrorDialog.xaml.cs">
       <DependentUpon>ErrorDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Game data\AfflictionsContainer.cs" />
     <Compile Include="Helpers\DictionaryExtension.cs" />
     <Compile Include="Serialization\DeserializeAttribute.cs" />
     <Compile Include="Serialization\DynamicSerializable.cs" />
@@ -117,7 +117,7 @@
     <Compile Include="Converters\PrefabNameConverter.cs" />
     <Compile Include="Helpers\EncryptString.cs" />
     <Compile Include="Game data\BootSaveGameData.cs" />
-    <Compile Include="Game data\Container classes.cs" />
+    <Compile Include="Game data\Afflictions.cs" />
     <Compile Include="Game data\Enums.cs" />
     <Compile Include="Game data\GlobalData.cs" />
     <Compile Include="Game data\GlobalSaveGameFormat.cs" />

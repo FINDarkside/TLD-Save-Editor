@@ -16,6 +16,8 @@ namespace The_Long_Dark_Save_Editor_2
         private DynamicSerializable<GlobalSaveGameFormat> dynamicGlobal;
         public GlobalSaveGameFormat Global { get { return dynamicGlobal.Obj; } }
 
+        public AfflictionsContainer Afflictions { get; set; }
+
         private DynamicSerializable<SlotData> dynamicSlotData;
         public SlotData SlotData { get { return dynamicSlotData.Obj; } }
 
@@ -37,6 +39,8 @@ namespace The_Long_Dark_Save_Editor_2
             var globalJson = EncryptString.DecompressBytes(SlotData.m_Dict["global"]);
             dynamicGlobal = new DynamicSerializable<GlobalSaveGameFormat>(globalJson);
 
+            Afflictions = new AfflictionsContainer(Global);
+
             var pos = Global.PlayerManager.m_SaveGamePosition;
             originalPosition = new float[] { pos[0], pos[1], pos[2] };
         }
@@ -56,6 +60,7 @@ namespace The_Long_Dark_Save_Editor_2
             Global.SceneTransition.m_SceneSaveFilenameCurrent = Boot.m_SceneName.Value;
             Global.SceneTransition.m_SceneSaveFilenameNextLoad = Boot.m_SceneName.Value;
             Global.PlayerManager.m_CheatsUsed = true;
+            Afflictions.SerializeTo(Global);
 
             var globalSerialized = dynamicGlobal.Serialize();
             SlotData.m_Dict["global"] = EncryptString.CompressToBytes(globalSerialized);
