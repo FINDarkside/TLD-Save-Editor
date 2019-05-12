@@ -19,6 +19,20 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         Unknown
     }
 
+    public enum RegionsWithMap
+    {
+        CoastalRegion,
+        LakeRegion,
+        WhalingStationRegion,
+        RuralRegion,
+        CrashMountainRegion,
+        MarshRegion,
+        RavineTransitionZone,
+        HighwayTransitionZone,
+        TracksRegion,
+        RiverValleyRegion,
+        MountainTownRegion
+    }
 
     // -----
 
@@ -487,4 +501,19 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         AlwaysOn,
     }
 
+    public enum AfflictionBodyArea
+    {
+        Head,
+        Neck,
+        ArmLeft,
+        HandLeft,
+        ArmRight,
+        HandRight,
+        Chest,
+        Stomach,
+        LegLeft,
+        FootLeft,
+        LegRight,
+        FootRight,
+    }
 }

@@ -12,31 +12,31 @@
     <StackPanel Margin="10">
         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
             <Label VerticalAlignment="Center" Width="190" Content="{x:Static p:Resources.FireStartingSP}" />
-            <TextBox Text="{Binding CurrentSave.Global.SkillsManager.FireStartingSkill.m_Points}"  Width="200"></TextBox>
+            <TextBox Text="{Binding CurrentSave.Global.SkillsManager.Firestarting.m_Points}"  Width="200"></TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
             <Label VerticalAlignment="Center" Width="190" Content="{x:Static p:Resources.CarcassHarvestingSP}" />
-            <TextBox Text="{Binding CurrentSave.Global.SkillsManager.CarcassHarvestingSkill.m_Points}"  Width="200"></TextBox>
+            <TextBox Text="{Binding CurrentSave.Global.SkillsManager.CarcassHarvesting.m_Points}"  Width="200"></TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
             <Label VerticalAlignment="Center" Width="190" Content="{x:Static p:Resources.CookingSP}" />
-            <TextBox Text="{Binding CurrentSave.Global.SkillsManager.CookingSkill.m_Points}"  Width="200"></TextBox>
+            <TextBox Text="{Binding CurrentSave.Global.SkillsManager.Cooking.m_Points}"  Width="200"></TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
             <Label VerticalAlignment="Center" Width="190" Content="{x:Static p:Resources.IceFishingSP}" />
-            <TextBox Text="{Binding CurrentSave.Global.SkillsManager.IceFishingSkill.m_Points}"  Width="200"></TextBox>
+            <TextBox Text="{Binding CurrentSave.Global.SkillsManager.IceFishing.m_Points}"  Width="200"></TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
             <Label VerticalAlignment="Center" Width="190" Content="{x:Static p:Resources.RifleSP}" />
-            <TextBox Text="{Binding CurrentSave.Global.SkillsManager.RifleSkill.m_Points}"  Width="200"></TextBox>
+            <TextBox Text="{Binding CurrentSave.Global.SkillsManager.Rifle.m_Points}"  Width="200"></TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
             <Label VerticalAlignment="Center" Width="190" Content="{x:Static p:Resources.ArcherySP}" />
-            <TextBox Text="{Binding CurrentSave.Global.SkillsManager.ArcherySkill.m_Points}"  Width="200"></TextBox>
+            <TextBox Text="{Binding CurrentSave.Global.SkillsManager.Archery.m_Points}"  Width="200"></TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
             <Label VerticalAlignment="Center" Width="190" Content="{x:Static p:Resources.ClothingRepairSP}" />
-            <TextBox Text="{Binding CurrentSave.Global.SkillsManager.ClothingRepairSkill.m_Points}"  Width="200"></TextBox>
+            <TextBox Text="{Binding CurrentSave.Global.SkillsManager.ClothingRepair.m_Points}"  Width="200"></TextBox>
         </StackPanel>
     </StackPanel>
 </UserControl>

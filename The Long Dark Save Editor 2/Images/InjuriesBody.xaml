@@ -34,7 +34,7 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-                        <DrawingGroup x:Name="head" Transform="1,0,0,1,77.0547,-200" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource HeadID}}">
+                        <DrawingGroup x:Name="head" Transform="1,0,0,1,77.0547,-200" Opacity="{Binding CurrentSave.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource HeadID}}">
                             <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
@@ -53,7 +53,7 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-                        <DrawingGroup x:Name="left_hand" Transform="-1,0,0,1,59.944086,5.2017828" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource LeftHandID}}">
+                        <DrawingGroup x:Name="left_hand" Transform="-1,0,0,1,59.944086,5.2017828" Opacity="{Binding CurrentSave.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource LeftHandID}}">
 							<DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
@@ -72,7 +72,7 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-                        <DrawingGroup x:Name="right_hand" Transform="-1,0,0,1,216.68408,5.2017828" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource RightHandID}}">
+                        <DrawingGroup x:Name="right_hand" Transform="-1,0,0,1,216.68408,5.2017828" Opacity="{Binding CurrentSave.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource RightHandID}}">
                             <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
@@ -91,7 +91,7 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-                        <DrawingGroup x:Name="left_arm" Transform="-1,0,0,1,86.944086,-134.79822" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource LeftArmID}}">
+                        <DrawingGroup x:Name="left_arm" Transform="-1,0,0,1,86.944086,-134.79822" Opacity="{Binding CurrentSave.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource LeftArmID}}">
                             <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
@@ -110,7 +110,7 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-                        <DrawingGroup x:Name="right_arm" Transform="-1,0,0,1,189.68409,-134.79822" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource RightArmID}}">
+                        <DrawingGroup x:Name="right_arm" Transform="-1,0,0,1,189.68409,-134.79822" Opacity="{Binding CurrentSave.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource RightArmID}}">
                             <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
@@ -129,7 +129,7 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-                        <DrawingGroup x:Name="throat" Transform="1,0,0,1,77.0547,-161.3322" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource ThroatID}}">
+                        <DrawingGroup x:Name="throat" Transform="1,0,0,1,77.0547,-161.3322" Opacity="{Binding CurrentSave.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource ThroatID}}">
                             <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
@@ -148,7 +148,7 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-                        <DrawingGroup x:Name="chest" Transform="1,0,0,1,77.054495,-99.965434" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource ChestID}}">
+                        <DrawingGroup x:Name="chest" Transform="1,0,0,1,77.054495,-99.965434" Opacity="{Binding CurrentSave.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource ChestID}}">
                             <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
@@ -167,7 +167,7 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-                        <DrawingGroup x:Name="stomach" Transform="1,0,0,1,77.054495,-21.173535" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource StomachID}}">
+                        <DrawingGroup x:Name="stomach" Transform="1,0,0,1,77.054495,-21.173535" Opacity="{Binding CurrentSave.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource StomachID}}">
                             <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
@@ -186,7 +186,7 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-                        <DrawingGroup x:Name="left_leg" Transform="1,0,0,1,49.684495,150.20178" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource LeftLegID}}">
+                        <DrawingGroup x:Name="left_leg" Transform="1,0,0,1,49.684495,150.20178" Opacity="{Binding CurrentSave.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource LeftLegID}}">
                             <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
@@ -205,7 +205,7 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-                        <DrawingGroup x:Name="right_leg" Transform="1,0,0,1,104.42449,150.20178" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource RightLegID}}">
+                        <DrawingGroup x:Name="right_leg" Transform="1,0,0,1,104.42449,150.20178" Opacity="{Binding CurrentSave.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource RightLegID}}">
                             <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
@@ -224,7 +224,7 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-                        <DrawingGroup x:Name="left_foot" Transform="1,0,0,1,56.684495,240.20178" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource LeftFootID}}">
+                        <DrawingGroup x:Name="left_foot" Transform="1,0,0,1,56.684495,240.20178" Opacity="{Binding CurrentSave.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource LeftFootID}}">
                             <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>
@@ -243,7 +243,7 @@
 								</GeometryDrawing.Geometry>
 							</GeometryDrawing>
 						</DrawingGroup>
-                        <DrawingGroup x:Name="right_foot" Transform="1,0,0,1,97.424495,240.20178" Opacity="{Binding CurrentSave.Global.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource RightFootID}}">
+                        <DrawingGroup x:Name="right_foot" Transform="1,0,0,1,97.424495,240.20178" Opacity="{Binding CurrentSave.Afflictions.Negative, Converter={StaticResource injuriesToOpacityConverter}, ConverterParameter={StaticResource RightFootID}}">
                             <DrawingGroup Transform="0.08140797,0,0,0.08140797,18,761.90075">
 								<GeometryDrawing Brush="#FFD80027">
 									<GeometryDrawing.Geometry>

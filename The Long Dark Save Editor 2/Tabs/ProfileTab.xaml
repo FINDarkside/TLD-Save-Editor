@@ -33,7 +33,7 @@
                 <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                     <Label Width="160" Content="{x:Static p:Resources.BookSmartProgress}"/>
                     <Slider Name="bookSmartSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
-                            Maximum="{StaticResource bookSmartRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.BookSmarts.m_HoursResearch}" Margin="5 5">
+                            Maximum="{StaticResource bookSmartRequirement}" Width="200" Value="{Binding CurrentProfile.State.Feats.BookSmarts.m_HoursResearch}" Margin="5 5">
                     </Slider>
                     <Label Content="{Binding ElementName=bookSmartSlider, Path=Value, Converter={StaticResource PercentageConverter}, 
                            ConverterParameter={StaticResource bookSmartRequirement}}">
@@ -42,8 +42,8 @@
 
                 <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                     <Label Width="160" Content="{x:Static p:Resources.ColdFusionProgress}"/>
-                    <Slider Name="coldFusionSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
-                                    Maximum="{StaticResource coldFusionRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.ColdFusion.m_ElapsedDays}" Margin="5 5">
+                    <Slider Name="coldFusionSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1" Width="200" Margin="5 5"
+                                    Maximum="{StaticResource coldFusionRequirement}" Value="{Binding CurrentProfile.State.Feats.ColdFusion.m_ElapsedDays}" >
                     </Slider>
                     <Label Content="{Binding ElementName=coldFusionSlider, Path=Value, Converter={StaticResource PercentageConverter}, 
                            ConverterParameter={StaticResource coldFusionRequirement}}">
@@ -52,8 +52,8 @@
 
                 <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                     <Label Width="160" Content="{x:Static p:Resources.EfficientMachineProgress}"/>
-                    <Slider Name="efficientMachineSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
-                                    Maximum="{StaticResource efficientMachingeRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.EfficientMachine.m_ElapsedHours}" Margin="5 5">
+                    <Slider Name="efficientMachineSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1" Width="200" Margin="5 5"
+                                    Maximum="{StaticResource efficientMachingeRequirement}" Value="{Binding CurrentProfile.State.Feats.EfficientMachine.m_ElapsedHours}" >
                     </Slider>
                     <Label Content="{Binding ElementName=efficientMachineSlider, Path=Value, Converter={StaticResource PercentageConverter}, 
                            ConverterParameter={StaticResource efficientMachingeRequirement}}">
@@ -62,8 +62,8 @@
 
                 <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                     <Label Width="160" Content="{x:Static p:Resources.FireMasterProgress}"/>
-                    <Slider Name="fireMasterSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
-                            Maximum="{StaticResource fireMasterRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.FireMaster.m_NumFiresStarted}" Margin="5 5">
+                    <Slider Name="fireMasterSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1" Width="200" Margin="5 5"
+                            Maximum="{StaticResource fireMasterRequirement}"  Value="{Binding CurrentProfile.State.Feats.FireMaster.m_NumFiresStarted}" >
                     </Slider>
                     <Label Content="{Binding ElementName=fireMasterSlider, Path=Value, Converter={StaticResource PercentageConverter}, 
                            ConverterParameter={StaticResource fireMasterRequirement}}">
@@ -72,8 +72,8 @@
 
                 <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                     <Label Width="160" Content="{x:Static p:Resources.FreeRunnerProgress}"/>
-                    <Slider Name="freeRunnerSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
-                            Maximum="{StaticResource freeRunnerRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.FreeRunner.m_ElapsedKilometers}" Margin="5 5">
+                    <Slider Name="freeRunnerSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1" Width="200" Margin="5 5"
+                            Maximum="{StaticResource freeRunnerRequirement}" Value="{Binding CurrentProfile.State.Feats.FreeRunner.m_ElapsedKilometers}" >
                     </Slider>
                     <Label Content="{Binding ElementName=freeRunnerSlider, Path=Value, Converter={StaticResource PercentageConverter}, 
                            ConverterParameter={StaticResource freeRunnerRequirement}}">
@@ -82,8 +82,8 @@
 
                 <StackPanel Orientation="Horizontal">
                     <Label Width="160" Content="{x:Static p:Resources.SnowWalkerProgress}"/>
-                    <Slider Name="snowWalkerSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1"
-                            Maximum="{StaticResource snowWalkerRequirement}" Width="200" Value="{Binding CurrentProfile.Feats.SnowWalker.m_ElapsedKilometers}" Margin="5 5">
+                    <Slider Name="snowWalkerSlider" Orientation="Horizontal" Minimum="0" TickFrequency="1" Width="200" Margin="5 5"
+                            Maximum="{StaticResource snowWalkerRequirement}" Value="{Binding CurrentProfile.State.Feats.SnowWalker.m_ElapsedKilometers}" >
                     </Slider>
                     <Label Content="{Binding ElementName=snowWalkerSlider, Path=Value, Converter={StaticResource PercentageConverter}, 
                            ConverterParameter={StaticResource snowWalkerRequirement}}">
@@ -92,7 +92,7 @@
             </StackPanel>
         </Expander>
 
-        <CheckBox IsChecked="{Binding CurrentProfile.Proxy.m_DaysCompleted4DON, Converter={StaticResource FourDoNBadgeCompletedConverter}}" 
+        <CheckBox IsChecked="{Binding CurrentProfile.State.m_DaysCompleted4DON, Converter={StaticResource FourDoNBadgeCompletedConverter}}" 
                   Margin="0 5 0 5" Content="4 days of night badges unlocked"/>
     </StackPanel>
 </UserControl>

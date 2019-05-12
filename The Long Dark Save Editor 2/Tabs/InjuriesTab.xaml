@@ -18,7 +18,7 @@
         <images:InjuriesBody></images:InjuriesBody>
         <StackPanel Margin="40 0 0 0" SnapsToDevicePixels="True">
             <Label FontSize="20" FontWeight="Heavy" Content="{x:Static p:Resources.Afflictions}"></Label>
-            <ItemsControl ItemsSource="{Binding CurrentSave.Global.Afflictions.Negative}">
+            <ItemsControl ItemsSource="{Binding CurrentSave.Afflictions.Negative}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel></StackPanel>

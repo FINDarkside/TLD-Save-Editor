@@ -1,20 +1,17 @@
-﻿using System;
-using System.Text;
-using System.Security.Cryptography;
-
+﻿using System.Text;
 
 namespace The_Long_Dark_Save_Editor_2.Helpers
 {
     public class EncryptString
     {
-        public static byte[] CompressStringToBytes(string toEncrypt)
+        public static byte[] Compress(string json)
         {
-            return CLZF.Compress(Encoding.UTF8.GetBytes(toEncrypt));
+            return CLZF.Compress(Encoding.UTF8.GetBytes(json));
         }
 
-        public static string DecompressBytesToString(byte[] toDecrypt)
+        public static string Decompress(byte[] bytes)
         {
-            return Encoding.UTF8.GetString(CLZF.Decompress(toDecrypt));
+            return Encoding.UTF8.GetString(CLZF.Decompress(bytes));
         }
     }
 }
