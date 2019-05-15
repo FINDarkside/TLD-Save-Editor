@@ -120,7 +120,7 @@
                             <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">Discord group</TextBlock>
                         </StackPanel>
                     </Button>
-                    <Button Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Foreground="#211F1F" Click="JoinDiscordClicked" Height="40">
+                    <Button Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Foreground="#211F1F" Click="ViewOnGitHubClicked" Height="40">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="GithubCircle" Height="20" Width="20" />
                             <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">View on GitHub</TextBlock>
