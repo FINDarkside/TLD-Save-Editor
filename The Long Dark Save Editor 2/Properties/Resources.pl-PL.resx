@@ -1470,6 +1470,21 @@
   <data name="ExperienceModeType_Interloper" xml:space="preserve">
     <value>Intruz</value>
   </data>
+  <data name="ExperienceModeType_StoryFresh" xml:space="preserve">
+    <value>Story fresh</value>
+  </data>
+  <data name="ExperienceModeType_StoryHardened" xml:space="preserve">
+    <value>Story hardened</value>
+  </data>
+  <data name="ExperienceModeType_FourDaysOfNight" xml:space="preserve">
+    <value>Four days of night</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeArchivist" xml:space="preserve">
+    <value>Challenge archivist</value>
+  </data>
+  <data name="ExperienceModeType_Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
   <data name="Position" xml:space="preserve">
     <value>Pozycja</value>
   </data>
@@ -1479,28 +1494,28 @@
   <data name="OpenMapCommand" xml:space="preserve">
     <value>Otwórz Mapę</value>
   </data>
-  <data name="CoastalRegion" xml:space="preserve">
+  <data name="RegionsWithMap_CoastalRegion" xml:space="preserve">
     <value>Przybrzeżna Autostrada</value>
   </data>
-  <data name="LakeRegion" xml:space="preserve">
+  <data name="RegionsWithMap_LakeRegion" xml:space="preserve">
     <value>Jezioro Tajemnic</value>
   </data>
-  <data name="WhalingStationRegion" xml:space="preserve">
+  <data name="RegionsWithMap_WhalingStationRegion" xml:space="preserve">
     <value>Pustkowie</value>
   </data>
-  <data name="RuralRegion" xml:space="preserve">
+  <data name="RegionsWithMap_RuralRegion" xml:space="preserve">
     <value>Wesoła Dolina</value>
   </data>
-  <data name="CrashMountainRegion" xml:space="preserve">
+  <data name="RegionsWithMap_CrashMountainRegion" xml:space="preserve">
     <value>Wilcza Góra</value>
   </data>
-  <data name="MarshRegion" xml:space="preserve">
+  <data name="RegionsWithMap_MarshRegion" xml:space="preserve">
     <value>Opuszczone Torowisko</value>
   </data>
-  <data name="RavineTransitionZone" xml:space="preserve">
+  <data name="RegionsWithMap_RavineTransitionZone" xml:space="preserve">
     <value>Dolina</value>
   </data>
-  <data name="HighwayTransitionZone" xml:space="preserve">
+  <data name="RegionsWithMap_HighwayTransitionZone" xml:space="preserve">
     <value>Stara autostrada na wyspę</value>
   </data>
   <data name="Map" xml:space="preserve">
@@ -1515,13 +1530,13 @@
   <data name="MeatAmount" xml:space="preserve">
     <value>Mięso (kg)</value>
   </data>
-  <data name="MountainTownRegion" xml:space="preserve">
+  <data name="RegionsWithMap_MountainTownRegion" xml:space="preserve">
     <value>Górskie Miasto</value>
   </data>
-  <data name="TracksRegion" xml:space="preserve">
+  <data name="RegionsWithMap_TracksRegion" xml:space="preserve">
     <value>Zniszczone tory kolejowe</value>
   </data>
-  <data name="RiverValleyRegion" xml:space="preserve">
+  <data name="RegionsWithMap_RiverValleyRegion" xml:space="preserve">
     <value>Dolina spokojnej rzeki</value>
   </data>
 </root>

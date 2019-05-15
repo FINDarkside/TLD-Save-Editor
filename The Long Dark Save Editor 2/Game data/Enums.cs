@@ -242,7 +242,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         StoryHardened,
         FourDaysOfNight,
         ChallengeArchivist,
-        NUM_MODES,
     }
 
     public enum StatID
