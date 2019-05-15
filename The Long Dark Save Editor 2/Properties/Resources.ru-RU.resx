@@ -1539,4 +1539,31 @@
   <data name="RegionsWithMap_RiverValleyRegion" xml:space="preserve">
     <value>Hushed River Valley</value>
   </data>
+  <data name="GEAR_BearSpearBrokenStory" xml:space="preserve">
+    <value>Сломанное копье для охоты на медведя</value>
+  </data>
+  <data name="GEAR_SodaEnergy" xml:space="preserve">
+    <value>Энергетический напиток Go!</value>
+  </data>
+  <data name="GEAR_ImprovisedMittens" xml:space="preserve">
+    <value>Самодельные обмотки для рук</value>
+  </data>
+  <data name="GEAR_ImprovisedHat" xml:space="preserve">
+    <value>Самодельный головной платок</value>
+  </data>
+  <data name="GEAR_RevolverAmmoSingle" xml:space="preserve">
+    <value>Патрон для револьвера</value>
+  </data>
+  <data name="GEAR_RevolverAmmoBox" xml:space="preserve">
+    <value>Патроны для револьвера</value>
+  </data>
+  <data name="GEAR_BirchbarkPrepared" xml:space="preserve">
+    <value>Приготовленная березовая кора</value>
+  </data>
+  <data name="GEAR_BirchbarkTea" xml:space="preserve">
+    <value>Березовый чай</value>
+  </data>
+  <data name="GEAR_Revolver" xml:space="preserve">
+    <value>Revolver</value>
+  </data>
 </root>
