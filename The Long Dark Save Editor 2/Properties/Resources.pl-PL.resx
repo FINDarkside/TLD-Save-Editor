@@ -1471,19 +1471,19 @@
     <value>Intruz</value>
   </data>
   <data name="ExperienceModeType_StoryFresh" xml:space="preserve">
-    <value>Story fresh</value>
+    <value>Historia: Świerzak</value>
   </data>
   <data name="ExperienceModeType_StoryHardened" xml:space="preserve">
-    <value>Story hardened</value>
+    <value>Historia: Zaprawiony</value>
   </data>
   <data name="ExperienceModeType_FourDaysOfNight" xml:space="preserve">
-    <value>Four days of night</value>
+    <value>Cztery Dni Nocy</value>
   </data>
   <data name="ExperienceModeType_ChallengeArchivist" xml:space="preserve">
-    <value>Challenge archivist</value>
+    <value>Wyzwanie: Archiwista</value>
   </data>
   <data name="ExperienceModeType_Custom" xml:space="preserve">
-    <value>Custom</value>
+    <value>Niestandardowy</value>
   </data>
   <data name="Position" xml:space="preserve">
     <value>Pozycja</value>
@@ -1564,6 +1564,6 @@
     <value>Herbata z kory brzozy</value>
   </data>
   <data name="GEAR_Revolver" xml:space="preserve">
-    <value>Revolver</value>
+    <value>Rewolwer</value>
   </data>
 </root>
