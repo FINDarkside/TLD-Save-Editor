@@ -303,6 +303,11 @@ namespace The_Long_Dark_Save_Editor_2
             Process.Start("https://discord.gg/evYPhQm");
         }
 
+        private void ViewOnGitHubClicked(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://github.com/FINDarkside/TLD-Save-Editor");
+        }
+
         private void Window_Closing(object sender, CancelEventArgs e)
         {
             Properties.Settings.Default.Save();

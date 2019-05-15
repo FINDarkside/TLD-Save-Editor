@@ -9,7 +9,7 @@
              d:DesignHeight="300" d:DesignWidth="300">
 
     <StackPanel Margin="0 20" >
-        <Button MaxWidth="230" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Foreground="#333" Click="ViewOnGithubClicked" Height="40">
+        <Button MaxWidth="230" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Foreground="#211F1F" Click="ViewOnGithubClicked" Height="40">
             <StackPanel Orientation="Horizontal">
                 <materialDesign:PackIcon Height="24" Width="24" Kind="GithubCircle" VerticalAlignment="Center" />
                 <TextBlock Margin="8 0 0 0" FontSize="20" VerticalAlignment="Center">View on GitHub</TextBlock>

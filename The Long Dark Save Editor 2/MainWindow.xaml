@@ -116,12 +116,18 @@
                 <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="0 0 20 0">
                     <Button Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Foreground="#7289DA" Click="JoinDiscordClicked" Height="40">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Discord" />
+                            <materialDesign:PackIcon Kind="Discord" Width="18" Height="18" />
                             <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">Discord group</TextBlock>
                         </StackPanel>
                     </Button>
-                    <Label Margin="10 0 0 0" VerticalAlignment="Center" Content="{x:Static p:Resources.TestBranch}"/>
-                    <ToggleButton Margin="5 0 0 0" IsChecked="{Binding TestBranch, Mode=TwoWay}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
+                    <Button Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Foreground="#211F1F" Click="JoinDiscordClicked" Height="40">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="GithubCircle" Height="20" Width="20" />
+                            <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">View on GitHub</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <!--<Label Margin="10 0 0 0" VerticalAlignment="Center" Content="{x:Static p:Resources.TestBranch}"/>
+                    <ToggleButton Margin="5 0 0 0" IsChecked="{Binding TestBranch, Mode=TwoWay}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>-->
                 </StackPanel>
             </Grid>
             <Rectangle DockPanel.Dock="Top" Fill="#A6B8C3" Height="1" ></Rectangle>
