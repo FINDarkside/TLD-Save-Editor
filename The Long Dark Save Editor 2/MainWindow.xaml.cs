@@ -24,7 +24,7 @@ namespace The_Long_Dark_Save_Editor_2
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         public static MainWindow Instance { get; set; }
-        public static VersionData Version { get { return new VersionData() { version = "2.13.3" }; } }
+        public static VersionData Version { get { return new VersionData() { version = "2.14" }; } }
 
         private GameSave currentSave;
         public GameSave CurrentSave { get { return currentSave; } set { SetPropertyField(ref currentSave, value); } }
@@ -74,7 +74,7 @@ namespace The_Long_Dark_Save_Editor_2
 #if DEBUG
             IsDebug = true;
             Debug.WriteLine(System.Threading.Thread.CurrentThread.CurrentUICulture);
-            //System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru-RU");
+            //System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("pl-PL");
 #endif
 
             appDataFileWatcher = new FileSystemWatcher();
