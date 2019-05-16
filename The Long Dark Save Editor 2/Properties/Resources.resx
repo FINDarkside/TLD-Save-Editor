@@ -1566,4 +1566,7 @@
   <data name="GEAR_Revolver" xml:space="preserve">
     <value>Revolver</value>
   </data>
+  <data name="RevolverSkillSP" xml:space="preserve">
+    <value>Revolver skill points</value>
+  </data>
 </root>

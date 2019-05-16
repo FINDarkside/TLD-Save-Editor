@@ -869,6 +869,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public Skill_ArcherySaveData Archery { get; set; }
         [Deserialize("m_Skill_ClothingRepairSerialized", true)]
         public Skill_ClothingRepairSaveData ClothingRepair { get; set; }
+        [Deserialize("m_Skill_RevolverSerialized", true)]
+        public Skill_RevolverSaveData Revolver;
     }
 
     public class Skill_FirestartingSaveData
@@ -905,6 +907,11 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     public class Skill_ClothingRepairSaveData
     {
         public int m_Points { get; set; }
+    }
+
+    public class Skill_RevolverSaveData
+    {
+        public int m_Points;
     }
 
     public class FeatEnabledTrackerSaveData
