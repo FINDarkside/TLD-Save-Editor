@@ -19,7 +19,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -367,15 +367,6 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Coastal Highway.
-        /// </summary>
-        public static string CoastalRegion {
-            get {
-                return ResourceManager.GetString("CoastalRegion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Cold fusion progress.
         /// </summary>
         public static string ColdFusionProgress {
@@ -412,15 +403,6 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Timberwolf Mountain.
-        /// </summary>
-        public static string CrashMountainRegion {
-            get {
-                return ResourceManager.GetString("CrashMountainRegion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Current calories.
         /// </summary>
         public static string CurrentCalories {
@@ -453,6 +435,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string ExperienceMode {
             get {
                 return ResourceManager.GetString("ExperienceMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Challenge archivist.
+        /// </summary>
+        public static string ExperienceModeType_ChallengeArchivist {
+            get {
+                return ResourceManager.GetString("ExperienceModeType_ChallengeArchivist", resourceCulture);
             }
         }
         
@@ -502,6 +493,24 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Custom.
+        /// </summary>
+        public static string ExperienceModeType_Custom {
+            get {
+                return ResourceManager.GetString("ExperienceModeType_Custom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Four days of night.
+        /// </summary>
+        public static string ExperienceModeType_FourDaysOfNight {
+            get {
+                return ResourceManager.GetString("ExperienceModeType_FourDaysOfNight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Interloper.
         /// </summary>
         public static string ExperienceModeType_Interloper {
@@ -534,6 +543,24 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string ExperienceModeType_Story {
             get {
                 return ResourceManager.GetString("ExperienceModeType_Story", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Story fresh.
+        /// </summary>
+        public static string ExperienceModeType_StoryFresh {
+            get {
+                return ResourceManager.GetString("ExperienceModeType_StoryFresh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Story hardened.
+        /// </summary>
+        public static string ExperienceModeType_StoryHardened {
+            get {
+                return ResourceManager.GetString("ExperienceModeType_StoryHardened", resourceCulture);
             }
         }
         
@@ -871,6 +898,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Broken Bear Spear.
+        /// </summary>
+        public static string GEAR_BearSpearBrokenStory {
+            get {
+                return ResourceManager.GetString("GEAR_BearSpearBrokenStory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bear Spear.
         /// </summary>
         public static string GEAR_BearSpearStory {
@@ -894,6 +930,24 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_BeefJerky {
             get {
                 return ResourceManager.GetString("GEAR_BeefJerky", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prepared Birch Bark .
+        /// </summary>
+        public static string GEAR_BirchbarkPrepared {
+            get {
+                return ResourceManager.GetString("GEAR_BirchbarkPrepared", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Birch Bark Tea.
+        /// </summary>
+        public static string GEAR_BirchbarkTea {
+            get {
+                return ResourceManager.GetString("GEAR_BirchbarkTea", resourceCulture);
             }
         }
         
@@ -2077,7 +2131,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Letter for Hank&apos;s Neice.
+        ///   Looks up a localized string similar to Letter for Hank&apos;s Niece.
         /// </summary>
         public static string GEAR_HankNeiceLetter {
             get {
@@ -2253,6 +2307,24 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_HunterJournalPage {
             get {
                 return ResourceManager.GetString("GEAR_HunterJournalPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Improvised Head Wrap.
+        /// </summary>
+        public static string GEAR_ImprovisedHat {
+            get {
+                return ResourceManager.GetString("GEAR_ImprovisedHat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Improvised Hand Wraps.
+        /// </summary>
+        public static string GEAR_ImprovisedMittens {
+            get {
+                return ResourceManager.GetString("GEAR_ImprovisedMittens", resourceCulture);
             }
         }
         
@@ -3139,6 +3211,33 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Revolver.
+        /// </summary>
+        public static string GEAR_Revolver {
+            get {
+                return ResourceManager.GetString("GEAR_Revolver", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Revolver Ammunition.
+        /// </summary>
+        public static string GEAR_RevolverAmmoBox {
+            get {
+                return ResourceManager.GetString("GEAR_RevolverAmmoBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Revolver Cartridge.
+        /// </summary>
+        public static string GEAR_RevolverAmmoSingle {
+            get {
+                return ResourceManager.GetString("GEAR_RevolverAmmoSingle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rick&apos;s Journal.
         /// </summary>
         public static string GEAR_RicksJournal {
@@ -3193,7 +3292,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rifle Cleaning Kit.
+        ///   Looks up a localized string similar to Firearm Cleaning Kit.
         /// </summary>
         public static string GEAR_RifleCleaningKit {
             get {
@@ -3333,6 +3432,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_Soda {
             get {
                 return ResourceManager.GetString("GEAR_Soda", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go! Energy Drink.
+        /// </summary>
+        public static string GEAR_SodaEnergy {
+            get {
+                return ResourceManager.GetString("GEAR_SodaEnergy", resourceCulture);
             }
         }
         
@@ -3841,15 +3949,6 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Crumbling Highway.
-        /// </summary>
-        public static string HighwayTransitionZone {
-            get {
-                return ResourceManager.GetString("HighwayTransitionZone", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Ice fishing skillpoints.
         /// </summary>
         public static string IceFishingSP {
@@ -3976,29 +4075,11 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mystery Lake.
-        /// </summary>
-        public static string LakeRegion {
-            get {
-                return ResourceManager.GetString("LakeRegion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Map.
         /// </summary>
         public static string Map {
             get {
                 return ResourceManager.GetString("Map", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Forlorn Muskeg.
-        /// </summary>
-        public static string MarshRegion {
-            get {
-                return ResourceManager.GetString("MarshRegion", resourceCulture);
             }
         }
         
@@ -4017,15 +4098,6 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string MeatAmount {
             get {
                 return ResourceManager.GetString("MeatAmount", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mountain Town.
-        /// </summary>
-        public static string MountainTownRegion {
-            get {
-                return ResourceManager.GetString("MountainTownRegion", resourceCulture);
             }
         }
         
@@ -4084,15 +4156,6 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ravine.
-        /// </summary>
-        public static string RavineTransitionZone {
-            get {
-                return ResourceManager.GetString("RavineTransitionZone", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Refresh.
         /// </summary>
         public static string Refresh {
@@ -4107,6 +4170,105 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string Region {
             get {
                 return ResourceManager.GetString("Region", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Coastal Highway.
+        /// </summary>
+        public static string RegionsWithMap_CoastalRegion {
+            get {
+                return ResourceManager.GetString("RegionsWithMap_CoastalRegion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Timberwolf Mountain.
+        /// </summary>
+        public static string RegionsWithMap_CrashMountainRegion {
+            get {
+                return ResourceManager.GetString("RegionsWithMap_CrashMountainRegion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crumbling Highway.
+        /// </summary>
+        public static string RegionsWithMap_HighwayTransitionZone {
+            get {
+                return ResourceManager.GetString("RegionsWithMap_HighwayTransitionZone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mystery Lake.
+        /// </summary>
+        public static string RegionsWithMap_LakeRegion {
+            get {
+                return ResourceManager.GetString("RegionsWithMap_LakeRegion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forlorn Muskeg.
+        /// </summary>
+        public static string RegionsWithMap_MarshRegion {
+            get {
+                return ResourceManager.GetString("RegionsWithMap_MarshRegion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mountain Town.
+        /// </summary>
+        public static string RegionsWithMap_MountainTownRegion {
+            get {
+                return ResourceManager.GetString("RegionsWithMap_MountainTownRegion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ravine.
+        /// </summary>
+        public static string RegionsWithMap_RavineTransitionZone {
+            get {
+                return ResourceManager.GetString("RegionsWithMap_RavineTransitionZone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hushed River Valley.
+        /// </summary>
+        public static string RegionsWithMap_RiverValleyRegion {
+            get {
+                return ResourceManager.GetString("RegionsWithMap_RiverValleyRegion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pleasant Valley.
+        /// </summary>
+        public static string RegionsWithMap_RuralRegion {
+            get {
+                return ResourceManager.GetString("RegionsWithMap_RuralRegion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Broken Railroad.
+        /// </summary>
+        public static string RegionsWithMap_TracksRegion {
+            get {
+                return ResourceManager.GetString("RegionsWithMap_TracksRegion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Desolation Point.
+        /// </summary>
+        public static string RegionsWithMap_WhalingStationRegion {
+            get {
+                return ResourceManager.GetString("RegionsWithMap_WhalingStationRegion", resourceCulture);
             }
         }
         
@@ -4138,6 +4300,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Revolver skill points.
+        /// </summary>
+        public static string RevolverSkillSP {
+            get {
+                return ResourceManager.GetString("RevolverSkillSP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rifle skillpoints.
         /// </summary>
         public static string RifleSP {
@@ -4147,29 +4318,11 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hushed River Valley.
-        /// </summary>
-        public static string RiverValleyRegion {
-            get {
-                return ResourceManager.GetString("RiverValleyRegion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Rounds in clip.
         /// </summary>
         public static string RoundsInClip {
             get {
                 return ResourceManager.GetString("RoundsInClip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Pleasant Valley.
-        /// </summary>
-        public static string RuralRegion {
-            get {
-                return ResourceManager.GetString("RuralRegion", resourceCulture);
             }
         }
         
@@ -4228,7 +4381,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Long Dark (v1.44) Save Editor.
+        ///   Looks up a localized string similar to The Long Dark (v1.50) Save Editor.
         /// </summary>
         public static string Title {
             get {
@@ -4242,15 +4395,6 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string Tools {
             get {
                 return ResourceManager.GetString("Tools", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Broken Railroad.
-        /// </summary>
-        public static string TracksRegion {
-            get {
-                return ResourceManager.GetString("TracksRegion", resourceCulture);
             }
         }
         
@@ -4269,15 +4413,6 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string Unknown {
             get {
                 return ResourceManager.GetString("Unknown", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Desolation Point.
-        /// </summary>
-        public static string WhalingStationRegion {
-            get {
-                return ResourceManager.GetString("WhalingStationRegion", resourceCulture);
             }
         }
     }

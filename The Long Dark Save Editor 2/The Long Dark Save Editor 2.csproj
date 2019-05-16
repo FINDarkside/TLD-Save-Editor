@@ -106,6 +106,11 @@
     </Compile>
     <Compile Include="Game data\AfflictionsContainer.cs" />
     <Compile Include="Helpers\DictionaryExtension.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Serialization\DeserializeAttribute.cs" />
     <Compile Include="Serialization\DynamicSerializable.cs" />
     <Compile Include="Helpers\BindableBase.cs" />
@@ -225,11 +230,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
