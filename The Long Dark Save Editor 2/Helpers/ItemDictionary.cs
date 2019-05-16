@@ -307,6 +307,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_BookRifleFirearmAdvanced", ItemCategory.Books, @"{""ResearchItem"": {}}");
             AddItemInfo("GEAR_BookArchery", ItemCategory.Books, @"{""ResearchItem"": {}}");
             AddItemInfo("GEAR_BookMending", ItemCategory.Books, @"{""ResearchItem"": {}}");
+            AddItemInfo("GEAR_BookRevolverFirearm", ItemCategory.Books, @"{""ResearchItem"": {}}");
 
             // Collectible
             AddItemInfo("GEAR_ClimbersJournal", ItemCategory.Collectible, @"{}");
