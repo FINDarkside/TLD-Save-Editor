@@ -38,6 +38,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,7 +48,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <LangVersion>default</LangVersion>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -93,6 +94,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\EnumWrapperConverter.cs" />
     <Compile Include="Converters\FourDoNBadgeCompletedConverter.cs" />
     <Compile Include="Converters\AvailableRegionConverter.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
@@ -102,6 +104,15 @@
     <Compile Include="ErrorDialog.xaml.cs">
       <DependentUpon>ErrorDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Game data\AfflictionsContainer.cs" />
+    <Compile Include="Helpers\DictionaryExtension.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Serialization\DeserializeAttribute.cs" />
+    <Compile Include="Serialization\DynamicSerializable.cs" />
     <Compile Include="Helpers\BindableBase.cs" />
     <Compile Include="Helpers\CLZF.cs" />
     <Compile Include="Converters\CategoryToItemsConverter.cs" />
@@ -111,7 +122,7 @@
     <Compile Include="Converters\PrefabNameConverter.cs" />
     <Compile Include="Helpers\EncryptString.cs" />
     <Compile Include="Game data\BootSaveGameData.cs" />
-    <Compile Include="Game data\Container classes.cs" />
+    <Compile Include="Game data\Afflictions.cs" />
     <Compile Include="Game data\Enums.cs" />
     <Compile Include="Game data\GlobalData.cs" />
     <Compile Include="Game data\GlobalSaveGameFormat.cs" />
@@ -119,8 +130,10 @@
     <Compile Include="GameSave.cs" />
     <Compile Include="Helpers\CommandHandler.cs" />
     <Compile Include="Helpers\EnumerationExtension.cs" />
+    <Compile Include="Serialization\EnumWrapper.cs" />
     <Compile Include="Helpers\ItemDictionary.cs" />
     <Compile Include="Helpers\MapDictionary.cs" />
+    <Compile Include="Serialization\ReflectionUtil.cs" />
     <Compile Include="Images\InjuriesBody.xaml.cs">
       <DependentUpon>InjuriesBody.xaml</DependentUpon>
     </Compile>
@@ -218,16 +231,12 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Properties\Resources.pl-PL.resx" />
     <EmbeddedResource Include="Properties\Resources.ru-RU.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.ru-RU.Designer.cs</LastGenOutput>

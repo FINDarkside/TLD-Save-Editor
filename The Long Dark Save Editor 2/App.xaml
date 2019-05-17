@@ -40,7 +40,7 @@
             <Style TargetType="FrameworkElement" x:Key="HideIfNotCustomDifficulty">
                 <Setter Property="Visibility" Value="Collapsed"/>
                 <Style.Triggers>
-                    <DataTrigger Binding="{Binding CurrentSave.Global.ExperienceModeManager.m_CurrentModeType}" Value="Custom">
+                    <DataTrigger Binding="{Binding CurrentSave.Global.ExperienceModeManager.m_CurrentModeType.Value}" Value="Custom">
                         <Setter Property="Visibility" Value="Visible"/>
                     </DataTrigger>
                 </Style.Triggers>

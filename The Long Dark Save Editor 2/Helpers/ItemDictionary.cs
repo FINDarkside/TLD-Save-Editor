@@ -47,6 +47,9 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_EmergencyStim", ItemCategory.FirstAid, @"{}");
             AddItemInfo("GEAR_ReishiPrepared", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_RosehipsPrepared", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_SodaEnergy", ItemCategory.FirstAid, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 0.2}");
+            AddItemInfo("GEAR_BirchbarkPrepared", ItemCategory.FirstAid, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 0.2}");
+            AddItemInfo("GEAR_BirchbarkTea", ItemCategory.FirstAid, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 0.2}");
 
             // Clothing
             AddItemInfo("GEAR_Balaclava", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
@@ -125,6 +128,8 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_RabbitskinHat", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
             AddItemInfo("GEAR_CottonSocksStart", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
             AddItemInfo("GEAR_LongUnderwearStart", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+            AddItemInfo("GEAR_ImprovisedMittens", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+            AddItemInfo("GEAR_ImprovisedHat", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 
             // Food
             AddItemInfo("GEAR_BeefJerky", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 350}}");
@@ -237,6 +242,10 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_HardCase_hangar", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_BearSpear", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_BearSpearStory", ItemCategory.Tools, @"{}", true);
+            AddItemInfo("GEAR_BearSpearBrokenStory", ItemCategory.Tools, @"{}", true);
+            AddItemInfo("GEAR_RevolverAmmoSingle", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_RevolverAmmoBox", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_Revolver", ItemCategory.Tools, @"{""WeaponItem"": {""m_RoundsInClipProxy"": 5}}");
 
             // Materials
             AddItemInfo("GEAR_ArrowHead", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""InProgressItem"": {""m_PercentComplete"": 100}}");
@@ -298,6 +307,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_BookRifleFirearmAdvanced", ItemCategory.Books, @"{""ResearchItem"": {}}");
             AddItemInfo("GEAR_BookArchery", ItemCategory.Books, @"{""ResearchItem"": {}}");
             AddItemInfo("GEAR_BookMending", ItemCategory.Books, @"{""ResearchItem"": {}}");
+            AddItemInfo("GEAR_BookRevolverFirearm", ItemCategory.Books, @"{""ResearchItem"": {}}");
 
             // Collectible
             AddItemInfo("GEAR_ClimbersJournal", ItemCategory.Collectible, @"{}");

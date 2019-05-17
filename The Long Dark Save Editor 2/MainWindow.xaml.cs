@@ -24,7 +24,7 @@ namespace The_Long_Dark_Save_Editor_2
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         public static MainWindow Instance { get; set; }
-        public static VersionData Version { get { return new VersionData() { version = "2.13.3" }; } }
+        public static VersionData Version { get { return new VersionData() { version = "2.14" }; } }
 
         private GameSave currentSave;
         public GameSave CurrentSave { get { return currentSave; } set { SetPropertyField(ref currentSave, value); } }
@@ -65,10 +65,16 @@ namespace The_Long_Dark_Save_Editor_2
 
         public MainWindow()
         {
+            JsonConvert.DefaultSettings = () => new JsonSerializerSettings
+            {
+                //MissingMemberHandling = MissingMemberHandling.Error,
+                FloatFormatHandling = FloatFormatHandling.Symbol,
+            };
+
 #if DEBUG
             IsDebug = true;
             Debug.WriteLine(System.Threading.Thread.CurrentThread.CurrentUICulture);
-            //System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru-RU");
+            //System.Threading.Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("pl-PL");
 #endif
 
             appDataFileWatcher = new FileSystemWatcher();
@@ -85,12 +91,6 @@ namespace The_Long_Dark_Save_Editor_2
 
             TestBranch = Properties.Settings.Default.TestBranch;
             Title += " " + Version.ToString();
-
-            JsonConvert.DefaultSettings = () => new JsonSerializerSettings
-            {
-                //MissingMemberHandling = MissingMemberHandling.Error,
-                FloatFormatHandling = FloatFormatHandling.Symbol,
-            };
 
         }
 
@@ -110,7 +110,6 @@ namespace The_Long_Dark_Save_Editor_2
                     dialogHost.IsOpen = false;
                     ErrorDialog.Show("Failed to check for new versions", ex != null ? (ex.Message + "\n" + e.ToString()) : null);
                 }
-
             }
 
             if (!Properties.Settings.Default.BugReportWarningShown)
@@ -302,6 +301,11 @@ namespace The_Long_Dark_Save_Editor_2
         private void JoinDiscordClicked(object sender, RoutedEventArgs e)
         {
             Process.Start("https://discord.gg/evYPhQm");
+        }
+
+        private void ViewOnGitHubClicked(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://github.com/FINDarkside/TLD-Save-Editor");
         }
 
         private void Window_Closing(object sender, CancelEventArgs e)

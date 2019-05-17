@@ -16,15 +16,16 @@
         <converters:PercentageConverter x:Key="PercentageConverter" />
         <converters:AvailableRegionConverter x:Key="AvailableRegionConverter" />
         <converters:RegionMapExistsConverter x:Key="RegionMapExistsConverter" />
+        <converters:EnumWrapperConverter x:Key="EnumWrapperConverter" />
         <System:Double x:Key="double100">100</System:Double>
     </UserControl.Resources>
-    
+
     <StackPanel Margin="10 10">
         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
             <Label Width="130" Content="{x:Static p:Resources.ExperienceMode}"/>
-            <ComboBox Margin="10 0 0 0" ItemsSource="{Binding Source={helpers:EnumerationExtension {x:Type gameData:ExperienceModeType}}}" 
-                      DisplayMemberPath="Description" SelectedValue="{Binding CurrentSave.Global.ExperienceModeManager.m_CurrentModeType}"  
-                      SelectedValuePath="Value"  Width="160" SelectedIndex="0"/>
+            <ComboBox Margin="10 0 0 0" Width="160" SelectedIndex="0" SelectedValuePath="Value" DisplayMemberPath="Description"
+                      ItemsSource="{Binding CurrentSave.Global.ExperienceModeManager.m_CurrentModeType, Converter={StaticResource EnumWrapperConverter}}" 
+                      SelectedValue="{Binding CurrentSave.Global.ExperienceModeManager.m_CurrentModeType.Value}" />
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0 0 0 5" Style="{StaticResource HideIfNotCustomDifficulty}">
             <Label Width="130" Content="Custom mode"/>
@@ -33,14 +34,8 @@
         <StackPanel Margin="0 0 0 10" Orientation="Horizontal">
             <Label Width="130" Content="{x:Static p:Resources.Region}"/>
             <ComboBox Name="cbCurrentRegion" Margin="10 0 0 0" DisplayMemberPath="Description" SelectedValuePath="Value"  Width="160"
-                      SelectedValue="{Binding CurrentSave.Boot.m_SceneName}" >
-                <ComboBox.ItemsSource>
-                    <MultiBinding Converter="{StaticResource AvailableRegionConverter}">
-                        <Binding  Source="{x:Static helpers:MapDictionary.MapNames}"/>
-                        <Binding Path="CurrentSave.OriginalRegion" />
-                    </MultiBinding>
-                </ComboBox.ItemsSource>
-            </ComboBox>
+                      ItemsSource="{Binding CurrentSave.Boot.m_SceneName, Converter={StaticResource EnumWrapperConverter}}"
+                      SelectedValue="{Binding CurrentSave.Boot.m_SceneName.Value}" />
         </StackPanel>
         <StackPanel Margin="0 0 0 10">
             <StackPanel Margin="0 0 0 0" Orientation="Horizontal">
@@ -64,7 +59,7 @@
         </StackPanel>
         <CheckBox IsChecked="{Binding CurrentSave.Global.Condition.m_NeverDieProxy}" Margin="0 0 0 5" Content="{x:Static p:Resources.NeverDie}"/>
         <CheckBox IsChecked="{Binding CurrentSave.Global.Condition.m_Invulnerable}" Margin="0 0 0 5" Content="{x:Static p:Resources.Invulnerable}"/>
-        <CheckBox IsChecked="{Binding CurrentSave.Global.Inventory.ForceOverrideWeight}" Margin="0 0 0 5" Content="{x:Static p:Resources.InfiniteCarry}"/>
+        <CheckBox IsChecked="{Binding CurrentSave.Global.Inventory.m_ForceOverrideWeight}" Margin="0 0 0 5" Content="{x:Static p:Resources.InfiniteCarry}"/>
 
         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
             <Label VerticalAlignment="Center" Width="130" Content="{x:Static p:Resources.CurrentCalories}"/>

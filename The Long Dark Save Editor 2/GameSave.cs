@@ -10,9 +10,17 @@ namespace The_Long_Dark_Save_Editor_2
     public class GameSave
     {
         public long LastSaved { get; set; }
-        public BootSaveGameFormat Boot { get; set; }
-        public GlobalSaveGameData Global { get; set; }
-        public SlotData SlotData { get; set; }
+        private DynamicSerializable<BootSaveGameFormat> dynamicBoot;
+        public BootSaveGameFormat Boot { get { return dynamicBoot.Obj; } }
+
+        private DynamicSerializable<GlobalSaveGameFormat> dynamicGlobal;
+        public GlobalSaveGameFormat Global { get { return dynamicGlobal.Obj; } }
+
+        public AfflictionsContainer Afflictions { get; set; }
+
+        private DynamicSerializable<SlotData> dynamicSlotData;
+        public SlotData SlotData { get { return dynamicSlotData.Obj; } }
+
         public string OriginalRegion { get; set; }
         private float[] originalPosition;
 
@@ -21,12 +29,18 @@ namespace The_Long_Dark_Save_Editor_2
         public void LoadSave(string path)
         {
             this.path = path;
-            SlotData = Util.DeserializeObject<SlotData>(EncryptString.DecompressBytesToString(File.ReadAllBytes(path)));
+            string slotJson = EncryptString.Decompress(File.ReadAllBytes(path));
+            dynamicSlotData = new DynamicSerializable<SlotData>(slotJson);
 
-            Boot = Util.DeserializeObject<BootSaveGameFormat>(EncryptString.DecompressBytesToString(SlotData.m_Dict["boot"]));
-            OriginalRegion = Boot.m_SceneName;
+            var bootJson = EncryptString.Decompress(SlotData.m_Dict["boot"]);
+            dynamicBoot = new DynamicSerializable<BootSaveGameFormat>(bootJson);
+            OriginalRegion = Boot.m_SceneName.Value;
 
-            Global = new GlobalSaveGameData(EncryptString.DecompressBytesToString(SlotData.m_Dict["global"]));
+            var globalJson = EncryptString.Decompress(SlotData.m_Dict["global"]);
+            dynamicGlobal = new DynamicSerializable<GlobalSaveGameFormat>(globalJson);
+
+            Afflictions = new AfflictionsContainer(Global);
+
             var pos = Global.PlayerManager.m_SaveGamePosition;
             originalPosition = new float[] { pos[0], pos[1], pos[2] };
         }
@@ -34,24 +48,25 @@ namespace The_Long_Dark_Save_Editor_2
         public void Save()
         {
             LastSaved = DateTime.Now.Ticks;
-            var bootSerialized = Util.SerializeObject(Boot);
-            SlotData.m_Dict["boot"] = EncryptString.CompressStringToBytes(bootSerialized);
+            var bootSerialized = dynamicBoot.Serialize();
+            SlotData.m_Dict["boot"] = EncryptString.Compress(bootSerialized);
 
             // If position is changed, set z coordinate to float.infinity to avoid going under terrain
             var pos = Global.PlayerManager.m_SaveGamePosition;
-            if (OriginalRegion != Boot.m_SceneName || pos[0] != originalPosition[0] || pos[1] != originalPosition[1] || pos[2] != originalPosition[2])
-            {
+            if (OriginalRegion != Boot.m_SceneName.Value || pos[0] != originalPosition[0] || pos[1] != originalPosition[1] || pos[2] != originalPosition[2])
                 pos[1] = 9999999;
-            }
-            Global.SceneTransistion.m_SceneSaveFilenameCurrent = Boot.m_SceneName;
-            Global.SceneTransistion.m_SceneSaveFilenameNextLoad = Boot.m_SceneName;
+
+            Global.SceneTransition.m_SceneSaveFilenameCurrent = Boot.m_SceneName.Value;
+            Global.SceneTransition.m_SceneSaveFilenameNextLoad = Boot.m_SceneName.Value;
             Global.PlayerManager.m_CheatsUsed = true;
+            Afflictions.SerializeTo(Global);
 
-            var globalSerialized = Global.Serialize();
-            SlotData.m_Dict["global"] = EncryptString.CompressStringToBytes(globalSerialized);
+            var globalSerialized = dynamicGlobal.Serialize();
+            SlotData.m_Dict["global"] = EncryptString.Compress(globalSerialized);
 
-            var slotDataSerialized = Util.SerializeObject(SlotData);
-            File.WriteAllBytes(path, EncryptString.CompressStringToBytes(slotDataSerialized));
+            SlotData.m_Timestamp = DateTime.Now;
+            var slotDataSerialized = dynamicSlotData.Serialize();
+            File.WriteAllBytes(path, EncryptString.Compress(slotDataSerialized));
         }
     }
 }

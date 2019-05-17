@@ -23,10 +23,9 @@ namespace The_Long_Dark_Save_Editor_2.Converters
             {
                 if (entry.Value.category == cat && !entry.Value.hide)
                 {
-                    var member = new EnumerationMember() { Value = entry.Key, Description = (string)Resources.ResourceManager.GetObject(entry.Key) };//Description = entry.Value.inGameName };
+                    var member = new EnumerationMember() { Value = entry.Key, Description = Resources.ResourceManager.GetString(entry.Key) ?? entry.Key };
                     result.Add(member);
                 }
-
             }
             result = result.OrderBy(item => item.Description).ToList();
             return result;

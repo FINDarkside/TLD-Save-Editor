@@ -117,81 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AddItem" xml:space="preserve">
-    <value>Добавить предмет</value>
-  </data>
-  <data name="Amount" xml:space="preserve">
-    <value>Колличество</value>
-  </data>
-  <data name="AmountLiter" xml:space="preserve">
-    <value>Колличество (литры)</value>
-  </data>
-  <data name="ArcherySP" xml:space="preserve">
-    <value>Стрельба из лука</value>
-  </data>
-  <data name="Books" xml:space="preserve">
-    <value>Книги</value>
-  </data>
-  <data name="BookSmartProgress" xml:space="preserve">
-    <value>Начитанность</value>
-  </data>
-  <data name="Calories" xml:space="preserve">
-    <value>Калории</value>
-  </data>
-  <data name="Cancel" xml:space="preserve">
-    <value>Отменить</value>
-  </data>
-  <data name="CarcassHarvestingSP" xml:space="preserve">
-    <value>Заготовка туши</value>
-  </data>
-  <data name="Clothing" xml:space="preserve">
-    <value>Одежда</value>
-  </data>
-  <data name="ClothingRepairSP" xml:space="preserve">
-    <value>Ремонт одежды</value>
-  </data>
-  <data name="ColdFusionProgress" xml:space="preserve">
-    <value>Закалка</value>
-  </data>
-  <data name="Collectible" xml:space="preserve">
-    <value>Коллекция</value>
-  </data>
-  <data name="Condition" xml:space="preserve">
-    <value>Состояние</value>
-  </data>
-  <data name="CookingSP" xml:space="preserve">
-    <value>Приготовление</value>
-  </data>
-  <data name="CurrentCalories" xml:space="preserve">
-    <value>Текущие калории</value>
-  </data>
-  <data name="Download" xml:space="preserve">
-    <value>Скачать</value>
-  </data>
-  <data name="EfficientMachineProgress" xml:space="preserve">
-    <value>Механика</value>
-  </data>
-  <data name="Fatigue" xml:space="preserve">
-    <value>Усталость</value>
-  </data>
-  <data name="FireMasterProgress" xml:space="preserve">
-    <value>Розжиг.Общий прогресс</value>
-  </data>
-  <data name="FireStartingSP" xml:space="preserve">
-    <value>Розжиг</value>
-  </data>
-  <data name="FirstAid" xml:space="preserve">
-    <value>Первая помощь</value>
-  </data>
-  <data name="Food" xml:space="preserve">
-    <value>Еда</value>
-  </data>
-  <data name="FreeRunnerProgress" xml:space="preserve">
-    <value>Свободный бег</value>
-  </data>
-  <data name="Freezing" xml:space="preserve">
-    <value>Замерзание</value>
-  </data>
   <data name="GEAR_BottleAntibiotics" xml:space="preserve">
     <value>Антибиотики</value>
   </data>
@@ -613,7 +538,7 @@
     <value>Ружейный патрон</value>
   </data>
   <data name="GEAR_RifleCleaningKit" xml:space="preserve">
-    <value>Набор для чистки ружья</value>
+    <value>Набор для чистки огнестрельного оружия</value>
   </data>
   <data name="GEAR_Rope" xml:space="preserve">
     <value>Альпинистский трос</value>
@@ -933,305 +858,17 @@
   <data name="GEAR_WaterTowerNote" xml:space="preserve">
     <value>Записка Водонапорной башни</value>
   </data>
-  <data name="Health" xml:space="preserve">
-    <value>Здоровье</value>
-  </data>
-  <data name="Hidden" xml:space="preserve">
-    <value>Спрятанное</value>
-  </data>
-  <data name="IceFishingSP" xml:space="preserve">
-    <value>Подледная рыбалка</value>
-  </data>
-  <data name="InfiniteCarry" xml:space="preserve">
-    <value>Безграничная сила</value>
-  </data>
-  <data name="Injuries" xml:space="preserve">
-    <value>Повреждение</value>
-  </data>
-  <data name="Inventory" xml:space="preserve">
-    <value>Инвентарь</value>
-  </data>
-  <data name="Invulnerable" xml:space="preserve">
-    <value>Неуязвимый</value>
-  </data>
-  <data name="Materials" xml:space="preserve">
-    <value>Материалы</value>
-  </data>
-  <data name="NeverDie" xml:space="preserve">
-    <value>Бессмертный</value>
-  </data>
-  <data name="Player" xml:space="preserve">
-    <value>Игрок</value>
-  </data>
-  <data name="Profile" xml:space="preserve">
-    <value>Профиль</value>
-  </data>
-  <data name="Progress" xml:space="preserve">
-    <value>Прогресс</value>
-  </data>
-  <data name="Refresh" xml:space="preserve">
-    <value>Обновить</value>
-  </data>
-  <data name="Remove" xml:space="preserve">
-    <value>Удалить</value>
-  </data>
-  <data name="RemoveAll" xml:space="preserve">
-    <value>Удалить все</value>
-  </data>
-  <data name="RepairAll" xml:space="preserve">
-    <value>Починить все</value>
-  </data>
-  <data name="RifleSP" xml:space="preserve">
-    <value>Винтовка</value>
-  </data>
-  <data name="RoundsInClip" xml:space="preserve">
-    <value>Патроны в обойме</value>
-  </data>
-  <data name="Save" xml:space="preserve">
-    <value>Сохранить</value>
-  </data>
-  <data name="Skills" xml:space="preserve">
-    <value>Навыки</value>
-  </data>
-  <data name="SnowWalkerProgress" xml:space="preserve">
-    <value>Ходьба по снегу</value>
-  </data>
-  <data name="TestBranch" xml:space="preserve">
-    <value>Сборка "Test branch"</value>
-  </data>
-  <data name="Thirst" xml:space="preserve">
-    <value>Жажда</value>
-  </data>
-  <data name="TimeEvolving" xml:space="preserve">
-    <value>Затраченное время (часы)</value>
-  </data>
-  <data name="Title" xml:space="preserve">
-    <value>The Long Dark (v1.44) Редактор сохранений</value>
-  </data>
-  <data name="Tools" xml:space="preserve">
-    <value>Инструменты</value>
-  </data>
-  <data name="Traits" xml:space="preserve">
-    <value>Особенности</value>
-  </data>
-  <data name="Unknown" xml:space="preserve">
-    <value>Неизвестное</value>
-  </data>
   <data name="GEAR_ClimbingSocks" xml:space="preserve">
     <value>Альпинистские носки</value>
   </data>
-  <data name="Afflictions" xml:space="preserve">
-    <value>Состояния</value>
-  </data>
-  <data name="ActionCure" xml:space="preserve">
-    <value>Лечение</value>
-  </data>
-  <data name="AfflictionType_BloodLoss" xml:space="preserve">
-    <value>Кровотечение</value>
-  </data>
-  <data name="AfflictionType_Burns" xml:space="preserve">
-    <value>Ожоги</value>
-  </data>
-  <data name="AfflictionType_Dysentery" xml:space="preserve">
-    <value>Дизентерия</value>
-  </data>
-  <data name="AfflictionType_Infection" xml:space="preserve">
-    <value>Инфекция</value>
-  </data>
-  <data name="AfflictionType_FoodPoisioning" xml:space="preserve">
-    <value>Пищевое отравление</value>
-  </data>
-  <data name="AfflictionType_SprainedAnkle" xml:space="preserve">
-    <value>Вывих лодыжки</value>
-  </data>
-  <data name="AfflictionType_InfectionRisk" xml:space="preserve">
-    <value>Риск заражения</value>
-  </data>
-  <data name="AfflictionType_SprainedWrist" xml:space="preserve">
-    <value>Вывих кисти</value>
-  </data>
-  <data name="AfflictionType_Frostbite" xml:space="preserve">
-    <value>Обморожение</value>
-  </data>
-  <data name="AfflictionType_Hypothermia" xml:space="preserve">
-    <value>Переохлаждение</value>
-  </data>
-  <data name="AfflictionType_ReducedFatigue" xml:space="preserve">
-    <value>Усталость снизилась</value>
-  </data>
-  <data name="AfflictionType_ImprovedRest" xml:space="preserve">
-    <value>Более эффективный отдых</value>
-  </data>
-  <data name="AfflictionType_WarmingUp" xml:space="preserve">
-    <value>Согревание</value>
-  </data>
-  <data name="AfflictionType_HypothermiaRisk" xml:space="preserve">
-    <value>Риск переохлаждения</value>
-  </data>
-  <data name="AfflictionType_CabinFever" xml:space="preserve">
-    <value>Клаустрафобия</value>
-  </data>
-  <data name="AfflictionType_IntestinalParasitesRisk" xml:space="preserve">
-    <value>Риск кишечных паразитов</value>
-  </data>
-  <data name="AfflictionType_IntestinalParasites" xml:space="preserve">
-    <value>Кишечные паразиты</value>
-  </data>
-  <data name="AfflictionType_SprainedWristMajor" xml:space="preserve">
-    <value>Серьезное растяжение кисти</value>
-  </data>
-  <data name="AfflictionType_CabinFeverRisk" xml:space="preserve">
-    <value>Риск клаустрафобии</value>
-  </data>
-  <data name="AfflictionType_FrostbiteRisk" xml:space="preserve">
-    <value>Риск обморожения</value>
-  </data>
-  <data name="ItemCategory_Clothing" xml:space="preserve">
-    <value>Одежда</value>
-  </data>
-  <data name="ItemCategory_Food" xml:space="preserve">
-    <value>Еда</value>
-  </data>
-  <data name="ItemCategory_Tools" xml:space="preserve">
-    <value>Инструменты</value>
-  </data>
-  <data name="ItemCategory_Materials" xml:space="preserve">
-    <value>Материалы</value>
-  </data>
-  <data name="ItemCategory_Collectible" xml:space="preserve">
-    <value>Коллекция</value>
-  </data>
-  <data name="ItemCategory_Books" xml:space="preserve">
-    <value>Книги</value>
-  </data>
-  <data name="ItemCategory_Hidden" xml:space="preserve">
-    <value>Спрятанное</value>
-  </data>
-  <data name="ItemCategory_Unknown" xml:space="preserve">
-    <value>Неизвестное</value>
-  </data>
-  <data name="About" xml:space="preserve">
-    <value>О программе</value>
-  </data>
   <data name="GEAR_BottleHydrogenPeroxide" xml:space="preserve">
     <value>Антисептик</value>
-  </data>
-  <data name="ItemCategory_FirstAid" xml:space="preserve">
-    <value>Первая помощь</value>
   </data>
   <data name="GEAR_Water500ml" xml:space="preserve">
     <value>Бутылка воды</value>
   </data>
   <data name="GEAR_Water1000ml" xml:space="preserve">
     <value>Бутылка воды</value>
-  </data>
-  <data name="ExperienceMode" xml:space="preserve">
-    <value>Experience mode</value>
-  </data>
-  <data name="ExperienceModeType_Pilgrim" xml:space="preserve">
-    <value>Pilgrim</value>
-  </data>
-  <data name="ExperienceModeType_Voyageur" xml:space="preserve">
-    <value>Voyageur</value>
-  </data>
-  <data name="ExperienceModeType_Stalker" xml:space="preserve">
-    <value>Stalker</value>
-  </data>
-  <data name="ExperienceModeType_Story" xml:space="preserve">
-    <value>Story</value>
-  </data>
-  <data name="ExperienceModeType_ChallengeRescue" xml:space="preserve">
-    <value>Hopeless Rescue</value>
-  </data>
-  <data name="ExperienceModeType_ChallengeHunted" xml:space="preserve">
-    <value>The Hunted</value>
-  </data>
-  <data name="ExperienceModeType_ChallengeWhiteout" xml:space="preserve">
-    <value>Whiteout</value>
-  </data>
-  <data name="ExperienceModeType_ChallengeNomad" xml:space="preserve">
-    <value>Nomad</value>
-  </data>
-  <data name="ExperienceModeType_ChallengeHuntedPart2" xml:space="preserve">
-    <value>The Hunted, Part 2</value>
-  </data>
-  <data name="ExperienceModeType_Interloper" xml:space="preserve">
-    <value>Interloper</value>
-  </data>
-  <data name="Position" xml:space="preserve">
-    <value>Position</value>
-  </data>
-  <data name="Region" xml:space="preserve">
-    <value>Region</value>
-  </data>
-  <data name="OpenMapCommand" xml:space="preserve">
-    <value>Open map</value>
-  </data>
-  <data name="CoastalRegion" xml:space="preserve">
-    <value>Coastal Highway</value>
-  </data>
-  <data name="LakeRegion" xml:space="preserve">
-    <value>Mystery Lake</value>
-  </data>
-  <data name="WhalingStationRegion" xml:space="preserve">
-    <value>Desolation Point</value>
-  </data>
-  <data name="RuralRegion" xml:space="preserve">
-    <value>Pleasant Valley</value>
-  </data>
-  <data name="CrashMountainRegion" xml:space="preserve">
-    <value>Timberwolf Mountain</value>
-  </data>
-  <data name="MarshRegion" xml:space="preserve">
-    <value>Forlorn Muskeg</value>
-  </data>
-  <data name="RavineTransitionZone" xml:space="preserve">
-    <value>Ravine</value>
-  </data>
-  <data name="HighwayTransitionZone" xml:space="preserve">
-    <value>Old Island Connector</value>
-  </data>
-  <data name="Map" xml:space="preserve">
-    <value>Map</value>
-  </data>
-  <data name="GEAR_WolfQuarter" xml:space="preserve">
-    <value>Четверть туши волка</value>
-  </data>
-  <data name="GEAR_WolfCarcass" xml:space="preserve">
-    <value>Остов волка</value>
-  </data>
-  <data name="GEAR_BearQuarter" xml:space="preserve">
-    <value>Четверть туши медведя</value>
-  </data>
-  <data name="GEAR_StagQuarter" xml:space="preserve">
-    <value>Четверть туши оленя</value>
-  </data>
-  <data name="GEAR_RabbitCarcass" xml:space="preserve">
-    <value>Туша кролика</value>
-  </data>
-  <data name="GEAR_Stone" xml:space="preserve">
-    <value>Камень</value>
-  </data>
-  <data name="GEAR_Charcoal" xml:space="preserve">
-    <value>Древесный уголь</value>
-  </data>
-  <data name="GEAR_BookFopen" xml:space="preserve">
-    <value>Книга</value>
-  </data>
-  <data name="GEAR_LampFuelFull" xml:space="preserve">
-    <value>Топливо для фонаря</value>
-  </data>
-  <data name="GEAR_Placeholder" xml:space="preserve">
-    <value>Туша кролика</value>
-  </data>
-  <data name="GutAmount" xml:space="preserve">
-    <value>Guts</value>
-  </data>
-  <data name="HideAmount" xml:space="preserve">
-    <value>Hides</value>
-  </data>
-  <data name="MeatAmount" xml:space="preserve">
-    <value>Meat (kg)</value>
   </data>
   <data name="GEAR_Flashlight" xml:space="preserve">
     <value>Фонарик</value>
@@ -1514,5 +1151,425 @@
   </data>
   <data name="GEAR_FlareGunCase_hangar" xml:space="preserve">
     <value>Сигнальный пистолет</value>
+  </data>
+  <data name="GEAR_WolfQuarter" xml:space="preserve">
+    <value>Четверть туши волка</value>
+  </data>
+  <data name="GEAR_WolfCarcass" xml:space="preserve">
+    <value>Остов волка</value>
+  </data>
+  <data name="GEAR_BearQuarter" xml:space="preserve">
+    <value>Четверть туши медведя</value>
+  </data>
+  <data name="GEAR_StagQuarter" xml:space="preserve">
+    <value>Четверть туши оленя</value>
+  </data>
+  <data name="GEAR_RabbitCarcass" xml:space="preserve">
+    <value>Туша кролика</value>
+  </data>
+  <data name="GEAR_Stone" xml:space="preserve">
+    <value>Камень</value>
+  </data>
+  <data name="GEAR_Charcoal" xml:space="preserve">
+    <value>Древесный уголь</value>
+  </data>
+  <data name="GEAR_BookFopen" xml:space="preserve">
+    <value>Книга</value>
+  </data>
+  <data name="GEAR_LampFuelFull" xml:space="preserve">
+    <value>Топливо для фонаря</value>
+  </data>
+  <data name="GEAR_Placeholder" xml:space="preserve">
+    <value>Туша кролика</value>
+  </data>
+  <data name="AddItem" xml:space="preserve">
+    <value>Добавить предмет</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Колличество</value>
+  </data>
+  <data name="AmountLiter" xml:space="preserve">
+    <value>Колличество (литры)</value>
+  </data>
+  <data name="ArcherySP" xml:space="preserve">
+    <value>Стрельба из лука</value>
+  </data>
+  <data name="Books" xml:space="preserve">
+    <value>Книги</value>
+  </data>
+  <data name="BookSmartProgress" xml:space="preserve">
+    <value>Начитанность</value>
+  </data>
+  <data name="Calories" xml:space="preserve">
+    <value>Калории</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="CarcassHarvestingSP" xml:space="preserve">
+    <value>Заготовка туши</value>
+  </data>
+  <data name="Clothing" xml:space="preserve">
+    <value>Одежда</value>
+  </data>
+  <data name="ClothingRepairSP" xml:space="preserve">
+    <value>Ремонт одежды</value>
+  </data>
+  <data name="ColdFusionProgress" xml:space="preserve">
+    <value>Закалка</value>
+  </data>
+  <data name="Collectible" xml:space="preserve">
+    <value>Коллекция</value>
+  </data>
+  <data name="Condition" xml:space="preserve">
+    <value>Состояние</value>
+  </data>
+  <data name="CookingSP" xml:space="preserve">
+    <value>Приготовление</value>
+  </data>
+  <data name="CurrentCalories" xml:space="preserve">
+    <value>Текущие калории</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Скачать</value>
+  </data>
+  <data name="EfficientMachineProgress" xml:space="preserve">
+    <value>Механика</value>
+  </data>
+  <data name="Fatigue" xml:space="preserve">
+    <value>Усталость</value>
+  </data>
+  <data name="FireMasterProgress" xml:space="preserve">
+    <value>Розжиг.Общий прогресс</value>
+  </data>
+  <data name="FireStartingSP" xml:space="preserve">
+    <value>Розжиг</value>
+  </data>
+  <data name="FirstAid" xml:space="preserve">
+    <value>Первая помощь</value>
+  </data>
+  <data name="Food" xml:space="preserve">
+    <value>Еда</value>
+  </data>
+  <data name="FreeRunnerProgress" xml:space="preserve">
+    <value>Свободный бег</value>
+  </data>
+  <data name="Freezing" xml:space="preserve">
+    <value>Замерзание</value>
+  </data>
+  <data name="Health" xml:space="preserve">
+    <value>Здоровье</value>
+  </data>
+  <data name="Hidden" xml:space="preserve">
+    <value>Спрятанное</value>
+  </data>
+  <data name="IceFishingSP" xml:space="preserve">
+    <value>Подледная рыбалка</value>
+  </data>
+  <data name="InfiniteCarry" xml:space="preserve">
+    <value>Безграничная сила</value>
+  </data>
+  <data name="Injuries" xml:space="preserve">
+    <value>Повреждение</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Инвентарь</value>
+  </data>
+  <data name="Invulnerable" xml:space="preserve">
+    <value>Неуязвимый</value>
+  </data>
+  <data name="Materials" xml:space="preserve">
+    <value>Материалы</value>
+  </data>
+  <data name="NeverDie" xml:space="preserve">
+    <value>Бессмертный</value>
+  </data>
+  <data name="Player" xml:space="preserve">
+    <value>Игрок</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Профиль</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Прогресс</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="RemoveAll" xml:space="preserve">
+    <value>Удалить все</value>
+  </data>
+  <data name="RepairAll" xml:space="preserve">
+    <value>Починить все</value>
+  </data>
+  <data name="RifleSP" xml:space="preserve">
+    <value>Винтовка</value>
+  </data>
+  <data name="RoundsInClip" xml:space="preserve">
+    <value>Патроны в обойме</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="Skills" xml:space="preserve">
+    <value>Навыки</value>
+  </data>
+  <data name="SnowWalkerProgress" xml:space="preserve">
+    <value>Ходьба по снегу</value>
+  </data>
+  <data name="TestBranch" xml:space="preserve">
+    <value>Сборка "Test branch"</value>
+  </data>
+  <data name="Thirst" xml:space="preserve">
+    <value>Жажда</value>
+  </data>
+  <data name="TimeEvolving" xml:space="preserve">
+    <value>Затраченное время (часы)</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>The Long Dark (v1.50) Редактор сохранений</value>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>Инструменты</value>
+  </data>
+  <data name="Traits" xml:space="preserve">
+    <value>Особенности</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Неизвестное</value>
+  </data>
+  <data name="Afflictions" xml:space="preserve">
+    <value>Состояния</value>
+  </data>
+  <data name="ActionCure" xml:space="preserve">
+    <value>Лечение</value>
+  </data>
+  <data name="AfflictionType_BloodLoss" xml:space="preserve">
+    <value>Кровотечение</value>
+  </data>
+  <data name="AfflictionType_Burns" xml:space="preserve">
+    <value>Ожоги</value>
+  </data>
+  <data name="AfflictionType_Dysentery" xml:space="preserve">
+    <value>Дизентерия</value>
+  </data>
+  <data name="AfflictionType_Infection" xml:space="preserve">
+    <value>Инфекция</value>
+  </data>
+  <data name="AfflictionType_FoodPoisioning" xml:space="preserve">
+    <value>Пищевое отравление</value>
+  </data>
+  <data name="AfflictionType_SprainedAnkle" xml:space="preserve">
+    <value>Вывих лодыжки</value>
+  </data>
+  <data name="AfflictionType_InfectionRisk" xml:space="preserve">
+    <value>Риск заражения</value>
+  </data>
+  <data name="AfflictionType_SprainedWrist" xml:space="preserve">
+    <value>Вывих кисти</value>
+  </data>
+  <data name="AfflictionType_Frostbite" xml:space="preserve">
+    <value>Обморожение</value>
+  </data>
+  <data name="AfflictionType_Hypothermia" xml:space="preserve">
+    <value>Переохлаждение</value>
+  </data>
+  <data name="AfflictionType_ReducedFatigue" xml:space="preserve">
+    <value>Усталость снизилась</value>
+  </data>
+  <data name="AfflictionType_ImprovedRest" xml:space="preserve">
+    <value>Более эффективный отдых</value>
+  </data>
+  <data name="AfflictionType_WarmingUp" xml:space="preserve">
+    <value>Согревание</value>
+  </data>
+  <data name="AfflictionType_HypothermiaRisk" xml:space="preserve">
+    <value>Риск переохлаждения</value>
+  </data>
+  <data name="AfflictionType_CabinFever" xml:space="preserve">
+    <value>Клаустрафобия</value>
+  </data>
+  <data name="AfflictionType_IntestinalParasitesRisk" xml:space="preserve">
+    <value>Риск кишечных паразитов</value>
+  </data>
+  <data name="AfflictionType_IntestinalParasites" xml:space="preserve">
+    <value>Кишечные паразиты</value>
+  </data>
+  <data name="AfflictionType_SprainedWristMajor" xml:space="preserve">
+    <value>Серьезное растяжение кисти</value>
+  </data>
+  <data name="AfflictionType_CabinFeverRisk" xml:space="preserve">
+    <value>Риск клаустрафобии</value>
+  </data>
+  <data name="AfflictionType_FrostbiteRisk" xml:space="preserve">
+    <value>Риск обморожения</value>
+  </data>
+  <data name="ItemCategory_Clothing" xml:space="preserve">
+    <value>Одежда</value>
+  </data>
+  <data name="ItemCategory_Food" xml:space="preserve">
+    <value>Еда</value>
+  </data>
+  <data name="ItemCategory_Tools" xml:space="preserve">
+    <value>Инструменты</value>
+  </data>
+  <data name="ItemCategory_Materials" xml:space="preserve">
+    <value>Материалы</value>
+  </data>
+  <data name="ItemCategory_Collectible" xml:space="preserve">
+    <value>Коллекция</value>
+  </data>
+  <data name="ItemCategory_Books" xml:space="preserve">
+    <value>Книги</value>
+  </data>
+  <data name="ItemCategory_Hidden" xml:space="preserve">
+    <value>Спрятанное</value>
+  </data>
+  <data name="ItemCategory_Unknown" xml:space="preserve">
+    <value>Неизвестное</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="ItemCategory_FirstAid" xml:space="preserve">
+    <value>Первая помощь</value>
+  </data>
+  <data name="ExperienceMode" xml:space="preserve">
+    <value>Experience mode</value>
+  </data>
+  <data name="ExperienceModeType_Pilgrim" xml:space="preserve">
+    <value>Pilgrim</value>
+  </data>
+  <data name="ExperienceModeType_Voyageur" xml:space="preserve">
+    <value>Voyageur</value>
+  </data>
+  <data name="ExperienceModeType_Stalker" xml:space="preserve">
+    <value>Stalker</value>
+  </data>
+  <data name="ExperienceModeType_Story" xml:space="preserve">
+    <value>Story</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeRescue" xml:space="preserve">
+    <value>Hopeless Rescue</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeHunted" xml:space="preserve">
+    <value>The Hunted</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeWhiteout" xml:space="preserve">
+    <value>Whiteout</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeNomad" xml:space="preserve">
+    <value>Nomad</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeHuntedPart2" xml:space="preserve">
+    <value>The Hunted, Part 2</value>
+  </data>
+  <data name="ExperienceModeType_Interloper" xml:space="preserve">
+    <value>Interloper</value>
+  </data>
+  <data name="ExperienceModeType_StoryFresh" xml:space="preserve">
+    <value>Story fresh</value>
+  </data>
+  <data name="ExperienceModeType_StoryHardened" xml:space="preserve">
+    <value>Story hardened</value>
+  </data>
+  <data name="ExperienceModeType_FourDaysOfNight" xml:space="preserve">
+    <value>Four days of night</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeArchivist" xml:space="preserve">
+    <value>Challenge archivist</value>
+  </data>
+  <data name="ExperienceModeType_Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="OpenMapCommand" xml:space="preserve">
+    <value>Open map</value>
+  </data>
+  <data name="RegionsWithMap_CoastalRegion" xml:space="preserve">
+    <value>Coastal Highway</value>
+  </data>
+  <data name="RegionsWithMap_LakeRegion" xml:space="preserve">
+    <value>Mystery Lake</value>
+  </data>
+  <data name="RegionsWithMap_WhalingStationRegion" xml:space="preserve">
+    <value>Desolation Point</value>
+  </data>
+  <data name="RegionsWithMap_RuralRegion" xml:space="preserve">
+    <value>Pleasant Valley</value>
+  </data>
+  <data name="RegionsWithMap_CrashMountainRegion" xml:space="preserve">
+    <value>Timberwolf Mountain</value>
+  </data>
+  <data name="RegionsWithMap_MarshRegion" xml:space="preserve">
+    <value>Forlorn Muskeg</value>
+  </data>
+  <data name="RegionsWithMap_RavineTransitionZone" xml:space="preserve">
+    <value>Ravine</value>
+  </data>
+  <data name="RegionsWithMap_HighwayTransitionZone" xml:space="preserve">
+    <value>Old Island Connector</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="GutAmount" xml:space="preserve">
+    <value>Guts</value>
+  </data>
+  <data name="HideAmount" xml:space="preserve">
+    <value>Hides</value>
+  </data>
+  <data name="MeatAmount" xml:space="preserve">
+    <value>Meat (kg)</value>
+  </data>
+  <data name="RegionsWithMap_MountainTownRegion" xml:space="preserve">
+    <value>Mountain Town</value>
+  </data>
+  <data name="RegionsWithMap_TracksRegion" xml:space="preserve">
+    <value>Broken Railroad</value>
+  </data>
+  <data name="RegionsWithMap_RiverValleyRegion" xml:space="preserve">
+    <value>Hushed River Valley</value>
+  </data>
+  <data name="GEAR_BearSpearBrokenStory" xml:space="preserve">
+    <value>Сломанное копье для охоты на медведя</value>
+  </data>
+  <data name="GEAR_SodaEnergy" xml:space="preserve">
+    <value>Энергетический напиток Go!</value>
+  </data>
+  <data name="GEAR_ImprovisedMittens" xml:space="preserve">
+    <value>Самодельные обмотки для рук</value>
+  </data>
+  <data name="GEAR_ImprovisedHat" xml:space="preserve">
+    <value>Самодельный головной платок</value>
+  </data>
+  <data name="GEAR_RevolverAmmoSingle" xml:space="preserve">
+    <value>Патрон для револьвера</value>
+  </data>
+  <data name="GEAR_RevolverAmmoBox" xml:space="preserve">
+    <value>Патроны для револьвера</value>
+  </data>
+  <data name="GEAR_BirchbarkPrepared" xml:space="preserve">
+    <value>Приготовленная березовая кора</value>
+  </data>
+  <data name="GEAR_BirchbarkTea" xml:space="preserve">
+    <value>Березовый чай</value>
+  </data>
+  <data name="GEAR_Revolver" xml:space="preserve">
+    <value>Revolver</value>
+  </data>
+  <data name="RevolverSkillSP" xml:space="preserve">
+    <value>Revolver skill points</value>
+  </data>
+  <data name="GEAR_BookRevolverFirearm" xml:space="preserve">
+    <value>Small Arms Handbook</value>
   </data>
 </root>

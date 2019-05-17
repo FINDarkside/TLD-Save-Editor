@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Globalization;
-using System.Windows;
 using System.Windows.Data;
 using The_Long_Dark_Save_Editor_2.Helpers;
 
