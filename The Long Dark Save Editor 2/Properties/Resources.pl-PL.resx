@@ -1567,9 +1567,9 @@
     <value>Rewolwer</value>
   </data>
   <data name="RevolverSkillSP" xml:space="preserve">
-    <value>Revolver skill points</value>
+    <value>Umiejętność obsługi rewolweru</value>
   </data>
   <data name="GEAR_BookRevolverFirearm" xml:space="preserve">
-    <value>Small Arms Handbook</value>
+    <value>Podręcznik dotyczący planej broni ręcznej</value>
   </data>
 </root>
