@@ -911,7 +911,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     public class Skill_RevolverSaveData
     {
-        public int m_Points;
+        public int m_Points { get; set; }
     }
 
     public class FeatEnabledTrackerSaveData
