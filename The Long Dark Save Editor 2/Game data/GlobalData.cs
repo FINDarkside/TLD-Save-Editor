@@ -870,7 +870,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         [Deserialize("m_Skill_ClothingRepairSerialized", true)]
         public Skill_ClothingRepairSaveData ClothingRepair { get; set; }
         [Deserialize("m_Skill_RevolverSerialized", true)]
-        public Skill_RevolverSaveData Revolver;
+        public Skill_RevolverSaveData Revolver { get; set; }
     }
 
     public class Skill_FirestartingSaveData
