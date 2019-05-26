@@ -22,7 +22,6 @@ namespace The_Long_Dark_Save_Editor_2
         public SlotData SlotData { get { return dynamicSlotData.Obj; } }
 
         public string OriginalRegion { get; set; }
-        private float[] originalPosition;
 
         public string path;
 
@@ -40,9 +39,6 @@ namespace The_Long_Dark_Save_Editor_2
             dynamicGlobal = new DynamicSerializable<GlobalSaveGameFormat>(globalJson);
 
             Afflictions = new AfflictionsContainer(Global);
-
-            var pos = Global.PlayerManager.m_SaveGamePosition;
-            originalPosition = new float[] { pos[0], pos[1], pos[2] };
         }
 
         public void Save()
@@ -50,11 +46,6 @@ namespace The_Long_Dark_Save_Editor_2
             LastSaved = DateTime.Now.Ticks;
             var bootSerialized = dynamicBoot.Serialize();
             SlotData.m_Dict["boot"] = EncryptString.Compress(bootSerialized);
-
-            // If position is changed, set z coordinate to float.infinity to avoid going under terrain
-            var pos = Global.PlayerManager.m_SaveGamePosition;
-            if (OriginalRegion != Boot.m_SceneName.Value || pos[0] != originalPosition[0] || pos[1] != originalPosition[1] || pos[2] != originalPosition[2])
-                pos[1] = 9999999;
 
             Global.SceneTransition.m_SceneSaveFilenameCurrent = Boot.m_SceneName.Value;
             Global.SceneTransition.m_SceneSaveFilenameNextLoad = Boot.m_SceneName.Value;

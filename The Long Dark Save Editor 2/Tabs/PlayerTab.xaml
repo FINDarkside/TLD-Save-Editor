@@ -47,6 +47,10 @@
                 <Label Width="40">Y</Label>
                 <TextBox Width="250" Text="{Binding CurrentSave.Global.PlayerManager.m_SaveGamePosition[2]}"/>
             </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="100 5 0 0">
+                <Label Width="40">Z</Label>
+                <TextBox Width="250" Text="{Binding CurrentSave.Global.PlayerManager.m_SaveGamePosition[1]}"/>
+            </StackPanel>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
             <Label Width="130" Content="{x:Static p:Resources.Health}"/>
