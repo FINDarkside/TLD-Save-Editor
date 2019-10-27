@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using The_Long_Dark_Save_Editor_2.Helpers;
 using System.Linq;
 
@@ -17,16 +15,13 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_Timestamp { get; set; }
         public EnumWrapper<SaveSlotType> m_GameMode { get; set; }
         public uint m_GameId { get; set; }
-        public EnumWrapper<Episode> m_Episode { get; set; }
         public Dictionary<string, byte[]> m_Dict { get; set; }
-        public bool m_IsPS4Compliant { get; set; }
     }
 
     public class SceneTransitionData
     {
         public bool m_TeleportPlayerSaveGamePosition { get; set; }
         public string m_SpawnPointName { get; set; }
-        public string m_SpawnPointAudio { get; set; }
         public string m_ForceSceneOnNextNavMapLoad { get; set; }
         public string m_ForceNextSceneLoadTriggerScene { get; set; }
         public float[] m_PosBeforeInteriorLoad { get; set; }

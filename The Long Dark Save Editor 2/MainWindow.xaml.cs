@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -13,10 +12,8 @@ using System.Windows;
 using WForms = System.Windows.Forms;
 using System.Windows.Controls;
 using System.Windows.Input;
-using The_Long_Dark_Save_Editor_2.Game_data;
 using The_Long_Dark_Save_Editor_2.Helpers;
 using The_Long_Dark_Save_Editor_2.ViewModels;
-using MaterialDesignThemes.Wpf;
 
 namespace The_Long_Dark_Save_Editor_2
 {

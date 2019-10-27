@@ -1,5 +1,4 @@
-﻿
-namespace The_Long_Dark_Save_Editor_2.Helpers
+﻿namespace The_Long_Dark_Save_Editor_2.Helpers
 {
     /*
      * Improved version to C# LibLZF Port:
