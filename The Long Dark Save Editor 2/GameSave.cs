@@ -1,6 +1,7 @@
 using System;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using The_Long_Dark_Save_Editor_2.Game_data;
 using The_Long_Dark_Save_Editor_2.Helpers;
 
@@ -8,6 +9,8 @@ namespace The_Long_Dark_Save_Editor_2
 {
     public class GameSave
     {
+        public static int MAX_BACKUPS = 20;
+
         public long LastSaved { get; set; }
         private DynamicSerializable<BootSaveGameFormat> dynamicBoot;
         public BootSaveGameFormat Boot { get { return dynamicBoot.Obj; } }
@@ -42,6 +45,8 @@ namespace The_Long_Dark_Save_Editor_2
 
         public void Save()
         {
+            Backup();
+
             LastSaved = DateTime.Now.Ticks;
             var bootSerialized = dynamicBoot.Serialize();
             SlotData.m_Dict["boot"] = EncryptString.Compress(bootSerialized);
@@ -56,7 +61,28 @@ namespace The_Long_Dark_Save_Editor_2
 
             SlotData.m_Timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
             var slotDataSerialized = dynamicSlotData.Serialize();
-            File.WriteAllBytes(path, EncryptString.Compress(slotDataSerialized));
+            File.WriteAllBytes(this.path, EncryptString.Compress(slotDataSerialized));
+        }
+
+        private void Backup()
+        {
+            var backupDirectory = Path.Combine(Path.GetDirectoryName(this.path), "backups");
+            Directory.CreateDirectory(backupDirectory);
+
+            var oldBackups = new DirectoryInfo(backupDirectory).GetFiles().OrderByDescending(x => x.LastWriteTime).Skip(MAX_BACKUPS);
+            foreach(var file in oldBackups)
+            {
+                File.Delete(file.FullName);
+            }
+
+            var timestamp = DateTime.Now.ToString("yyyy-MM-dd HH.mm.ss", CultureInfo.InvariantCulture);
+            var i = 1;
+            var backupPath = Path.Combine(backupDirectory, timestamp + "-" + Path.GetFileName(this.path) + ".backup");
+            while (File.Exists(backupPath))
+            {
+                backupPath = Path.Combine(backupDirectory, timestamp + "-" + Path.GetFileName(this.path) + "(" + i++ + ")" + ".backup");
+            }
+            File.Copy(this.path, backupPath);
         }
     }
 }
