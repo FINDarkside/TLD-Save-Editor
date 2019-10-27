@@ -1572,4 +1572,7 @@
   <data name="GEAR_BookRevolverFirearm" xml:space="preserve">
     <value>Small Arms Handbook</value>
   </data>
+  <data name="Backups" xml:space="preserve">
+    <value>Backups</value>
+  </data>
 </root>

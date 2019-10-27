@@ -305,6 +305,12 @@ namespace The_Long_Dark_Save_Editor_2
             Process.Start("https://github.com/FINDarkside/TLD-Save-Editor");
         }
 
+        private void OpenBackupsClicked(object sender, RoutedEventArgs e)
+        {
+            var path = Path.Combine(Util.GetLocalPath(), testBranch ? "HinterlandTest2" : "Hinterland", "TheLongDark", "backups");
+            Process.Start(path);
+        }
+
         private void Window_Closing(object sender, CancelEventArgs e)
         {
             Properties.Settings.Default.Save();

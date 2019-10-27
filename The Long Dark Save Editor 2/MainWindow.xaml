@@ -112,6 +112,7 @@
                     <ComboBox Margin="10 0 0 0" Name="ccSaves" ItemsSource="{Binding Saves}" DisplayMemberPath="Description" SelectedValuePath="Value" Width="220" SelectedIndex="0" SelectionChanged="CurrentSaveSelectionChanged"/>
                     <Button Margin="10 0 0 0" Click="MenuItem_Click" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Content="{x:Static p:Resources.Save}" Height="40"/>
                     <Button Margin="10 0 0 0" Click="RefreshClicked" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Content="{x:Static p:Resources.Refresh}" Height="40"/>
+                    <Button Margin="10 0 0 0" Click="OpenBackupsClicked" Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Content="{x:Static p:Resources.Backups}" Height="40"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="0 0 20 0">
                     <Button Style="{StaticResource MaterialDesignFlatButtonNoRounding}" Foreground="#7289DA" Click="JoinDiscordClicked" Height="40">

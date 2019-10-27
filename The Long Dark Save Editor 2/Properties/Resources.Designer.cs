@@ -304,6 +304,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Backups.
+        /// </summary>
+        public static string Backups {
+            get {
+                return ResourceManager.GetString("Backups", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Books.
         /// </summary>
         public static string Books {
@@ -1164,6 +1173,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_BookMending {
             get {
                 return ResourceManager.GetString("GEAR_BookMending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Small Arms Handbook.
+        /// </summary>
+        public static string GEAR_BookRevolverFirearm {
+            get {
+                return ResourceManager.GetString("GEAR_BookRevolverFirearm", resourceCulture);
             }
         }
         
