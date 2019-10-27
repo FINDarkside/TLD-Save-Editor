@@ -14,7 +14,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_Name { get; set; }
         public string m_BaseName { get; set; }
         public string m_DisplayName { get; set; }
-        public DateTime m_Timestamp { get; set; }
+        public string m_Timestamp { get; set; }
         public EnumWrapper<SaveSlotType> m_GameMode { get; set; }
         public uint m_GameId { get; set; }
         public EnumWrapper<Episode> m_Episode { get; set; }

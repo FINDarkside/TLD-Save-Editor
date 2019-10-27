@@ -1,6 +1,6 @@
 using System;
-using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using The_Long_Dark_Save_Editor_2.Game_data;
 using The_Long_Dark_Save_Editor_2.Helpers;
@@ -55,7 +55,7 @@ namespace The_Long_Dark_Save_Editor_2
             var globalSerialized = dynamicGlobal.Serialize();
             SlotData.m_Dict["global"] = EncryptString.Compress(globalSerialized);
 
-            SlotData.m_Timestamp = DateTime.Now;
+            SlotData.m_Timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
             var slotDataSerialized = dynamicSlotData.Serialize();
             File.WriteAllBytes(path, EncryptString.Compress(slotDataSerialized));
         }
