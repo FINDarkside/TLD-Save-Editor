@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using The_Long_Dark_Save_Editor_2.Helpers;
@@ -73,6 +74,9 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         {
             if (proxy == null)
                 return;
+
+            var frostbiteDamage = new List<float>(proxy.m_LocationsCurrentFrostbiteDamage);
+
             foreach (int bodyArea in proxy.m_LocationsWithActiveFrostbite)
             {
                 Negative.Add(new Frostbite(negative)
@@ -81,6 +85,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
                     Location = bodyArea,
                     Damage = proxy.m_LocationsCurrentFrostbiteDamage[bodyArea],
                 });
+                frostbiteDamage[bodyArea] = 0;
             }
             foreach (int bodyArea in proxy.m_LocationsWithFrostbiteRisk)
             {
@@ -90,6 +95,19 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
                     Location = bodyArea,
                     Damage = proxy.m_LocationsCurrentFrostbiteDamage[bodyArea],
                 });
+                frostbiteDamage[bodyArea] = 0;
+            }
+            for (int i = 0; i < frostbiteDamage.Count; i++)
+            {
+                if (frostbiteDamage[i] > 0)
+                {
+                    Negative.Add(new Frostbite(negative)
+                    {
+                        AfflictionType = AfflictionType.FrostbiteDamage,
+                        Location = i,
+                        Damage = frostbiteDamage[i],
+                    });
+                }
             }
         }
 
@@ -371,6 +389,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             proxy = proxy ?? new FrostbiteSaveDataProxy();
             var frostbites = afflictionDict.GetOrDefault(AfflictionType.Frostbite, new List<Affliction>()).Cast<Frostbite>().ToList();
             var frostbiteRisks = afflictionDict.GetOrDefault(AfflictionType.FrostbiteRisk, new List<Affliction>()).Cast<Frostbite>().ToList();
+            var frostbiteDamage = afflictionDict.GetOrDefault(AfflictionType.FrostbiteDamage, new List<Affliction>()).Cast<Frostbite>().ToList();
             proxy.m_LocationsCurrentFrostbiteDamage = new List<float>() { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             proxy.m_LocationsWithActiveFrostbite = new List<int>();
             foreach (var frostbite in frostbites)
@@ -381,6 +400,10 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             foreach (var frostbite in frostbiteRisks)
             {
                 proxy.m_LocationsWithFrostbiteRisk.Add(frostbite.Location);
+                proxy.m_LocationsCurrentFrostbiteDamage[frostbite.Location] = frostbite.Damage;
+            }
+            foreach (var frostbite in frostbiteDamage)
+            {
                 proxy.m_LocationsCurrentFrostbiteDamage[frostbite.Location] = frostbite.Damage;
             }
             return proxy;

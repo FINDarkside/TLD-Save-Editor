@@ -1410,6 +1410,9 @@
   <data name="AfflictionType_FrostbiteRisk" xml:space="preserve">
     <value>Frostbite risk</value>
   </data>
+  <data name="AfflictionType_FrostbiteDamage" xml:space="preserve">
+    <value>Frostbite damage</value>
+  </data>
   <data name="ItemCategory_FirstAid" xml:space="preserve">
     <value>First Aid</value>
   </data>

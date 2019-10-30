@@ -196,6 +196,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         [Description("Sprained wrist")]
         SprainedWrist,
         Frostbite,
+        FrostbiteDamage,
         Hypothermia,
         [Description("Reduced fatigue")]
         ReducedFatigue,

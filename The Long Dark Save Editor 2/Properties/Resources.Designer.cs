@@ -160,6 +160,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Frostbite damage.
+        /// </summary>
+        public static string AfflictionType_FrostbiteDamage {
+            get {
+                return ResourceManager.GetString("AfflictionType_FrostbiteDamage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Frostbite risk.
         /// </summary>
         public static string AfflictionType_FrostbiteRisk {
