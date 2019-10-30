@@ -371,7 +371,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             proxy = proxy ?? new FrostbiteSaveDataProxy();
             var frostbites = afflictionDict.GetOrDefault(AfflictionType.Frostbite, new List<Affliction>()).Cast<Frostbite>().ToList();
             var frostbiteRisks = afflictionDict.GetOrDefault(AfflictionType.FrostbiteRisk, new List<Affliction>()).Cast<Frostbite>().ToList();
-            proxy.m_LocationsCurrentFrostbiteDamage = new List<float>();
+            proxy.m_LocationsCurrentFrostbiteDamage = new List<float>() { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             proxy.m_LocationsWithActiveFrostbite = new List<int>();
             foreach (var frostbite in frostbites)
             {
