@@ -51,8 +51,8 @@ namespace The_Long_Dark_Save_Editor_2
             var bootSerialized = dynamicBoot.Serialize();
             SlotData.m_Dict["boot"] = EncryptString.Compress(bootSerialized);
 
-            Global.SceneTransition.m_SceneSaveFilenameCurrent = Boot.m_SceneName.Value;
-            Global.SceneTransition.m_SceneSaveFilenameNextLoad = Boot.m_SceneName.Value;
+            Global.GameManagerData.SceneTransition.m_SceneSaveFilenameCurrent = Boot.m_SceneName.Value;
+            Global.GameManagerData.SceneTransition.m_SceneSaveFilenameNextLoad = Boot.m_SceneName.Value;
             Global.PlayerManager.m_CheatsUsed = true;
             Afflictions.SerializeTo(Global);
 

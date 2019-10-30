@@ -18,6 +18,14 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public Dictionary<string, byte[]> m_Dict { get; set; }
     }
 
+    public class GameManagerData
+    {
+        public bool m_BlockAbilityToRest { get; set; }
+        public string m_BlockedRestLocID { get; set; }
+        [Deserialize("m_SceneTransitionDataSerialized", true)]
+        public SceneTransitionData SceneTransition { get; set; }
+    }
+
     public class SceneTransitionData
     {
         public bool m_TeleportPlayerSaveGamePosition { get; set; }

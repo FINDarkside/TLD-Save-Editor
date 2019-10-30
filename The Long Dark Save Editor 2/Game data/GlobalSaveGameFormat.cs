@@ -7,7 +7,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     {
         public int m_Version { get; set; }
         [Deserialize("m_GameManagerSerialized", true)]
-        public SceneTransitionData SceneTransition { get; set; }
+        public GameManagerData GameManagerData { get; set; }
         [Deserialize("m_HudManagerSerialized", true)]
         public HudManagerSaveDataProxy HudManager { get; set; }
         [Deserialize("m_TimeOfDay_Serialized", true)]
