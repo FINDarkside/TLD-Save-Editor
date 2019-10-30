@@ -80,8 +80,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public AchievementSaveData AchievementManager { get; set; }
         [Deserialize("m_ExperienceModeManagerSerialized", true)]
         public ExperienceModeManagerSaveDataProxy ExperienceModeManager { get; set; }
-        [Deserialize("m_AuroraManagerSerialized", true)]
-        public AuroraScreenInfo AuroraManager { get; set; }
         [Deserialize("m_PlayerMovementSerialized", true)]
         public PlayerMovementSaveDataProxy PlayerMovement { get; set; }
         public string m_PlayerStruggleSerialized { get; set; }

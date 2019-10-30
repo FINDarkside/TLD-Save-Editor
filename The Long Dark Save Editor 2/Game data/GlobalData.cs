@@ -938,13 +938,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public List<dynamic> m_CollectibleList { get; set; }
         public List<string> m_CollectibleNotesList { get; set; }
         public List<CairnInfo> m_CollectibleCairnInfoList { get; set; }
-        public List<AuroraScreenInfo> m_CollectibleAuroraScreenInfoList;
         public StatContainer m_Stats { get; set; }
-    }
-
-    public class AuroraScreenInfo
-    {
-        public string m_PrefabName { get; set; }
     }
 
     public class CairnInfo
