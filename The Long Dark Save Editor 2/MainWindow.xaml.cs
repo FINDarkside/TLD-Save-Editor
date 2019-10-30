@@ -118,7 +118,6 @@ namespace The_Long_Dark_Save_Editor_2
                 Properties.Settings.Default.Save();
             }
 #endif
-            UpdateSaves();
         }
 
         private void SaveFileChanged(object source, FileSystemEventArgs e)
