@@ -7,7 +7,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     public enum ItemCategory
     {
-        [Description("First Aid")]
         FirstAid,
         Clothing,
         Food,
@@ -182,47 +181,29 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
 
     public enum AfflictionType
     {
-        [Description("Blood loss")]
         BloodLoss,
         Burns,
         Dysentery,
         Infection,
-        [Description("Food poisoning")]
         FoodPoisioning,
-        [Description("Sprained ankle")]
         SprainedAnkle,
-        [Description("Infection risk")]
         InfectionRisk,
-        [Description("Sprained wrist")]
         SprainedWrist,
         Frostbite,
         FrostbiteDamage,
         Hypothermia,
-        [Description("Reduced fatigue")]
         ReducedFatigue,
-        [Description("Improved rest")]
         ImprovedRest,
-        [Description("Warming up")]
         WarmingUp,
-        [Description("Hypothermia risk")]
         HypothermiaRisk,
-        [Description("Cabin fever")]
         CabinFever,
-        [Description("Intestinal parasites risk")]
         IntestinalParasitesRisk,
-        [Description("Intestinal parasites")]
         IntestinalParasites,
-        [Description("Sprained wrist major")]
         SprainedWristMajor,
-        [Description("Cabin fever risk")]
         CabinFeverRisk,
-        [Description("Frostbite risk")]
         FrostbiteRisk,
-        [Description("Electric burn")]
         BurnsElectric,
-        [Description("Broken rib")]
         BrokenRib,
-        [Description("Well fed")]
         WellFed
     }
 
