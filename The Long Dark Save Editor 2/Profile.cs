@@ -18,8 +18,6 @@ namespace The_Long_Dark_Save_Editor_2
 
             var json = EncryptString.Decompress(File.ReadAllBytes(path));
 
-            dynamicState = new DynamicSerializable<ProfileState>(json);
-
             #region Fix m_StatsDictionary
             int currentIndex = 0;
             // m_StatsDictionary is invalid json so we'll fix it
@@ -71,6 +69,7 @@ namespace The_Long_Dark_Save_Editor_2
             }
 
             #endregion
+            dynamicState = new DynamicSerializable<ProfileState>(json);
         }
 
         public void Save()
