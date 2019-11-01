@@ -36,8 +36,6 @@ namespace The_Long_Dark_Save_Editor_2
             string json = dynamicState.Serialize();
             //Turn back cutted raw data.
             json = Regex.Replace(json, @"\""m_SandboxRecords\"":\""\""", rawSandboxRecords);
-            //Escape slashes like in original saves
-            json = Regex.Replace(json, "/", "\\/");
 
             File.WriteAllBytes(path, EncryptString.Compress(json));
         }
