@@ -22,12 +22,6 @@ namespace The_Long_Dark_Save_Editor_2
 
             var json = EncryptString.Decompress(File.ReadAllBytes(path));
             //Temporary cut raw data from json cause m_StatsDictionary doesn`t fit JSON format.
-            json = Regex.Replace(json, @"\""m_AllTimeStats\"":\""\[[^\]]*\]\""", delegate (Match match)
-            {
-                rawAllTimeStats = match.ToString();
-                return @"""m_AllTimeStats"":""""";
-            });
-
             json = Regex.Replace(json, @"\""m_SandboxRecords\"":\[([^\]]*\]){10}", delegate (Match match)
             {
                 rawSandboxRecords = match.ToString();
@@ -41,7 +35,6 @@ namespace The_Long_Dark_Save_Editor_2
         {
             string json = dynamicState.Serialize();
             //Turn back cutted raw data.
-            json = Regex.Replace(json, @"\""m_AllTimeStats\"":\""\""", rawAllTimeStats);
             json = Regex.Replace(json, @"\""m_SandboxRecords\"":\""\""", rawSandboxRecords);
             //Escape slashes like in original saves
             json = Regex.Replace(json, "/", "\\/");
