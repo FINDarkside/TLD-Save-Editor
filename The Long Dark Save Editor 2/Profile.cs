@@ -25,7 +25,7 @@ namespace The_Long_Dark_Save_Editor_2
             json = Regex.Replace(json, @"\""m_SandboxRecords\"":\[([^\]]*\]){10}", delegate (Match match)
             {
                 rawSandboxRecords = match.ToString();
-                return @"""m_SandboxRecords"":""""";
+                return @"""m_SandboxRecords"":null";
             });
 
             dynamicState = new DynamicSerializable<ProfileState>(json);
@@ -35,7 +35,7 @@ namespace The_Long_Dark_Save_Editor_2
         {
             string json = dynamicState.Serialize();
             //Turn back cutted raw data.
-            json = Regex.Replace(json, @"\""m_SandboxRecords\"":\""\""", rawSandboxRecords);
+            json = Regex.Replace(json, @"\""m_SandboxRecords\"":null", rawSandboxRecords);
 
             File.WriteAllBytes(path, EncryptString.Compress(json));
         }
