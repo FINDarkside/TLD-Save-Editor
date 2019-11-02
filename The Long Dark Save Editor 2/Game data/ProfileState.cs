@@ -146,7 +146,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     public class StatContainer
     {
         public int[] m_CachedHashIds { get; set; }
-        public Dictionary<int, string> m_StatsDictionary { get; set; }
+        public Dictionary<string, string> m_StatsDictionary { get; set; }
         public int m_NumBurntHousesInCoastal { get; set; }
         public bool m_HasDoneCoastalBurntHouseCheck { get; set; }
         public bool m_HasDoneCorrectBurntHouseCheck { get; set; }
