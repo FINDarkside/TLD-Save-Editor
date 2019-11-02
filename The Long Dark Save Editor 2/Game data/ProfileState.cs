@@ -151,4 +151,23 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_HasDoneCoastalBurntHouseCheck { get; set; }
         public bool m_HasDoneCorrectBurntHouseCheck { get; set; }
     }
+
+    public class SandboxRecord
+    {
+        public string m_SandboxName { get; set; }
+        public float m_ElapsedHours { get; set; }
+        public string m_EndDate { get; set; }
+        public EnumWrapper<GameRegion> m_StartRegion { get; set; }
+        public string m_EndRegion { get; set; }
+        public EnumWrapper<ExperienceModeType> m_ExperienceModeType { get; set; }
+        public EnumWrapper<VoicePersona> m_VoicePersona { get; set; }
+        public string m_CauseOfDeathLocId { get; set; }
+        public string m_GeneralNotes { get; set; }
+        public List<LogDayInfo> m_LogDayInfoList { get; set; }
+        // TODO: check if dynamic works correctly
+        public List<dynamic> m_CollectibleList { get; set; }
+        public List<string> m_CollectibleNotesList { get; set; }
+        public List<CairnInfo> m_CollectibleCairnInfoList { get; set; }
+        public StatContainer m_Stats { get; set; }
+    }
 }

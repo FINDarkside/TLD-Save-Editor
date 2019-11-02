@@ -922,25 +922,6 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public List<EnumWrapper<FeatType>> m_FeatsEnabledThisSandbox { get; set; }
     }
 
-    public class SandboxRecord
-    {
-        public string m_SandboxName { get; set; }
-        public float m_ElapsedHours { get; set; }
-        public DateTime m_EndDate { get; set; }
-        public EnumWrapper<GameRegion> m_StartRegion { get; set; }
-        public string m_EndRegion { get; set; }
-        public EnumWrapper<ExperienceModeType> m_ExperienceModeType { get; set; }
-        public EnumWrapper<VoicePersona> m_VoicePersona { get; set; }
-        public string m_CauseOfDeathLocId { get; set; }
-        public string m_GeneralNotes { get; set; }
-        public List<LogDayInfo> m_LogDayInfoList { get; set; }
-        // TODO: check if dynamic works correctly
-        public List<dynamic> m_CollectibleList { get; set; }
-        public List<string> m_CollectibleNotesList { get; set; }
-        public List<CairnInfo> m_CollectibleCairnInfoList { get; set; }
-        public StatContainer m_Stats { get; set; }
-    }
-
     public class CairnInfo
     {
         public string m_BackerLookupNum { get; set; }
