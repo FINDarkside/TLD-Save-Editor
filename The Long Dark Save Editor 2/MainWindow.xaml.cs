@@ -21,7 +21,7 @@ namespace The_Long_Dark_Save_Editor_2
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         public static MainWindow Instance { get; set; }
-        public static VersionData Version { get { return new VersionData() { version = "2.15" }; } }
+        public static VersionData Version { get { return new VersionData() { version = "2.15.1" }; } }
 
         private GameSave currentSave;
         public GameSave CurrentSave { get { return currentSave; } set { SetPropertyField(ref currentSave, value); } }
