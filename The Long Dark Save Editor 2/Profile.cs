@@ -18,57 +18,16 @@ namespace The_Long_Dark_Save_Editor_2
 
             var json = EncryptString.Decompress(File.ReadAllBytes(path));
 
-            #region Fix m_StatsDictionary
-            int currentIndex = 0;
-            // m_StatsDictionary is invalid json so we'll fix it
-            // There's multiple instances of m_StatsDictionary
-            // Ugly as f but works... for now
-            while (true)
+            json = Regex.Replace(json, @"(\\*\""m_StatsDictionary\\*\"":\{)((?:[-0-9\.]+:\\*\""[-0-9eE\.]+\\*\""\,?)+)(\})", delegate (Match match)
             {
-                int statsDictStartIndex = json.IndexOf("m_StatsDictionary", currentIndex);
-                if (statsDictStartIndex == -1)
-                    break;
-                statsDictStartIndex = json.IndexOf('{', statsDictStartIndex);
-                currentIndex = statsDictStartIndex;
-
-                int statsDictEndIndex = json.IndexOf('}', statsDictStartIndex);
-
-                // Save files contain json that has been serialized multiple times and not all m_StatsDictionarys are on the same depth
-                var newStats = json.Substring(statsDictStartIndex, statsDictEndIndex - statsDictStartIndex);
-                if (newStats.Length <= 2)
-                    continue;
-                int depth = 0;
-                int quoteIndex = newStats.IndexOf("\"");
-                for (int i = quoteIndex - 1; newStats[i] == '\\'; i--, depth++) { }
-                string escapes = new String('\\', depth);
-
-                for (var i = 0; i < newStats.Length; i++)
+                string jsonSubStr = Regex.Replace(match.Groups[2].ToString(), @"([-0-9]+):(\\*\"")", delegate (Match matchSub)
                 {
-                    var c = newStats[i];
+                    var escapeStr = matchSub.Groups[2].ToString();
+                    return escapeStr + matchSub.Groups[1].ToString() + escapeStr + @":" + escapeStr;
+                });
+                return match.Groups[1].ToString() + jsonSubStr + match.Groups[3].ToString();
+            });
 
-                    if ((c == '-' || char.IsDigit(c)))
-                    {
-                        if (newStats[i - 1] != '"' && newStats[i - 1] != '.')
-                        {
-                            newStats = newStats.Insert(i, escapes + "\"");
-                            i += 2 + depth;
-
-                            while (char.IsDigit(newStats[i]) || newStats[i] == '-') { i++; }
-                            newStats = newStats.Insert(i, escapes + "\"");
-                            i += 1 + depth;
-                        }
-                        else
-                        {
-                            while (char.IsDigit(newStats[i]) || newStats[i] == '.' || newStats[i] == 'E' || newStats[i] == '-') { i++; }
-                        }
-
-                    }
-                }
-
-                json = json.Substring(0, statsDictStartIndex) + newStats + json.Substring(statsDictEndIndex);
-            }
-
-            #endregion
             dynamicState = new DynamicSerializable<ProfileState>(json);
         }
 
@@ -76,46 +35,14 @@ namespace The_Long_Dark_Save_Editor_2
         {
             string json = dynamicState.Serialize();
 
-            #region Break m_StatsDictionary
-
-            // And of course the game can't read that valid json so we have to fuck it up again
-
-            int currentIndex = 0;
-            while (true)
+            json = Regex.Replace(json, @"(\\*\""m_StatsDictionary\\*\"":\{)((?:\\*\""[-0-9\.]+\\*\"":\\*\""[-0-9eE\.]+\\*\""\,?)+)(\})", delegate (Match match)
             {
-                int statsDictStartIndex = json.IndexOf("m_StatsDictionary", currentIndex);
-                if (statsDictStartIndex == -1)
-                    break;
-                statsDictStartIndex = json.IndexOf('{', statsDictStartIndex);
-                currentIndex = statsDictStartIndex;
-
-                int statsDictEndIndex = json.IndexOf('}', statsDictStartIndex);
-
-                var newStats = json.Substring(statsDictStartIndex, statsDictEndIndex - statsDictStartIndex);
-                if (newStats.Length <= 2)
-                    continue;
-
-                int currentIndex2 = 0;
-                while (true)
+                string jsonSubStr = Regex.Replace(match.Groups[2].ToString(), @"\\*\""([-0-9]+)\\*\"":", delegate (Match matchSub)
                 {
-                    int colonIndex = newStats.IndexOf(':', currentIndex2);
-                    if (colonIndex == -1)
-                        break;
-                    currentIndex2 = colonIndex + 1;
-
-                    int i = colonIndex;
-                    while (newStats[i] != '{' && newStats[i] != ',')
-                    {
-                        if (newStats[i] == '\\' || newStats[i] == '\"')
-                            newStats = newStats.Remove(i, 1);
-                        i--;
-                    }
-                }
-
-                json = json.Substring(0, statsDictStartIndex) + newStats + json.Substring(statsDictEndIndex);
-            }
-
-            #endregion
+                    return matchSub.Groups[1].ToString() + @":";
+                });
+                return match.Groups[1].ToString() + jsonSubStr + match.Groups[3].ToString();
+            });
 
             File.WriteAllBytes(path, EncryptString.Compress(json));
         }
