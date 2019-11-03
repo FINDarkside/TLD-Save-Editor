@@ -297,6 +297,9 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_CookingPotItemSerialized { get; set; }
         public string m_PlacePointGuidSerialized { get; set; }
         public string m_PlacePointNameSerialized { get; set; }
+        public bool m_NonInteractive { get; set; }
+        public bool m_HasBeenEquippedAndUsed { get; set; }
+        public string m_InspectSerialized { get; set; }
 
         public static GearItemSaveDataProxy Create()
         {
@@ -312,6 +315,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
             while (MainWindow.Instance.CurrentSave.Global.Inventory.Items.Any(i => i.Gear.m_InstanceIDProxy == id))
                 id = r.Next();
             item.m_InstanceIDProxy = id;
+            item.m_NonInteractive = false;
+            item.m_HasBeenEquippedAndUsed = false;
             return item;
         }
     }

@@ -37,18 +37,18 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
         static ItemDictionary()
         {
             // First aid
-            AddItemInfo("GEAR_BottleAntibiotics", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-            AddItemInfo("GEAR_BottleHydrogenPeroxide", ItemCategory.FirstAid, @"{""LiquidItem"": {""m_LiquidLitersProxy"": 1}}");
-            AddItemInfo("GEAR_BottlePainKillers", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_BottleAntibiotics", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 6}}");
+            AddItemInfo("GEAR_BottleHydrogenPeroxide", ItemCategory.FirstAid, @"{""LiquidItem"": {""m_LiquidLitersProxy"": 0.5,""m_LiquidQuality"": { ""Value"":""NonPotable""}}}");
+            AddItemInfo("GEAR_BottlePainKillers", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 6}}");
             AddItemInfo("GEAR_HeavyBandage", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_OldMansBeardDressing", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_WaterPurificationTablets", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_EmergencyStim", ItemCategory.FirstAid, @"{}");
             AddItemInfo("GEAR_ReishiPrepared", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_RosehipsPrepared", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-            AddItemInfo("GEAR_SodaEnergy", ItemCategory.FirstAid, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 0.2}");
-            AddItemInfo("GEAR_BirchbarkPrepared", ItemCategory.FirstAid, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 0.2}");
-            AddItemInfo("GEAR_BirchbarkTea", ItemCategory.FirstAid, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 0.2}");
+            AddItemInfo("GEAR_SodaEnergy", ItemCategory.FirstAid, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 100}}");
+            AddItemInfo("GEAR_BirchbarkPrepared", ItemCategory.FirstAid, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_BirchbarkTea", ItemCategory.FirstAid, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 125}}");
 
             // Clothing
             AddItemInfo("GEAR_Balaclava", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
@@ -132,7 +132,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 
             // Food
             AddItemInfo("GEAR_BeefJerky", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 350}}");
-            AddItemInfo("GEAR_CandyBar", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+            AddItemInfo("GEAR_CandyBar", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 250}}");
             AddItemInfo("GEAR_CannedBeans", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 600}, ""SmashableItem"": {}}");
             AddItemInfo("GEAR_CannedSardines", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 300}, ""SmashableItem"": {}}");
             AddItemInfo("GEAR_CattailStalk", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 150}, ""StackableItem"":{""m_UnitsProxy"": 1}}");
@@ -140,31 +140,31 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_CoffeeCup", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 100}}");
             AddItemInfo("GEAR_CoffeeTin", ItemCategory.Food, @"{""StackableItem"":{""m_UnitsProxy"": 6}}");
             AddItemInfo("GEAR_CondensedMilk", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 750}}");
-            AddItemInfo("GEAR_CookedLakeWhiteFish", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
-            AddItemInfo("GEAR_CookedMeatBear", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
-            AddItemInfo("GEAR_CookedMeatDeer", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
-            AddItemInfo("GEAR_CookedMeatRabbit", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
-            AddItemInfo("GEAR_CookedMeatWolf", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
-            AddItemInfo("GEAR_CookedRainbowTrout", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
-            AddItemInfo("GEAR_CookedSmallMouthBass", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
+            AddItemInfo("GEAR_CookedLakeWhiteFish", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+            AddItemInfo("GEAR_CookedMeatBear", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+            AddItemInfo("GEAR_CookedMeatDeer", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+            AddItemInfo("GEAR_CookedMeatRabbit", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+            AddItemInfo("GEAR_CookedMeatWolf", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+            AddItemInfo("GEAR_CookedRainbowTrout", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+            AddItemInfo("GEAR_CookedSmallMouthBass", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
             AddItemInfo("GEAR_Crackers", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 600}}");
             AddItemInfo("GEAR_DogFood", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 500}, ""SmashableItem"": {}}");
             AddItemInfo("GEAR_EnergyBar", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 500}}");
             AddItemInfo("GEAR_GranolaBar", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 300}}");
             AddItemInfo("GEAR_GreenTeaCup", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 100}}");
-            AddItemInfo("GEAR_GreenTeaPackage", ItemCategory.Food, @"{""StackableItem"":{""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_GreenTeaPackage", ItemCategory.Food, @"{""StackableItem"":{""m_UnitsProxy"": 6}}");
             AddItemInfo("GEAR_MRE", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 1750}}");
             AddItemInfo("GEAR_PeanutButter", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 900}}");
             AddItemInfo("GEAR_PinnacleCanPeaches", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 450}, ""SmashableItem"": {}}");
-            AddItemInfo("GEAR_RawCohoSalmon", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
-            AddItemInfo("GEAR_CookedCohoSalmon", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
-            AddItemInfo("GEAR_RawLakeWhiteFish", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
-            AddItemInfo("GEAR_RawMeatBear", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
-            AddItemInfo("GEAR_RawMeatDeer", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
-            AddItemInfo("GEAR_RawMeatRabbit", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
-            AddItemInfo("GEAR_RawMeatWolf", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
-            AddItemInfo("GEAR_RawRainbowTrout", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
-            AddItemInfo("GEAR_RawSmallMouthBass", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
+            AddItemInfo("GEAR_RawCohoSalmon", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+            AddItemInfo("GEAR_CookedCohoSalmon", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+            AddItemInfo("GEAR_RawLakeWhiteFish", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+            AddItemInfo("GEAR_RawMeatBear", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+            AddItemInfo("GEAR_RawMeatDeer", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+            AddItemInfo("GEAR_RawMeatRabbit", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+            AddItemInfo("GEAR_RawMeatWolf", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+            AddItemInfo("GEAR_RawRainbowTrout", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+            AddItemInfo("GEAR_RawSmallMouthBass", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
             AddItemInfo("GEAR_ReishiTea", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 100}}");
             AddItemInfo("GEAR_RoseHipTea", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 100}}");
             AddItemInfo("GEAR_Soda", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 250}}");
@@ -173,13 +173,13 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_TomatoSoupCan", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 300}, ""SmashableItem"": {}}");
             AddItemInfo("GEAR_WaterSupplyNotPotable", ItemCategory.Food, @"{""WaterSupply"":{""m_VolumeProxy"": 1}}", true);
             AddItemInfo("GEAR_WaterSupplyPotable", ItemCategory.Food, @"{""WaterSupply"":{""m_VolumeProxy"": 1}}", true);
-            AddItemInfo("GEAR_WolfQuarter", ItemCategory.Food, @"{m_WeightKG: 1, ""BodyHarvest"": {m_MeatAvailableKG: 1, m_Condition: 100}}");
-            AddItemInfo("GEAR_BearQuarter", ItemCategory.Food, @"{m_WeightKG: 1, ""BodyHarvest"": {m_MeatAvailableKG: 1, m_Condition: 100}}");
-            AddItemInfo("GEAR_StagQuarter", ItemCategory.Food, @"{m_WeightKG: 1, ""BodyHarvest"": {m_MeatAvailableKG: 1, m_Condition: 100}}");
-            AddItemInfo("GEAR_RabbitCarcass", ItemCategory.Food, @"{m_WeightKG: 1, ""BodyHarvest"": {m_MeatAvailableKG: 1, m_Condition: 100}}");
-            AddItemInfo("GEAR_MooseQuarter", ItemCategory.Food, @"{m_WeightKG: 1, ""BodyHarvest"": {m_MeatAvailableKG: 1, m_Condition: 100}}");
-            AddItemInfo("GEAR_RawMeatMoose", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
-            AddItemInfo("GEAR_CookedMeatMoose", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}, WeightKG: 1}");
+            AddItemInfo("GEAR_WolfQuarter", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");
+            AddItemInfo("GEAR_BearQuarter", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");//multiplier from WolfQuarter
+            AddItemInfo("GEAR_StagQuarter", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");//multiplier from WolfQuarter
+            AddItemInfo("GEAR_RabbitCarcass", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");//multiplier from WolfQuarter
+            AddItemInfo("GEAR_MooseQuarter", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");//multiplier from WolfQuarter
+            AddItemInfo("GEAR_RawMeatMoose", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+            AddItemInfo("GEAR_CookedMeatMoose", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
 
             // Tools
             AddItemInfo("GEAR_Accelerant", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
@@ -202,18 +202,19 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_HighQualityTools", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_Hook", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_HookAndLine", ItemCategory.Tools, @"{}");
-            AddItemInfo("GEAR_JerrycanRusty", ItemCategory.Tools, @"{""LiquidItem"": {""m_LiquidLitersProxy"": 1}}");
+            AddItemInfo("GEAR_JerrycanRusty", ItemCategory.Tools, @"{""LiquidItem"": {m_LiquidLitersProxy: 2,m_LiquidQuality:{Value:""NonPotable""}}}");
             AddItemInfo("GEAR_KeroseneLampB", ItemCategory.Tools, @"{""KeroseneLampItem"": {""m_CurrentFuelLitersProxy"": 1}}");
             AddItemInfo("GEAR_Knife", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_KnifeImprovised", ItemCategory.Tools, @"{}");
-            AddItemInfo("GEAR_LampFuel", ItemCategory.Tools, @"{""LiquidItem"": {""m_LiquidLitersProxy"": 1}}");
+            AddItemInfo("GEAR_LampFuel", ItemCategory.Tools, @"{""LiquidItem"": {m_LiquidLitersProxy: 0.5,m_LiquidQuality:{Value:""NonPotable""}}}");
+            AddItemInfo("GEAR_LampFuelFull", ItemCategory.Tools, @"{""LiquidItem"": {m_LiquidLitersProxy: 0.5,m_LiquidQuality:{Value:""NonPotable""}}}");
             AddItemInfo("GEAR_Line", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_MagnifyingLens", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_NewsprintRoll", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_PackMatches", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 10}, ""MatchesItem"": {}}");
             AddItemInfo("GEAR_Prybar", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_Rifle", ItemCategory.Tools, @"{""WeaponItem"": {""m_RoundsInClipProxy"": 10}}");
-            AddItemInfo("GEAR_RifleAmmoBox", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_RifleAmmoBox", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 10}}");
             AddItemInfo("GEAR_RifleAmmoSingle", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_RifleCleaningKit", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_Rope", ItemCategory.Tools, @"{}");
@@ -365,7 +366,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_TransponderParts", ItemCategory.Collectible, @"{}", true);
 
             // Hidden
-            AddItemInfo("GEAR_AccelerantKerosene", ItemCategory.Hidden, @"{""LiquidItem"": {""m_LiquidLitersProxy"": 1}}"); //Check!!
+            AddItemInfo("GEAR_AccelerantKerosene", ItemCategory.Hidden, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_AccelerantMedium", ItemCategory.Hidden, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_CarBattery", ItemCategory.Hidden, @"{}");
             AddItemInfo("GEAR_CompressionBandage", ItemCategory.Hidden, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
