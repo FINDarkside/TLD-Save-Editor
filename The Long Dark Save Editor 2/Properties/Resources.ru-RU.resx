@@ -727,7 +727,7 @@
     <value>Болторез</value>
   </data>
   <data name="GEAR_CarBattery" xml:space="preserve">
-    <value>Car Battery</value>
+    <value>Аккумулятор</value>
   </data>
   <data name="GEAR_CompressionBandage" xml:space="preserve">
     <value>Давящая повязка</value>
@@ -853,7 +853,7 @@
     <value>Пули для ружья</value>
   </data>
   <data name="GEAR_UtilitiesBill" xml:space="preserve">
-    <value>счет за коммунальные услуги</value>
+    <value>Счет за коммунальные услуги</value>
   </data>
   <data name="GEAR_WaterTowerNote" xml:space="preserve">
     <value>Записка Водонапорной башни</value>
@@ -1198,7 +1198,7 @@
     <value>Книги</value>
   </data>
   <data name="BookSmartProgress" xml:space="preserve">
-    <value>Начитанность</value>
+    <value>Книжный червь</value>
   </data>
   <data name="Calories" xml:space="preserve">
     <value>Калории</value>
@@ -1216,7 +1216,7 @@
     <value>Ремонт одежды</value>
   </data>
   <data name="ColdFusionProgress" xml:space="preserve">
-    <value>Закалка</value>
+    <value>Холодный синтез</value>
   </data>
   <data name="Collectible" xml:space="preserve">
     <value>Коллекция</value>
@@ -1234,13 +1234,13 @@
     <value>Скачать</value>
   </data>
   <data name="EfficientMachineProgress" xml:space="preserve">
-    <value>Механика</value>
+    <value>Как часы</value>
   </data>
   <data name="Fatigue" xml:space="preserve">
     <value>Усталость</value>
   </data>
   <data name="FireMasterProgress" xml:space="preserve">
-    <value>Розжиг.Общий прогресс</value>
+    <value>Эксперт по кострам</value>
   </data>
   <data name="FireStartingSP" xml:space="preserve">
     <value>Розжиг</value>
@@ -1252,7 +1252,7 @@
     <value>Еда</value>
   </data>
   <data name="FreeRunnerProgress" xml:space="preserve">
-    <value>Свободный бег</value>
+    <value>Бегущий человек</value>
   </data>
   <data name="Freezing" xml:space="preserve">
     <value>Замерзание</value>
@@ -1318,7 +1318,7 @@
     <value>Навыки</value>
   </data>
   <data name="SnowWalkerProgress" xml:space="preserve">
-    <value>Ходьба по снегу</value>
+    <value>Снежный скиталец</value>
   </data>
   <data name="TestBranch" xml:space="preserve">
     <value>Сборка "Test branch"</value>
@@ -1438,106 +1438,106 @@
     <value>Первая помощь</value>
   </data>
   <data name="ExperienceMode" xml:space="preserve">
-    <value>Experience mode</value>
+    <value>Сложность</value>
   </data>
   <data name="ExperienceModeType_Pilgrim" xml:space="preserve">
-    <value>Pilgrim</value>
+    <value>Пилигрим</value>
   </data>
   <data name="ExperienceModeType_Voyageur" xml:space="preserve">
-    <value>Voyageur</value>
+    <value>Скиталец</value>
   </data>
   <data name="ExperienceModeType_Stalker" xml:space="preserve">
-    <value>Stalker</value>
+    <value>Сталкер</value>
   </data>
   <data name="ExperienceModeType_Story" xml:space="preserve">
-    <value>Story</value>
+    <value>Способный выживший</value>
   </data>
   <data name="ExperienceModeType_ChallengeRescue" xml:space="preserve">
-    <value>Hopeless Rescue</value>
+    <value>Безнадежное спасение</value>
   </data>
   <data name="ExperienceModeType_ChallengeHunted" xml:space="preserve">
-    <value>The Hunted</value>
+    <value>Добыча: часть 1</value>
   </data>
   <data name="ExperienceModeType_ChallengeWhiteout" xml:space="preserve">
-    <value>Whiteout</value>
+    <value>Белая мгла</value>
   </data>
   <data name="ExperienceModeType_ChallengeNomad" xml:space="preserve">
-    <value>Nomad</value>
+    <value>Кочевник</value>
   </data>
   <data name="ExperienceModeType_ChallengeHuntedPart2" xml:space="preserve">
-    <value>The Hunted, Part 2</value>
+    <value>Добыча: часть 2</value>
   </data>
   <data name="ExperienceModeType_Interloper" xml:space="preserve">
-    <value>Interloper</value>
+    <value>Незваный гость</value>
   </data>
   <data name="ExperienceModeType_StoryFresh" xml:space="preserve">
-    <value>Story fresh</value>
+    <value>Выживший-новичок</value>
   </data>
   <data name="ExperienceModeType_StoryHardened" xml:space="preserve">
-    <value>Story hardened</value>
+    <value>Матерый выживший</value>
   </data>
   <data name="ExperienceModeType_FourDaysOfNight" xml:space="preserve">
-    <value>Four days of night</value>
+    <value>Четыре дня тьмы</value>
   </data>
   <data name="ExperienceModeType_ChallengeArchivist" xml:space="preserve">
-    <value>Challenge archivist</value>
+    <value>Архивариус</value>
   </data>
   <data name="ExperienceModeType_Custom" xml:space="preserve">
-    <value>Custom</value>
+    <value>Персональный</value>
   </data>
   <data name="Position" xml:space="preserve">
-    <value>Position</value>
+    <value>Позиция</value>
   </data>
   <data name="Region" xml:space="preserve">
-    <value>Region</value>
+    <value>Регион</value>
   </data>
   <data name="OpenMapCommand" xml:space="preserve">
     <value>Open map</value>
   </data>
   <data name="RegionsWithMap_CoastalRegion" xml:space="preserve">
-    <value>Coastal Highway</value>
+    <value>Прибрежное шоссе</value>
   </data>
   <data name="RegionsWithMap_LakeRegion" xml:space="preserve">
-    <value>Mystery Lake</value>
+    <value>Загадочное озеро</value>
   </data>
   <data name="RegionsWithMap_WhalingStationRegion" xml:space="preserve">
-    <value>Desolation Point</value>
+    <value>Зона запустения</value>
   </data>
   <data name="RegionsWithMap_RuralRegion" xml:space="preserve">
-    <value>Pleasant Valley</value>
+    <value>Отрадная долина</value>
   </data>
   <data name="RegionsWithMap_CrashMountainRegion" xml:space="preserve">
-    <value>Timberwolf Mountain</value>
+    <value>Волчья гора</value>
   </data>
   <data name="RegionsWithMap_MarshRegion" xml:space="preserve">
-    <value>Forlorn Muskeg</value>
+    <value>Одинокая топь</value>
   </data>
   <data name="RegionsWithMap_RavineTransitionZone" xml:space="preserve">
-    <value>Ravine</value>
+    <value>Ущелье</value>
   </data>
   <data name="RegionsWithMap_HighwayTransitionZone" xml:space="preserve">
-    <value>Old Island Connector</value>
+    <value>Старый остров между зонами</value>
   </data>
   <data name="Map" xml:space="preserve">
-    <value>Map</value>
+    <value>Карта</value>
   </data>
   <data name="GutAmount" xml:space="preserve">
-    <value>Guts</value>
+    <value>Кишки (шт.)</value>
   </data>
   <data name="HideAmount" xml:space="preserve">
-    <value>Hides</value>
+    <value>Шкуры (шт.)</value>
   </data>
   <data name="MeatAmount" xml:space="preserve">
-    <value>Meat (kg)</value>
+    <value>Мясо (кг)</value>
   </data>
   <data name="RegionsWithMap_MountainTownRegion" xml:space="preserve">
-    <value>Mountain Town</value>
+    <value>Милтон</value>
   </data>
   <data name="RegionsWithMap_TracksRegion" xml:space="preserve">
-    <value>Broken Railroad</value>
+    <value>Разбитая железная дорога</value>
   </data>
   <data name="RegionsWithMap_RiverValleyRegion" xml:space="preserve">
-    <value>Hushed River Valley</value>
+    <value>Долина Тихой реки</value>
   </data>
   <data name="GEAR_BearSpearBrokenStory" xml:space="preserve">
     <value>Сломанное копье для охоты на медведя</value>
@@ -1564,15 +1564,24 @@
     <value>Березовый чай</value>
   </data>
   <data name="GEAR_Revolver" xml:space="preserve">
-    <value>Revolver</value>
+    <value>Револьвер</value>
   </data>
   <data name="RevolverSkillSP" xml:space="preserve">
-    <value>Revolver skill points</value>
+    <value>Револьвер</value>
   </data>
   <data name="GEAR_BookRevolverFirearm" xml:space="preserve">
-    <value>Small Arms Handbook</value>
+    <value>Руководство по револьверам</value>
   </data>
   <data name="Backups" xml:space="preserve">
-    <value>Backups</value>
+    <value>Резервирование</value>
+  </data>
+  <data name="AfflictionType_FrostbiteDamage" xml:space="preserve">
+    <value>Урон он холода</value>
+  </data>
+  <data name="Badges4DON2019CheckBox" xml:space="preserve">
+    <value>Значки 4DON2019 разблокированы</value>
+  </data>
+  <data name="Badges4DONCheckBox" xml:space="preserve">
+    <value>Значки 4DON разблокированы</value>
   </data>
 </root>

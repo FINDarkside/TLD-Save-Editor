@@ -1578,4 +1578,10 @@
   <data name="Backups" xml:space="preserve">
     <value>Backups</value>
   </data>
+  <data name="Badges4DON2019CheckBox" xml:space="preserve">
+    <value>4 days of night 2019 badges unlocked</value>
+  </data>
+  <data name="Badges4DONCheckBox" xml:space="preserve">
+    <value>4 days of night badges unlocked</value>
+  </data>
 </root>
