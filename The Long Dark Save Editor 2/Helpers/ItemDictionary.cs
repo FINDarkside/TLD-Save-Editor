@@ -176,7 +176,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_WolfQuarter", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");
             AddItemInfo("GEAR_BearQuarter", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");//multiplier from WolfQuarter
             AddItemInfo("GEAR_StagQuarter", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");//multiplier from WolfQuarter
-            AddItemInfo("GEAR_RabbitCarcass", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");//multiplier from WolfQuarter
+            AddItemInfo("GEAR_RabbitCarcass", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:1.5, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");
             AddItemInfo("GEAR_MooseQuarter", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");//multiplier from WolfQuarter
             AddItemInfo("GEAR_RawMeatMoose", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
             AddItemInfo("GEAR_CookedMeatMoose", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
