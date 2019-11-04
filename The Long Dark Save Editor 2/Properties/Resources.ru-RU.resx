@@ -1207,13 +1207,13 @@
     <value>Отменить</value>
   </data>
   <data name="CarcassHarvestingSP" xml:space="preserve">
-    <value>Заготовка туши</value>
+    <value>Разделка туш</value>
   </data>
   <data name="Clothing" xml:space="preserve">
     <value>Одежда</value>
   </data>
   <data name="ClothingRepairSP" xml:space="preserve">
-    <value>Ремонт одежды</value>
+    <value>Починка</value>
   </data>
   <data name="ColdFusionProgress" xml:space="preserve">
     <value>Холодный синтез</value>
@@ -1225,7 +1225,7 @@
     <value>Состояние</value>
   </data>
   <data name="CookingSP" xml:space="preserve">
-    <value>Приготовление</value>
+    <value>Кулинария</value>
   </data>
   <data name="CurrentCalories" xml:space="preserve">
     <value>Текущие калории</value>
@@ -1243,7 +1243,7 @@
     <value>Эксперт по кострам</value>
   </data>
   <data name="FireStartingSP" xml:space="preserve">
-    <value>Розжиг</value>
+    <value>Разведение огня</value>
   </data>
   <data name="FirstAid" xml:space="preserve">
     <value>Первая помощь</value>
@@ -1264,7 +1264,7 @@
     <value>Спрятанное</value>
   </data>
   <data name="IceFishingSP" xml:space="preserve">
-    <value>Подледная рыбалка</value>
+    <value>Рыбалка на льду</value>
   </data>
   <data name="InfiniteCarry" xml:space="preserve">
     <value>Безграничная сила</value>
@@ -1306,7 +1306,7 @@
     <value>Починить все</value>
   </data>
   <data name="RifleSP" xml:space="preserve">
-    <value>Винтовка</value>
+    <value>Огнестрельное оружие</value>
   </data>
   <data name="RoundsInClip" xml:space="preserve">
     <value>Патроны в обойме</value>
