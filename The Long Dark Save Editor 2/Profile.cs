@@ -19,6 +19,7 @@ namespace The_Long_Dark_Save_Editor_2
 
             var json = EncryptString.Decompress(File.ReadAllBytes(path));
 
+            // m_StatsDictionary is invalid json (unquoted keys), so fix it
             json = Regex.Replace(json, @"(\\*\""m_StatsDictionary\\*\"":\{)((?:[-0-9\.]+:\\*\""[-0-9eE\.]+\\*\""\,?)+)(\})", delegate (Match match)
             {
                 string jsonSubStr = Regex.Replace(match.Groups[2].ToString(), @"([-0-9]+):(\\*\"")", delegate (Match matchSub)
@@ -36,6 +37,7 @@ namespace The_Long_Dark_Save_Editor_2
         {
             string json = dynamicState.Serialize();
 
+            // Game cannot read valid json for m_StatsDictionary so remove quotes from keys
             json = Regex.Replace(json, @"(\\*\""m_StatsDictionary\\*\"":\{)((?:\\*\""[-0-9\.]+\\*\"":\\*\""[-0-9eE\.]+\\*\""\,?)+)(\})", delegate (Match match)
             {
                 string jsonSubStr = Regex.Replace(match.Groups[2].ToString(), @"\\*\""([-0-9]+)\\*\"":", delegate (Match matchSub)
