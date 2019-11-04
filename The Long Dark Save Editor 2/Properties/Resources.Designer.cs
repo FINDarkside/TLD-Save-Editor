@@ -322,6 +322,24 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 4 days of night badges unlocked.
+        /// </summary>
+        public static string Badges4DONCheckBox {
+            get {
+                return ResourceManager.GetString("Badges4DONCheckBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4 days of night 2019 badges unlocked.
+        /// </summary>
+        public static string Badges4DON2019CheckBox {
+            get {
+                return ResourceManager.GetString("Badges4DON2019CheckBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Books.
         /// </summary>
         public static string Books {
