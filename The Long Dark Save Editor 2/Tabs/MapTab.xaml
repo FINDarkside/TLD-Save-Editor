@@ -35,7 +35,10 @@
                 <Image x:Name="player" Source="../Images/location-indicator.png" Canvas.Top="20" Canvas.Left="20" 
                     Height="32" Width="32" Stretch="Fill">
                     <Image.RenderTransform >
-                        <TranslateTransform X="-16" Y="-32" />
+                        <TransformGroup>
+                            <TranslateTransform X="-16" Y="-32" />
+                            <ScaleTransform x:Name="scaleOfPlayerIcon" ScaleX="1" ScaleY="1"/>
+                        </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
             </Canvas>
