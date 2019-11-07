@@ -35,7 +35,7 @@
             <Label Width="130" Content="{x:Static p:Resources.Region}"/>
             <ComboBox Name="cbCurrentRegion" Margin="10 0 0 0" DisplayMemberPath="Description" SelectedValuePath="Value"  Width="160"
                       ItemsSource="{Binding CurrentSave.Boot.m_SceneName, Converter={StaticResource EnumWrapperConverter}}"
-                      SelectedValue="{Binding CurrentSave.Boot.m_SceneName.Value}" />
+                      SelectedValue="{Binding CurrentSave.Boot.m_SceneName.Value}"/>
         </StackPanel>
         <StackPanel Margin="0 0 0 10">
             <StackPanel Margin="0 0 0 0" Orientation="Horizontal">
