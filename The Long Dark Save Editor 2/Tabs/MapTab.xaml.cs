@@ -98,6 +98,8 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
             scaleMap.ScaleX = Math.Max(Math.Min(wScale, hScale), 0.5);
             scaleMap.ScaleY = Math.Max(Math.Min(wScale, hScale), 0.5);
 
+            scaleOfPlayerIcon.ScaleX = 1 / scaleMap.ScaleX;
+            scaleOfPlayerIcon.ScaleY = 1 / scaleMap.ScaleY;
             UpdatePlayerPosition();
         }
 
