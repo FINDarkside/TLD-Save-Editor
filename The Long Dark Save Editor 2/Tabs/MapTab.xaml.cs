@@ -160,6 +160,9 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
             
             scaleMap.ScaleX += zoom;
             scaleMap.ScaleY += zoom;
+
+            scaleOfPlayerIcon.ScaleX = 1 / scaleMap.ScaleX;
+            scaleOfPlayerIcon.ScaleY = 1 / scaleMap.ScaleY;
         }
 
         private void UpdatePlayerPosition()
