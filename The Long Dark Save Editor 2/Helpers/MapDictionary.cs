@@ -11,6 +11,16 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
         public int width;
         public int height;
         public float pixelsPerCoordinate;
+        public Point ToRegion(Point point)
+        {
+            return new Point((point.X - origo.X) / pixelsPerCoordinate,
+                    (point.Y - origo.Y) / -pixelsPerCoordinate);
+        }
+        public Point ToLayer(Point point)
+        {
+            return new Point(point.X * pixelsPerCoordinate + origo.X,
+                    point.Y * -pixelsPerCoordinate + origo.Y);
+        }
     }
 
     public static class MapDictionary
