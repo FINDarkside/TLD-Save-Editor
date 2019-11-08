@@ -37,6 +37,11 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
                     }
                     region = MainWindow.Instance.CurrentSave.Boot.m_SceneName.Value;
                     playerPosition = new Point(MainWindow.Instance.CurrentSave.Global.PlayerManager.m_SaveGamePosition[0], MainWindow.Instance.CurrentSave.Global.PlayerManager.m_SaveGamePosition[2]);
+                    if (!MapDictionary.MapExists(region))
+                    {
+                        region = MainWindow.Instance.CurrentSave.Global.GameManagerData.SceneTransition.m_LastOutdoorScene;
+                        playerPosition = new Point(MainWindow.Instance.CurrentSave.Global.GameManagerData.SceneTransition.m_PosBeforeInteriorLoad[0], MainWindow.Instance.CurrentSave.Global.GameManagerData.SceneTransition.m_PosBeforeInteriorLoad[2]);
+                    }
                     UpdateMap();
                     var saveGamePosition = MainWindow.Instance.CurrentSave.Global.PlayerManager.m_SaveGamePosition;
                     saveGamePosition.CollectionChanged += (sender2, e2) =>
@@ -125,6 +130,7 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
                 playerPosition.X = (x - mapInfo.origo.X) / mapInfo.pixelsPerCoordinate;
                 playerPosition.Y = (y - mapInfo.origo.Y) / -mapInfo.pixelsPerCoordinate;
                 UpdatePlayerPosition();
+                MainWindow.Instance.CurrentSave.Boot.m_SceneName.Value = region;
                 MainWindow.Instance.CurrentSave.Global.PlayerManager.m_SaveGamePosition[0] = (float)playerPosition.X;
                 MainWindow.Instance.CurrentSave.Global.PlayerManager.m_SaveGamePosition[2] = (float)playerPosition.Y;
             }
@@ -169,11 +175,6 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
             Canvas.SetTop(mapImage, y);
 
             UpdatePlayerPosition(x, y);
-
-            if (MainWindow.Instance.CurrentSave == null)
-                return;
-            MainWindow.Instance.CurrentSave.Global.PlayerManager.m_SaveGamePosition[0] = (float)playerPosition.X;
-            MainWindow.Instance.CurrentSave.Global.PlayerManager.m_SaveGamePosition[2] = (float)playerPosition.Y;
         }
 
         private void UpdatePlayerPosition()
