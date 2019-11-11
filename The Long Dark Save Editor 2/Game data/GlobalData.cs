@@ -38,6 +38,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public string m_SceneLocationLocIDToShow { get; set; }
         public int m_GameRandomSeed { get; set; }
         public string m_Location { get; set; }
+        public string m_LastOutdoorScene { get; set; }
     }
 
     public class HudManagerSaveDataProxy
