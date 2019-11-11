@@ -19,7 +19,6 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
         private Point playerPosition;
 
         private string region;
-        private bool doNotRedrawMap;
 
         public MapTab()
         {
@@ -57,12 +56,11 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
                     };
                     MainWindow.Instance.CurrentSave.Boot.m_SceneName.PropertyChanged += (sender2, e2) =>
                     {
-                        if ((e2.PropertyName == "Value") && (!doNotRedrawMap) )
+                        if ((e2.PropertyName == "Value") && (region != MainWindow.Instance.CurrentSave.Boot.m_SceneName.Value) )
                         {
                             region = MainWindow.Instance.CurrentSave.Boot.m_SceneName.Value;
                             Debug.WriteLine("New region: " + region);
                             UpdateMap();
-                            doNotRedrawMap = false;
                         }
                     };
                 }
@@ -132,7 +130,6 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
                 playerPosition.X = (x - mapInfo.origo.X) / mapInfo.pixelsPerCoordinate;
                 playerPosition.Y = (y - mapInfo.origo.Y) / -mapInfo.pixelsPerCoordinate;
                 UpdatePlayerPosition();
-                doNotRedrawMap = true;
                 MainWindow.Instance.CurrentSave.Boot.m_SceneName.Value = region;
                 MainWindow.Instance.CurrentSave.Global.PlayerManager.m_SaveGamePosition[0] = (float)playerPosition.X;
                 MainWindow.Instance.CurrentSave.Global.PlayerManager.m_SaveGamePosition[2] = (float)playerPosition.Y;
