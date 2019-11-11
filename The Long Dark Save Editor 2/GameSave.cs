@@ -51,6 +51,10 @@ namespace The_Long_Dark_Save_Editor_2
             var bootSerialized = dynamicBoot.Serialize();
             SlotData.m_Dict["boot"] = EncryptString.Compress(bootSerialized);
 
+            if(Boot.m_SceneName.Value != OriginalRegion)
+            {
+                Global.GameManagerData.SceneTransition.m_ForceNextSceneLoadTriggerScene = null;
+            }
             Global.GameManagerData.SceneTransition.m_SceneSaveFilenameCurrent = Boot.m_SceneName.Value;
             Global.GameManagerData.SceneTransition.m_SceneSaveFilenameNextLoad = Boot.m_SceneName.Value;
             Global.PlayerManager.m_CheatsUsed = true;
@@ -70,7 +74,7 @@ namespace The_Long_Dark_Save_Editor_2
             Directory.CreateDirectory(backupDirectory);
 
             var oldBackups = new DirectoryInfo(backupDirectory).GetFiles().OrderByDescending(x => x.LastWriteTime).Skip(MAX_BACKUPS);
-            foreach(var file in oldBackups)
+            foreach (var file in oldBackups)
             {
                 File.Delete(file.FullName);
             }

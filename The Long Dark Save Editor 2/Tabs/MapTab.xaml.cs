@@ -100,11 +100,12 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
 
             double wScale = canvas.ActualWidth / mapInfo.width;
             double hScale = canvas.ActualHeight / mapInfo.height;
-            scale.ScaleX = Math.Max(Math.Min(wScale, hScale), 0.5);
-            scale.ScaleY = Math.Max(Math.Min(wScale, hScale), 0.5);
+            scaleMap.ScaleX = Math.Max(Math.Min(wScale, hScale), 0.5);
+            scaleMap.ScaleY = Math.Max(Math.Min(wScale, hScale), 0.5);
 
-            SetPosition(0, 0);
-
+            scaleOfPlayerIcon.ScaleX = 1 / scaleMap.ScaleX;
+            scaleOfPlayerIcon.ScaleY = 1 / scaleMap.ScaleY;
+            UpdatePlayerPosition();
         }
 
         private void canvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -124,11 +125,7 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
             canvas.ReleaseMouseCapture();
             if (e.GetPosition(canvas) == clickPosition)
             {
-                var x = e.GetPosition(mapImage).X;
-                var y = e.GetPosition(mapImage).Y;
-
-                playerPosition.X = (x - mapInfo.origo.X) / mapInfo.pixelsPerCoordinate;
-                playerPosition.Y = (y - mapInfo.origo.Y) / -mapInfo.pixelsPerCoordinate;
+                playerPosition = mapInfo.ToRegion(e.GetPosition(mapImage));
                 UpdatePlayerPosition();
                 MainWindow.Instance.CurrentSave.Boot.m_SceneName.Value = region;
                 MainWindow.Instance.CurrentSave.Global.PlayerManager.m_SaveGamePosition[0] = (float)playerPosition.X;
@@ -145,9 +142,8 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
                 canvas.CaptureMouse();
                 var mousePos = e.GetPosition(canvas);
 
-                var x = Canvas.GetLeft(mapImage) - (lastMousePosition.X - mousePos.X);
-                var y = Canvas.GetTop(mapImage) - (lastMousePosition.Y - mousePos.Y);
-                SetPosition(x, y);
+                translateMap.X += (mousePos.X - lastMousePosition.X);
+                translateMap.Y += (mousePos.Y - lastMousePosition.Y);
                 lastMousePosition = mousePos;
             }
         }
@@ -156,39 +152,35 @@ namespace The_Long_Dark_Save_Editor_2.Tabs
         {
             if (mapInfo == null) return;
 
-            double zoom = e.Delta > 0 ? .1 * scale.ScaleX : -.1 * scale.ScaleX;
+            double zoom = e.Delta > 0 ? .3 * scaleMap.ScaleX : -.3 * scaleMap.ScaleX;
+            
+            var x = e.GetPosition(mapLayer).X / mapLayer.ActualWidth;
+            var y = e.GetPosition(mapLayer).Y / mapLayer.ActualHeight;
+            x = Math.Max(Math.Min(x, 1), 0);
+            y = Math.Max(Math.Min(y, 1), 0);
+            var dX = (x - mapLayer.RenderTransformOrigin.X) * mapLayer.ActualWidth * (1 - scaleMap.ScaleX);
+            var dY = (y - mapLayer.RenderTransformOrigin.Y) * mapLayer.ActualHeight * (1 - scaleMap.ScaleY);
 
-            var centerX = (-Canvas.GetLeft(mapImage) + canvas.ActualWidth / 2) / scale.ScaleX;
-            var centerY = (-Canvas.GetTop(mapImage) + canvas.ActualHeight / 2) / scale.ScaleY;
+            translateMap.X -= dX;
+            translateMap.Y -= dY;
+            mapLayer.RenderTransformOrigin = new Point(x, y);
+            
+            scaleMap.ScaleX += zoom;
+            scaleMap.ScaleY += zoom;
 
-            scale.ScaleX += zoom;
-            scale.ScaleY += zoom;
-
-            var x = -centerX * scale.ScaleX + canvas.ActualWidth / 2;
-            var y = -centerY * scale.ScaleY + canvas.ActualHeight / 2;
-            SetPosition(x, y);
-        }
-
-        private void SetPosition(double x, double y)
-        {
-            Canvas.SetLeft(mapImage, x);
-            Canvas.SetTop(mapImage, y);
-
-            UpdatePlayerPosition(x, y);
+            scaleOfPlayerIcon.ScaleX = 1 / scaleMap.ScaleX;
+            scaleOfPlayerIcon.ScaleY = 1 / scaleMap.ScaleY;
         }
 
         private void UpdatePlayerPosition()
         {
-            UpdatePlayerPosition(Canvas.GetLeft(mapImage), Canvas.GetTop(mapImage));
+            UpdatePlayerPosition(mapInfo.ToLayer(playerPosition));
         }
 
-        private void UpdatePlayerPosition(double canvasXOffset, double canvasYOffset)
+        private void UpdatePlayerPosition(Point layerPoint)
         {
-            var playerCanvasX = (playerPosition.X * mapInfo.pixelsPerCoordinate + mapInfo.origo.X) * scale.ScaleX + canvasXOffset;
-            var playerCanvasY = (playerPosition.Y * -mapInfo.pixelsPerCoordinate + mapInfo.origo.Y) * scale.ScaleY + canvasYOffset;
-
-            Canvas.SetLeft(player, playerCanvasX);
-            Canvas.SetTop(player, playerCanvasY);
+            Canvas.SetLeft(player, layerPoint.X);
+            Canvas.SetTop(player, layerPoint.Y);
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)

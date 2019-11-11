@@ -1,41 +1,50 @@
-﻿<UserControl x:Class="The_Long_Dark_Save_Editor_2.Tabs.MapTab"
+﻿<UserControl
+        x:Class="The_Long_Dark_Save_Editor_2.Tabs.MapTab"
+        x:Name="userControl"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        d:DesignHeight="600" d:DesignWidth="600"
+        d:DesignHeight="478" d:DesignWidth="882"
         mc:Ignorable="d" Loaded="UserControl_Loaded">
     <UserControl.Resources>
-        <Image x:Key="CoastalRegion" Source="../Images/CoastalHighwaySF.png"></Image>
-        <Image x:Key="LakeRegion" Source="../Images/MysteryLakeSF.png"></Image>
-        <Image x:Key="WhalingStationRegion" Source="../Images/DesolationPointSF.png"></Image>
-        <Image x:Key="RuralRegion" Source="../Images/PleasantValleySF.png"></Image>
-        <Image x:Key="CrashMountainRegion" Source="../Images/TimberwolfMountainSF.png"></Image>
-        <Image x:Key="MarshRegion" Source="../Images/ForlomMuskeg.png"></Image>
-        <Image x:Key="RavineTransitionZone" Source="../Images/RavineSF.png"></Image>
-        <Image x:Key="HighwayTransitionZone" Source="../Images/CrumblingHighwaySF.png"></Image>
-        <Image x:Key="MountainTownRegion" Source="../Images/MountainTownSF.png"></Image>
-        <Image x:Key="TracksRegion" Source="../Images/BrokenRailroadSF.png"></Image>
-        <Image x:Key="RiverValleyRegion" Source="../Images/HushedRiverValleySF.png"></Image>
+        <Image x:Key="CoastalRegion" Source="../Images/CoastalHighwaySF.png"/>
+        <Image x:Key="LakeRegion" Source="../Images/MysteryLakeSF.png"/>
+        <Image x:Key="WhalingStationRegion" Source="../Images/DesolationPointSF.png"/>
+        <Image x:Key="RuralRegion" Source="../Images/PleasantValleySF.png"/>
+        <Image x:Key="CrashMountainRegion" Source="../Images/TimberwolfMountainSF.png"/>
+        <Image x:Key="MarshRegion" Source="../Images/ForlomMuskeg.png"/>
+        <Image x:Key="RavineTransitionZone" Source="../Images/RavineSF.png"/>
+        <Image x:Key="HighwayTransitionZone" Source="../Images/CrumblingHighwaySF.png"/>
+        <Image x:Key="MountainTownRegion" Source="../Images/MountainTownSF.png"/>
+        <Image x:Key="TracksRegion" Source="../Images/BrokenRailroadSF.png"/>
+        <Image x:Key="RiverValleyRegion" Source="../Images/HushedRiverValleySF.png"/>
 
     </UserControl.Resources>
-    <Grid>
-        <Canvas Name="canvas" MouseWheel="canvas_MouseWheel" Background="White" ClipToBounds="True" MouseMove="canvas_MouseMove"  
-            MouseLeftButtonUp="canvas_MouseLeftButtonUp" MouseLeftButtonDown="canvas_MouseLeftButtonDown">
-            <Image Name="mapImage" Source="..\Images/CoastalHighwaySF.png" Canvas.Top="0" Canvas.Left="0" 
-               Height="2065" Width="2687" Stretch="Fill">
-                <Image.RenderTransform >
-                    <ScaleTransform x:Name="scale" ScaleX="1" ScaleY="1" />
-                </Image.RenderTransform>
-            </Image>
-            <Image Name="player" Source="../Images/location-indicator.png" Canvas.Top="20" Canvas.Left="20" 
-               Height="32" Width="32" Stretch="Fill">
-                <Image.RenderTransform >
-                    <TranslateTransform X="-16" Y="-32" />
-                </Image.RenderTransform>
-            </Image>
-        </Canvas>
-        <TextBlock Name="canvasLabel" Style="{StaticResource MaterialDesignDisplay3TextBlock}" Foreground="{StaticResource MaterialDesignBody}" VerticalAlignment="Center" HorizontalAlignment="Center">asdasd</TextBlock>
-    </Grid>
-
+    <Canvas x:Name="canvas" Height="{Binding ActualHeight, ElementName=userControl, Mode=OneWay}" MouseLeftButtonDown="canvas_MouseLeftButtonDown" MouseWheel="canvas_MouseWheel" MouseMove="canvas_MouseMove"  
+        MouseLeftButtonUp="canvas_MouseLeftButtonUp" Width="{Binding ActualWidth, ElementName=userControl, Mode=OneWay}" ClipToBounds="True" Background="#00000000" >
+        <Viewbox x:Name="mapLayer" Height="{Binding ActualHeight, ElementName=mapImage, Mode=OneWay}" Width="{Binding ActualWidth, ElementName=mapImage, Mode=OneWay}" RenderTransformOrigin="0,0">
+            <Viewbox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform x:Name="scaleMap" ScaleX=".5" ScaleY=".5"/>
+                    <TranslateTransform x:Name="translateMap" X="0" Y="0"/>
+                </TransformGroup>
+            </Viewbox.RenderTransform>
+            <Canvas Width="{Binding ActualWidth, ElementName=mapImage, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=mapImage, Mode=OneWay}">
+                <Image x:Name="mapImage" Source="../Images/CoastalHighwaySF.png" Canvas.Top="0" Canvas.Left="0" Stretch="Fill"/>
+                <Image x:Name="player" Source="../Images/location-indicator.png" Canvas.Top="20" Canvas.Left="20" 
+                    Height="32" Width="32" Stretch="Fill">
+                    <Image.RenderTransform >
+                        <TransformGroup>
+                            <TranslateTransform X="-16" Y="-32" />
+                            <ScaleTransform x:Name="scaleOfPlayerIcon" ScaleX="1" ScaleY="1"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+            </Canvas>
+        </Viewbox>
+        <Grid Width="{Binding ActualWidth, ElementName=canvas, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=canvas, Mode=OneWay}" d:IsHidden="True">
+            <TextBlock x:Name="canvasLabel" Style="{StaticResource MaterialDesignDisplay3TextBlock}" Foreground="{StaticResource MaterialDesignBody}" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="asdasd"/></TextBlock>
+        </Grid>
+    </Canvas>
 </UserControl>
