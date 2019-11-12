@@ -228,14 +228,18 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             return res;
         }
 
-        public List<object> ReconstructCollection(dynamic col, bool serializeItems)
+        public dynamic ReconstructCollection(dynamic col, bool serializeItems)
         {
-            List<object> result = new List<object>();
-            foreach (var item in col)
+            if (col.GetType() == typeof(byte[]))
+            {
+                return col;
+            }
+            var result = new List<object>();
+            foreach(var item in col)
             {
                 result.Add(Reconstruct(item, new DeserializeAttribute(null, serializeItems)));
             }
-            return result;
+            return result.ToArray();
         }
 
         public IDictionary ReconstructDictionary(IDictionary dict, bool serializeItems)

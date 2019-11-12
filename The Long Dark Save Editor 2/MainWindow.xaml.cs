@@ -14,6 +14,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using The_Long_Dark_Save_Editor_2.Helpers;
 using The_Long_Dark_Save_Editor_2.ViewModels;
+using The_Long_Dark_Save_Editor_2.Serialization;
 
 namespace The_Long_Dark_Save_Editor_2
 {
@@ -66,6 +67,8 @@ namespace The_Long_Dark_Save_Editor_2
             {
                 //MissingMemberHandling = MissingMemberHandling.Error,
                 FloatFormatHandling = FloatFormatHandling.Symbol,
+                // Serialize byte arrays as arrays of numbers instead of base64
+                Converters = new List<JsonConverter> { new ByteArrayConverter() }
             };
 
 #if DEBUG
