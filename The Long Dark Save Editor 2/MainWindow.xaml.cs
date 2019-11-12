@@ -68,7 +68,7 @@ namespace The_Long_Dark_Save_Editor_2
                 //MissingMemberHandling = MissingMemberHandling.Error,
                 FloatFormatHandling = FloatFormatHandling.Symbol,
                 // Serialize byte arrays as arrays of numbers instead of base64
-                Converters = new List<JsonConverter> { new ByteArrayConverter() }
+                Converters = new List<JsonConverter> { new ByteArrayConverter() },
             };
 
 #if DEBUG

@@ -12,12 +12,15 @@ namespace The_Long_Dark_Save_Editor_2.Serialization
     public class DynamicSerializable<T> where T : new()
     {
 
+        private static JsonLoadSettings jsonLoadSettings = new JsonLoadSettings() { LineInfoHandling = LineInfoHandling.Ignore };
+
         private Dictionary<object, List<KeyValuePair<string, JToken>>> extraFields = new Dictionary<object, List<KeyValuePair<string, JToken>>>();
         public T Obj { get; private set; }
 
         public DynamicSerializable(string json)
         {
-            Obj = Parse(JObject.Parse(json), typeof(T));
+            Obj = Parse(JObject.Parse(json, jsonLoadSettings), typeof(T));
+
         }
 
         private dynamic Parse(JToken token, Type t, DeserializeAttribute attr = null)
@@ -66,7 +69,7 @@ namespace The_Long_Dark_Save_Editor_2.Serialization
             }
             else if (token.Type == JTokenType.String)
             {
-                string s = token.ToObject<string>();
+                string s = token.Value<string>();
                 if (t.IsGenericType && t.GetGenericTypeDefinition() == typeof(EnumWrapper<>))
                 {
                     return Activator.CreateInstance(t, s);
@@ -77,7 +80,7 @@ namespace The_Long_Dark_Save_Editor_2.Serialization
                 }
                 if (!deserialize)
                     return s;
-                return Parse(JToken.Parse(s), t);
+                return Parse(JToken.Parse(s, jsonLoadSettings), t);
             }
             else if (token.Type == JTokenType.Null)
             {
@@ -236,7 +239,7 @@ namespace The_Long_Dark_Save_Editor_2.Serialization
                 return col;
             }
             var result = new List<object>();
-            foreach(var item in col)
+            foreach (var item in col)
             {
                 result.Add(Reconstruct(item, new DeserializeAttribute(null, serializeItems)));
             }
