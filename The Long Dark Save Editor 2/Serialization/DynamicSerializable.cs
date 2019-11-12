@@ -71,10 +71,10 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
         {
             var result = Activator.CreateInstance(t);
             var props = t.GetProperties(BindingFlags.Instance | BindingFlags.Public)
-                 .Where(p => p.GetCustomAttribute<JsonIgnoreAttribute>() == null)
+                 .Where(p => p.GetCustomAttribute<JsonIgnoreAttribute>(false) == null)
                 .ToDictionary(p => MemberToName(p));
             var fields = t.GetFields(BindingFlags.Instance | BindingFlags.Public)
-                 .Where(f => f.GetCustomAttribute<JsonIgnoreAttribute>() == null)
+                 .Where(f => f.GetCustomAttribute<JsonIgnoreAttribute>(false) == null)
                 .ToDictionary(p => MemberToName(p));
 
             foreach (var child in obj)
@@ -82,7 +82,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                 if (props.ContainsKey(child.Key))
                 {
                     var prop = props[child.Key];
-                    var attr = prop.GetCustomAttribute<DeserializeAttribute>();
+                    var attr = prop.GetCustomAttribute<DeserializeAttribute>(false);
                     var childType = prop.PropertyType;
                     var childVal = Parse(child.Value, childType, attr);
                     prop.SetValue(result, childVal);
@@ -90,7 +90,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
                 else if (fields.ContainsKey(child.Key))
                 {
                     var field = fields[child.Key];
-                    var attr = field.GetCustomAttribute<DeserializeAttribute>();
+                    var attr = field.GetCustomAttribute<DeserializeAttribute>(false);
                     var childType = field.FieldType;
                     var childVal = Parse(child.Value, childType, attr);
                     field.SetValue(result, childVal);
@@ -177,19 +177,19 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             var res = new Dictionary<string, dynamic>();
             var t = o.GetType();
             var props = t.GetProperties(BindingFlags.Instance | BindingFlags.Public)
-                .Where(p => p.GetCustomAttribute<JsonIgnoreAttribute>() == null).ToArray();
+                .Where(p => p.GetCustomAttribute<JsonIgnoreAttribute>(false) == null).ToArray();
             var fields = t.GetFields(BindingFlags.Instance | BindingFlags.Public)
-                .Where(p => p.GetCustomAttribute<JsonIgnoreAttribute>() == null).ToArray();
+                .Where(p => p.GetCustomAttribute<JsonIgnoreAttribute>(false) == null).ToArray();
 
             foreach (var prop in props)
             {
-                var attr = prop.GetCustomAttribute<DeserializeAttribute>();
+                var attr = prop.GetCustomAttribute<DeserializeAttribute>(false);
                 var name = attr?.From ?? prop.Name;
                 res.Add(name, Reconstruct(prop.GetValue(o), attr));
             }
             foreach (var field in fields)
             {
-                var attr = field.GetCustomAttribute<DeserializeAttribute>();
+                var attr = field.GetCustomAttribute<DeserializeAttribute>(false);
                 var name = attr?.From ?? field.Name;
                 res.Add(name, Reconstruct(field.GetValue(o), attr));
             }
@@ -225,7 +225,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 
         private string MemberToName(MemberInfo m)
         {
-            var attr = m.GetCustomAttribute<DeserializeAttribute>();
+            var attr = m.GetCustomAttribute<DeserializeAttribute>(false);
             if (attr != null)
                 return attr.From;
             return m.Name;
