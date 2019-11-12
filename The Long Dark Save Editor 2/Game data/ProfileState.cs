@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using The_Long_Dark_Save_Editor_2.Helpers;
+using The_Long_Dark_Save_Editor_2.Serialization;
 
 namespace The_Long_Dark_Save_Editor_2.Game_data
 {

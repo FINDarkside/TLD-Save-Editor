@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace The_Long_Dark_Save_Editor_2.Helpers
+namespace The_Long_Dark_Save_Editor_2.Serialization
 {
     public static class ReflectionUtil
     {

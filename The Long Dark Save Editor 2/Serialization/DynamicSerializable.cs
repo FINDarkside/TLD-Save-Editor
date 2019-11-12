@@ -3,10 +3,11 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 
-namespace The_Long_Dark_Save_Editor_2.Helpers
+namespace The_Long_Dark_Save_Editor_2.Serialization
 {
     public class DynamicSerializable<T> where T : new()
     {

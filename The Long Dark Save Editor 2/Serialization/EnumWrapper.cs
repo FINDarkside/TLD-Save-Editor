@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using The_Long_Dark_Save_Editor_2.Helpers;
 
-namespace The_Long_Dark_Save_Editor_2.Helpers
+namespace The_Long_Dark_Save_Editor_2.Serialization
 {
     public abstract class EnumWrapper : BindableBase
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace The_Long_Dark_Save_Editor_2.Helpers
+namespace The_Long_Dark_Save_Editor_2.Serialization
 {
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property)]
     public class DeserializeAttribute : Attribute
