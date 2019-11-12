@@ -8,10 +8,15 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using The_Long_Dark_Save_Editor_2.Game_data;
-using The_Long_Dark_Save_Editor_2.Serialization;
 
 namespace The_Long_Dark_Save_Editor_2.Helpers
 {
+
+    public class SlotDataDisplayNameProxy
+    {
+        public string m_DisplayName { get; set; }
+    }
+
     public static class Util
     {
         private static readonly object IsDebug;
@@ -98,7 +103,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             member.Value = file;
 
             var slotJson = EncryptString.Decompress(File.ReadAllBytes(file));
-            var slotData = new DynamicSerializable<SlotData>(slotJson).Obj;
+            var slotData = JsonConvert.DeserializeObject<SlotDataDisplayNameProxy>(slotJson);
 
             member.Description = slotData.m_DisplayName + " (" + name + ")";
 
