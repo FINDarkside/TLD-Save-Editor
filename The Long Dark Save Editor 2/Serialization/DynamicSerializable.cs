@@ -34,9 +34,34 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             {
                 return ParseArray((JArray)token, t, deserializeItems);
             }
-            else if (token.Type == JTokenType.Boolean || token.Type == JTokenType.Float || token.Type == JTokenType.Integer)
+            else if (token.Type == JTokenType.Boolean)
             {
-                return token.ToObject(t);
+                return token.Value<bool>();
+            }
+            else if (token.Type == JTokenType.Integer || token.Type == JTokenType.Float)
+            {
+                if (t == typeof(byte))
+                    return token.Value<byte>();
+                else if (t == typeof(short))
+                    return token.Value<short>();
+                else if (t == typeof(ushort))
+                    return token.Value<ushort>();
+                else if (t == typeof(int))
+                    return token.Value<int>();
+                else if (t == typeof(uint))
+                    return token.Value<uint>();
+                else if (t == typeof(long))
+                    return token.Value<long>();
+                else if (t == typeof(ulong))
+                    return token.Value<ulong>();
+                else if (t == typeof(float))
+                    return token.Value<float>();
+                else if (t == typeof(long))
+                    return token.Value<long>();
+                else if (t == typeof(decimal))
+                    return token.Value<decimal>();
+                else
+                    throw new Exception("Unsupported type " + t.FullName);
             }
             else if (token.Type == JTokenType.String)
             {
