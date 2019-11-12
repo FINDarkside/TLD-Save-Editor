@@ -112,6 +112,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Serialization\ByteArrayConverter.cs" />
+    <Compile Include="Serialization\CachedReflection.cs" />
     <Compile Include="Serialization\DeserializeAttribute.cs" />
     <Compile Include="Serialization\DynamicSerializable.cs" />
     <Compile Include="Helpers\BindableBase.cs" />

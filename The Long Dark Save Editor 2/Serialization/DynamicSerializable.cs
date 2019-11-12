@@ -97,10 +97,10 @@ namespace The_Long_Dark_Save_Editor_2.Serialization
         {
             var result = Activator.CreateInstance(t);
             var props = t.GetProperties(BindingFlags.Instance | BindingFlags.Public)
-                 .Where(p => p.GetCustomAttribute<JsonIgnoreAttribute>(false) == null)
+                 .Where(p => p.GetCustomAttributeCached<JsonIgnoreAttribute>(false) == null)
                 .ToDictionary(p => MemberToName(p));
             var fields = t.GetFields(BindingFlags.Instance | BindingFlags.Public)
-                 .Where(f => f.GetCustomAttribute<JsonIgnoreAttribute>(false) == null)
+                 .Where(f => f.GetCustomAttributeCached<JsonIgnoreAttribute>(false) == null)
                 .ToDictionary(p => MemberToName(p));
 
             foreach (var child in obj)
@@ -108,7 +108,7 @@ namespace The_Long_Dark_Save_Editor_2.Serialization
                 if (props.ContainsKey(child.Key))
                 {
                     var prop = props[child.Key];
-                    var attr = prop.GetCustomAttribute<DeserializeAttribute>(false);
+                    var attr = prop.GetCustomAttributeCached<DeserializeAttribute>(false);
                     var childType = prop.PropertyType;
                     var childVal = Parse(child.Value, childType, attr);
                     prop.SetValue(result, childVal);
@@ -116,7 +116,7 @@ namespace The_Long_Dark_Save_Editor_2.Serialization
                 else if (fields.ContainsKey(child.Key))
                 {
                     var field = fields[child.Key];
-                    var attr = field.GetCustomAttribute<DeserializeAttribute>(false);
+                    var attr = field.GetCustomAttributeCached<DeserializeAttribute>(false);
                     var childType = field.FieldType;
                     var childVal = Parse(child.Value, childType, attr);
                     field.SetValue(result, childVal);
@@ -203,19 +203,19 @@ namespace The_Long_Dark_Save_Editor_2.Serialization
             var res = new Dictionary<string, dynamic>();
             var t = o.GetType();
             var props = t.GetProperties(BindingFlags.Instance | BindingFlags.Public)
-                .Where(p => p.GetCustomAttribute<JsonIgnoreAttribute>(false) == null).ToArray();
+                .Where(p => p.GetCustomAttributeCached<JsonIgnoreAttribute>(false) == null).ToArray();
             var fields = t.GetFields(BindingFlags.Instance | BindingFlags.Public)
-                .Where(p => p.GetCustomAttribute<JsonIgnoreAttribute>(false) == null).ToArray();
+                .Where(p => p.GetCustomAttributeCached<JsonIgnoreAttribute>(false) == null).ToArray();
 
             foreach (var prop in props)
             {
-                var attr = prop.GetCustomAttribute<DeserializeAttribute>(false);
+                var attr = prop.GetCustomAttributeCached<DeserializeAttribute>(false);
                 var name = attr?.From ?? prop.Name;
                 res.Add(name, Reconstruct(prop.GetValue(o), attr));
             }
             foreach (var field in fields)
             {
-                var attr = field.GetCustomAttribute<DeserializeAttribute>(false);
+                var attr = field.GetCustomAttributeCached<DeserializeAttribute>(false);
                 var name = attr?.From ?? field.Name;
                 res.Add(name, Reconstruct(field.GetValue(o), attr));
             }
@@ -255,7 +255,7 @@ namespace The_Long_Dark_Save_Editor_2.Serialization
 
         private string MemberToName(MemberInfo m)
         {
-            var attr = m.GetCustomAttribute<DeserializeAttribute>(false);
+            var attr = m.GetCustomAttributeCached<DeserializeAttribute>(false);
             if (attr != null)
                 return attr.From;
             return m.Name;
