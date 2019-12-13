@@ -31,7 +31,7 @@
     </UserControl.Resources>
 
     <StackPanel Margin="10 10">
-        <Expander Header="{x:Static p:Resources.Traits}" IsExpanded="True" Height="325">
+        <Expander Header="{x:Static p:Resources.Traits}" IsExpanded="True" Margin="0 0 0 5">
             <StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                     <Label Width="170" Content="{x:Static p:Resources.BookSmartProgress}"/>
