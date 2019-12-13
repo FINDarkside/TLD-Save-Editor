@@ -186,9 +186,6 @@
   <data name="GEAR_CottonSocks" xml:space="preserve">
     <value>Sports Socks</value>
   </data>
-  <data name="GEAR_CowichanSweater" xml:space="preserve">
-    <value>Cowichan Sweater</value>
-  </data>
   <data name="GEAR_DeerSkinBoots" xml:space="preserve">
     <value>Deerskin Boots</value>
   </data>
@@ -465,9 +462,6 @@
   <data name="GEAR_Bow" xml:space="preserve">
     <value>Survival Bow</value>
   </data>
-  <data name="GEAR_Brand" xml:space="preserve">
-    <value>Brand</value>
-  </data>
   <data name="GEAR_CanOpener" xml:space="preserve">
     <value>Can Opener</value>
   </data>
@@ -720,9 +714,6 @@
   <data name="GEAR_BookRifleFirearmAdvanced" xml:space="preserve">
     <value>Advanced Guns Guns Guns!</value>
   </data>
-  <data name="GEAR_ClimbersJournal" xml:space="preserve">
-    <value>Climber's Journal Page</value>
-  </data>
   <data name="GEAR_AccelerantKerosene" xml:space="preserve">
     <value>Accelerant</value>
   </data>
@@ -765,23 +756,11 @@
   <data name="GEAR_AstridBackPack" xml:space="preserve">
     <value>Astrid Backpack</value>
   </data>
-  <data name="GEAR_BowString" xml:space="preserve">
-    <value>Bow String</value>
-  </data>
-  <data name="GEAR_BowWood" xml:space="preserve">
-    <value>Bow Wood</value>
-  </data>
   <data name="GEAR_ChurchHymn" xml:space="preserve">
     <value>Church Hymn</value>
   </data>
   <data name="GEAR_ChurchNoteEP1" xml:space="preserve">
     <value>Church Note EP 1</value>
-  </data>
-  <data name="GEAR_CollectibleNoteCommonReward" xml:space="preserve">
-    <value>Collectible Note Common</value>
-  </data>
-  <data name="GEAR_CollectibleNoteRareReward" xml:space="preserve">
-    <value>Collectible Note Common</value>
   </data>
   <data name="GEAR_DamCodeNote" xml:space="preserve">
     <value>Dam Code Note</value>
@@ -813,53 +792,14 @@
   <data name="GEAR_KnifeScrapMetal" xml:space="preserve">
     <value>Scrap Metal Shard</value>
   </data>
-  <data name="GEAR_KnifeScrapMetal_Clean" xml:space="preserve">
-    <value>Knife Scrap Metal Clean</value>
-  </data>
-  <data name="GEAR_MapSnippetMt" xml:space="preserve">
-    <value>Map Snippet Mt</value>
-  </data>
-  <data name="GEAR_MapToRailyard" xml:space="preserve">
-    <value>Map To Railyard</value>
-  </data>
   <data name="GEAR_MedicalSupplies" xml:space="preserve">
     <value>Carter Hydro Medical Supplies</value>
-  </data>
-  <data name="GEAR_Morphine" xml:space="preserve">
-    <value>Morphine</value>
   </data>
   <data name="GEAR_MountainTownFarmKey" xml:space="preserve">
     <value>Paradise Meadows Farm Key</value>
   </data>
-  <data name="GEAR_MountainTownFarmNote" xml:space="preserve">
-    <value>Mountain Town Farm Note</value>
-  </data>
-  <data name="GEAR_MountainTownLockBoxKey" xml:space="preserve">
-    <value>Mountain Town Lock Box Key</value>
-  </data>
-  <data name="GEAR_MountainTownMap" xml:space="preserve">
-    <value>Mountain Town Map</value>
-  </data>
-  <data name="GEAR_MountainTownStoreKey" xml:space="preserve">
-    <value>Mountain Town Store Key</value>
-  </data>
-  <data name="GEAR_OverpassBrochure" xml:space="preserve">
-    <value>Overpass Brochure</value>
-  </data>
-  <data name="GEAR_RicksJournal" xml:space="preserve">
-    <value>Rick's Journal</value>
-  </data>
-  <data name="GEAR_RifleBlanks" xml:space="preserve">
-    <value>Rifle Blanks</value>
-  </data>
   <data name="GEAR_RifleBullets" xml:space="preserve">
     <value>Rifle Bullets</value>
-  </data>
-  <data name="GEAR_UtilitiesBill" xml:space="preserve">
-    <value>Utilities Bill</value>
-  </data>
-  <data name="GEAR_WaterTowerNote" xml:space="preserve">
-    <value>Water Tower Note</value>
   </data>
   <data name="GEAR_ClimbingSocks" xml:space="preserve">
     <value>Climbing Socks</value>
@@ -1074,9 +1014,6 @@
   <data name="GEAR_HC_EP1_ML_ClearCut_Dir" xml:space="preserve">
     <value>Simple Note</value>
   </data>
-  <data name="GEAR_ForestTalkerMap" xml:space="preserve">
-    <value>Forest Talker Map Note</value>
-  </data>
   <data name="GEAR_CaveCacheNote" xml:space="preserve">
     <value>Cave Hidden Cache Note</value>
   </data>
@@ -1085,9 +1022,6 @@
   </data>
   <data name="GEAR_OldLadyStolenItem" xml:space="preserve">
     <value>Grey Mother's Safety Deposit Box</value>
-  </data>
-  <data name="GEAR_LetterBundle" xml:space="preserve">
-    <value>Jeremiah's Letters</value>
   </data>
   <data name="GEAR_GreyMotherTrunkKey" xml:space="preserve">
     <value>Lily's Trunk Key</value>
@@ -1401,17 +1335,11 @@
   <data name="AfflictionType_IntestinalParasites" xml:space="preserve">
     <value>Intestinal parasites</value>
   </data>
-  <data name="AfflictionType_SprainedWristMajor" xml:space="preserve">
-    <value>Sprained wrist major</value>
-  </data>
   <data name="AfflictionType_CabinFeverRisk" xml:space="preserve">
     <value>Cabin fever risk</value>
   </data>
   <data name="AfflictionType_FrostbiteRisk" xml:space="preserve">
     <value>Frostbite risk</value>
-  </data>
-  <data name="AfflictionType_FrostbiteDamage" xml:space="preserve">
-    <value>Frostbite damage</value>
   </data>
   <data name="ItemCategory_FirstAid" xml:space="preserve">
     <value>First Aid</value>
@@ -1464,9 +1392,6 @@
   <data name="ExperienceModeType_ChallengeWhiteout" xml:space="preserve">
     <value>Whiteout</value>
   </data>
-  <data name="ExperienceModeType_ChallengeNomad" xml:space="preserve">
-    <value>Nomad</value>
-  </data>
   <data name="ExperienceModeType_ChallengeHuntedPart2" xml:space="preserve">
     <value>The Hunted, Part 2</value>
   </data>
@@ -1490,12 +1415,6 @@
   </data>
   <data name="Position" xml:space="preserve">
     <value>Position</value>
-  </data>
-  <data name="Region" xml:space="preserve">
-    <value>Region</value>
-  </data>
-  <data name="OpenMapCommand" xml:space="preserve">
-    <value>Open map</value>
   </data>
   <data name="RegionsWithMap_CoastalRegion" xml:space="preserve">
     <value>Coastal Highway</value>
@@ -1592,5 +1511,86 @@
   </data>
   <data name="StraightToHeartProgress" xml:space="preserve">
     <value>Straight to the heart progress</value>
+  </data>
+  <data name="GEAR_CowichanSweater" xml:space="preserve">
+    <value>Cowichan Sweater</value>
+  </data>
+  <data name="GEAR_Brand" xml:space="preserve">
+    <value>Brand</value>
+  </data>
+  <data name="GEAR_ClimbersJournal" xml:space="preserve">
+    <value>Climber's Journal Page</value>
+  </data>
+  <data name="GEAR_BowString" xml:space="preserve">
+    <value>Bow String</value>
+  </data>
+  <data name="GEAR_BowWood" xml:space="preserve">
+    <value>Bow Wood</value>
+  </data>
+  <data name="GEAR_CollectibleNoteCommonReward" xml:space="preserve">
+    <value>Collectible Note Common</value>
+  </data>
+  <data name="GEAR_CollectibleNoteRareReward" xml:space="preserve">
+    <value>Collectible Note Common</value>
+  </data>
+  <data name="AfflictionType_FrostbiteDamage" xml:space="preserve">
+    <value>Frostbite damage</value>
+  </data>
+  <data name="GEAR_KnifeScrapMetal_Clean" xml:space="preserve">
+    <value>Knife Scrap Metal Clean</value>
+  </data>
+  <data name="GEAR_MapSnippetMt" xml:space="preserve">
+    <value>Map Snippet Mt</value>
+  </data>
+  <data name="GEAR_MapToRailyard" xml:space="preserve">
+    <value>Map To Railyard</value>
+  </data>
+  <data name="GEAR_Morphine" xml:space="preserve">
+    <value>Morphine</value>
+  </data>
+  <data name="GEAR_MountainTownFarmNote" xml:space="preserve">
+    <value>Mountain Town Farm Note</value>
+  </data>
+  <data name="GEAR_MountainTownLockBoxKey" xml:space="preserve">
+    <value>Mountain Town Lock Box Key</value>
+  </data>
+  <data name="GEAR_MountainTownMap" xml:space="preserve">
+    <value>Mountain Town Map</value>
+  </data>
+  <data name="GEAR_MountainTownStoreKey" xml:space="preserve">
+    <value>Mountain Town Store Key</value>
+  </data>
+  <data name="GEAR_OverpassBrochure" xml:space="preserve">
+    <value>Overpass Brochure</value>
+  </data>
+  <data name="GEAR_RicksJournal" xml:space="preserve">
+    <value>Rick's Journal</value>
+  </data>
+  <data name="GEAR_RifleBlanks" xml:space="preserve">
+    <value>Rifle Blanks</value>
+  </data>
+  <data name="GEAR_UtilitiesBill" xml:space="preserve">
+    <value>Utilities Bill</value>
+  </data>
+  <data name="GEAR_WaterTowerNote" xml:space="preserve">
+    <value>Water Tower Note</value>
+  </data>
+  <data name="GEAR_ForestTalkerMap" xml:space="preserve">
+    <value>Forest Talker Map Note</value>
+  </data>
+  <data name="AfflictionType_SprainedWristMajor" xml:space="preserve">
+    <value>Sprained wrist major</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeNomad" xml:space="preserve">
+    <value>Nomad</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="GEAR_LetterBundle" xml:space="preserve">
+    <value>Jeremiah's Letters</value>
+  </data>
+  <data name="OpenMapCommand" xml:space="preserve">
+    <value>Open map</value>
   </data>
 </root>
