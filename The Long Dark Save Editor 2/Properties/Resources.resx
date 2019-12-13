@@ -1623,4 +1623,7 @@
   <data name="GunsmithingSkillSP" xml:space="preserve">
     <value>Gunsmithing skillpoints</value>
   </data>
+  <data name="RegionsWithMap_CanneryRegion" xml:space="preserve">
+    <value>Cannery Region</value>
+  </data>
 </root>
