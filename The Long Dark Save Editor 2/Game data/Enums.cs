@@ -30,7 +30,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         HighwayTransitionZone,
         TracksRegion,
         RiverValleyRegion,
-        MountainTownRegion
+        MountainTownRegion,
+        CanneryRegion
     }
 
     // -----

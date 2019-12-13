@@ -42,5 +42,9 @@
             <Label VerticalAlignment="Center" Width="190" Content="{x:Static p:Resources.RevolverSkillSP}" />
             <TextBox Text="{Binding CurrentSave.Global.SkillsManager.Revolver.m_Points}"  Width="200"></TextBox>
         </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+            <Label VerticalAlignment="Center" Width="190" Content="{x:Static p:Resources.GunsmithingSkillSP}" />
+            <TextBox Text="{Binding CurrentSave.Global.SkillsManager.Gunsmith.m_Points}"  Width="200"></TextBox>
+        </StackPanel>
     </StackPanel>
 </UserControl>
