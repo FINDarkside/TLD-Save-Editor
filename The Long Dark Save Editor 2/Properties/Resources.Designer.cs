@@ -322,6 +322,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 4 days of night 2019 badges unlocked.
+        /// </summary>
+        public static string Badges4DON2019CheckBox {
+            get {
+                return ResourceManager.GetString("Badges4DON2019CheckBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 4 days of night badges unlocked.
         /// </summary>
         public static string Badges4DONCheckBox {
@@ -330,15 +339,6 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
             }
         }
         
-        /// <summary>
-        ///   Looks up a localized string similar to 4 days of night 2019 badges unlocked.
-        /// </summary>
-        public static string Badges4DON2019CheckBox {
-            get {
-                return ResourceManager.GetString("Badges4DON2019CheckBox", resourceCulture);
-            }
-        }
-
         /// <summary>
         ///   Looks up a localized string similar to Blizzard walker progress.
         /// </summary>
@@ -626,7 +626,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("ExpertTrapperProgress", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Fatigue.
         /// </summary>
@@ -4415,7 +4415,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("SnowWalkerProgress", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Straight to the heart progress.
         /// </summary>
@@ -4453,7 +4453,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Long Dark (v1.60) Save Editor.
+        ///   Looks up a localized string similar to The Long Dark (v1.62) Save Editor.
         /// </summary>
         public static string Title {
             get {
