@@ -322,20 +322,20 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 4 days of night badges unlocked.
-        /// </summary>
-        public static string Badges4DONCheckBox {
-            get {
-                return ResourceManager.GetString("Badges4DONCheckBox", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 4 days of night 2019 badges unlocked.
         /// </summary>
         public static string Badges4DON2019CheckBox {
             get {
                 return ResourceManager.GetString("Badges4DON2019CheckBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4 days of night badges unlocked.
+        /// </summary>
+        public static string Badges4DONCheckBox {
+            get {
+                return ResourceManager.GetString("Badges4DONCheckBox", resourceCulture);
             }
         }
         
@@ -1013,7 +1013,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("GEAR_BloodyHammer", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Marine Flare.
         /// </summary>
@@ -1157,7 +1157,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("GEAR_BookG", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Practical Gunsmithing.
         /// </summary>
@@ -1328,7 +1328,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("GEAR_BrokenRifle", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Bullet.
         /// </summary>
@@ -1373,7 +1373,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("GEAR_CannedSardines", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Communication Report.
         /// </summary>
@@ -1850,7 +1850,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("GEAR_DownVest", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Dusting Sulfur.
         /// </summary>
@@ -2183,7 +2183,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("GEAR_GreyMotherTrunkKey", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Can of Gunpowder.
         /// </summary>
@@ -3344,7 +3344,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("GEAR_RevolverAmmoBox", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Revolver Shell Casing.
         /// </summary>
@@ -3389,7 +3389,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("GEAR_RifleAmmoBox", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Rifle Shell Casing.
         /// </summary>
@@ -3479,7 +3479,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("GEAR_RoseHipTea", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Scrap Lead.
         /// </summary>
@@ -3650,7 +3650,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("GEAR_Stone", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Stump Remover.
         /// </summary>
@@ -4064,7 +4064,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("GEAR_WorkPants", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Gunsmithing skillpoints.
         /// </summary>
@@ -4336,6 +4336,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cannery Region.
+        /// </summary>
+        public static string RegionsWithMap_CanneryRegion {
+            get {
+                return ResourceManager.GetString("RegionsWithMap_CanneryRegion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Coastal Highway.
         /// </summary>
         public static string RegionsWithMap_CoastalRegion {
@@ -4462,7 +4471,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Revolver skill points.
+        ///   Looks up a localized string similar to Revolver skillpoints.
         /// </summary>
         public static string RevolverSkillSP {
             get {
@@ -4543,7 +4552,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Long Dark (v1.60) Save Editor.
+        ///   Looks up a localized string similar to The Long Dark (v1.62) Save Editor.
         /// </summary>
         public static string Title {
             get {
