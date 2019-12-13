@@ -1584,4 +1584,43 @@
   <data name="Badges4DONCheckBox" xml:space="preserve">
     <value>Значки 4DON разблокированы</value>
   </data>
+  <data name="GEAR_BlueFlare" xml:space="preserve">
+    <value>Морской фальшфеер</value>
+  </data>
+  <data name="GEAR_BookGunsmithing" xml:space="preserve">
+    <value>Практические советы для оружейников</value>
+  </data>
+  <data name="GEAR_Bullet" xml:space="preserve">
+    <value>Пуля</value>
+  </data>
+  <data name="GEAR_CanneryCodeNote" xml:space="preserve">
+    <value>Отчет</value>
+  </data>
+  <data name="GEAR_CanneryMemo" xml:space="preserve">
+    <value>Записка с завода</value>
+  </data>
+  <data name="GEAR_CannerySurvivalPath" xml:space="preserve">
+    <value>Блокнот техника</value>
+  </data>
+  <data name="GEAR_DustingSulfur" xml:space="preserve">
+    <value>Серный порошок</value>
+  </data>
+  <data name="GEAR_GunpowderCan" xml:space="preserve">
+    <value>Банка с порохом</value>
+  </data>
+  <data name="GEAR_RevolverAmmoCasing" xml:space="preserve">
+    <value>Револьверная гильза</value>
+  </data>
+  <data name="GEAR_RifleAmmoCasing" xml:space="preserve">
+    <value>Ружейная гильза</value>
+  </data>
+  <data name="GEAR_ScrapLead" xml:space="preserve">
+    <value>Свинцовый лом</value>
+  </data>
+  <data name="GEAR_StumpRemover" xml:space="preserve">
+    <value>Растворитель пней</value>
+  </data>
+  <data name="GunsmithingSkillSP" xml:space="preserve">
+    <value>Оружейное дело</value>
+  </data>
 </root>

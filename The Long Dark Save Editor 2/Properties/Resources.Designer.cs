@@ -1013,6 +1013,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("GEAR_BloodyHammer", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Marine Flare.
+        /// </summary>
+        public static string GEAR_BlueFlare {
+            get {
+                return ResourceManager.GetString("GEAR_BlueFlare", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to Bolt Cutters.
@@ -1146,6 +1155,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_BookG {
             get {
                 return ResourceManager.GetString("GEAR_BookG", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Practical Gunsmithing.
+        /// </summary>
+        public static string GEAR_BookGunsmithing {
+            get {
+                return ResourceManager.GetString("GEAR_BookGunsmithing", resourceCulture);
             }
         }
         
@@ -1310,6 +1328,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("GEAR_BrokenRifle", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Bullet.
+        /// </summary>
+        public static string GEAR_Bullet {
+            get {
+                return ResourceManager.GetString("GEAR_Bullet", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to Milton Hidden Cache Note.
@@ -1344,6 +1371,33 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_CannedSardines {
             get {
                 return ResourceManager.GetString("GEAR_CannedSardines", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Communication Report.
+        /// </summary>
+        public static string GEAR_CanneryCodeNote {
+            get {
+                return ResourceManager.GetString("GEAR_CanneryCodeNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannery Memo.
+        /// </summary>
+        public static string GEAR_CanneryMemo {
+            get {
+                return ResourceManager.GetString("GEAR_CanneryMemo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Technician&apos;s Notebook.
+        /// </summary>
+        public static string GEAR_CannerySurvivalPath {
+            get {
+                return ResourceManager.GetString("GEAR_CannerySurvivalPath", resourceCulture);
             }
         }
         
@@ -1796,6 +1850,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("GEAR_DownVest", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Dusting Sulfur.
+        /// </summary>
+        public static string GEAR_DustingSulfur {
+            get {
+                return ResourceManager.GetString("GEAR_DustingSulfur", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to Wool Ear Wrap.
@@ -2118,6 +2181,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_GreyMotherTrunkKey {
             get {
                 return ResourceManager.GetString("GEAR_GreyMotherTrunkKey", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Can of Gunpowder.
+        /// </summary>
+        public static string GEAR_GunpowderCan {
+            get {
+                return ResourceManager.GetString("GEAR_GunpowderCan", resourceCulture);
             }
         }
         
@@ -3272,6 +3344,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("GEAR_RevolverAmmoBox", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Revolver Shell Casing.
+        /// </summary>
+        public static string GEAR_RevolverAmmoCasing {
+            get {
+                return ResourceManager.GetString("GEAR_RevolverAmmoCasing", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to Revolver Cartridge.
@@ -3306,6 +3387,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_RifleAmmoBox {
             get {
                 return ResourceManager.GetString("GEAR_RifleAmmoBox", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Rifle Shell Casing.
+        /// </summary>
+        public static string GEAR_RifleAmmoCasing {
+            get {
+                return ResourceManager.GetString("GEAR_RifleAmmoCasing", resourceCulture);
             }
         }
         
@@ -3387,6 +3477,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_RoseHipTea {
             get {
                 return ResourceManager.GetString("GEAR_RoseHipTea", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Scrap Lead.
+        /// </summary>
+        public static string GEAR_ScrapLead {
+            get {
+                return ResourceManager.GetString("GEAR_ScrapLead", resourceCulture);
             }
         }
         
@@ -3549,6 +3648,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_Stone {
             get {
                 return ResourceManager.GetString("GEAR_Stone", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Stump Remover.
+        /// </summary>
+        public static string GEAR_StumpRemover {
+            get {
+                return ResourceManager.GetString("GEAR_StumpRemover", resourceCulture);
             }
         }
         
@@ -3954,6 +4062,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_WorkPants {
             get {
                 return ResourceManager.GetString("GEAR_WorkPants", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Gunsmithing skillpoints.
+        /// </summary>
+        public static string GunsmithingSkillSP {
+            get {
+                return ResourceManager.GetString("GunsmithingSkillSP", resourceCulture);
             }
         }
         

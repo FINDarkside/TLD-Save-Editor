@@ -52,7 +52,7 @@ namespace The_Long_Dark_Save_Editor_2
             var bootSerialized = dynamicBoot.Serialize();
             SlotData.m_Dict["boot"] = EncryptString.Compress(bootSerialized);
 
-            if(Boot.m_SceneName.Value != OriginalRegion)
+            if (Boot.m_SceneName.Value != OriginalRegion)
             {
                 Global.GameManagerData.SceneTransition.m_ForceNextSceneLoadTriggerScene = null;
             }

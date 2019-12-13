@@ -174,10 +174,10 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_WaterSupplyNotPotable", ItemCategory.Food, @"{""WaterSupply"":{""m_VolumeProxy"": 1}}", true);
             AddItemInfo("GEAR_WaterSupplyPotable", ItemCategory.Food, @"{""WaterSupply"":{""m_VolumeProxy"": 1}}", true);
             AddItemInfo("GEAR_WolfQuarter", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");
-            AddItemInfo("GEAR_BearQuarter", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");//multiplier from WolfQuarter
+            AddItemInfo("GEAR_BearQuarter", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");
             AddItemInfo("GEAR_StagQuarter", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");
             AddItemInfo("GEAR_RabbitCarcass", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:1.5, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");
-            AddItemInfo("GEAR_MooseQuarter", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");//multiplier from WolfQuarter
+            AddItemInfo("GEAR_MooseQuarter", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");
             AddItemInfo("GEAR_RawMeatMoose", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
             AddItemInfo("GEAR_CookedMeatMoose", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
 
@@ -188,13 +188,17 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_BrokenArrow", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_BearSkinBedRoll", ItemCategory.Tools, @"{""Bed"": {}}");
             AddItemInfo("GEAR_BedRoll", ItemCategory.Tools, @"{""Bed"": {}}");
+            AddItemInfo("GEAR_BlueFlare", ItemCategory.Tools, @"{""FlareItem"": {}}");
             AddItemInfo("GEAR_Bow", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_Brand", ItemCategory.Tools, @"{""TorchItem"": {}}"); //Check!!
+            AddItemInfo("GEAR_Bullet", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 6}}");
+            AddItemInfo("GEAR_CarBattery", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_CanOpener", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_Firestriker", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_FlareA", ItemCategory.Tools, @"{""FlareItem"": {}}");
             AddItemInfo("GEAR_FlareGunAmmoSingle", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_FlareGun", ItemCategory.Tools, @"{}");
+            AddItemInfo("GEAR_GunpowderCan", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_Hacksaw", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_Hammer", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_Hatchet", ItemCategory.Tools, @"{}");
@@ -213,6 +217,8 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_NewsprintRoll", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_PackMatches", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 10}, ""MatchesItem"": {}}");
             AddItemInfo("GEAR_Prybar", ItemCategory.Tools, @"{}");
+            AddItemInfo("GEAR_RevolverAmmoCasing", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 6}}");
+            AddItemInfo("GEAR_RifleAmmoCasing", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 6}}");
             AddItemInfo("GEAR_Rifle", ItemCategory.Tools, @"{""WeaponItem"": {""m_RoundsInClipProxy"": 10}}");
             AddItemInfo("GEAR_RifleAmmoBox", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 10}}");
             AddItemInfo("GEAR_RifleAmmoSingle", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
@@ -249,10 +255,6 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
 
             // Materials
             AddItemInfo("GEAR_ArrowHead", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""InProgressItem"": {""m_PercentComplete"": 100}}");
-            AddItemInfo("GEAR_BearHide", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""EvolveItem"": {}}");
-            AddItemInfo("GEAR_BearHideDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-            AddItemInfo("GEAR_BirchSapling", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""EvolveItem"": {}}");
-            AddItemInfo("GEAR_BirchSaplingDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_BookA", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_BookB", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}", true);
             AddItemInfo("GEAR_BookC", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}", true);
@@ -271,19 +273,10 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_Coal", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_CrowFeather", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_Firelog", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-            AddItemInfo("GEAR_Gut", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""EvolveItem"": {}}");
-            AddItemInfo("GEAR_GutDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_PaperStack", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_Hardwood", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-            AddItemInfo("GEAR_Leather", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-            AddItemInfo("GEAR_LeatherDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-            AddItemInfo("GEAR_LeatherHide", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-            AddItemInfo("GEAR_LeatherHideDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-            AddItemInfo("GEAR_MapleSapling", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""EvolveItem"": {}}");
-            AddItemInfo("GEAR_MapleSaplingDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_Newsprint", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_OldMansBeardHarvested", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-            AddItemInfo("GEAR_RabbitPelt", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""EvolveItem"": {}}");
-            AddItemInfo("GEAR_RabbitPeltDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_ReclaimedWoodB", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_ReishiMushroom", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_RoseHip", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
@@ -292,11 +285,27 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_Stick", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_Tinder", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_BarkTinder", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-            AddItemInfo("GEAR_WolfPelt", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_BearHide", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""EvolveItem"": {}}");
+            AddItemInfo("GEAR_BearHideDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_BirchSapling", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""EvolveItem"": {}}");
+            AddItemInfo("GEAR_BirchSaplingDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_Gut", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""EvolveItem"": {}}");
+            AddItemInfo("GEAR_GutDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_Leather", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""EvolveItem"": {}}");
+            AddItemInfo("GEAR_LeatherDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_LeatherHide", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""EvolveItem"": {}}");
+            AddItemInfo("GEAR_LeatherHideDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_MapleSapling", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""EvolveItem"": {}}");
+            AddItemInfo("GEAR_MapleSaplingDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_RabbitPelt", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""EvolveItem"": {}}");
+            AddItemInfo("GEAR_RabbitPeltDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_WolfPelt", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""EvolveItem"": {}}");
             AddItemInfo("GEAR_WolfPeltDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-            AddItemInfo("GEAR_PaperStack", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_MooseHide", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}, ""EvolveItem"": {}}");
             AddItemInfo("GEAR_MooseHideDried", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-            AddItemInfo("GEAR_MooseHide", ItemCategory.Materials, @"{""EvolveItem"": {}}");
+            AddItemInfo("GEAR_ScrapLead", ItemCategory.Materials, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
+            AddItemInfo("GEAR_StumpRemover", ItemCategory.Materials, @"{}");
+            AddItemInfo("GEAR_DustingSulfur", ItemCategory.Materials, @"{}");
 
             // Books
             AddItemInfo("GEAR_BookCarcassHarvesting", ItemCategory.Books, @"{""ResearchItem"": {}}");
@@ -308,8 +317,12 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_BookArchery", ItemCategory.Books, @"{""ResearchItem"": {}}");
             AddItemInfo("GEAR_BookMending", ItemCategory.Books, @"{""ResearchItem"": {}}");
             AddItemInfo("GEAR_BookRevolverFirearm", ItemCategory.Books, @"{""ResearchItem"": {}}");
+            AddItemInfo("GEAR_BookGunsmithing", ItemCategory.Books, @"{""ResearchItem"": {}}");
 
             // Collectible
+            AddItemInfo("GEAR_CanneryCodeNote", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_CanneryMemo", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_CannerySurvivalPath", ItemCategory.Collectible, @"{}");
             AddItemInfo("GEAR_ClimbersJournal", ItemCategory.Collectible, @"{}");
             AddItemInfo("GEAR_ForestTalkerThankyou", ItemCategory.Collectible, @"{}");
             AddItemInfo("GEAR_ForestTalkerThankyou2", ItemCategory.Collectible, @"{}");
@@ -368,7 +381,6 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             // Hidden
             AddItemInfo("GEAR_AccelerantKerosene", ItemCategory.Hidden, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_AccelerantMedium", ItemCategory.Hidden, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
-            AddItemInfo("GEAR_CarBattery", ItemCategory.Hidden, @"{}");
             AddItemInfo("GEAR_CompressionBandage", ItemCategory.Hidden, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
             AddItemInfo("GEAR_FishingLine", ItemCategory.Hidden, @"{}");
             AddItemInfo("GEAR_FlintAndSteel", ItemCategory.Hidden, @"{}");
