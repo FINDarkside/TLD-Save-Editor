@@ -1575,4 +1575,43 @@
   <data name="Backups" xml:space="preserve">
     <value>Backups</value>
   </data>
+  <data name="GEAR_BlueFlare" xml:space="preserve">
+    <value>Marine Flare</value>
+  </data>
+  <data name="GEAR_BookGunsmithing" xml:space="preserve">
+    <value>Practical Gunsmithing</value>
+  </data>
+  <data name="GEAR_Bullet" xml:space="preserve">
+    <value>Bullet</value>
+  </data>
+  <data name="GEAR_CanneryCodeNote" xml:space="preserve">
+    <value>Communication Report</value>
+  </data>
+  <data name="GEAR_CanneryMemo" xml:space="preserve">
+    <value>Cannery Memo</value>
+  </data>
+  <data name="GEAR_CannerySurvivalPath" xml:space="preserve">
+    <value>The Technician's Notebook</value>
+  </data>
+  <data name="GEAR_DustingSulfur" xml:space="preserve">
+    <value>Dusting Sulfur</value>
+  </data>
+  <data name="GEAR_GunpowderCan" xml:space="preserve">
+    <value>Can of Gunpowder</value>
+  </data>
+  <data name="GEAR_RevolverAmmoCasing" xml:space="preserve">
+    <value>Revolver Shell Casing</value>
+  </data>
+  <data name="GEAR_RifleAmmoCasing" xml:space="preserve">
+    <value>Rifle Shell Casing</value>
+  </data>
+  <data name="GEAR_ScrapLead" xml:space="preserve">
+    <value>Scrap Lead</value>
+  </data>
+  <data name="GEAR_StumpRemover" xml:space="preserve">
+    <value>Stump Remover</value>
+  </data>
+  <data name="GunsmithingSkillSP" xml:space="preserve">
+    <value>Gunsmithing skillpoints</value>
+  </data>
 </root>
