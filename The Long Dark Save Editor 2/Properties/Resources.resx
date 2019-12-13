@@ -1584,4 +1584,13 @@
   <data name="Badges4DONCheckBox" xml:space="preserve">
     <value>4 days of night badges unlocked</value>
   </data>
+  <data name="BlizzardWalkerProgress" xml:space="preserve">
+    <value>Blizzard walker progress</value>
+  </data>
+  <data name="ExpertTrapperProgress" xml:space="preserve">
+    <value>Expert trapper progress</value>
+  </data>
+  <data name="StraightToHeartProgress" xml:space="preserve">
+    <value>Straight to the heart progress</value>
+  </data>
 </root>

@@ -108,6 +108,12 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public Feat_FreeRunnerSaveData FreeRunner { get; set; }
         [Deserialize("m_Feat_SnowWalkerSerialized", true)]
         public Feat_SnowWalkerSaveData SnowWalker { get; set; }
+        [Deserialize("m_Feat_ExpertTrappererialized", true)]
+        public Feat_ExpertTrapperSaveData ExpertTrapper { get; set; }
+        [Deserialize("m_Feat_StraightToHeartSerialized", true)]
+        public Feat_StraightToHeartSaveData StraightToHeart { get; set; }
+        [Deserialize("m_Feat_BlizzardWalkerSerialized", true)]
+        public Feat_BlizzardWalkerSaveData BlizzardWalker { get; set; }
     }
 
     public class Feat_BookSmartsSaveData
@@ -142,6 +148,20 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
     {
         public float m_ElapsedKilometers { get; set; }
         public float m_MetersAccumulator { get; set; }
+    }
+
+    public class Feat_ExpertTrapperSaveData
+    {
+        public int m_RabbitSnaredCount { get; set; }
+    }
+    public class Feat_StraightToHeartSaveData
+    {
+        public int m_ItemConsumedCount { get; set; }
+    }
+    public class Feat_BlizzardWalkerSaveData
+    {
+        public float m_BlizzardHoursOutside { get; set; }
+        public float m_BlizzardHoursOutsideAccumulator { get; set; }
     }
 
     public class StatContainer

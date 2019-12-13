@@ -1584,4 +1584,13 @@
   <data name="Badges4DONCheckBox" xml:space="preserve">
     <value>Значки 4DON разблокированы</value>
   </data>
+  <data name="BlizzardWalkerProgress" xml:space="preserve">
+    <value>Снежный скиталец</value>
+  </data>
+  <data name="ExpertTrapperProgress" xml:space="preserve">
+    <value>Мастер-зверолов</value>
+  </data>
+  <data name="StraightToHeartProgress" xml:space="preserve">
+    <value>Прямо в сердце</value>
+  </data>
 </root>
