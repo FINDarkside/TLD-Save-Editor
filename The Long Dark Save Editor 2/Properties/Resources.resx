@@ -1399,16 +1399,16 @@
     <value>Interloper</value>
   </data>
   <data name="ExperienceModeType_StoryFresh" xml:space="preserve">
-    <value>Story fresh</value>
+    <value>Story Fresh</value>
   </data>
   <data name="ExperienceModeType_StoryHardened" xml:space="preserve">
-    <value>Story hardened</value>
+    <value>Story Hardened</value>
   </data>
   <data name="ExperienceModeType_FourDaysOfNight" xml:space="preserve">
-    <value>Four days of night</value>
+    <value>Four Days Of Night</value>
   </data>
   <data name="ExperienceModeType_ChallengeArchivist" xml:space="preserve">
-    <value>Challenge archivist</value>
+    <value>Challenge Archivist</value>
   </data>
   <data name="ExperienceModeType_Custom" xml:space="preserve">
     <value>Custom</value>
@@ -1634,5 +1634,8 @@
   </data>
   <data name="RegionsWithMap_CanneryRegion" xml:space="preserve">
     <value>Cannery Region</value>
+  </data>
+  <data name="ExperienceModeType_ChallengeDeadManWalking" xml:space="preserve">
+    <value>As the Dead Sleep</value>
   </data>
 </root>

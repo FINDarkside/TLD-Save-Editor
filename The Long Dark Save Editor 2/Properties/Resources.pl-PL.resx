@@ -1635,4 +1635,7 @@
   <data name="RegionsWithMap_CanneryRegion" xml:space="preserve">
     <value>Cannery Region</value>
   </data>
+  <data name="ExperienceModeType_ChallengeDeadManWalking" xml:space="preserve">
+    <value>As the Dead Sleep</value>
+  </data>
 </root>
