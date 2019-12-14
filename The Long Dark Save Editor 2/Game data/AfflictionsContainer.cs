@@ -201,8 +201,8 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
                 return;
             Negative.Add(new BurnsElectric(negative)
             {
-                AfflictionType = AfflictionType.Burns,
-                Location = 5,
+                AfflictionType = AfflictionType.BurnsElectric,
+                Location = 3,
                 BandageApplied = proxy.m_BandageApplied,
                 DurationHours = proxy.m_DurationHours,
                 ElapsedHours = proxy.m_ElapsedHours,

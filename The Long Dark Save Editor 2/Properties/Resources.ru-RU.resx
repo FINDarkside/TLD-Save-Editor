@@ -1633,7 +1633,10 @@
     <value>Оружейное дело</value>
   </data>
   <data name="RegionsWithMap_CanneryRegion" xml:space="preserve">
-    <value>Cannery Region</value>
+    <value>Бледная бухта</value>
+  </data>
+  <data name="AfflictionType_BurnsElectric" xml:space="preserve">
+    <value>Электрический ожог</value>
   </data>
   <data name="ExperienceModeType_ChallengeDeadManWalking" xml:space="preserve">
     <value>Пока мертвые спят</value>

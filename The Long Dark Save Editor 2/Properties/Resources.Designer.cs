@@ -113,6 +113,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("AfflictionType_Burns", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Electric burns.
+        /// </summary>
+        public static string AfflictionType_BurnsElectric {
+            get {
+                return ResourceManager.GetString("AfflictionType_BurnsElectric", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to Cabin fever.
