@@ -1638,4 +1638,7 @@
   <data name="AfflictionType_BurnsElectric" xml:space="preserve">
     <value>Electric burns</value>
   </data>
+  <data name="ExperienceModeType_ChallengeDeadManWalking" xml:space="preserve">
+    <value>As the Dead Sleep</value>
+  </data>
 </root>

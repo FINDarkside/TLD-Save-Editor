@@ -493,11 +493,20 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Challenge archivist.
+        ///   Looks up a localized string similar to Challenge Archivist.
         /// </summary>
         public static string ExperienceModeType_ChallengeArchivist {
             get {
                 return ResourceManager.GetString("ExperienceModeType_ChallengeArchivist", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to As the Dead Sleep.
+        /// </summary>
+        public static string ExperienceModeType_ChallengeDeadManWalking {
+            get {
+                return ResourceManager.GetString("ExperienceModeType_ChallengeDeadManWalking", resourceCulture);
             }
         }
         
