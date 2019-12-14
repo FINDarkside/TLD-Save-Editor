@@ -113,7 +113,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("AfflictionType_Burns", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Electric burns.
         /// </summary>
@@ -500,7 +500,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
                 return ResourceManager.GetString("ExperienceModeType_ChallengeArchivist", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to As the Dead Sleep.
         /// </summary>
@@ -565,7 +565,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Four days of night.
+        ///   Looks up a localized string similar to Four Days Of Night.
         /// </summary>
         public static string ExperienceModeType_FourDaysOfNight {
             get {
@@ -610,7 +610,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Story fresh.
+        ///   Looks up a localized string similar to Story Fresh.
         /// </summary>
         public static string ExperienceModeType_StoryFresh {
             get {
@@ -619,7 +619,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Story hardened.
+        ///   Looks up a localized string similar to Story Hardened.
         /// </summary>
         public static string ExperienceModeType_StoryHardened {
             get {
@@ -736,6 +736,24 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Airline Food - Chicken.
+        /// </summary>
+        public static string GEAR_AirlineFoodChick {
+            get {
+                return ResourceManager.GetString("GEAR_AirlineFoodChick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Airline Food - Vegetarian.
+        /// </summary>
+        public static string GEAR_AirlineFoodVeg {
+            get {
+                return ResourceManager.GetString("GEAR_AirlineFoodVeg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Simple Arrow.
         /// </summary>
         public static string GEAR_Arrow {
@@ -781,11 +799,74 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Astrid&apos;s Boots.
+        /// </summary>
+        public static string GEAR_AstridBoots {
+            get {
+                return ResourceManager.GetString("GEAR_AstridBoots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Astrid&apos;s Gloves.
+        /// </summary>
+        public static string GEAR_AstridGloves {
+            get {
+                return ResourceManager.GetString("GEAR_AstridGloves", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Astrid&apos;s Jacket.
+        /// </summary>
+        public static string GEAR_AstridJacket {
+            get {
+                return ResourceManager.GetString("GEAR_AstridJacket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Astrid&apos;s Jeans.
+        /// </summary>
+        public static string GEAR_AstridJeans {
+            get {
+                return ResourceManager.GetString("GEAR_AstridJeans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Astrid&apos;s Sweater.
+        /// </summary>
+        public static string GEAR_AstridSweater {
+            get {
+                return ResourceManager.GetString("GEAR_AstridSweater", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Astrid Toque.
+        /// </summary>
+        public static string GEAR_AstridToque {
+            get {
+                return ResourceManager.GetString("GEAR_AstridToque", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Aurora Hatch Door Entry Code.
         /// </summary>
         public static string GEAR_AuroraHatchCode {
             get {
                 return ResourceManager.GetString("GEAR_AuroraHatchCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aurora Observation.
+        /// </summary>
+        public static string GEAR_AuroraObservationNote {
+            get {
+                return ResourceManager.GetString("GEAR_AuroraObservationNote", resourceCulture);
             }
         }
         
@@ -1042,6 +1123,42 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Blood Stained-Convict Note.
+        /// </summary>
+        public static string GEAR_BlackrockConvictNote1 {
+            get {
+                return ResourceManager.GetString("GEAR_BlackrockConvictNote1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convict Note.
+        /// </summary>
+        public static string GEAR_BlackrockConvictNote2 {
+            get {
+                return ResourceManager.GetString("GEAR_BlackrockConvictNote2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convict Cache Directions.
+        /// </summary>
+        public static string GEAR_BlackrockConvictNote3 {
+            get {
+                return ResourceManager.GetString("GEAR_BlackrockConvictNote3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blackrock Penitentiary Memo.
+        /// </summary>
+        public static string GEAR_BlackrockMemo {
+            get {
+                return ResourceManager.GetString("GEAR_BlackrockMemo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bloody Hammer.
         /// </summary>
         public static string GEAR_BloodyHammer {
@@ -1285,6 +1402,42 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Local Legends - The Big One.
+        /// </summary>
+        public static string GEAR_BookTallTalesFishing {
+            get {
+                return ResourceManager.GetString("GEAR_BookTallTalesFishing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Local Legends -The Lost Cave.
+        /// </summary>
+        public static string GEAR_BookTallTalesGlowCave {
+            get {
+                return ResourceManager.GetString("GEAR_BookTallTalesGlowCave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Local Legends - Ghost Stag.
+        /// </summary>
+        public static string GEAR_BookTallTalesStag {
+            get {
+                return ResourceManager.GetString("GEAR_BookTallTalesStag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Local Legends -Sasquatch.
+        /// </summary>
+        public static string GEAR_BookTallTalesYeti {
+            get {
+                return ResourceManager.GetString("GEAR_BookTallTalesYeti", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Antibiotics.
         /// </summary>
         public static string GEAR_BottleAntibiotics {
@@ -1380,6 +1533,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_CacheNote_ChurchMarshDir {
             get {
                 return ResourceManager.GetString("GEAR_CacheNote_ChurchMarshDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Park Notice.
+        /// </summary>
+        public static string GEAR_CampOfficeCollectible {
+            get {
+                return ResourceManager.GetString("GEAR_CampOfficeCollectible", resourceCulture);
             }
         }
         
@@ -1636,6 +1798,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Convict Journal Entry.
+        /// </summary>
+        public static string GEAR_ConvictCorpseNote {
+            get {
+                return ResourceManager.GetString("GEAR_ConvictCorpseNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Coho Salmon (Cooked).
         /// </summary>
         public static string GEAR_CookedCohoSalmon {
@@ -1807,11 +1978,29 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Carter Hydro Dam - Safety &amp; Shutdown Notice.
+        /// </summary>
+        public static string GEAR_DamCollectible1 {
+            get {
+                return ResourceManager.GetString("GEAR_DamCollectible1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dam Control Room Code.
         /// </summary>
         public static string GEAR_DamControlRoomCodeNote {
             get {
                 return ResourceManager.GetString("GEAR_DamControlRoomCodeNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Elevator Maintenance Notice.
+        /// </summary>
+        public static string GEAR_DamElevatorNotice {
+            get {
+                return ResourceManager.GetString("GEAR_DamElevatorNotice", resourceCulture);
             }
         }
         
@@ -1825,11 +2014,38 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Trash Can Letter.
+        /// </summary>
+        public static string GEAR_DamGarbageLetter {
+            get {
+                return ResourceManager.GetString("GEAR_DamGarbageLetter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aid Station Medical Locker Key.
+        /// </summary>
+        public static string GEAR_DamLockerKey {
+            get {
+                return ResourceManager.GetString("GEAR_DamLockerKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dam Office Key.
         /// </summary>
         public static string GEAR_DamOfficeKey {
             get {
                 return ResourceManager.GetString("GEAR_DamOfficeKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Breyerhouse Winter Crew Warning.
+        /// </summary>
+        public static string GEAR_DamTrailerBCrewNote {
+            get {
+                return ResourceManager.GetString("GEAR_DamTrailerBCrewNote", resourceCulture);
             }
         }
         
@@ -1929,6 +2145,222 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_EnergyBar {
             get {
                 return ResourceManager.GetString("GEAR_EnergyBar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Church Artifact.
+        /// </summary>
+        public static string GEAR_Ep3_ChurchArtifact {
+            get {
+                return ResourceManager.GetString("GEAR_Ep3_ChurchArtifact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Church Flyer.
+        /// </summary>
+        public static string GEAR_Ep3_ChurchFlyer {
+            get {
+                return ResourceManager.GetString("GEAR_Ep3_ChurchFlyer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Undelivered Letter.
+        /// </summary>
+        public static string GEAR_Ep3_ChurchMotelLetter {
+            get {
+                return ResourceManager.GetString("GEAR_Ep3_ChurchMotelLetter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Newspaper Clipping.
+        /// </summary>
+        public static string GEAR_Ep3_ChurchNewsClipping {
+            get {
+                return ResourceManager.GetString("GEAR_Ep3_ChurchNewsClipping", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thankyou Letter.
+        /// </summary>
+        public static string GEAR_Ep3_ChurchThankyouLetter {
+            get {
+                return ResourceManager.GetString("GEAR_Ep3_ChurchThankyouLetter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Diocese Report.
+        /// </summary>
+        public static string GEAR_Ep3_ChurchTheftReport {
+            get {
+                return ResourceManager.GetString("GEAR_Ep3_ChurchTheftReport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Joplin&apos;s Journal, Part One.
+        /// </summary>
+        public static string GEAR_EP3_JoplinBunkerNote {
+            get {
+                return ResourceManager.GetString("GEAR_EP3_JoplinBunkerNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Joplin&apos;s Journal, Part Two.
+        /// </summary>
+        public static string GEAR_EP3_JoplinBunkerNote2 {
+            get {
+                return ResourceManager.GetString("GEAR_EP3_JoplinBunkerNote2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forest Talker Bunker Memo.
+        /// </summary>
+        public static string GEAR_EP3_JoplinCacheNote {
+            get {
+                return ResourceManager.GetString("GEAR_EP3_JoplinCacheNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blood Soaked Note.
+        /// </summary>
+        public static string GEAR_EP3_PatientHistory01 {
+            get {
+                return ResourceManager.GetString("GEAR_EP3_PatientHistory01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blood Soaked Note.
+        /// </summary>
+        public static string GEAR_EP3_PatientHistory02 {
+            get {
+                return ResourceManager.GetString("GEAR_EP3_PatientHistory02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blood Soaked Note.
+        /// </summary>
+        public static string GEAR_EP3_PatientHistory03 {
+            get {
+                return ResourceManager.GetString("GEAR_EP3_PatientHistory03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blood Soaked Note.
+        /// </summary>
+        public static string GEAR_EP3_PatientHistory04 {
+            get {
+                return ResourceManager.GetString("GEAR_EP3_PatientHistory04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blood Soaked Note.
+        /// </summary>
+        public static string GEAR_EP3_PatientHistory05 {
+            get {
+                return ResourceManager.GetString("GEAR_EP3_PatientHistory05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blood Soaked Note.
+        /// </summary>
+        public static string GEAR_EP3_PatientHistory06 {
+            get {
+                return ResourceManager.GetString("GEAR_EP3_PatientHistory06", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forest Talker Collectible, Part One.
+        /// </summary>
+        public static string GEAR_Ep3ForestTalkers_FTCollectible1 {
+            get {
+                return ResourceManager.GetString("GEAR_Ep3ForestTalkers_FTCollectible1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forest Talker Collectible, Part Two.
+        /// </summary>
+        public static string GEAR_Ep3ForestTalkers_FTCollectible2 {
+            get {
+                return ResourceManager.GetString("GEAR_Ep3ForestTalkers_FTCollectible2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forest Talker Collectible, Part Three.
+        /// </summary>
+        public static string GEAR_Ep3ForestTalkers_FTCollectible3 {
+            get {
+                return ResourceManager.GetString("GEAR_Ep3ForestTalkers_FTCollectible3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pleasant Valley Collectible, Part One.
+        /// </summary>
+        public static string GEAR_Ep3ForestTalkers_PVCollectible1 {
+            get {
+                return ResourceManager.GetString("GEAR_Ep3ForestTalkers_PVCollectible1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pleasant Valley Collectible, Part Two.
+        /// </summary>
+        public static string GEAR_Ep3ForestTalkers_PVCollectible2 {
+            get {
+                return ResourceManager.GetString("GEAR_Ep3ForestTalkers_PVCollectible2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pleasant Valley Collectible, Part Three.
+        /// </summary>
+        public static string GEAR_Ep3ForestTalkers_PVCollectible3 {
+            get {
+                return ResourceManager.GetString("GEAR_Ep3ForestTalkers_PVCollectible3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Community Hall Flyer.
+        /// </summary>
+        public static string GEAR_Ep3HallFlyer {
+            get {
+                return ResourceManager.GetString("GEAR_Ep3HallFlyer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rosary.
+        /// </summary>
+        public static string GEAR_Ep3Rosary {
+            get {
+                return ResourceManager.GetString("GEAR_Ep3Rosary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Map Of Pleasant Valley.
+        /// </summary>
+        public static string GEAR_Ep3TomsMap {
+            get {
+                return ResourceManager.GetString("GEAR_Ep3TomsMap", resourceCulture);
             }
         }
         
@@ -2091,6 +2523,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_FoodSupplies_hangar {
             get {
                 return ResourceManager.GetString("GEAR_FoodSupplies_hangar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forest Talker Dam Note.
+        /// </summary>
+        public static string GEAR_ForestTalkerDamNote {
+            get {
+                return ResourceManager.GetString("GEAR_ForestTalkerDamNote", resourceCulture);
             }
         }
         
@@ -2275,11 +2716,29 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hank&apos;s Journal - Part One.
+        /// </summary>
+        public static string GEAR_HankJournal1 {
+            get {
+                return ResourceManager.GetString("GEAR_HankJournal1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hank&apos;s Journal - Part Two.
         /// </summary>
         public static string GEAR_HankJournal2 {
             get {
                 return ResourceManager.GetString("GEAR_HankJournal2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hank&apos;s Lock Box Key.
+        /// </summary>
+        public static string GEAR_HankLockboxKey {
+            get {
+                return ResourceManager.GetString("GEAR_HankLockboxKey", resourceCulture);
             }
         }
         
@@ -2433,6 +2892,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_HikersBackPack {
             get {
                 return ResourceManager.GetString("GEAR_HikersBackPack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home-made Soup.
+        /// </summary>
+        public static string GEAR_HomeMadeSoup {
+            get {
+                return ResourceManager.GetString("GEAR_HomeMadeSoup", resourceCulture);
             }
         }
         
@@ -2653,11 +3121,83 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pleasant Valley History, Part One.
+        /// </summary>
+        public static string GEAR_KnowledgePVbook1 {
+            get {
+                return ResourceManager.GetString("GEAR_KnowledgePVbook1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pleasant Valley History, Part Two.
+        /// </summary>
+        public static string GEAR_KnowledgePVbook2 {
+            get {
+                return ResourceManager.GetString("GEAR_KnowledgePVbook2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pleasant Valley History, Part Three.
+        /// </summary>
+        public static string GEAR_KnowledgePVbook3 {
+            get {
+                return ResourceManager.GetString("GEAR_KnowledgePVbook3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key To Lake Cabin #1.
+        /// </summary>
+        public static string GEAR_LakeCabinKey1 {
+            get {
+                return ResourceManager.GetString("GEAR_LakeCabinKey1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key To Lake Cabin #2.
+        /// </summary>
+        public static string GEAR_LakeCabinKey2 {
+            get {
+                return ResourceManager.GetString("GEAR_LakeCabinKey2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key To Lake Cabin #3.
+        /// </summary>
+        public static string GEAR_LakeCabinKey3 {
+            get {
+                return ResourceManager.GetString("GEAR_LakeCabinKey3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Torn Paper.
+        /// </summary>
+        public static string GEAR_LakeDeerHuntNote {
+            get {
+                return ResourceManager.GetString("GEAR_LakeDeerHuntNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Crumpled Note.
         /// </summary>
         public static string GEAR_LakeIncidentNote {
             get {
                 return ResourceManager.GetString("GEAR_LakeIncidentNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Off Season Fun.
+        /// </summary>
+        public static string GEAR_LakeLetter1 {
+            get {
+                return ResourceManager.GetString("GEAR_LakeLetter1", resourceCulture);
             }
         }
         
@@ -2757,6 +3297,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_LightParka {
             get {
                 return ResourceManager.GetString("GEAR_LightParka", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lyly&apos;s Map.
+        /// </summary>
+        public static string GEAR_LilyClimbMap {
+            get {
+                return ResourceManager.GetString("GEAR_LilyClimbMap", resourceCulture);
             }
         }
         
@@ -2878,6 +3427,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Lost In The Storm.
+        /// </summary>
+        public static string GEAR_MiltonCaveLetter {
+            get {
+                return ResourceManager.GetString("GEAR_MiltonCaveLetter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bank Deposit Box Key (#7).
         /// </summary>
         public static string GEAR_MiltonDepositBoxKey1 {
@@ -2905,11 +3463,56 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Highway Robbery.
+        /// </summary>
+        public static string GEAR_MiltonFlareGunNote {
+            get {
+                return ResourceManager.GetString("GEAR_MiltonFlareGunNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Medicine in my backyard.
         /// </summary>
         public static string GEAR_MiltonGardenCache {
             get {
                 return ResourceManager.GetString("GEAR_MiltonGardenCache", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tearful Letter.
+        /// </summary>
+        public static string GEAR_MiltonLetter1 {
+            get {
+                return ResourceManager.GetString("GEAR_MiltonLetter1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Betrayal.
+        /// </summary>
+        public static string GEAR_MiltonLetter2 {
+            get {
+                return ResourceManager.GetString("GEAR_MiltonLetter2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Milton Post Office Note.
+        /// </summary>
+        public static string GEAR_MiltonPostOfficeCollectible1 {
+            get {
+                return ResourceManager.GetString("GEAR_MiltonPostOfficeCollectible1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Orca Gas Store Notice.
+        /// </summary>
+        public static string GEAR_MiltonStoreNotice {
+            get {
+                return ResourceManager.GetString("GEAR_MiltonStoreNotice", resourceCulture);
             }
         }
         
@@ -3058,6 +3661,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Milton Credit Union Letter.
+        /// </summary>
+        public static string GEAR_NoteMCU {
+            get {
+                return ResourceManager.GetString("GEAR_NoteMCU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Grey Mother&apos;s Safety Deposit Box.
         /// </summary>
         public static string GEAR_OldLadyStolenItem {
@@ -3112,6 +3724,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Passenger Manifest.
+        /// </summary>
+        public static string GEAR_PassengerManifest {
+            get {
+                return ResourceManager.GetString("GEAR_PassengerManifest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Peanut Butter.
         /// </summary>
         public static string GEAR_PeanutButter {
@@ -3148,11 +3769,110 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ID: S. Gagne.
+        /// </summary>
+        public static string GEAR_PlaneCrashID1 {
+            get {
+                return ResourceManager.GetString("GEAR_PlaneCrashID1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID: G. Russel.
+        /// </summary>
+        public static string GEAR_PlaneCrashID10 {
+            get {
+                return ResourceManager.GetString("GEAR_PlaneCrashID10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID: K. Morrison.
+        /// </summary>
+        public static string GEAR_PlaneCrashID2 {
+            get {
+                return ResourceManager.GetString("GEAR_PlaneCrashID2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID: F. Leblanc.
+        /// </summary>
+        public static string GEAR_PlaneCrashID3 {
+            get {
+                return ResourceManager.GetString("GEAR_PlaneCrashID3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID: D. Belanger.
+        /// </summary>
+        public static string GEAR_PlaneCrashID4 {
+            get {
+                return ResourceManager.GetString("GEAR_PlaneCrashID4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID: R. Tan.
+        /// </summary>
+        public static string GEAR_PlaneCrashID5 {
+            get {
+                return ResourceManager.GetString("GEAR_PlaneCrashID5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID: V. Singh.
+        /// </summary>
+        public static string GEAR_PlaneCrashID6 {
+            get {
+                return ResourceManager.GetString("GEAR_PlaneCrashID6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID: A. Lewis.
+        /// </summary>
+        public static string GEAR_PlaneCrashID7 {
+            get {
+                return ResourceManager.GetString("GEAR_PlaneCrashID7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID: T. Chan.
+        /// </summary>
+        public static string GEAR_PlaneCrashID8 {
+            get {
+                return ResourceManager.GetString("GEAR_PlaneCrashID8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID: O. Gould.
+        /// </summary>
+        public static string GEAR_PlaneCrashID9 {
+            get {
+                return ResourceManager.GetString("GEAR_PlaneCrashID9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Expedition Parka.
         /// </summary>
         public static string GEAR_PremiumWinterCoat {
             get {
                 return ResourceManager.GetString("GEAR_PremiumWinterCoat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prison Transport Manifest.
+        /// </summary>
+        public static string GEAR_PrisonBusNote {
+            get {
+                return ResourceManager.GetString("GEAR_PrisonBusNote", resourceCulture);
             }
         }
         
@@ -3513,6 +4233,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_RoseHipTea {
             get {
                 return ResourceManager.GetString("GEAR_RoseHipTea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Basement Key.
+        /// </summary>
+        public static string GEAR_RuralRegionFarmKey {
+            get {
+                return ResourceManager.GetString("GEAR_RuralRegionFarmKey", resourceCulture);
             }
         }
         

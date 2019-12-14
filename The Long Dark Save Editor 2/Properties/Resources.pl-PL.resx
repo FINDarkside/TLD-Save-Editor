@@ -1641,4 +1641,247 @@
   <data name="ExperienceModeType_ChallengeDeadManWalking" xml:space="preserve">
     <value>As the Dead Sleep</value>
   </data>
+  <data name="GEAR_AirlineFoodChick" xml:space="preserve">
+    <value>Airline Food - Chicken</value>
+  </data>
+  <data name="GEAR_AirlineFoodVeg" xml:space="preserve">
+    <value>Airline Food - Vegetarian</value>
+  </data>
+  <data name="GEAR_AstridBoots" xml:space="preserve">
+    <value>Astrid's Boots</value>
+  </data>
+  <data name="GEAR_AstridGloves" xml:space="preserve">
+    <value>Astrid's Gloves</value>
+  </data>
+  <data name="GEAR_AstridJacket" xml:space="preserve">
+    <value>Astrid's Jacket</value>
+  </data>
+  <data name="GEAR_AstridJeans" xml:space="preserve">
+    <value>Astrid's Jeans</value>
+  </data>
+  <data name="GEAR_AstridSweater" xml:space="preserve">
+    <value>Astrid's Sweater</value>
+  </data>
+  <data name="GEAR_AstridToque" xml:space="preserve">
+    <value>Astrid Toque</value>
+  </data>
+  <data name="GEAR_AuroraObservationNote" xml:space="preserve">
+    <value>Aurora Observation</value>
+  </data>
+  <data name="GEAR_BlackrockConvictNote1" xml:space="preserve">
+    <value>Blood Stained-Convict Note</value>
+  </data>
+  <data name="GEAR_BlackrockConvictNote2" xml:space="preserve">
+    <value>Convict Note</value>
+  </data>
+  <data name="GEAR_BlackrockConvictNote3" xml:space="preserve">
+    <value>Convict Cache Directions</value>
+  </data>
+  <data name="GEAR_BlackrockMemo" xml:space="preserve">
+    <value>Blackrock Penitentiary Memo</value>
+  </data>
+  <data name="GEAR_BookTallTalesFishing" xml:space="preserve">
+    <value>Local Legends - The Big One</value>
+  </data>
+  <data name="GEAR_BookTallTalesGlowCave" xml:space="preserve">
+    <value>Local Legends -The Lost Cave</value>
+  </data>
+  <data name="GEAR_BookTallTalesStag" xml:space="preserve">
+    <value>Local Legends - Ghost Stag</value>
+  </data>
+  <data name="GEAR_BookTallTalesYeti" xml:space="preserve">
+    <value>Local Legends -Sasquatch</value>
+  </data>
+  <data name="GEAR_CampOfficeCollectible" xml:space="preserve">
+    <value>Park Notice</value>
+  </data>
+  <data name="GEAR_ConvictCorpseNote" xml:space="preserve">
+    <value>Convict Journal Entry</value>
+  </data>
+  <data name="GEAR_DamCollectible1" xml:space="preserve">
+    <value>Carter Hydro Dam - Safety &amp; Shutdown Notice</value>
+  </data>
+  <data name="GEAR_DamElevatorNotice" xml:space="preserve">
+    <value>Elevator Maintenance Notice</value>
+  </data>
+  <data name="GEAR_DamGarbageLetter" xml:space="preserve">
+    <value>Trash Can Letter</value>
+  </data>
+  <data name="GEAR_DamLockerKey" xml:space="preserve">
+    <value>Aid Station Medical Locker Key</value>
+  </data>
+  <data name="GEAR_DamTrailerBCrewNote" xml:space="preserve">
+    <value>Breyerhouse Winter Crew Warning</value>
+  </data>
+  <data name="GEAR_Ep3ForestTalkers_FTCollectible1" xml:space="preserve">
+    <value>Forest Talker Collectible, Part One</value>
+  </data>
+  <data name="GEAR_Ep3ForestTalkers_FTCollectible2" xml:space="preserve">
+    <value>Forest Talker Collectible, Part Two</value>
+  </data>
+  <data name="GEAR_Ep3ForestTalkers_FTCollectible3" xml:space="preserve">
+    <value>Forest Talker Collectible, Part Three</value>
+  </data>
+  <data name="GEAR_Ep3ForestTalkers_PVCollectible1" xml:space="preserve">
+    <value>Pleasant Valley Collectible, Part One</value>
+  </data>
+  <data name="GEAR_Ep3ForestTalkers_PVCollectible2" xml:space="preserve">
+    <value>Pleasant Valley Collectible, Part Two</value>
+  </data>
+  <data name="GEAR_Ep3ForestTalkers_PVCollectible3" xml:space="preserve">
+    <value>Pleasant Valley Collectible, Part Three</value>
+  </data>
+  <data name="GEAR_Ep3HallFlyer" xml:space="preserve">
+    <value>Community Hall Flyer</value>
+  </data>
+  <data name="GEAR_Ep3Rosary" xml:space="preserve">
+    <value>Rosary</value>
+  </data>
+  <data name="GEAR_Ep3TomsMap" xml:space="preserve">
+    <value>Map Of Pleasant Valley</value>
+  </data>
+  <data name="GEAR_Ep3_ChurchArtifact" xml:space="preserve">
+    <value>Church Artifact</value>
+  </data>
+  <data name="GEAR_Ep3_ChurchFlyer" xml:space="preserve">
+    <value>Church Flyer</value>
+  </data>
+  <data name="GEAR_Ep3_ChurchMotelLetter" xml:space="preserve">
+    <value>Undelivered Letter</value>
+  </data>
+  <data name="GEAR_Ep3_ChurchNewsClipping" xml:space="preserve">
+    <value>Newspaper Clipping</value>
+  </data>
+  <data name="GEAR_Ep3_ChurchThankyouLetter" xml:space="preserve">
+    <value>Thankyou Letter</value>
+  </data>
+  <data name="GEAR_Ep3_ChurchTheftReport" xml:space="preserve">
+    <value>Diocese Report</value>
+  </data>
+  <data name="GEAR_EP3_JoplinBunkerNote" xml:space="preserve">
+    <value>Joplin's Journal, Part One</value>
+  </data>
+  <data name="GEAR_EP3_JoplinBunkerNote2" xml:space="preserve">
+    <value>Joplin's Journal, Part Two</value>
+  </data>
+  <data name="GEAR_EP3_JoplinCacheNote" xml:space="preserve">
+    <value>Forest Talker Bunker Memo</value>
+  </data>
+  <data name="GEAR_EP3_PatientHistory01" xml:space="preserve">
+    <value>Blood Soaked Note</value>
+  </data>
+  <data name="GEAR_EP3_PatientHistory02" xml:space="preserve">
+    <value>Blood Soaked Note</value>
+  </data>
+  <data name="GEAR_EP3_PatientHistory03" xml:space="preserve">
+    <value>Blood Soaked Note</value>
+  </data>
+  <data name="GEAR_EP3_PatientHistory04" xml:space="preserve">
+    <value>Blood Soaked Note</value>
+  </data>
+  <data name="GEAR_EP3_PatientHistory05" xml:space="preserve">
+    <value>Blood Soaked Note</value>
+  </data>
+  <data name="GEAR_EP3_PatientHistory06" xml:space="preserve">
+    <value>Blood Soaked Note</value>
+  </data>
+  <data name="GEAR_ForestTalkerDamNote" xml:space="preserve">
+    <value>Forest Talker Dam Note</value>
+  </data>
+  <data name="GEAR_HankJournal1" xml:space="preserve">
+    <value>Hank's Journal - Part One</value>
+  </data>
+  <data name="GEAR_HankLockboxKey" xml:space="preserve">
+    <value>Hank's Lock Box Key</value>
+  </data>
+  <data name="GEAR_HomeMadeSoup" xml:space="preserve">
+    <value>Home-made Soup</value>
+  </data>
+  <data name="GEAR_KnowledgePVbook1" xml:space="preserve">
+    <value>Pleasant Valley History, Part One</value>
+  </data>
+  <data name="GEAR_KnowledgePVbook2" xml:space="preserve">
+    <value>Pleasant Valley History, Part Two</value>
+  </data>
+  <data name="GEAR_KnowledgePVbook3" xml:space="preserve">
+    <value>Pleasant Valley History, Part Three</value>
+  </data>
+  <data name="GEAR_LakeCabinKey1" xml:space="preserve">
+    <value>Key To Lake Cabin #1</value>
+  </data>
+  <data name="GEAR_LakeCabinKey2" xml:space="preserve">
+    <value>Key To Lake Cabin #2</value>
+  </data>
+  <data name="GEAR_LakeCabinKey3" xml:space="preserve">
+    <value>Key To Lake Cabin #3</value>
+  </data>
+  <data name="GEAR_LakeDeerHuntNote" xml:space="preserve">
+    <value>Torn Paper</value>
+  </data>
+  <data name="GEAR_LakeLetter1" xml:space="preserve">
+    <value>Off Season Fun</value>
+  </data>
+  <data name="GEAR_LilyClimbMap" xml:space="preserve">
+    <value>Lyly's Map</value>
+  </data>
+  <data name="GEAR_MiltonCaveLetter" xml:space="preserve">
+    <value>Lost In The Storm</value>
+  </data>
+  <data name="GEAR_MiltonFlareGunNote" xml:space="preserve">
+    <value>Highway Robbery</value>
+  </data>
+  <data name="GEAR_MiltonLetter1" xml:space="preserve">
+    <value>Tearful Letter</value>
+  </data>
+  <data name="GEAR_MiltonLetter2" xml:space="preserve">
+    <value>Betrayal</value>
+  </data>
+  <data name="GEAR_MiltonPostOfficeCollectible1" xml:space="preserve">
+    <value>Milton Post Office Note</value>
+  </data>
+  <data name="GEAR_MiltonStoreNotice" xml:space="preserve">
+    <value>Orca Gas Store Notice</value>
+  </data>
+  <data name="GEAR_NoteMCU" xml:space="preserve">
+    <value>Milton Credit Union Letter</value>
+  </data>
+  <data name="GEAR_PassengerManifest" xml:space="preserve">
+    <value>Passenger Manifest</value>
+  </data>
+  <data name="GEAR_PlaneCrashID1" xml:space="preserve">
+    <value>ID: S. Gagne</value>
+  </data>
+  <data name="GEAR_PlaneCrashID10" xml:space="preserve">
+    <value>ID: G. Russel</value>
+  </data>
+  <data name="GEAR_PlaneCrashID2" xml:space="preserve">
+    <value>ID: K. Morrison</value>
+  </data>
+  <data name="GEAR_PlaneCrashID3" xml:space="preserve">
+    <value>ID: F. Leblanc</value>
+  </data>
+  <data name="GEAR_PlaneCrashID4" xml:space="preserve">
+    <value>ID: D. Belanger</value>
+  </data>
+  <data name="GEAR_PlaneCrashID5" xml:space="preserve">
+    <value>ID: R. Tan</value>
+  </data>
+  <data name="GEAR_PlaneCrashID6" xml:space="preserve">
+    <value>ID: V. Singh</value>
+  </data>
+  <data name="GEAR_PlaneCrashID7" xml:space="preserve">
+    <value>ID: A. Lewis</value>
+  </data>
+  <data name="GEAR_PlaneCrashID8" xml:space="preserve">
+    <value>ID: T. Chan</value>
+  </data>
+  <data name="GEAR_PlaneCrashID9" xml:space="preserve">
+    <value>ID: O. Gould</value>
+  </data>
+  <data name="GEAR_PrisonBusNote" xml:space="preserve">
+    <value>Prison Transport Manifest</value>
+  </data>
+  <data name="GEAR_RuralRegionFarmKey" xml:space="preserve">
+    <value>Basement Key</value>
+  </data>
 </root>

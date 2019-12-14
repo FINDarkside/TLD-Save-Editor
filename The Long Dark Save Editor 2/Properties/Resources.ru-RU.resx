@@ -1641,4 +1641,247 @@
   <data name="ExperienceModeType_ChallengeDeadManWalking" xml:space="preserve">
     <value>Пока мертвые спят</value>
   </data>
+  <data name="GEAR_AirlineFoodChick" xml:space="preserve">
+    <value>Еда из самолета - цыпленок</value>
+  </data>
+  <data name="GEAR_AirlineFoodVeg" xml:space="preserve">
+    <value>Еда из самолета - вегатарианкский обед</value>
+  </data>
+  <data name="GEAR_AstridBoots" xml:space="preserve">
+    <value>Ботинки Астрид</value>
+  </data>
+  <data name="GEAR_AstridGloves" xml:space="preserve">
+    <value>Перчатки Астрид</value>
+  </data>
+  <data name="GEAR_AstridJacket" xml:space="preserve">
+    <value>Куртка Астрид</value>
+  </data>
+  <data name="GEAR_AstridJeans" xml:space="preserve">
+    <value>Джинсы Астрид</value>
+  </data>
+  <data name="GEAR_AstridSweater" xml:space="preserve">
+    <value>Свитер Астрид</value>
+  </data>
+  <data name="GEAR_AstridToque" xml:space="preserve">
+    <value>Шапка Астрид</value>
+  </data>
+  <data name="GEAR_AuroraObservationNote" xml:space="preserve">
+    <value>Северное сияние</value>
+  </data>
+  <data name="GEAR_BlackrockConvictNote1" xml:space="preserve">
+    <value>Саписка осужденного, испачканная кровью</value>
+  </data>
+  <data name="GEAR_BlackrockConvictNote2" xml:space="preserve">
+    <value>Записка осужденного</value>
+  </data>
+  <data name="GEAR_BlackrockConvictNote3" xml:space="preserve">
+    <value>Указания на тайник осужденных</value>
+  </data>
+  <data name="GEAR_BlackrockMemo" xml:space="preserve">
+    <value>Служебная записка тюрьмы "Черный камень"</value>
+  </data>
+  <data name="GEAR_BookTallTalesFishing" xml:space="preserve">
+    <value>Местные легенды: Большая рыба</value>
+  </data>
+  <data name="GEAR_BookTallTalesGlowCave" xml:space="preserve">
+    <value>Местные легенды: Заброшенная пещера</value>
+  </data>
+  <data name="GEAR_BookTallTalesStag" xml:space="preserve">
+    <value>Местные легенды: Призрачный олень</value>
+  </data>
+  <data name="GEAR_BookTallTalesYeti" xml:space="preserve">
+    <value>Местные легенды: Снежный человек</value>
+  </data>
+  <data name="GEAR_CampOfficeCollectible" xml:space="preserve">
+    <value>Записка о закрытии парка</value>
+  </data>
+  <data name="GEAR_ConvictCorpseNote" xml:space="preserve">
+    <value>Запись из дневника осужденного</value>
+  </data>
+  <data name="GEAR_DamCollectible1" xml:space="preserve">
+    <value>ГЭС "Кратер" - оповещение о закрытии</value>
+  </data>
+  <data name="GEAR_DamElevatorNotice" xml:space="preserve">
+    <value>Код к лифтовой</value>
+  </data>
+  <data name="GEAR_DamGarbageLetter" xml:space="preserve">
+    <value>Письмо из мусорной корзины</value>
+  </data>
+  <data name="GEAR_DamLockerKey" xml:space="preserve">
+    <value>Ключ от аптечки в медпункте</value>
+  </data>
+  <data name="GEAR_DamTrailerBCrewNote" xml:space="preserve">
+    <value>Предупреждение команде по обслуживанию в зимний период</value>
+  </data>
+  <data name="GEAR_Ep3ForestTalkers_FTCollectible1" xml:space="preserve">
+    <value>Запись лесного оратора, часть 1</value>
+  </data>
+  <data name="GEAR_Ep3ForestTalkers_FTCollectible2" xml:space="preserve">
+    <value>Запись лесного оратора, часть 2</value>
+  </data>
+  <data name="GEAR_Ep3ForestTalkers_FTCollectible3" xml:space="preserve">
+    <value>Запись лесного оратора, часть 3</value>
+  </data>
+  <data name="GEAR_Ep3ForestTalkers_PVCollectible1" xml:space="preserve">
+    <value>Запись жителя Отрадной Долины, часть 1</value>
+  </data>
+  <data name="GEAR_Ep3ForestTalkers_PVCollectible2" xml:space="preserve">
+    <value>Запись жителя Отрадной Долины, часть 2</value>
+  </data>
+  <data name="GEAR_Ep3ForestTalkers_PVCollectible3" xml:space="preserve">
+    <value>Запись жителя Отрадной Долины, часть 3</value>
+  </data>
+  <data name="GEAR_Ep3HallFlyer" xml:space="preserve">
+    <value>Листовка общественного клуба</value>
+  </data>
+  <data name="GEAR_Ep3Rosary" xml:space="preserve">
+    <value>Четки</value>
+  </data>
+  <data name="GEAR_Ep3TomsMap" xml:space="preserve">
+    <value>Карта Отрадной Долины</value>
+  </data>
+  <data name="GEAR_Ep3_ChurchArtifact" xml:space="preserve">
+    <value>Церковная древность</value>
+  </data>
+  <data name="GEAR_Ep3_ChurchFlyer" xml:space="preserve">
+    <value>Церковная листовка</value>
+  </data>
+  <data name="GEAR_Ep3_ChurchMotelLetter" xml:space="preserve">
+    <value>Недоставленное письмо</value>
+  </data>
+  <data name="GEAR_Ep3_ChurchNewsClipping" xml:space="preserve">
+    <value>Газетная вырезка</value>
+  </data>
+  <data name="GEAR_Ep3_ChurchThankyouLetter" xml:space="preserve">
+    <value>Благодарственное письмо</value>
+  </data>
+  <data name="GEAR_Ep3_ChurchTheftReport" xml:space="preserve">
+    <value>Отчет епархии</value>
+  </data>
+  <data name="GEAR_EP3_JoplinBunkerNote" xml:space="preserve">
+    <value>Журнал Джоплина, часть 1</value>
+  </data>
+  <data name="GEAR_EP3_JoplinBunkerNote2" xml:space="preserve">
+    <value>Журнал Джоплина, часть 2</value>
+  </data>
+  <data name="GEAR_EP3_JoplinCacheNote" xml:space="preserve">
+    <value>Записка лесного оратора про бункер</value>
+  </data>
+  <data name="GEAR_EP3_PatientHistory01" xml:space="preserve">
+    <value>Записка, испачканная кровью</value>
+  </data>
+  <data name="GEAR_EP3_PatientHistory02" xml:space="preserve">
+    <value>Записка, испачканная кровью</value>
+  </data>
+  <data name="GEAR_EP3_PatientHistory03" xml:space="preserve">
+    <value>Записка, испачканная кровью</value>
+  </data>
+  <data name="GEAR_EP3_PatientHistory04" xml:space="preserve">
+    <value>Записка, испачканная кровью</value>
+  </data>
+  <data name="GEAR_EP3_PatientHistory05" xml:space="preserve">
+    <value>Записка, испачканная кровью</value>
+  </data>
+  <data name="GEAR_EP3_PatientHistory06" xml:space="preserve">
+    <value>Записка, испачканная кровью</value>
+  </data>
+  <data name="GEAR_ForestTalkerDamNote" xml:space="preserve">
+    <value>Записка лесного оратора с дамбы</value>
+  </data>
+  <data name="GEAR_HankJournal1" xml:space="preserve">
+    <value>Дневник Хэнка - часть 1</value>
+  </data>
+  <data name="GEAR_HankLockboxKey" xml:space="preserve">
+    <value>Ключ от сейфа Хэнка</value>
+  </data>
+  <data name="GEAR_HomeMadeSoup" xml:space="preserve">
+    <value>Домашний суп</value>
+  </data>
+  <data name="GEAR_KnowledgePVbook1" xml:space="preserve">
+    <value>История Отрадной Долины, часть 1</value>
+  </data>
+  <data name="GEAR_KnowledgePVbook2" xml:space="preserve">
+    <value>История Отрадной Долины, часть 2</value>
+  </data>
+  <data name="GEAR_KnowledgePVbook3" xml:space="preserve">
+    <value>История Отрадной Долины, часть 3</value>
+  </data>
+  <data name="GEAR_LakeCabinKey1" xml:space="preserve">
+    <value>Ключ от домика у озера №1</value>
+  </data>
+  <data name="GEAR_LakeCabinKey2" xml:space="preserve">
+    <value>Ключ от домика у озера №2</value>
+  </data>
+  <data name="GEAR_LakeCabinKey3" xml:space="preserve">
+    <value>Ключ от домика у озера №3</value>
+  </data>
+  <data name="GEAR_LakeDeerHuntNote" xml:space="preserve">
+    <value>Разорванная бумажка</value>
+  </data>
+  <data name="GEAR_LakeLetter1" xml:space="preserve">
+    <value>Мертвый сезон</value>
+  </data>
+  <data name="GEAR_LilyClimbMap" xml:space="preserve">
+    <value>Карта Лилии</value>
+  </data>
+  <data name="GEAR_MiltonCaveLetter" xml:space="preserve">
+    <value>Потерянная в метели</value>
+  </data>
+  <data name="GEAR_MiltonFlareGunNote" xml:space="preserve">
+    <value>На большой дороге</value>
+  </data>
+  <data name="GEAR_MiltonLetter1" xml:space="preserve">
+    <value>Закапанное слезами письмо</value>
+  </data>
+  <data name="GEAR_MiltonLetter2" xml:space="preserve">
+    <value>Измена</value>
+  </data>
+  <data name="GEAR_MiltonPostOfficeCollectible1" xml:space="preserve">
+    <value>Записка из почтового отделения Милтона</value>
+  </data>
+  <data name="GEAR_MiltonStoreNotice" xml:space="preserve">
+    <value>Объявление в магазине АЗС "Косатка"</value>
+  </data>
+  <data name="GEAR_NoteMCU" xml:space="preserve">
+    <value>Письмо из кредитного союза Милтона</value>
+  </data>
+  <data name="GEAR_PassengerManifest" xml:space="preserve">
+    <value>Пассажирский манифест</value>
+  </data>
+  <data name="GEAR_PlaneCrashID1" xml:space="preserve">
+    <value>Документы: С. Ганье</value>
+  </data>
+  <data name="GEAR_PlaneCrashID10" xml:space="preserve">
+    <value>Документы: Д. Рассел</value>
+  </data>
+  <data name="GEAR_PlaneCrashID2" xml:space="preserve">
+    <value>Документы: К. Моррисон</value>
+  </data>
+  <data name="GEAR_PlaneCrashID3" xml:space="preserve">
+    <value>Документы: Ф. Леблан</value>
+  </data>
+  <data name="GEAR_PlaneCrashID4" xml:space="preserve">
+    <value>Документы: Д. Беланже</value>
+  </data>
+  <data name="GEAR_PlaneCrashID5" xml:space="preserve">
+    <value>Документы: Р. Тэн</value>
+  </data>
+  <data name="GEAR_PlaneCrashID6" xml:space="preserve">
+    <value>Документы: В. Сингх</value>
+  </data>
+  <data name="GEAR_PlaneCrashID7" xml:space="preserve">
+    <value>Документы: А. Льюис</value>
+  </data>
+  <data name="GEAR_PlaneCrashID8" xml:space="preserve">
+    <value>Документы: Т. Чэн</value>
+  </data>
+  <data name="GEAR_PlaneCrashID9" xml:space="preserve">
+    <value>Документы: О. Гульд</value>
+  </data>
+  <data name="GEAR_PrisonBusNote" xml:space="preserve">
+    <value>Список перевозимых заключенных</value>
+  </data>
+  <data name="GEAR_RuralRegionFarmKey" xml:space="preserve">
+    <value>Ключ от подвала</value>
+  </data>
 </root>
