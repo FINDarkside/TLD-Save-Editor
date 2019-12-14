@@ -1635,4 +1635,7 @@
   <data name="RegionsWithMap_CanneryRegion" xml:space="preserve">
     <value>Cannery Region</value>
   </data>
+  <data name="AfflictionType_BurnsElectric" xml:space="preserve">
+    <value>Electric burns</value>
+  </data>
 </root>
