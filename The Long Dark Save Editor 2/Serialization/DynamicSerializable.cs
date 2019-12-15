@@ -67,7 +67,7 @@ namespace The_Long_Dark_Save_Editor_2.Serialization
                 else
                     throw new Exception("Unsupported type " + t.FullName);
             }
-            else if (token.Type == JTokenType.String)
+            else if (token.Type == JTokenType.String || t == typeof(string))
             {
                 string s = token.Value<string>();
                 if (t.IsGenericType && t.GetGenericTypeDefinition() == typeof(EnumWrapper<>))
@@ -86,7 +86,7 @@ namespace The_Long_Dark_Save_Editor_2.Serialization
             {
                 return null;
             }
-            else if (token.Type == JTokenType.Date)
+            else if (token.Type == JTokenType.Date && t == typeof(DateTime))
             {
                 return token.Value<DateTime>();
             }
