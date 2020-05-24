@@ -180,7 +180,11 @@ namespace The_Long_Dark_Save_Editor_2
                 ccSaves.SelectedIndex = 0;
 
             // TODO: Change profile based on the selected save? Currently will be Steam version profile if exists, otherwise UWP profile
-            var profile = Path.Combine(path, "user001.58755");
+            var profile = Directory.GetFiles(path, "user001.*")
+                .Select(file => new FileInfo(file))
+                .OrderByDescending(file => file.LastWriteTime)
+                .First()
+                .FullName;
             if (File.Exists(profile))
             {
                 if (CurrentProfile == null || !Equals(profile, CurrentProfile.path))
