@@ -1884,4 +1884,7 @@
   <data name="GEAR_RuralRegionFarmKey" xml:space="preserve">
     <value>Basement Key</value>
   </data>
+  <data name="GEAR_SprayPaintCan" xml:space="preserve">
+    <value>Spray Paint</value>
+  </data>
 </root>

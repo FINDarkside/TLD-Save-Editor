@@ -4390,6 +4390,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Spray Paint.
+        /// </summary>
+        public static string GEAR_SprayPaintCan {
+            get {
+                return ResourceManager.GetString("GEAR_SprayPaintCan", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to Deer Quarter.
         /// </summary>
         public static string GEAR_StagQuarter {

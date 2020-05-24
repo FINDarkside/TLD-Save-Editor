@@ -237,6 +237,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_SharpeningStone", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_SimpleTools", ItemCategory.Tools, @"{}");
             AddItemInfo("GEAR_Snare", ItemCategory.Tools, @"{""SnareItem"": {}}");
+            AddItemInfo("GEAR_SprayPaintCan", ItemCategory.Tools, @"{""SprayItem"": {""m_Colour"":{Value:""Orange""}}}");
             AddItemInfo("GEAR_Torch", ItemCategory.Tools, @"{""TorchItem"": {}}");
             AddItemInfo("GEAR_WoodMatches", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 10}, ""MatchesItem"": {}}");
             AddItemInfo("GEAR_Charcoal", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
