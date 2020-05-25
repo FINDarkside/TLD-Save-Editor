@@ -139,6 +139,7 @@ namespace The_Long_Dark_Save_Editor_2
                         }
                         else
                         {
+                            // If window is not active, don't show dialog right away since it takes focus from the game
                             this.currentSaveChanged = true;
                         }
                     }));
@@ -280,9 +281,7 @@ namespace The_Long_Dark_Save_Editor_2
             if (!EqualityComparer<T>.Default.Equals(field, newValue))
             {
                 field = newValue;
-                PropertyChangedEventHandler handler = PropertyChanged;
-                if (handler != null)
-                    handler(this, new PropertyChangedEventArgs(propertyName));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
         }
 
