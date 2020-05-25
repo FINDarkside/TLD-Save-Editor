@@ -1632,9 +1632,6 @@
   <data name="GunsmithingSkillSP" xml:space="preserve">
     <value>Оружейное дело</value>
   </data>
-  <data name="RegionsWithMap_CanneryRegion" xml:space="preserve">
-    <value>Бледная бухта</value>
-  </data>
   <data name="AfflictionType_BurnsElectric" xml:space="preserve">
     <value>Электрический ожог</value>
   </data>
@@ -1888,6 +1885,6 @@
     <value>Балончик с краской</value>
   </data>
   <data name="RegionsWithMap_CanneryRegion" xml:space="preserve">
-    <value>Bleak Inlet</value>
+    <value>Бледная бухта</value>
   </data>
 </root>
