@@ -103,7 +103,8 @@
             <TextBlock>Test</TextBlock>
         </materialDesign:DialogHost.DialogContent>
 
-        <DockPanel>
+        <Grid>
+            <DockPanel>
             <Grid DockPanel.Dock="Top">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -133,50 +134,52 @@
                 </StackPanel>
             </Grid>
             <Rectangle DockPanel.Dock="Top" Fill="#A6B8C3" Height="1" ></Rectangle>
-            <dragablz:TabablzControl Name="tabPanel"  DockPanel.Dock="Bottom" FixedHeaderCount="7">
-                <TabItem Header="{x:Static p:Resources.Profile}">
-                    <StackPanel IsEnabled="{Binding CurrentProfile, Converter={StaticResource ObjectNotNullConverter}}" >
-                        <Rectangle Fill="#A6B8C3" Height="1" />
-                        <tabs:ProfileTab />
-                    </StackPanel>
-                </TabItem>
-                <TabItem Header="{x:Static p:Resources.Player}">
-                    <StackPanel IsEnabled="{Binding CurrentSave, Converter={StaticResource ObjectNotNullConverter}}" >
-                        <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
-                        <tabs:PlayerTab />
-                    </StackPanel>
-                </TabItem>
-                <TabItem Header="{x:Static p:Resources.Map}">
-                    <DockPanel IsEnabled="{Binding CurrentSave, Converter={StaticResource ObjectNotNullConverter}}">
-                        <Rectangle Fill="#A6B8C3" Height="1" DockPanel.Dock="Top"></Rectangle>
-                        <tabs:MapTab  DockPanel.Dock="Top"/>
-                    </DockPanel>
-                </TabItem>
-                <TabItem Header="{x:Static p:Resources.Skills}">
-                    <StackPanel IsEnabled="{Binding CurrentSave, Converter={StaticResource ObjectNotNullConverter}}">
-                        <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
-                        <tabs:SkillsTab />
-                    </StackPanel>
-                </TabItem>
-                <TabItem Header="{x:Static p:Resources.Injuries}">
-                    <DockPanel IsEnabled="{Binding CurrentSave, Converter={StaticResource ObjectNotNullConverter}}">
-                        <Rectangle Grid.Row="0" Fill="#A6B8C3" Height="1" DockPanel.Dock="Top"></Rectangle>
-                        <tabs:InjuriesTab Grid.Row="1"/>
-                    </DockPanel>
-                </TabItem>
-                <TabItem Header="{x:Static p:Resources.Inventory}">
-                    <DockPanel IsEnabled="{Binding CurrentSave, Converter={StaticResource ObjectNotNullConverter}}">
-                        <Rectangle Fill="#A6B8C3" Height="1" DockPanel.Dock="Top"></Rectangle>
-                        <tabs:InventoryTab />
-                    </DockPanel>
-                </TabItem>
-                <TabItem Header="{x:Static p:Resources.About}">
-                    <StackPanel>
-                        <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
-                        <tabs:AboutTab />
-                    </StackPanel>
-                </TabItem>
-            </dragablz:TabablzControl>
-        </DockPanel>
+                <dragablz:TabablzControl Name="tabPanel"  DockPanel.Dock="Bottom" FixedHeaderCount="7">
+                    <TabItem Header="{x:Static p:Resources.Profile}">
+                        <StackPanel IsEnabled="{Binding CurrentProfile, Converter={StaticResource ObjectNotNullConverter}}" >
+                            <Rectangle Fill="#A6B8C3" Height="1" />
+                            <tabs:ProfileTab />
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Header="{x:Static p:Resources.Player}">
+                        <StackPanel IsEnabled="{Binding CurrentSave, Converter={StaticResource ObjectNotNullConverter}}" >
+                            <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
+                            <tabs:PlayerTab />
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Header="{x:Static p:Resources.Map}">
+                        <DockPanel IsEnabled="{Binding CurrentSave, Converter={StaticResource ObjectNotNullConverter}}">
+                            <Rectangle Fill="#A6B8C3" Height="1" DockPanel.Dock="Top"></Rectangle>
+                            <tabs:MapTab  DockPanel.Dock="Top"/>
+                        </DockPanel>
+                    </TabItem>
+                    <TabItem Header="{x:Static p:Resources.Skills}">
+                        <StackPanel IsEnabled="{Binding CurrentSave, Converter={StaticResource ObjectNotNullConverter}}">
+                            <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
+                            <tabs:SkillsTab />
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Header="{x:Static p:Resources.Injuries}">
+                        <DockPanel IsEnabled="{Binding CurrentSave, Converter={StaticResource ObjectNotNullConverter}}">
+                            <Rectangle Grid.Row="0" Fill="#A6B8C3" Height="1" DockPanel.Dock="Top"></Rectangle>
+                            <tabs:InjuriesTab Grid.Row="1"/>
+                        </DockPanel>
+                    </TabItem>
+                    <TabItem Header="{x:Static p:Resources.Inventory}">
+                        <DockPanel IsEnabled="{Binding CurrentSave, Converter={StaticResource ObjectNotNullConverter}}">
+                            <Rectangle Fill="#A6B8C3" Height="1" DockPanel.Dock="Top"></Rectangle>
+                            <tabs:InventoryTab />
+                        </DockPanel>
+                    </TabItem>
+                    <TabItem Header="{x:Static p:Resources.About}">
+                        <StackPanel>
+                            <Rectangle Fill="#A6B8C3" Height="1" ></Rectangle>
+                            <tabs:AboutTab />
+                        </StackPanel>
+                    </TabItem>
+                </dragablz:TabablzControl>
+            </DockPanel>
+            <materialDesign:Snackbar MessageQueue="{materialDesign:MessageQueue}" x:Name="SnackBar" DockPanel.Dock="Bottom" />
+        </Grid>
     </materialDesign:DialogHost>
 </Window>

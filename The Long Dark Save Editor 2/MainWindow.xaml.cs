@@ -201,31 +201,27 @@ namespace The_Long_Dark_Save_Editor_2
             }
         }
 
-        public void CheckForUpdates()
+        async public void CheckForUpdates()
         {
-            WebClient webClient = new WebClient();
-            webClient.DownloadStringCompleted += (sender, e) =>
-            {
-                try
-                {
-                    string json = e.Result;
-                    List<VersionData> versions = JsonConvert.DeserializeObject<List<VersionData>>(json);
-                    if (versions[versions.Count - 1] > Version)
-                    {
-                        var newerVersions = versions.Where(version => version > Version).ToList();
-                        var viewModel = new NewVersionDialogViewModel() { Versions = newerVersions, Url = newerVersions[newerVersions.Count - 1].url };
-                        dialogHost.DialogContent = viewModel;
-                        dialogHost.IsOpen = true;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    dialogHost.IsOpen = false;
-                    ErrorDialog.Show("Failed to check for new versions", ex != null ? (ex.Message + "\n" + e.ToString()) : null);
 
+            try
+            {
+                WebClient webClient = new WebClient();
+                string json = await webClient.DownloadStringTaskAsync("https://tld-save-editor-2.firebaseio.com/Changelog.json");
+
+                List<VersionData> versions = JsonConvert.DeserializeObject<List<VersionData>>(json);
+                if (versions[versions.Count - 1] > Version)
+                {
+                    var newerVersions = versions.Where(version => version > Version).ToList();
+                    var viewModel = new NewVersionDialogViewModel() { Versions = newerVersions, Url = newerVersions[newerVersions.Count - 1].url };
+                    dialogHost.DialogContent = viewModel;
+                    dialogHost.IsOpen = true;
                 }
-            };
-            webClient.DownloadStringTaskAsync("https://tld-save-editor-2.firebaseio.com/Changelog.json");
+            }
+            catch (Exception ex)
+            {
+                SnackBar.MessageQueue.Enqueue("Failed to check for new versions: " + ex.GetType().FullName);
+            }
         }
 
         public void LogOpen()
