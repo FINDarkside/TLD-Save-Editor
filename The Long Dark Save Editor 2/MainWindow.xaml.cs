@@ -57,7 +57,6 @@ namespace The_Long_Dark_Save_Editor_2
         }
 
         private FileSystemWatcher appDataFileWatcher;
-        private FileSystemWatcher uwpFileWatcher;
 
         private bool currentSaveChanged = false;
 
@@ -80,10 +79,6 @@ namespace The_Long_Dark_Save_Editor_2
             appDataFileWatcher = new FileSystemWatcher();
             appDataFileWatcher.NotifyFilter = NotifyFilters.LastWrite;
             appDataFileWatcher.Changed += new FileSystemEventHandler(SaveFileChanged);
-
-            uwpFileWatcher = new FileSystemWatcher();
-            uwpFileWatcher.NotifyFilter = NotifyFilters.LastWrite;
-            uwpFileWatcher.Changed += new FileSystemEventHandler(SaveFileChanged);
 
             this.DataContext = this;
             Instance = this;
@@ -163,23 +158,12 @@ namespace The_Long_Dark_Save_Editor_2
             }
 
             Saves = Util.GetSaveFiles(path);
-            /*var uwpSaves = Util.GetUWPSaveFiles();
-            if (uwpSaves.Count > 0)
-            {
-                uwpFileWatcher.Path = Path.GetDirectoryName((string)uwpSaves[0].Value);
-                uwpFileWatcher.EnableRaisingEvents = true;
-            }
-            foreach (EnumerationMember f in uwpSaves)
-            {
-                Saves.Add(f);
-            }*/
 
             if (Saves.Count == 0)
                 CurrentSave = null;
             else
                 ccSaves.SelectedIndex = 0;
 
-            // TODO: Change profile based on the selected save? Currently will be Steam version profile if exists, otherwise UWP profile
             var profile = Directory.GetFiles(path, "user001.*")
                 .Select(file => new FileInfo(file))
                 .OrderByDescending(file => file.LastWriteTime)
