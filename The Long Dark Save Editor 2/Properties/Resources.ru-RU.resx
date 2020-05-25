@@ -1887,4 +1887,7 @@
   <data name="GEAR_SprayPaintCan" xml:space="preserve">
     <value>Балончик с краской</value>
   </data>
+  <data name="RegionsWithMap_CanneryRegion" xml:space="preserve">
+    <value>Bleak Inlet</value>
+  </data>
 </root>
