@@ -70,33 +70,6 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             return result;
         }
 
-        public static ObservableCollection<EnumerationMember> GetUWPSaveFiles()
-        {
-            // Ugly code, maybe fix
-            var result = new ObservableCollection<EnumerationMember>();
-            var saveFolder = GetUWPPath();
-            if (saveFolder == null)
-                return result;
-
-            foreach (string file in Directory.GetFiles(saveFolder))
-            {
-                if (Path.GetFileName(file).StartsWith("container"))
-                    continue;
-                try
-                {
-                    var member = CreateSaveEnumerationMember(file, "UWP");
-                    result.Add(member);
-                }
-                catch (Exception ex)
-                {
-                    continue;
-                }
-            }
-
-            return result;
-        }
-
-
         private static EnumerationMember CreateSaveEnumerationMember(string file, string name)
         {
             var member = new EnumerationMember();
@@ -108,28 +81,6 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             member.Description = slotData.m_DisplayName + " (" + name + ")";
 
             return member;
-        }
-
-        public static string GetUWPPath()
-        {
-            try
-            {
-                var packages = Path.Combine(GetLocalPath(), "packages");
-                string hinterlandFolder = Directory.EnumerateDirectories(packages).First(
-                    dir => Path.GetFileName(dir).StartsWith("27620HinterlandStudio.")
-                );
-                hinterlandFolder = Path.Combine(hinterlandFolder, "SystemAppData", "wgs");
-                string saveFolder = Directory.GetDirectories(Directory.GetDirectories(hinterlandFolder)[0])[0];
-                if (!Directory.Exists(saveFolder))
-                    return null;
-
-                return saveFolder;
-
-            }
-            catch (Exception)
-            {
-                return null;
-            }
         }
 
         public static string GetLocalPath()

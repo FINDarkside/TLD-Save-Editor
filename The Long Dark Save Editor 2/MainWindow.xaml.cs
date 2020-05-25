@@ -199,33 +199,6 @@ namespace The_Long_Dark_Save_Editor_2
                     }
                 }
             }
-            else
-            {
-                var uwpPath = Util.GetUWPPath();
-                if (uwpPath != null)
-                {
-                    var files = Directory.GetFiles(uwpPath).Select(f => new FileInfo(f)).Where(f => !f.Name.StartsWith("container")).ToArray();
-                    Array.Sort(files, (x, y) => y.LastWriteTime.CompareTo(x.LastWriteTime));
-
-                    foreach (FileInfo file in files)
-                    {
-                        if (CurrentProfile != null && file.FullName == CurrentProfile.path)
-                            break;
-                        try
-                        {
-                            CurrentProfile = new Profile(file.FullName);
-                            Debug.WriteLine(file.FullName + " VALID --------------------");
-
-                            break;
-                        }
-                        catch (Exception ex)
-                        {
-                            Debug.WriteLine(file.FullName + " invalid");
-                        }
-                    }
-                }
-            }
-
         }
 
         public void CheckForUpdates()
