@@ -93,19 +93,9 @@ namespace The_Long_Dark_Save_Editor_2
         {
             Debug.WriteLine("Window loaded");
 #if !DEBUG
-            if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
-            {
-                try
-                {
-                    CheckForUpdates();
-                    LogOpen();
-                }
-                catch (Exception ex)
-                {
-                    dialogHost.IsOpen = false;
-                    ErrorDialog.Show("Failed to check for new versions", ex != null ? (ex.Message + "\n" + e.ToString()) : null);
-                }
-            }
+            
+            CheckForUpdates();
+            LogOpen();
 
             if (!Properties.Settings.Default.BugReportWarningShown)
             {
@@ -160,7 +150,13 @@ namespace The_Long_Dark_Save_Editor_2
 
             Saves = Util.GetSaveFiles(path);
 
-            if (Saves.Count == 0)
+            if (CurrentSave != null)
+            {
+                var save = Saves.FirstOrDefault(s => s.Value.ToString() == CurrentSave.path);
+                if (save != null)
+                    ccSaves.SelectedItem = save;
+            }
+            else if (Saves.Count == 0)
                 CurrentSave = null;
             else
                 ccSaves.SelectedIndex = 0;
@@ -172,16 +168,13 @@ namespace The_Long_Dark_Save_Editor_2
 
             if (profile != null)
             {
-                if (CurrentProfile == null || !Equals(profile, CurrentProfile.path))
+                try
                 {
-                    try
-                    {
-                        CurrentProfile = new Profile(profile);
-                    }
-                    catch (Exception ex)
-                    {
-                        WForms.MessageBox.Show(ex.Message + "\nFailed to load profile\n" + ex.ToString(), "Failed to load profile", WForms.MessageBoxButtons.OK, WForms.MessageBoxIcon.Exclamation);
-                    }
+                    CurrentProfile = new Profile(profile);
+                }
+                catch (Exception ex)
+                {
+                    WForms.MessageBox.Show(ex.Message + "\nFailed to load profile\n" + ex.ToString(), "Failed to load profile", WForms.MessageBoxButtons.OK, WForms.MessageBoxIcon.Exclamation);
                 }
             }
         }
@@ -209,10 +202,17 @@ namespace The_Long_Dark_Save_Editor_2
             }
         }
 
-        public void LogOpen()
+        async public void LogOpen()
         {
-            WebClient webClient = new WebClient();
-            webClient.DownloadStringTaskAsync("https://us-central1-tld-save-editor-2.cloudfunctions.net/editorOpened?version=" + Version);
+            try
+            {
+                WebClient webClient = new WebClient();
+                await webClient.DownloadStringTaskAsync("https://us-central1-tld-save-editor-2.cloudfunctions.net/editorOpened?version=" + Version);
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
@@ -235,24 +235,29 @@ namespace The_Long_Dark_Save_Editor_2
             if (ccSaves.SelectedValue != null)
             {
                 var path = ccSaves.SelectedValue.ToString();
-                try
-                {
-                    var save = new GameSave();
-                    save.LoadSave(path);
-                    CurrentSave = save;
-                }
-                catch (Exception ex)
-                {
-                    ErrorDialog.Show("Failed to load save", ex != null ? (ex.Message + "\n" + ex.ToString()) : null);
-                    tabPanel.IsEnabled = false;
-                }
-                tabPanel.IsEnabled = true;
+                SetSave(path);
+            }
+        }
+
+        private void SetSave(string path)
+        {
+            try
+            {
+                var save = new GameSave();
+                save.LoadSave(path);
+                CurrentSave = save;
+            }
+            catch (Exception ex)
+            {
+                ErrorDialog.Show("Failed to load save", ex != null ? (ex.Message + "\n" + ex.ToString()) : null);
             }
         }
 
         private void RefreshClicked(object sender, RoutedEventArgs e)
         {
-            CurrentSaveSelectionChanged(null, null);
+            if (CurrentSave != null)
+                SetSave(CurrentSave.path);
+            UpdateSaves();
         }
 
         private void JoinDiscordClicked(object sender, RoutedEventArgs e)
