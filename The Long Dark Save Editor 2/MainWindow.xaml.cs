@@ -183,9 +183,9 @@ namespace The_Long_Dark_Save_Editor_2
             var profile = Directory.GetFiles(path, "user001.*")
                 .Select(file => new FileInfo(file))
                 .OrderByDescending(file => file.LastWriteTime)
-                .First()
-                .FullName;
-            if (File.Exists(profile))
+                .FirstOrDefault()?.FullName;
+
+            if (profile != null)
             {
                 if (CurrentProfile == null || !Equals(profile, CurrentProfile.path))
                 {
