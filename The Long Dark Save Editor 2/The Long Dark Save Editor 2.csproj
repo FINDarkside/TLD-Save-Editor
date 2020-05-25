@@ -281,9 +281,6 @@
     <Resource Include="Images\location-indicator.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MysteryLakeSF.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\MountainTownSF.png" />
   </ItemGroup>
   <ItemGroup>
@@ -291,6 +288,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\BrokenRailRoadSF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CanneryRegion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MysteryLakeSF.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

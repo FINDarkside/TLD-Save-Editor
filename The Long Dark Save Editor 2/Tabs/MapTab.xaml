@@ -19,6 +19,7 @@
         <Image x:Key="MountainTownRegion" Source="../Images/MountainTownSF.png"/>
         <Image x:Key="TracksRegion" Source="../Images/BrokenRailroadSF.png"/>
         <Image x:Key="RiverValleyRegion" Source="../Images/HushedRiverValleySF.png"/>
+        <Image x:Key="CanneryRegion" Source="../Images/CanneryRegion.png"/>
 
     </UserControl.Resources>
     <Canvas x:Name="canvas" Height="{Binding ActualHeight, ElementName=userControl, Mode=OneWay}" MouseLeftButtonDown="canvas_MouseLeftButtonDown" MouseWheel="canvas_MouseWheel" MouseMove="canvas_MouseMove"  
