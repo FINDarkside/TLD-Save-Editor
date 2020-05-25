@@ -180,6 +180,11 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         Female,
     }
 
+    public enum SprayColor
+    {
+        Orange
+    }
+
     public enum AfflictionType
     {
         BloodLoss,

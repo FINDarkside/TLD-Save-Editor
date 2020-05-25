@@ -276,6 +276,14 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public MatchesItemSaveDataProxy MatchesItem { get; set; }
         [Deserialize("m_SnareItemSerialized", true)]
         public SnareItemSaveDataProxy SnareItem { get; set; }
+        [Deserialize("m_SprayPaintCanSerialized", true)]
+        public SprayPaintSaveDataProxy SprayItem { get; set; }
+        [Deserialize("m_RigidBodySerialized", true)]
+        public RigidBodySaveDataProxy RigidBody { get; set; }
+        [Deserialize("m_PowderItemSerialized", true)]
+        public PowderItemSaveDataProxy PowderItem { get; set; }
+        [Deserialize("m_MillableSerialized", true)]
+        public MillableSaveDataProxy Millable { get; set; }
         [Deserialize("m_InProgressItemSerialized", true)]
         public InProgressCraftItemSaveDataProxy InProgressItem { get; set; }
         [Deserialize("m_TorchItemSerialized", true)]
@@ -302,6 +310,7 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public bool m_NonInteractive { get; set; }
         public bool m_HasBeenEquippedAndUsed { get; set; }
         public string m_InspectSerialized { get; set; }
+        public bool m_StoneItemThrown { get; set; }
 
         public static GearItemSaveDataProxy Create()
         {
@@ -413,6 +422,23 @@ namespace The_Long_Dark_Save_Editor_2.Game_data
         public float m_HoursPlayed { get; set; }
         public float m_HoursAtLastRoll { get; set; }
         public EnumWrapper<SnareState> m_State { get; set; }
+    }
+
+    public class SprayPaintSaveDataProxy
+    {
+        public EnumWrapper<SprayColor> m_Colour { get; set; }
+    }
+
+    public class RigidBodySaveDataProxy
+    {
+    }
+
+    public class PowderItemSaveDataProxy
+    {
+    }
+
+    public class MillableSaveDataProxy
+    {
     }
 
     public class InProgressCraftItemSaveDataProxy

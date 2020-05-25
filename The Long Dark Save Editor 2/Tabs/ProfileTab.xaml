@@ -120,8 +120,8 @@
         </Expander>
 
         <CheckBox IsChecked="{Binding CurrentProfile.State.m_DaysCompleted4DON, Converter={StaticResource FourDoNBadgeCompletedConverter}}" 
-                  Margin="0 5 0 5" Content="4 days of night badges unlocked"/>
+                  Margin="0 5 0 5" Content="{x:Static p:Resources.Badges4DONCheckBox}"/>
         <CheckBox IsChecked="{Binding CurrentProfile.State.m_DaysCompleted4DON2019, Converter={StaticResource FourDoNBadgeCompletedConverter}}" 
-                  Margin="0 5 0 5" Content="4 days of night 2019 badges unlocked"/>
+                  Margin="0 5 0 5" Content="{x:Static p:Resources.Badges4DON2019CheckBox}"/>
     </StackPanel>
 </UserControl>

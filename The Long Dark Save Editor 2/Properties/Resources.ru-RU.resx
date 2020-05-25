@@ -1884,4 +1884,7 @@
   <data name="GEAR_RuralRegionFarmKey" xml:space="preserve">
     <value>Ключ от подвала</value>
   </data>
+  <data name="GEAR_SprayPaintCan" xml:space="preserve">
+    <value>Балончик с краской</value>
+  </data>
 </root>
