@@ -1,13 +1,7 @@
-﻿using MaterialDesignThemes.Wpf;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Windows.Input;
-using The_Long_Dark_Save_Editor_2.Helpers.Helpers;
+﻿using System;
 
-namespace The_Long_Dark_Save_Editor_2.ViewModels
+namespace The_Long_Dark_Save_Editor_2.Helpers
 {
-
     public class VersionData
     {
         public string version { get; set; }
@@ -50,35 +44,6 @@ namespace The_Long_Dark_Save_Editor_2.ViewModels
         public override string ToString()
         {
             return version;
-        }
-    }
-
-    public class NewVersionDialogViewModel
-    {
-        public List<VersionData> Versions { get; set; }
-        public string Url { get; set; }
-        public ICommand DownloadCommand { get; set; }
-
-        public NewVersionDialogViewModel()
-        {
-            DownloadCommand = new CommandHandler(() =>
-            {
-                try
-                {
-                    Uri uri = new Uri(Url);
-                    if (string.Equals(uri.Host, "www.moddb.com", StringComparison.OrdinalIgnoreCase))
-                    {
-                        Process.Start(Url);
-                        DialogHost.CloseDialogCommand.Execute(null, null);
-                    }
-                }
-                catch (Exception ex)
-                {
-
-                }
-
-            });
-
         }
     }
 }

@@ -106,6 +106,7 @@
     </Compile>
     <Compile Include="Game data\AfflictionsContainer.cs" />
     <Compile Include="Helpers\DictionaryExtension.cs" />
+    <Compile Include="Helpers\VersionData.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -170,7 +171,6 @@
     </Compile>
     <Compile Include="ViewModels\BusyDialogViewModel.cs" />
     <Compile Include="ViewModels\ErrorDialogViewModel.cs" />
-    <Compile Include="ViewModels\NewVersionDialogViewModel.cs" />
     <Compile Include="ViewModels\SaveFileUpdatedViewModel.cs" />
     <Page Include="Colors\HinterlandAccent.xaml">
       <SubType>Designer</SubType>

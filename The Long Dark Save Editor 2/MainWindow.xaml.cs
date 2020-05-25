@@ -191,9 +191,23 @@ namespace The_Long_Dark_Save_Editor_2
                 if (versions[versions.Count - 1] > Version)
                 {
                     var newerVersions = versions.Where(version => version > Version).ToList();
-                    var viewModel = new NewVersionDialogViewModel() { Versions = newerVersions, Url = newerVersions[newerVersions.Count - 1].url };
-                    dialogHost.DialogContent = viewModel;
-                    dialogHost.IsOpen = true;
+
+                    SnackBar.MessageQueue.Enqueue("New version available", "Download", () =>
+                    {
+                        try
+                        {
+                            string url = newerVersions[newerVersions.Count - 1].url;
+                            Uri uri = new Uri(url);
+                            if (string.Equals(uri.Host, "www.moddb.com", StringComparison.OrdinalIgnoreCase))
+                            {
+                                Process.Start(url);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+
+                        }
+                    });
                 }
             }
             catch (Exception ex)
