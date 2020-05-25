@@ -99,6 +99,7 @@
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumDescriptionConverter.cs" />
     <Compile Include="Converters\InjuriesToOpacityConverter.cs" />
+    <Compile Include="Converters\ObjectNotNullConverter.cs" />
     <Compile Include="Converters\RegionMapExistsConverter.cs" />
     <Compile Include="ErrorDialog.xaml.cs">
       <DependentUpon>ErrorDialog.xaml</DependentUpon>
