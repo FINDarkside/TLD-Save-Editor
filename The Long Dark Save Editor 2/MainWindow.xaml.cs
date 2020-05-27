@@ -161,22 +161,25 @@ namespace The_Long_Dark_Save_Editor_2
             else
                 ccSaves.SelectedIndex = 0;
 
-            var profile = Directory.GetFiles(path, "user001.*")
-                .Select(file => new FileInfo(file))
-                .OrderByDescending(file => file.LastWriteTime)
-                .FirstOrDefault()?.FullName;
-
-            if (profile != null)
+            if (Directory.Exists(path))
             {
-                try
+                var profile = Directory.GetFiles(path, "user001.*")
+                                .Select(file => new FileInfo(file))
+                                .OrderByDescending(file => file.LastWriteTime)
+                                .FirstOrDefault()?.FullName;
+                if (profile != null)
                 {
-                    CurrentProfile = new Profile(profile);
-                }
-                catch (Exception ex)
-                {
-                    WForms.MessageBox.Show(ex.Message + "\nFailed to load profile\n" + ex.ToString(), "Failed to load profile", WForms.MessageBoxButtons.OK, WForms.MessageBoxIcon.Exclamation);
+                    try
+                    {
+                        CurrentProfile = new Profile(profile);
+                    }
+                    catch (Exception ex)
+                    {
+                        WForms.MessageBox.Show(ex.Message + "\nFailed to load profile\n" + ex.ToString(), "Failed to load profile", WForms.MessageBoxButtons.OK, WForms.MessageBoxIcon.Exclamation);
+                    }
                 }
             }
+
         }
 
         async public void CheckForUpdates()
