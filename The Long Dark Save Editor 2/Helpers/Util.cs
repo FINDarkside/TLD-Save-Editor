@@ -50,7 +50,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             Regex reg = new Regex("^(ep[0-9])?(sandbox|challenge|story|relentless)[0-9]+$");
             var saves = new List<string>();
             if (Directory.Exists(folder))
-                saves.AddRange((from f in Directory.GetFiles(folder) where reg.IsMatch(Path.GetFileName(f)) select f).ToList<string>());
+                saves.AddRange((from f in Directory.GetFiles(folder) orderby new FileInfo(f).LastWriteTime descending where reg.IsMatch(Path.GetFileName(f)) select f).ToList<string>());
 
             var result = new ObservableCollection<EnumerationMember>();
             foreach (string saveFile in saves)
