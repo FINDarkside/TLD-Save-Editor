@@ -189,6 +189,8 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_MooseQuarter", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");
             AddItemInfo("GEAR_RawMeatMoose", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
             AddItemInfo("GEAR_CookedMeatMoose", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+	    AdditemInfo("GEAR_KetchupChips", ItemCategory.Food, @"{""FoodItem"":{""m_CaloriesRemainingProxy"":300}}");
+	    AdditemInfo("GEAR_MapleSyrup", ItemCategory.Food, @"{""FoodItem"":{""m_CaloriesRemainingProxy"":850}}");
 
             // Tools
             AddItemInfo("GEAR_Accelerant", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
