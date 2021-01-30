@@ -781,7 +781,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Astrid Backpack.
+        ///   Looks up a localized string similar to Astrid&apos;s Backpack.
         /// </summary>
         public static string GEAR_AstridBackPack {
             get {
@@ -1609,6 +1609,42 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ash Canyon Climber&apos;s Cave Note.
+        /// </summary>
+        public static string GEAR_CanyonClimbersCaveNote {
+            get {
+                return ResourceManager.GetString("GEAR_CanyonClimbersCaveNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ash Canyon Dead Climber Note.
+        /// </summary>
+        public static string GEAR_CanyonDeadClimberNote {
+            get {
+                return ResourceManager.GetString("GEAR_CanyonDeadClimberNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ash Canyon Fishing Hut Journal.
+        /// </summary>
+        public static string GEAR_CanyonFishingHutJournal {
+            get {
+                return ResourceManager.GetString("GEAR_CanyonFishingHutJournal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ash Canyon Miner&apos;s Note.
+        /// </summary>
+        public static string GEAR_CanyonMinersNote {
+            get {
+                return ResourceManager.GetString("GEAR_CanyonMinersNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Car Battery.
         /// </summary>
         public static string GEAR_CarBattery {
@@ -1956,6 +1992,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_Crackers {
             get {
                 return ResourceManager.GetString("GEAR_Crackers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crampons.
+        /// </summary>
+        public static string GEAR_Crampons {
+            get {
+                return ResourceManager.GetString("GEAR_Crampons", resourceCulture);
             }
         }
         
@@ -3022,6 +3067,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ketchup Chips.
+        /// </summary>
+        public static string GEAR_KetchupChips {
+            get {
+                return ResourceManager.GetString("GEAR_KetchupChips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hunting Knife.
         /// </summary>
         public static string GEAR_Knife {
@@ -3378,6 +3432,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_MapleSaplingDried {
             get {
                 return ResourceManager.GetString("GEAR_MapleSaplingDried", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maple Syrup.
+        /// </summary>
+        public static string GEAR_MapleSyrup {
+            get {
+                return ResourceManager.GetString("GEAR_MapleSyrup", resourceCulture);
             }
         }
         
@@ -3855,6 +3918,123 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         public static string GEAR_PlaneCrashID9 {
             get {
                 return ResourceManager.GetString("GEAR_PlaneCrashID9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Polaroid Ash Canyon High Meadow.
+        /// </summary>
+        public static string GEAR_PostCard_AC_CentralSpire {
+            get {
+                return ResourceManager.GetString("GEAR_PostCard_AC_CentralSpire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Polaroid Ash Canyon Wolf&apos;s Jaw Overlook.
+        /// </summary>
+        public static string GEAR_PostCard_AC_TopShelf {
+            get {
+                return ResourceManager.GetString("GEAR_PostCard_AC_TopShelf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Polaroid Bleak Inlet Echo One Radio Tower.
+        /// </summary>
+        public static string GEAR_PostCard_BI_EchoOne_RadioTower {
+            get {
+                return ResourceManager.GetString("GEAR_PostCard_BI_EchoOne-RadioTower", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Polaroid Coastal Highway Abandoned Lookout.
+        /// </summary>
+        public static string GEAR_PostCard_CR_AbandonedLookout {
+            get {
+                return ResourceManager.GetString("GEAR_PostCard_CR_AbandonedLookout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Polaroid Forlorn Muskeg Muskeg Overlook.
+        /// </summary>
+        public static string GEAR_PostCard_FM_MuskegOverlook {
+            get {
+                return ResourceManager.GetString("GEAR_PostCard_FM_MuskegOverlook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Polaroid Forlorn Muskeg Shortwave Tower.
+        /// </summary>
+        public static string GEAR_PostCard_FM_ShortwaveTower {
+            get {
+                return ResourceManager.GetString("GEAR_PostCard_FM_ShortwaveTower", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Polaroid Mystery Lake Forestry Lookout.
+        /// </summary>
+        public static string GEAR_PostCard_ML_ForestryLookout {
+            get {
+                return ResourceManager.GetString("GEAR_PostCard_ML_ForestryLookout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Polaroid Mystery Lake Lake Overlook.
+        /// </summary>
+        public static string GEAR_PostCard_ML_LakeOverlook {
+            get {
+                return ResourceManager.GetString("GEAR_PostCard_ML_LakeOverlook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Polaroid Mountain Town Radio Tower.
+        /// </summary>
+        public static string GEAR_PostCard_MT_RadioTower {
+            get {
+                return ResourceManager.GetString("GEAR_PostCard_MT_RadioTower", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Polaroid Pleasant Valley Signal Hill.
+        /// </summary>
+        public static string GEAR_PostCard_PV_SignalHill {
+            get {
+                return ResourceManager.GetString("GEAR_PostCard_PV_SignalHill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Polaroid Hushed River Valley Pensive Vista.
+        /// </summary>
+        public static string GEAR_PostCard_RV_Pensive {
+            get {
+                return ResourceManager.GetString("GEAR_PostCard_RV_Pensive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Polaroid Timberwolf Mountain Andre&apos;s Peak.
+        /// </summary>
+        public static string GEAR_PostCard_TM_AndresPeak {
+            get {
+                return ResourceManager.GetString("GEAR_PostCard_TM_AndresPeak", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Polaroid Timberwolf Mountain Tail Section.
+        /// </summary>
+        public static string GEAR_PostCard_TM_TailSection {
+            get {
+                return ResourceManager.GetString("GEAR_PostCard_TM_TailSection", resourceCulture);
             }
         }
         
@@ -4489,6 +4669,15 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Technical Backpack.
+        /// </summary>
+        public static string GEAR_TechnicalBackpack {
+            get {
+                return ResourceManager.GetString("GEAR_TechnicalBackpack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to T-Shirt.
         /// </summary>
         public static string GEAR_TeeShirt {
@@ -5110,7 +5299,16 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannery Region.
+        ///   Looks up a localized string similar to Ash Canyon.
+        /// </summary>
+        public static string RegionsWithMap_AshCanyonRegion {
+            get {
+                return ResourceManager.GetString("RegionsWithMap_AshCanyonRegion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bleak Inlet.
         /// </summary>
         public static string RegionsWithMap_CanneryRegion {
             get {
@@ -5335,7 +5533,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Long Dark (v1.76) Save Editor.
+        ///   Looks up a localized string similar to The Long Dark (v1.89) Save Editor.
         /// </summary>
         public static string Title {
             get {
