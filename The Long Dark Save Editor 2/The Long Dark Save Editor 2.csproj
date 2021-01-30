@@ -298,9 +298,6 @@
     <Resource Include="Images\MysteryLakeSF.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Tabs\AshCanyonRegion.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\AshCanyonRegion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
