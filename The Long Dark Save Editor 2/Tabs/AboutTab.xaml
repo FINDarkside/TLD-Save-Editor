@@ -17,7 +17,7 @@
         </Button>
         <Label HorizontalAlignment="Center" Margin="0 10 0 0">Developed by FINDarkside</Label>
         <Label HorizontalAlignment="Center">Contact: findarkside@gmail.com</Label>
-        <Label HorizontalAlignment="Center">Maps made by Whiteberry and Stray Wolf</Label>
+        <Label HorizontalAlignment="Center">Maps made by Whiteberry, Stray Wolf, stmSantana</Label>
         <TextBlock HorizontalAlignment="Center" Style="{StaticResource MaterialDesignTitleTextBlock}" Margin="0 15 0 0">Other contributors:</TextBlock>
         <Label HorizontalAlignment="Center">nbernier</Label>
         <Label HorizontalAlignment="Center">Pt-Djefferson</Label>
