@@ -1267,7 +1267,7 @@
     <value>Time spent evolving (hours)</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>The Long Dark (v1.76) Save Editor</value>
+    <value>The Long Dark (v1.89) Save Editor</value>
   </data>
   <data name="Tools" xml:space="preserve">
     <value>Tools</value>
@@ -1886,5 +1886,71 @@
   </data>
   <data name="RegionsWithMap_CanneryRegion" xml:space="preserve">
     <value>Bleak Inlet</value>
+  </data>
+  <data name="GEAR_Crampons" xml:space="preserve">
+    <value>Crampons</value>
+  </data>
+  <data name="GEAR_KetchupChips" xml:space="preserve">
+    <value>Ketchup Chips</value>
+  </data>
+  <data name="GEAR_MapleSyrup" xml:space="preserve">
+    <value>Maple Syrup</value>
+  </data>
+  <data name="GEAR_CanyonClimbersCaveNote" xml:space="preserve">
+    <value>Ash Canyon Climber's Cave Note</value>
+  </data>
+  <data name="GEAR_CanyonDeadClimberNote" xml:space="preserve">
+    <value>Ash Canyon Dead Climber Note</value>
+  </data>
+  <data name="GEAR_CanyonFishingHutJournal" xml:space="preserve">
+    <value>Ash Canyon Fishing Hut Journal</value>
+  </data>
+  <data name="GEAR_CanyonMinersNote" xml:space="preserve">
+    <value>Ash Canyon Miner's Note</value>
+  </data>
+  <data name="GEAR_PostCard_AC_CentralSpire" xml:space="preserve">
+    <value>Polaroid Ash Canyon High Meadow</value>
+  </data>
+  <data name="GEAR_PostCard_AC_TopShelf" xml:space="preserve">
+    <value>Polaroid Ash Canyon Wolf's Jaw Overlook</value>
+  </data>
+  <data name="GEAR_PostCard_BI_EchoOne-RadioTower" xml:space="preserve">
+    <value>Polaroid Bleak Inlet Echo One Radio Tower</value>
+  </data>
+  <data name="GEAR_PostCard_CR_AbandonedLookout" xml:space="preserve">
+    <value>Polaroid Coastal Highway Abandoned Lookout</value>
+  </data>
+  <data name="GEAR_PostCard_FM_ShortwaveTower" xml:space="preserve">
+    <value>Polaroid Forlorn Muskeg Shortwave Tower</value>
+  </data>
+  <data name="GEAR_PostCard_FM_MuskegOverlook" xml:space="preserve">
+    <value>Polaroid Forlorn Muskeg Muskeg Overlook</value>
+  </data>
+  <data name="GEAR_PostCard_ML_ForestryLookout" xml:space="preserve">
+    <value>Polaroid Mystery Lake Forestry Lookout</value>
+  </data>
+  <data name="GEAR_PostCard_ML_LakeOverlook" xml:space="preserve">
+    <value>Polaroid Mystery Lake Lake Overlook</value>
+  </data>
+  <data name="GEAR_PostCard_MT_RadioTower" xml:space="preserve">
+    <value>Polaroid Mountain Town Radio Tower</value>
+  </data>
+  <data name="GEAR_PostCard_PV_SignalHill" xml:space="preserve">
+    <value>Polaroid Pleasant Valley Signal Hill</value>
+  </data>
+  <data name="GEAR_PostCard_RV_Pensive" xml:space="preserve">
+    <value>Polaroid Hushed River Valley Pensive Vista</value>
+  </data>
+  <data name="GEAR_PostCard_TM_AndresPeak" xml:space="preserve">
+    <value>Polaroid Timberwolf Mountain Andre's Peak</value>
+  </data>
+  <data name="GEAR_PostCard_TM_TailSection" xml:space="preserve">
+    <value>Polaroid Timberwolf Mountain Tail Section</value>
+  </data>
+  <data name="RegionsWithMap_AshCanyonRegion" xml:space="preserve">
+    <value>Ash Canyon</value>
+  </data>
+  <data name="GEAR_TechnicalBackpack" xml:space="preserve">
+    <value>Technical Backpack</value>
   </data>
 </root>

@@ -39,6 +39,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             { "RiverValleyRegion", new MapInfo {origo = new Point(99.18, 1832), width = 1968, height = 2092, pixelsPerCoordinate = 0.9385f} },
             { "MountainTownRegion", new MapInfo {origo = new Point(38.15, 2380), width = 2156, height = 2606, pixelsPerCoordinate = 0.9385f} },
             { "CanneryRegion", new MapInfo {origo = new Point(1399, 1401), width = 2500, height = 2602, pixelsPerCoordinate = 1.0f} },
+            { "AshCanyonRegion", new MapInfo {origo = new Point(1133.7, 1118), width = 2274, height = 2655, pixelsPerCoordinate = 1.0f} }
         };
 
         public static List<string> MapNames

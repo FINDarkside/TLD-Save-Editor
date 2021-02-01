@@ -135,6 +135,7 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_LongUnderwearStart", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
             AddItemInfo("GEAR_ImprovisedMittens", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
             AddItemInfo("GEAR_ImprovisedHat", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
+            AddItemInfo("GEAR_Crampons", ItemCategory.Clothing, @"{""ClothingItem"": {}}");
 
             // Food
             AddItemInfo("GEAR_AirlineFoodChick", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 620}}");
@@ -189,6 +190,8 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_MooseQuarter", ItemCategory.Food, @"{""BodyHarvest"": {m_QuarterBagWasteMultiplier:2, m_MeatAvailableKG: 1, m_Condition: 100, m_DamageSide:{Value:""DamageSideRight""}}}");
             AddItemInfo("GEAR_RawMeatMoose", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
             AddItemInfo("GEAR_CookedMeatMoose", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 200}}");
+            AddItemInfo("GEAR_KetchupChips", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 300}}");
+            AddItemInfo("GEAR_MapleSyrup", ItemCategory.Food, @"{""FoodItem"": {""m_CaloriesRemainingProxy"": 850}}");
 
             // Tools
             AddItemInfo("GEAR_Accelerant", ItemCategory.Tools, @"{""StackableItem"": {""m_UnitsProxy"": 1}}");
@@ -471,6 +474,24 @@ namespace The_Long_Dark_Save_Editor_2.Helpers
             AddItemInfo("GEAR_EP3_PatientHistory04", ItemCategory.Collectible, @"{}");
             AddItemInfo("GEAR_EP3_PatientHistory05", ItemCategory.Collectible, @"{}");
             AddItemInfo("GEAR_EP3_PatientHistory06", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_CanyonClimbersCaveNote", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_CanyonDeadClimberNote", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_CanyonFishingHutJournal", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_CanyonMinersNote", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_PostCard_AC_CentralSpire", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_PostCard_AC_TopShelf", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_PostCard_BI_EchoOne-RadioTower", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_PostCard_CR_AbandonedLookout", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_PostCard_FM_ShortwaveTower", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_PostCard_FM_MuskegOverlook", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_PostCard_ML_ForestryLookout", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_PostCard_ML_LakeOverlook", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_PostCard_MT_RadioTower", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_PostCard_PV_SignalHill", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_PostCard_RV_Pensive", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_PostCard_TM_AndresPeak", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_PostCard_TM_TailSection", ItemCategory.Collectible, @"{}");
+            AddItemInfo("GEAR_TechnicalBackpack", ItemCategory.Collectible, @"{}");
 
 
             // Hidden
