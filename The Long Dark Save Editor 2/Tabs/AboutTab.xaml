@@ -21,6 +21,7 @@
         <TextBlock HorizontalAlignment="Center" Style="{StaticResource MaterialDesignTitleTextBlock}" Margin="0 15 0 0">Other contributors:</TextBlock>
         <Label HorizontalAlignment="Center">nbernier</Label>
         <Label HorizontalAlignment="Center">Pt-Djefferson</Label>
+        <Label HorizontalAlignment="Center">ProsPex270</Label>
         <TextBlock HorizontalAlignment="Center" Style="{StaticResource MaterialDesignTitleTextBlock}" Margin="0 15 0 0">Translations:</TextBlock>
         <Label HorizontalAlignment="Center" >driver_13</Label>
         <Label HorizontalAlignment="Center" >Boer17</Label>
