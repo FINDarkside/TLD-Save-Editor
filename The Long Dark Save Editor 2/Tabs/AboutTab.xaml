@@ -26,5 +26,6 @@
         <Label HorizontalAlignment="Center" >driver_13</Label>
         <Label HorizontalAlignment="Center" >Boer17</Label>
         <Label HorizontalAlignment="Center" >DaimeneX</Label>
+        <Label HorizontalAlignment="Center" >Luca Martinelli</Label>
     </StackPanel>
 </UserControl>
