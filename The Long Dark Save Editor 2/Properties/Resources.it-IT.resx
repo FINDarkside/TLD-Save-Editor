@@ -130,13 +130,13 @@
     <value>Benda</value>
   </data>
   <data name="GEAR_OldMansBeardDressing" xml:space="preserve">
-    <value>?Medicazione al lichene Vitalba</value>
+    <value>Unguento curativo di Vitalba</value>
   </data>
   <data name="GEAR_WaterPurificationTablets" xml:space="preserve">
     <value>Compresse per purificazione dell'acqua</value>
   </data>
   <data name="GEAR_EmergencyStim" xml:space="preserve">
-    <value>?Iniettore steroidi di emergenza</value>
+    <value>Stimolatore d'emergenza</value>
   </data>
   <data name="GEAR_Balaclava" xml:space="preserve">
     <value>Balaclava</value>
@@ -181,7 +181,7 @@
     <value>Sciarpa in cotone</value>
   </data>
   <data name="GEAR_CottonShirt" xml:space="preserve">
-    <value>?Maglietta in cotone</value>
+    <value>Camicia</value>
   </data>
   <data name="GEAR_CottonSocks" xml:space="preserve">
     <value>Calzini sportivi</value>
@@ -199,13 +199,13 @@
     <value>Giacca da sci</value>
   </data>
   <data name="GEAR_DownVest" xml:space="preserve">
-    <value>?Smanicato in piume</value>
+    <value>Gilet imbottito</value>
   </data>
   <data name="GEAR_EarMuffs" xml:space="preserve">
-    <value>?Paraorecchi in lana</value>
+    <value>Copriorecchie di lana</value>
   </data>
   <data name="GEAR_FishermanSweater" xml:space="preserve">
-    <value>?Maglione</value>
+    <value>Maglione da pesca</value>
   </data>
   <data name="GEAR_FleeceMittens" xml:space="preserve">
     <value>Guanti in cotone</value>
@@ -217,7 +217,7 @@
     <value>Guanti lunghi</value>
   </data>
   <data name="GEAR_HeavyParka" xml:space="preserve">
-    <value>?Parka in vecchio stile</value>
+    <value>Eskimo</value>
   </data>
   <data name="GEAR_HeavyWoolSweater" xml:space="preserve">
     <value>Maglione in lana</value>
@@ -241,10 +241,10 @@
     <value>Parka semplice</value>
   </data>
   <data name="GEAR_LongUnderwear" xml:space="preserve">
-    <value>?Intimo termico</value>
+    <value>Intimo termico</value>
   </data>
   <data name="GEAR_LongUnderwearWool" xml:space="preserve">
-    <value>?Intimo termico in lana</value>
+    <value>Calzamaglia in lana</value>
   </data>
   <data name="GEAR_MackinawJacket" xml:space="preserve">
     <value>Giacca Canadese</value>
@@ -256,13 +256,13 @@
     <value>Guanti in lana</value>
   </data>
   <data name="GEAR_MuklukBoots" xml:space="preserve">
-    <value>?Mukluks</value>
+    <value>Stivali tradizionali</value>
   </data>
   <data name="GEAR_PlaidShirt" xml:space="preserve">
     <value>Camicia a quardi</value>
   </data>
   <data name="GEAR_PremiumWinterCoat" xml:space="preserve">
-    <value>?Parka da spedizione</value>
+    <value>Parka Accessoriato</value>
   </data>
   <data name="GEAR_QualityWinterCoat" xml:space="preserve">
     <value>Doppiopetto da marinaio</value>
@@ -277,7 +277,7 @@
     <value>Guanti da sci</value>
   </data>
   <data name="GEAR_SkiJacket" xml:space="preserve">
-    <value>?Tagliavento</value>
+    <value>Tagliavento</value>
   </data>
   <data name="GEAR_TeeShirt" xml:space="preserve">
     <value>T-Shirt</value>
@@ -295,13 +295,13 @@
     <value>Calzini in lana</value>
   </data>
   <data name="GEAR_WoolSweater" xml:space="preserve">
-    <value>?Maglione di lana sottile </value>
+    <value>Maglione di lana sottile </value>
   </data>
   <data name="GEAR_WoolWrap" xml:space="preserve">
-    <value>?Sciarpa lunga in lana</value>
+    <value>Sciarpone di lana</value>
   </data>
   <data name="GEAR_WoolWrapCap" xml:space="preserve">
-    <value>?Cappuccio in pile</value>
+    <value>Cappuccio in pile</value>
   </data>
   <data name="GEAR_WorkBoots" xml:space="preserve">
     <value>Scarponi da lavoro</value>
@@ -358,7 +358,7 @@
     <value>Trota iridea (Cotta)</value>
   </data>
   <data name="GEAR_CookedSmallMouthBass" xml:space="preserve">
-    <value>Spigola (Cotta)</value>
+    <value>Persico Trota (Cotta)</value>
   </data>
   <data name="GEAR_Crackers" xml:space="preserve">
     <value>Crackers salati</value>
@@ -415,7 +415,7 @@
     <value>Trota iridea (Cruda)</value>
   </data>
   <data name="GEAR_RawSmallMouthBass" xml:space="preserve">
-    <value>Spigola (Crudo)</value>
+    <value>Persico Trota (Crudo)</value>
   </data>
   <data name="GEAR_ReishiTea" xml:space="preserve">
     <value>T&egrave; Reishi</value>
@@ -460,22 +460,22 @@
     <value>Sacco a pelo</value>
   </data>
   <data name="GEAR_Bow" xml:space="preserve">
-    <value>?Arco</value>
+    <value>Arco di fortuna</value>
   </data>
   <data name="GEAR_CanOpener" xml:space="preserve">
     <value>Apriscatole</value>
   </data>
   <data name="GEAR_Firestriker" xml:space="preserve">
-    <value>?Accendino</value>
+    <value>Acciarino</value>
   </data>
   <data name="GEAR_FlareA" xml:space="preserve">
-    <value>Flare</value>
+    <value>Bengala</value>
   </data>
   <data name="GEAR_FlareGunAmmoSingle" xml:space="preserve">
-    <value>?Colpo Flare</value>
+    <value>Bengala (colpo pistola)</value>
   </data>
   <data name="GEAR_FlareGun" xml:space="preserve">
-    <value>?Pistola di segnalazione</value>
+    <value>Pistola lanciarazzi</value>
   </data>
   <data name="GEAR_Hacksaw" xml:space="preserve">
     <value>Segaccio</value>
@@ -523,7 +523,7 @@
     <value>Giornale arrotolato</value>
   </data>
   <data name="GEAR_PackMatches" xml:space="preserve">
-    <value>?Fiammiferi cardborad</value>
+    <value>Fiammiferi di cartone</value>
   </data>
   <data name="GEAR_Prybar" xml:space="preserve">
     <value>Piede di porco</value>
@@ -697,22 +697,22 @@
     <value>Pelle di Lupo seccata</value>
   </data>
   <data name="GEAR_BookCarcassHarvesting" xml:space="preserve">
-    <value>?Field Dressing Your Kill, Vol. I</value>
+    <value>Eviscerare le carcasse, Vol. I</value>
   </data>
   <data name="GEAR_BookCooking" xml:space="preserve">
-    <value>Wilderness Kitchen</value>
+    <value>La cucina selvatica</value>
   </data>
   <data name="GEAR_BookFireStarting" xml:space="preserve">
-    <value>Survive the Outdoors!</value>
+    <value>Sopravvivi nella natura!</value>
   </data>
   <data name="GEAR_BookIceFishing" xml:space="preserve">
-    <value>The Frozen Angler</value>
+    <value>Il pescator ghiacciato</value>
   </data>
   <data name="GEAR_BookRifleFirearm" xml:space="preserve">
-    <value>Frontier Shooting Guide</value>
+    <value>Guida del pioniere alle armi da fuoco</value>
   </data>
   <data name="GEAR_BookRifleFirearmAdvanced" xml:space="preserve">
-    <value>Advanced Guns Guns Guns!</value>
+    <value>Pistole a go-go per esperti</value>
   </data>
   <data name="GEAR_AccelerantKerosene" xml:space="preserve">
     <value>Accellerante</value>
@@ -721,7 +721,7 @@
     <value>Accellerante</value>
   </data>
   <data name="GEAR_BoltCutters" xml:space="preserve">
-    <value>Cesoie</value>
+    <value>Tronchesi</value>
   </data>
   <data name="GEAR_CarBattery" xml:space="preserve">
     <value>Batteria d'auto</value>
@@ -790,7 +790,7 @@
     <value>Pagina di diario del Cacciatore</value>
   </data>
   <data name="GEAR_KnifeScrapMetal" xml:space="preserve">
-    <value>?Lama dei rottami di ferro</value>
+    <value>Frammento di ferraglia</value>
   </data>
   <data name="GEAR_MedicalSupplies" xml:space="preserve">
     <value>Provviste mediche della Diga Carter</value>
@@ -823,7 +823,7 @@
     <value>A Note Left Behind</value>
   </data>
   <data name="GEAR_SurvivalSchoolFishing" xml:space="preserve">
-    <value>?The Frozen Angler</value>
+    <value>Manuale d'istruzione della pesca su ghiaccio</value>
   </data>
   <data name="GEAR_KnowledgeCarterDam" xml:space="preserve">
     <value>Diga idroelettrica Carter</value>
@@ -838,7 +838,7 @@
     <value>La storia del declino, Parte Uno</value>
   </data>
   <data name="GEAR_SurvivalSchoolWolfHunt" xml:space="preserve">
-    <value>?Advanced Guns Guns Guns!</value>
+    <value>Armi a go-go per esperti</value>
   </data>
   <data name="GEAR_RabbitskinHat" xml:space="preserve">
     <value>Cappello in pelle di Coniglio</value>
@@ -862,13 +862,13 @@
     <value>Lancia d'Orso</value>
   </data>
   <data name="GEAR_AuroraHatchCode" xml:space="preserve">
-    <value>?Aurora Hatch Door Entry Code</value>
+    <value>Aurora Hatch Door Entry Code</value>
   </data>
   <data name="GEAR_LongUnderwearStart" xml:space="preserve">
     <value>Intimo termico (Inizio)</value>
   </data>
   <data name="GEAR_SurvivalSchoolDeerHunt" xml:space="preserve">
-    <value>?Frontier Shooting Guide</value>
+    <value>Guida del pioniere alle armi da fuoco</value>
   </data>
   <data name="GEAR_WillBootsStart" xml:space="preserve">
     <value>Scarponi di Mackenzie (Inizio)</value>
@@ -901,7 +901,7 @@
     <value>Chiave del cancello dell'area di scarico della diga Carter</value>
   </data>
   <data name="GEAR_KnowledgeMysteryLake" xml:space="preserve">
-    <value>?Mystery Lake &amp; Area</value>
+    <value>Mystery Lake &amp; Area</value>
   </data>
   <data name="GEAR_BearSpear" xml:space="preserve">
     <value>Lancia dell'Orso</value>
@@ -913,7 +913,7 @@
     <value>La storia del declino, Parte Tre</value>
   </data>
   <data name="GEAR_SurvivalSchoolClothing" xml:space="preserve">
-    <value>?A Sewing Primer</value>
+    <value>Introduzione al cucito</value>
   </data>
   <data name="GEAR_WillPantsStart" xml:space="preserve">
     <value>Pantaloni Mackenzie (Inizio)</value>
@@ -922,7 +922,7 @@
     <value>La storia del declino, Parte Quattro</value>
   </data>
   <data name="GEAR_SurvivalSchoolRabbits" xml:space="preserve">
-    <value>?Field Dressing Your Kill, Vol. I</value>
+    <value>Eviscerare le carcasse, Vol. I</value>
   </data>
   <data name="GEAR_WillShirtStart" xml:space="preserve">
     <value>Maglia di Mackenzie (Inizio)</value>
@@ -931,7 +931,7 @@
     <value>La storia del declino, Parte Due</value>
   </data>
   <data name="GEAR_FlareGunCase_hangar" xml:space="preserve">
-    <value>?Kit della pistola d'emergenza</value>
+    <value>Kit pistola lanciarazzi</value>
   </data>
   <data name="GEAR_Flashlight" xml:space="preserve">
     <value>Torcia</value>
@@ -1048,7 +1048,7 @@
     <value>Pantaloni di Mackenzie</value>
   </data>
   <data name="GEAR_GreyMotherBoots" xml:space="preserve">
-    <value>?Stivali da montanaro</value>
+    <value>Stivali d'alpinismo</value>
   </data>
   <data name="GEAR_BearEar" xml:space="preserve">
     <value>Orecchio del Vecchio Orso</value>
@@ -1063,10 +1063,10 @@
     <value>Codice del bunker di Hank</value>
   </data>
   <data name="GEAR_BookArchery" xml:space="preserve">
-    <value>?Stay On Target</value>
+    <value>Sempre sul bersaglio</value>
   </data>
   <data name="GEAR_BookMending" xml:space="preserve">
-    <value>?A Sewing Primer</value>
+    <value>Introduzione al cucito</value>
   </data>
   <data name="GEAR_MooseHideDried" xml:space="preserve">
     <value>Pelle d'Alce seccata</value>
@@ -1075,7 +1075,7 @@
     <value>Sacca di pelle d'Alce</value>
   </data>
   <data name="GEAR_MooseHideCloak" xml:space="preserve">
-    <value>?Moose-Hide Cloak</value>
+    <value>Mantello d'Alce</value>
   </data>
   <data name="GEAR_MooseHide" xml:space="preserve">
     <value>Pelle d'Alce fresca</value>
@@ -1594,10 +1594,10 @@
     <value>Apri mappa</value>
   </data>
   <data name="GEAR_BlueFlare" xml:space="preserve">
-    <value>Flare della marina</value>
+    <value>Razzo della marina</value>
   </data>
   <data name="GEAR_BookGunsmithing" xml:space="preserve">
-    <value>Practical Gunsmithing</value>
+    <value>La produzione di armi per tutti</value>
   </data>
   <data name="GEAR_Bullet" xml:space="preserve">
     <value>Proiettile</value>
@@ -1612,7 +1612,7 @@
     <value>Notebook del tecnico</value>
   </data>
   <data name="GEAR_DustingSulfur" xml:space="preserve">
-    <value>Polvere di zolfo</value>
+    <value>Zolfo in polvere</value>
   </data>
   <data name="GEAR_GunpowderCan" xml:space="preserve">
     <value>Barattolo di polvere da sparo</value>
@@ -1627,7 +1627,7 @@
     <value>Rottami di piombo</value>
   </data>
   <data name="GEAR_StumpRemover" xml:space="preserve">
-    <value>?Stump Remover</value>
+    <value>Nitrato di potassio</value>
   </data>
   <data name="GunsmithingSkillSP" xml:space="preserve">
     <value>Punti abilit&agrave; Creatore d'armi</value>
