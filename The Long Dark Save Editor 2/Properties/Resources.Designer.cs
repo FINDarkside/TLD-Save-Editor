@@ -19,7 +19,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -1429,7 +1429,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Local Legends -Sasquatch.
+        ///   Looks up a localized string similar to Local Legends - Sasquatch.
         /// </summary>
         public static string GEAR_BookTallTalesYeti {
             get {
@@ -1789,7 +1789,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Collectible Note Common.
+        ///   Looks up a localized string similar to Collectible Note Rare.
         /// </summary>
         public static string GEAR_CollectibleNoteRareReward {
             get {
@@ -3355,7 +3355,7 @@ namespace The_Long_Dark_Save_Editor_2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lyly&apos;s Map.
+        ///   Looks up a localized string similar to Lily&apos;s Map.
         /// </summary>
         public static string GEAR_LilyClimbMap {
             get {
