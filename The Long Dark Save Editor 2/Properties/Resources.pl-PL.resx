@@ -928,7 +928,7 @@
     <value>Koszula Mackenziego</value>
   </data>
   <data name="GEAR_KnowledgeCollapse2" xml:space="preserve">
-    <value> Historia Upadku, część druga</value>
+    <value>Historia Upadku, część druga</value>
   </data>
   <data name="GEAR_FlareGunCase_hangar" xml:space="preserve">
     <value>Pistolet sygnałowy</value>
@@ -1495,19 +1495,19 @@
     <value>Podręcznik dotyczący planej broni ręcznej</value>
   </data>
   <data name="Backups" xml:space="preserve">
-    <value>Backups</value>
+    <value>Zapasowy</value>
   </data>
   <data name="Badges4DON2019CheckBox" xml:space="preserve">
-    <value>4 days of night 2019 badges unlocked</value>
+    <value>Odznaki 4 dni nocy 2019 odblokowane</value>
   </data>
   <data name="Badges4DONCheckBox" xml:space="preserve">
-    <value>4 days of night badges unlocked</value>
+    <value>Odblokowane 4 dni nocnych odznak</value>
   </data>
   <data name="BlizzardWalkerProgress" xml:space="preserve">
-    <value>Blizzard walker progress</value>
+    <value>Postępy Blizzard Walker</value>
   </data>
   <data name="ExpertTrapperProgress" xml:space="preserve">
-    <value>Expert trapper progress</value>
+    <value>Ekspert traper postęp</value>
   </data>
   <data name="StraightToHeartProgress" xml:space="preserve">
     <value>Straight to the heart progress</value>
@@ -1516,334 +1516,335 @@
     <value>Cowichan Sweater</value>
   </data>
   <data name="GEAR_Brand" xml:space="preserve">
-    <value>Brand</value>
+    <value>Piętno</value>
   </data>
   <data name="GEAR_ClimbersJournal" xml:space="preserve">
-    <value>Climber's Journal Page</value>
+    <value>Strona Dziennika Wspinacza</value>
   </data>
   <data name="GEAR_BowString" xml:space="preserve">
-    <value>Bow String</value>
+    <value>Łuk</value>
   </data>
   <data name="GEAR_BowWood" xml:space="preserve">
-    <value>Bow Wood</value>
+    <value>Łuk drewna</value>
   </data>
   <data name="GEAR_CollectibleNoteCommonReward" xml:space="preserve">
-    <value>Collectible Note Common</value>
+    <value>Notatka kolekcjonerska - pospolita</value>
   </data>
   <data name="GEAR_CollectibleNoteRareReward" xml:space="preserve">
-    <value>Collectible Note Common</value>
+    <value>Notatka kolekcjonerska - rzadka</value>
   </data>
   <data name="AfflictionType_FrostbiteDamage" xml:space="preserve">
     <value>Frostbite damage</value>
   </data>
   <data name="GEAR_KnifeScrapMetal_Clean" xml:space="preserve">
-    <value>Knife Scrap Metal Clean</value>
+    <value>Czyszczenie złomu noża</value>
   </data>
   <data name="GEAR_MapSnippetMt" xml:space="preserve">
-    <value>Map Snippet Mt</value>
+    <value>Fragment mapy Mt</value>
   </data>
   <data name="GEAR_MapToRailyard" xml:space="preserve">
-    <value>Map To Railyard</value>
+    <value>Mapa do stacji kolejowej</value>
   </data>
   <data name="GEAR_Morphine" xml:space="preserve">
-    <value>Morphine</value>
+    <value>Morfina</value>
   </data>
   <data name="GEAR_MountainTownFarmNote" xml:space="preserve">
-    <value>Mountain Town Farm Note</value>
+    <value>Uwaga na farmę w górach</value>
   </data>
   <data name="GEAR_MountainTownLockBoxKey" xml:space="preserve">
-    <value>Mountain Town Lock Box Key</value>
+    <value>Klucz do skrytki w Mountain Town</value>
   </data>
   <data name="GEAR_MountainTownMap" xml:space="preserve">
-    <value>Mountain Town Map</value>
+    <value>Górska mapa miasta</value>
   </data>
   <data name="GEAR_MountainTownStoreKey" xml:space="preserve">
-    <value>Mountain Town Store Key</value>
+    <value>Klucz do sklepu Mountain Town</value>
   </data>
   <data name="GEAR_OverpassBrochure" xml:space="preserve">
-    <value>Overpass Brochure</value>
+    <value>Broszura wiaduktu</value>
   </data>
   <data name="GEAR_RicksJournal" xml:space="preserve">
-    <value>Rick's Journal</value>
+    <value>Dziennik Ricka</value>
   </data>
   <data name="GEAR_RifleBlanks" xml:space="preserve">
-    <value>Rifle Blanks</value>
+    <value>Puste karabiny</value>
   </data>
   <data name="GEAR_UtilitiesBill" xml:space="preserve">
-    <value>Utilities Bill</value>
+    <value>Rachunek za media</value>
   </data>
   <data name="GEAR_WaterTowerNote" xml:space="preserve">
-    <value>Water Tower Note</value>
+    <value>Uwaga na wieżę ciśnień</value>
   </data>
   <data name="GEAR_ForestTalkerMap" xml:space="preserve">
-    <value>Forest Talker Map Note</value>
+    <value>Komentarz do mapy leśnego mówcy</value>
   </data>
   <data name="AfflictionType_SprainedWristMajor" xml:space="preserve">
     <value>Sprained wrist major</value>
   </data>
   <data name="ExperienceModeType_ChallengeNomad" xml:space="preserve">
-    <value>Nomad</value>
+    <value>Koczownik</value>
   </data>
   <data name="Region" xml:space="preserve">
     <value>Region</value>
   </data>
   <data name="GEAR_LetterBundle" xml:space="preserve">
-    <value>Jeremiah's Letters</value>
+    <value>Listy Jeremiasza</value>
   </data>
   <data name="OpenMapCommand" xml:space="preserve">
     <value>Otwórz Mapę</value>
   </data>
   <data name="GEAR_BlueFlare" xml:space="preserve">
-    <value>Marine Flare</value>
+    <value>Rozbłysk Morski</value>
   </data>
   <data name="GEAR_BookGunsmithing" xml:space="preserve">
-    <value>Practical Gunsmithing</value>
+    <value>Praktyczne Rusznikarstwo</value>
   </data>
   <data name="GEAR_Bullet" xml:space="preserve">
-    <value>Bullet</value>
+    <value>Pocisk</value>
   </data>
   <data name="GEAR_CanneryCodeNote" xml:space="preserve">
-    <value>Communication Report</value>
+    <value>Raport z komunikacji</value>
   </data>
   <data name="GEAR_CanneryMemo" xml:space="preserve">
-    <value>Cannery Memo</value>
+    <value>Notatka o konserwach</value>
   </data>
   <data name="GEAR_CannerySurvivalPath" xml:space="preserve">
-    <value>The Technician's Notebook</value>
+    <value>Notatnik Technika</value>
   </data>
   <data name="GEAR_DustingSulfur" xml:space="preserve">
-    <value>Dusting Sulfur</value>
+    <value>Odkurzanie siarki</value>
   </data>
   <data name="GEAR_GunpowderCan" xml:space="preserve">
-    <value>Can of Gunpowder</value>
+    <value>Puszka prochu</value>
   </data>
   <data name="GEAR_RevolverAmmoCasing" xml:space="preserve">
-    <value>Revolver Shell Casing</value>
+    <value>Obudowa łuski rewolweru</value>
   </data>
   <data name="GEAR_RifleAmmoCasing" xml:space="preserve">
-    <value>Rifle Shell Casing</value>
+    <value>Obudowa łuski karabinu</value>
   </data>
   <data name="GEAR_ScrapLead" xml:space="preserve">
-    <value>Scrap Lead</value>
+    <value>Ołów złomu</value>
   </data>
   <data name="GEAR_StumpRemover" xml:space="preserve">
-    <value>Stump Remover</value>
+    <value>Narzędzie do usuwania kikutów</value>
   </data>
   <data name="GunsmithingSkillSP" xml:space="preserve">
-    <value>Gunsmithing skillpoints</value>
+    <value>Punkty umiejętności rusznikarskich</value>
   </data>
   <data name="AfflictionType_BurnsElectric" xml:space="preserve">
     <value>Electric burns</value>
   </data>
   <data name="ExperienceModeType_ChallengeDeadManWalking" xml:space="preserve">
-    <value>As the Dead Sleep</value>
+    <value>Jak Martwy Sen</value>
   </data>
   <data name="GEAR_AirlineFoodChick" xml:space="preserve">
-    <value>Airline Food - Chicken</value>
+    <value>Jedzenie dla linii lotniczych — kurczak</value>
   </data>
   <data name="GEAR_AirlineFoodVeg" xml:space="preserve">
-    <value>Airline Food - Vegetarian</value>
+    <value>Jedzenie dla linii lotniczych — wegetariańskie</value>
   </data>
   <data name="GEAR_AstridBoots" xml:space="preserve">
-    <value>Astrid's Boots</value>
+    <value>Buty Astrid</value>
   </data>
   <data name="GEAR_AstridGloves" xml:space="preserve">
-    <value>Astrid's Gloves</value>
+    <value>Rękawiczki Astrid</value>
   </data>
   <data name="GEAR_AstridJacket" xml:space="preserve">
-    <value>Astrid's Jacket</value>
+    <value>Kurtka Astrid</value>
   </data>
   <data name="GEAR_AstridJeans" xml:space="preserve">
-    <value>Astrid's Jeans</value>
+    <value>Dżinsy Astrid</value>
   </data>
   <data name="GEAR_AstridSweater" xml:space="preserve">
-    <value>Astrid's Sweater</value>
+    <value>Sweter Astrid</value>
   </data>
   <data name="GEAR_AstridToque" xml:space="preserve">
-    <value>Astrid Toque</value>
+    <value>Astrid Toczek</value>
   </data>
   <data name="GEAR_AuroraObservationNote" xml:space="preserve">
-    <value>Aurora Observation</value>
+    <value>Obserwacja zorzy polarnej</value>
   </data>
   <data name="GEAR_BlackrockConvictNote1" xml:space="preserve">
-    <value>Blood Stained-Convict Note</value>
+    <value>Notatka skazana poplamiona krwią</value>
   </data>
   <data name="GEAR_BlackrockConvictNote2" xml:space="preserve">
-    <value>Convict Note</value>
+    <value>Notatka skazana</value>
   </data>
   <data name="GEAR_BlackrockConvictNote3" xml:space="preserve">
-    <value>Convict Cache Directions</value>
+    <value>Wskazówki dotyczące skazanych na pamięć podręczną</value>
   </data>
   <data name="GEAR_BlackrockMemo" xml:space="preserve">
-    <value>Blackrock Penitentiary Memo</value>
+    <value>Notatka penitencjarna Blackrock</value>
   </data>
   <data name="GEAR_BookTallTalesFishing" xml:space="preserve">
-    <value>Local Legends - The Big One</value>
+    <value>Lokalne legendy — Ta Wielka</value>
   </data>
   <data name="GEAR_BookTallTalesGlowCave" xml:space="preserve">
-    <value>Local Legends -The Lost Cave</value>
+    <value>Lokalne legendy – Zaginiona jaskinia</value>
   </data>
   <data name="GEAR_BookTallTalesStag" xml:space="preserve">
-    <value>Local Legends - Ghost Stag</value>
+    <value>Legendy lokalne — Duch Stag</value>
   </data>
   <data name="GEAR_BookTallTalesYeti" xml:space="preserve">
-    <value>Local Legends -Sasquatch</value>
+    <value>Lokalne Legendy - Sasquatch</value>
   </data>
   <data name="GEAR_CampOfficeCollectible" xml:space="preserve">
-    <value>Park Notice</value>
+    <value>Powiadomienie o parkowaniu</value>
   </data>
   <data name="GEAR_ConvictCorpseNote" xml:space="preserve">
-    <value>Convict Journal Entry</value>
+    <value>Wpis do dziennika skazanych</value>
   </data>
   <data name="GEAR_DamCollectible1" xml:space="preserve">
-    <value>Carter Hydro Dam - Safety &amp; Shutdown Notice</value>
+    <value>Carter Zapora hydroelektryczna - powiadomienie o bezpieczeństwie i wyłączeniu</value>
   </data>
   <data name="GEAR_DamElevatorNotice" xml:space="preserve">
-    <value>Elevator Maintenance Notice</value>
+    <value>Powiadomienie o konserwacji windy</value>
   </data>
   <data name="GEAR_DamGarbageLetter" xml:space="preserve">
-    <value>Trash Can Letter</value>
+    <value>List do kosza</value>
   </data>
   <data name="GEAR_DamLockerKey" xml:space="preserve">
-    <value>Aid Station Medical Locker Key</value>
+    <value>Klucz do szafki medycznej do stacji pomocy</value>
   </data>
   <data name="GEAR_DamTrailerBCrewNote" xml:space="preserve">
-    <value>Breyerhouse Winter Crew Warning</value>
+    <value>Ostrzeżenie o zimowej załodze w Breyerhouse</value>
   </data>
   <data name="GEAR_Ep3ForestTalkers_FTCollectible1" xml:space="preserve">
-    <value>Forest Talker Collectible, Part One</value>
+    <value>Kolekcjonerska mówca leśnego, część pierwsza</value>
   </data>
   <data name="GEAR_Ep3ForestTalkers_FTCollectible2" xml:space="preserve">
-    <value>Forest Talker Collectible, Part Two</value>
+    <value>Kolekcjonerska mówca leśnego, część druga</value>
   </data>
   <data name="GEAR_Ep3ForestTalkers_FTCollectible3" xml:space="preserve">
-    <value>Forest Talker Collectible, Part Three</value>
+    <value>Kolekcjonerski leśny mówca, część trzecia</value>
   </data>
   <data name="GEAR_Ep3ForestTalkers_PVCollectible1" xml:space="preserve">
-    <value>Pleasant Valley Collectible, Part One</value>
+    <value>Kolekcjonerska Pleasant Valley, część pierwsza</value>
   </data>
   <data name="GEAR_Ep3ForestTalkers_PVCollectible2" xml:space="preserve">
-    <value>Pleasant Valley Collectible, Part Two</value>
+    <value>Kolekcjonerska Pleasant Valley, część druga</value>
   </data>
   <data name="GEAR_Ep3ForestTalkers_PVCollectible3" xml:space="preserve">
-    <value>Pleasant Valley Collectible, Part Three</value>
+    <value>Kolekcjonerska Pleasant Valley, część trzecia</value>
   </data>
   <data name="GEAR_Ep3HallFlyer" xml:space="preserve">
-    <value>Community Hall Flyer</value>
+    <value>Ulotka Sali Wspólnoty</value>
   </data>
   <data name="GEAR_Ep3Rosary" xml:space="preserve">
-    <value>Rosary</value>
+    <value>Różaniec</value>
   </data>
   <data name="GEAR_Ep3TomsMap" xml:space="preserve">
-    <value>Map Of Pleasant Valley</value>
+    <value>Mapa Przyjemnej Doliny</value>
   </data>
   <data name="GEAR_Ep3_ChurchArtifact" xml:space="preserve">
-    <value>Church Artifact</value>
+    <value>Artefakt kościelny</value>
   </data>
   <data name="GEAR_Ep3_ChurchFlyer" xml:space="preserve">
-    <value>Church Flyer</value>
+    <value>Ulotka kościelna</value>
   </data>
   <data name="GEAR_Ep3_ChurchMotelLetter" xml:space="preserve">
-    <value>Undelivered Letter</value>
+    <value>Niedostarczony list</value>
   </data>
   <data name="GEAR_Ep3_ChurchNewsClipping" xml:space="preserve">
-    <value>Newspaper Clipping</value>
+    <value>Wycinek z gazety</value>
   </data>
   <data name="GEAR_Ep3_ChurchThankyouLetter" xml:space="preserve">
-    <value>Thankyou Letter</value>
+    <value>List z podziękowaniami</value>
   </data>
   <data name="GEAR_Ep3_ChurchTheftReport" xml:space="preserve">
-    <value>Diocese Report</value>
+    <value>Sprawozdanie diecezjalne</value>
   </data>
   <data name="GEAR_EP3_JoplinBunkerNote" xml:space="preserve">
-    <value>Joplin's Journal, Part One</value>
+    <value>Dziennik Joplin, część pierwsza</value>
   </data>
   <data name="GEAR_EP3_JoplinBunkerNote2" xml:space="preserve">
-    <value>Joplin's Journal, Part Two</value>
+    <value>Dziennik Joplin, część druga</value>
   </data>
   <data name="GEAR_EP3_JoplinCacheNote" xml:space="preserve">
-    <value>Forest Talker Bunker Memo</value>
+    <value>Notatka z bunkra leśnego mówcy</value>
   </data>
   <data name="GEAR_EP3_PatientHistory01" xml:space="preserve">
-    <value>Blood Soaked Note</value>
+    <value>Notatka przesiąknięta krwią</value>
   </data>
   <data name="GEAR_EP3_PatientHistory02" xml:space="preserve">
-    <value>Blood Soaked Note</value>
+    <value>Notatka przesiąknięta krwią</value>
   </data>
   <data name="GEAR_EP3_PatientHistory03" xml:space="preserve">
-    <value>Blood Soaked Note</value>
+    <value>Notatka przesiąknięta krwią</value>
   </data>
   <data name="GEAR_EP3_PatientHistory04" xml:space="preserve">
-    <value>Blood Soaked Note</value>
+    <value>Notatka przesiąknięta krwią</value>
   </data>
   <data name="GEAR_EP3_PatientHistory05" xml:space="preserve">
-    <value>Blood Soaked Note</value>
+    <value>Notatka przesiąknięta krwią</value>
   </data>
   <data name="GEAR_EP3_PatientHistory06" xml:space="preserve">
-    <value>Blood Soaked Note</value>
+    <value>Notatka przesiąknięta krwią</value>
   </data>
   <data name="GEAR_ForestTalkerDamNote" xml:space="preserve">
-    <value>Forest Talker Dam Note</value>
+    <value>Uwaga na tamę leśnego mówcy</value>
   </data>
   <data name="GEAR_HankJournal1" xml:space="preserve">
-    <value>Hank's Journal - Part One</value>
+    <value>Dziennik Hanka – część pierwsza</value>
   </data>
   <data name="GEAR_HankLockboxKey" xml:space="preserve">
-    <value>Hank's Lock Box Key</value>
+    <value>Klucz do skrzynki zamka Hanka</value>
   </data>
   <data name="GEAR_HomeMadeSoup" xml:space="preserve">
-    <value>Home-made Soup</value>
+    <value>Domowa Zupa</value>
   </data>
   <data name="GEAR_KnowledgePVbook1" xml:space="preserve">
-    <value>Pleasant Valley History, Part One</value>
+    <value>Przyjemna historia doliny, część pierwsza</value>
   </data>
   <data name="GEAR_KnowledgePVbook2" xml:space="preserve">
-    <value>Pleasant Valley History, Part Two</value>
+    <value>Przyjemna historia doliny, część druga</value>
   </data>
   <data name="GEAR_KnowledgePVbook3" xml:space="preserve">
-    <value>Pleasant Valley History, Part Three</value>
+    <value>Przyjemna historia doliny, część trzecia</value>
   </data>
   <data name="GEAR_LakeCabinKey1" xml:space="preserve">
-    <value>Key To Lake Cabin #1</value>
+    <value>Klucz do domku nad jeziorem #1</value>
   </data>
   <data name="GEAR_LakeCabinKey2" xml:space="preserve">
-    <value>Key To Lake Cabin #2</value>
+    <value>Klucz do domku nad jeziorem #2</value>
   </data>
   <data name="GEAR_LakeCabinKey3" xml:space="preserve">
-    <value>Key To Lake Cabin #3</value>
+    <value>Klucz do domku nad jeziorem #3</value>
   </data>
   <data name="GEAR_LakeDeerHuntNote" xml:space="preserve">
-    <value>Torn Paper</value>
+    <value>Podarty papier</value>
   </data>
   <data name="GEAR_LakeLetter1" xml:space="preserve">
-    <value>Off Season Fun</value>
+    <value>Zabawa poza sezonem</value>
   </data>
   <data name="GEAR_LilyClimbMap" xml:space="preserve">
-    <value>Lyly's Map</value>
+    <value>Mapa Lily</value>
   </data>
   <data name="GEAR_MiltonCaveLetter" xml:space="preserve">
-    <value>Lost In The Storm</value>
+    <value>Zagubieni w burzy</value>
   </data>
   <data name="GEAR_MiltonFlareGunNote" xml:space="preserve">
-    <value>Highway Robbery</value>
+    <value>Napad na autostradę</value>
   </data>
   <data name="GEAR_MiltonLetter1" xml:space="preserve">
-    <value>Tearful Letter</value>
+    <value>Płaczliwy list</value>
   </data>
   <data name="GEAR_MiltonLetter2" xml:space="preserve">
-    <value>Betrayal</value>
+    <value>Zdrada</value>
   </data>
   <data name="GEAR_MiltonPostOfficeCollectible1" xml:space="preserve">
-    <value>Milton Post Office Note</value>
+    <value>Uwaga na pocztę w Milton</value>
   </data>
   <data name="GEAR_MiltonStoreNotice" xml:space="preserve">
-    <value>Orca Gas Store Notice</value>
+    <value>Informacja o sklepie z gazem Orca</value>
   </data>
   <data name="GEAR_NoteMCU" xml:space="preserve">
-    <value>Milton Credit Union Letter</value>
+    <value>List z Milton Banku</value>
+    <comment>used Bank in place of credit union</comment>
   </data>
   <data name="GEAR_PassengerManifest" xml:space="preserve">
-    <value>Passenger Manifest</value>
+    <value>Manifest Pasażera</value>
   </data>
   <data name="GEAR_PlaneCrashID1" xml:space="preserve">
     <value>ID: S. Gagne</value>
@@ -1876,15 +1877,81 @@
     <value>ID: O. Gould</value>
   </data>
   <data name="GEAR_PrisonBusNote" xml:space="preserve">
-    <value>Prison Transport Manifest</value>
+    <value>Manifest Transportu Więziennego</value>
   </data>
   <data name="GEAR_RuralRegionFarmKey" xml:space="preserve">
-    <value>Basement Key</value>
+    <value>Klucz do piwnicy</value>
   </data>
   <data name="GEAR_SprayPaintCan" xml:space="preserve">
-    <value>Spray Paint</value>
+    <value>Farba w sprayu</value>
   </data>
   <data name="RegionsWithMap_CanneryRegion" xml:space="preserve">
-    <value>Bleak Inlet</value>
+    <value>Ponury wlot</value>
+  </data>
+  <data name="GEAR_CanyonClimbersCaveNote" xml:space="preserve">
+    <value>Notatka Jaskini Wspinacza w Popielnym Kanionie</value>
+  </data>
+  <data name="GEAR_CanyonDeadClimberNote" xml:space="preserve">
+    <value>Notatka od zmarłego wspinacza z kanionu popiołu</value>
+  </data>
+  <data name="GEAR_CanyonFishingHutJournal" xml:space="preserve">
+    <value>Dziennik chaty wędkarskiej Ash Canyon</value>
+  </data>
+  <data name="GEAR_CanyonMinersNote" xml:space="preserve">
+    <value>Notatka górnika Ash Canyon</value>
+  </data>
+  <data name="GEAR_Crampons" xml:space="preserve">
+    <value>Crampons</value>
+  </data>
+  <data name="GEAR_KetchupChips" xml:space="preserve">
+    <value>Chipsy keczupowe</value>
+  </data>
+  <data name="GEAR_MapleSyrup" xml:space="preserve">
+    <value>Syrop klonowy</value>
+  </data>
+  <data name="GEAR_MapSnippetMt1" xml:space="preserve">
+    <value>Fragment mapy Mt</value>
+  </data>
+  <data name="GEAR_PostCard_AC_CentralSpire" xml:space="preserve">
+    <value>Polaroid Ash Canyon High Meadow</value>
+  </data>
+  <data name="GEAR_PostCard_AC_TopShelf" xml:space="preserve">
+    <value>Polaroid Ash Canyon Wolf's Jaw Overlook</value>
+  </data>
+  <data name="GEAR_PostCard_BI_EchoOne-RadioTower" xml:space="preserve">
+    <value>Polaroid Bleak Inlet Echo One Radio Tower</value>
+  </data>
+  <data name="GEAR_PostCard_CR_AbandonedLookout" xml:space="preserve">
+    <value>Polaroid Coastal Highway Abandoned Lookout</value>
+  </data>
+  <data name="GEAR_PostCard_FM_MuskegOverlook" xml:space="preserve">
+    <value>Polaroid Forlorn Muskeg Muskeg Overlook</value>
+  </data>
+  <data name="GEAR_PostCard_FM_ShortwaveTower" xml:space="preserve">
+    <value>Polaroid Forlorn Muskeg Shortwave Tower</value>
+  </data>
+  <data name="GEAR_PostCard_ML_ForestryLookout" xml:space="preserve">
+    <value>Polaroid Mystery Lake Forestry Lookout</value>
+  </data>
+  <data name="GEAR_PostCard_ML_LakeOverlook" xml:space="preserve">
+    <value>Polaroid Mystery Lake Lake Overlook</value>
+  </data>
+  <data name="GEAR_PostCard_MT_RadioTower" xml:space="preserve">
+    <value>Polaroid Mountain Town Radio Tower</value>
+  </data>
+  <data name="GEAR_PostCard_PV_SignalHill" xml:space="preserve">
+    <value>Polaroid Pleasant Valley Signal Hill</value>
+  </data>
+  <data name="GEAR_PostCard_RV_Pensive" xml:space="preserve">
+    <value>Polaroid Hushed River Valley Pensive Vista</value>
+  </data>
+  <data name="GEAR_PostCard_TM_AndresPeak" xml:space="preserve">
+    <value>Polaroid Timberwolf Mountain Andre's Peak</value>
+  </data>
+  <data name="GEAR_PostCard_TM_TailSection" xml:space="preserve">
+    <value>Polaroid Timberwolf Mountain Tail Section</value>
+  </data>
+  <data name="RegionsWithMap_AshCanyonRegion" xml:space="preserve">
+    <value>Popielny Kanion</value>
   </data>
 </root>

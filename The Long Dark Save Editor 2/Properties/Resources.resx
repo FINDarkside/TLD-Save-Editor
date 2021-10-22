@@ -1531,7 +1531,7 @@
     <value>Collectible Note Common</value>
   </data>
   <data name="GEAR_CollectibleNoteRareReward" xml:space="preserve">
-    <value>Collectible Note Common</value>
+    <value>Collectible Note Rare</value>
   </data>
   <data name="AfflictionType_FrostbiteDamage" xml:space="preserve">
     <value>Frostbite damage</value>
@@ -1687,7 +1687,7 @@
     <value>Local Legends - Ghost Stag</value>
   </data>
   <data name="GEAR_BookTallTalesYeti" xml:space="preserve">
-    <value>Local Legends -Sasquatch</value>
+    <value>Local Legends - Sasquatch</value>
   </data>
   <data name="GEAR_CampOfficeCollectible" xml:space="preserve">
     <value>Park Notice</value>
@@ -1819,7 +1819,7 @@
     <value>Off Season Fun</value>
   </data>
   <data name="GEAR_LilyClimbMap" xml:space="preserve">
-    <value>Lyly's Map</value>
+    <value>Lily's Map</value>
   </data>
   <data name="GEAR_MiltonCaveLetter" xml:space="preserve">
     <value>Lost In The Storm</value>

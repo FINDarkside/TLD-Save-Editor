@@ -346,7 +346,7 @@
     <value>航空配餐-鸡肉</value>
   </data>
   <data name="GEAR_AirlineFoodVeg" xml:space="preserve">
-    <value>航空配餐-素食</value>                  
+    <value>航空配餐-素食</value>
   </data>
   <data name="GEAR_Arrow" xml:space="preserve">
     <value>简单的箭</value>
@@ -454,7 +454,7 @@
     <value>损坏的猎熊矛</value>
   </data>
   <data name="GEAR_BearSpearStory" xml:space="preserve">
-    <value>猎熊矛</value>       
+    <value>猎熊矛</value>
   </data>
   <data name="GEAR_BedRoll" xml:space="preserve">
     <value>睡袋</value>
@@ -622,7 +622,8 @@
     <value>猪肉豆罐头</value>
   </data>
   <data name="GEAR_CannedSardines" xml:space="preserve">
-    <value>沙丁鱼罐头</value>  </data>
+    <value>沙丁鱼罐头</value>
+  </data>
   <data name="GEAR_CanneryCodeNote" xml:space="preserve">
     <value>Communication Report</value>
   </data>
@@ -1846,7 +1847,7 @@
   </data>
   <data name="RegionsWithMap_WhalingStationRegion" xml:space="preserve">
     <value>荒芜据点</value>
-  </data> 
+  </data>
   <data name="Remove" xml:space="preserve">
     <value>删除物品</value>
   </data>
@@ -1875,7 +1876,7 @@
     <value>雪地行者成就进度</value>
   </data>
   <data name="StraightToHeartProgress" xml:space="preserve">
-    <value>发自内心成就进度</value>       
+    <value>发自内心成就进度</value>
   </data>
   <data name="TestBranch" xml:space="preserve">
     <value>测试开关</value>
@@ -1897,5 +1898,47 @@
   </data>
   <data name="Unknown" xml:space="preserve">
     <value>未知</value>
+  </data>
+  <data name="GEAR_PostCard_AC_CentralSpire" xml:space="preserve">
+    <value>Polaroid Ash Canyon High Meadow</value>
+  </data>
+  <data name="GEAR_PostCard_AC_TopShelf" xml:space="preserve">
+    <value>Polaroid Ash Canyon Wolf's Jaw Overlook</value>
+  </data>
+  <data name="GEAR_PostCard_BI_EchoOne-RadioTower" xml:space="preserve">
+    <value>Polaroid Bleak Inlet Echo One Radio Tower</value>
+  </data>
+  <data name="GEAR_PostCard_CR_AbandonedLookout" xml:space="preserve">
+    <value>Polaroid Coastal Highway Abandoned Lookout</value>
+  </data>
+  <data name="GEAR_PostCard_FM_MuskegOverlook" xml:space="preserve">
+    <value>Polaroid Forlorn Muskeg Muskeg Overlook</value>
+  </data>
+  <data name="GEAR_PostCard_FM_ShortwaveTower" xml:space="preserve">
+    <value>Polaroid Forlorn Muskeg Shortwave Tower</value>
+  </data>
+  <data name="GEAR_PostCard_ML_ForestryLookout" xml:space="preserve">
+    <value>Polaroid Mystery Lake Forestry Lookout</value>
+  </data>
+  <data name="GEAR_PostCard_ML_LakeOverlook" xml:space="preserve">
+    <value>Polaroid Mystery Lake Lake Overlook</value>
+  </data>
+  <data name="GEAR_PostCard_MT_RadioTower" xml:space="preserve">
+    <value>Polaroid Mountain Town Radio Tower</value>
+  </data>
+  <data name="GEAR_PostCard_PV_SignalHill" xml:space="preserve">
+    <value>Polaroid Pleasant Valley Signal Hill</value>
+  </data>
+  <data name="GEAR_PostCard_RV_Pensive" xml:space="preserve">
+    <value>Polaroid Hushed River Valley Pensive Vista</value>
+  </data>
+  <data name="GEAR_PostCard_TM_AndresPeak" xml:space="preserve">
+    <value>Polaroid Timberwolf Mountain Andre's Peak</value>
+  </data>
+  <data name="GEAR_PostCard_TM_TailSection" xml:space="preserve">
+    <value>Polaroid Timberwolf Mountain Tail Section</value>
+  </data>
+  <data name="RegionsWithMap_AshCanyonRegion" xml:space="preserve">
+    <value>Ash Canyon</value>
   </data>
 </root>
