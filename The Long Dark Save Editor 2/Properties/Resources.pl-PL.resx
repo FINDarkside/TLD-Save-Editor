@@ -928,7 +928,7 @@
     <value>Koszula Mackenziego</value>
   </data>
   <data name="GEAR_KnowledgeCollapse2" xml:space="preserve">
-    <value> Historia Upadku, część druga</value>
+    <value>Historia Upadku, część druga</value>
   </data>
   <data name="GEAR_FlareGunCase_hangar" xml:space="preserve">
     <value>Pistolet sygnałowy</value>
@@ -1618,7 +1618,7 @@
     <value>Puszka prochu</value>
   </data>
   <data name="GEAR_RevolverAmmoCasing" xml:space="preserve">
-    <value>Revolver Shell Casing</value>
+    <value>Obudowa łuski rewolweru</value>
   </data>
   <data name="GEAR_RifleAmmoCasing" xml:space="preserve">
     <value>Obudowa łuski karabinu</value>
@@ -1630,7 +1630,7 @@
     <value>Narzędzie do usuwania kikutów</value>
   </data>
   <data name="GunsmithingSkillSP" xml:space="preserve">
-    <value>Gunsmithing skillpoints</value>
+    <value>Punkty umiejętności rusznikarskich</value>
   </data>
   <data name="AfflictionType_BurnsElectric" xml:space="preserve">
     <value>Electric burns</value>
@@ -1666,16 +1666,16 @@
     <value>Obserwacja zorzy polarnej</value>
   </data>
   <data name="GEAR_BlackrockConvictNote1" xml:space="preserve">
-    <value>Blood Stained-Convict Note</value>
+    <value>Notatka skazana poplamiona krwią</value>
   </data>
   <data name="GEAR_BlackrockConvictNote2" xml:space="preserve">
     <value>Notatka skazana</value>
   </data>
   <data name="GEAR_BlackrockConvictNote3" xml:space="preserve">
-    <value>Convict Cache Directions</value>
+    <value>Wskazówki dotyczące skazanych na pamięć podręczną</value>
   </data>
   <data name="GEAR_BlackrockMemo" xml:space="preserve">
-    <value>Blackrock Penitentiary Memo</value>
+    <value>Notatka penitencjarna Blackrock</value>
   </data>
   <data name="GEAR_BookTallTalesFishing" xml:space="preserve">
     <value>Lokalne legendy — Ta Wielka</value>
@@ -1844,7 +1844,7 @@
     <comment>used Bank in place of credit union</comment>
   </data>
   <data name="GEAR_PassengerManifest" xml:space="preserve">
-    <value>Passenger Manifest</value>
+    <value>Manifest Pasażera</value>
   </data>
   <data name="GEAR_PlaneCrashID1" xml:space="preserve">
     <value>ID: S. Gagne</value>
@@ -1887,5 +1887,71 @@
   </data>
   <data name="RegionsWithMap_CanneryRegion" xml:space="preserve">
     <value>Ponury wlot</value>
+  </data>
+  <data name="GEAR_CanyonClimbersCaveNote" xml:space="preserve">
+    <value>Notatka Jaskini Wspinacza w Popielnym Kanionie</value>
+  </data>
+  <data name="GEAR_CanyonDeadClimberNote" xml:space="preserve">
+    <value>Notatka od zmarłego wspinacza z kanionu popiołu</value>
+  </data>
+  <data name="GEAR_CanyonFishingHutJournal" xml:space="preserve">
+    <value>Dziennik chaty wędkarskiej Ash Canyon</value>
+  </data>
+  <data name="GEAR_CanyonMinersNote" xml:space="preserve">
+    <value>Notatka górnika Ash Canyon</value>
+  </data>
+  <data name="GEAR_Crampons" xml:space="preserve">
+    <value>Crampons</value>
+  </data>
+  <data name="GEAR_KetchupChips" xml:space="preserve">
+    <value>Chipsy keczupowe</value>
+  </data>
+  <data name="GEAR_MapleSyrup" xml:space="preserve">
+    <value>Syrop klonowy</value>
+  </data>
+  <data name="GEAR_MapSnippetMt1" xml:space="preserve">
+    <value>Fragment mapy Mt</value>
+  </data>
+  <data name="GEAR_PostCard_AC_CentralSpire" xml:space="preserve">
+    <value>Polaroid Ash Canyon High Meadow</value>
+  </data>
+  <data name="GEAR_PostCard_AC_TopShelf" xml:space="preserve">
+    <value>Polaroid Ash Canyon Wolf's Jaw Overlook</value>
+  </data>
+  <data name="GEAR_PostCard_BI_EchoOne-RadioTower" xml:space="preserve">
+    <value>Polaroid Bleak Inlet Echo One Radio Tower</value>
+  </data>
+  <data name="GEAR_PostCard_CR_AbandonedLookout" xml:space="preserve">
+    <value>Polaroid Coastal Highway Abandoned Lookout</value>
+  </data>
+  <data name="GEAR_PostCard_FM_MuskegOverlook" xml:space="preserve">
+    <value>Polaroid Forlorn Muskeg Muskeg Overlook</value>
+  </data>
+  <data name="GEAR_PostCard_FM_ShortwaveTower" xml:space="preserve">
+    <value>Polaroid Forlorn Muskeg Shortwave Tower</value>
+  </data>
+  <data name="GEAR_PostCard_ML_ForestryLookout" xml:space="preserve">
+    <value>Polaroid Mystery Lake Forestry Lookout</value>
+  </data>
+  <data name="GEAR_PostCard_ML_LakeOverlook" xml:space="preserve">
+    <value>Polaroid Mystery Lake Lake Overlook</value>
+  </data>
+  <data name="GEAR_PostCard_MT_RadioTower" xml:space="preserve">
+    <value>Polaroid Mountain Town Radio Tower</value>
+  </data>
+  <data name="GEAR_PostCard_PV_SignalHill" xml:space="preserve">
+    <value>Polaroid Pleasant Valley Signal Hill</value>
+  </data>
+  <data name="GEAR_PostCard_RV_Pensive" xml:space="preserve">
+    <value>Polaroid Hushed River Valley Pensive Vista</value>
+  </data>
+  <data name="GEAR_PostCard_TM_AndresPeak" xml:space="preserve">
+    <value>Polaroid Timberwolf Mountain Andre's Peak</value>
+  </data>
+  <data name="GEAR_PostCard_TM_TailSection" xml:space="preserve">
+    <value>Polaroid Timberwolf Mountain Tail Section</value>
+  </data>
+  <data name="RegionsWithMap_AshCanyonRegion" xml:space="preserve">
+    <value>Popielny Kanion</value>
   </data>
 </root>
