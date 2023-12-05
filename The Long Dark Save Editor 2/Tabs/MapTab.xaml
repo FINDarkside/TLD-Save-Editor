@@ -24,7 +24,7 @@
 
     </UserControl.Resources>
     <Canvas x:Name="canvas" Height="{Binding ActualHeight, ElementName=userControl, Mode=OneWay}" MouseLeftButtonDown="canvas_MouseLeftButtonDown" MouseWheel="canvas_MouseWheel" MouseMove="canvas_MouseMove"  
-        MouseLeftButtonUp="canvas_MouseLeftButtonUp" Width="{Binding ActualWidth, ElementName=userControl, Mode=OneWay}" ClipToBounds="True" Background="#00000000" >
+        MouseLeftButtonUp="canvas_MouseLeftButtonUp" Width="{Binding ActualWidth, ElementName=userControl, Mode=OneWay}" ClipToBounds="True" Background="#00000000" VerticalAlignment="Bottom" >
         <Viewbox x:Name="mapLayer" Height="{Binding ActualHeight, ElementName=mapImage, Mode=OneWay}" Width="{Binding ActualWidth, ElementName=mapImage, Mode=OneWay}" RenderTransformOrigin="0,0">
             <Viewbox.RenderTransform>
                 <TransformGroup>
@@ -46,7 +46,7 @@
             </Canvas>
         </Viewbox>
         <Grid Width="{Binding ActualWidth, ElementName=canvas, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=canvas, Mode=OneWay}" d:IsHidden="True">
-            <TextBlock x:Name="canvasLabel" Style="{StaticResource MaterialDesignDisplay3TextBlock}" Foreground="{StaticResource MaterialDesignBody}" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="asdasd"/></TextBlock>
+			<TextBlock x:Name="canvasLabel" Style="{StaticResource MaterialDesignHeadline2TextBlock}" Foreground="{StaticResource MaterialDesignBody}" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="asdasd"/></TextBlock>
         </Grid>
     </Canvas>
 </UserControl>
