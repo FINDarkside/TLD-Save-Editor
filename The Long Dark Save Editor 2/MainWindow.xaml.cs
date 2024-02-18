@@ -22,7 +22,7 @@ namespace The_Long_Dark_Save_Editor_2
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         public static MainWindow Instance { get; set; }
-        public static VersionData Version { get { return new VersionData() { version = "2.18" }; } }
+        public static VersionData Version { get { return new VersionData() { version = "2.19" }; } }
 
         private GameSave currentSave;
         public GameSave CurrentSave { get { return currentSave; } set { SetPropertyField(ref currentSave, value); } }
@@ -139,7 +139,7 @@ namespace The_Long_Dark_Save_Editor_2
 
         private void UpdateSaves()
         {
-            var path = Path.Combine(Util.GetLocalPath(), testBranch ? "HinterlandTest2" : "Hinterland", "TheLongDark");
+            var path = Path.Combine(Util.GetLocalPath(), testBranch ? "HinterlandTest2" : "Hinterland", "TheLongDark", "Survival");
             Debug.WriteLine(path);
 
             if (Directory.Exists(path))

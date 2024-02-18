@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
+using System.Text;
+using The_Long_Dark_Save_Editor_2.Helpers;
 
 namespace The_Long_Dark_Save_Editor_2.Serialization
 {
