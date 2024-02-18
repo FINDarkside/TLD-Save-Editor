@@ -289,7 +289,7 @@ namespace The_Long_Dark_Save_Editor_2
 
         private void OpenBackupsClicked(object sender, RoutedEventArgs e)
         {
-            var path = Path.Combine(Util.GetLocalPath(), testBranch ? "HinterlandTest2" : "Hinterland", "TheLongDark", "backups");
+            var path = Path.Combine(Util.GetLocalPath(), testBranch ? "HinterlandTest2" : "Hinterland", "TheLongDark", "Survival", "backups");
             Process.Start(path);
         }
 
