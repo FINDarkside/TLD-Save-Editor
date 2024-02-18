@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -201,7 +201,8 @@ namespace The_Long_Dark_Save_Editor_2
                         {
                             string url = newerVersions[newerVersions.Count - 1].url;
                             Uri uri = new Uri(url);
-                            if (string.Equals(uri.Host, "www.moddb.com", StringComparison.OrdinalIgnoreCase))
+                            if (string.Equals(uri.Host, "www.moddb.com", StringComparison.OrdinalIgnoreCase) ||
+                                string.Equals(uri.Host, "github.com", StringComparison.OrdinalIgnoreCase))
                             {
                                 Process.Start(url);
                             }
